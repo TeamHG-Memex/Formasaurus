@@ -1,0 +1,95 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="ctl00_Head1"><title>
+	Forgot Password
+</title>
+    <script src="scripts/jquery-1.7.1.min.js" type="text/javascript"></script>
+    <script src="scripts/jquery-ui-1.8.18.custom.min.js" type="text/javascript"></script>
+    <link href="scripts/script_styles/redmond/jquery-ui-1.8.18.custom.css" rel="stylesheet" type="text/css" />
+    <script src="scripts/jquery.validationEngine.js" type="text/javascript"></script>
+    <script src="scripts/jquery.validationEngine-en.js" type="text/javascript"></script>
+    <link href="scripts/script_styles/validationEngine.jquery.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $('input[id$="cmdFinish"]').button();
+            $('input[id$="cmdReturn"]').button();
+
+            if ($.trim($('div[id$="ctl00_MainContent_lSuccess"]').text()).length > 0) {
+                $('div[id$="ctl00_MainContent_lSuccess"]').dialog({ modal: true, autoOpen: true, buttons: { "OK": function () { $(this).dialog("close"); } }, close: function () { $('div[id$="ctl00_MainContent_lSuccess"]').text(''); }, resizable: false });
+            }
+
+            if ($.trim($('div[id$="ctl00_MainContent_lError"]').text()).length > 0) {
+                $('div[id$="ctl00_MainContent_lError"]').show();
+            }
+            else {
+                $('div[id$="ctl00_MainContent_lError"]').hide();
+            }
+        });
+
+        function preSubmit() {
+            $('#aspnetForm').validationEngine('attach');
+
+            $('div[id$="ctl00_MainContent_lError"]').text('').hide();
+            $('div[id$="ctl00_MainContent_lSuccess"]').text('');
+
+            return true;
+        }
+
+        function preReturn() {
+            $('#aspnetForm').validationEngine('detach');
+        }
+
+    </script>
+<link href="App_Themes/eTowerDefault/eTowerDefault.css" type="text/css" rel="stylesheet" /></head>
+<body id="Master_Body">
+    <form method="post" action="ForgotPassword.aspx" id="aspnetForm">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTEwOTU4NDA0NDEPFgIeB3Bvc3RpZHMFJGMyZTU5NWExLTY4YzYtNGI2Zi1hNTRiLWE2ZjkyYmJmY2Y3MmRkXZwkbYv4A1EEfdKR+UWfDci0D0EYfbmI/qV5hgIIcfY=" />
+
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWBALAnoHHCALd2/2NBgKThu6iDQLlvKaJCcinB5RMdtKF9QAjvfTMVRr5yio7jsgJn4Dkng3dBwuC" />
+    <div id="Master_ContentWrapper">
+        <!-- Logo Line -->
+        <img src="images/mainHeader.jpg" alt="Header" />
+
+        <!-- Content pane on the right -->
+        <div id="Master_Right">
+            
+    <div style="min-height: 415px; width: 800px;">
+        <br />
+        <div class="ui-widget ui-widget-content ui-corner-all" style="margin: 0 auto; width: 450px;">
+            <div class="ui-widget-header" style="padding-left: 10px;">
+                Forgot Password
+            </div>
+            <div>
+                <br />
+                <div style="float: left; width: 150px; padding-left: 25px;">
+                    Email Address
+                </div>
+                <div style="float: left; width: 250px;">
+                    <input name="ctl00$MainContent$cEmail" type="text" id="ctl00_MainContent_cEmail" class="validate[required,email]" style="width: 250px;" /><br />
+                </div>
+                <div style="clear: both;">
+                </div>
+                <br />
+                <div style="text-align: right; padding-right: 20px;">
+                    <input type="submit" name="ctl00$MainContent$cmdFinish" value="Submit" onclick="return preSubmit();" id="ctl00_MainContent_cmdFinish" />
+                    <input type="submit" name="ctl00$MainContent$cmdReturn" value="Return to Login" onclick="return preReturn();" id="ctl00_MainContent_cmdReturn" />
+                </div>
+                <div id="ctl00_MainContent_lError" class="ui-state-error" style="width: 400px; margin-left: 25px; margin-top: 10px;
+                    padding-left: 5px;">
+                </div>
+                <div id="ctl00_MainContent_lSuccess" title="Success!" style="display:none;"></div>
+            </div>
+            <br />
+        </div>
+    </div>
+
+        </div>
+
+        <img src="images/mainFooter.jpg" alt="FooterBanner" style="float: left;" />
+        <div style="clear: both;"></div>
+    </div>
+    </form>
+</body>
+</html>

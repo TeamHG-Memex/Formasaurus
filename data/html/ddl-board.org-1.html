@@ -1,0 +1,708 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" xml:lang="de"><head>
+<base href="http://ddl-board.org/" />
+	<title>Registrieren - DDL-Board.org  (4.0)</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta http-equiv="content-script-type" content="text/javascript" />
+<meta http-equiv="content-style-type" content="text/css" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<meta http-equiv="X-UA-Compatible" content="IE=8" />
+<meta name="robots" content="noindex,nofollow" />
+<script type="text/javascript" src="wcf/js/3rdParty/protoaculous.1.8.2.min.js"></script>
+<script type="text/javascript" src="wcf/js/default.js"></script>
+<script type="text/javascript" src="wcf/js/PopupMenuList.class.js"></script>
+<script type="text/javascript" src="wcf/js/AjaxRequest.class.js"></script>
+
+<!-- wbb styles -->
+<link rel="stylesheet" type="text/css" media="screen" href="http://ddl-board.org/style/burningBoard.css" />
+
+	<!-- special styles -->
+	<link href="http://ddl-board.org/wcf/style/style-achievements.css" type="text/css" rel="stylesheet"/>
+<!-- video bbcode javascript and ie styles -->
+<script type="text/javascript" src="wcf/js/VideoBBCode.class.js"></script>
+<script type="text/javascript">
+	//<![CDATA[			
+	// when the window is fully loaded, initialize the video bbcode javascript
+	Event.observe(window, 'load', function() {
+		new VideoBBCode({
+			zoomIn		: 'Video vergrößern',
+			copyright	: '<a href="http://www.forenberg.de/">BBCode: <strong>Video</strong>, entwickelt von <strong>Bergwerk</strong></a>',
+			defaultTitle	: 'Video'
+		});
+	});
+//]]>
+</script>
+
+<!--[if lte IE 7]>
+<style type="text/css">
+	.videoBBCodeContainerLeft .videoBBCodeInnerContainer, .videoBBCodeContainerRight .videoBBCodeInnerContainer, .videoBBCodeContainerSmallLeft .videoBBCodeInnerContainer, .videoBBCodeContainerSmallRight .videoBBCodeInnerContainer, .videoBBCodeContainerWideLeft .videoBBCodeInnerContainer, .videoBBCodeContainerWideRight .videoBBCodeInnerContainer { width: auto; }
+	.videoBBCodeContainerSmallLeft, .videoBBCodeContainerSmallRight { width: 254px; }
+	.videoBBCodeContainerWideLeft, .videoBBCodeContainerWideRight { width: 504px; }
+	.videoBBCodeContainerLeft, .videoBBCodeContainerRight { width: 404px; }
+</style>
+<![endif]-->
+<!--[if IE]><style type="text/css">.videoBBCodeHR { display: block !important; clear: both; }</style><![endif]--><link href="http://ddl-board.org/wcf/style/style-achievements.css" type="text/css" rel="stylesheet"/>
+<!-- video bbcode javascript and ie styles -->
+<script type="text/javascript" src="wcf/js/VideoBBCode.class.js"></script>
+<script type="text/javascript">
+	//<![CDATA[			
+	// when the window is fully loaded, initialize the video bbcode javascript
+	Event.observe(window, 'load', function() {
+		new VideoBBCode({
+			zoomIn		: 'Video vergrößern',
+			copyright	: '<a href="http://www.forenberg.de/">BBCode: <strong>Video</strong>, entwickelt von <strong>Bergwerk</strong></a>',
+			defaultTitle	: 'Video'
+		});
+	});
+//]]>
+</script>
+
+<!--[if lte IE 7]>
+<style type="text/css">
+	.videoBBCodeContainerLeft .videoBBCodeInnerContainer, .videoBBCodeContainerRight .videoBBCodeInnerContainer, .videoBBCodeContainerSmallLeft .videoBBCodeInnerContainer, .videoBBCodeContainerSmallRight .videoBBCodeInnerContainer, .videoBBCodeContainerWideLeft .videoBBCodeInnerContainer, .videoBBCodeContainerWideRight .videoBBCodeInnerContainer { width: auto; }
+	.videoBBCodeContainerSmallLeft, .videoBBCodeContainerSmallRight { width: 254px; }
+	.videoBBCodeContainerWideLeft, .videoBBCodeContainerWideRight { width: 504px; }
+	.videoBBCodeContainerLeft, .videoBBCodeContainerRight { width: 404px; }
+</style>
+<![endif]-->
+<!--[if IE]><style type="text/css">.videoBBCodeHR { display: block !important; clear: both; }</style><![endif]--><script type="text/javascript" src="wcf/js/3rdParty/jquery.min.js"></script><script type="text/javascript">jQuery.noConflict();</script><script type="text/javascript" src="wcf/js/3rdParty/jquery-ui.min.js"></script><script type="text/javascript" src="wcf/js/Spoiler.class.js"></script><script type="text/javascript" src="wcf/js/AdvancedPageMenu.class.js"></script><!-- Miscellaneous -->
+<script type="text/javascript">
+	//<![CDATA[
+	function externalLinks() {
+		var anchors = document.getElementsByTagName('a');
+		for (var i = 0; i < anchors.length; i++ ) {
+			var anchor = anchors[i];
+			if ((anchor.className == 'externalURL')|| anchor.parentNode.className == 'columnHomepage') {
+				anchor.onclick = function() { window.open(this.href, '_blank'); return false; }
+			}
+						if (anchor.childNodes.length != 0 && anchor.childNodes[0].src && anchor.childNodes[0].src.search(/websiteS.png/) != -1 && anchor.parentNode.parentNode.parentNode.className == 'userMessenger') {
+				anchor.onclick = function() { window.open(this.href, '_blank'); return false; }
+			}		}
+	}
+		
+	onloadEvents.push(function() { new externalLinks(); })
+	//]]>
+</script><style type="text/css">
+		<!--
+			#userMenuProfileOptionsMenu li img, #userMenuManagementMenu li img {
+				margin-left: 0;
+				margin-top: 3px;
+				margin-bottom: 2px;
+			}
+			#userMenuProfileOptionsMenu li span, #userMenuManagementMenu li span {
+				padding-left: 20px !important;
+			}
+		-->
+		</style><noscript><style type="text/css">#userMenuProfileOptions, #userMenuManagement { display: none; }</style></noscript>
+	<!-- Subforums-Hack -->
+	<style type="text/css">
+		.boardlistSubboards ul li {
+			display:block !important;
+			float:none !important;
+		} 
+	</style>
+<!-- dynamic styles -->
+<link rel="stylesheet" type="text/css" media="screen" href="http://ddl-board.org/wcf/style/style-6.css" />
+
+<!-- print styles -->
+<link rel="stylesheet" type="text/css" media="print" href="http://ddl-board.org/wcf/style/extra/print.css" />
+
+<!-- opera styles -->
+<script type="text/javascript">
+	//<![CDATA[
+	if (Prototype.Browser.Opera) {
+		document.write('<style type="text/css">	* { unicode-bidi: normal; } .columnContainer { border: 0; } </style>');
+	}
+	//]]>
+</script>
+
+<script type="text/javascript">
+	//<![CDATA[
+	var SID_ARG_2ND	= '&s=4e6330bb418737f5790743c303af5cb860173246';
+	var SECURITY_TOKEN = 'cd080e39f3232ddb3a23d4ebafce42097114d795';
+	var RELATIVE_WCF_DIR = 'wcf/';
+	var RELATIVE_WBB_DIR = '';
+	var LANG_DELETE_CONFIRM = 'Möchten Sie das Element wirklich löschen?';
+	//]]>
+</script>
+
+<!-- hack styles -->
+<!--[if lt IE 7]>
+	<link rel="stylesheet" type="text/css" media="screen" href="http://ddl-board.org/wcf/style/extra/ie6-fix.css" />
+	<style type="text/css">
+								#header, #footer, #main, #mainMenu, #userPanel { /* note: non-standard style-declaration */
+							_width: expression(((document.body.clientWidth/screen.width)) < 0.7 ? "760px":"80%" );
+			}
+					</style>
+<![endif]-->
+
+<!--[if IE 7]>
+	<link rel="stylesheet" type="text/css" media="screen" href="http://ddl-board.org/wcf/style/extra/ie7-fix.css" />
+	<script type="text/javascript">
+		//<![CDATA[
+		document.observe('dom:loaded', function() {
+			if (location.hash) {
+				var columnContainer = null;
+				var columnContainerHeight = 0;
+				$$('.columnContainer > .column').each(function(column) {
+					if (columnContainer != column.up()) {
+						columnContainer = column.up();
+						columnContainerHeight = columnContainer.getHeight();
+					}
+					columnContainer.addClassName('columnContainerJS');
+					column.setStyle({ 'height': columnContainerHeight + 'px' });
+					columnContainer.up().setStyle({ 'height': columnContainerHeight + 1 + 'px' });
+					column.removeClassName('column').addClassName('columnJS');
+				});
+			}
+			$$('.layout-3 .second').each(function(column) {
+				column.insert('<div style="float: right; font-size: 0">&nbsp;</div>');
+			});
+		});
+		//]]>
+	</script>
+	<![endif]-->
+
+<!--[if IE 8]>
+	<link rel="stylesheet" type="text/css" media="screen" href="http://ddl-board.org/wcf/style/extra/ie8-fix.css" />
+<![endif]-->
+
+<link rel="shortcut icon" href="http://ddl-board.org/wcf/icon/favicon/faviconRed.ico" type="image/x-icon" />
+
+	<style type="text/css">
+	  /* <![CDATA[ */
+		#mce_editor_0_threadclosed { display: none!important; }
+	  /* ]]> */
+	</style>
+</head>
+<body id="tplRegister">
+
+	
+<div id="headerContainer">
+	<a id="top"></a>
+	<div id="userPanel" class="userPanel">
+		<div class="userPanelInner">
+			<p style="display: none;" id="userAvatar">
+				<img src="wcf/images/avatars/avatar-default.png" alt="" />			</p>
+			<p id="userNote">
+				Sie sind nicht angemeldet.			</p>
+			<div id="userMenu">
+				<ul>
+											<li id="userMenuLogin" class="options"><a href="http://ddl-board.org/index.php?form=UserLogin&amp;s=4e6330bb418737f5790743c303af5cb860173246" id="loginButton"><img src="wcf/icon/loginS.png" alt="" id="loginButtonImage" /> <span>Anmelden</span></a></li>
+
+						<li id="userMenuRegistration"><a href="http://ddl-board.org/index.php?page=Register&amp;s=4e6330bb418737f5790743c303af5cb860173246"><img src="wcf/icon/registerS.png" alt="" /> <span>Registrieren</span></a></li>
+						
+															</ul>
+			</div>
+		</div>
+	</div>
+
+			<script type="text/javascript">
+			//<![CDATA[
+			document.observe("dom:loaded", function() {
+				var loginFormVisible = false;
+
+				var loginBox = $('quickLoginBox');
+				var loginButton = $('loginButton');
+
+				if (loginButton && loginBox) {
+					function showLoginForm(evt) {
+						if (loginBox.hasClassName('hidden')) {
+							loginBox.setStyle('display: none');
+							loginBox.removeClassName('hidden');
+						}
+
+						var top = (loginButton.cumulativeOffset()[1] + loginButton.getHeight() + 5);
+						var left = loginButton.cumulativeOffset()[0] > $$('body')[0].getWidth()/2 ? loginButton.cumulativeOffset()[0] - loginBox.getWidth() + loginButton.getWidth() : loginButton.cumulativeOffset()[0];
+						loginBox.setStyle('left: ' + left + 'px; top: ' + top + 'px;');
+						if (loginBox.visible()) {
+							new Effect.Parallel([
+								new Effect.BlindUp(loginBox),
+								new Effect.Fade(loginBox)
+							], { duration: 0.3 });
+							loginFormVisible = false;
+						}
+						else {
+							new Effect.Parallel([
+								new Effect.BlindDown(loginBox),
+								new Effect.Appear(loginBox)
+							], { duration: 0.3 });
+							loginFormVisible = true;
+						}
+						evt.stop();
+					}
+
+					loginButton.observe('click', showLoginForm);
+					loginButton.observe('dblclick', function() { document.location.href = fixURL('index.php?form=UserLogin&s=4e6330bb418737f5790743c303af5cb860173246'); });
+
+					document.getElementById('quickLoginUsername').onfocus = function() { if (this.value == 'Benutzername') this.value=''; };
+					document.getElementById('quickLoginUsername').onblur = function() { if (this.value == '') this.value = 'Benutzername'; };
+					$('loginButtonImage').src = $('loginButtonImage').src.gsub('loginS.png', 'loginOptionsS.png');
+				}
+			});
+			//]]>
+		</script>
+	
+	<div id="header">
+
+		
+
+																			
+		<div id="search">
+			<form method="post" action="index.php?form=Search">
+
+				<div class="searchContainer">
+					<input type="text" tabindex="5" id="searchInput" class="inputText" name="q" value="Suchbegriffe eingeben" />
+					<input type="image" tabindex="6" id="searchSubmit" class="searchSubmit inputImage" src="wcf/icon/searchSubmitS.png" alt="Absenden" />
+					<input type="hidden" name="s" value="4e6330bb418737f5790743c303af5cb860173246" />					<input type="hidden" name="types[]" value="post" />
+					<script type="text/javascript">
+						//<![CDATA[
+						document.getElementById('searchInput').setAttribute('autocomplete', 'off');
+						document.getElementById('searchInput').onfocus = function() { if (this.value == 'Suchbegriffe eingeben') this.value=''; };
+						document.getElementById('searchInput').onblur = function() { if (this.value == '') this.value = 'Suchbegriffe eingeben'; };
+						document.getElementById('searchSubmit').ondblclick = function() { window.location = fixURL('index.php?form=Search&s=4e6330bb418737f5790743c303af5cb860173246'); };
+													popupMenuList.register("searchInput");
+							document.getElementById('searchInput').className += " searchOptions";
+												//]]>
+					</script>
+											<div class="searchInputMenu">
+							<div class="hidden" id="searchInputMenu">
+								<div class="pageMenu smallFont">
+									<ul>
+														<li><a href="http://ddl-board.org/index.php?form=Search&amp;action=unread&amp;s=4e6330bb418737f5790743c303af5cb860173246">Ungelesene Beiträge</a></li>
+				<li><a href="http://ddl-board.org/index.php?form=Search&amp;action=unreplied&amp;s=4e6330bb418737f5790743c303af5cb860173246">Unbeantwortete Themen</a></li>
+				<li><a href="http://ddl-board.org/index.php?form=Search&amp;action=24h&amp;s=4e6330bb418737f5790743c303af5cb860173246">Themen der letzten 24 Stunden</a></li>
+																	<li><a href="http://ddl-board.org/index.php?form=Search&amp;s=4e6330bb418737f5790743c303af5cb860173246">Erweiterte Suche</a></li>									</ul>
+								</div>
+							</div>
+						</div>
+					
+											<noscript>
+							<p><a href="http://ddl-board.org/index.php?form=Search&amp;s=4e6330bb418737f5790743c303af5cb860173246">Erweiterte Suche</a></p>
+						</noscript>
+									</div>
+			</form>
+		</div>
+		<div id="logo">
+			<div class="logoInner">
+				<h1 class="pageTitle"><a href="http://ddl-board.org/index.php?page=Index&amp;s=4e6330bb418737f5790743c303af5cb860173246">DDL-Board.org  (4.0)</a></h1>
+									<a href="http://ddl-board.org/index.php?page=Index&amp;s=4e6330bb418737f5790743c303af5cb860173246" class="pageLogo">
+						<img src="wcf/images/DDL-Warez-red/DDL-Board-Logo.png" title="DDL-Board.org  (4.0)" alt="" />
+					</a>
+							</div>
+		</div>
+	</div>
+
+						<div id="mainMenu" class="mainMenu advancedMainMenuPopup">
+	<div class="mainMenuInner"><ul id="mainMenuItems-0"><li id="mainMenuItem-6" class="first"><a href="http://ddl-board.org/index.php?page=Portal&amp;s=4e6330bb418737f5790743c303af5cb860173246" title="Portal" id="mainMenuLink-6"><img src="icon/portalM.png" alt="" id="mainMenuIcon-6" /> <span id="mainMenuTitle-6">Portal</span></a></li><li id="mainMenuItem-3" class="active"><a href="http://ddl-board.org/index.php?page=Index&amp;s=4e6330bb418737f5790743c303af5cb860173246" title="Forum" id="mainMenuLink-3"><img src="icon/indexM.png" alt="" id="mainMenuIcon-3" /> <span id="mainMenuTitle-3">Forum</span></a></li><li id="mainMenuItem-22"><a href="http://ddl-board.org/index.php?page=AdventCalendar&amp;s=4e6330bb418737f5790743c303af5cb860173246" title="Adventkalender" id="mainMenuLink-22"><img src="wcf/icon/adventM.png" alt="" id="mainMenuIcon-22" /> <span id="mainMenuTitle-22">Adventkalender</span></a></li><li id="mainMenuItem-28"><a href="http://ddl-board.org/" title="DDL-Network" id="mainMenuLink-28"><img src="wcf/icon/DDLuser.png" alt="" id="mainMenuIcon-28" /> <span id="mainMenuTitle-28">DDL-Network</span></a><ul id="mainMenuItems-28" class="advancedMenu"><li id="mainMenuItem-20" class="first"><a href="http://ddl-warez.in/?action=main" title="DDL-Warez" id="mainMenuLink-20"><img src="wcf/icon/ddlwarezM.png" alt="" id="mainMenuIcon-20" /> <span id="mainMenuTitle-20">DDL-Warez</span></a></li><li id="mainMenuItem-21" class="last"><a href="http://ddl-music.org/?action=main" title="DDL-Music" id="mainMenuLink-21"><img src="wcf/icon/ddlmusicv3M.png" alt="" id="mainMenuIcon-21" /> <span id="mainMenuTitle-21">DDL-Music</span></a></li></ul></li><li id="mainMenuItem-29" class="last"><a href="http://www.woz.to/vote/ddlwarez" title="Vote" id="mainMenuLink-29"><img src="wcf/icon/wozM.png" alt="" id="mainMenuIcon-29" /> <span id="mainMenuTitle-29">Vote</span></a></li></ul></div>
+</div>
+<script type="text/javascript">
+	//<![CDATA[
+	    var AdvancedMainMenu = new AdvancedPageMenu('mainMenu', '3', 'popup', 'down', {'arrow':'wcf/icon/pageMenuArrowS.png', 'plus':'wcf/icon/plusS.png', 'minus':'wcf/icon/minusS.png'});
+		onloadEvents.push(function() { AdvancedMainMenu.init(); });
+	//]]>
+</script>
+
+</div>
+<div id="mainContainer">
+
+<div id="main">
+	
+	<ul class="breadCrumbs">
+		<li><a href="http://ddl-board.org/index.php?page=Index&amp;s=4e6330bb418737f5790743c303af5cb860173246"><img src="icon/indexS.png" alt="" /> <span>DDL-Board.org  (4.0)</span></a> &raquo;</li>
+	</ul>
+	
+	<div class="mainHeadline">
+		<img src="wcf/icon/registerL.png" alt="" />
+		<div class="headlineContainer">
+			<h2> Registrieren</h2>
+		</div>
+	</div>
+	
+				<div class="info">			<p><span style="font-size: 18pt"><strong>Im Dezember gibt es bei uns wieder Türchen zu öffnen! <a href="http://ddl-board.org/index.php?page=AdventCalendar">Hier mitmachen</a></strong></span><strong></strong></p>		</div>		<script type="text/javascript" src="wcf/js/MessageLength.class.js"></script>
+<script type="text/javascript">
+	//<![CDATA[
+	language['wcf.message.remainingCharacters'] = 'Verbleibend:';
+	language['wcf.message.characters'] = 'Zeichen:';
+	language['wcf.message.words'] = 'Wörter:';	
+	language['wcf.message.letterCount'] = 'Buchstaben:';
+	language['wcf.message.lettersPerWord'] = 'Buchstaben pro Wort:';
+	language['wcf.message.sentenceCount'] = 'Sätze:';
+	language['wcf.message.wordsPerSentence'] = 'Wörter pro Satz:';
+	language['wcf.message.statistic'] = 'Statistik';
+	var initMessageLength = window.setInterval('messageLength.init(10000);', 500);	
+	//]]>
+</script>	
+		<p class="info">Lieber Besucher, herzlich willkommen bei: DDL-Board.org  (4.0). 
+Falls dies Ihr erster Besuch auf dieser Seite ist, lesen Sie sich bitte die <a href="http://ddl-board.org/index.php?page=Help&amp;s=4e6330bb418737f5790743c303af5cb860173246">Hilfe</a> durch. Dort wird Ihnen die Bedienung dieser Seite näher erläutert.
+Darüber hinaus sollten Sie sich registrieren, um alle Funktionen dieser Seite nutzen zu können.
+Benutzen Sie das <a href="http://ddl-board.org/index.php?page=Register&amp;s=4e6330bb418737f5790743c303af5cb860173246">Registrierungsformular</a>, um sich zu registrieren oder <a href="http://ddl-board.org/index.php?page=Help&amp;item=user.login&amp;s=4e6330bb418737f5790743c303af5cb860173246">informieren Sie sich ausführlich</a> über den Registrierungsvorgang.
+Falls Sie sich bereits zu einem früheren Zeitpunkt registriert haben, können Sie sich <a href="http://ddl-board.org/index.php?form=UserLogin&amp;s=4e6330bb418737f5790743c303af5cb860173246">hier anmelden</a>.</p>
+			
+		
+	<form method="post" action="index.php?page=Register">
+		<div class="border content">
+			<div class="container-1">
+				<div class="formElement">
+					<div class="formFieldLabel">
+						<label for="username">Benutzername</label>
+					</div>
+					<div class="formField">
+						<input type="text" class="inputText" name="username" value="" id="username" />
+											</div>
+					<div class="formFieldDesc">
+						<p>Der Benutzername muss mindestens 6 und darf maximal 25 Zeichen lang sein.</p>
+					</div>
+				</div>
+			
+			<fieldset>
+				<legend><label for="email">E-Mail-Adresse</label></legend>
+				<div class="formElement">
+					<div class="formFieldLabel">
+						<label for="email">E-Mail-Adresse</label>
+					</div>
+					<div class="formField">
+						<input type="text" class="inputText" name="email" value="" id="email" />
+											</div>
+					<div class="formFieldDesc">
+						<p>Bitte geben Sie Ihre E-Mail-Adresse ein!</p>
+					</div>
+				</div>
+					
+				<div class="formElement">
+					<div class="formFieldLabel">
+						<label for="confirmEmail">E-Mail-Adresse wiederholen</label>
+					</div>
+					<div class="formField">
+						<input type="text" class="inputText" name="confirmEmail" value="" id="confirmEmail" />
+					
+											</div>
+					<div class="formFieldDesc">
+						<p>Bitte wiederholen Sie zur Sicherheit die Eingabe Ihrer E-Mail-Adresse!</p>
+					</div>
+				</div>
+			</fieldset>
+	
+			<fieldset>
+				<legend><label for="password">Kennwort</label></legend>
+				<div class="formElement">
+					<div class="formFieldLabel">
+						<label for="password">Kennwort</label>
+					</div>
+					<div class="formField">
+						<input type="password" class="inputText" name="password" value="" id="password" />
+						
+											</div>
+					<div class="formFieldDesc">
+						<p>Das Kennwort muss mindestens 8 Zeichen lang sein.</p>
+					</div>
+				</div>
+					
+				<div class="formElement">
+					<div class="formFieldLabel">
+						<label for="confirmPassword">Kennwort wiederholen</label>
+					</div>
+					<div class="formField">
+						<input type="password" class="inputText" name="confirmPassword" value="" id="confirmPassword" />
+											</div>
+					<div class="formFieldDesc">
+						<p>Bitte wiederholen Sie zur Sicherheit die Eingabe Ihres Kennworts!</p>
+					</div>
+				</div>
+			</fieldset>
+			
+				
+						
+							<fieldset>
+					<legend>Persönliche Informationen</legend>
+					
+											
+				
+					
+	
+			<div class="formRadio formGroup" id="genderDiv">
+			<div class="formGroupLabel">
+				<label>Geschlecht</label>
+			</div>
+			<div class="formGroupField">
+				<fieldset>
+					<legend>Geschlecht</legend>
+						
+					<div class="formField">
+						<ul class="formOptionsLong">
+			<li>
+			<label><input 			type="radio" name="values[gender]" value="0"
+			checked="checked" />
+			Keine Angabe</label>
+		</li>
+			<li>
+			<label><input 			type="radio" name="values[gender]" value="1"
+			/>
+			Männlich</label>
+		</li>
+			<li>
+			<label><input 			type="radio" name="values[gender]" value="2"
+			/>
+			Weiblich</label>
+		</li>
+	</ul>											</div>
+					
+											<div class="formFieldDesc">
+							<p>Ihr Geschlecht</p>
+						</div>
+										
+										
+				</fieldset>
+			</div>
+		</div>
+		
+		
+	<script type="text/javascript">
+		//<![CDATA[
+				//]]>
+	</script>
+			
+					
+	
+			<div class="formElement" id="userOption134Div">
+						
+							<div class="formFieldLabel">
+					<label for="userOption134">Registrierungsgrund</label>
+				</div>
+				<div class="formField">
+					<select name="values[userOption134]" id="userOption134">
+	<option value="--&gt; bitte Auswahl treffen">--> bitte Auswahl treffen</option>
+	<option value="erst einmal nur hier umschauen">erst einmal nur hier umschauen</option>
+	<option value="möchte hier nur was Uploaden ">möchte hier nur was Uploaden </option>
+	<option value="ddl interessiert mich, ich möchte mehr wissen">ddl interessiert mich, ich möchte mehr wissen</option>
+	<option value="in der U-Zone konnte mir nicht zufriedenstellend geholfen werden">in der U-Zone konnte mir nicht zufriedenstellend geholfen werden</option>
+	<option value="möchte mich unbedingt an der Community beteiligen">möchte mich unbedingt an der Community beteiligen</option>
+	<option value="bisher war ich nur auf ddl-warez zum Downladen, will jetzt auch mal ins Forum">bisher war ich nur auf ddl-warez zum Downladen, will jetzt auch mal ins Forum</option>
+	<option value="ich habe eine Einladung (Invite) erhalten">ich habe eine Einladung (Invite) erhalten</option>
+	<option value="anderer Grund">anderer Grund</option>
+</select>															
+				</div>
+						
+							<div class="formFieldDesc">
+					<p></p>
+				</div>
+					</div>
+		
+	<script type="text/javascript">
+		//<![CDATA[
+				//]]>
+	</script>
+					
+				</fieldset>
+							<fieldset>
+					<legend>System</legend>
+					
+								
+					
+	
+			<div class="formElement" id="userOption138Div">
+						
+							<div class="formFieldLabel">
+					<label for="userOption138">Betriebssystem</label>
+				</div>
+				<div class="formField">
+					<input id="userOption138" type="text" class="inputText" name="values[userOption138]" value="--&gt; Bitte verwendetes Betriebssystem eintragen" />															
+				</div>
+						
+							<div class="formFieldDesc">
+					<p>Welches Betriebssystem wird eingesetzt? (Z.B. Windows 8 Ultimate x64)</p>
+				</div>
+					</div>
+		
+	<script type="text/javascript">
+		//<![CDATA[
+				//]]>
+	</script>
+			
+					
+	
+			<div class="formElement" id="userOption139Div">
+						
+							<div class="formFieldLabel">
+					<label for="userOption139">Browser</label>
+				</div>
+				<div class="formField">
+					<input id="userOption139" type="text" class="inputText" name="values[userOption139]" value="--&gt; Bitte verwendeten Browser eintragen" />															
+				</div>
+						
+							<div class="formFieldDesc">
+					<p>Welcher Browser wird eingesetzt? (Z.B. Firefox / IE / Mac OS)</p>
+				</div>
+					</div>
+		
+	<script type="text/javascript">
+		//<![CDATA[
+				//]]>
+	</script>
+			
+					
+	
+			<div class="formElement" id="userOption137Div">
+						
+							<div class="formFieldLabel">
+					<label for="userOption137">Netzanbindung</label>
+				</div>
+				<div class="formField">
+					<select name="values[userOption137]" id="userOption137">
+	<option value="Analog">Analog</option>
+	<option value="DSL 1000">DSL 1000</option>
+	<option value="DSL 2000">DSL 2000</option>
+	<option value="DSL 3000">DSL 3000</option>
+	<option value="DSL 4000">DSL 4000</option>
+	<option value="DSL 6000">DSL 6000</option>
+	<option value="DSL16000">DSL16000</option>
+	<option value="&gt;DSL 16000">>DSL 16000</option>
+	<option value="VDSL">VDSL</option>
+	<option value="andere">andere</option>
+</select>															
+				</div>
+						
+							<div class="formFieldDesc">
+					<p>Mit welchen Internetanschluss (Geschwindigkeit) nutzen Sie das Internet?</p>
+				</div>
+					</div>
+		
+	<script type="text/javascript">
+		//<![CDATA[
+				//]]>
+	</script>
+					
+				</fieldset>
+						
+																	
+				<fieldset>
+		<legend>Sicherheitsmaßnahme</legend>
+			<div class="formElement">
+			<div class="formFieldLabel">
+				<label for="captchaString">Sicherheitscode</label>
+			</div>
+			<div class="formField">
+				<input type="text" class="inputText" name="captchaString" value="" id="captchaString" />
+							</div>
+			<div class="formFieldDesc">
+				<p>Bitte geben Sie die untenstehenden Zeichen ohne Leerstellen in das leere Feld ein. Groß- und Kleinschreibung müssen nicht beachtet werden. Sollten Sie das Bild auch nach mehrfachem Neuladen nicht entziffern können, wenden Sie sich an den Administrator dieser Seite.</p>
+				<img id="captchaImage" src="index.php?page=Captcha&amp;captchaID=436725&amp;s=4e6330bb418737f5790743c303af5cb860173246" alt="" />
+			</div>
+			
+			<input type="hidden" id="captchaID" name="captchaID" value="436725" />
+			
+			<script type="text/javascript">
+				//<![CDATA[
+				var captchaLanguage = new Object();
+				captchaLanguage['wcf.captcha.reload'] = 'Neues Captchabild laden';
+				captchaLanguage['wcf.captcha.minimize'] = 'Bild verkleinern';
+				captchaLanguage['wcf.captcha.maximize'] = 'Bild vergrößern';
+				//]]>
+			</script>
+			<script type="text/javascript" src="wcf/js/Captcha.class.js"></script>
+		</div>
+	</fieldset>			</div>
+		</div>	
+	
+		<div class="formSubmit">
+			<input type="submit" accesskey="s" value="Absenden" />
+			<input type="reset" accesskey="r" value="Zurücksetzen" />
+		</div>
+	
+		<input type="hidden" name="s" value="4e6330bb418737f5790743c303af5cb860173246" />		<input type="hidden" name="action" value="register" />
+	</form>
+
+</div>
+
+</div>
+<div id="footerContainer">
+<script src="http://js.anonym.to/anonym/anonymize.js" type="text/javascript"></script>
+
+<script type="text/javascript"><!--
+protected_links = "ddl-board.org,ddl-warez.in,ddl-music.org,ddl-beats.org,pornlounge.org,ddl-network.org";
+
+auto_anonymize();
+//--></script>	<div id="footer">
+							<div id="footerMenu" class="footerMenu advancedFooterMenuPopup">
+	<div class="footerMenuInner"><ul id="footerMenuItems-0"><li id="footerMenuItem-13" class="first"><a href="http://ddl-board.org/index.php?page=Stats&amp;s=4e6330bb418737f5790743c303af5cb860173246" title="Statistik" id="footerMenuLink-13"><img src="icon/generalStatsS.png" alt="" id="footerMenuIcon-13" /> <span id="footerMenuTitle-13">Statistik</span></a></li><li id="footerMenuItem-4"><a href="http://ddl-board.org/index.php?page=LegalNotice&amp;s=4e6330bb418737f5790743c303af5cb860173246" title="Impressum" id="footerMenuLink-4"><img src="wcf/icon/legalNoticeS.png" alt="" id="footerMenuIcon-4" /> <span id="footerMenuTitle-4">Impressum</span></a></li><li id="footerMenuItem-12" class="last"><a href="http://ddl-board.org/index.php?page=Partner&amp;s=4e6330bb418737f5790743c303af5cb860173246" title="Partner" id="footerMenuLink-12"><img src="wcf/icon/partnerS.png" alt="" id="footerMenuIcon-12" /> <span id="footerMenuTitle-12">Partner</span></a></li></ul></div>
+</div>
+<script type="text/javascript">
+	//<![CDATA[
+	    var AdvancedFooterMenu = new AdvancedPageMenu('footerMenu', '3', 'popup', 'up', {'arrow':'wcf/icon/pageMenuArrowS.png', 'plus':'wcf/icon/plusS.png', 'minus':'wcf/icon/minusS.png'});
+		onloadEvents.push(function() { AdvancedFooterMenu.init(); });
+	//]]>
+</script>		<div id="footerOptions" class="footerOptions">
+			<div class="footerOptionsInner">
+				<ul>
+										
+											<li class="stylePicker">
+							<a id="changeStyle" class="hidden"><img src="wcf/icon/styleOptionsS.png" alt="" /> <span>Stil ändern</span></a>
+							<div class="hidden" id="changeStyleMenu">
+								<ul>
+																			<li><a rel="nofollow" href="/index.php?page=Register&amp;action=register&amp;styleID=5&amp;s=4e6330bb418737f5790743c303af5cb860173246"><span>DDL-Board v4 (BlueBox)</span></a></li>
+																			<li><a rel="nofollow" href="/index.php?page=Register&amp;action=register&amp;styleID=4&amp;s=4e6330bb418737f5790743c303af5cb860173246"><span>DDL-Warez (Blue)</span></a></li>
+																			<li class="active"><a rel="nofollow" href="/index.php?page=Register&amp;action=register&amp;styleID=6&amp;s=4e6330bb418737f5790743c303af5cb860173246"><span>DDL-Warez (xmas-Style)</span></a></li>
+																			<li><a rel="nofollow" href="/index.php?page=Register&amp;action=register&amp;styleID=3&amp;s=4e6330bb418737f5790743c303af5cb860173246"><span>Orange Experimental</span></a></li>
+																			<li><a rel="nofollow" href="/index.php?page=Register&amp;action=register&amp;styleID=1&amp;s=4e6330bb418737f5790743c303af5cb860173246"><span>WoltLab Basic</span></a></li>
+																			<li><a rel="nofollow" href="/index.php?page=Register&amp;action=register&amp;styleID=2&amp;s=4e6330bb418737f5790743c303af5cb860173246"><span>WoltLab Blue Sunrise</span></a></li>
+																	</ul>
+							</div>
+							
+							<script type="text/javascript">
+								//<![CDATA[
+								onloadEvents.push(function() { document.getElementById('changeStyle').className=''; });
+								popupMenuList.register('changeStyle');
+								//]]>
+							</script>
+							
+							<noscript>
+								<form method="get" action="index.php" class="quickJump">
+									<div>
+										<input type="hidden" name="page" value="Index" />
+										<select name="styleID" onchange="if (this.options[this.selectedIndex].value != 0) this.form.submit()">
+											<option value="0">Stil ändern</option>
+											<option value="0">-----------------------</option>
+											<option label="DDL-Board v4 (BlueBox)" value="5">DDL-Board v4 (BlueBox)</option>
+<option label="DDL-Warez (Blue)" value="4">DDL-Warez (Blue)</option>
+<option label="DDL-Warez (xmas-Style)" value="6" selected="selected">DDL-Warez (xmas-Style)</option>
+<option label="Orange Experimental" value="3">Orange Experimental</option>
+<option label="WoltLab Basic" value="1">WoltLab Basic</option>
+<option label="WoltLab Blue Sunrise" value="2">WoltLab Blue Sunrise</option>
+										</select>
+										<input type="hidden" name="s" value="4e6330bb418737f5790743c303af5cb860173246" />										<input type="image" class="inputImage" src="wcf/icon/submitS.png" alt="Absenden" />
+									</div>
+								</form>
+							</noscript>
+						</li>
+																<li id="date" class="date last" title="Dienstag,  9. Dezember 2014, 18:19 UTC+1"><em><img src="wcf/icon/dateS.png" alt="" /> <span>Dienstag,  9. Dezember 2014, 18:19</span></em></li>
+										<li id="toTopLink" class="last extraButton"><a href="/index.php?page=Register&amp;action=register#top" title="Zum Seitenanfang"><img src="wcf/icon/upS.png" alt="Zum Seitenanfang" /> <span class="hidden">Zum Seitenanfang</span></a></li>
+				</ul>
+			</div>
+		</div>
+		<p class="copyright"><a href="http://www.woltlab.com/de/">Forensoftware: <strong>Burning Board&reg;</strong>, entwickelt von <strong>WoltLab&reg; GmbH</strong></a><br />Dieses DDL-Forum existiert seit nunmehr 6 Jahren, 8 Monaten, 10 Tagen und 11 Stunden</p>
+	</div>
+</div>
+	<div class="border loginPopup hidden" id="quickLoginBox">
+		<form method="post" action="index.php?form=UserLogin" class="container-1">
+			<div>
+				<input tabindex="1" type="text" class="inputText" id="quickLoginUsername" name="loginUsername" value="Benutzername" title="Benutzername" />
+				<input tabindex="2" type="password" class="inputText" id="quickLoginPassword" name="loginPassword" value="" title="Kennwort" />
+				<input type="hidden" name="url" value="/index.php?page=Register&amp;action=register" />				<input type="hidden" name="s" value="4e6330bb418737f5790743c303af5cb860173246" />				<input tabindex="4" type="image" class="inputImage" src="wcf/icon/submitS.png" alt="Absenden" />
+			</div>
+			<p><label><input tabindex="3" type="checkbox" id="useCookies" name="useCookies" value="1" /> Dauerhaft angemeldet bleiben?</label></p>
+		</form>
+	</div>
+<script type="text/javascript">
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-17284384-1']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+	</script></body>
+</html>

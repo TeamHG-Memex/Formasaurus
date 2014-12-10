@@ -1,0 +1,935 @@
+<!-- absolute url to registration for bostonglobe.com all redirects should use an absolute url -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"> 
+<head> 
+	<meta name="generator" content="HTML Tidy for Linux/x86 (vers 11 February 2007), see www.w3.org" /> 
+	
+	<title>Boston.com / Member Center</title> 
+	<script type="text/javascript" src="//graphics.boston.com/universal/js/jquery-1.3.2.min.js"></script> 
+	<!--  <script type="text/javascript" src="http://www.boston.com/images/ads/domwindow/jquery.DOMWindow.js"></script>--> 
+	<!-- <script type="text/javascript" src="//graphics.boston.com/universal/regi/js/regi.js"></script>  --> 
+	<script type="text/javascript" src="//graphics.boston.com/universal/regi/regi-original-js/reg.js"></script> 
+	<script language="JavaScript1.2" type="text/javascript" src="//graphics.boston.com/tacoda/Tacoda_AMS_DDC_Header.js"></script> 
+  	
+	<script type="text/javascript" src="/js/lib/jquery.alphanumeric.pack.js"></script>
+ 
+  	<link rel="stylesheet" href="//graphics.boston.com/universal/css/bcom_global_styles.css" type="text/css" /> 
+ 
+	<!--[if IE]><link rel="stylesheet" href="//graphics.boston.com/universal/css/bcom_global_styles_ie.css" type="text/css" /><![endif]--> 
+	<link rel="stylesheet" href="//graphics.boston.com/universal/css/bcom_section_styles.css" type="text/css" /> 
+	<!-- Removed and migrated to Methode. Will remove permanently when satisfied that this doesn't break something ~ jessem 
+	<link rel="stylesheet" type="text/css" href="//graphics.boston.com/universal/regi/css/regi.css" media="all" />
+	 --> 
+	<!-- <link rel="stylesheet" type="text/css" href="/eom/SysConfig/WebPortal/BDC/Framework/css/regi.css" media="all" />-->
+
+	<link rel="stylesheet" type="text/css" href="/css/regi.css" media="all" />
+	<!-- Added CSS from email lists of the purpose of displaying the newsletter signups -->
+	<link rel="stylesheet" type="text/css" href="/css/bcom-newsletter-list.css" media="all">
+	
+	<script type="text/javascript">
+		function getCookie(name){var dc=document.cookie,prefix=name+'=',begin=dc.indexOf('; '+prefix);if(begin==-1){begin=dc.indexOf(prefix);if(begin!=0)return null;}else begin+=2;var end=dc.indexOf(';',begin);if(end==-1)end=dc.length;return unescape(dc.substring(begin+prefix.length,end));}
+	</script>
+	
+	<!-- Load DFP JS Sync -->
+	<script type="text/javascript">
+	  (function() {
+	  var useSSL = 'https:' == document.location.protocol;
+	  var src = (useSSL ? 'https:' : 'http:') +
+	    '//www.googletagservices.com/tag/js/gpt.js';
+	  document.write('<scr' + 'ipt src="' + src + '"></scr' + 'ipt>');
+	  })();
+	</script>
+
+	<!-- Build Key/Value Object + Set adUnit Name -->
+	<script>
+	  var bcom = bcom || {};
+	  bcom.dfp = {};
+	  bcom.dfp.keyValuePairs = {
+	    s1: 'boston.com',
+	    s2: 'coreg',
+	    s3: '',
+	    s4: '',
+	    pgtype : 'subsectfront', 
+	    pageurl : 'boston_com_coreg',
+	    meta: 'coreg'
+	  };
+	  bcom.dfp.adSlots = ['ad_sponsor'];
+	  bcom.dfp.adUnit = 'boston.com/coreg';
+	</script>
+
+	<script src="/js/bcom-dfp.js"></script>
+
+</head> <script>
+   
+ 		function submitform()		 
+		{
+			if (validateform() == false){
+				return false;
+			}else{ 
+				return true;		 	
+			}
+			 
+		} 
+		 
+		function validateform() 
+		
+		//This Function will validate the entire form
+		
+		{   
+			 
+			var hasErrors = false;
+			
+			var emailExp = /^[\w\-\.\+]+\@[a-zA-Z0-9\.\-]+\.[a-zA-z0-9]{2,4}$/;
+			var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+			var zipExp = /^\d\d\d\d\d$/;
+			 
+			//Check First Name
+			var element = 'regi_firstname'; 
+			var ele = document.getElementById(element).value; 
+			var div = document.getElementById(element + "_form");
+			var divOriginal = 'form-fieldset form-name-firstname';
+			var divError = divOriginal + ' form-required form-fieldset-error'; 
+			 
+			if(ele == "")
+			{ 	 
+				div.className = divError;
+				hasErrors = true;
+			}else{  
+				div.className = divOriginal;
+			}			
+			
+			
+			//Check Last Name
+			var element = 'regi_lastname'; 
+			var ele = document.getElementById(element).value; 
+			var div = document.getElementById(element + "_form");
+			var divOriginal = 'form-fieldset form-name-lastname';
+			var divError = divOriginal + ' form-required form-fieldset-error'; 			
+			 
+			if(ele == "")
+			{ 	 
+				div.className = divError; 
+				hasErrors = true;
+						 
+		  	}else{  
+		  		div.className = divOriginal;
+			}
+			  
+			 
+			//Check Email
+			var element = 'regi_email'; 
+			var ele = document.getElementById('regi_email').value; 
+			var div = document.getElementById(element + "_form");
+			var divOriginal = 'form-fieldset form-name-email';
+			var divError = divOriginal + ' form-required form-fieldset-error';			
+		 
+			if(ele == "")
+			{ 	 
+				div.className = divError;    
+				document.getElementById('regi_email_error').innerHTML = "<span class='form-message-bullet'>X</span>" +  "Email Cannot Be Blank"; 
+				hasErrors = true;	 
+		  	}else{
+		  		if(emailExp.test(ele) == false) {
+		  			div.className = divError;  
+					document.getElementById('regi_email_error').innerHTML = "<span class='form-message-bullet'>X</span>" +  "Not A Valid Email Address";
+		  			hasErrors = true;
+		  		}else{
+		  			div.className = divOriginal;		   			
+		  		}
+		  		 
+			} 
+			
+			//Check Password
+			var element1 = 'regi_password';
+			var element2 = 'regi_password2';
+			var password1 = document.getElementById('regi_password').value; 
+			var password2 = document.getElementById('regi_password2').value; 
+			var div1 = document.getElementById(element1 + "_form");
+			var div2 = document.getElementById(element2 + "_form");
+			var divOriginal1 = 'form-fieldset form-name-password';
+			var divOriginal2 = 'form-fieldset form-name-password2';
+			var divError1 = divOriginal1 + ' form-required form-fieldset-error'; 
+			var divError2 = divOriginal2 + ' form-required form-fieldset-error';	
+			var iError = 0;  
+			 
+			if  ((password1 == "") || (password2 == "") || (password1.length < 6) || (password2.length < 6) || ((password1 != password2) == true) )
+			{	
+				   
+				if((password1 == "") || (password2 == ""))
+				{	 
+					iError = 1;
+				}
+				
+				if((password1.length < 6) || (password2.length < 6))
+				{ 
+					iError = 2;
+				}	
+				
+				if((password1 != password2) == true)
+				{ 
+					iError = 3;
+				}
+				 
+				switch (iError)
+				{ 
+					case 1:
+					{ 	 
+						div1.className = divError1;
+						div2.className = divError2;
+						document.getElementById('regi_password_error').innerHTML =  "<span class='form-message-bullet'>X</span>" +  "Passwords Cannot Be Blank";
+						document.getElementById('regi_password2_error').innerHTML =  "<span class='form-message-bullet'>X</span>" +  "Passwords Cannot Be Blank";  
+						hasErrors = true;
+						break;
+					 }
+					
+					case 2:
+					{ 	 
+						div1.className = divError1;
+						div2.className = divError2;
+						document.getElementById('regi_password_error').innerHTML =  "<span class='form-message-bullet'>X</span>" +  "Passwords Must Be More than 6 Characters";
+						document.getElementById('regi_password2_error').innerHTML =  "<span class='form-message-bullet'>X</span>" + "Passwords Must Be More than 6 Characters";
+					 	hasErrors = true;
+					 	break;
+					} 
+					 
+					case 3:
+					{ 	 
+						div1.className = divError1;
+						div2.className = divError2;
+						document.getElementById('regi_password_error').innerHTML =  "<span class='form-message-bullet'>X</span>" +  "Passwords Do Not Match";
+						document.getElementById('regi_password2_error').innerHTML =  "<span class='form-message-bullet'>X</span>" +  "Passwords Do Not Match"; 
+				 		hasErrors = true;
+				 		break;
+					}
+												 
+				  	default:
+				  	{   
+				  		div1.className = divOriginal1;
+				  		div2.className = divOriginal2;
+					} 
+				} 
+			}else{
+		  		div1.className = divOriginal1;
+				div2.className = divOriginal2;		   			
+		  	} 
+			
+			//Check Zip
+			var element = 'regi_zip'; 
+			var ele = document.getElementById(element).value; 
+			var div = document.getElementById(element + "_form");
+			var divOriginal = 'form-fieldset form-name-zip';
+			var divError = divOriginal + ' form-required form-fieldset-error'; 		
+		
+			var check = document.getElementById("regi_outside_us").checked;
+				 
+			if((ele == "" ||  ele.length < 5 ||  ele.length > 5 || zipExp.test(ele) == false) && check == false)
+			{ 	
+				div.className = divError; 
+				hasErrors = true; 
+		  	}else{   
+		  		div.className = divOriginal;
+			} 
+			
+			
+			//Gender 
+			var genderM = document.getElementById('regi_gender_M').checked; 
+			var genderF = document.getElementById('regi_gender_F').checked;  
+			var div = document.getElementById("regi_gender_form");
+			var divOriginal = 'form-fieldset form-name-gender';
+			var divError = divOriginal + ' form-required form-fieldset-error'; 
+			 
+			if((genderM == false) && (genderF == false) )
+			{ 	 
+				div.className = divError; 
+				hasErrors = true;
+						 
+		  	}else{  
+		  		div.className = divOriginal;
+			}
+					 	
+			//Birth Year 
+			var ele = document.getElementById('regi_birthyear').value; 
+			var div = document.getElementById("regi_birthyear_form");
+			var divOriginal = 'form-fieldset form-name-birthyear';
+			var divError = divOriginal + ' form-required form-fieldset-error'; 
+			var iError = 0;  
+			
+			var curYear = new Date();
+			curYear = curYear.getFullYear();
+			var minYear = (curYear - 100); // norlov@thumbtack.net: 150 replaced by 100 according to REGI-874
+			var maxYear = (curYear - 13);
+			  
+			if((ele.length < 4) || (ele > curYear) || (ele > maxYear) || (ele < minYear) || (ele == "") )
+			
+			{
+			
+				if((ele == ""))
+				{	  
+					iError = 1;
+				}
+				
+				if((ele > curYear) || (ele > maxYear))
+				{  
+					iError = 2;
+				}	
+				
+				if((ele.length < 4) || (ele < minYear))
+				{  
+					iError = 3;
+				}
+				 
+				switch (iError)
+				{ 
+					case 1:
+					{ 	  
+						div.className = divError;  
+						document.getElementById('regi_birthyear_error').innerHTML = "<span class='form-message-bullet'>X</span>" +  "Please Enter a Year of Birth";
+						hasErrors = true;
+						break;
+					 }
+					
+					case 2:
+					{ 	  
+						 
+						document.getElementById('form-error').innerHTML = 'Sorry, we can&#39;t complete your registration at this time. <br />' + 
+						'If you have any questions please contact our <a href="http://boston.custhelp.com/app/ask/"> Customer Support Team</a>.';
+						hasErrors = true;
+					 	break;
+					} 
+					 
+					case 3:
+					{ 	  
+						div.className = divError;  
+						document.getElementById('regi_birthyear_error').innerHTML = "<span class='form-message-bullet'>X</span>" +  "Please Enter a Year of Birth";
+						hasErrors = true;
+				 		break;
+					}
+												 
+				  	default:
+				  	{   
+				  		div.className = divOriginal;
+					} 
+				} 
+			}else{
+		  		div.className = divOriginal;	   			
+		  	}
+			  
+			
+			//Subscriber 
+			var subscriber = document.getElementById('regi_subscriber_id').value; 
+			var div = document.getElementById("regi_subscriber_form");
+			var divOriginal = 'form-fieldset form-name-subscriber';
+			var divError = divOriginal + ' form-required form-fieldset-error'; 
+			    
+			if((subscriber == "") || (subscriber == 0) )
+			{ 	 
+				div.className = divError; 
+				hasErrors = true;
+						 
+		  	}else{  
+		  		div.className = divOriginal;
+			} 
+			 
+			//End - Check Errors
+			if (hasErrors == true)			
+			{ 
+				document.getElementById('form-error').style.visibility = 'visible'; 
+				return false;
+			}else{ 
+				document.getElementById('form-error').style.visibility = 'hidden';  
+		  		return true; 
+			}
+		}
+		
+		function checkempty(element, divOriginal) 
+		//This will validate certain fields on a lost focus
+		{ 
+			var ele = document.getElementById(element).value;
+			var div = document.getElementById(element + "_form");
+			//var divClass = div.className;
+			var divError = divOriginal + ' form-required form-fieldset-error'; 
+			   
+			if(ele == "")  //text box was blank
+			
+			{ 			 
+				div.className = divError; 
+				return false;
+				 
+		   	}else{ 
+		   		div.className = divOriginal;  
+				return true; 
+		 	}
+		 	return true;
+		 }
+		 
+		 
+		function disableZip() 
+		{ 
+			var check = document.getElementById("regi_outside_us").checked;
+			 
+			if (check == true)
+			{ 
+				document.getElementById("regi_zip").value  = ""; 
+				document.getElementById("regi_zip").disabled = true; 
+				
+			}else{
+				document.getElementById("regi_zip").disabled = false;			
+			} 
+		}	
+		
+</script><script>
+
+		function DisplayError(errorcode)
+	   	{  
+	     	if (errorcode == '-100') {  
+	     		
+	     		var div = document.getElementById('regi_email_form');
+				var divOriginal = 'form-fieldset form-name-email';
+				var divError = divOriginal + ' form-required form-fieldset-error'; 
+	     		
+				div.className = divError; 
+				document.getElementById('regi_email_error').innerHTML = "<span class='form-message-bullet'>X</span>" +  "E-mail already been registered."; 
+			  		
+			}
+	   	}
+		
+</script>	
+ 
+<body> 
+ 
+	<meta name="WT.cg_n" content="Member Center" /> 
+	<meta name="WT.cg_s" content="Member Center" /> 
+	<meta name="ti" content="Registration form" /> 
+	<meta name="WT.si_n" content="newMember" /> 
+	<meta name="WT.si_x" content="1" /> 
+ 
+	<div id="container"> 
+		<div id="containerBorder"> 
+			<div id="header"> 
+				<div class="regi-header"> 
+        			<div class="bcom-globe-logos"> 
+            			<a href="http://www.boston.com"></a> 
+					</div>
+          			<div class="regi-header-inner"> 
+            			<h1>Not signed up yet? Not to worry - it's still FREE!</h1> 
+            			<p></p> 
+          			</div> 
+        		</div><!-- /end regi-header -->
+      		</div><!-- /end #header -->
+	
+      		<div id="content" class="section section95"> 
+        		<div id="Col1"> 
+					<div class="regi-head-text"> 
+						          <h2><b>Benefits of registering for membership</b></h2> 
+						          <ul> 
+						            <li>Unlimited access to the entire Boston.com site</li> 
+									<li>Share your comments on articles and join the conversation</li> 
+									<li>Newsletters on topics of your choice, from breaking news and sports to shopping and local deals</li>  
+						          </ul> 
+								</div>  
+			          		<div class="form-padding"></div>
+					    <form name="loginForm" method="post" onsubmit="return submitform()"  action="https://www.boston.com/eom/SysConfig/WebPortal/BDC/Framework/regi/register_action.jsp" id="regi"> 
+						<input type="hidden" name="mode" value="register">			
+						<input type="hidden" name="regType" value="">			
+						<input type="hidden" name="uid" value="">			
+						<input type="hidden" name="validate" value="true">			
+						<input type="hidden" name="loadLists" value="false">			
+						<input type="hidden" name="seamlesswebtag" value="">
+						<input type="hidden" name="regi_userid" id="regi_userid"  value="0">
+						<input type="hidden" name="regi_accountstatus" id="regi_accountstatus" value="10">
+
+						<div class="form-error" style="visibility:hidden"  id="form-error">
+			The highlighted fields are incorrect or need to be updated.
+		</div>
+	<div class="form-fieldset form-name-firstname" id="regi_firstname_form" >
+			              <label for="regi_firstname"> 
+			                <span class="form-legend"> 
+			                  First name*
+			                </span> 
+			                <span class="form-fields"> 
+			                  <input class="type-text" type="text" name="regi_firstname" id="regi_firstname" value=""> 
+			                </span> 
+                              
+			              </label> 
+			              <span class="form-message"> 
+			                <span class="form-message-default"> 
+			                </span> 
+			                <span class="form-message-success"> 
+			                  <span class="form-message-bullet"><span>a</span></span> 
+			                  Success message.
+			                </span> 
+			                <span class="form-message-error" id="regi_firstname_error" >
+			                  <span class="form-message-bullet">X</span>
+			                  This field is required
+			                </span> 
+			              </span> 
+			            </div> 
+            
+			            <div class="form-fieldset form-name-lastname" id="regi_lastname_form" >
+			              <label for="regi_lastname"> 
+			                <span class="form-legend"> 
+			                  Last name*
+			                </span> 
+			                <span class="form-fields"> 
+			                  <input class="type-text" type="text" name="regi_lastname" id="regi_lastname" value=""> 
+			                </span> 
+			              </label> 
+			              <span class="form-message"> 
+			                <span class="form-message-default"> 
+			                </span> 
+			                <span class="form-message-success"> 
+			                  <span class="form-message-bullet"><span>a</span></span> 
+			                  Success message.
+			                </span> 
+			                <span class="form-message-error" id="regi_lastname_error"> 
+			                  <span class="form-message-bullet">X</span>
+			                  This field is required
+			                </span> 
+			              </span> 
+			            </div> 
+            
+			            <div class="form-fieldset form-name-email"  id="regi_email_form" >
+			              <label for="regi-email"> 
+			                <span class="form-legend"> 
+			                  E-mail*
+			                </span> 
+			                <span class="form-fields"> 
+			                  <input class="type-text" type="text" name="regi_email" id="regi_email" value="" > 
+			                </span> 
+			              </label> 
+			              <span class="form-message"> 
+			                <span class="form-message-default"> 
+			                  <span>&#9668;</span> 
+			                  This will be your login to Boston.com. <br> 
+			                  It must be a valid e-mail address.
+			                </span> 
+			                <span class="form-message-success"> 
+			                  <span class="form-message-bullet"><span>a</span></span> 
+			                  Success message.
+			                </span> 
+			                <span class="form-message-error" id="regi_email_error" >
+			                  <span class="form-message-bullet">X</span>
+			                  This field is required
+			                </span> 
+			              </span> 
+			            </div> 
+            
+			            <div class="form-fieldset form-name-password" id="regi_password_form" >
+			              <label for="regi-password"> 
+			                <span class="form-legend"> 
+			                  Password*
+			                </span> 
+			                <span class="form-fields"> 
+			                  <input class="type-password" type="password"  maxlength="20"  name="regi_password" id="regi_password" value=""> 
+			                </span> 
+			              </label> 
+			              <span class="form-message"> 
+			                <span class="form-message-default"> 
+			                  <span class="form-message-bullet">&#9668;</span> 
+			                  At least six characters
+			                </span> 
+			                <span class="form-message-success"> 
+			                  <span class="form-message-bullet"><span>a</span></span>  
+			                </span> 
+			                <span class="form-message-error" id="regi_password_error" >
+			                  <span class="form-message-bullet">X</span>
+			                  This field is required 
+			                </span> 
+			              </span> 
+			            </div> 
+            
+			            <div class="form-fieldset form-name-password2" id="regi_password2_form" >
+			              <label for="regi-password2"> 
+			                <span class="form-legend"> 
+			                  Confirm password*
+			                </span> 
+			                <span class="form-fields"> 
+			                  <input class="type-password" type="password"  maxlength="20"  name="regi_password2" id="regi_password2" value=""> 
+			                </span> 
+			              </label> 
+			              <span class="form-message"> 
+			                <span class="form-message-default"> 
+			                  <span class="form-message-bullet">&#9668;</span> 
+			                  Please re-type your password
+			                </span> 
+			                <span class="form-message-success"> 
+			                  	
+			                </span> 
+			                <span class="form-message-error" id="regi_password2_error" >
+			                  <span class="form-message-bullet">X</span>
+			                  This field is required 
+			                </span> 
+			              </span> 
+			            </div> 
+            
+			           <div class="form-fieldset form-name-zip" id="regi_zip_form" >
+			              <span class="form-legend"> 
+			                <label for="regi_zip"> 
+			                  ZIP/Postal Code*
+			                </label> 
+			              </span> 
+			              <span class="form-fields"> 
+			                <input class="type-text" type="text" name="regi_zip" id="regi_zip"  maxlength="5"   > 
+			                &nbsp;
+			                <label for="regi_outside_us"> 
+			                  <input class="type-checkbox" onClick="disableZip()" type="checkbox" name="regi_outside_us" id="regi_outside_us"   > 
+			                  Outside the US
+			                </label> 
+			              </span> 
+			              <span class="form-message"> 
+			                <span class="form-message-default"> 
+			                </span> 
+			                <span class="form-message-success"> 
+			                  <span class="form-message-bullet"><span>a</span></span> 
+			                  Success message.
+			                </span> 
+			                <span class="form-message-error" id="regi_zip_error" >
+			                 <span class="form-message-bullet">X</span>
+						   		This field is required
+			                </span> 
+			              </span> 
+			            </div> 
+            
+			            <div class="form-fieldset form-name-gender" id="regi_gender_form" >
+			              <span class="form-legend"> 
+			                Gender*
+			              </span> 
+			              <span class="form-fields"> 
+			                <label for="regi_gender_M"> 
+			                  <input class="type-radio" type="radio" name="regi_gender" id="regi_gender_M" value="M"> 
+			                  Male
+			                </label> 
+			                &nbsp;
+			                <label for="regi_gender_F"> 
+			                  <input class="type-radio" type="radio" name="regi_gender" id="regi_gender_F" value="F"> 
+			                  Female
+			                </label> 
+			              </span> 
+			              <span class="form-message"> 
+			                <span class="form-message-default"> 
+			                  
+			                </span> 
+			                <span class="form-message-success"> 
+			                  <span class="form-message-bullet"><span>a</span></span> 
+			                  Success message.
+			                </span> 
+			                <span class="form-message-error" id="regi_gender_error" > 
+			                  <span class="form-message-bullet">X</span>
+			                  This field is required
+			                </span> 
+			              </span> 
+			            </div> 
+            
+			            <div class="form-fieldset form-name-birthyear" id="regi_birthyear_form">
+			              <label for="regi-birthyear"> 
+			                <span class="form-legend"> 
+			                  Year of birth*
+			                </span> 
+			                <span class="form-fields"> 
+			                  <input class="type-text" type="text" name="regi_birthyear" id="regi_birthyear" size="4" maxlength="4"> 
+			                </span> 
+			              </label> 
+			              <span class="form-message"> 
+			                <span class="form-message-default"> 
+			                  <span class="form-message-bullet">&#9668;</span> 
+			                  YYYY
+			                </span> 
+			                <span class="form-message-success"> 
+			                  <span class="form-message-bullet"><span>a</span></span> 
+			                  Success message.
+			                </span> 
+			                <span class="form-message-error" id="regi_birthyear_error">
+			                  <span class="form-message-bullet">X</span> 
+			                  This field is required
+			                </span> 
+			              </span> 
+			            </div> 
+						
+						<div class="form-fieldset form-name-subscriber" id="regi_subscriber_form">
+			              <label for="regi_subscriber_id"> 
+			                <span class="form-legend"> 
+			                  Globe Subscriber*
+			                </span> 
+			                <span class="form-fields"> 
+			                  <select name="regi_subscriber_id" id="regi_subscriber_id"> 
+			                    <option value="0">--- Select one ---</option> 
+			                    <option value="102">I subscribe</option> 
+			                    <option value="103">I read it regularly, but don&#39;t subscribe </option> 
+			                    <option value="104">I read it occasionally, but don&#39;t subscribe</option> 
+			                    <option value="105">I rarely or never read it</option> 
+			                  </select> 
+			                </span> 
+			              </label> 
+						  <span class="form-message"> 
+			                <span class="form-message-default"> 
+			                  <span class="form-message-bullet">&#9668;</span> 
+			                  <a href="#" onclick="window.open('http://www.boston.com/help/registration/subscriberbenefits/','popup','width=375,height=475,resizable=yes,scrollbars=yes,toolbar=no,location=no,menubar=no,status=no'); return false;" class="form-why">Why do we ask this?</a> 
+			                </span> 
+			                <span class="form-message-success"> 
+			                  <span class="form-message-bullet"><span>a</span></span> 
+			                  Success message.
+			                </span> 
+ 
+			                <span class="form-message-error"> 
+			                  <span class="form-message-bullet">X</span>
+			                   Please tell us how you read The Boston Globe
+			                </span> 
+			              </span> 
+			            </div> 
+						   
+						<script type="text/javascript"> 
+			              $('.contestlink').click(function(){
+			                $.openDOMWindow({
+			                  width:580,
+			                  height:480,
+			                  loader:1,
+			                  windowPadding:0,
+			                  loaderHeight:16,
+			                  loaderWidth:17,
+			                  borderColor:'#000',
+			                  overlayOpacity:70,
+			                  windowSourceID:'#contestDetails'
+			                });
+			                return false;
+			              });
+			            </script> 
+ 
+			            <div id="contestDetails" style="display:none;width:580px;"> 
+			              	<div style="background-color:#000;height:15px;color:#fff;padding:10px;"> 
+			                	<span style="float:left">Contest Details</span> 
+			                	<a href="#" class="closeDOMWindow" style="float:right;color:#fff" >close X</a> 
+			              	</div> 
+        					<div style="overflow-x:hidden;overflow-y:scroll;width:580px;height:450px;"> 
+			                	<img src="//graphics.boston.com/images/ads/regi/rewards.jpg" usemap="#Map" /> 
+								<map name="Map" id="Map"> 
+									<area shape="rect" coords="168,670,250,796" href="#" onclick="window.open('http://boston.com/advertisers/regi/rules/','RULES','width=500,height=300');" /> 
+									<area shape="rect" coords="11,663,165,796" href="#" class="closeDOMWindow" alt="Go back" /> 
+								</map>                 
+							</div> 
+						</div><!--/end #contestDetails --> 
+ 
+            
+			            <div class="form-callout"> 
+			            	<p style="font-size: 11px;"> 
+			                	Boston.com respects your privacy. Click <a href="http://www.boston.com/help/privacy_policy/" target="_blank">here</a> to learn more.
+			              	</p> 
+							<span style="color:#272727"> 
+			                	By clicking the Register button below, you agree to Boston.com's <a href="http://www.boston.com/help/memberagreement/" target="_blank">Member Agreement</a> 
+							</span> 
+			            </div> 
+            
+			            <div class="form-fieldset form-name-submit"> 
+			              <span class="form-fields"> 
+			                <input type="submit" name="dispatch" value="Register" class="form-button"> 
+			              </span> 
+			              <span class="form-message"></span> 
+			            </div> 
+            
+           			</form> 
+          
+        		</div><!--/end #Col1 --> 
+ 
+		        <div id="Col2">
+		        
+		        	<h2><b>Already a member?</b></h2>
+		        	
+					<div class="fb-login"> 
+						<h3 class="fb-login-header"> 
+							<span class = fb-login-header-inner> 
+							  Log in with Facebook
+							</span> 
+						</h3> 
+						<p class="fb-login-text"> 
+						  Use your Facebook account to get full access to Boston.com.
+							<span class="fb-login-button"> 
+                  				<img src="//graphics.boston.com/universal/regi/images/fb-login-button.png" onclick="javascript:FB.login(fbSessionHandler, {scope:'user_birthday,email'});"> 
+                			</span> 
+						</p> 
+					</div>  
+		      
+					<div id="login"> 
+		            <h3 class="regi-icon regi-icon-bcom">Log in with your account</h3> 
+            
+					  <form name="loginForm" method="post" action="/Login;jsessionid=3278D426C3FAE46C5DA4C55BCDD8FA5C"> 
+						
+					  		<input type="hidden" name="redirect" value="https://www.boston.com/eom/SysConfig/WebPortal/BDC/Framework/regi/membercenter-redirect.jsp?update=login">
+				       		<input type="hidden" name="onerror" value="https://www.boston.com/eom/SysConfig/WebPortal/BDC/Framework/regi/login-error.jsp?errorurl=https://www.boston.com/eom/SysConfig/WebPortal/BDC/Framework/regi/login.jsp?error=true"> 
+						
+							<input type="hidden" name="mode" value="register"> 
+							<input type="hidden" name="validate" value="false"> 
+							<input type="hidden" name="loadLists" value="true"> 
+							<input type="hidden" name="regType" value="initial"> 
+							<input type="hidden" name="seamlesswebtag" value=""> 
+									
+					<div class="form-fieldset form-required form-name-firstname"> 
+		                <label for="login-email"> 
+		                  <span class="form-legend"> 
+		                    E-mail*
+		                  </span> 
+		                  <span class="form-fields"> 
+				               <input class="type-text" type="text" 
+				               name="username" id="username" value=""> 
+		                  </span> 
+		                </label> 
+		              </div> 
+ 
+		              <div class="form-fieldset form-required form-name-password"> 
+		                <label for="login-password"> 
+		                  <span class="form-legend"> 
+		                    Password*
+		                  </span> 
+		                  <span class="form-fields"> 
+				               <input class="type-password" type="password" 
+				               name="password" id="password" value=""> 
+		                  </span> 
+		                </label> 
+		              </div> 
+							
+					<span class="regi-rememberme"> 
+			              <label for="regi-rememberme"> 
+								<input class="type-checkbox" type="checkbox" name="remember" value="remember" checked>                    
+			                  	Remember me on this computer.
+			              </label> 
+					</span> 
+ 
+		              <div class="form-fieldset form-name-submit"> 
+		                <span class="form-fields"> 
+				             <input type="submit" name="dispatch" value="Login" class="form-button"> 
+		                </span> 
+                
+						<span class="form-message"> 
+						  <a href="https://www.boston.com/eom/SysConfig/WebPortal/BDC/Framework/regi/forgot-password-step1.jsp">Forgot your password?</a> 
+						</span> 
+					</div> 
+              
+		           <p class="login-footer">If you have already created an account with Boston Globe Services, you may log in with that e-mail and password.</p> 
+		         
+		           <div class="regi-login-login-problems"> 
+		           	<h3 class="regi-icon regi-icon-login-problems">Login issue?</h3> 
+		             <p>Having trouble logging in? Already registered but being asked to log in again?</p> 
+		             <p class="footer"><a href="http://www.boston.com/help/feedback/">Let us know &raquo;</a></p> 
+		           </div> 
+              
+ 
+					</form>						
+		          </div> 
+		        </div> 
+		 		<div id="Col3"></div> 
+		 		<div class="cf"></div> 
+      		</div><!--/end #content --> 
+	 	  	  	 
+			<div id="footer"> 
+        		<div class="regi-footer"> 
+          			<div class="regi-footer-logo"> 
+            			<div id="cbe23a98-1d83-4280-bcea-cfa081c790e7"> 
+							<script type="text/javascript" src="//privacy-policy.truste.com/privacy-seal/The-New-York-Times/asc?rid=cbe23a98-1d83-4280-bcea-cfa081c790e7"></script>
+							<a href="//privacy.truste.com/privacy-seal/The-New-York-Times/validation?rid=0535a645-62f9-4350-be83-d820d8f37ad0" title="TRUSTe online privacy certification" target="_blank">
+								<img style="border: none" src="//privacy-policy.truste.com/privacy-seal/The-New-York-Times/seal?rid=0535a645-62f9-4350-be83-d820d8f37ad0" alt="TRUSTe online privacy certification"/>
+							</a>
+						</div> 
+          			</div> 
+          			<div class="regi-footer-text"> 
+            			<h4>Registration Help</h4> 
+            			<a href="http://www.boston.com/help/privacy_policy/" target="_blank">Privacy policy</a> |
+			            <a href="http://www.boston.com/help/faq/" target="_blank">Member FAQ</a> |
+			            <a href="http://www.boston.com/help/feedback" target="_blank">Feedback form</a> |
+			            <a href="http://www.boston.com/help" target="_blank">Help</a> 
+          			</div> 
+        		</div>        
+        		<div class="cf"></div> 
+      		</div><!--/end #footer --> <div id="fb-root"></div>
+
+<script> 
+	
+	window.fbAsyncInit = function() {
+		FB.init({appId: '135637993114591', status: true, cookie: true, xfbml: true, oauth:true});
+	};
+	
+	(function() {
+		var e = document.createElement('script'); e.async = true;
+		e.src = document.location.protocol +
+		'//connect.facebook.net/en_US/all.js';
+		document.getElementById('fb-root').appendChild(e);
+	}());
+
+	function fbSessionHandler(response){
+		
+		 var url = "http://members.boston.com/profiles/outside/REST/facebook/login?fail=http://prototype.boston.com/eom/SysConfig/WebPortal/BDC/Framework/regi/regi-login-register.jsp?error=fberror&success=http://prototype.boston.com/&deny=http://prototype.boston.com/eom/SysConfig/WebPortal/BDC/Framework/regi/regi-login-register.jsp?error=access_denied&update=http://prototype.boston.com/eom/SysConfig/WebPortal/BDC/Framework/regi/facebook-additional-info.jsp";
+	
+		if (response.authResponse) {
+			window.location.assign(url);
+		} else {
+			//deny
+			window.location.assign(url + "&error=access_deny");
+		}
+	}
+</script>
+
+
+</div> 
+	</div> 
+ 
+ <script> 
+	var error = ""; 
+
+	if (error != "")
+	{
+  		DisplayError(error); 
+	} 
+</script>
+
+
+<!-- Added Script for Alpha Numeric Validation-Start -->
+<script type="text/javascript">
+	$('#regi_firstname').alphanumeric({allow:" -'"});
+	$('#regi_lastname').alphanumeric({allow:" -'"});
+	$('#regi_email').alphanumeric({allow:"@.+-"});
+	$('#regi_password').alphanumeric({allow:"~!@#$%&*."});
+	$('#regi_zip').numeric();
+	$('#regi_birthyear').numeric();
+</script>
+<!--  Added Script for Alpha Numeric Validation-End -->
+ 
+	<!-- SiteCatalyst code - More info available at http://www.omniture.com -->
+	<script language="JavaScript" src="//cache.boston.com/omniture/hcode/s_code_latest.js"></script>
+ 
+	<script language="JavaScript"><!--
+
+	s.pageName='Member Center | BCom Registration | Main BCom registration/log-in challenge page',s.channel='Member Center',s.prop1='Member Center | BCom Registration';
+s.server='',s.pageType='',s.prop2='',s.prop3='',s.prop4='',s.prop5='',s.prop6='BCom Registration Page',s.prop7='',s.prop8='',s.prop9='',s.prop10='',s.prop41='Boston.com';
+/* E-commerce Variables */
+s.campaign='',s.state='',s.zip='',s.events='',s.products='',s.purchaseID='',s.eVar1='',s.eVar2='',s.eVar3='',s.eVar4='',s.eVar5='',s.eVar6='',s.eVar7='',s.eVar8='',s.eVar9='',s.eVar10='',s.eVar41='Boston.com';
+
+	s.prop35='logged out',s.eVar20='D=c35',s.prop42='n/a',s.eVar42='n/a';
+	var s_code=s.t();if(s_code)document.write(s_code);
+	
+	//--></script>
+	<script language="JavaScript" type="text/javascript"><!--
+	if(navigator.appVersion.indexOf('MSIE')>=0)document.write(unescape('%3C')+'\!-'+'-')
+	//--></script>
+	<noscript><a href="http://www.omniture.com" title="Web Analytics"><img src="//nytbglobe.112.2O7.net/b/ss/nytbglobe/1/H.19.3--NS/0" height="1" width="1" alt="" /></a></noscript><!--/DO NOT REMOVE/-->
+	
+	
+	<!-- START Nielsen Online SiteCensus V6.0 -->
+	<!-- COPYRIGHT 2010 Nielsen Online -->
+	<script type="text/javascript"> 
+	  (function () {
+	    var d = new Image(1, 1);
+	    d.onerror = d.onload = function () {
+	      d.onerror = d.onload = null;
+	    };
+	    d.src = ["//secure-us.imrworldwide.com/cgi-bin/m?ci=us-604060h&cg=0&cc=1&si=", escape(window.location.href), "&rp=", escape(document.referrer), "&ts=compact&rnd=", (new Date()).getTime()].join('');
+	  })();
+	</script>
+	<noscript>
+	  <div>
+	    <img src="//secure-us.imrworldwide.com/cgi-bin/m?ci=us-604060h&amp;cg=0&amp;cc=1&amp;ts=noscript" width="1" height="1" alt="" />
+	  </div>
+	</noscript>
+	<!-- END Nielsen Online SiteCensus V6.0 -->
+	
+	<!-- Chartbeat, GO! -->
+	<script type="text/javascript" src="/js/tracking/bcom-chartbeat.js"></script> 
+
+</body>  
+</html>

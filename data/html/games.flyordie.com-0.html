@@ -1,0 +1,188 @@
+
+<!DOCTYPE html> 
+<HTML dir="LTR">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+<TITLE>Registration</TITLE>
+<LINK REL=STYLESHEET TYPE="text/css" HREF="http://www.flyordie.com/flyordie.css">
+<SCRIPT>
+function init() {
+	document.forms[0].elements['loginName'].focus();
+}
+
+var SCREEN = typeof(screen) != 'undefined';
+
+function openPopup(url, w, h, target, feat) {
+	var x = 0;
+	var y = 0;
+	if(SCREEN)
+		if(w < 0)
+			x = screen.width + w - 8;
+		else {
+			x = Math.max(0, (screen.width - w) / 2);
+			y = Math.max(0, (screen.height - h) / 2);
+		}
+	feat = "width=" + Math.abs(w) + ",height=" + h + ",screenX=" + x +",left=" + x +",screenY=" + y +",top=" + y + feat;
+	feat += ",toolbar=0,location=0,directories=0,status=0,menubar=0,resizable=1,copyhistory=0";
+	window.open(url, target, feat);
+}
+
+function openTermsOfService(element) {
+	var y = 460;
+	if(SCREEN)
+		y = screen.height - 60;
+	element.target='u' + new Date().getMilliseconds();
+	openPopup('', -500, y, element.target, ',scrollbars=1');
+}
+
+function submitOnce() {
+	document.getElementById('submitButton').value = "Please Wait...";
+	document.getElementById('submitButton').disabled = "disabled";
+	return true;
+}
+
+</SCRIPT>
+</head>
+
+<body onLoad="init()">
+<H2>Player Registration</H2>
+
+<FORM id="form" METHOD="POST" ACTION="registerSite.html" onSubmit="submitOnce();">
+<input type="hidden" name="lang" value="en_US">
+<input type="hidden" name="portal" value="flyordie_com">
+<input type="hidden" name="game" value="Forum">
+<input type="hidden" name="roomNumber" value="">
+<input type="hidden" name="done" value="http://forum.flyordie.com/auth.jsp">
+<script type="text/javascript">
+function addInput(n, v) {
+	with(i = document.createElement("input")) type = "hidden", name = n, value = v; document.getElementById("form").appendChild(i);
+}
+function pl() {
+	if (typeof navigator == 'undefined')
+		return null;
+	if (typeof navigator.plugins == 'undefined')
+		return null;
+	if (typeof navigator.plugins.length == 'undefined')
+		return null;
+	var s = "";
+	var L = navigator.plugins.length;
+	for(var i=0; i<L; i++) {
+		s += navigator.plugins[i].name + '\t';
+		s += navigator.plugins[i].filename + '\t';
+		s += navigator.plugins[i].description + '\t';
+		s += navigator.plugins[i].version + '\r';
+	}
+	return s;
+}
+addInput("sw", screen.width);
+addInput("sh", screen.height);
+addInput("sd", screen.colorDepth);
+addInput("tz0", new Date(1293836400000).getTimezoneOffset());
+addInput("pl", pl());
+</script>
+
+
+<TABLE class="w460" BORDER=0 CELLPADDING=0 CELLSPACING=3>
+	<TR>
+		<TD WIDTH="160" ALIGN=LEFT></TD>
+		<TD ALIGN=LEFT>
+			
+		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH="160" ALIGN=LEFT>
+			<span class="label">Nickname:&nbsp</label>
+		</TD>
+		<TD ALIGN=LEFT>
+			<input class="inputbox" size="16" maxlength="16" name="loginName" value="">
+		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH="160" ALIGN=LEFT></TD>
+		<TD ALIGN=LEFT>
+			
+		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH="160" ALIGN=LEFT VALIGN=TOP>
+			<span class="label">Password:&nbsp;</span>
+		</TD>
+		<TD ALIGN=LEFT>
+			<input class="inputbox" type="password" size="16" maxlength="16" name="password" value="">
+		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH="160" ALIGN=LEFT VALIGN=TOP>
+			<span class="label">Re-type password:&nbsp</span>
+		</TD>
+		<TD ALIGN=LEFT>
+			<input class="inputbox" type="password" size="16" maxlength="16" name="passwordRetyped" value="">
+		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH="160" ALIGN=LEFT VALIGN=TOP></TD>
+		<TD ALIGN=LEFT>
+			
+		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH="160" ALIGN=LEFT VALIGN=TOP>
+			<span class="label">E-mail:&nbsp</span>
+		</TD>
+		<TD ALIGN=LEFT>
+			<input class="inputbox" size="32" maxlength="40" name="email" value=""><BR>
+
+		</TD>
+	</TR>
+
+	<TR>
+		<TD class=small WIDTH="160" height=15>
+			
+		</TD>
+
+	</TR>
+
+	<TR>
+
+		<TD ALIGN=LEFT class=small colspan=2>
+			By clicking on "Sign Up"<br>
+I accept the <A HREF="http://www.flyordie.com/termsofservice.html" onclick="openTermsOfService(this)">Terms of Service</A>
+		</TD>
+	</TR>
+
+	<TR>
+		<TD class=small WIDTH="160" height=15>
+			
+		</TD>
+
+	</TR>
+	<TR>
+
+		<TD ALIGN=LEFT  colspan=2>
+			<button type=submit id="submitButton" class="button">Sign Up</button>
+		</TD>
+	</TR>
+</TABLE>
+</FORM>
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-295578-1']);
+  _gaq.push(['_setDomainName', 'flyordie.com']);
+  _gaq.push(['_trackPageview', '/s/register.html']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+</body>
+</html>
+

@@ -1,0 +1,618 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head profile="http://gmpg.org/xfn/11">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+	<title>Dog, Cat &amp; Other Pet Friendly Hotels at Petswelcome.com</title>
+	<script type="text/javascript">
+//<![CDATA[
+try{if (!window.CloudFlare) {var CloudFlare=[{verbose:0,p:1417668567,byc:0,owlid:"cf",bag2:1,mirage2:0,oracle:0,paths:{cloudflare:"/cdn-cgi/nexp/dok2v=1613a3a185/"},atok:"a7b2a63e4b1410ba795b2aca1c3eef2d",petok:"db6e925cc529250e6b09815f69fcc4089eb636ab-1417733256-1800",zone:"petswelcome.com",rocket:"0",apps:{"ga_key":{"ua":"UA-6856491-4","ga_bs":"2"}}}];!function(a,b){a=document.createElement("script"),b=document.getElementsByTagName("script")[0],a.async=!0,a.src="//ajax.cloudflare.com/cdn-cgi/nexp/dok2v=919620257c/cloudflare.min.js",b.parentNode.insertBefore(a,b)}()}}catch(e){};
+//]]>
+</script>
+<link rel="icon" type="image/png" href="http://www.petswelcome.com/wp/wp-content/themes/pw5/favicon.ico">
+	<link rel="stylesheet" type="text/css" media="screen" href="http://www.petswelcome.com/wp/wp-content/themes/pw5/style.css"/>
+
+	<link rel="pingback" href="http://www.petswelcome.com/wp/xmlrpc.php" />
+			<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.petswelcome.com/wp/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.petswelcome.com/wp/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 3.3.1" />
+<meta property="fb:app_id" content="106808379604"/>
+<meta property="fb:admins" content=""/>
+
+<!-- All in One SEO Pack 2.0.2 by Michael Torbert of Semper Fi Web Design[280,303] -->
+<meta name="description" content="Listing of pet friendly hotels, motels, inns, and bed and breakfast&#039;s throughout the USA and Canada, all of which accept pets and not just Dogs &amp; Cats but also Birds &amp; exotic animals" />
+
+<!-- /all in one seo pack -->
+	<link rel="stylesheet" href="http://www.petswelcome.com/articles/wp-content/themes/pw3/js/jquery.hoverscroll.css" type="text/css" media="screen" title="hoverscroll" charset="utf-8">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.2/jquery-ui.min.js"></script>
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places&sensor=false"></script>
+<script type="text/javascript" src="http://www.petswelcome.com/articles/wp-content/themes/pw5/js/jquery.simplemodal.js"></script>
+<script type="text/javascript" src="http://www.petswelcome.com/articles/wp-content/themes/pw3/js/jquery.hoverscroll.js"></script>
+<script type="text/javascript" src="http://www.petswelcome.com/articles/wp-content/themes/pw5/js/pw.js"></script>
+<script type="text/javascript" src="http://petswelcome.list-manage.com/js/jquery.validate.js"></script>
+<script type="text/javascript" src="http://petswelcome.list-manage.com/js/jquery.form.js"></script>
+<script type="text/javascript" src="http://petswelcome.list-manage.com/subscribe/xs-js?u=ade3865e57924e2f40e3e555a&amp;id=273168a6fe"></script>
+<script type="text/javascript">
+	jQuery(document).ready(function() {
+		
+		jQuery('.latestGreatest ul.blogroll').hoverscroll({'height':'265px', 'width':'230px'});
+
+		jQuery('.hotDeals li').each(function() {
+			link = jQuery(this).children('a').clone();
+			link.text('More...').addClass('moreLink').appendTo(jQuery(this).children('p'));
+		});
+		
+	});
+</script>
+<script>
+$(function() {
+
+
+	$( "#searchLocation" ).autocomplete({
+		source: "http://www.petswelcome.com/wp/wp-content/themes/pw5/locSearch.php",
+		minLength: 2,
+        select: function(event, ui) {
+                   $('#LocID').val(ui.item.LocID);
+                   $('#searchLocation').val(ui.item.Name);
+               },
+			 open: function(){
+			        $(this).autocomplete('widget').css('z-index', 1500);
+			        return false;
+			    },
+
+	});
+	
+
+		jQuery('#stateChoice').change(function() {
+			var params = "&state=" + jQuery('#stateChoice').val();
+			var pathname = "http://www.petswelcome.com/wp/wp-content/themes/pw5/getCitiesList.php";
+
+			jQuery('.cityChoice').attr('disabled', 'disabled');
+			jQuery.ajax({
+				url: pathname,
+				type: "POST",
+				data: params,
+				dataType: "html",
+				complete: function(request){
+				},
+				success: function(text){
+					jQuery('.cityChoice').html(text).attr('disabled', '');
+				},
+				error: function(request) {
+					alert('error');
+				}
+			})
+		});
+
+		jQuery('#stateBrandChoice').change(function() {
+
+			var params = "&state=" + jQuery('#stateBrandChoice').val();
+			params += "&brand=" + jQuery('#brandChoice').val();
+			var pathname = window.location.protocol + "//" + window.location.host + "/get/getCitiesList.php";
+
+
+			jQuery.ajax({
+				url: pathname,
+				type: "POST",
+				data: params,
+				dataType: "html",
+				complete: function(request){
+				},
+				success: function(html){
+					var text  = '<select id="cityBrandChoice" style="width:125px;" name="CityChoice">';
+					text += html;
+					text += '</select>';
+					jQuery('.cityBrandChoice').html(text);
+				},
+				error: function(request) {
+					alert('error');
+				}
+			})
+		});
+});
+</script>
+<script type="text/javascript">/* CloudFlare analytics upgrade */
+</script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-6856491-4']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+
+(function(b){(function(a){"__CF"in b&&"DJS"in b.__CF?b.__CF.DJS.push(a):"addEventListener"in b?b.addEventListener("load",a,!1):b.attachEvent("onload",a)})(function(){"FB"in b&&"Event"in FB&&"subscribe"in FB.Event&&(FB.Event.subscribe("edge.create",function(a){_gaq.push(["_trackSocial","facebook","like",a])}),FB.Event.subscribe("edge.remove",function(a){_gaq.push(["_trackSocial","facebook","unlike",a])}),FB.Event.subscribe("message.send",function(a){_gaq.push(["_trackSocial","facebook","send",a])}));"twttr"in b&&"events"in twttr&&"bind"in twttr.events&&twttr.events.bind("tweet",function(a){if(a){var b;if(a.target&&a.target.nodeName=="IFRAME")a:{if(a=a.target.src){a=a.split("#")[0].match(/[^?=&]+=([^&]*)?/g);b=0;for(var c;c=a[b];++b)if(c.indexOf("url")===0){b=unescape(c.split("=")[1]);break a}}b=void 0}_gaq.push(["_trackSocial","twitter","tweet",b])}})})})(window);
+/* ]]> */
+</script>
+</head>
+
+<body class="home blog">
+<div id="page-container">
+<div id="container">
+
+<div id="header">
+	<a href="/" id="title" class="title-4"></a>
+	<form id="search" method="POST">
+			<label>Enter City:</label><br />
+	<input type="text" name="location" id="searchLocation" value="">
+		<input type="hidden" name="LocID" id="LocID" value="">
+	<input type="submit" name="hotelSearchSubmit" value="Fetch">
+	<a class="advSearchLink" href="http://hotels.petswelcome.com/advanced-search/">Advanced Search</a>
+	</form>
+	<div id="topMenu">
+    <ul id="nav" class="dropdown dropdown-horizontal">
+        <li class="dir"><a rel="nofollow" href="#">Lodgings</a>
+        	<ul>
+                <li><a href="http://www.petswelcome.com/milkbone/map.html">U.S. Lodgings</a></li>
+                <li><a href="http://www.petswelcome.com/locatorv2/tripplanner.php">Search by Route</a></li>
+                <li><a href="http://hotels.petswelcome.com/chains/">Hotel Chains</a></li>
+                <li><a href="http://www.petswelcome.com/milkbone/dogmap.html">For Larger Dogs</a></li>
+                <li><a href="http://www.petswelcome.com/milkbone/catmap.html">For Cats</a></li>
+                <li><a href="http://www.petswelcome.com/milkbone/canmap.html">Canadian Lodgings</a></li>
+                <li><a href="http://hotels.petswelcome.com/countries/">International Lodgings</a></li>
+                <li><a href="http://rentals.petswelcome.com/">Vacation Rentals</a></li>
+                <li><a href="http://vacations.petswelcome.com/">Vacation Destinations</a></li>
+                <li><a href="http://www.petswelcome.com/milkbone/bedmap.html">Bed & Breakfasts</a></li>
+                <li><a href="http://www.petswelcome.com/milkbone/cabinmap.html">Cabins & Cottages</a></li>
+                <li><a href="http://www.petswelcome.com/milkbone/campmap.html">Campgrounds</a></li>
+                <li><a href="http://www.petswelcome.com/milkbone/classrent.html">Classifieds</a></li>
+            </ul>
+        </li>
+        <li class="dir"><a rel="nofollow" href="#">Travel Tips</a>
+            <ul>
+                <li><a href="http://www.petswelcome.com/articles/travel-tips">Traveling with a Pet</a></li>
+                <li><a href="http://www.petswelcome.com/articles/">Pet Travel Articles</a></li>
+                <li><a href="http://www.petswelcome.com/articles/moving-with-pets">Moving with Pets</a></li>
+                <li><a href="http://www.petswelcome.com/articles/pet-air-travel">Pet Air Travel</a></li>
+                <li><a href="http://www.petswelcome.com/articles/pet-friendly-car-rental-agencies.html">Pet Friendly Car Rentals</a></li>
+                <li><a href="http://www.petswelcome.com/articles/pet-disasters">Pets & Disasters</a></li>
+            </ul>
+        </li>
+        <li class="dir"><a rel="nofollow" href="#">Day Care & Vets</a>
+            <ul>
+                <li><a href="http://www.petswelcome.com/milkbone/newsittersmap.html">Find Pet Sitters</a></li>
+                <li><a href="http://www.petswelcome.com/milkbone/kenmap.html">Day Care-Kennels</a></li>
+                <li><a href="http://www.petswelcome.com/milkbone/vetmap.html">Emergency Vets</a></li>
+                <li><a href="http://www.petswelcome.com/health-insurance/">Pet Insurance</a></li>
+            </ul>
+        </li>
+        <li class="dir"><a rel="nofollow" href="#">Fun Places</a>
+            <ul>
+                <li><a href="http://www.petswelcome.com/milkbone/funmap.html">Fun and Cool Places</a></li>
+                <li><a href="http://www.petswelcome.com/milkbone/amusemap.html">Amusement Parks</a></li>
+                <li><a href="http://www.petswelcome.com/milkbone/beachmap.html">Beaches</a></li>
+                <li><a href="http://www.petswelcome.com/milkbone/skimap.html">Ski Resorts</a></li>
+            </ul>
+        </li>
+        <li class="dir"><a rel="nofollow" href="#">Sign-Up</a>
+            <ul>
+                <li><a href="http://www.petswelcome.com/milkbone/freemonth2.html">Lodgings Sign-Up</a></li>
+                <li><a href="http://rentals.petswelcome.com/new-rental.php">Vacation Rentals Sign-Up</a></li>
+                <li><a href="http://www.petswelcome.com/mpages/petsitters/register.html">Pet Sitters Sign-Up</a></li>
+                <li><a href="http://places.petswelcome.com/new-pick.php">Fun & Cool Places Sign-Up</a></li>
+                <li><a href="http://places.petswelcome.com/new-pick.php">Event Sign-Up</a></li>
+            </ul>
+        </li>
+        <li class="dir"><a rel="nofollow" href="#">About Us</a>
+            <ul>
+                <li><a rel="nofollow" href="http://www.petswelcome.com/milkbone/framecontact.html">Contact Us</a></li>
+                <li><a rel="nofollow" href="http://www.petswelcome.com/milkbone/framewanted.html">Help Wanted</a></li>
+                <li><a rel="nofollow" href="http://www.petswelcome.com/milkbone/framemanagement.html">Management</a></li>
+                <li><a rel="nofollow" href="http://www.petswelcome.com/articles/customer-service">Customer Service</a></li>
+                <li><a rel="nofollow" href="http://www.petswelcome.com/articles/petswelcome-logos">Petswelcome Logos</a></li>
+                <li><a rel="nofollow" href="https://www.facebook.com/petswelcome">Find us on Facebook</a></li>
+                <li><a rel="publisher" href="https://plus.google.com/114255453896466299099/">Google+ Page</a></li>
+            </ul>
+        </li>
+        <li><a rel="nofollow" href="http://www.petswelcome.com/articles">Blog</a></li>
+    </ul>
+</div>	<a href="http://hotels.petswelcome.com/passport/login" class="login">Login to PetsWelcome Passport</a>
+</div>
+
+	<div id="content">
+    		
+		<div id="topSection">
+
+									<!-- AddThis Button BEGIN -->
+			<div class="addthis_toolbox addthis_default_style ">
+			<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+			<a class="addthis_button_tweet"></a>
+			<a class="addthis_button_pinterest_pinit"></a>
+			<a class="addthis_counter addthis_pill_style"></a>
+			</div>
+			<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4f996d231e5df09f"></script>
+			<!-- AddThis Button END --><script>
+
+$(function(){ 
+	initialize();
+})
+
+function initialize() {
+
+  	apply_autocomplete($("#origin_address")[0]);
+  	apply_autocomplete($("#dest_address")[0]);
+}
+
+// Apply Autocomplete API
+function apply_autocomplete(input){
+	var options = {
+	  	types: ['geocode']
+	};
+	var autocomplete = new google.maps.places.Autocomplete(input, options);
+}
+
+// Add More waypoints
+function add_waypoint(obj)
+{
+    waypoint_container = '<div class="waypoint"><p class="form_label">';
+    waypoint_container+= '<label>Stopover: </label>';
+    waypoint_container+= '<input class="toWaypoints" name="toWaypoints[]" value="">';
+    waypoint_container+= '<a href="#" onclick="return add_waypoint($(\'#dest_info\'));">Add Stopover</a>/';
+    waypoint_container+= '<a href="#" onclick="return remove_waypoint(this);">Remove</a>';
+    waypoint_container+= '</p></div>';
+	
+	obj.before(waypoint_container);
+
+	$('.toWaypoints').each(function() {
+	    apply_autocomplete($(this)[0]);
+	});
+	
+	return false;
+}
+
+function remove_waypoint(obj)
+{
+	$(obj).parent().remove();
+	return false;
+}
+</script>
+
+	<div id="searchByRoute">
+	<div id="or"></div>
+	<div id="car"></div>
+	<div id="map" style="display:none;"></div>
+	<h2><span>Search By Route</span> and find hotels along the way</h2>
+		<form method="POST" action = "http://hotels.petswelcome.com/searchbyroute/">
+					<div id="origin_info">
+						<p class="form_label"><label>Journey Starts From: </label><input name="origin_address" id="origin_address" value="City, State" onfocus="if (this.value=='City, State') this.value='';" /><a onclick="return add_waypoint($('#dest_info'));" href="#" class="addStop">Add Stops Along the Way</a> (optional)
+					</div>
+
+					<div id="dest_info">
+						<p class="form_label"><label>Journey Ends At: </label><input name="dest_address" id="dest_address" value="City, State" onfocus="if (this.value=='City, State') this.value='';" />
+					</div>
+
+					<p>Search
+				
+					within <select id="radius">
+					  <option value="1">1</option>
+					  <option value="3">3</option>
+					  <option value="5" SELECTED>5</option>
+					</select> miles of route, 
+					every <select id="frequency">
+						<option value="10">10</option>
+						<option value="25">25</option>
+						<option value="50">50</option>
+					  <option value="100" SELECTED>100</option>
+					  <option value="300">300</option>
+					  <option value="500">500</option>
+					</select> miles along the way.</p>
+
+
+									
+				<input id="getDirections" type="submit" name="getDirections" />
+			</form>
+			<div class="announcement">
+				<p>NEW! Now you can add STOPS ALONG THE WAY and SAVE and edit YOUR ROUTE for future use.</p>
+				<p>Just create your route and you'll see the option to save it right below the map.</p>
+				<p><a href="http://www.petswelcome.com/a-new-concept-in-pet-travel" target="_blank">Click here to find out more...</a></p>
+			</div>
+	</div>	
+	
+	
+	<div id="findRentals">
+		<form method="POST" id="searchForm" action="http://rentals.petswelcome.com">
+			<div class="formItem wide">
+			<select name="state" id="stateChoice">
+				<option>State/Destination</option>
+				<option value="Alabama">Alabama</option><option value="California">California</option><option value="Colorado">Colorado</option><option value="Florida">Florida</option><option value="Idaho">Idaho</option><option value="Massachusetts">Massachusetts</option><option value="Michigan">Michigan</option><option value="North Carolina">North Carolina</option><option value="New Mexico">New Mexico</option><option value="New York">New York</option><option value="Oregon">Oregon</option><option value="South Carolina">South Carolina</option><option value="Tennessee">Tennessee</option><option value="Utah">Utah</option><option value="Virginia">Virginia</option><option value="Albuquerque Area">Albuquerque Area</option><option value="Blue Ridge Mountains">Blue Ridge Mountains</option><option value="Cape Cod">Cape Cod</option><option value="Central Idaho">Central Idaho</option><option value="Central Oregon">Central Oregon</option><option value="Charleston Area">Charleston Area</option><option value="Finger Lakes">Finger Lakes</option><option value="Gulf Coast Florida">Gulf Coast Florida</option><option value="Gulf Shores">Gulf Shores</option><option value="Harbor Country">Harbor Country</option><option value="Henry County">Henry County</option><option value="Hilton Head &amp; The Lowcountry">Hilton Head &amp; The Lowcountry</option><option value="Northern Michigan">Northern Michigan</option><option value="Oregon Coast">Oregon Coast</option><option value="Outer Banks">Outer Banks</option><option value="Park City Area">Park City Area</option><option value="Pikes Peak Area">Pikes Peak Area</option><option value="Smoky Mountains">Smoky Mountains</option><option value="Southwest Florida">Southwest Florida</option>			</select>
+			</div>
+			<div class="formItem wide">
+			<select name="town" class="cityChoice">
+				<option value="">Town (optional)</option>
+			</select>
+			</div>
+			<div class="formItem">
+			<input type="submit" name="submit" value="Search" />
+			</div>
+		</form>
+	
+	</div>
+
+	<div class="sidebar">
+	<div class="signup">
+	<a class="signupLink" href="http://hotels.petswelcome.com/new-listing.php" target="_blank"><img src="http://www.petswelcome.com/wp/wp-content/themes/pw5/images/sign-up-here.png" ></a>
+	</div>
+	<div class="hotDeals">
+		<h2 class="widgettitle">Hot Deals</h2>
+	<ul class='xoxo blogroll'>
+<li><a href="http://www.petswelcome.com/get-a-petswelcome-discount-at-petcarerx"><img src="http://www.petswelcome.com/wp/wp-content/uploads/2014/07/petcareRx_th.jpg"  alt="Get a petswelcome Discount at PetCareRx! "  /> Get a petswelcome Discount at PetCareRx!</a><p></p></li>
+<li><a href="http://www.petswelcome.com/introducing-my-place-hotels-of-america" title="My Place Hotels"><img src="http://www.petswelcome.com/wp/wp-content/uploads/2014/01/myplacewp.jpeg"  alt="Introducing My Place Hotels of America My Place Hotels"  title="My Place Hotels" /> Introducing My Place Hotels of America</a><p>
+My Place Hotels</p></li>
+<li><a href="http://www.petswelcome.com/actors-and-others-deserve-best-in-show"><img src="http://www.petswelcome.com/wp/wp-content/uploads/2013/09/bestinshow_th.jpg"  alt="Actors and Others Deserve Best in Show "  /> Actors and Others Deserve Best in Show</a><p></p></li>
+<li><a href="http://www.petswelcome.com/everybody-wins-at-ihg"><img src="http://www.petswelcome.com/wp/wp-content/uploads/2013/08/IHG3-th.jpg"  alt="Everybody Wins at IHG "  /> Everybody Wins at IHG</a><p></p></li>
+<li><a href="http://www.petswelcome.com/la-quinta-returns-program-is-a-winner" title="Everyone knows that La Quinta is one of the&#8230;."><img src="http://www.petswelcome.com/articles/wp-content/uploads/2012/11/LaQuinta-th.jpg"  alt="La Quinta Returns Program is a Winner! Everyone knows that La Quinta is one of the&#8230;."  title="Everyone knows that La Quinta is one of the&#8230;." /> La Quinta Returns Program is a Winner!</a><p>
+Everyone knows that La Quinta is one of the&#8230;.</p></li>
+<li><a href="http://www.petswelcome.com/discover-big-savings-at-choice-hotels" title="With more than 2500 pet-friendly properties and 11 brands&#8230;"><img src="http://www.petswelcome.com/articles/wp-content/uploads/2012/07/choice.jpg"  alt="Discover Big Savings at Choice Hotels! With more than 2500 pet-friendly properties and 11 brands&#8230;"  title="With more than 2500 pet-friendly properties and 11 brands&#8230;" /> Discover Big Savings at Choice Hotels!</a><p>
+With more than 2500 pet-friendly properties and 11 brands&#8230;</p></li>
+<li><a href="http://places.petswelcome.com/new-pick.php" title="Add a Fun &amp; Cool Pet-friendly pick or&#8230;"><img src="http://www.petswelcome.com/articles/wp-content/uploads/2012/10/portrait2.jpg"  alt="Win a Portrait of Your Pet Add a Fun &amp; Cool Pet-friendly pick or&#8230;"  title="Add a Fun &amp; Cool Pet-friendly pick or&#8230;" /> Win a Portrait of Your Pet</a><p>
+Add a Fun &amp; Cool Pet-friendly pick or&#8230;</p></li>
+
+	</ul>
+
+	</div>
+	
+	<div id="newsletter">
+		<!-- Begin MailChimp Signup Form -->
+		<div id="mc_embed_signup">
+		<form action="http://petswelcome.list-manage.com/subscribe/post?u=ade3865e57924e2f40e3e555a&amp;id=273168a6fe" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" style="font: normal 100% Arial;font-size: 11px;">
+			<fieldset>
+		<div class="mc-field-group" style="margin: 0.8em 10%;">
+		<input type="text" value="Email Address" name="EMAIL" class="required email" id="mce-EMAIL" style="margin-right: 1.5em;width: 95%;position: relative;z-index: 999;">
+		</div>
+		<div class="mc-field-group" style="margin: 0.8em 10%;">
+		<input type="text" value="First Name" name="FNAME" class="required" id="mce-FNAME" style="margin-right: 1.5em;width: 95%;position: relative;z-index: 999;">
+		</div>
+				<div id="mce-responses" style="position: relative;top: -1.4em;padding: 0em .5em 0em .5em;overflow: hidden;">
+					<div class="response" id="mce-error-response" style="display: none;margin: 1em 0;padding: 1em .5em .5em 0;font-weight: bold;position: relative;top: -1.5em;z-index: 1;width: 80%;background: #FFEEEE;color: #FF0000;"></div>
+					<div class="response" id="mce-success-response" style="display: none;margin: 1em 0;padding: 1em .5em .5em 0;font-weight: bold;position: relative;top: -1.5em;z-index: 1;width: 80%;background: #;color: #529214;"></div>
+				</div>
+				<div><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn" ></div>
+			</fieldset>	
+		</form>
+		</div><!--mc_embed_signup-->
+			
+	</div>
+	
+	<div id="petFriendly">
+		<ul>
+			<li><a href="http://hotels.petswelcome.com/georgia/atlanta">Atlanta</a></li>
+			<li><a href="http://hotels.petswelcome.com/massachusetts/boston">Boston</a></li>
+			<li><a href="http://hotels.petswelcome.com/tennessee/chattanooga">Chattanooga</a></li>
+			<li><a href="http://hotels.petswelcome.com/illinois/chicago">Chicago</a></li>
+			<li><a href="http://hotels.petswelcome.com/florida/orlando">Orlando</a></li>
+			<li><a href="http://hotels.petswelcome.com/virginia/harrisonburg">Harrisonburg</a></li>
+			<li><a href="http://hotels.petswelcome.com/vermont/jericho">Jericho</a></li>
+			<li><a href="http://hotels.petswelcome.com/nevada/lake-tahoe">Lake Tahoe</a></li>
+			<li><a href="http://hotels.petswelcome.com/california/los-angeles">Los Angeles</a></li>
+			<li><a href="http://hotels.petswelcome.com/california/san-francisco">San Francisco</a></li>
+		<ul>
+	</div>
+	</div>
+	<div class="sidebar specials">
+		<a href="http://www.petswelcome.com/win-a-free-night-at-motel-6" rel="nofollow"><img src="http://www.petswelcome.com/wp/wp-content/themes/pw5/images/motel-6.png"></a>
+		<p><span>WELCOME</span> to the new <a href="http://www.petswelcome.com">petswelcome.com</a>! In order to make it easier for our visitors to find <a href="http://hotels.petswelcome.com" target="_blank">pet-friendly hotels</a>, <a href="http://rentals.petswelcome.com" target="_blank">pet-friendly vacation rentals</a>, pet sitting and other related pet-travel services and information, we have updated the site with a new look so you can get to where you're going faster and with less hassle. Just start your search by typing a city in the Instant Pet-Friendly Hotel Search at the top of this page.</p>
+		<p>Or, if you're not sure where you'll be stopping, then use our Search by Route feature. It will allow you the freedom and flexibility to find a pet-friendly lodging ANYWHERE along the route to your final destination. With <a href="http://www.petswelcome.com">petswelcome.com</a>, there's less worry and more fun. How's that for taking the hassle out of traveling with a pet?</p>
+	
+	<div class="articles">
+		<h2>Pet Articles</h2>
+																								
+					
+					<div class="petArticle">
+				<img width="80" height="44" src="http://www.petswelcome.com/wp/wp-content/uploads/2014/09/divorce-672x372-150x83.jpg" class="attachment-80x80 wp-post-image" alt="divorce-672x372" title="divorce-672x372" /> 
+			<a href="http://www.petswelcome.com/articles/divorce-who-gets-the-pets.html" rel="bookmark">Divorce: Who Gets The Pets?</a>
+			<p>
+When I worked at a doggie daycare, we had one dog whose owners had... 
+			<a href="http://www.petswelcome.com/articles/divorce-who-gets-the-pets.html" rel="bookmark">More</a></p>
+          </div>
+          		
+					<div class="petArticle">
+				<img width="80" height="48" src="http://www.petswelcome.com/wp/wp-content/uploads/2011/11/cat_in_the_snow-wallpaper-800x480-150x90.jpg" class="attachment-80x80 wp-post-image" alt="cat_in_the_snow-wallpaper-800x480" title="cat_in_the_snow-wallpaper-800x480" /> 
+			<a href="http://www.petswelcome.com/articles/winter-pet-tips-2.html" rel="bookmark">Winter Pet Tips</a>
+			<p>The gang at PetsWelcome is preparing for winter and that means we are... 
+			<a href="http://www.petswelcome.com/articles/winter-pet-tips-2.html" rel="bookmark">More</a></p>
+          </div>
+          		
+					<div class="petArticle">
+				<img width="80" height="61" src="http://www.petswelcome.com/wp/wp-content/uploads/2014/10/varsity-ball-gear-patrol-150x115.jpg" class="attachment-80x80 wp-post-image" alt="varsity-ball-gear-patrol" title="varsity-ball-gear-patrol" /> 
+			<a href="http://www.petswelcome.com/articles/6-of-the-best-toy-balls-for-dogs.html" rel="bookmark">6 Of The Best Toy Balls For Dogs</a>
+			<p>
+Did your dog bury her old ball? Or did it bounce away into the lake at... 
+			<a href="http://www.petswelcome.com/articles/6-of-the-best-toy-balls-for-dogs.html" rel="bookmark">More</a></p>
+          </div>
+          		
+					<div class="petArticle">
+				<img width="80" height="36" src="http://www.petswelcome.com/wp/wp-content/uploads/2012/11/90cec6bc1b446b1f0fa88eccd603184f-150x68.jpg" class="attachment-80x80 wp-post-image" alt="90cec6bc1b446b1f0fa88eccd603184f" title="90cec6bc1b446b1f0fa88eccd603184f" /> 
+			<a href="http://www.petswelcome.com/articles/pet-events-in-december-in-the-usa.html" rel="bookmark">Pet Events in December in the USA</a>
+			<p>Brrrr. The days are shorter and the nights are colder. But this doesn't... 
+			<a href="http://www.petswelcome.com/articles/pet-events-in-december-in-the-usa.html" rel="bookmark">More</a></p>
+          </div>
+          		
+					<div class="petArticle">
+				<img width="59" height="80" src="http://www.petswelcome.com/wp/wp-content/uploads/2014/10/Black-Cat-Tattoo-Designs-112x150.jpg" class="attachment-80x80 wp-post-image" alt="Black-Cat-Tattoo-Designs" title="Black-Cat-Tattoo-Designs" /> 
+			<a href="http://www.petswelcome.com/articles/6-amazing-pet-tattoos.html" rel="bookmark">6 Amazing Pet Tattoos</a>
+			<p>We mourn and remember our pets in different ways. Some of us keep... 
+			<a href="http://www.petswelcome.com/articles/6-amazing-pet-tattoos.html" rel="bookmark">More</a></p>
+          </div>
+          		
+			</div>
+</div>
+</div>
+	
+	<div class="sidebar">
+		<div id="featuredChains">
+			<ul>
+				<li><a href="http://hotels.petswelcome.com/chains/holiday-inn/"><img src="http://www.petswelcome.com/wp/wp-content/themes/pw5/images/featuredChains-holiday-inn.jpg"></a></li>
+				<li><a href="http://hotels.petswelcome.com/chains/holiday-inn-express/"><img src="http://www.petswelcome.com/wp/wp-content/themes/pw5/images/featuredChains-holiday-inn-express.jpg"></a></li>
+				<li><a href="http://hotels.petswelcome.com/chains/quality-inn/"><img src="http://www.petswelcome.com/wp/wp-content/themes/pw5/images/featuredChains-quality.jpg"></a></li>
+				<li><a href="http://hotels.petswelcome.com/chains/la-quinta/"><img src="http://www.petswelcome.com/wp/wp-content/themes/pw5/images/featuredChains-laquinta.jpg"></a></li>
+				<li><a href="http://hotels.petswelcome.com/chains/motel6/"><img src="http://www.petswelcome.com/wp/wp-content/themes/pw5/images/featuredChains-motel6.jpg"></a></li>
+				<li><a href="http://hotels.petswelcome.com/chains/red-roof-inn/"><img src="http://www.petswelcome.com/wp/wp-content/themes/pw5/images/featuredChains-redroof.jpg"></a></li>
+				<li><a href="http://hotels.petswelcome.com/chains/extended-stay-america/"><img src="http://www.petswelcome.com/wp/wp-content/themes/pw5/images/featuredChains-extended.jpg"></a></li>
+				<li><a href="http://hotels.petswelcome.com/chains/kimpton-hotels/"><img src="http://www.petswelcome.com/wp/wp-content/themes/pw5/images/featuredChains-kimpton.jpg"></a></li>
+				<li><a href="http://hotels.petswelcome.com/chains/comfort-inn/"><img src="http://www.petswelcome.com/wp/wp-content/themes/pw5/images/featuredChains-comfort.jpg"></a></li>
+				<li><a href="http://hotels.petswelcome.com/chains/my-place/"><img src="http://www.petswelcome.com/wp/wp-content/themes/pw5/images/featuredChains-my-place.gif"></a></li>
+				<!-- <li><a href="http://hotels.petswelcome.com/chains/sleep-inn/"><img src="http://www.petswelcome.com/wp/wp-content/themes/pw5/images/featuredChains-sleepinn.jpg"></a></li> -->
+			</ul>
+		</div>
+	<div class="sidebar latest">
+		<div class="latestGreatest">
+		<h2 class="widgettitle">Latest and Greatest</h2>
+	<ul class='xoxo blogroll'>
+<li><a href="http://hotels.petswelcome.com/chains/holiday-inn/" title="Holiday Inn"><img src="http://www.petswelcome.com/wp/wp-content/uploads/2013/08/welcome.jpg"  alt="Welcome to all pet-friendly IHG Holiday Inn locations on our site"  title="Holiday Inn" /> Welcome to all pet-friendly IHG Holiday Inn locations on our site</a><p></p></li>
+<li><a href="http://rentals.petswelcome.com/" title="Pet-friendly Vacation Rentals"><img src="http://www.petswelcome.com/articles/wp-content/uploads/2012/07/rentals.jpg"  alt="Book Now! Pet-Friendly Vacation Rentals"  title="Pet-friendly Vacation Rentals" /> Book Now! Pet-Friendly Vacation Rentals</a><p></p></li>
+<li><a href="http://www.petswelcome.com/articles/win-a-portrait-of-your-pet.html" title="Win a Portrait!"><img src="http://www.petswelcome.com/articles/wp-content/uploads/2012/07/portrait.jpg"  alt="Win a Portrait of Your Pet!"  title="Win a Portrait!" /> Win a Portrait of Your Pet!</a><p></p></li>
+<li><a href="http://vacations.petswelcome.com/" title="Pet-friendly Vacation Destinations"><img src="http://www.petswelcome.com/articles/wp-content/uploads/2012/07/destinations.jpg"  alt="Check Out Our New Vacation Destinations!"  title="Pet-friendly Vacation Destinations" /> Check Out Our New Vacation Destinations!</a><p></p></li>
+<li><a href="http://www.petswelcome.com/articles/is-your-dog-a-republican.html" title="Is Your Dog a Republican?"><img src="http://www.petswelcome.com/articles/wp-content/uploads/2012/07/republican.jpg"  alt="Is Your Dog a Republican?"  title="Is Your Dog a Republican?" /> Is Your Dog a Republican?</a><p></p></li>
+<li><a href="http://www.petswelcome.com/articles/h-e-l-p-for-people-and-pets"><img src="http://www.petswelcome.com/articles/wp-content/uploads/2012/07/hurricane.jpg"  alt="Be Prepared When Hurricanes Strike"  /> Be Prepared When Hurricanes Strike</a><p></p></li>
+
+	</ul>
+
+		</div>
+		
+
+
+		
+			
+		<div class="destinations">
+		<a href="http://vacations.petswelcome.com/adirondacks">Adirondacks</a>
+		<a href="http://vacations.petswelcome.com/blue-ridge-mountains">Blue Ridge Mountains</a>
+		<a href="http://vacations.petswelcome.com/cape-cod">Cape Cod</a>
+		<a href="http://vacations.petswelcome.com/catskills">Catskills</a>
+		<a href="http://vacations.petswelcome.com/oregon-coast">Oregon Coast</a>
+		<a href="http://vacations.petswelcome.com/hamptons">Hamptons</a>
+		<a href="http://vacations.petswelcome.com/jersey-shore">Jersey Shore</a>
+		<a href="http://vacations.petswelcome.com/lake-tahoe">Lake Tahoe</a>
+		<a href="http://vacations.petswelcome.com/marthas-vineyard">Martha's Vineyard</a>
+		<a href="http://vacations.petswelcome.com/napa-valley">Napa Valley</a>
+		</div>
+	</div>
+</div>
+	
+	
+
+    </div> <!-- content -->
+    
+<div id="bottom">
+	<p class="credits">&copy; 2014 petswelcome.com, Inc. <a rel="nofollow" href="http://www.petswelcome.com/articles/disclaimer">Conditions of Use. Please read before using this site.</a></p>
+</div>
+	
+</div> <!-- container -->
+</div>
+	<div class="loginCreateBox passportBox">
+		<h2><span class="blue">My</span> Petswelcome <span>Passport</span></h2>
+		<p>Now you can save your route and access it anytime on your trip and/or for future travel. If you already have a Petswelcome Passport account, just log-in to save this route.</p>
+		<div class="formCols">
+			<div class="formCol">
+				<h4>Log-in to your account</h4>
+				<form method="POST" action="http://hotels.petswelcome.com/passport/">
+				<input type="text" name="email" value="Enter your email address:" onfocus="if (this.value=='Enter your email address:') this.value='';" />
+				<input type="text" name="password" value="Enter your password:" onfocus="if (this.value=='Enter your password:') this.value='';" />
+				<input type="hidden" class="loginOrigin" name="origin" value="" />
+				<input type="hidden" class="loginWaypoints" name="waypoints" value="" />
+				<input type="hidden" class="loginDestination" name="destination" value="" />
+				<input type="hidden" class="saveRoute" name="saveRoute" value="0" />
+				<input type="hidden" name="redirect" value="passport" />
+				<div class="spacer"><br /></div>
+				<div class="loginSubmit"><input type="submit" name="submit" value="Submit" /></div>
+				</form>
+			</div>
+			<div class="formCol">
+				<h4>Create an Account</h4>
+				<form method="POST" action="BASE_URLpassport/">
+				<input type="text" name="email" value="Enter your email address:" onfocus="if (this.value=='Enter your email address:') this.value='';" />
+				<input type="text" name="password" value="Create a new password:" onfocus="if (this.value=='Enter your password:') this.value='';" />
+				<input type="text" name="password2" value="Verify your new password:" onfocus="if (this.value=='Enter your password:') this.value='';" />
+				<input type="hidden" class="loginOrigin" name="origin" value="" />
+				<input type="hidden" class="loginWaypoints" name="waypoints" value="" />
+				<input type="hidden" class="loginDestination" name="destination" value="" />
+				<input type="hidden" class="saveRoute" name="saveRoute" value="0" />
+				<input type="hidden" name="redirect" value="passport" />
+				<br />
+				<div class="loginSubmit"><input type="submit" name="submit" value="Create an Account" /></div>
+				</form>
+			</div>
+		</div>
+		<div class="loginSubmit"><input type="submit" class="close" value="No Thanks - Close Window" id="close" /></div>
+	</div>
+		<div class="infoBox passportBox">
+		<h2>Petswelcome <span>Passport</span></h2>
+		<h3>Get yours today!</h3>
+		<p>Once you put in your Search by Route departure point and destination and click on Get Directions, you will be asked if you'd like to save your route. If you would like to save it, you'll be asked to create you own account by putting in your email address and creating a password so you can access your directions anytime on your trip or in the future.</p>
+		<div class="loginSubmit"><input type="submit" class="close" value="Close Window" id="close" /></div>
+	</div>
+		<div class="createBox passportBox">
+		<h2>Petswelcome <span>Passport</span></h2>
+		<h3>Get yours today!</h3>
+		<p>To save your route just fill in the information below and you'll be able to keep it as long as you'd like and access it anytime on-line.  No more printing and forgetting to take the directions with you. And by saving trees and ink, you'll feel good about yourself, save money, contribute to a cleaner environment and, most importantly, be able to spend more time on having a great trip with your WHOLE family. How sweet is that?</p>
+		<p>Just fill in the information below to create an Petswelcome Passport account: </p>
+		<form method="POST" action="http://hotels.petswelcome.com/passport/">
+		<label>Enter your email:</label><input type="text" name="email" />
+		<label>Enter your password:</label><input type="password" name="password" />
+		<label>Verify your password:</label><input type="password" name="password2" />
+		<input type="hidden" class="loginOrigin" name="origin" value="" />
+		<input type="hidden" class="loginWaypoints" name="waypoints" value="" />
+		<input type="hidden" class="loginDestination" name="destination" value="" />
+		<input type="hidden" class="saveRoute" name="saveRoute" value="0" />
+		<input type="hidden" name="redirect" value="passport" />
+		<div class="loginSubmit"><input type="submit" name="submit" value="Create an Account" /></div>
+		</form>
+	</div>
+		<div class="loginBox passportBox">
+		<h2><span class="blue">My</span> Petswelcome <span>Passport</span></h2>
+		<p>Log-in to your account.</p>
+		<form method="POST" action="http://hotels.petswelcome.com/passport/">
+		<label>Enter your email address:</label><input type="text" name="email" /><br />
+		<label>Enter your password:</label><input type="password" name="password" />
+		<input type="hidden" class="loginOrigin" name="origin" value="" />
+		<input type="hidden" class="loginWaypoints" name="waypoints" value="" />
+		<input type="hidden" class="loginDestination" name="destination" value="" />
+		<input type="hidden" class="saveRoute" name="saveRoute" value="0" />
+		<input type="hidden" name="redirect" value="passport" />
+		<div class="spacer"><br /></div>
+		<div class="loginSubmit"><input type="submit" name="submit" value="Submit" /></div>
+		</form>
+		<a class="create" href="">Create Account</a>
+		<a class="lostPass" href="">Lost Password?</a>
+		<a class="help" href="http://www.petswelcome.com/a-new-concept-in-pet-travel">Learn More&hellip;</a>
+	</div>
+		<div class="messageBox passportBox">
+		<h2>Petswelcome <span>Passport</span></h2>
+		<div class="message"><p></p></div>
+		<form method="POST" action="http://hotels.petswelcome.com/passport/">
+		<label>Enter your email address:</label><input type="text" name="email" /><br />
+		<label>Enter your password:</label><input type="password" name="password" />
+		<input type="hidden" class="loginOrigin" name="origin" value="" />
+		<input type="hidden" class="loginWaypoints" name="waypoints" value="" />
+		<input type="hidden" class="loginDestination" name="destination" value="" />
+		<input type="hidden" class="saveRoute" name="saveRoute" value="0" />
+		<input type="hidden" name="redirect" value="passport" />
+		<div class="loginSubmit"><input type="submit" name="submit" value="Submit" /></div>
+		</form>
+		<a class="create" href="">Create Account</a>
+		<a class="lostPass" href="">Lost Password?</a>
+		<a class="help" href="http://www.petswelcome.com/a-new-concept-in-pet-travel">Learn More&hellip;</a>
+	</div>
+		<div class="resetBox passportBox">
+		<h2>Petswelcome <span>Passport</span></h2>
+		<h3>Reset Password</h3>
+		<p>Enter the email address you used to create your account and we'll send you a link to reset your password: </p>
+		<form method="POST" action="http://hotels.petswelcome.com/passport/">
+		<input type="text" name="email" value="Enter your email address:" onfocus="if (this.value=='Enter your email address:') this.value='';" />
+		<div class="loginSubmit"><input type="submit" name="submit" value="Send Reset Link" /></div>
+		</form>
+	</div>
+	<!-- Facebook Comments for WordPress: http://3doordigital.com/wordpress/plugins/facebook-comments/ -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=106808379604";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>

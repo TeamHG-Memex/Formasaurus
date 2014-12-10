@@ -1,0 +1,501 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+    <head>
+                <title>Access to the finest wines at attractive prices | Lot18</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content = "user-scalable=no, width=device-width, initial-scale=1.6, maximum-scale=1" />
+        <meta name="apple-mobile-web-app-capable" content="no" />
+        <meta name="format-detection" content="telephone=no">
+                <meta content="Lot18 provides access to high-quality, hard-to-find wines from around the globe – all at the best possible prices." name="description" />        
+        
+        <link rel="apple-touch-icon-precomposed" href="/images/icons/apple-touch-icon.png">
+        <link rel="icon" type="image/png" href="/images/favicon.png" />
+
+        <script type="text/javascript" src="/js/jquery.js"></script>
+        <script type="text/javascript">
+  window.onerror = function(msg, url, line) {
+    $.post('/ajax/log', { trace: { msg: msg, url: url, line: line } })
+  }
+</script>
+        
+                            
+        <meta name="keywords" content="wine, wine shop, wine clubs, wine club, top rated, top selling, wine basics, top, rated, champagne, california, region, varietal, cabernet, merlot, pinot" />
+        <meta property="og:image" content="http://www.lot18.com/images/logo_opengraph.jpg" />
+                <link href="/css/reset.css?1417720160" rel="stylesheet" type="text/css" />
+	<link href="/css/buttons.css?1417720160" rel="stylesheet" type="text/css" />
+	<link href="/css/buttons_trans.css?1417720160" rel="stylesheet" type="text/css" />
+	<link href="/css/main.css?1417720160" rel="stylesheet" type="text/css" />
+	<link href="/css/type.css?1417720160" rel="stylesheet" type="text/css" />
+	<link href="/css/utility.css?1417720160" rel="stylesheet" type="text/css" />
+	<link href="/css/fonts.css?1417720160" rel="stylesheet" type="text/css" />
+	<link href="/css/reveal.css?1417720160" rel="stylesheet" type="text/css" />
+	<link href="/css/collection.css?1417720160" rel="stylesheet" type="text/css" />
+	<link href="/css/homepage.css?1417720160" rel="stylesheet" type="text/css" />
+	<link href="/css/collection-overrides.css?1417720160" rel="stylesheet" type="text/css" />
+
+        <!--[if IE 6]>
+            <link rel="stylesheet" type="text/css" href="/css/ie6.css" />
+        <![endif]-->
+        <!--[if IE 7]>
+            <link rel="stylesheet" type="text/css" href="/css/ie7.css" />
+        <![endif]-->
+        <!--[if IE 8]>
+            <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+        <![endif]-->
+        <!--[if lt IE 9]>
+            <script type="text/javascript" src="/js/json2.js"></script>
+        <![endif]-->
+
+    </head>
+    <body >
+                <div id="TouchMenuProduct" class="hidden">
+            [
+                                {
+                    "label": "Home",
+                    "url": "/"
+                },
+                                                {
+                    "label": "Collection",
+                                        "url": "/boutiques"
+                                    }
+                            ]
+        </div>
+
+        <div id="TouchMenuAccount" class="hidden">
+            [
+                {
+                    "label": "Account Basics",
+                    "url": "/account"
+                },
+                {
+                    "label": "Order History",
+                    "url": "/account/orders"
+                },
+                {
+                    "label": "Address Management",
+                    "url": "/account/addresses"
+                },
+                {
+                    "label": "Credit Card Management",
+                    "url": "/account/credit_cards"
+                },
+                {
+                    "label": "My Lot18 Credit",
+                    "url": "/account/credit"
+                },
+                {
+                    "label": "Preferences",
+                    "url": "/account/preferences"
+                },
+                {
+                    "label": "Logout",
+                    "url": "/logout"
+                }
+            ]
+        </div>
+        <div id="modalContainer" class="modal-wrapper hidden"></div>
+        
+                <div id="page">
+
+            <div class="background-touch-menu"></div><!-- full width background for touch menu -->
+
+            <div id="set-location-workspace-initial"></div><!-- contains the state buttons for initial set location -->
+
+            <noscript><div class="noscript">Please <strong>enable JavaScript</strong> on your Web browser to properly view this Web site, or <strong>upgrade</strong> to a Web browser that supports JavaScript, like <a href="http://firefox.com" title="Mozilla Firefox">Firefox</a>, <a href="http://apple.com/safari/" title="Safari">Safari</a>, <a href="http://google.com/chrome" title="Google Chrome">Chrome</a> or a newer version of <a href="http://www.microsoft.com/windows/internet-explorer/" title="Internet Explorer">Internet Explorer</a>.</div></noscript>
+
+            <div class="workspace-touch-image"></div><!-- DO NOT REMOVE; workspace for full screen thumbnails -->
+            
+            <div class="container-content"><!-- frames the touch menu -->
+                <div class="workspace-touch-menu"></div><!-- DO NOT REMOVE; workspace for touch menu -->
+
+<div class="header">
+
+    
+    
+        <div class="container-navigation-touch">
+                        <span class="container-ui-button container-ui-button-touch">
+                <span id="navigation_tab_touch_products" class="ui-button ui-button-tab-touch ga_touch_menu">
+                    <span class="container-trigger">
+                        <a rel="menu_products" class="trigger trigger-tab-touch">Products</a>
+                    </span>
+                </span>
+            </span>
+
+            <span class="container-ui-button container-ui-button-touch">
+                <span id="navigation_tab_touch_account" class="ui-button ui-button-tab-touch ga_touch_menu">
+                    <span class="container-trigger">
+                        <a rel="menu_account" class="trigger trigger-tab-touch">Account</a>
+                    </span>
+                </span>
+            </span>
+
+            <span class="container-ui-button container-ui-button-touch">
+                <span id="navigation_tab_touch_location" class="ui-button  ui-button-tab-touch ga_touch_menu"> <!-- class should be ui-button-tab-touch-alt if user has NOT set their shipping location -->
+                    <span class="container-trigger">
+                        <a rel="menu_location" class="trigger  trigger-tab-touch">NJ</a> <!-- class should be ui-button-tab-touch-alt if user has NOT set their shipping location -->
+                    </span>
+                </span>
+            </span>
+
+        </div>
+
+        <a href='/' class="header-logo ga_nav_main" id="link_nav_main_logo">Lot18 Home</a>
+        
+        <form action='/search' id="search">
+            <input type="text" name="q" value="" id="search-query" placeholder="What are you looking for?">
+            <button class="button-default">Search</button>
+        </form>
+
+        <span class="header-menu">
+            <a class="header-menu-item header-menu-item-login ga_login" href="/login/ref/Lw==" id="login_header_link">Log in</a>
+            <a href="/register/ref/Lw==" id="button_header_register" class="button button-alt ga_register">Register</a>
+
+        </span>
+
+        <div class="clear"></div>
+
+        <div class="navigation-menu">
+                            <span                class="ga_nav_main button button-nav-menu-item button-nav-menu-placeholder  selected"><img class="default" src="/images/icons/nav-home-default.gif"><img class="selected" src="/images/icons/nav-home-selected.gif">Home</span>                <a id="link_nav_main_featured" href="/collection" class="ga_nav_main button button-nav-menu-item "><img class="default" src="/images/icons/icon_nav_featured.gif"><img class="selected" src="/images/icons/icon_nav_featured_selected.gif">Collection</a>                <a id="link_nav_main_featured" href="/tastingroom" class="ga_nav_main button button-nav-menu-item club-tab "><img class="default club-icon" src="/images/icons/nav-club-tr.png"><img class="selected" src="/images/icons/nav-club-tr-selected.png">Wine Club</a>                <a id="link_nav_main_featured" href="/gifts" class="ga_nav_main button button-nav-menu-item gifts-tab "><img class="default gifts-icon" src="/images/icons/nav-gifts.png"><img class="selected" src="/images/icons/nav-gifts-selected.png">Gifts</a>                        
+
+            
+                <a class="button button-nav-menu-item button-nav-menu-item-cart">
+                    <span class="zero-items">0</span> <span class="zero-items-cart">items in your cart</span>
+                </a>  
+                        
+            <span class="container-set-location-post display-inline">
+                <span class="label-set-location">Shipping to:</span>
+                <a id="button_set_location_post" class="button button-dropdown-alt ga_set_location">NJ</a>
+                            </span>
+
+        </div>
+        <div class="set-location-workspace-post"></div><!-- contains the state buttons for post set location -->
+            </div>
+                            
+
+<!--[if (gte IE 6)&(lte IE 8)]>
+  <link href="/css/homepage.ie.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<div class="product-listing product-listing-select homepage-featured">
+    <div class="divider">
+        <hr><h2 class="introHeader">What's hot today</h2>
+    </div>
+            <div class="dashboard-wrapper slider-wrapper js-slider">
+                            <input type="radio" id="slide-0" data-id="0" name="slider" checked selected="true">
+                            <input type="radio" id="slide-1" data-id="1" name="slider" >
+                            <input type="radio" id="slide-2" data-id="2" name="slider" >
+                            <input type="radio" id="slide-3" data-id="3" name="slider" >
+                            <input type="radio" id="slide-4" data-id="4" name="slider" >
+                            <input type="radio" id="slide-5" data-id="5" name="slider" >
+                        <div class="slider">
+                <div class="slides">
+                                            <div class="slide js-slide">
+                                                            <a href="http://www.lot18.com/product/6268/wine-rack-refill-holiday-dinner-party-edition" alt="Wine Rack Refill: Holiday Dinner Party Edition">
+                                    <img src="//dmqih2aitelr9.cloudfront.net/manager/images/70/59/c7ae3ba3b186d97c07f3ddb458739c4f." alt="More than enough wine to make it through all the holiday meals you're hosting">
+                                </a>
+                                <div class="content-wrapper">
+                                                                        <span class="icon">$110 <span>off</span></span>
+                                                                        <div class="content-inner">
+                                      <span class="headline">
+                                        <a href="http://www.lot18.com/product/6268/wine-rack-refill-holiday-dinner-party-edition" alt="Wine Rack Refill: Holiday Dinner Party Edition">
+                                          Wine Rack Refill: Holiday Dinner Party Edition                                        </a>
+                                      </span>
+                                      <span class="name">
+                                        <a href="http://www.lot18.com/product/6268/wine-rack-refill-holiday-dinner-party-edition" alt="Wine Rack Refill: Holiday Dinner Party Edition">
+                                            More than enough wine to make it through all the holiday meals you're hosting                                        </a>
+                                      </span>
+                                      <div class="priceInfo">
+                                        <span class="discount">
+                                                                                  $219<span class="decimal">.98</span>                                                                                </span>
+                                        <span class="retail">
+                                                                                    <span class="price">$330<span class="decimal">.00</span></span>
+                                            <span class="msrp">MSRP</span></span>
+                                                                                
+                                      </div>
+                                      <span class="details">
+                                        <a href="http://www.lot18.com/product/6268/wine-rack-refill-holiday-dinner-party-edition" title="More than enough wine to make it through all the holiday meals you're hosting" class="button button-alt">
+                                            OFFER DETAILS
+                                        </a>
+                                      </span>
+                                  </div>
+                                </div>
+                                                    </div>
+                                            <div class="slide js-slide">
+                                                            <a href="http://www.lot18.com/product/6091/2011-penfolds-bin-389-australia-cabernet-shiraz-magnum" alt="2011 Penfolds Bin 389 Australia Cabernet-Shiraz Magnum">
+                                    <img src="//dmqih2aitelr9.cloudfront.net/manager/images/94/21/dfa7dc34101b15402a7d5c977a9ddcb2." alt="A big, classic red by one of the world's greatest wineries at an affordable price">
+                                </a>
+                                <div class="content-wrapper">
+                                                                        <span class="icon">$45 <span>off</span></span>
+                                                                        <div class="content-inner">
+                                      <span class="headline">
+                                        <a href="http://www.lot18.com/product/6091/2011-penfolds-bin-389-australia-cabernet-shiraz-magnum" alt="2011 Penfolds Bin 389 Australia Cabernet-Shiraz Magnum">
+                                          2011 Penfolds Bin 389 Australia Cabernet-Shiraz Magnum                                        </a>
+                                      </span>
+                                      <span class="name">
+                                        <a href="http://www.lot18.com/product/6091/2011-penfolds-bin-389-australia-cabernet-shiraz-magnum" alt="2011 Penfolds Bin 389 Australia Cabernet-Shiraz Magnum">
+                                            A big, classic red by one of the world's greatest wineries at an affordable price                                        </a>
+                                      </span>
+                                      <div class="priceInfo">
+                                        <span class="discount">
+                                                                                  $129<span class="decimal">.99</span>                                                                                </span>
+                                        <span class="retail">
+                                                                                    <span class="price">$175<span class="decimal">.00</span></span>
+                                            <span class="msrp">MSRP</span></span>
+                                                                                
+                                      </div>
+                                      <span class="details">
+                                        <a href="http://www.lot18.com/product/6091/2011-penfolds-bin-389-australia-cabernet-shiraz-magnum" title="A big, classic red by one of the world's greatest wineries at an affordable price" class="button button-alt">
+                                            OFFER DETAILS
+                                        </a>
+                                      </span>
+                                  </div>
+                                </div>
+                                                    </div>
+                                            <div class="slide js-slide">
+                                                                                                <a href="/outgoing/614" class="ga_banner_heroshot" id="banner_614"><img id="614" src="http://dmqih2aitelr9.cloudfront.net/manager/images/85/74/4b9e76430a0bc6e37c4ae7e4c8cfc453.jpg" alt="12DoG-WRR" class="banner"/></a>    
+    
+                                                        </div>
+                                            <div class="slide js-slide">
+                                                            <a href="http://www.lot18.com/product/6050/new-world-reds-half-case" alt="New World Reds Half Case">
+                                    <img src="//dmqih2aitelr9.cloudfront.net/manager/images/41/71/ac1ab614921deed3d9eed9d8d26093fe." alt="Big, bold reds that thumb their noses at Europe">
+                                </a>
+                                <div class="content-wrapper">
+                                                                        <span class="icon">$57 <span>off</span></span>
+                                                                        <div class="content-inner">
+                                      <span class="headline">
+                                        <a href="http://www.lot18.com/product/6050/new-world-reds-half-case" alt="New World Reds Half Case">
+                                          New World Reds Half Case                                        </a>
+                                      </span>
+                                      <span class="name">
+                                        <a href="http://www.lot18.com/product/6050/new-world-reds-half-case" alt="New World Reds Half Case">
+                                            Big, bold reds that thumb their noses at Europe                                        </a>
+                                      </span>
+                                      <div class="priceInfo">
+                                        <span class="discount">
+                                                                                  $124<span class="decimal">.99</span>                                                                                </span>
+                                        <span class="retail">
+                                                                                    <span class="price">$182<span class="decimal">.00</span></span>
+                                            <span class="msrp">MSRP</span></span>
+                                                                                
+                                      </div>
+                                      <span class="details">
+                                        <a href="http://www.lot18.com/product/6050/new-world-reds-half-case" title="Big, bold reds that thumb their noses at Europe" class="button button-alt">
+                                            OFFER DETAILS
+                                        </a>
+                                      </span>
+                                  </div>
+                                </div>
+                                                    </div>
+                                            <div class="slide js-slide">
+                                                            <a href="http://www.lot18.com/product/6016/2009-argiano-brunello-di-montalcino" alt="2009 Argiano Brunello di Montalcino">
+                                    <img src="//dmqih2aitelr9.cloudfront.net/manager/images/52/23/0eaf625daa876e0733425e173bad26c2." alt="The sleek, modern-style Brunello all the critics love">
+                                </a>
+                                <div class="content-wrapper">
+                                                                        <span class="discount-callout">
+                                        <a href="http://www.lot18.com/product/6016/2009-argiano-brunello-di-montalcino" alt="2009 Argiano Brunello di Montalcino">
+                                            Featured
+                                        </a>
+                                    </span>
+                                                                        <div class="content-inner">
+                                      <span class="headline">
+                                        <a href="http://www.lot18.com/product/6016/2009-argiano-brunello-di-montalcino" alt="2009 Argiano Brunello di Montalcino">
+                                          2009 Argiano Brunello di Montalcino                                        </a>
+                                      </span>
+                                      <span class="name">
+                                        <a href="http://www.lot18.com/product/6016/2009-argiano-brunello-di-montalcino" alt="2009 Argiano Brunello di Montalcino">
+                                            The sleek, modern-style Brunello all the critics love                                        </a>
+                                      </span>
+                                      <div class="priceInfo">
+                                        <span class="discount">
+                                                                                  $59<span class="decimal">.99</span>                                                                                </span>
+                                        <span class="retail">
+                                                                                
+                                      </div>
+                                      <span class="details">
+                                        <a href="http://www.lot18.com/product/6016/2009-argiano-brunello-di-montalcino" title="The sleek, modern-style Brunello all the critics love" class="button button-alt">
+                                            OFFER DETAILS
+                                        </a>
+                                      </span>
+                                  </div>
+                                </div>
+                                                    </div>
+                                            <div class="slide js-slide">
+                                                                                                <a href="/outgoing/597" class="ga_banner_heroshot" id="banner_597"><img id="597" src="http://dmqih2aitelr9.cloudfront.net/manager/images/25/25/c063acf7bca66e8871c6c5ac4d558a76.jpg" alt="TR Gifting" class="banner"/></a>    
+    
+                                                        </div>
+                                    </div>
+            </div>
+            <div class="controls">
+                                    <label for="slide-0" class="js-slider-nav"></label>
+                                    <label for="slide-1" class="js-slider-nav"></label>
+                                    <label for="slide-2" class="js-slider-nav"></label>
+                                    <label for="slide-3" class="js-slider-nav"></label>
+                                    <label for="slide-4" class="js-slider-nav"></label>
+                                    <label for="slide-5" class="js-slider-nav"></label>
+                            </div>
+            <div class="tracking">
+                                                            <label for="slide-0" class="js-slider-nav"><img src="//dmqih2aitelr9.cloudfront.net/manager/images/32/68/d93b40e50c9f8379d8e3aa718a471b71." alt="More than enough wine to make it through all the holiday meals you're hosting"/></label>
+                                                                                <label for="slide-1" class="js-slider-nav"><img src="//dmqih2aitelr9.cloudfront.net/manager/images/42/48/9249483c16b0097cbfd6e0a05cc8318c." alt="A big, classic red by one of the world's greatest wineries at an affordable price"/></label>
+                                                                                <label for="slide-2" class="js-slider-nav banner"><img src="http://dmqih2aitelr9.cloudfront.net/manager/images/37/03/bb09891c11091012863ad984c9a1769c.jpg" /></label>
+                                                                                <label for="slide-3" class="js-slider-nav"><img src="//dmqih2aitelr9.cloudfront.net/manager/images/79/28/a4141daaf5c0d35dee6218a206de1c0a." alt="Big, bold reds that thumb their noses at Europe"/></label>
+                                                                                <label for="slide-4" class="js-slider-nav"><img src="//dmqih2aitelr9.cloudfront.net/manager/images/54/86/68e0e4e393c32b4191969a680cb74e64." alt="The sleek, modern-style Brunello all the critics love"/></label>
+                                                                                <label for="slide-5" class="js-slider-nav banner"><img src="http://dmqih2aitelr9.cloudfront.net/manager/images/14/48/7c012c7ca0dca13e2682f3e4d6046dbf.jpg" /></label>
+                                                </div>
+        </div>
+    </div>
+
+<div class="collection-featured-wrapper homepage-featured">
+    <div class="collection-wrapper">
+        <a href="/boutiques" title="Enter the Collection" class="button button-alt">Enter the Collection</a>
+    </div>    
+    <div class="featured-wrapper">
+        <a href="/featured" title="Browse Featured Offers" class="button button-alt">Browse Featured Offers</a>
+    </div>
+</div>
+
+<div class="recommendations-wrapper homepage-featured">
+</div>
+
+
+
+
+<!--[if (gte IE 6)&(lte IE 8)]>
+  <script type="text/javascript" src="/js/selectivizr.min.js"></script>
+<![endif]-->
+
+    
+        <iframe src="https://secure.img-cdn.mediaplex.com/0/21873/universal.html?page_name=homepage&Homepage=1&mpuid=" HEIGHT=1 WIDTH=1 FRAMEBORDER=0></iframe>
+                </div>
+            <span id="spinner_ajax" class="spinner_ajax enabled" style="display: none; ">Loading...</span>
+        </div>
+
+        <div class="container-footer">
+
+    <img src="/images/separator_footer.png">
+    
+    <div class="container-footer-inner">
+    
+        <span class="container-footer-menu">
+            <h3 class="header-footer-menu">About Lot18</h3>
+            <div class="footer-separator"><img src="/images/separator_footer_about.png"></div>
+            <ul class="footer-menu">
+                <li><a id="footer_home" href="/" class="ga_nav_footer">Home</a></li>
+                <li><a id="footer_about" href="/about" class="ga_nav_footer">About</a></li>
+                <li><a id="footer_careers" href="/careers" class="ga_nav_footer">Careers</a></li>
+                <li><a id="footer_blog" href="http://blog.lot18.com" class="ga_nav_footer">Blog</a></li>
+            </ul>
+        </span>
+    
+        <span class="container-footer-menu">
+            <h3 class="header-footer-menu">Customer Support</h3>
+            <div class="footer-separator"><img src="/images/separator_footer_support001.png"></div>
+            <ul class="footer-menu">
+                <li><a id="footer_contact" href="/contact" class="ga_nav_footer">Contact</a></li>
+                <li><a id="footer_faq" href="/faq" class="ga_nav_footer">FAQ</a></li>
+                <li><a id="footer_quick_tips" href="/quick-tips" class="ga_nav_footer">Quick Tips</a></li>
+                <li><a id="footer_gift_card" href="/giftcard" class="ga_nav_footer">Gift Card</a></li>
+                <li><a id="footer_terms" href="/terms" class="ga_nav_footer">Terms</a></li>
+                <li><a id="footer_privacy" href="/privacy" class="ga_nav_footer">Privacy</a></li>
+            </ul>
+        </span>
+    
+        <span class="container-footer-menu">
+            <h3 class="header-footer-menu">Connect</h3>
+            <div class="footer-separator"><img src="/images/separator_footer_about.png"></div>
+            <ul class="footer-menu">
+                <li><a id="footer_partner_with_us" href="/partner" class="ga_nav_footer">Partner with Us</a></li>
+                <li><a id="footer_facebook" href="http://www.facebook.com/Lot18Wines" class="ga_nav_footer">Facebook</a></li>
+                <li><a id="footer_twitter" href="https://twitter.com/#!/lot18" class="ga_nav_footer">Twitter</a></li>
+                <li><a id="footer_mobile" href="/iphone-app" class="ga_nav_footer">Mobile</a></li>
+            </ul>
+        </span>
+    
+        <span class="container-address">
+            <div class="phone-number">1-855-<span class="strong">MYLOT18</span></div>
+            <div class="phone-number phone-number-touch"><a href="tel:1-855-695-6818" class="ga_nav_footer">1-855-<span class="strong">MYLOT18</span></a></div>
+            <img class="footer-logo" src="/images/logo_lot18_footer.png">
+            <div class="address-details"><a href="http://maps.google.com/maps?q=2+Clark+Place,+Mahopac,+NY+10541" target="_blank" id="footer_map" class="ga_nav_footer">2 Clark Place, Mahopac, NY 10541</a></div>
+            <div class="legal-footer">L18 Holdings, Inc. | <a id="footer_made_in_nyc" href="http://www.nytm.org/made/" class="ga_nav_footer" target="_blank">Made in NYC</a></div>
+            <div class="legal-footer">Copyright &copy; 2014. All rights reserved.</div>
+        </span>
+    
+        <div class="legal-notice">
+           ALL ALCOHOLIC BEVERAGES PURCHASED FROM LOT18 ARE SOLD IN THE STATE OF <span class="license_state">CALIFORNIA</span> AND TITLE PASSES TO THE BUYER IN <span class="license_state">CALIFORNIA</span>. Lot18 makes no representation to the legal rights of anyone to ship or import alcoholic beverages into any state outside of <span class="license_state_no_caps">California</span>. The buyer is solely responsible for the shipment of alcoholic beverage products. By placing an order with Lot18, buyer authorizes Lot18 to act on buyer’s behalf to engage a common carrier to deliver buyer’s order. 
+        </div>
+    </div>
+</div>
+        <script type="text/javascript" src="/js/jquery.ui.effects.all.js?1417720161"></script>
+	<script type="text/javascript" src="/js/modernizr.js?1417720161"></script>
+	<script type="text/javascript" src="/js/spine/spine.js?1417720161"></script>
+	<script type="text/javascript" src="/js/mustache.js?1417720161"></script>
+	<script type="text/javascript" src="/js/viewporter.js?1417720161"></script>
+	<script type="text/javascript" src="/js/pvector.js?1417720161"></script>
+	<script type="text/javascript" src="/js/LotLib.js?1417720161"></script>
+	<script type="text/javascript" src="/js/Snapper.js?1417720161"></script>
+	<script type="text/javascript" src="/js/swipe.js?1417720161"></script>
+	<script type="text/javascript" src="/js/Ready.js?1417720161"></script>
+	<script type="text/javascript" src="/js/ZeroShip.js?1417720161"></script>
+	<script type="text/javascript" src="/js/App.Utilities.js?1417720161"></script>
+	<script type="text/javascript" src="/js/App.ModalOverlay.js?1417720161"></script>
+	<script type="text/javascript" src="/js/Model.Dialog.js?1417720161"></script>
+	<script type="text/javascript" src="/js/App.Dialog.js?1417720161"></script>
+	<script type="text/javascript" src="/js/jquery.cycle.js?1417720161"></script>
+	<script type="text/javascript" src="/js/App.Messages.js?1417720161"></script>
+	<script type="text/javascript" src="/js/Ready.SetLocation.js?1417720161"></script>
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+	<script type="text/javascript" src="/js/App.TouchMenu.js?1417720161"></script>
+	<script type="text/javascript" src="/js/respond.min.js?1417720161"></script>
+	<script type="text/javascript" src="/js/Google.Fonts.js?1417720161"></script>
+	<script type="text/javascript" src="/js/jquery.reveal.js?1417720161"></script>
+	<script type="text/javascript" src="/js/jquery.touch.swipe.js?1417720161"></script>
+	<script type="text/javascript" src="/js/App.Homepage.js?1417720161"></script>
+
+        
+        
+            <!-- Begin comScore Tag -->
+    <script>
+      var _comscore = _comscore || [];
+      _comscore.push({ c1: "2", c2: "8252534" });
+      (function() {
+        var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
+        s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
+        el.parentNode.insertBefore(s, el);
+      })();
+    </script>
+    <noscript>
+      <img src="//b.scorecardresearch.com/p?c1=2&c2=8252534&cv=2.0&cj=1" />
+    </noscript>
+    <!-- End comScore Tag -->
+
+    <!-- Start Quantcast tag -->
+    <script type="text/javascript">
+        _qoptions={ qacct:"p-e1eZm-hE0k3fM" };
+    </script>
+    <script type="text/javascript" src="//secure.quantserve.com/quant.js"></script>
+    <noscript>
+        <img src="//pixel.quantserve.com/pixel/p-e1eZm-hE0k3fM.gif" style="display: none;" border="0" height="1" width="1" alt="Quantcast"/>
+    </noscript>
+    <!-- End Quantcast tag -->
+
+    <!-- Start Google Analytics -->
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-18585168-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    <!-- End Google Analytics -->
+
+    <!-- Start Netmining Tag -->
+    <script src="//lt18.netmng.com/?aid=2029" type="text/javascript" defer="defer"></script>
+    <!-- End Netmining Tag -->
+
+        <iframe src="https://secure.img-cdn.mediaplex.com/0/21873/universal.html?page_name=user_logged_out&Logged_Out=1&mpuid=" HEIGHT=1 WIDTH=1 FRAMEBORDER=0></iframe>
+        
+    </body>
+</html>

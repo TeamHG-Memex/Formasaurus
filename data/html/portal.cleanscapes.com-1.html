@@ -1,0 +1,265 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="ctl00_Head1"><title>
+	Register New User
+</title>
+    <script src="scripts/jquery-1.7.1.min.js" type="text/javascript"></script>
+    <script src="scripts/jquery-ui-1.8.18.custom.min.js" type="text/javascript"></script>
+    <link href="scripts/script_styles/redmond/jquery-ui-1.8.18.custom.css" rel="stylesheet" type="text/css" />
+    <script src="scripts/jquery.validationEngine-en.js" type="text/javascript"></script>
+    <script src="scripts/jquery.validationEngine.js" type="text/javascript"></script>
+    <link href="scripts/script_styles/validationEngine.jquery.css" rel="stylesheet" type="text/css" />
+    <script src="scripts/jquery.maskedinput-1.3.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#aspnetForm').validationEngine('attach');
+
+            $('input[id$="ctl00_MainContent_cPhoneNumber"]').mask('(999) 999-9999');
+
+            $('input[id$="cClear"]').button();
+            $('input[id$="cSubmit"]').button();
+            $('input[id$="cmdReturnToLogin"]').button();
+
+            if ($.trim($('div[id$="ctl00_MainContent_lError"]').text()).length > 0) {
+                $('div[id$="ctl00_MainContent_lError"]').show();
+            }
+            else {
+                $('div[id$="ctl00_MainContent_lError"]').hide();
+            }
+
+            if ($.trim($('div[id$="ctl00_MainContent_lSuccess"]').text()).length > 0) {
+                $('div[id$="ctl00_MainContent_lSuccess"]').dialog({ modal: true, autoOpen: true, width: 'auto', buttons: { "OK": function () { $(this).dialog("close"); } }, close: function () { $('div[id$="ctl00_MainContent_lSuccess"]').text(''); }, resizable: false });
+                doReset();
+            }
+         });
+
+        function doReset() {
+            $('#aspnetForm').validationEngine('hideAll');
+            $('#aspnetForm').validationEngine('detach');
+            $(':input', '#aspnetForm').not(':button, :submit, :reset, :hidden').val('').removeAttr('checked').removeAttr('selected');
+            $('#aspnetForm').validationEngine('attach');
+        }
+
+        function preSave() {
+            return isValid = $('#aspnetForm').validationEngine('validate');
+        }
+
+        function preReturnToLogin() {
+            $('#aspnetForm').validationEngine('detach');
+            
+            return true;
+        }
+    </script>
+    <style type="text/css">
+        .col1
+        {
+            float: left;
+            width: 200px;
+            margin-left: 25px;
+            padding-left: 25px;
+        }
+        .col2
+        {
+            float: left;
+            width: 200px;
+        }
+        .inputStyle
+        {
+            width: 190px;
+        }
+        .dropdownStyle
+        {
+            width: 195px;
+        }
+        .clear
+        {
+            clear: both;
+        }
+    </style>
+<link href="App_Themes/eTowerDefault/eTowerDefault.css" type="text/css" rel="stylesheet" /></head>
+<body id="Master_Body">
+    <form method="post" action="RegisterNewUser.aspx" id="aspnetForm">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTEwMDkyMDcxMjMPFgIeB3Bvc3RpZHMFJGExMDY4NjRlLTAxZDEtNDczYi1hZjlmLTdjMDk3ODI3ZjNhYhYCZg9kFgICAw9kFgICAQ9kFgQCDw8QDxYGHg1EYXRhVGV4dEZpZWxkBRRTZWN1cml0eVF1ZXN0aW9uVGV4dB4ORGF0YVZhbHVlRmllbGQFE1NlY3VyaXR5UXVlc3Rpb25VSUQeC18hRGF0YUJvdW5kZ2QQFQYkV2hhdCB3YXMgdGhlIG5hbWUgb2YgeW91ciBmaXJzdCBwZXQ/G0luIHdoYXQgY2l0eSB3ZXJlIHlvdSBib3JuPyJXaGF0IGlzIHlvdXIgbW90aGVyJ3MgTWFpZGVuIG5hbWU/HFdoYXQgaXMgeW91ciBmYXZvcml0ZSBjb2xvcj8YV2hhdCBpcyB5b3VyIGJpcnRoIHllYXI/J1doYXQgYXJlIHRoZSBsYXN0IDQgZGlnaXRzIG9mIHlvdXIgU1NOPxUGJGFmMDI2ZTg2LTkwYzYtNGY0Mi1hMTIyLTE5NjA3OWQwZDFmYSQ2ODNkMTBjOC04YWFjLTQ5ZTktYTI1OS0xY2VmYzM2NjQ0MDgkYjk4MGI1NTMtNTgxOS00ZDRhLTg5YmQtNDczNzg0Yjg4NGFkJDUyMjkxY2Y3LWE5NzUtNDkyOS1hNGUxLTY1ZDQzNDJjODFhZiRiMzlhMjU0MS03NzdjLTRlNzctYmE2My1iMzA3NWZjNzU5ODMkNmQ0OTY1ODctMzg0NC00MTM0LWI3ZDQtYjQ5NGU3NDFlYTFhFCsDBmdnZ2dnZ2RkAhMPEA8WBh8BBQtDb21wYW55TmFtZR8CBQpDb21wYW55VUlEHwNnZBAVAQ5DbGVhc2NhcGVzIENPUxUBJDhlN2M1YmM3LTA0MzMtNDU0ZS1iYzYyLTczYjQ2MGQ0MWI2NBQrAwFnZGRkhrNE9lwwnPBiui4RiudxTU32I1bqffLdF7jYLMwEoFE=" />
+
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWFgKB/J3PAgKGnoBTAsq1wf0BAt3b/Y0GAqKG6YwCAuL+86ACApWgtP4EAqnQqucDAtrOkNELAqbYyosOAqLg6iYC1qacmgkC+7Dg/AEC29H3vQEC6vPQ4QgCsIq1wQ8C2Pir6gMC/Ymv2QsCn5aCVwKy37LuCwK2pcyXDQL9qsraB4Eqs6WSzhi2ITxELU3A7uwrsxV7r/RtNsHAr/iFkyHJ" />
+    <div id="Master_ContentWrapper">
+        <!-- Logo Line -->
+        <img src="images/mainHeader.jpg" alt="Header" />
+
+        <!-- Content pane on the right -->
+        <div id="Master_Right">
+            
+    <br />
+    <div class="ui-widget ui-widget-content ui-corner-all" style="width: 500px; margin: 0 auto;">
+        <br />
+        <div class="col1">
+            First Name
+        </div>
+        <div class="col2">
+            <input name="ctl00$MainContent$cFirstName" type="text" id="ctl00_MainContent_cFirstName" class="inputStyle validate[required]" />
+        </div>
+        <div class="clear">
+        </div>
+        <br />
+        <div class="col1">
+            Last Name
+        </div>
+        <div class="col2">
+            <input name="ctl00$MainContent$cLastName" type="text" id="ctl00_MainContent_cLastName" class="inputStyle validate[required]" />
+        </div>
+        <div class="clear">
+        </div>
+        <br />
+        <div class="col1">
+            Email
+        </div>
+        <div class="col2">
+            <input name="ctl00$MainContent$cEmail" type="text" id="ctl00_MainContent_cEmail" class="inputStyle validate[required,custom[email]]" />
+        </div>
+        <div class="clear">
+        </div>
+        <br />
+        <div class="col1">
+            Confirm Email
+        </div>
+        <div class="col2">
+            <input name="ctl00$MainContent$cConfirmEmail" type="text" id="ctl00_MainContent_cConfirmEmail" class="inputStyle validate[required,custom[email],equalsCI[cEmail]]" />
+        </div>
+        <div class="clear">
+        </div>
+        <br />
+        <div class="col1">
+            User Name
+        </div>
+        <div class="col2">
+            <input name="ctl00$MainContent$cUserName" type="text" id="ctl00_MainContent_cUserName" class="inputStyle validate[ajax[ajaxWebUserExists]]" />
+        </div>
+        <div class="clear">
+        </div>
+        <br />
+        <div class="col1">
+            Desired Password
+        </div>
+        <div class="col2">
+            <input name="ctl00$MainContent$cDesiredPassword" type="password" id="ctl00_MainContent_cDesiredPassword" class="inputStyle validate[required]" />
+        </div>
+        <div class="clear">
+        </div>
+        <br />
+        <div class="col1">
+            Confirm Password
+        </div>
+        <div class="col2">
+            <input name="ctl00$MainContent$cConfirmPassword" type="password" id="ctl00_MainContent_cConfirmPassword" class="inputStyle validate[required,equals[cDesiredPassword]]" />
+        </div>
+        <div class="clear">
+        </div>
+        <br />
+        <div class="col1">
+            Security Question
+        </div>
+        <div class="col2">
+            <select name="ctl00$MainContent$cSecurityQuestion" id="ctl00_MainContent_cSecurityQuestion" class="dropdownStyle validate[required]">
+	<option value="af026e86-90c6-4f42-a122-196079d0d1fa">What was the name of your first pet?</option>
+	<option value="683d10c8-8aac-49e9-a259-1cefc3664408">In what city were you born?</option>
+	<option value="b980b553-5819-4d4a-89bd-473784b884ad">What is your mother&#39;s Maiden name?</option>
+	<option value="52291cf7-a975-4929-a4e1-65d4342c81af">What is your favorite color?</option>
+	<option value="b39a2541-777c-4e77-ba63-b3075fc75983">What is your birth year?</option>
+	<option value="6d496587-3844-4134-b7d4-b494e741ea1a">What are the last 4 digits of your SSN?</option>
+
+</select>
+        </div>
+        <div class="clear">
+        </div>
+        <br />
+        <div class="col1">
+            Security Question Answer
+        </div>
+        <div class="col2">
+            <input name="ctl00$MainContent$cSecurityQuestionAnswer" type="text" id="ctl00_MainContent_cSecurityQuestionAnswer" class="inputStyle validate[required]" />
+        </div>
+        <div class="clear">
+        </div>
+        <br />
+        <div class="col1">
+            Servicing Company
+        </div>
+        <div class="col2">
+            <select name="ctl00$MainContent$cServicingCompany" id="ctl00_MainContent_cServicingCompany" class="dropdownStyle validate[required]">
+	<option value="8e7c5bc7-0433-454e-bc62-73b460d41b64">Cleascapes COS</option>
+
+</select>
+        </div>
+        <div class="clear">
+        </div>
+        <br />
+        <div class="col1">
+            Customer Account Number
+        </div>
+        <div class="col2">
+            <input name="ctl00$MainContent$cCustomerAccountNumber" type="text" id="ctl00_MainContent_cCustomerAccountNumber" class="inputStyle validate[required]" />
+        </div>
+        <div class="clear">
+        </div>
+        <div class="col1">
+            &nbsp;
+        </div>
+        <div class="col2">
+            Leading zeros are not required
+        </div>
+        <div class="clear">
+        </div>
+        <br />
+        <div style="padding-left: 20px;">
+            <span class="ui-state-error-text">Please confirm your account authenticity with either
+                the phone number on file or last invoice number.</span>
+        </div>
+        <br />
+        <div class="col1">
+            Phone Number
+        </div>
+        <div class="col2">
+            <input name="ctl00$MainContent$cPhoneNumber" type="text" id="ctl00_MainContent_cPhoneNumber" class="inputStyle" />
+        </div>
+        <div class="clear">
+        </div>
+        <br />
+        <div class="col1">
+            Invoice Number
+        </div>
+        <div class="col2">
+            <input name="ctl00$MainContent$cLastInvoiceNumber" type="text" id="ctl00_MainContent_cLastInvoiceNumber" class="inputStyle" />
+        </div>
+        <div class="clear">
+        </div>
+        <div class="col1">
+            &nbsp;
+        </div>
+        <div class="col2">
+            Leading zeros are not required
+        </div>
+        <div class="clear">
+        </div>
+        <br />
+        <div style="width: 100%; text-align: right;padding-right:20px;">
+            <input type="submit" name="ctl00$MainContent$cSubmit" value="Register" onclick="return preSave();" id="ctl00_MainContent_cSubmit" />
+            <input type="submit" name="ctl00$MainContent$cClear" value="Reset" onclick="doReset();" id="ctl00_MainContent_cClear" />
+            <input type="submit" name="ctl00$MainContent$cmdReturnToLogin" value="Return To Login" onclick="return preReturnToLogin();" id="ctl00_MainContent_cmdReturnToLogin" />
+        </div>
+        <div id="ctl00_MainContent_lError" class="ui-state-error" style="margin-top: 10px; text-align: center;">
+        </div>
+        <div id="ctl00_MainContent_lSuccess" title="Success!" style="display: none">
+        </div>
+        <br />
+    </div>
+    <br />
+
+        </div>
+
+        <img src="images/mainFooter.jpg" alt="FooterBanner" style="float: left;" />
+        <div style="clear: both;"></div>
+    </div>
+    </form>
+</body>
+</html>

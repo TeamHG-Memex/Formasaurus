@@ -1,0 +1,112 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="ctl00_Head1"><title>
+	Login
+</title>
+    <script src="scripts/jquery-1.7.1.min.js" type="text/javascript"></script>
+    <script src="scripts/jquery-ui-1.8.18.custom.min.js" type="text/javascript"></script>
+    <link href="scripts/script_styles/redmond/jquery-ui-1.8.18.custom.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        .LoginText
+        {
+            font-size: 115%;
+            font-weight: bold;
+        }
+        .TextBox
+        {
+            width: 200px;
+        }
+        li
+        {
+            margin-top: 5px;
+        }
+        
+        .LoginHeader
+        {
+            color: Maroon;
+            font-weight: normal;
+            font-size: large;
+        }
+    </style>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('input[id$="ctl00_MainContent_cmdSignIn"]').button();
+
+            if ($.trim($('div[id$="ctl00_MainContent_lMessage"]').text()).length > 0) {
+                $('div[id$="ctl00_MainContent_lMessage"]').show();
+            }
+            else {
+                $('div[id$="ctl00_MainContent_lMessage"]').hide();
+            }
+        });
+    </script>
+<link href="App_Themes/eTowerDefault/eTowerDefault.css" type="text/css" rel="stylesheet" /></head>
+<body id="Master_Body">
+    <form method="post" action="" id="aspnetForm">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTMwMDcxOTIzNw8WAh4HcG9zdGlkcwUkYzNiYzI4NGQtN2Q0My00OGJhLTljYWQtNTYzZDMxZTEzZGJiFgJmD2QWAgIDD2QWAgIBD2QWAgIHDxYCHglpbm5lcmh0bWxlZGRV9IyglTSCA5pw6OJZCH/V9s3+mH1g3mefHnjcJ4+iOQ==" />
+
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWBAKivqnMBwKF1K79BgKOsPfSCQLis+LEBJjrIAVpllXeq7MncbhFBQcWgQX6mIhVSCBDSKG4R76p" />
+    <div id="Master_ContentWrapper">
+        <!-- Logo Line -->
+        <img src="images/mainHeader.jpg" alt="Header" />
+
+        <!-- Content pane on the right -->
+        <div id="Master_Right">
+            
+    <div style="margin: 0 25px 0 25px">
+        <br />
+        <div class="GeneralTD" style="width: 435px; display: block;">
+            <div class="LoginHeader">
+                Account Access Login
+            </div>
+            <div class="GeneralColorTD" style="padding: 10px 10px 10px 10px;">
+                <div style="margin-top: 5px;">
+                    <div style="width: 100px; float: left;">
+                        Username:</div>
+                    <input name="ctl00$MainContent$txtUserID" type="text" id="ctl00_MainContent_txtUserID" class="GeneralTD TextBox" />
+                </div>
+                <div style="margin-top: 5px;">
+                    <div style="width: 100px; float: left;">
+                        Password:</div>
+                    <input name="ctl00$MainContent$txtPassword" type="password" id="ctl00_MainContent_txtPassword" class="GeneralTD TextBox" />
+                </div>
+                <div style="text-align: right; margin: 5px 25px 0 0;">
+                    <div style="clear: both; height: 4px;">
+                    </div>
+                    <div style="float: right;">
+                        <input type="submit" name="ctl00$MainContent$cmdSignIn" value="Login" id="ctl00_MainContent_cmdSignIn" OnButtonClicked="cmdSignIn_Click" />
+                    </div>
+                    <div style="clear: both; height: 2px;">
+                    </div>
+                </div>
+                <div id="ctl00_MainContent_lMessage" class="ui-state-error" style="text-align: center; margin: 10px auto 10px auto;"></div>
+                <div style="font-size: small; font-weight: lighter;">
+                    First Time? <a href="RegisterNewUser.aspx"">Click here to register.</a>
+                    <br />
+                    Forgot your password? <a href="ForgotPassword.aspx">Click here
+                        for assistance.</a>
+                    <br />
+                    Waiting for your confirmation email? <a href="SignInHelp.aspx">
+                        Click here to resend.</a>
+                </div>
+            </div>
+        </div>
+        <br />
+        <DIV style="FONT-SIZE: 1.2em"><SPAN style="COLOR: #008642; FONT-WEIGHT: bold">Accessing your account is safe and easy.</SPAN><BR><BR>Signing in the first time takes an extra minute and requires either your last invoice number or the phone number on file for your account. We will not share your personal information. <BR><BR><SPAN style="FONT-WEIGHT: bold">Once you log in, you can:</SPAN><BR>
+<OL>
+<LI>Pay a bill</LI>
+<LI>Order Bags</LI>
+<LI>Review your services</LI>
+<LI>Add services (additional pickups, cleanup service, e-waste collection, etc.)</LI></OL></DIV>
+        <br />
+    </div>
+
+        </div>
+
+        <img src="images/mainFooter.jpg" alt="FooterBanner" style="float: left;" />
+        <div style="clear: both;"></div>
+    </div>
+    </form>
+</body>
+</html>

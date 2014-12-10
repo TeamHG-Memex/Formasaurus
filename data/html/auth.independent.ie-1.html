@@ -1,0 +1,288 @@
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Login to independent</title>
+
+        <?
+        String deviceType = request.getSession("deviceType");
+        request.setAttribute("deviceType", deviceType);
+        ?>
+        
+
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"> -->
+        <link rel="stylesheet" href="/evolok-ui-web/static/default/css/bootstrap.css" >
+        
+        <link rel="stylesheet" href="/evolok-ui-web/static/default/css/global.css">
+        
+
+        
+
+        
+
+        
+            
+            
+                <link rel="stylesheet" href="/evolok-ui-web/static/default/css/style.css">
+            
+        
+
+        <script src="/evolok-ui-web/static/default/js/modernizr-2.6.2.min.js"></script>
+        <script>stLight.options({publisher: "e1e5e4a7-5522-48c5-824d-2de3508516a7", doNotHash: false, doNotCopy: false, hashAddressBar: true});</script>
+
+        
+        <meta charset="utf-8">
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <link rel="apple-touch-icon" href="assets/d.png"/>
+        <meta name="apple-touch-fullscreen" content="yes" />
+        
+        
+
+        
+
+        <!--  Social Block start -->
+        
+        <!--  Social Block end -->
+
+    
+    </head>
+    <body>
+        
+            
+                <div class="page-wrapper ">
+                    <div class="container">
+                        
+
+
+
+
+
+
+
+
+
+
+                        
+                        <div class="content">
+                            
+        <div id="ui-Wrapper">
+            <div id="loginArea" class="popup-area">                   
+                
+                <div class="loginBox push-down-area">
+                    
+                    <form id="loginForm" class="form-inline loginForm personal-validation" action="/evolok-ui-web/login.htm?serviceName=independent" method="POST">
+
+                        
+                            
+                                
+                                
+                                					
+                            
+                            
+                        
+
+                        
+
+<div class="wrapper latobd clearfix" id="header">
+	<a href="http://www.independent.ie/"><img class="logo" src="/evolok-ui-web/static/default/images/push-logo-ind.png" alt="Independent Extra logo"></a>
+    
+		<h1 class="inline-uppercase">Login</h1>
+	
+</div>
+
+                        
+                        
+
+                        
+                        <div class="controls split">
+
+                            
+                            
+                                
+                                
+                                    
+                                        <div class="inline-controls">
+                                            <input id="identifierslogin_emailAddress" name="identifiers[login_emailAddress]" placeholder="*Email Address" class="input-small required " type="text" value=""/>
+                                        </div>
+                                    
+                                
+                            
+                            
+                                <div class="inline-controls">
+                                    <input id="validatorslogin_password" name="validators[login_password]" placeholder="*Password" class="input-small required" type="password" value=""/>
+                                </div>
+                            
+                            
+
+                            
+                                <a id="forgottenPassword" class="forgotten-pwd georgia" href="/evolok-ui-web/resetPassword.htm?serviceName=independent&redirectTo=http://www.independent.ie/evolok/login-redirect?redirect=http://www.independent.ie/sport/soccer/">Forgot your password?</a>
+                            
+
+                        </div>
+                        <div class="controls split right">
+                            <div>
+
+                                <label class="controls-checkbox rememberMe">
+                                    <input id="checkBoxRememberMe" name="rememberMe" class="checkbox" type="checkbox" value="true"/><input type="hidden" name="_rememberMe" value="on"/>
+                                    <label for="rememberMe"><span class="checkbox-img"></span> Remember me</label>
+                                </label>
+
+                                <input type="submit" name="login" value="Login" class="btn brand">
+                            </div>
+
+                            <!--  Social Block start -->
+                            
+                            <!--  Social Block end -->
+                        </div>
+                        <div class="clearfix"></div>
+                    </form>
+
+                </div>
+
+
+                <!-- Pop ups for device management -->
+                <!--
+                                <div class="clearfix">
+                                        <a href="#device-check" class="btn btn-long pop-up-box">See Devices pop up</a>
+                                        <div id="device-check" class="modal-box">
+                                                <h1>Please note:</h1>
+                                                <p>Please deauthorise at least one device from your current active devices list, before you can continue.</p>
+                                                <hr>
+                                                <h2>Device management</h2>
+                                    <table class="device-table">
+                                        <thead>
+                                            <tr>
+                                                <th>Active devices</th>
+                                                <th>IP Address</th>
+                                                <th>&nbsp;</th>
+                                            </tr>
+                                        </thead>
+                
+                    <tr>
+                        <td width="20%">myDevice</td>
+                        <td width="7%">100.100.10.0</td>
+                
+                        <td width="10%">
+                                <a class="deauthorise georgia" href="/evolok-ui-web/accountDetails/removeDevice.htm?serviceName=independent&sessionIdToRemove=">Deauthorise<span class="bin-icon"></span></a>
+                        </td>
+                
+            </tr>
+                
+            </table>
+            <a class="btn pop-up-close right">Cancel</a>
+                </div>
+
+                <a href="#device-limit" class="btn btn-long pop-up-box">Device limit pop up</a>
+                <div id="device-limit" class="modal-box">
+                        <h1>Please note:</h1>
+                        <p>You have exceeded the maximum number of devices you can deauthorise per month. So this new device cannot access the site,
+                                until the start of the next month.</p>
+                        <p>Please use one of your existing devices to continue enjoying our site.</p>
+                        <a class="btn pop-up-close right">Close</a>
+                </div>
+        </div>
+                -->
+
+
+                
+                    
+
+
+
+
+
+
+                
+                <div class="clearfix"></div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="clearfix"></div>
+        
+    
+                        </div>
+                        
+
+
+
+
+
+
+                    </div>
+                </div>
+            
+            
+        
+
+        <div id="fb-root"></div>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="src="/evolok-ui-web/static/default/js/jquery-1.7.1.js"><\/script>')</script>    
+        <script src="/evolok-ui-web/static/default/js/jquery.json-2.3.min.js" type="text/javascript"></script>
+        <script src="/evolok-ui-web/static/default/js/jquery.placeholder.min.js"></script>
+        <script src="/evolok-ui-web/static/default/js/jquery.validate.js"></script>
+        <script src="/evolok-ui-web/static/default/js/formValidation.js"></script>
+        <script src="/evolok-ui-web/static/default/js/tableFilter.js"></script>
+        <script src="/evolok-ui-web/static/default/js/global.js"></script>
+        <script src="/evolok-ui-web/static/default/js/plugins.js"></script>
+
+       
+        
+
+
+
+
+
+
+
+
+
+
+	<!-- Google Tag Manager -->
+	<script type="text/javascript"> 
+
+  var _gaq = _gaq || []; 
+  _gaq.push(['_setAccount', 'UA-3845525-1']); 
+  _gaq.push(['_setDomainName', 'independent.ie']); 
+  _gaq.push(['_trackPageview']); 
+
+  (function() { 
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; 
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; 
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); 
+  })(); 
+
+</script>
+	<!-- End Google Tag Manager -->
+
+
+
+
+
+
+<script type="text/javascript">
+dataLayer = [{
+'evolok_pid': '',
+'evolok_session_id': 'C526ED4288B0F9C4AD00EA6975DD2523.irish-ic2',
+'evolok_page_visit' : 'Start LOGIN '
+}];
+</script>
+
+    </body>
+</html>

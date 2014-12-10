@@ -1,0 +1,1133 @@
+<!DOCTYPE html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!-- Consider adding an manifest.appcache: h5bp.com/d/Offline -->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+
+<!-- More ideas for your <head> here: h5bp.com/d/head-Tips -->
+
+<title>
+WordPress for the Serious. Plugins, Support &amp; More: WPMU DEV
+</title>
+
+<meta charset="UTF-8" />
+<!-- Use the .htaccess and remove these lines to avoid edge case issues.
+More info: h5bp.com/b/378 -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="description" content="" />
+<meta name="author" content="" />
+
+<meta name="msvalidate.01" content="E7C9392D99778E7D094879899EA58582" />
+
+<!-- Mobile viewport optimized: j.mp/bplateviewport -->
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0,minimum-scale=1.0,maximum-scale=1.0" />
+
+<link rel="publisher" href="https://plus.google.com/113918261231562979642/" />
+<link rel="stylesheet" href="http://premium.wpmudev.org/wp-content/themes/wpmudev-new/style.css" type="text/css" media="screen" />
+
+	<link rel="canonical" href="http://premium.wpmudev.org" />
+
+
+<!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
+<link rel="icon" href="http://premium.wpmudev.org/wp-content/themes/wpmudev-new/favicon.png" type="images/x-icon" />
+
+<link rel="pingback" href="http://premium.wpmudev.org/xmlrpc.php" />
+<script type="text/javascript">var _eab_data={"ajax_url":"https:\/\/premium.wpmudev.org\/wp-admin\/admin-ajax.php","root_url":"http:\/\/premium.wpmudev.org\/wp-content\/plugins\/events-and-bookings\/img\/","fb_scope":"email"};</script><link rel='stylesheet' id='dev-signup-popup-css'  href='http://premium.wpmudev.org/wp-content/plugins/wpmudev_apis/css/style.css?ver=2.2.0.6' type='text/css' media='all' />
+<link rel='stylesheet' id='eab-upcoming_calendar_widget-style-css'  href='http://premium.wpmudev.org/wp-content/plugins/events-and-bookings/css/upcoming_calendar_widget.css?ver=4.0.1' type='text/css' media='all' />
+<link rel='stylesheet' id='wpmudev-css-css'  href='http://premium.wpmudev.org/wp-content/themes/wpmudev-new/c/wpmudev.css?ver=10302014' type='text/css' media='all' />
+<link rel='stylesheet' id='fontawesome-css'  href='http://premium.wpmudev.org/wp-content/themes/wpmudev-new/c/font-awesome.css?ver=10302014' type='text/css' media='all' />
+<script type='text/javascript' src='http://premium.wpmudev.org/wp-includes/js/jquery/jquery.js?ver=1.11.1'></script>
+<script type='text/javascript' src='http://premium.wpmudev.org/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var _dev_data = {"ajax_url":"http:\/\/premium.wpmudev.org\/wp-admin\/admin-ajax.php","root_url":"http:\/\/premium.wpmudev.org\/wp-content\/plugins\/wpmudev_apis","project_id":"0","from_project_id":"0","is_ssl":"0","un_post":"","stripe_key":"pk_live_tyioedKnjQd314YfV0C5ane7"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://premium.wpmudev.org/wp-content/plugins/wpmudev_apis/js/dev-login.js?ver=2.2.0.6'></script>
+<script type='text/javascript' src='http://premium.wpmudev.org/wp-content/plugins/wpmudev_apis/js/jquery.defaultvalue.js?ver=2.2.0.6'></script>
+<script type='text/javascript' src='https://js.stripe.com/v2/?ver=4.0.1'></script>
+<script type='text/javascript' src='http://premium.wpmudev.org/wp-content/themes/wpmudev-new/j/libs/modernizr.custom.38525.js?ver=10302014'></script>
+<script type='text/javascript' src='http://premium.wpmudev.org/wp-content/themes/wpmudev-new/j/tabber/tabber.js?ver=10302014'></script>
+<script type='text/javascript' src='http://premium.wpmudev.org/wp-content/themes/wpmudev-new/j/wpmudev.js?ver=10302014'></script>
+<script type='text/javascript' src='http://premium.wpmudev.org/wp-content/themes/wpmudev-new/j/libs/jquery.easing.1.3.js?ver=10302014'></script>
+<script type='text/javascript' src='http://premium.wpmudev.org/wp-content/themes/wpmudev-new/j/libs/jquery.scrollTo.min.js?ver=10302014'></script>
+<script type='text/javascript' src='http://premium.wpmudev.org/wp-content/themes/wpmudev-new/j/libs/waypoints.min.js?ver=10302014'></script>
+<script type='text/javascript' src='http://premium.wpmudev.org/wp-content/plugins/events-and-bookings/js/upcoming_calendar_widget.js?ver=1.7.3-RC-2'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://premium.wpmudev.org/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://premium.wpmudev.org/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 4.0.1" />
+	<script type="text/javascript">
+		var _gaq = _gaq || [ ];
+		_gaq.push( [ '_setAccount', 'UA-249245-7' ] );
+				_gaq.push( [ '_setCustomVar', 1, 'user-type', 'visitor', 2 ] );
+				_gaq.push( [ '_setSiteSpeedSampleRate', 10 ] );
+		_gaq.push( [ '_trackPageview' ] );
+
+		( function() {
+			var ga = document.createElement( 'script' );
+			ga.type = 'text/javascript';
+			ga.async = true;
+			//ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			ga.src = ( 'https:' == document.location.protocol ? 'https://' : 'http://' ) + 'stats.g.doubleclick.net/dc.js';//update for Demographics and Interest Reports
+			var s = document.getElementsByTagName( 'script' )[0];
+			s.parentNode.insertBefore( ga, s );
+		} )();
+	</script>
+	
+<script>
+document.write('<link rel="stylesheet" media="screen" href="http://premium.wpmudev.org/wp-content/themes/wpmudev-new/c/enhanced.css" />');
+</script>
+
+<!--[if lt IE 9]>
+<link rel="stylesheet" type="text/css" media="screen" href="http://premium.wpmudev.org/wp-content/themes/wpmudev-new/c/old-ie.css" />
+<![endif]-->
+
+
+
+<script type="text/javascript">
+//<![CDATA[
+document.write('<style type="text/css">.tabber{display:none;}<\/style>');
+//]]>
+</script>
+<script> var _root_url = "http://premium.wpmudev.org/wp-content/themes/wpmudev-new"; </script>
+
+</head>
+
+<body class="home blog unknown">
+
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=208345015953410";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+
+	<div id="main-container">
+	
+
+<div class="nav-toggle">
+	<a href="#mobile-nav" class="nav-toggle-link"><span class="bar"></span><span class="bar"></span><span class="bar"></span></a>
+</div>
+
+
+<div id="mobile-nav" class="mobile-nav-wrapper">
+	<nav class="mobile-nav" role="navigation">
+		<ul class="mobile-menu">
+			<li id="mobile-nav-home" class="current">
+				<a href="http://premium.wpmudev.org" title="WPMU DEV">Home</a>
+			</li>
+			<li id="mobile-nav-plugins" class="">
+				<a href="http://premium.wpmudev.org/projects/category/plugins/" title="Plugins">Plugins</a>
+			</li>
+			<li id="mobile-nav-themes" class="">
+				<a href="http://premium.wpmudev.org/projects/category/themes/" title="Themes">Themes</a>
+			</li>
+			<li id="mobile-nav-support" class="">
+				<a href="http://premium.wpmudev.org/support/" title="Support">Support</a>
+			</li>
+			<li id="mobile-nav-blog">
+				<a href="http://premium.wpmudev.org/blog/" title="Blog">Blog</a>
+			</li>
+			<li id="mobile-nav-pricing" class="">
+				<a class="join" href="https://premium.wpmudev.org/join/" title="Join">Plans &amp; Pricing</a>
+			</li>
+		</ul>
+	</nav>
+	<div class="mobile-signin">
+		<form action="https://premium.wpmudev.org/wp-login.php" method="post">
+			<input type="text" placeholder="Email/Username" name="log" />
+			<input type="password" placeholder="Password" name="pwd" />
+			<input type="hidden" name="rememberme" value="forever" />
+			<input type="hidden" name="redirect_to" value="http://premium.wpmudev.org/" />
+			<input type="submit" class="submit" value="Sign In" />
+					</form>
+	</div>
+</div><!-- #mobile-nav -->
+
+
+<style>
+@media screen and (max-width:960px) {
+	html { margin-top: 0 !important; }
+	* html body { margin-top: 0 !important; }
+}
+</style>
+	<div id="main-content-area">
+
+<header id="banner" role="banner" class="clearfix julie">
+
+	<aside id="subscribe">
+				<p class="cta"><a href="http://premium.wpmudev.org/join/" title="Join Now" class="sign-up">Learn more</a></p>
+		<!-- <p>or <a href="#teaser-plugins" title="Learn more">learn more about membership</a></p> -->
+	</aside>
+
+    <aside id="testimonial" class="julie-testimonial">
+		<blockquote>
+			<p>There<span class="sp-character">&acute;</span>s a WPMU DEV plugin for everything my clients can dream up</p>
+			<footer>
+				<cite><span class='name'>&mdash;Julie Freeman, Sistak Creative Technologies, WPMU DEV Member</span></cite>
+			</footer>
+		</blockquote>
+	</aside>
+
+	   
+    <div class="wrap fixed" id="main-nav-wrapper">
+
+        <h1 id="logo"><a class="phark" href="http://premium.wpmudev.org" title="WPMU DEV">WPMU DEV</a></h1>
+
+        <nav id="main-nav" role="navigation">
+            <ul id="navmenu">
+                <li id="nav-home"><a href="#fb-root" class="phark" title="WPMU DEV">Home</a></li>
+                <li id="nav-plugins"><a href="#teaser-plugins" title="Plugins">Plugins</a></li>
+                <li id="nav-themes"><a href="#teaser-themes" title="Themes">Themes</a></li>
+                <li id="nav-support"><a href="#teaser-support" title="Support">Support</a></li>
+                <!--<li id="nav-custom"><a href="http://premium.wpmudev.org/wordpress-development" title="Jobs &amp; Pros">Jobs &amp; Pros</a></li>-->
+                <li id="nav-about"><a href="#teaser-about" title="About">About</a></li>
+                <li id="nav-blog"><a href="http://premium.wpmudev.org/blog" title="Blog">Blog</a></li>
+                                    <li id="nav-get-started"><strong><a class="join" href="http://premium.wpmudev.org/join/" title="Join">Pricing</a></strong></li>
+                                        <li id="nav-sign-in">
+                        <a href="https://premium.wpmudev.org/wp-login.php" title="Sign In">Sign In</a>
+                        <div id="sign-in-dropdown" style="display:none">
+                            <b class="phark chevron"></b>
+                            <form action="https://premium.wpmudev.org/wp-login.php" method="post">
+                                <input type="text" placeholder="Email/Username" name="log" />
+                                <input type="password" placeholder="Password" name="pwd" />
+                                <input type="hidden" name="rememberme" value="forever" />
+                                <input type="hidden" name="redirect_to" value="http://premium.wpmudev.org/" />
+                                <input type="submit" class="submit" value="Sign In" />
+                                <div class="or-divider">
+                                    <hr>
+                                    <p>or login with</p>
+                                    <hr>
+                                </div>
+                                <a class="wpmu_dev_login-button wpmu_dev_login-facebook" href="#"><span class="fb-icon"></span>Facebook</a>        <a class="wpmu_dev_login-button wpmu_dev_login-google" href="#"><span class="g-icon"></span>Google</a>                                <div class="lost-password">
+                                    <p>
+                                        <a href="http://premium.wpmudev.org/wp-login.php?action=lostpassword">Lost your password?</a> 
+                                        <a href="https://premium.wpmudev.org/join/#signup">Create an account</a>
+                                    </p>
+                                </div>
+                            </form>
+                        </div>
+                    </li>
+                </ul>
+        </nav><!-- #main-nav -->
+
+    </div><!-- .wrap -->
+
+		
+	</header><!-- #banner -->
+
+	<section id="teaser-plugins" class="clearfix teaser">
+		<div class="wrap clearfix">
+			<h2> Hundreds of amazing WordPress plugins you'll love, <br />with support that'll blow your mind</h2>
+			<p>The best WordPress, Multisite and BuddyPress plugins on the web.  <br /><strong>Award winning</strong>, loved by <strong>355,852 members</strong>, kicking it <strong>since 2004</strong>.</p>
+			<ul class="plugin-categories">
+				<li class="col plugin-business">
+					<h3><a href="http://premium.wpmudev.org/projects/tag/wordpress-business-plugins/">ONLINE BUSINESS</a></h3>
+					<p>e-commerce, membership sites, hosting, events, fundraising...</p>
+				</li>
+				<li class="col plugin-seo">
+					<h3><a href="http://premium.wpmudev.org/projects/tag/wordpress-seo/">SEO</a></h3>
+					<p>expert SEO integration, social media, analytics, support...</p>
+				</li>
+				<li class="col plugin-marketing">
+					<h3><a href="http://premium.wpmudev.org/projects/tag/wordpress-marketing-plugins/">MARKETING</a></h3>
+					<p>social, content, email and on site marketing with expert help...</p>
+				</li>
+				<li class="col plugin-publishing">
+					<h3><a href="http://premium.wpmudev.org/projects/tag/publishing/">PUBLISHING</a></h3>
+					<p>paid content, social integration, advertising, wikis, comments...</p>
+				</li>
+				<li class="col plugin-community">
+					<h3><a href="http://premium.wpmudev.org/projects/tag/community/">COMMUNITY</a></h3>
+					<p>chat, forums, voting, directories, live streams, events and more...</p>
+				</li>
+				<li class="col plugin-multisite">
+					<h3><a href="http://premium.wpmudev.org/projects/tag/wordpress-multisite/">MULTISITE</a></h3>
+					<p>every multisite plugin you'll ever need, guaranteed...</p>
+				</li>
+				<li class="col plugin-buddypress">
+					<h3><a href="http://premium.wpmudev.org/projects/tag/buddypress-plugins-themes/">BUDDYPRESS</a></h3>
+					<p>the most buddypress integrated and compatible plugins you'll find...</p>
+				</li>
+			</ul>
+			<h4><a href="http://premium.wpmudev.org/projects/category/plugins/" title="Our plugins">Browse all plugins &raquo;</a></h4>
+			
+		</div><!-- .wrap -->
+	</section><!-- .clearfix -->
+
+	<hr>
+
+	<section id="teaser-themes" class="clearfix teaser">
+		<div class="wrap clearfix">
+			<h2>Quality WordPress, Multisite and BuddyPress themes and theme packs for you, your users and your clients</h2>
+			<p>The only place you are going to find great Multisite themes, the famous 133-theme pack, amazing network home pages and 100% BuddyPress compatibility.</p>
+			
+			<div class="theme-lists thumbs clearfix">
+							<div class="col project-list" id="project-116">
+	<h2>
+	<!-- listing image for project 116 -->
+		<a href="http://premium.wpmudev.org/project/buddypress-social-theme/" title="Social">
+			<div class="project-img">
+												<img width="280" height="158" src="http://premium.wpmudev.org/wp-content/uploads/2009/11/Buddypress_social-280x158.jpg" class="alignleft wp-post-image" alt="Buddypress_social" />											</div>
+			<span class="project-title">Social</span>
+		</a>
+	<!-- end -->
+	</h2>
+</div><!-- .col -->
+							<div class="col project-list" id="project-219">
+	<h2>
+	<!-- listing image for project 219 -->
+		<a href="http://premium.wpmudev.org/project/frame-market-theme/" title="FrameMarket">
+			<div class="project-img">
+												<img width="280" height="158" src="http://premium.wpmudev.org/wp-content/uploads/2011/04/FrameMarket-280x158.jpg" class="alignleft wp-post-image" alt="FrameMarket" />											</div>
+			<span class="project-title">FrameMarket</span>
+		</a>
+	<!-- end -->
+	</h2>
+</div><!-- .col -->
+							<div class="col project-list" id="project-131">
+	<h2>
+	<!-- listing image for project 131 -->
+		<a href="http://premium.wpmudev.org/project/buddypress-blogsmu-theme/" title="Blogs MU">
+			<div class="project-img">
+												<img width="280" height="158" src="http://premium.wpmudev.org/wp-content/uploads/2010/05/Blogs-MU-280x158.jpg" class="alignleft wp-post-image" alt="Blogs-MU" />											</div>
+			<span class="project-title">Blogs MU</span>
+		</a>
+	<!-- end -->
+	</h2>
+</div><!-- .col -->
+							<div class="col project-list" id="project-128">
+	<h2>
+	<!-- listing image for project 128 -->
+		<a href="http://premium.wpmudev.org/project/farms-133-theme-pack/" title="Farms 133 theme pack">
+			<div class="project-img">
+												<img width="280" height="158" src="http://premium.wpmudev.org/wp-content/uploads/2010/04/Farms133_theme-280x158.jpg" class="alignleft wp-post-image" alt="Farms133_theme" />											</div>
+			<span class="project-title">Farms 133 theme pack</span>
+		</a>
+	<!-- end -->
+	</h2>
+</div><!-- .col -->
+							<div class="col project-list" id="project-173">
+	<h2>
+	<!-- listing image for project 173 -->
+		<a href="http://premium.wpmudev.org/project/network-theme/" title="Network">
+			<div class="project-img">
+												<img width="280" height="158" src="http://premium.wpmudev.org/wp-content/uploads/2011/02/Network-280x158.jpg" class="alignleft wp-post-image" alt="Network" />											</div>
+			<span class="project-title">Network</span>
+		</a>
+	<!-- end -->
+	</h2>
+</div><!-- .col -->
+							<div class="col project-list" id="project-155">
+	<h2>
+	<!-- listing image for project 155 -->
+		<a href="http://premium.wpmudev.org/project/studio-theme/" title="Studio">
+			<div class="project-img">
+												<img width="280" height="158" src="http://premium.wpmudev.org/wp-content/uploads/2010/09/Studio-280x158.jpg" class="alignleft wp-post-image" alt="Studio" />											</div>
+			<span class="project-title">Studio</span>
+		</a>
+	<!-- end -->
+	</h2>
+</div><!-- .col -->
+							<div class="col project-list" id="project-138">
+	<h2>
+	<!-- listing image for project 138 -->
+		<a href="http://premium.wpmudev.org/project/product-theme/" title="Product">
+			<div class="project-img">
+												<img width="280" height="158" src="http://premium.wpmudev.org/wp-content/uploads/2010/05/Product1-280x158.jpg" class="alignleft wp-post-image" alt="Product" />											</div>
+			<span class="project-title">Product</span>
+		</a>
+	<!-- end -->
+	</h2>
+</div><!-- .col -->
+							<div class="col project-list" id="project-126">
+	<h2>
+	<!-- listing image for project 126 -->
+		<a href="http://premium.wpmudev.org/project/buddypress-daily-theme/" title="The Daily Theme">
+			<div class="project-img">
+												<img width="280" height="158" src="http://premium.wpmudev.org/wp-content/uploads/2010/03/BuddyPress-Daily-280x158.jpg" class="alignleft wp-post-image" alt="BuddyPress-Daily" />											</div>
+			<span class="project-title">The Daily Theme</span>
+		</a>
+	<!-- end -->
+	</h2>
+</div><!-- .col -->
+						</div>
+			<h4><a href="http://premium.wpmudev.org/projects/category/themes/" title="Our themes">Browse all themes &raquo;</a></h4>
+		
+			
+		</div><!-- .wrap -->
+	</section><!-- .clearfix -->
+	
+	<hr>
+
+	<section id="teaser-support" class="clearfix teaser">
+		<div class="wrap clearfix">
+			<h2>Spectacular WordPress support</h2>
+			<p>Take advantage of <strong>unlimited, incredibly good WordPress support</strong> with <strong>lightning-fast response times</strong> and an incredibly <strong>friendly community</strong> full of people just like you.</p>
+			<div class="support-list">
+				<div class="support support-qanda">
+					<h2 class="title">24/7/365 Support</h2>
+					<ul>
+						<li>Unlimited support in minutes</li>
+						<li>From your WP dashboard</li>
+						<li>Ask us about anything at all to do with WordPress</li>
+					</ul>
+					<p class="alignright"><a href="http://premium.wpmudev.org/qanda/">Find out more &raquo;</a></p>
+				</div>
+				<div class="support support-live">
+					<h2 class="title">Live support</h2>
+					<ul>
+						<li>Multiple sessions every day</li>
+						<li>Instant help &amp; discussion with top WP developers</li>
+						<li>Discuss marketing, SEO &amp; more</li>
+					</ul>
+					<p class="alignright"><a href="http://premium.wpmudev.org/live-support/">Find out more &raquo;</a></p>
+				</div>
+				<div class="support support-forum">
+					<h2 class="title">Community</h2>
+					<ul>
+						<li>Meet people like you</li>
+						<li>Share ideas, get feedback</li>
+						<li>Earn your free lifetime membership of WPMU DEV</li>
+					</ul>
+					<p class="alignright"><a href="http://premium.wpmudev.org/forums/">Find out more &raquo;</a></p>
+				</div>
+				<div class="support support-video clear">
+					<h2 class="title">White label videos</h2>
+					<ul>
+						<li>High quality, unbranded tutorial videos</li>
+						<li>For you and your clients</li>
+						<li>We host, just embed &amp; enjoy</li>
+					</ul>
+					<p class="alignright"><a href="http://premium.wpmudev.org/projects/category/videos/">Find out more &raquo;</a></p>
+				</div>
+				<div class="support support-manual">
+					<h2 class="title">Manuals</h2>
+					<ul>
+						<li>WordPress, MultiSite &amp; BuddyPress manuals</li>
+						<li>Constantly updated, easy to use</li>
+						<li>Saving you time &amp; money</li>
+					</ul>
+					<p class="alignright"><a href="http://premium.wpmudev.org/manuals/">Find out more &raquo;</a></p>
+				</div>
+				<div class="support support-documentation">
+					<h2 class="title">Documentation</h2>
+					<ul>
+						<li>We're fanatical about great documentation</li>
+						<li>For every plugin &amp; theme</li>
+						<li>Get set up in minutes</li>
+					</ul>
+				</div>
+			</div>
+			<h4><a href="http://premium.wpmudev.org/support/" title="Spectacular support">Learn more about our spectacular support &raquo;</a></h4>
+		</div><!-- .wrap -->
+	</section><!-- .clearfix -->
+	
+	<hr>
+
+	<section id="teaser-about" class="clearfix teaser">
+		<div id="about" class="wrap clearfix">
+			<h2>WPMU DEV members get direct access to the most experienced WordPress team on the planet</h2>
+			<p>
+				Meet our developers, designers, experienced WordPress support staff, sysadmins, marketing and SEO experts in the community, amazing <a href="http://premium.wpmudev.org/blog/">WPMU DEV Blog</a> bloggers, support areas and live chat. Let us be your dedicated WordPress team.
+			</p>
+			<div id="staffgrid">
+							<div class="staff-avatar">
+					<img alt='Ronnie Burt' src='http://0.gravatar.com/avatar/a94ca4b055b6372e4fe97c6324e7475e?s=128&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D128&amp;r=G' class='avatar avatar-128 photo' height='128' width='128' />					<div class="staff-meta">
+						<h4>Ronnie Burt</h4>
+						<em>Biz Dev</em>
+											<span class="twitter">@ronnieburt</span>
+										</div>
+				</div>
+							<div class="staff-avatar">
+					<img alt='James Farmer' src='http://0.gravatar.com/avatar/65b0d73b2964783b2bbf6be1171ab781?s=128&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D128&amp;r=G' class='avatar avatar-128 photo' height='128' width='128' />					<div class="staff-meta">
+						<h4>James Farmer</h4>
+						<em>CEO</em>
+											<span class="twitter">@jamesfarmer</span>
+										</div>
+				</div>
+							<div class="staff-avatar">
+					<img alt='Jeffri' src='http://0.gravatar.com/avatar/00237ef54706eee05311fafbc69d5a4e?s=128&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D128&amp;r=G' class='avatar avatar-128 photo' height='128' width='128' />					<div class="staff-meta">
+						<h4>Jeffri</h4>
+						<em>Front End Developer</em>
+											<span class="twitter">@keaglez</span>
+										</div>
+				</div>
+							<div class="staff-avatar">
+					<img alt='michaelk' src='http://1.gravatar.com/avatar/91e769f6e36835a054cd120587b1c662?s=128&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D128&amp;r=G' class='avatar avatar-128 photo' height='128' width='128' />					<div class="staff-meta">
+						<h4>michaelk</h4>
+						<em>Super Sysadmin</em>
+										</div>
+				</div>
+							<div class="staff-avatar">
+					<img alt='S H Mohanjith' src='http://1.gravatar.com/avatar/73229ccec2c8cda7cdb1efd392c0504e?s=128&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D128&amp;r=G' class='avatar avatar-128 photo' height='128' width='128' />					<div class="staff-meta">
+						<h4>S H Mohanjith</h4>
+						<em>Developer</em>
+											<span class="twitter">@mohanjith</span>
+										</div>
+				</div>
+							<div class="staff-avatar">
+					<img alt='Aaron' src='http://0.gravatar.com/avatar/ab1d8af2fa090ed9f5bb78413d7e6f20?s=128&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D128&amp;r=G' class='avatar avatar-128 photo' height='128' width='128' />					<div class="staff-meta">
+						<h4>Aaron</h4>
+						<em>Lead Developer</em>
+											<span class="twitter">@UglyRobotDev</span>
+										</div>
+				</div>
+							<div class="staff-avatar">
+					<img alt='Timothy Bowers' src='http://1.gravatar.com/avatar/bc1141be11db635005a9023734d7b739?s=128&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D128&amp;r=G' class='avatar avatar-128 photo' height='128' width='128' />					<div class="staff-meta">
+						<h4>Timothy Bowers</h4>
+						<em>Support Chimp</em>
+											<span class="twitter">@TimothyKBowers</span>
+										</div>
+				</div>
+							<div class="staff-avatar">
+					<img alt='Vladislav' src='http://0.gravatar.com/avatar/a158179809f5de6556723a772e3bd9da?s=128&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D128&amp;r=G' class='avatar avatar-128 photo' height='128' width='128' />					<div class="staff-meta">
+						<h4>Vladislav</h4>
+						<em>Dead Eye Dev</em>
+											<span class="twitter">@vebailovity</span>
+										</div>
+				</div>
+							<div class="staff-avatar">
+					<img alt='Victor' src='http://0.gravatar.com/avatar/45d7fdeb461f05b15d194caac53492d5?s=128&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D128&amp;r=G' class='avatar avatar-128 photo' height='128' width='128' />					<div class="staff-meta">
+						<h4>Victor</h4>
+						<em>product designer</em>
+											<span class="twitter">@v1ctorrrr</span>
+										</div>
+				</div>
+							<div class="staff-avatar">
+					<img alt='Ashok' src='http://0.gravatar.com/avatar/847e101d8b2d37d3aa8d2e6984393b32?s=128&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D128&amp;r=G' class='avatar avatar-128 photo' height='128' width='128' />					<div class="staff-meta">
+						<h4>Ashok</h4>
+						<em>Support Bunny</em>
+											<span class="twitter">@bappi_d_great</span>
+										</div>
+				</div>
+							<div class="staff-avatar">
+					<img alt='Gagan' src='http://0.gravatar.com/avatar/629d0f41517ccf88d2faf2e2b6a1bd86?s=128&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D128&amp;r=G' class='avatar avatar-128 photo' height='128' width='128' />					<div class="staff-meta">
+						<h4>Gagan</h4>
+						<em>Dev</em>
+										</div>
+				</div>
+							<div class="staff-avatar">
+					<img alt='Ivan' src='http://0.gravatar.com/avatar/44590529fc343be9877e29e65c0c2df1?s=128&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D128&amp;r=G' class='avatar avatar-128 photo' height='128' width='128' />					<div class="staff-meta">
+						<h4>Ivan</h4>
+						<em>Developer</em>
+											<span class="twitter">@Spoygg</span>
+										</div>
+				</div>
+							<div class="staff-avatar">
+					<img alt='Jose' src='http://1.gravatar.com/avatar/163bf93711a6a512b777b0e04f9d31e8?s=128&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D128&amp;r=G' class='avatar avatar-128 photo' height='128' width='128' />					<div class="staff-meta">
+						<h4>Jose</h4>
+						<em></em>
+										</div>
+				</div>
+							<div class="staff-avatar">
+					<img alt='Jack Kitterhing' src='http://1.gravatar.com/avatar/748dd5fd816879a29deecaf870a10f2e?s=128&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D128&amp;r=G' class='avatar avatar-128 photo' height='128' width='128' />					<div class="staff-meta">
+						<h4>Jack Kitterhing</h4>
+						<em>Code Monkey</em>
+											<span class="twitter">@codemonkey_jack</span>
+										</div>
+				</div>
+							<div class="staff-avatar">
+					<img alt='Rheinard' src='http://1.gravatar.com/avatar/5b9aa7824f765079f4223882709bdee3?s=128&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D128&amp;r=G' class='avatar avatar-128 photo' height='128' width='128' />					<div class="staff-meta">
+						<h4>Rheinard</h4>
+						<em>Developer</em>
+											<span class="twitter">@rheinardkorf</span>
+										</div>
+				</div>
+							<div class="staff-avatar">
+					<img alt='Sam' src='http://1.gravatar.com/avatar/1ab9075055dd4debe0e117451e1e545b?s=128&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D128&amp;r=G' class='avatar avatar-128 photo' height='128' width='128' />					<div class="staff-meta">
+						<h4>Sam</h4>
+						<em>Developer</em>
+										</div>
+				</div>
+							<div class="staff-avatar">
+					<img alt='Philipp Stracker' src='http://1.gravatar.com/avatar/577a858c4405a5b532b619c9cc5d0b3f?s=128&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D128&amp;r=G' class='avatar avatar-128 photo' height='128' width='128' />					<div class="staff-meta">
+						<h4>Philipp Stracker</h4>
+						<em>Developer</em>
+										</div>
+				</div>
+							<div class="staff-avatar">
+					<img alt='Umesh Kumar' src='http://1.gravatar.com/avatar/5b8891947417ec3000a4244556d567dd?s=128&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D128&amp;r=G' class='avatar avatar-128 photo' height='128' width='128' />					<div class="staff-meta">
+						<h4>Umesh Kumar</h4>
+						<em>Junior Developer</em>
+											<span class="twitter">@umeshsinglaa</span>
+										</div>
+				</div>
+							<div class="staff-avatar">
+					<img alt='Hoang Ngo' src='http://1.gravatar.com/avatar/932efe0343aaa2371649d2859a1ece66?s=128&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D128&amp;r=G' class='avatar avatar-128 photo' height='128' width='128' />					<div class="staff-meta">
+						<h4>Hoang Ngo</h4>
+						<em>Code Slayer</em>
+										</div>
+				</div>
+							<div class="staff-avatar">
+					<img alt='George Michael' src='http://0.gravatar.com/avatar/c565842b24ace8ce15dce2fff6b5529d?s=128&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D128&amp;r=G' class='avatar avatar-128 photo' height='128' width='128' />					<div class="staff-meta">
+						<h4>George Michael</h4>
+						<em>Email Wizard</em>
+											<span class="twitter">@MAnticipation</span>
+										</div>
+				</div>
+							<div class="staff-avatar">
+					<img alt='aristath' src='http://1.gravatar.com/avatar/b34a45c292f229a7897b91fbd520b3f8?s=128&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D128&amp;r=G' class='avatar avatar-128 photo' height='128' width='128' />					<div class="staff-meta">
+						<h4>aristath</h4>
+						<em>Support</em>
+											<span class="twitter">@aristath</span>
+										</div>
+				</div>
+							<div class="staff-avatar">
+					<img alt='Bojan' src='http://1.gravatar.com/avatar/dbf871db998e9e7ecffab2cc05113dbd?s=128&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D128&amp;r=G' class='avatar avatar-128 photo' height='128' width='128' />					<div class="staff-meta">
+						<h4>Bojan</h4>
+						<em></em>
+										</div>
+				</div>
+							<div class="staff-avatar">
+					<img alt='Calvin' src='http://0.gravatar.com/avatar/0273d3a673b339a2da99b0c0d09e7390?s=128&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D128&amp;r=G' class='avatar avatar-128 photo' height='128' width='128' />					<div class="staff-meta">
+						<h4>Calvin</h4>
+						<em></em>
+											<span class="twitter">@calvin_canas</span>
+										</div>
+				</div>
+							<div class="staff-avatar">
+					<img alt='DavidM' src='http://1.gravatar.com/avatar/b88befec981ba1cfa2ce5bfffccf9226?s=128&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D128&amp;r=G' class='avatar avatar-128 photo' height='128' width='128' />					<div class="staff-meta">
+						<h4>DavidM</h4>
+						<em>Support Monster</em>
+										</div>
+				</div>
+							<div class="staff-avatar">
+					<img alt='Philip' src='http://1.gravatar.com/avatar/5af5ed9292f0a7813de9f813d39d2907?s=128&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D128&amp;r=G' class='avatar avatar-128 photo' height='128' width='128' />					<div class="staff-meta">
+						<h4>Philip</h4>
+						<em></em>
+										</div>
+				</div>
+							<div class="staff-avatar">
+					<img alt='Ivan Denkov' src='http://0.gravatar.com/avatar/ced146669198e21083b183bbd48fe7cb?s=128&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D128&amp;r=G' class='avatar avatar-128 photo' height='128' width='128' />					<div class="staff-meta">
+						<h4>Ivan Denkov</h4>
+						<em></em>
+										</div>
+				</div>
+							<div class="staff-avatar">
+					<img alt='Elliott Bristow' src='http://1.gravatar.com/avatar/10196b13d6d4968ba8cc6bfb914f8b5a?s=128&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D128&amp;r=G' class='avatar avatar-128 photo' height='128' width='128' />					<div class="staff-meta">
+						<h4>Elliott Bristow</h4>
+						<em>Keyboard Jockey</em>
+											<span class="twitter">@ellbristow</span>
+										</div>
+				</div>
+							<div class="staff-avatar">
+					<img alt='Michael Bissett' src='http://1.gravatar.com/avatar/f88271c7ca15616b5b1c4129a7aca82f?s=128&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D128&amp;r=G' class='avatar avatar-128 photo' height='128' width='128' />					<div class="staff-meta">
+						<h4>Michael Bissett</h4>
+						<em></em>
+											<span class="twitter">@BissettMedia</span>
+										</div>
+				</div>
+							<div class="staff-avatar">
+					<img alt='Andre Foisy' src='http://0.gravatar.com/avatar/4ce33e075af1916fad903e1103d66c85?s=128&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D128&amp;r=G' class='avatar avatar-128 photo' height='128' width='128' />					<div class="staff-meta">
+						<h4>Andre Foisy</h4>
+						<em>Support</em>
+											<span class="twitter">@AndreFoisy</span>
+										</div>
+				</div>
+							<div class="staff-avatar">
+					<img alt='Sumit Kumar' src='http://0.gravatar.com/avatar/a1f1234f9ba24933877279a0bc31af37?s=128&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D128&amp;r=G' class='avatar avatar-128 photo' height='128' width='128' />					<div class="staff-meta">
+						<h4>Sumit Kumar</h4>
+						<em></em>
+										</div>
+				</div>
+							<div class="staff-avatar">
+					<img alt='Vinod Dalvi' src='http://0.gravatar.com/avatar/edf2058522a9f9c023a13b9ffd4e76b1?s=128&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D128&amp;r=G' class='avatar avatar-128 photo' height='128' width='128' />					<div class="staff-meta">
+						<h4>Vinod Dalvi</h4>
+						<em>Support Zen Master</em>
+											<span class="twitter">@vinodvdalvi</span>
+										</div>
+				</div>
+							<div class="staff-avatar">
+					<img alt='Oskar' src='http://0.gravatar.com/avatar/07593673e2326ec56e119bd665fb55f6?s=128&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D128&amp;r=G' class='avatar avatar-128 photo' height='128' width='128' />					<div class="staff-meta">
+						<h4>Oskar</h4>
+						<em></em>
+										</div>
+				</div>
+							<div class="staff-avatar">
+					<img alt='Patrick' src='http://0.gravatar.com/avatar/6cb08a925da6d57539860e1746bc1397?s=128&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D128&amp;r=G' class='avatar avatar-128 photo' height='128' width='128' />					<div class="staff-meta">
+						<h4>Patrick</h4>
+						<em>Writer & Support Star</em>
+											<span class="twitter">@kwitterz</span>
+										</div>
+				</div>
+							<div class="staff-avatar">
+					<img alt='Paul Mendoza' src='http://1.gravatar.com/avatar/fc81e44ffaee6ac3b3258ff24b9b6f22?s=128&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D128&amp;r=G' class='avatar avatar-128 photo' height='128' width='128' />					<div class="staff-meta">
+						<h4>Paul Mendoza</h4>
+						<em>Video Guy =]</em>
+											<span class="twitter">@qdozaq</span>
+										</div>
+				</div>
+							<div class="staff-avatar">
+					<img alt='Michelle Shull' src='http://1.gravatar.com/avatar/daabe3363e2cb73164532f670a5c82f1?s=128&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D128&amp;r=G' class='avatar avatar-128 photo' height='128' width='128' />					<div class="staff-meta">
+						<h4>Michelle Shull</h4>
+						<em></em>
+										</div>
+				</div>
+							<div class="staff-avatar">
+					<img alt='Ariful Islam Shaon' src='http://0.gravatar.com/avatar/85977110206f3c8fb973f2a9df4746ff?s=128&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D128&amp;r=G' class='avatar avatar-128 photo' height='128' width='128' />					<div class="staff-meta">
+						<h4>Ariful Islam Shaon</h4>
+						<em>Forum Consultant</em>
+										</div>
+				</div>
+							<div class="staff-avatar">
+					<img alt='Sue' src='http://0.gravatar.com/avatar/c812f1e864e79b49f2218e9c11e503f9?s=128&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D128&amp;r=G' class='avatar avatar-128 photo' height='128' width='128' />					<div class="staff-meta">
+						<h4>Sue</h4>
+						<em>Maven</em>
+											<span class="twitter">@suewaters</span>
+										</div>
+				</div>
+							<div class="staff-avatar">
+					<img alt='Tyler Postle' src='http://1.gravatar.com/avatar/bf3ed8bfa4e9932132e176dd98e3f9f0?s=128&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D128&amp;r=G' class='avatar avatar-128 photo' height='128' width='128' />					<div class="staff-meta">
+						<h4>Tyler Postle</h4>
+						<em></em>
+											<span class="twitter">@tylerpostle</span>
+										</div>
+				</div>
+							<div class="staff-avatar">
+					<img alt='Vaughan' src='http://1.gravatar.com/avatar/7da790c01eeb4906a51c6e87cd7cda70?s=128&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D128&amp;r=G' class='avatar avatar-128 photo' height='128' width='128' />					<div class="staff-meta">
+						<h4>Vaughan</h4>
+						<em>Support Squirrel</em>
+											<span class="twitter">@V4ughan</span>
+										</div>
+				</div>
+							<div class="staff-avatar">
+					<img alt='yudy' src='http://0.gravatar.com/avatar/29ac65445c84f789afe1b3eeecb445ce?s=128&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D128&amp;r=G' class='avatar avatar-128 photo' height='128' width='128' />					<div class="staff-meta">
+						<h4>yudy</h4>
+						<em>UI Designer</em>
+										</div>
+				</div>
+							<div class="staff-avatar">
+					<img alt='Ignacio' src='http://0.gravatar.com/avatar/e43ce9543e1620eb605b3e9205ae2323?s=128&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D128&amp;r=G' class='avatar avatar-128 photo' height='128' width='128' />					<div class="staff-meta">
+						<h4>Ignacio</h4>
+						<em>Junior Developer</em>
+											<span class="twitter">@igmoweb</span>
+										</div>
+				</div>
+							<div class="staff-avatar">
+					<img alt='Jonathan' src='http://1.gravatar.com/avatar/72604b1cc6fd9c1eab564113075dabb6?s=128&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D128&amp;r=G' class='avatar avatar-128 photo' height='128' width='128' />					<div class="staff-meta">
+						<h4>Jonathan</h4>
+						<em>Developer</em>
+										</div>
+				</div>
+							<div class="staff-avatar">
+					<img alt='Maniu' src='http://1.gravatar.com/avatar/dc1dca52b6211dd35954c602044db1c2?s=128&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D128&amp;r=G' class='avatar avatar-128 photo' height='128' width='128' />					<div class="staff-meta">
+						<h4>Maniu</h4>
+						<em>Junior Developer</em>
+											<span class="twitter">@maniu</span>
+										</div>
+				</div>
+							<div class="staff-avatar">
+					<img alt='Marko Miljus' src='http://1.gravatar.com/avatar/5771b7a72ef5938a0f4ddfda3edf221e?s=128&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D128&amp;r=G' class='avatar avatar-128 photo' height='128' width='128' />					<div class="staff-meta">
+						<h4>Marko Miljus</h4>
+						<em>Developer</em>
+											<span class="twitter">@markomiljus</span>
+										</div>
+				</div>
+							<div class="staff-avatar">
+					<img alt='Chris Knowles' src='http://1.gravatar.com/avatar/5ba3d2b2dc25d2f48bdfa7aa25345706?s=128&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D128&amp;r=G' class='avatar avatar-128 photo' height='128' width='128' />					<div class="staff-meta">
+						<h4>Chris Knowles</h4>
+						<em>Writer</em>
+											<span class="twitter">@ChrisKnowles</span>
+										</div>
+				</div>
+							<div class="staff-avatar">
+					<img alt='Joshua' src='http://0.gravatar.com/avatar/8b108a66efc0c17b2193541eb2d318ad?s=128&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D128&amp;r=G' class='avatar avatar-128 photo' height='128' width='128' />					<div class="staff-meta">
+						<h4>Joshua</h4>
+						<em>Keepin' it Fresh Div.</em>
+											<span class="twitter">@joshdailey</span>
+										</div>
+				</div>
+							<div class="staff-avatar">
+					<img alt='Julian' src='http://1.gravatar.com/avatar/b7904661c84a4dececc54aa3ddd686ae?s=128&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D128&amp;r=G' class='avatar avatar-128 photo' height='128' width='128' />					<div class="staff-meta">
+						<h4>Julian</h4>
+						<em>UI Designer</em>
+											<span class="twitter">@jsavio81</span>
+										</div>
+				</div>
+							<div class="staff-avatar">
+					<img alt='Lol' src='http://0.gravatar.com/avatar/0dc330fa37aa9e8b8c1e50264eeffb5e?s=128&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D128&amp;r=G' class='avatar avatar-128 photo' height='128' width='128' />					<div class="staff-meta">
+						<h4>Lol</h4>
+						<em>Director</em>
+										</div>
+				</div>
+							<div class="staff-avatar">
+					<img alt='Osh' src='http://1.gravatar.com/avatar/b70c32c3ae72b42b7d8b69cd4e35901c?s=128&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D128&amp;r=G' class='avatar avatar-128 photo' height='128' width='128' />					<div class="staff-meta">
+						<h4>Osh</h4>
+						<em>UI Designer</em>
+											<span class="twitter">@oshikharari</span>
+										</div>
+				</div>
+							<div class="staff-avatar">
+					<img alt='Raelene Wilson' src='http://0.gravatar.com/avatar/a6ea25141e4c7b53c5c0c66252e59c8c?s=128&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D128&amp;r=G' class='avatar avatar-128 photo' height='128' width='128' />					<div class="staff-meta">
+						<h4>Raelene Wilson</h4>
+						<em>Wordsmith</em>
+											<span class="twitter">@raewilsonwrites</span>
+										</div>
+				</div>
+							<div class="staff-avatar">
+					<img alt='Catalin Nita' src='http://1.gravatar.com/avatar/7646e5c7c3e19ea9123bb44591bd05bd?s=128&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D128&amp;r=G' class='avatar avatar-128 photo' height='128' width='128' />					<div class="staff-meta">
+						<h4>Catalin Nita</h4>
+						<em></em>
+										</div>
+				</div>
+							<div class="staff-avatar">
+					<img alt='Dan Leeman' src='http://1.gravatar.com/avatar/50b68bd05a1f905735472b70b02a1d26?s=128&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D128&amp;r=G' class='avatar avatar-128 photo' height='128' width='128' />					<div class="staff-meta">
+						<h4>Dan Leeman</h4>
+						<em>Sales & Support</em>
+										</div>
+				</div>
+							<div class="staff-avatar">
+					<img alt='Didge Farmer' src='http://0.gravatar.com/avatar/8d9462168fed4c20b55014129b72994f?s=128&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D128&amp;r=G' class='avatar avatar-128 photo' height='128' width='128' />					<div class="staff-meta">
+						<h4>Didge Farmer</h4>
+						<em>Chief of Security</em>
+											<span class="twitter">@didgefarmer</span>
+										</div>
+				</div>
+							<div class="staff-avatar">
+					<img alt='Jason Teitelman' src='http://0.gravatar.com/avatar/ec5dbea9d73dd45e8141ba8cc8c732c0?s=128&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D128&amp;r=G' class='avatar avatar-128 photo' height='128' width='128' />					<div class="staff-meta">
+						<h4>Jason Teitelman</h4>
+						<em>Sales & Support</em>
+										</div>
+				</div>
+						</div>
+		</div><!-- .wrap -->
+	<h4 class="cta"><a href="http://premium.wpmudev.org/join/">Get WPMU DEV &raquo;</a></h4>
+	</section><!-- .clearfix -->
+
+	
+	<!-- 
+	<section id="teaser-faq" class="clearfix teaser">
+		<div id="faq" class="wrap clearfix">
+			<h2>Some frequently asked questions...</h2>
+			<dl>
+				<dt>Do I need a subscription to use WPMU DEV plugins and themes?</dt>
+				<dd><strong>No</strong>, you don't! You can cancel your membership and use our plugins and themes for as long as you like, no subscription required! Ongoing memberships are only required for support, upgrades, new releases, security updates, videos and the anti splog API.</dd>
+
+				<dt>Can I use your plugins and themes on lots of different sites?</dt>
+				<dd><strong>Yes</strong>, you can use WPMU DEV plugins and themes on as many different sites as you like.</dd>
+
+				<dt>So, can I use them on all my different client sites, without having to get them membership too?</dt>
+				<dd><strong>Yes</strong>, you can (although if they need support and updates, they&#8217;ll need to get their own account).</dd>
+
+				<dt>Can I customize your plugins and themes at will?</dt>
+				<dd><strong>Yes</strong>, everything we do is 100% GPL, so you can customize it as much as you want, we&#8217;ll even give you a hand, just ask.</dd>
+				
+				<dt>And is everything white label?</dt>
+				<dd><strong>Yes</strong>, you can hide the WPMU DEV dashboard, rebrand our plugins, use the themes however you want and pass the videos off as your own, it's too easy. We even provide a branding plugin that allows you to completely white label WordPress.</dd>
+				
+				<dt>Can I buy plugins and themes individually?</dt>
+				<dd><strong>Yes</strong>, you can. Just click on 'Download' and select 'Just this plugin / theme' after you create your free account. Individually, plugins and themes cost $19.</dd>
+
+				<dt>Um, isn't this too good to be true?</dt>
+				<dd>We thought you might ask that :) We can do this because we are the largest plugin provider on the web, have the most members and consistently invest membership fees in improving the business. So it's 100% true, we're the real deal!</dd>
+				
+			</dl>
+		</div>
+	</section>
+	-->
+	
+
+   <div id="footer" class="clearfix">
+	<footer id="site-footer" class="reverse">
+		<div class="wrap clearfix">
+
+			<div id="footer-copyright">
+				<p class="copyright" role="complementary">&copy; 2004 &mdash; 2014 WPMU DEV.</p>
+				<p>
+					<a href="/terms-of-service/" title="Terms of Service">Terms of Service</a>
+					&nbsp;&nbsp;&bull;&nbsp;&nbsp;
+										<a href="/privacy-policy/" title="Privacy Policy">Privacy</a>
+					&nbsp;&nbsp;&bull;&nbsp;&nbsp;
+					<a href="http://premium.wpmudev.org/projects-by-tag/">Tags</a>
+					&nbsp;&nbsp;&bull;&nbsp;&nbsp;
+					<a href="/contact/" title="Contact">Contact Us</a>
+					&nbsp;&nbsp;&bull;&nbsp;&nbsp;
+					<a href="http://incsub.com/careers/" title="Work at WPMU DEV">Work at WPMU DEV</a>
+				</p>
+			</div>
+
+			<div id="footer-newsletter">
+				<form action="https://wpmudev.us1.list-manage.com/subscribe/post?u=4e8bfa5d84735d9c9d7016040&amp;id=1ba864f654" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+					<label for="newsletter-email">Sign up for the WPMU DEV Newsletter!</label>
+					<div class="newsletter-fields">
+						<input value="" name="EMAIL" class="required email" id="mce-EMAIL" type="text" placeholder="Your email address">
+						<!-- <input type="email" id="newsletter-email" name="newsletter-email" /> -->
+						<input type="submit" class="submit" value="Submit" id="wpmu-mailchimp-send" onClick="_gaq.push(['_trackEvent', 'Email List','Submit','Footer']);" />
+					</div>
+				</form>
+			</div><!-- #newsletter -->
+
+			<div id="footer-social">
+				<h2>Find us online</h2>
+				<a href="https://facebook.com/wpmudev" id="footer-facebook">
+					<strong>34,223</strong> fans
+				</a><!-- #footer-facebook -->
+				<a href="https://twitter.com/wpmudev" id="footer-twitter">
+					<strong>23,559</strong> followers
+				</a><!-- #footer-twitter -->
+			</div><!-- #social -->
+			
+			<div id="footer-verified">
+				<p class="verified-label">Verified by:</p>
+				<div class="verified-symbols">
+					<div class="verified-symbol" style="width:100px; height:72px;">
+						<!-- Norton  -->
+						<table width="100" border="0" cellpadding="2" cellspacing="0" title="Click to Verify - This site chose Symantec SSL for secure e-commerce and confidential communications.">
+							<tr>
+								<td width="100" align="center" valign="top"><script type="text/javascript" src="https://seal.verisign.com/getseal?host_name=premium.wpmudev.org&amp;size=S&amp;use_flash=NO&amp;use_transparent=YES&amp;lang=en"></script>
+							</tr>
+						</table>
+					</div>
+					<div class="verified-symbol">
+						<!-- webbot  bot="HTMLMarkup" startspan -->
+						<!-- GeoTrust QuickSSL [tm] Smart  Icon tag. Do not edit. -->
+						<script language="javascript" type="text/javascript" src="//smarticon.geotrust.com/si.js"></script>
+						<!-- end  GeoTrust Smart Icon tag -->
+						<!-- webbot  bot="HTMLMarkup" endspan -->
+					</div>
+					<div class="verified-symbol truste-symbol">
+						<div id="2c4d313e-81b2-4839-b3b5-c3ae66a85adf"> <script type="text/javascript" src="//privacy-policy.truste.com/privacy-seal/WPMU-DEV/asc?rid=2c4d313e-81b2-4839-b3b5-c3ae66a85adf"></script><a href="//privacy.truste.com/privacy-seal/WPMU-DEV/validation?rid=de8923e1-fa90-4c49-bfbd-66139e6ab558" title="TRUSTe online privacy certification" target="_blank"><img style="border: none" src="//privacy-policy.truste.com/privacy-seal/WPMU-DEV/seal?rid=de8923e1-fa90-4c49-bfbd-66139e6ab558" alt="TRUSTe online privacy certification"/></a></div>
+					</div>
+				</div>
+			</div><!-- #verified -->
+
+		</div><!-- .wrap -->
+
+	</footer><!-- #site-footer -->
+</div>
+</div><!-- #main-content-area -->
+</div><!-- #main-container -->
+    <script>
+(function ($) {
+$(document).on("popover-init", function (e, popover, data) {
+	var data = data || {};
+	if (!data.threshold_width) return true;
+	if ($(window).width() > data.threshold_width) return true;
+	popover.reject();
+});
+})(jQuery);
+</script><script>
+(function ($) {
+$(document).on("popover-init", function (e, popover, data) {
+	var data = data || {};
+	if (!data.wait_for_event || !data.click_selector) return true;
+	
+	//var el = $(data.click_selector);
+	//if (!el.length) return false;
+	//el.one("click", function (e) {
+	
+	$(document).one("click", data.click_selector, function (e) {
+		popover.resolve();		
+		return false;
+	});
+});
+})(jQuery);
+</script><div id="fb-root"></div><script type="text/javascript">
+			window.fbAsyncInit = function() {
+				FB.init({
+				  appId: "208345015953410",
+				  status: true,
+				  cookie: true,
+				  xfbml: true
+				});
+			};
+			// Load the FB SDK Asynchronously
+			(function(d){
+				var js, id = "facebook-jssdk"; if (d.getElementById(id)) {return;}
+				js = d.createElement("script"); js.id = id; js.async = true;
+				js.src = "//connect.facebook.net/en_US/all.js";
+				d.getElementsByTagName("head")[0].appendChild(js);
+			}(document));
+			</script>
+		<script type="text/javascript">
+		(function ($) {
+		$(function () {
+			$(".wdsal-facebook").live("click", function () {
+				FB.login(function (resp) {
+					if (resp.authResponse && resp.authResponse.userID) {
+						// change UI
+						// ...
+						$.post("https://premium.wpmudev.org/wp-admin/admin-ajax.php", {
+							"action": "wpmudev_social_apis_login_facebook",
+							"user_id": resp.authResponse.userID,
+							"token": FB.getAccessToken()
+						}, function (data) {
+							var status = 0;
+							try { status = parseInt(data.status); } catch (e) { status = 0; }
+							if (!status) { // ... handle error
+								$(document).trigger("wpmudev_social_apis-login_error-facebook", [data]);
+								return false;
+							}
+							// Get form if all went well
+							$(document).trigger("wpmudev_social_apis-login-facebook", [data]);
+						}, "json");
+					}
+				}, {scope: "email"});
+				return false;
+			});
+		});
+		})(jQuery);
+		</script>
+		
+		<script type="text/javascript">
+		(function ($) {
+		$(function () {
+			$(".wdsal-google").live("click", function () {
+				var googleLogin = window.open("", "google_login", "scrollbars=no,resizable=no,toolbar=no,location=no,directories=no,status=no,menubar=no,copyhistory=no,height=400,width=600");
+				$.post("http://premium.wpmudev.org/wp-admin/admin-ajax.php", {
+					"action": "wpmudev_social_apis_auth_url_google",
+				}, function (data) {
+					var url = data.url;
+					if (!url) {
+						googleLogin.close();
+						return false;
+					}
+					googleLogin.location = url;
+					var gTimer = setInterval(function () {
+						try {
+							if (googleLogin.location.hostname == window.location.hostname) {
+								clearInterval(gTimer);
+								googleLogin.close();
+								$.post("http://premium.wpmudev.org/wp-admin/admin-ajax.php", {
+									"action": "wpmudev_social_apis_login_google",
+								}, function (data) {
+									window.location.reload();
+								}, "json");
+							}
+						} catch (e) {}
+					}, 300);
+				}, "json");
+				return false;
+			});
+		});
+		})(jQuery);
+		</script>
+		
+		<script type="text/javascript">
+		(function ($) {
+		$(function () {
+			$(".wpmu_dev_login-facebook").off("click").on("click", function () {
+				FB.login(function (resp) {
+					if (resp.authResponse && resp.authResponse.userID) {
+						// change UI
+						// ...
+						$.post("https://premium.wpmudev.org/wp-admin/admin-ajax.php", {
+							"action": "wpmudev_social_apis_login_facebook",
+							"user_id": resp.authResponse.userID,
+							"token": FB.getAccessToken()
+						}, function (data) {
+							window.location.reload();
+						}, "json");
+					}
+				}, {scope: "email"});
+				return false;
+			});
+		});
+		})(jQuery);
+		</script>
+		
+        <script type="text/javascript">
+        (function ($) {
+        $(function () {
+            $(".wpmu_dev_login-google").off("click").on("click", function () {
+                var googleLogin = window.open("", "google_login", "scrollbars=no,resizable=no,toolbar=no,location=no,directories=no,status=no,menubar=no,copyhistory=no,height=400,width=600");
+                $.post("http://premium.wpmudev.org/wp-admin/admin-ajax.php", {
+                    "action": "wpmudev_social_apis_auth_url_google",
+                }, function (data) {
+                    var url = data.url;
+                    if (!url) {
+                        googleLogin.close();
+                        return false;
+                    }
+                    googleLogin.location = url;
+                    var gTimer = setInterval(function () {
+                        try {
+                            if (googleLogin.location.hostname == window.location.hostname) {
+                                clearInterval(gTimer);
+                                googleLogin.close();
+                                $.post("http://premium.wpmudev.org/wp-admin/admin-ajax.php", {
+                                    "action": "wpmudev_social_apis_login_google",
+                                }, function (data) {
+                                    window.location.reload();
+                                }, "json");
+                            }
+                        } catch (e) {}
+                    }, 300);
+                }, "json");
+                return false;
+            });
+        });
+        })(jQuery);
+        </script>
+        <script type='text/javascript' src='http://premium.wpmudev.org/wp-includes/js/jquery/ui/jquery.ui.core.min.js?ver=1.10.4'></script>
+
+	<!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.
+	   chromium.org/developers/how-tos/chrome-frame-getting-started -->
+	<!--[if lt IE 7 ]>
+	<script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+	<script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+	<![endif]-->
+	
+<!-- Quantcast Tag -->
+<script type="text/javascript">
+var _qevents = _qevents || [];
+
+(function() {
+var elem = document.createElement('script');
+elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+elem.async = true;
+elem.type = "text/javascript";
+var scpt = document.getElementsByTagName('script')[0];
+scpt.parentNode.insertBefore(elem, scpt);
+})();
+
+_qevents.push({
+qacct:"p-3bzjap166Wyqs"
+});
+</script>
+
+<noscript>
+<div style="display:none;">
+<img src="//pixel.quantserve.com/pixel/p-3bzjap166Wyqs.gif" border="0" height="1" width="1" alt="Quantcast"/>
+</div>
+</noscript>
+<!-- End Quantcast tag -->
+
+<!-- CrazyEgg -->
+<script type="text/javascript">
+setTimeout(function(){var a=document.createElement("script");
+var b=document.getElementsByTagName("script")[0];
+a.src=document.location.protocol+"//dnn506yrbagrg.cloudfront.net/pages/scripts/0017/2868.js?"+Math.floor(new Date().getTime()/3600000);
+a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+</script>
+
+<script type="text/javascript">
+var google_tag_params = {
+	section: 'Main',
+	membertype: 'Visitor'
+};
+</script>
+<!-- Google Code for Remarketing Tag -->
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1048409027;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/1048409027/?value=0&amp;guid=ON&amp;script=0"/>
+</div>
+</noscript>
+
+</body>
+</html>

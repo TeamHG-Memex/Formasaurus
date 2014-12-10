@@ -1,0 +1,2525 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+<head>
+
+<meta name="keywords" content="">
+<meta name="description" content="">
+
+<title>Select Departure and Arrival Points - Online Ticket Sales</title>
+<script type="text/javascript" src="NME/tab-images.js"></script>
+
+<style type="text/css">
+@media screen {
+	body {
+		font-family: "Verdana", "Arial", "Helvetica", sans-serif;
+		font-size: 13px;
+		color: black;
+		background: white;
+		padding: 0;
+		margin: 0;
+	}
+	a img {
+		border: none;
+	}
+	h1 {
+		margin: 0;
+		font-family: "Georgia", "Times New Roman", "Times", serif;
+		font-size: 24px;
+		padding: 0.5em 0 1px 0;
+		border-bottom: 1px solid #eee;
+		color: #900;
+	}
+	h2 {
+		font-size: 18px;
+		font-style: italic;
+		font-weight: normal;
+		margin: 0 0 0.5em 0;
+	}
+	dt {
+		font-weight: bold;
+		font-style: italic;
+	}
+	dd {
+		margin-bottom: 1em;
+	}
+	#wrapper {
+		position: relative;
+		width: 875px;
+		margin: 0 auto;
+		background: url(images/background.gif) repeat-y;
+		padding: 0 12px;
+	}
+	#header {
+		margin: 0;
+	}
+	#header img {
+		display: block;
+		border: none;
+	}
+	#content {
+		margin-top: 0;
+		padding: 18px 10px 0 0;
+		border-bottom: 1px solid #aaa;
+		background: url(images/content-bg.gif) repeat-y;
+	}
+	#sale-info {
+		float: left;
+		width: 200px;
+		padding: 5px;
+		margin: 0;
+		background: #999;
+		font-family: "Tahoma", "Verdana", "Arial", "Helvetica", sans-serif;
+		font-size: 11px;
+		color: #ffc;
+	}
+	#sale-info h1 {
+		font-family: "Tahoma", "Verdana", "Arial", "Helvetica", sans-serif;
+		font-size: 16px;
+		text-align: center;
+		border-bottom: none;
+		padding: 0;
+		color: #ffc;
+	}
+	#sale-info p {
+		padding-left: 1em;
+		text-indent: -1em;
+	}
+	#main {
+		margin-left: 212px;
+		width: 645px;
+		padding-left: 5px;
+	}
+	table {
+		margin: 0 auto;
+		border: 3px double #ccc;
+		border-spacing: 0;
+		border-collapse: collapse;
+		empty-cells: show;
+	}
+	table.small th {
+		font-size: 11px;
+	}
+	table.small td {
+		font-size: 11px;
+		border: 1px solid #ccc;
+	}
+	table.borderless {
+		border: 0;
+		margin: 0 auto 1em 2em;
+	}
+	table.borderless th {
+		background: white;
+	}
+	table.borderless td {
+		border: 0;
+		padding: 2px 5px;
+	}
+	table.borderless tr.fineborder td {
+		border-top: 1px solid #999;
+	}
+	table.borderless td.transfers {
+		font-style: italic;
+	}
+	th {
+		background: #ffd;
+		padding: 2px 5px;
+	}
+	td {
+		padding: 5px;
+	}
+	tr.soldout td {
+		background: #eee;
+		color: #999;
+	}
+	tr.timelocked td {
+		background: #ff6;
+		color: #999;
+	}
+	tr.unavailable td {
+		background: #6cf;
+	}
+	div.cal-container {
+		position: absolute;
+		top: 0;
+		left: 290px;
+		display: none;
+		width: 200px;
+	}
+	table.cal {
+		border-spacing: 1px;
+		border-collapse: separate;
+		empty-cells: hide;
+		background: white;
+		position: absolute;
+		top: 0;
+		left: 0;
+		visibility: hidden;
+	}
+	table.cal th.cal {
+		font-size: 11px;
+		font-family: "Tahoma", "Verdana", "Arial", "Helvetica", sans-serif;
+		width: 20px;
+	}
+	table.cal td {
+		border: 1px solid #eee;
+		padding: 2px;
+		text-align: center;
+	}
+	table.cal td.available {
+		border-color: #99f;
+	}
+	td.available a {
+		color: #00f;
+		text-decoration: none;
+	}
+	tr.listview th {
+		text-align: left;
+	}
+	table.stoppicker tr {
+		vertical-align: top;
+	}
+	table.internal {
+		border: none;
+		margin-top: 0;
+	}
+	table.internal tr {
+		vertical-align: top;
+	}
+	span.stopname,
+	span.bigarrow {
+		font-size: 16px;
+		font-weight: bold;
+	}
+	span.bigarrow img {
+		display: block;
+		margin-top: 5px;
+	}
+	span.otherlocs {
+		font-size: 11px;
+		font-weight: bold;
+		color: #090;
+	}
+	table.spaced th {
+		padding: 2px;
+	}
+	table.spaced td {
+		vertical-align: top;
+		border-top: 1px solid #ccc;
+		padding: 2px 2em 2px 2px;
+		font-family: "Tahoma", "Verdana", "Arial", "Helvetica", sans-serif;
+		font-size: 11px;
+	}
+	table.spaced input {
+		margin-top: 1px;
+		padding-top: 0;
+	}
+	table.schedule {
+		margin-top: 1em;
+		background: white;
+	}
+	table.schedule tr {
+		border-top: 1px solid #ccc;
+	}
+	table.schedule th {
+		text-align: left;
+	}
+	table.schedule td {
+		font-size: 11px;
+		padding-right: 10px;
+		white-space: nowrap;
+	}
+	table.schedule tr.stationinfo {
+		border-top: none;
+	}
+	table.schedule tr.stationinfo td {
+		padding-top: 0;
+	}
+	table.schedule tfoot td {
+		font-size: 9px;
+		font-family: "Tahoma", "Verdana", "Arial", "Helvetica", sans-serif;
+		border-top: 3px double #ccc;
+	}
+	table.schedule td.xfer {
+		text-align: center;
+		padding: 2px;
+	}
+	tr.schedrow1 {
+		border-top: 1px solid #ccc;
+	}
+	tr.schedrow1 td {
+		padding-bottom: 0;
+		font-family: "Tahoma", "Verdana", "Arial", "Helvetica", sans-serif;
+		font-size: 10px;
+		font-weight: bold;
+		vertical-align: top;
+	}
+	tr.schedrow1 input,
+	tr.spaced input {
+		margin: 0;
+	}
+	tr.schedrow2 td {
+		font-family: "Tahoma", "Verdana", "Arial", "Helvetica", sans-serif;
+		font-size: 10px;
+		padding-top: 0;
+		vertical-align: top;
+	}
+	span.datetime {
+		font-weight: bold;
+	}
+	tr.schedrow1 td.transfers {
+		font-weight: normal;
+		/*font-style: italic;*/
+	}
+	.note {
+		font-size: 11px;
+		font-family: "Tahoma", "Verdana", "Arial", "Helvetica", sans-serif;
+	}
+	.warning {
+		font-weight: bold;
+		color: red;
+	}
+	span.inactive {
+		color: #ddd;
+	}
+	.nextarrow {
+		float: right;
+		margin: 0;
+		text-decoration: none;
+	}
+	.prevarrow {
+		float: left;
+		margin: 0;
+		text-decoration: none;
+	}
+	.notice {
+		color: red;
+		font-weight: bold;
+	}
+	p.clear {
+		line-height: 0;
+		height: 0;
+		margin: 1em 0 0 0;
+		padding: 0;
+		clear: both;
+	}
+	p.current-info {
+		margin: 0;
+		position: absolute;
+		top: 91px;
+		left: 12px;
+		width: 865px;
+		height: 18px;
+		line-height: 18px;
+		background: #900;
+		color: white;
+		font-weight: bold;
+		font-family: "Tahoma", "Verdana", "Arial", "Helvetica", sans-serif;
+		font-size: 10px;
+		padding: 0 5px;
+		z-index: 2;
+	}
+	table.boardingpass {
+		margin-top: 1em;
+		text-transform: uppercase;
+		width: 95%;
+	}
+	table.boardingpass tr.toprule td {
+		border-top: 1px solid #ccc;
+	}
+	table.boardingpass tr.toprule p {
+		text-transform: none;
+		margin: 0;
+		font-size: 11px;
+	}
+	table.boardingpass td {
+		vertical-align: baseline;
+		padding: 2px;
+	}
+	td.carrier,
+	td.passengertype,
+	td.summary {
+		font-size: 24px;
+	}
+	td.carrier span {
+		float: right;
+		text-align: right;
+		margin: 0;
+	}
+	td.passnumber,
+	td.schedulenumber,
+	td.tickettype {
+		text-align: right;
+		font-size: 24px;
+	}
+	td.departtime,
+	td.passengername,
+	td.currency,
+	td.numeric,
+	td.agentname {
+		text-align: right;
+	}
+	td.departtime span,
+	td.summary span.date,
+	td.schedulenumber span.date {
+		font-size: 24px;
+		text-transform: none;
+	}
+	td.schedulenumber span {
+		font-size: 13px;
+	}
+	td.date {
+		text-transform: none;
+	}
+	td.important {
+		font-weight: bold;
+		color: red;
+	}
+	span.pass-select {
+		margin: 0 1.5em 0 0;
+	}
+	#secure {
+		text-align: center;
+		margin: 1em 0;
+	}
+	#secure img {
+		display: block;
+		margin: 0 auto;
+	}
+	#provided {
+		font-size: 11px;
+		color: #aaa;
+		text-align: center;
+	}
+	#provided a,
+	#footer a {
+		color: #66f;
+	}
+	#nav {
+		position: absolute;
+		top: 73px;
+		right: 0;
+		width: 865px;
+		font-size: 11px;
+		text-align: center;
+		margin: 0 15px 0 0;
+		color: #999;
+		font-weight: normal;
+
+		font-family: "Tahoma", "Verdana", "Arial", "Helvetica", sans-serif;
+
+	}
+	#nav li {
+		display: inline;
+		float: center;
+		height: 17px;
+		line-height: 17px;
+		margin: 0 4px;
+		padding: 0;
+		position: relative;
+		top: 0;
+		left: 0;
+		
+	}
+	#nav li:hover,
+	#nav li.iehover {
+		background: ;
+	}
+	#nav a {
+		text-decoration: none;
+		color: #900;
+
+	}
+	#nav li:hover a,
+	#nav li.iehover a,
+	#nav a:hover {
+
+		text-decoration: underline;
+
+	}
+	#nav li img {
+		vertical-align: middle;
+	}
+	#nav li ul {
+		position: absolute;
+		top: 17px;
+		center: -1px;
+		border: 1px solid ;
+		background: ;
+		visibility: hidden;
+		padding: 0;
+		margin: 0;
+		list-style-type: none;
+	}
+	#nav li:hover ul,
+	#nav li.iehover ul {
+		visibility: visible;
+	}
+	#nav li li {
+		float: none;
+		border: none;
+		display: list-item;
+		*display: block;
+		margin: 0;
+		padding: 2px 5px;
+		text-align: left;
+		width: 175px;
+	}
+	#nav li li a,
+	#nav li:hover li a,
+	#nav li.iehover li a {
+		color: ;
+		background: ;
+	}
+	#nav li:hover li:hover a,
+	#nav li.iehover li.iehover a,
+	#nav li li a:hover {
+		background: ;
+		color: ;
+	}
+	#footer {
+		text-align: center;
+		color: #aaa;
+		font-size: 11px;
+	}
+	.print-only {
+		display: none;
+	}
+	p.ticketing-dtdloc img {
+		display: block;
+		margin: 0.5em 0 0 3em;
+		border: 1px solid #333;
+	}
+	#faretab {
+		border-bottom: 1px solid #009;
+		overflow: auto;
+		margin: 1em auto;
+		width: auto;
+
+	}
+	#faretab span {
+		float: left;
+		margin: 6px 3px -1px 3px;
+		border: 1px solid #009;
+		background: #ddd;
+		font-size: 10px;
+		text-align: center;
+		padding: 1px 3px;
+		border-top-left-radius: 8px;
+		border-top-right-radius: 8px;
+		-webkit-border-top-left-radius: 8px;
+		-webkit-border-top-right-radius: 8px;
+		-moz-border-radius-topleft: 8px;
+		-moz-border-radius-topright: 8px;
+
+	}
+	#faretab span.selected {
+		margin: 0 3px -1px 3px;
+		background: #009;
+		color: white;
+		font-size: 12px;
+		padding: 2px 10px;
+		border-top-left-radius: 12px;
+		border-top-right-radius: 12px;
+		-webkit-border-top-left-radius: 12px;
+		-webkit-border-top-right-radius: 12px;
+		-moz-border-radius-topleft: 12px;
+		-moz-border-radius-topright: 12px;
+	}
+	#faretab span.fareprice {
+		display: block;
+		font-weight: bold;
+		float: none;
+		margin: 0 -3px;
+		border: none;
+		background: white;
+		color: #090;
+		padding: 0;
+		border-radius: 0;
+		-webkit-border-radius: 0;
+		-moz-border-radius: 0;
+	}
+	#faretab a {
+		color: #00f;
+	}
+	#farepicker,
+	#farepicker select,
+	#farepicker option {
+		font-size: 10px;
+		white-space: nowrap;
+	}
+}
+
+@media print {
+	body {
+		font-family: "Georgia", "Times New Roman", "Times", serif;
+		font-size: 12pt;
+	}
+	h1 {
+		font-size: 18pt;
+		color: #c00;
+		margin: 0;
+	}
+	h2 {
+		font-size: 14pt;
+		margin: 0.5em 0;
+	}
+	p {
+		font-size: 10pt;
+	}
+	a {
+		color: black;
+		text-decoration: none;
+	}
+	table {
+		margin: 0 auto;
+		border: 3px double #ccc;
+		border-spacing: 0;
+		border-collapse: collapse;
+		empty-cells: show;
+	}
+	table.internal {
+		border: none;
+	}
+	th {
+		background: #ffd;
+		padding: 1pt 2pt;
+		font-size: 10pt;
+	}
+	td {
+		padding: 2pt;
+		font-size: 10pt;
+	}
+	table.internal td,
+	table.spaced td,
+	table.spaced th {
+		padding: 2pt 5pt;
+		vertical-align: top;
+	}
+	table.internal td img {
+		display: block;
+		margin-top: 5pt;
+	}
+	table.spaced td {
+		border-top: 1px solid #999;
+	}
+	span.stopname {
+		font-size: 16pt;
+		font-weight: bold;
+	}
+	#header {
+		text-align: center;
+	}
+	#header img {
+		border: none;
+		width: 6.75in;
+	}
+	#sale-info,
+	.current-info,
+	#nav,
+	#footer,
+	#secure,
+	.screen-only,
+	#faretab {
+		display: none;
+	}
+	table.boardingpass {
+		margin-top: 1em;
+		text-transform: uppercase;
+		width: 95%;
+		border: 1px solid black;
+		font-family: "Courier New", "Courier", monospace;
+	}
+	table.boardingpass tr.toprule td {
+		border-top: 1px solid black;
+	}
+	table.boardingpass tr.toprule td p {
+		text-transform: none;
+		margin: 0;
+		font-size: 9pt; /*7*/
+	}
+	table.boardingpass td {
+		vertical-align: baseline;
+		padding: 1.5pt;
+	}
+	td.ticketlocation {
+		font-size: 14pt;
+	}
+	td.carrier {
+		font-family: "Verdana", "Arial", "Helvetica", sans-serif;
+		font-size: 18pt; /*13*/
+		line-height: 20pt;
+	}
+	td.passengertype,
+	td.summary {
+		font-size: 18pt; /*14*/
+	}
+	td.carrier span {
+		float: right;
+		text-align: right;
+		margin: 0;
+	}
+	td.passnumber,
+	td.schedulenumber,
+	td.tickettype {
+		text-align: right;
+		font-size: 18pt; /*14*/
+	}
+	td.departtime,
+	td.passengername,
+	td.currency,
+	td.numeric,
+	td.agentname {
+		text-align: right;
+	}
+	td.passengername {
+		font-size: 14pt;
+	}
+	td.departtime span,
+	td.summary span.date,
+	td.schedulenumber span.date {
+		font-size: 18pt; /*14*/
+		text-transform: none;
+	}
+	td.schedulenumber span {
+		font-size: 10pt; /*7*/
+	}
+	td.date {
+		text-transform: none;
+	}
+	td.important {
+		font-weight: bold;
+		color: red;
+	}
+	table.schedule {
+		margin-top: 1em;
+		width: 95%;
+		background: white;
+		border-color: black;
+	}
+	table.schedule tr {
+		border-top: 1px solid black;
+	}
+	table.schedule th {
+		text-align: left;
+	}
+	table.schedule td {
+		font-size: 12pt;
+		padding-right: 8pt;
+		white-space: nowrap;
+	}
+	table.schedule tr.stationinfo {
+		border-top: none;
+	}
+	table.schedule tr.stationinfo td {
+		padding-top: 0;
+		font-size: 8pt;
+		font-family: "Tahoma", "Verdana", "Arial", "Helvetica", sans-serif;
+	}
+	table.schedule tfoot td {
+		font-size: 8pt;
+		font-family: "Tahoma", "Verdana", "Arial", "Helvetica", sans-serif;
+		border-top: 3px double black;
+	}
+	table.schedule td.xfer {
+		text-align: center;
+		padding: 1.5pt;
+	}
+	.note {
+		font-size: 8pt;
+	}
+	.boarding-pass {
+		font-family: "Verdana", "Arial", "helvetica", Sans-Serif;
+		width: 99%;
+		border-collapse: collapse;
+		border: 1px solid black;
+		text-transform: uppercase;
+		margin: 1em 0 1em 1%;
+		font-size: 10pt;
+	}
+	.boarding-pass .large 
+	{
+		font-size: 16pt;
+	}
+	.boarding-pass .nocap {
+		text-transform: none;
+	}
+	.boarding-pass .pass-title {
+		font-size: 18pt;
+		font-weight: bold;
+		letter-spacing: 0.25em;
+	}
+	.receipt td {
+		font-size: 10pt;
+	}
+	table.barcode {
+		border-collapse: collapse !important;
+		border-spacing: 0 !important;
+		border: none !important;
+		margin-right: 2pt;
+	}
+	table.barcode td {
+		padding: 0 !important;
+		border: none !important;
+	}
+	table.barcode img {
+		display: block;
+	}
+	table.ticketlist td {
+		border: 1px solid #ccc;
+	}
+	table.small th {
+		font-weight: bold;
+		font-size: 8pt;
+		background: #ffe;
+		font-family: "Calibri", "Arial", sans-serif;
+	}
+	table.small td {
+		font-size: 8pt;
+		font-family: "Calibri", "Arial", sans-serif;
+		line-height: normal;
+	}
+	#provided {
+		font-size: 8pt;
+		color: #999;
+	}
+}
+</style>
+<script type="text/javascript">
+function fixIe6Menus() {
+	var ul;
+	if (document.all && navigator.userAgent.indexOf('MSIE 6') != -1) {
+		var ul = document.getElementById('nav');
+		if (ul.nodeName.toUpperCase() == 'UL') fixListNodes(ul);
+	}
+}
+
+function ieHover() {
+	var el = window.event.srcElement;
+	while (el.parentNode) {
+		if (el.nodeName.toUpperCase() == 'LI') {
+			el.className = 'iehover';
+		}
+		el = el.parentNode;
+	}
+}
+function ieBlur() {
+	var el = window.event.srcElement;
+	while (el.parentNode) {
+		if (el.nodeName.toUpperCase() == 'LI') {
+			el.className = '';
+		}
+		el = el.parentNode;
+	}
+}
+
+function fixListNodes(listNode) {
+	var i;
+	for (i = 0; i < listNode.childNodes.length; ++i) {
+		if (listNode.childNodes[i].nodeName.toUpperCase() == 'LI') {
+			listNode.childNodes[i].onmouseover = ieHover;
+			listNode.childNodes[i].onmouseout = ieBlur;
+			for (j = 0; j < listNode.childNodes[i].childNodes.length; ++j) {
+				if (listNode.childNodes[i].childNodes[j].nodeName.toUpperCase() == 'UL') {
+					fixListNodes(listNode.childNodes[i].childNodes[j]);
+				}
+			}
+		}
+	}
+}
+</script>
+
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-13033474-1']);
+_gaq.push(['_trackPageview']);
+(function() {
+	var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+
+</head>
+<body onload="fixIe6Menus()">
+
+<map name="imgmap">
+<area shape="rect" coords="0,0, 420,91" href="/" alt="[Home]" title="Return to home page">
+</map>
+
+<div id="wrapper">
+	<p id="header"><img src="NME/header.gif" alt="" usemap="#imgmap"></p>
+	<div id="content">
+
+		<div id="sale-info">
+			<h1>Your Current Purchase Information</h1>
+			
+<p class="prev">You have not started yet.</p>
+<p class="current"><strong>This step:</strong> Choose departure and arrival points.</p>
+<p class="next"><strong>Next step:</strong> Choose route(s).</p>
+
+			<div id="user-section" style="margin: 1em 0; border: 3px double #ffc; padding: 0.5em;">
+
+				<form action="login.asp" method="post">
+				<input type="hidden" name="p" value="/ticketing/default.asp">
+				<input type="hidden" name="curr" value="IpmKYUuKZE6KZ1GgalSTlG5YpZhyXJuqp3dhrq-sfGaltYBqprmEbruuvolzwLDDjni0vce6lH66w829moTAydPUx6GLx9Da28uoktyrldiu">
+				<input type="hidden" name="wg" value="">
+
+				<table style="margin: 0 auto; border: none;">
+					<tr>
+						<td style="text-align: center; padding: 0 0 0.5em 0; font-weight: bold;">Returning user login</td>
+					</tr>
+					<tr>
+						<td style="padding: 0 0 0.5em 0;">E-mail address<br><input type="text" name="loginemail" size="20" maxlength="127"></td>
+					</tr>
+					<tr>
+						<td style="padding: 0 0 0.5em 0;">E-mail address<br><input type="password" name="loginpass" size="20" maxlength="63"></td>
+					</tr>
+					<tr>
+
+						<td style="text-align: center; padding: 0;"><input type="submit" value="Log In"></td>
+
+					</tr>
+				</table>
+				</form>
+				<p style="margin-top: 1.5em; text-align: center;"><a href="/ticketing/forgot-password.asp?p=%2Fticketing%2Fdefault%2Easp&amp;curr=Vs2-lX--mIK-m4XUnojHyKKM2cymkM_e26uV4uPgsJrZ6bSe2u24ou_i8r2n9OT3wqzo8fvuyLLu9wHxzrj0_QcI-9W_-wQOD__cxhDfyQzi" style="color: #33f;">Forgot your password?</a></p>
+				<p style="margin-bottom: 0; text-align: center;"><a href="/ticketing/create-account.asp?p=%2Fticketing%2Fdefault%2Easp&amp;curr=Vs2-lX--mIK-m4XUnojHyKKM2cymkM_e26uV4uPgsJrZ6bSe2u24ou_i8r2n9OT3wqzo8fvuyLLu9wHxzrj0_QcI-9W_-wQOD__cxhDfyQzi" style="color: #33f;">Create an account</a></p>
+
+			</div>
+
+		</div>
+
+		<div id="main">
+
+<script type="text/javascript">
+function getXmlHttp() {
+	if (window.XMLHttpRequest) {
+		var req = new XMLHttpRequest();
+	} else {
+		var req = new ActiveXObject("Microsoft.XMLHTTP");
+	}
+	return req;
+}
+function resetDestinations() {
+	var list;
+	var olist;
+	if (document.scheduleform.a) {
+		list = document.scheduleform.a;
+		olist = document.scheduleform.d;
+	} else {
+		list = document.scheduleform.as;
+		olist = document.scheduleform.ds;
+	}
+	while (list.options.length > 0) list.remove(list.options.length - 1);
+	if (olist.selectedIndex) {
+		var xml = getXmlHttp();
+		if (xml) {
+			list.options[0] = new Option('Loading...', '');
+			xml.onreadystatechange = function() {
+				var list = (document.scheduleform.a) ? document.scheduleform.a : document.scheduleform.as;
+				if (xml.readyState == 4) {
+					if (xml.status == 200) {
+						resp = xml.responseText;
+						var pairs = resp.split('\n');
+						len = pairs.length;
+						list.options[0].text = '[ Please Choose ]';
+						for (i = 0; i < len; ++i) {
+							val = pairs[i].substring(0, pairs[i].indexOf('='));
+							txt = pairs[i].substring(pairs[i].indexOf('=') + 1);
+							list.options[i + 1] = new Option(txt.replace(/\s*$/, ''), val);
+						}
+						return;
+					}
+					list.options[0].text = 'Could not load. Press Continue.';
+				}
+			}
+			xml.open('GET', './dyn/destinations.asp?d=' + olist.options[olist.options.selectedIndex].value);
+			xml.send(null);
+		} else {
+			document.scheduleform.submit();
+		}
+	} else {
+		list.options[0] = new Option('[ Please choose departure first ]', '');
+	}
+}
+function checkForm(f) {
+	if (f.elements['d'] && !f.elements['d'].selectedIndex) {
+		alert('Please choose your departure city.');
+		return false;
+	}
+	if (f.elements['ds'] && !f.elements['ds'].selectedIndex) {
+		alert('Please choose your departure location.');
+		return false;
+	}
+	if (f.elements['a'] && !f.elements['a'].selectedIndex) {
+		alert('Please choose your destination city.');
+		return false;
+	}
+	if (f.elements['as'] && !f.elements['as'].selectedIndex) {
+		alert('Please choose your destination location.');
+		return false;
+	}
+	if (!f.elements['dd'].value) {
+		alert('Please choose a date for your outbound trip.');
+		return false;
+	}
+	if (f.elements['t'][checkedIndex(f.elements['t'])].value != '1' && !f.elements['rd'].value) {
+		alert('Please choose a date for your return trip.');
+		return false;
+	}
+	today = new Date(2014, 11, 4);
+	dYmd = f.elements['dd'].value.split(/\D+/);
+	if (dYmd[2] && parseInt(dYmd[2]) < 2000) dYmd[2] = parseInt(dYmd[2]) + 2000;
+	dDate = new Date(dYmd[2], dYmd[0] - 1, dYmd[1]);
+	if (!dDate || dDate < today) {
+		alert('Please enter a valid departure date no earlier than today.');
+		return false;
+	}
+	if (dDate > today.setDate(today.getDate() + 180)) {
+		alert('Please enter a departure date no more than 180 days in advance.');
+		return false;
+	}
+	f.elements['dd'].value = (dDate.getMonth() + 1) + '/' + dDate.getDate() + '/' + dDate.getFullYear();
+	if (f.elements['rd'].value != '') {
+		rYmd = f.elements['rd'].value.split(/\D+/);
+		if (rYmd[2] && rYmd[2] < 2000) rYmd[2] = parseInt(rYmd[2]) + 2000;
+		rDate = new Date(rYmd[2], rYmd[0] - 1, rYmd[1]);
+		if (!rDate || rDate < dDate) {
+			alert('Please enter a valid return date no earlier than your departure date.');
+			return false;
+		}
+		if (rDate > today) {
+			alert('Please enter a return date no more than 180 days in advance.');
+			return false;
+		}
+		f.elements['rd'].value = (rDate.getMonth() + 1) + '/' + rDate.getDate() + '/' + rDate.getFullYear();
+	}
+	return true;
+}
+function checkedIndex(el) {
+	for (i = 0; i < el.length; ++i) {
+		if (el[i].checked) return i;
+	}
+	return -1;
+}
+function toggleCalendar(whichCal) {
+	if (div = document.getElementById(whichCal + 'tcontain')) {
+		var otherCal = (whichCal == 'd') ? 'r' : 'd';
+		if (document.getElementById(otherCal + 'tcontain')) {
+			document.getElementById(otherCal + 'tcontain').style.display = 'none';
+		}
+		div.style.display = (div.style.display == 'block') ? 'none' : 'block';
+		return false;
+	}
+	return true;
+}
+function hideCalendar(whichCal) {
+	if (div = document.getElementById(whichCal + 'tcontain')) {
+		div.style.display = 'none';
+		return false;
+	}
+}
+function switchMonth(el, monthToShow) {
+	while (el.nodeName.toLowerCase() != 'div') el = el.parentNode;
+	for (i = 0; i < el.childNodes.length; ++i) {
+		if (el.childNodes[i].nodeName.toLowerCase() == 'table') {
+			if (el.childNodes[i].id == el.id.substring(0,2) + monthToShow) {
+				el.childNodes[i].setAttribute('style', 'visibility: visible !important;');
+			} else {
+				el.childNodes[i].setAttribute('style', 'visibility: hidden !important;');
+			}
+		}
+	}
+	return false;
+}
+function populateDate(calType, newDate) {
+	if (document.forms['scheduleform'].elements[calType + 'd'])
+		document.forms['scheduleform'].elements[calType + 'd'].value = newDate;
+	hideCalendar(calType);
+	return false;
+}
+
+function toggleReturnDate() {
+	var tr = document.getElementById('tr-rtrip');
+	if (document.forms['scheduleform'].elements['t'] && !document.forms['scheduleform'].elements['t'][0].checked && tr) {
+		if (navigator.userAgent.indexOf('MSIE') != -1 && parseInt(navigator.userAgent.substr(navigator.userAgent.indexOf('MSIE') + 5, 2)) < 8) {
+			tr.style['display'] = 'block';
+		} else {
+			tr.style['display'] = 'table-row';
+		}
+	} else if (tr) {
+		tr.style.display = 'none';
+	}
+}
+
+</script>
+<!--p style="color: #900; font-weight: bold; font-style: italic; margin: 0.5em 0;">Purchase Reservation Tickets</p-->
+<h1 style="padding-top: 0;">Choose Departure and Arrival Points</h1>
+
+<p>Welcome to the online ticketing system! Please choose your departure and arrival points, and whether this is one-way or round-trip, below.</p>
+
+<form action="/ticketing/default.asp" method="post" name="scheduleform" onsubmit="return checkForm(this)">
+<input type="hidden" name="s" value="">
+<input type="hidden" name="wg" value="">
+<div id="ticketing">
+	<table>
+	<tbody>
+		<tr>
+			<td>Going from:</td>
+			<td><select name="ds" onchange="resetDestinations()">
+					<option value="">[ Please choose ]</option>
+
+					<option value="486">Carleton College (Willis Hall), MN</option>
+
+					<option value="664">Flying "J" Travel Center, MN</option>
+
+					<option value="493">Mall of America - Transit Station, MN</option>
+
+					<option value="3652">Minneapolis (MegaBus Stop), MN</option>
+
+					<option value="492">Minneapolis - Downtown, MN</option>
+
+					<option value="494">MSP Int'l Airport - Transit Center (Terminal 1), MN</option>
+
+					<option value="487">Northfield - Downtown, MN</option>
+
+					<option value="497">St. Catherine University (St. Paul), MN</option>
+
+					<option value="4676">St. Olaf Ave at Manitou St., MN</option>
+
+					<option value="488">St. Olaf College (Buntrock Commons), MN</option>
+
+					<option value="490">U of M at 4th St. SE &amp; 15th Ave. SE (Dinkytown), MN</option>
+
+					<option value="496">Univ. of St. Thomas (St. Paul), MN</option>
+
+				</select></td>
+		</tr>
+		<tr style="border-bottom: 1px solid #999;">
+			<td>Departing on:</td>
+			<td>
+				<div style="position: relative; top: 0; right: 0;">
+					<input type="text" name="dd" value="" size="10" maxlength="10" class="datepicker">
+					<span class="note">(mm/dd/yyyy)</span>
+<script type="text/javascript">
+if (document.getElementById) {
+	document.write('<a href="#" onclick="return toggleCalendar(\'d\');"><img src="images/calendar.gif" alt="Pick a Date" title="Choose a date from a calendar"><' + '/a>');
+}
+</script>
+					<div class="cal-container" id="dtcontain" style="left: 190px; top: 0; z-index: 1;">
+
+<table class="cal" id="dt201412" style="visibility: visible !important;">
+	<tr>
+		<th colspan="7"><span class="inactive prevarrow">&#x25C4;</span><a href="#" onclick="return switchMonth(this, '201501')" class="nextarrow">&#x25BA;</a>December 2014</th>
+	</tr>
+	<tr>
+		<th class="cal">Su</th>
+		<th class="cal">M</th>
+		<th class="cal">Tu</th>
+		<th class="cal">W</th>
+		<th class="cal">Th</th>
+		<th class="cal">F</th>
+		<th class="cal">Sa</th>
+	</tr>
+	<tr>
+
+		<td></td>
+
+		<td>1</td>
+
+		<td>2</td>
+
+		<td>3</td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '12/04/2014')">4</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '12/05/2014')">5</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '12/06/2014')">6</a></td>
+
+	</tr>
+	<tr>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '12/07/2014')">7</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '12/08/2014')">8</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '12/09/2014')">9</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '12/10/2014')">10</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '12/11/2014')">11</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '12/12/2014')">12</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '12/13/2014')">13</a></td>
+
+	</tr>
+	<tr>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '12/14/2014')">14</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '12/15/2014')">15</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '12/16/2014')">16</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '12/17/2014')">17</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '12/18/2014')">18</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '12/19/2014')">19</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '12/20/2014')">20</a></td>
+
+	</tr>
+	<tr>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '12/21/2014')">21</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '12/22/2014')">22</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '12/23/2014')">23</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '12/24/2014')">24</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '12/25/2014')">25</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '12/26/2014')">26</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '12/27/2014')">27</a></td>
+
+	</tr>
+	<tr>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '12/28/2014')">28</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '12/29/2014')">29</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '12/30/2014')">30</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '12/31/2014')">31</a></td>
+
+	</tr>
+</table>
+
+<table class="cal" id="dt201501">
+	<tr>
+		<th colspan="7"><a href="#" onclick="return switchMonth(this, '201412')" class="prevarrow">&#x25C4;</a><a href="#" onclick="return switchMonth(this, '201502')" class="nextarrow">&#x25BA;</a>January 2015</th>
+	</tr>
+	<tr>
+		<th class="cal">Su</th>
+		<th class="cal">M</th>
+		<th class="cal">Tu</th>
+		<th class="cal">W</th>
+		<th class="cal">Th</th>
+		<th class="cal">F</th>
+		<th class="cal">Sa</th>
+	</tr>
+	<tr>
+
+		<td></td>
+
+		<td></td>
+
+		<td></td>
+
+		<td></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '01/01/2015')">1</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '01/02/2015')">2</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '01/03/2015')">3</a></td>
+
+	</tr>
+	<tr>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '01/04/2015')">4</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '01/05/2015')">5</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '01/06/2015')">6</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '01/07/2015')">7</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '01/08/2015')">8</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '01/09/2015')">9</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '01/10/2015')">10</a></td>
+
+	</tr>
+	<tr>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '01/11/2015')">11</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '01/12/2015')">12</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '01/13/2015')">13</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '01/14/2015')">14</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '01/15/2015')">15</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '01/16/2015')">16</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '01/17/2015')">17</a></td>
+
+	</tr>
+	<tr>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '01/18/2015')">18</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '01/19/2015')">19</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '01/20/2015')">20</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '01/21/2015')">21</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '01/22/2015')">22</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '01/23/2015')">23</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '01/24/2015')">24</a></td>
+
+	</tr>
+	<tr>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '01/25/2015')">25</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '01/26/2015')">26</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '01/27/2015')">27</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '01/28/2015')">28</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '01/29/2015')">29</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '01/30/2015')">30</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '01/31/2015')">31</a></td>
+
+	</tr>
+</table>
+
+<table class="cal" id="dt201502">
+	<tr>
+		<th colspan="7"><a href="#" onclick="return switchMonth(this, '201501')" class="prevarrow">&#x25C4;</a><a href="#" onclick="return switchMonth(this, '201503')" class="nextarrow">&#x25BA;</a>February 2015</th>
+	</tr>
+	<tr>
+		<th class="cal">Su</th>
+		<th class="cal">M</th>
+		<th class="cal">Tu</th>
+		<th class="cal">W</th>
+		<th class="cal">Th</th>
+		<th class="cal">F</th>
+		<th class="cal">Sa</th>
+	</tr>
+	<tr>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '02/01/2015')">1</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '02/02/2015')">2</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '02/03/2015')">3</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '02/04/2015')">4</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '02/05/2015')">5</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '02/06/2015')">6</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '02/07/2015')">7</a></td>
+
+	</tr>
+	<tr>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '02/08/2015')">8</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '02/09/2015')">9</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '02/10/2015')">10</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '02/11/2015')">11</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '02/12/2015')">12</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '02/13/2015')">13</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '02/14/2015')">14</a></td>
+
+	</tr>
+	<tr>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '02/15/2015')">15</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '02/16/2015')">16</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '02/17/2015')">17</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '02/18/2015')">18</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '02/19/2015')">19</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '02/20/2015')">20</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '02/21/2015')">21</a></td>
+
+	</tr>
+	<tr>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '02/22/2015')">22</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '02/23/2015')">23</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '02/24/2015')">24</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '02/25/2015')">25</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '02/26/2015')">26</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '02/27/2015')">27</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '02/28/2015')">28</a></td>
+
+	</tr>
+</table>
+
+<table class="cal" id="dt201503">
+	<tr>
+		<th colspan="7"><a href="#" onclick="return switchMonth(this, '201502')" class="prevarrow">&#x25C4;</a><a href="#" onclick="return switchMonth(this, '201504')" class="nextarrow">&#x25BA;</a>March 2015</th>
+	</tr>
+	<tr>
+		<th class="cal">Su</th>
+		<th class="cal">M</th>
+		<th class="cal">Tu</th>
+		<th class="cal">W</th>
+		<th class="cal">Th</th>
+		<th class="cal">F</th>
+		<th class="cal">Sa</th>
+	</tr>
+	<tr>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '03/01/2015')">1</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '03/02/2015')">2</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '03/03/2015')">3</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '03/04/2015')">4</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '03/05/2015')">5</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '03/06/2015')">6</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '03/07/2015')">7</a></td>
+
+	</tr>
+	<tr>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '03/08/2015')">8</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '03/09/2015')">9</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '03/10/2015')">10</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '03/11/2015')">11</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '03/12/2015')">12</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '03/13/2015')">13</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '03/14/2015')">14</a></td>
+
+	</tr>
+	<tr>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '03/15/2015')">15</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '03/16/2015')">16</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '03/17/2015')">17</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '03/18/2015')">18</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '03/19/2015')">19</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '03/20/2015')">20</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '03/21/2015')">21</a></td>
+
+	</tr>
+	<tr>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '03/22/2015')">22</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '03/23/2015')">23</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '03/24/2015')">24</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '03/25/2015')">25</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '03/26/2015')">26</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '03/27/2015')">27</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '03/28/2015')">28</a></td>
+
+	</tr>
+	<tr>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '03/29/2015')">29</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '03/30/2015')">30</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '03/31/2015')">31</a></td>
+
+	</tr>
+</table>
+
+<table class="cal" id="dt201504">
+	<tr>
+		<th colspan="7"><a href="#" onclick="return switchMonth(this, '201503')" class="prevarrow">&#x25C4;</a><a href="#" onclick="return switchMonth(this, '201505')" class="nextarrow">&#x25BA;</a>April 2015</th>
+	</tr>
+	<tr>
+		<th class="cal">Su</th>
+		<th class="cal">M</th>
+		<th class="cal">Tu</th>
+		<th class="cal">W</th>
+		<th class="cal">Th</th>
+		<th class="cal">F</th>
+		<th class="cal">Sa</th>
+	</tr>
+	<tr>
+
+		<td></td>
+
+		<td></td>
+
+		<td></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '04/01/2015')">1</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '04/02/2015')">2</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '04/03/2015')">3</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '04/04/2015')">4</a></td>
+
+	</tr>
+	<tr>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '04/05/2015')">5</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '04/06/2015')">6</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '04/07/2015')">7</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '04/08/2015')">8</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '04/09/2015')">9</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '04/10/2015')">10</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '04/11/2015')">11</a></td>
+
+	</tr>
+	<tr>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '04/12/2015')">12</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '04/13/2015')">13</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '04/14/2015')">14</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '04/15/2015')">15</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '04/16/2015')">16</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '04/17/2015')">17</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '04/18/2015')">18</a></td>
+
+	</tr>
+	<tr>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '04/19/2015')">19</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '04/20/2015')">20</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '04/21/2015')">21</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '04/22/2015')">22</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '04/23/2015')">23</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '04/24/2015')">24</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '04/25/2015')">25</a></td>
+
+	</tr>
+	<tr>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '04/26/2015')">26</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '04/27/2015')">27</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '04/28/2015')">28</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '04/29/2015')">29</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '04/30/2015')">30</a></td>
+
+	</tr>
+</table>
+
+<table class="cal" id="dt201505">
+	<tr>
+		<th colspan="7"><a href="#" onclick="return switchMonth(this, '201504')" class="prevarrow">&#x25C4;</a><a href="#" onclick="return switchMonth(this, '201506')" class="nextarrow">&#x25BA;</a>May 2015</th>
+	</tr>
+	<tr>
+		<th class="cal">Su</th>
+		<th class="cal">M</th>
+		<th class="cal">Tu</th>
+		<th class="cal">W</th>
+		<th class="cal">Th</th>
+		<th class="cal">F</th>
+		<th class="cal">Sa</th>
+	</tr>
+	<tr>
+
+		<td></td>
+
+		<td></td>
+
+		<td></td>
+
+		<td></td>
+
+		<td></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '05/01/2015')">1</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '05/02/2015')">2</a></td>
+
+	</tr>
+	<tr>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '05/03/2015')">3</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '05/04/2015')">4</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '05/05/2015')">5</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '05/06/2015')">6</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '05/07/2015')">7</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '05/08/2015')">8</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '05/09/2015')">9</a></td>
+
+	</tr>
+	<tr>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '05/10/2015')">10</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '05/11/2015')">11</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '05/12/2015')">12</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '05/13/2015')">13</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '05/14/2015')">14</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '05/15/2015')">15</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '05/16/2015')">16</a></td>
+
+	</tr>
+	<tr>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '05/17/2015')">17</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '05/18/2015')">18</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '05/19/2015')">19</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '05/20/2015')">20</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '05/21/2015')">21</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '05/22/2015')">22</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '05/23/2015')">23</a></td>
+
+	</tr>
+	<tr>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '05/24/2015')">24</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '05/25/2015')">25</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '05/26/2015')">26</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '05/27/2015')">27</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '05/28/2015')">28</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '05/29/2015')">29</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '05/30/2015')">30</a></td>
+
+	</tr>
+	<tr>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '05/31/2015')">31</a></td>
+
+	</tr>
+</table>
+
+<table class="cal" id="dt201506">
+	<tr>
+		<th colspan="7"><a href="#" onclick="return switchMonth(this, '201505')" class="prevarrow">&#x25C4;</a><span class="inactive nextarrow">&#x25BA;</span>June 2015</th>
+	</tr>
+	<tr>
+		<th class="cal">Su</th>
+		<th class="cal">M</th>
+		<th class="cal">Tu</th>
+		<th class="cal">W</th>
+		<th class="cal">Th</th>
+		<th class="cal">F</th>
+		<th class="cal">Sa</th>
+	</tr>
+	<tr>
+
+		<td></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '06/01/2015')">1</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('d', '06/02/2015')">2</a></td>
+
+		<td>3</td>
+
+		<td>4</td>
+
+		<td>5</td>
+
+		<td>6</td>
+
+	</tr>
+	<tr>
+
+		<td>7</td>
+
+		<td>8</td>
+
+		<td>9</td>
+
+		<td>10</td>
+
+		<td>11</td>
+
+		<td>12</td>
+
+		<td>13</td>
+
+	</tr>
+	<tr>
+
+		<td>14</td>
+
+		<td>15</td>
+
+		<td>16</td>
+
+		<td>17</td>
+
+		<td>18</td>
+
+		<td>19</td>
+
+		<td>20</td>
+
+	</tr>
+	<tr>
+
+		<td>21</td>
+
+		<td>22</td>
+
+		<td>23</td>
+
+		<td>24</td>
+
+		<td>25</td>
+
+		<td>26</td>
+
+		<td>27</td>
+
+	</tr>
+	<tr>
+
+		<td>28</td>
+
+		<td>29</td>
+
+		<td>30</td>
+
+	</tr>
+</table>
+
+					</div>
+				</div>
+			</td>
+		</tr>
+		<tr style="border-bottom: 1px solid #999;">
+			<td>Going to:</td>
+			<td><select name="as">
+
+					<option value="">[ Please choose departure first ]</option>
+
+				</select></td>
+		</tr>
+
+		<tr>
+			<td>Ticket Type:</td>
+			<td><input type="radio" name="t" value="1" id="tcbt1" class="clickable" onclick="toggleReturnDate()" checked><label for="tcbt1">One Way</label>
+				<input type="radio" name="t" value="2" id="tcbt2" class="clickable" onclick="toggleReturnDate()" style="margin-left: 2em;"><label for="tcbt2">Round Trip</label>
+				<input type="radio" name="t" value="c" id="tcbtc" onchange="toggleReturnDate()" style="margin-left: 2em;"><label for="tcbtc">Commuter</label>
+			</td>
+		</tr>
+
+		<tr style="border-top: 1px solid #999; display: none;" id="tr-rtrip">
+			<td>Returning on:</td>
+			<td>
+				<div style="position: relative; top: 0; right: 0;">
+					<input type="text" name="rd" value="" size="10" maxlength="10" class="datepicker">
+					<span class="note">(mm/dd/yyyy)</span>
+<script type="text/javascript">
+if (document.getElementById) {
+	document.write('<a href="#" onclick="return toggleCalendar(\'r\');"><img src="images/calendar.gif" alt="Pick a Date" title="Choose a date from a calendar"><' + '/a>');
+}
+</script>
+					<div class="cal-container" id="rtcontain" style="left: 190px; top: 0; z-index: 2;">
+
+<table class="cal" id="rt201412" style="visibility: visible !important;">
+	<tr>
+		<th colspan="7"><span class="inactive prevarrow">&#x25C4;</span><a href="#" onclick="return switchMonth(this, '201501')" class="nextarrow">&#x25BA;</a>December 2014</th>
+	</tr>
+	<tr>
+		<th class="cal">Su</th>
+		<th class="cal">M</th>
+		<th class="cal">Tu</th>
+		<th class="cal">W</th>
+		<th class="cal">Th</th>
+		<th class="cal">F</th>
+		<th class="cal">Sa</th>
+	</tr>
+	<tr>
+
+		<td></td>
+
+		<td>1</td>
+
+		<td>2</td>
+
+		<td>3</td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '12/04/2014')">4</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '12/05/2014')">5</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '12/06/2014')">6</a></td>
+
+	</tr>
+	<tr>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '12/07/2014')">7</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '12/08/2014')">8</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '12/09/2014')">9</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '12/10/2014')">10</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '12/11/2014')">11</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '12/12/2014')">12</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '12/13/2014')">13</a></td>
+
+	</tr>
+	<tr>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '12/14/2014')">14</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '12/15/2014')">15</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '12/16/2014')">16</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '12/17/2014')">17</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '12/18/2014')">18</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '12/19/2014')">19</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '12/20/2014')">20</a></td>
+
+	</tr>
+	<tr>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '12/21/2014')">21</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '12/22/2014')">22</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '12/23/2014')">23</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '12/24/2014')">24</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '12/25/2014')">25</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '12/26/2014')">26</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '12/27/2014')">27</a></td>
+
+	</tr>
+	<tr>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '12/28/2014')">28</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '12/29/2014')">29</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '12/30/2014')">30</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '12/31/2014')">31</a></td>
+
+	</tr>
+</table>
+
+<table class="cal" id="rt201501">
+	<tr>
+		<th colspan="7"><a href="#" onclick="return switchMonth(this, '201412')" class="prevarrow">&#x25C4;</a><a href="#" onclick="return switchMonth(this, '201502')" class="nextarrow">&#x25BA;</a>January 2015</th>
+	</tr>
+	<tr>
+		<th class="cal">Su</th>
+		<th class="cal">M</th>
+		<th class="cal">Tu</th>
+		<th class="cal">W</th>
+		<th class="cal">Th</th>
+		<th class="cal">F</th>
+		<th class="cal">Sa</th>
+	</tr>
+	<tr>
+
+		<td></td>
+
+		<td></td>
+
+		<td></td>
+
+		<td></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '01/01/2015')">1</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '01/02/2015')">2</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '01/03/2015')">3</a></td>
+
+	</tr>
+	<tr>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '01/04/2015')">4</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '01/05/2015')">5</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '01/06/2015')">6</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '01/07/2015')">7</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '01/08/2015')">8</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '01/09/2015')">9</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '01/10/2015')">10</a></td>
+
+	</tr>
+	<tr>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '01/11/2015')">11</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '01/12/2015')">12</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '01/13/2015')">13</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '01/14/2015')">14</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '01/15/2015')">15</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '01/16/2015')">16</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '01/17/2015')">17</a></td>
+
+	</tr>
+	<tr>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '01/18/2015')">18</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '01/19/2015')">19</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '01/20/2015')">20</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '01/21/2015')">21</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '01/22/2015')">22</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '01/23/2015')">23</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '01/24/2015')">24</a></td>
+
+	</tr>
+	<tr>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '01/25/2015')">25</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '01/26/2015')">26</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '01/27/2015')">27</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '01/28/2015')">28</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '01/29/2015')">29</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '01/30/2015')">30</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '01/31/2015')">31</a></td>
+
+	</tr>
+</table>
+
+<table class="cal" id="rt201502">
+	<tr>
+		<th colspan="7"><a href="#" onclick="return switchMonth(this, '201501')" class="prevarrow">&#x25C4;</a><a href="#" onclick="return switchMonth(this, '201503')" class="nextarrow">&#x25BA;</a>February 2015</th>
+	</tr>
+	<tr>
+		<th class="cal">Su</th>
+		<th class="cal">M</th>
+		<th class="cal">Tu</th>
+		<th class="cal">W</th>
+		<th class="cal">Th</th>
+		<th class="cal">F</th>
+		<th class="cal">Sa</th>
+	</tr>
+	<tr>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '02/01/2015')">1</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '02/02/2015')">2</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '02/03/2015')">3</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '02/04/2015')">4</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '02/05/2015')">5</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '02/06/2015')">6</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '02/07/2015')">7</a></td>
+
+	</tr>
+	<tr>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '02/08/2015')">8</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '02/09/2015')">9</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '02/10/2015')">10</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '02/11/2015')">11</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '02/12/2015')">12</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '02/13/2015')">13</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '02/14/2015')">14</a></td>
+
+	</tr>
+	<tr>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '02/15/2015')">15</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '02/16/2015')">16</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '02/17/2015')">17</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '02/18/2015')">18</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '02/19/2015')">19</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '02/20/2015')">20</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '02/21/2015')">21</a></td>
+
+	</tr>
+	<tr>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '02/22/2015')">22</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '02/23/2015')">23</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '02/24/2015')">24</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '02/25/2015')">25</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '02/26/2015')">26</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '02/27/2015')">27</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '02/28/2015')">28</a></td>
+
+	</tr>
+</table>
+
+<table class="cal" id="rt201503">
+	<tr>
+		<th colspan="7"><a href="#" onclick="return switchMonth(this, '201502')" class="prevarrow">&#x25C4;</a><a href="#" onclick="return switchMonth(this, '201504')" class="nextarrow">&#x25BA;</a>March 2015</th>
+	</tr>
+	<tr>
+		<th class="cal">Su</th>
+		<th class="cal">M</th>
+		<th class="cal">Tu</th>
+		<th class="cal">W</th>
+		<th class="cal">Th</th>
+		<th class="cal">F</th>
+		<th class="cal">Sa</th>
+	</tr>
+	<tr>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '03/01/2015')">1</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '03/02/2015')">2</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '03/03/2015')">3</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '03/04/2015')">4</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '03/05/2015')">5</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '03/06/2015')">6</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '03/07/2015')">7</a></td>
+
+	</tr>
+	<tr>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '03/08/2015')">8</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '03/09/2015')">9</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '03/10/2015')">10</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '03/11/2015')">11</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '03/12/2015')">12</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '03/13/2015')">13</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '03/14/2015')">14</a></td>
+
+	</tr>
+	<tr>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '03/15/2015')">15</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '03/16/2015')">16</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '03/17/2015')">17</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '03/18/2015')">18</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '03/19/2015')">19</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '03/20/2015')">20</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '03/21/2015')">21</a></td>
+
+	</tr>
+	<tr>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '03/22/2015')">22</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '03/23/2015')">23</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '03/24/2015')">24</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '03/25/2015')">25</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '03/26/2015')">26</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '03/27/2015')">27</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '03/28/2015')">28</a></td>
+
+	</tr>
+	<tr>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '03/29/2015')">29</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '03/30/2015')">30</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '03/31/2015')">31</a></td>
+
+	</tr>
+</table>
+
+<table class="cal" id="rt201504">
+	<tr>
+		<th colspan="7"><a href="#" onclick="return switchMonth(this, '201503')" class="prevarrow">&#x25C4;</a><a href="#" onclick="return switchMonth(this, '201505')" class="nextarrow">&#x25BA;</a>April 2015</th>
+	</tr>
+	<tr>
+		<th class="cal">Su</th>
+		<th class="cal">M</th>
+		<th class="cal">Tu</th>
+		<th class="cal">W</th>
+		<th class="cal">Th</th>
+		<th class="cal">F</th>
+		<th class="cal">Sa</th>
+	</tr>
+	<tr>
+
+		<td></td>
+
+		<td></td>
+
+		<td></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '04/01/2015')">1</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '04/02/2015')">2</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '04/03/2015')">3</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '04/04/2015')">4</a></td>
+
+	</tr>
+	<tr>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '04/05/2015')">5</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '04/06/2015')">6</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '04/07/2015')">7</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '04/08/2015')">8</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '04/09/2015')">9</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '04/10/2015')">10</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '04/11/2015')">11</a></td>
+
+	</tr>
+	<tr>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '04/12/2015')">12</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '04/13/2015')">13</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '04/14/2015')">14</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '04/15/2015')">15</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '04/16/2015')">16</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '04/17/2015')">17</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '04/18/2015')">18</a></td>
+
+	</tr>
+	<tr>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '04/19/2015')">19</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '04/20/2015')">20</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '04/21/2015')">21</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '04/22/2015')">22</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '04/23/2015')">23</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '04/24/2015')">24</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '04/25/2015')">25</a></td>
+
+	</tr>
+	<tr>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '04/26/2015')">26</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '04/27/2015')">27</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '04/28/2015')">28</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '04/29/2015')">29</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '04/30/2015')">30</a></td>
+
+	</tr>
+</table>
+
+<table class="cal" id="rt201505">
+	<tr>
+		<th colspan="7"><a href="#" onclick="return switchMonth(this, '201504')" class="prevarrow">&#x25C4;</a><a href="#" onclick="return switchMonth(this, '201506')" class="nextarrow">&#x25BA;</a>May 2015</th>
+	</tr>
+	<tr>
+		<th class="cal">Su</th>
+		<th class="cal">M</th>
+		<th class="cal">Tu</th>
+		<th class="cal">W</th>
+		<th class="cal">Th</th>
+		<th class="cal">F</th>
+		<th class="cal">Sa</th>
+	</tr>
+	<tr>
+
+		<td></td>
+
+		<td></td>
+
+		<td></td>
+
+		<td></td>
+
+		<td></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '05/01/2015')">1</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '05/02/2015')">2</a></td>
+
+	</tr>
+	<tr>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '05/03/2015')">3</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '05/04/2015')">4</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '05/05/2015')">5</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '05/06/2015')">6</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '05/07/2015')">7</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '05/08/2015')">8</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '05/09/2015')">9</a></td>
+
+	</tr>
+	<tr>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '05/10/2015')">10</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '05/11/2015')">11</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '05/12/2015')">12</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '05/13/2015')">13</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '05/14/2015')">14</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '05/15/2015')">15</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '05/16/2015')">16</a></td>
+
+	</tr>
+	<tr>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '05/17/2015')">17</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '05/18/2015')">18</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '05/19/2015')">19</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '05/20/2015')">20</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '05/21/2015')">21</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '05/22/2015')">22</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '05/23/2015')">23</a></td>
+
+	</tr>
+	<tr>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '05/24/2015')">24</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '05/25/2015')">25</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '05/26/2015')">26</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '05/27/2015')">27</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '05/28/2015')">28</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '05/29/2015')">29</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '05/30/2015')">30</a></td>
+
+	</tr>
+	<tr>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '05/31/2015')">31</a></td>
+
+	</tr>
+</table>
+
+<table class="cal" id="rt201506">
+	<tr>
+		<th colspan="7"><a href="#" onclick="return switchMonth(this, '201505')" class="prevarrow">&#x25C4;</a><span class="inactive nextarrow">&#x25BA;</span>June 2015</th>
+	</tr>
+	<tr>
+		<th class="cal">Su</th>
+		<th class="cal">M</th>
+		<th class="cal">Tu</th>
+		<th class="cal">W</th>
+		<th class="cal">Th</th>
+		<th class="cal">F</th>
+		<th class="cal">Sa</th>
+	</tr>
+	<tr>
+
+		<td></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '06/01/2015')">1</a></td>
+
+		<td class="available"><a href="#" onclick="return populateDate('r', '06/02/2015')">2</a></td>
+
+		<td>3</td>
+
+		<td>4</td>
+
+		<td>5</td>
+
+		<td>6</td>
+
+	</tr>
+	<tr>
+
+		<td>7</td>
+
+		<td>8</td>
+
+		<td>9</td>
+
+		<td>10</td>
+
+		<td>11</td>
+
+		<td>12</td>
+
+		<td>13</td>
+
+	</tr>
+	<tr>
+
+		<td>14</td>
+
+		<td>15</td>
+
+		<td>16</td>
+
+		<td>17</td>
+
+		<td>18</td>
+
+		<td>19</td>
+
+		<td>20</td>
+
+	</tr>
+	<tr>
+
+		<td>21</td>
+
+		<td>22</td>
+
+		<td>23</td>
+
+		<td>24</td>
+
+		<td>25</td>
+
+		<td>26</td>
+
+		<td>27</td>
+
+	</tr>
+	<tr>
+
+		<td>28</td>
+
+		<td>29</td>
+
+		<td>30</td>
+
+	</tr>
+</table>
+
+					</div>
+				</div>
+			</td>
+		</tr>
+
+		<tr>
+			<td></td>
+			<td style="text-align: right;"><input type="submit" value="Continue"></td>
+		</tr>
+	</tbody>
+	</table>
+
+</div>
+</form>
+<script type="text/javascript">
+toggleReturnDate();
+</script>
+
+<p style="border: 1px solid #ccc; background: #ffe; padding: 1em; margin: 1em 0;">Due to construction at Mall of America,
+	the Northfield Metro Express will now pick-up/drop-off at the MOA Transit Station at 24th Avenue. This is the same area
+	the Metro Transit buses and Light Rail service uses. Click here for a map:
+	<a href="https://maps.google.com/maps?q=Mall+of+America+Transit+Station,+Bloomington,+MN&hl=en&ll=44.854272,-93.236847&spn=0.011789,0.027874&sll=46.44186,-93.36129&sspn=11.73565,28.54248&oq=mall+of+america+trans&t=h&hnear=MOA+Transit+Station+%26+Gate+E&z=16" target="_blank">Mall of America Transit Station</a>.</p>
+
+		<p id="provided">Ticket Manager Pro 3.0 - online bus ticketing store provided by
+			<a href="http://www.lockmedia.com/" style="color: #66f;">Lock Media Services, Inc.</a><br>
+			&copy; 2003&#8211;2014 Lock Media Services, Inc.</p>
+		</div>
+		<p class="clear"></p>
+
+		<p id="nav">
+
+			<a href="/agency/">Agent Login</a>
+
+		</p>
+
+		<p class="current-info">December 4, 2014 5:31 PM</p>
+
+	</div>
+
+</div>
+<p id="footer">&copy; 2007&#8211;2014 Northfield Metro Express. All rights reserved.<br>
+	<a href="terms-conditions.asp">Terms &amp; Conditions</a></p>
+
+<script type="text/javascript">
+if (window.parent != window) {
+	if (navigator.userAgent.indexOf('Safari') == -1 || navigator.userAgent.indexOf('Mobile') == -1) {
+		maxWidgetHeight = document.getElementById('wrapper').offsetHeight + 200;
+		if (document.getElementById('sale-info') && document.getElementById('sale-info').offsetHeight + 30 > maxWidgetHeight)
+			maxWidgetHeight = document.getElementById('sale-info').offsetHeight + 30;
+		window.parent.document.getElementById('ticketing-iframe').style.height = maxWidgetHeight + 'px';
+		window.parent.document.getElementById('ticketing-iframe').style.overflow = 'visible';
+	}
+}
+</script>
+</body>
+</html>

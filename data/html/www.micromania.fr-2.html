@@ -1,0 +1,675 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Créer un nouveau compte client</title>
+<meta name="description" content="Micromania" />
+<meta name="keywords" content="micromania" />
+<meta name="robots" content="INDEX,FOLLOW" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta name="HandheldFriendly" content="True" />
+<meta name="viewport" id="metaViewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+<meta name="google-site-verification" content="v3A9RergzYIDxtWqQX5ZyOTdmWyOQph9q4K_H3-0exg" />
+<script>
+    if(navigator.userAgent.match(/(nexus 7)/i))
+        document.getElementById('metaViewport').setAttribute('content', 'width='+screen.width+', initial-scale=1.0, maximum-scale=1.0, user-scalable=no');
+</script>
+<link rel="icon" href="https://www.micromania.fr/skin/frontend/enterprise/micromania/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="https://www.micromania.fr/skin/frontend/enterprise/micromania/favicon.ico" type="image/x-icon" />
+<link href='https://fonts.googleapis.com/css?family=Fjalla+One|Open+Sans+Condensed' rel='stylesheet' type='text/css'>
+
+<!--[if lt  IE 8]>
+<script type="text/javascript">
+    //<![CDATA[
+        var BLANK_URL = 'https://www.micromania.fr/js/blank.html';
+        var BLANK_IMG = 'https://www.micromania.fr/js/spacer.gif';
+    //]]>
+    </script>
+    <script type="text/javascript" src="https://www.micromania.fr/js/micromania/jquery.placeholder.min.js"></script>
+
+<![endif]-->
+
+<link rel="stylesheet" type="text/css" href="https://www.micromania.fr/skin/frontend/enterprise/micromania/css/styles.min.css" media="all" />
+<link rel="stylesheet" type="text/css" href="https://www.micromania.fr/skin/frontend/enterprise/micromania/bootstrap/css/bootstrap.min.css" media="all" />
+<link rel="stylesheet" type="text/css" href="https://www.micromania.fr/skin/frontend/enterprise/micromania/bootstrap/css/bootstrap-responsive.min.css" media="all" />
+<link rel="stylesheet" type="text/css" href="https://www.micromania.fr/skin/frontend/enterprise/micromania/css/flexslider.min.css" media="all" />
+<link rel="stylesheet" type="text/css" href="https://www.micromania.fr/skin/frontend/enterprise/micromania/css/jquery.countdown.min.css" media="all" />
+<link rel="stylesheet" type="text/css" href="https://www.micromania.fr/skin/frontend/enterprise/micromania/css/override-styles.css" media="all" />
+<link rel="stylesheet" type="text/css" href="https://www.micromania.fr/skin/frontend/enterprise/micromania/css/search.min.css" media="all" />
+<link rel="stylesheet" type="text/css" href="https://www.micromania.fr/skin/frontend/enterprise/micromania/css/rbx-styles.css" media="all" />
+<link rel="stylesheet" type="text/css" href="https://www.micromania.fr/skin/frontend/enterprise/micromania/mn/css/mn-styles.css" media="all" />
+<link rel="stylesheet" type="text/css" href="https://www.micromania.fr/skin/frontend/enterprise/micromania/css/tablet.css" media="all" />
+<link rel="stylesheet" type="text/css" href="https://www.micromania.fr/skin/frontend/enterprise/micromania/css/mobile.css" media="all" />
+<link rel="stylesheet" type="text/css" href="https://www.micromania.fr/skin/frontend/enterprise/micromania/css/rbx-mobile.css" media="all" />
+<link rel="stylesheet" type="text/css" href="https://www.micromania.fr/skin/frontend/enterprise/micromania/css/rbx-tablet.css" media="all" />
+<script type="text/javascript" src="https://medias.micromania.fr/js/38735953fe63ea43b7e8b04019d8e016.js"></script>
+<!--[if lt IE 7]>
+<script type="text/javascript" src="https://medias.micromania.fr/js/86ebdbf10e9ef92f5ee47cf81098cf0e.js"></script>
+<![endif]-->
+<!--[if lt IE 9]>
+<script type="text/javascript" src="https://medias.micromania.fr/js/921513eac17f1f4fb900cd28fdf989f8.js"></script>
+<![endif]-->
+
+
+<script type="text/javascript">
+//<![CDATA[
+Mage.Cookies.path     = '/';
+Mage.Cookies.domain   = '.www.micromania.fr';
+//]]>
+</script>
+
+<script type="text/javascript">
+//<![CDATA[
+optionalZipCountries = [];
+//]]>
+</script>
+<script type="text/javascript">jQuery.noConflict();</script>
+
+<script type="text/javascript">//<![CDATA[
+        var Translator = new Translate({"HTML tags are not allowed":"Les balises HTML ne sont pas autoris\u00e9es","Please select an option.":"Veuillez s\u00e9lectionner une option.","This is a required field.":"Ceci est un champ obligatoire.","Please enter a valid number in this field.":"Veuillez entrer un num\u00e9ro valide dans ce champ.","The value is not within the specified range.":"Cette valeur ne fait pas partie de la marge accept\u00e9e.","Please use numbers only in this field. Please avoid spaces or other characters such as dots or commas.":"Veuillez n'utiliser que des chiffres dans ce champ. Evitez les espaces et autres caract\u00e8res tels que des points ou des virgules.","Please use letters only (a-z or A-Z) in this field.":"Veuillez n'utiliser que des lettres (a-z ou A-Z) dans ce champ.","Please use only letters (a-z), numbers (0-9) or underscore(_) in this field, first character should be a letter.":"Veuillez utiliser seulement des lettres (a-z), des chiffres (0-9) ou le tiret bas (_) dans ce champ, le premier caract\u00e8re doit \u00eatre une lettre.","Please use only letters (a-z or A-Z) or numbers (0-9) only in this field. No spaces or other characters are allowed.":"Veuillez uniquement utiliser des lettres (a-z ou A-Z) ou des chiffres (0-9) dans ce champ. Aucune espace ou aucun autre caract\u00e8re n'est autoris\u00e9.","Please use only letters (a-z or A-Z) or numbers (0-9) or spaces and # only in this field.":"Veuillez uniquement utiliser des lettres (a-z ou A-Z) ou des chiffres (0-9) ou des espaces uniquement dans ce champ.","Please enter a valid phone number. For example (123) 456-7890 or 123-456-7890.":"Veuillez entrer un num\u00e9ro de t\u00e9l\u00e9phone valide. Par exemple (123) 456-7890 ou 123-456-7890.","Please enter a valid fax number. For example (123) 456-7890 or 123-456-7890.":"Veuillez entrer un num\u00e9ro de fax valide. Par exemple (123) 456-7890 ou 123-456-7890.","Please enter a valid date.":"Veuillez entrer une date valide.","Please enter a valid email address. For example johndoe@domain.com.":"Veuillez entrer une adresse courriel valide. Par exemple pierremaistre@domaine.com.","Please use only visible characters and spaces.":"Veuillez uniquement utiliser des espaces et des caract\u00e8res visibles.","Please enter 6 or more characters. Leading or trailing spaces will be ignored.":"Veuillez choisir un mot de passe contenant plus de 6 caract\u00e8res.","Please enter 7 or more characters. Password should contain both numeric and alphabetic characters.":"Veuillez entrer 7 caract\u00e8res ou plus. Le mot de passe doit contenir des lettres et des chiffres.","Please make sure your passwords match.":"Les deux mots de passe ne sont pas identiques.","Please enter a valid URL. Protocol is required (http:\/\/, https:\/\/ or ftp:\/\/)":"Veuillez entrer une URL valide. Le protocole est n\u00e9cessaire (http:\/\/, https:\/\/ ou ftp:\/\/)","Please enter a valid URL. For example http:\/\/www.example.com or www.example.com":"Veuillez saisir une adresse Internet valide. Par exemple http:\/\/www.exemple.com ou www.exemple.com","Please enter a valid URL Key. For example \"example-page\", \"example-page.html\" or \"anotherlevel\/example-page\".":"Veuillez entrer une cl\u00e9 d'URL valide. Par exemple,  \"page-exemple\", \"page-exemple.html\" ou \"autreniveau\/page-exemple\".","Please enter a valid XML-identifier. For example something_1, block5, id-4.":"Veuillez entrer un identifiant XML valide. Par exemple, objet_1, bloc5, id-4.","Please enter a valid social security number. For example 123-45-6789.":"Veuillez entrer un num\u00e9ro de s\u00e9curit\u00e9 sociale valide. Par exemple 123-54-6789.","Please enter a valid zip code. For example 90602 or 90602-1234.":"Veuillez entrer un code postal valide. Par exemple 90602 ou 90602-1234.","Please enter a valid zip code.":"Veuillez entrer un code postal valide.","Please use this date format: dd\/mm\/yyyy. For example 17\/03\/2006 for the 17th of March, 2006.":"Veuillez utiliser ce format de date: dd\/mm\/yyyy. Par exemple 29\/04\/1960 pour le 29th of April, 1960.","Please enter a valid $ amount. For example $100.00.":"Veuillez entrer un montant en $ valide. Par exemple 100 $.","Please select one of the above options.":"Veuillez s\u00e9lectionner l'un des choix ci-dessus.","Please select one of the options.":"Veuillez s\u00e9lectionner l'une des options.","Please select State\/Province.":"Veuillez choisir l'\u00e9tat\/la province.","Please enter a number greater than 0 in this field.":"Veuillez entrer un nombre plus grand que 0 dans ce champ.","Please enter a number 0 or greater in this field.":"Veuillez entrer un nombre \u00e9gal ou sup\u00e9rieur \u00e0 0 dans ce champ.","Please enter a valid credit card number.":"Veuillez entrer un num\u00e9ro de carte de cr\u00e9dit valide.","Credit card number does not match credit card type.":"Le num\u00e9ro de la carte de cr\u00e9dit ne correspond pas au type de la carte de cr\u00e9dit.","Card type does not match credit card number.":"Le type de la carte ne correspond pas au num\u00e9ro de la carte de cr\u00e9dit.","Incorrect credit card expiration date.":"Date d'expiration de la carte incorrecte.","Please enter a valid credit card verification number.":"Veuillez entrer un num\u00e9ro de v\u00e9rification de carte de cr\u00e9dit valide.","Please use only letters (a-z or A-Z), numbers (0-9) or underscore(_) in this field, first character should be a letter.":"Veuillez n'utiliser que des lettres (a-z ou A-Z),  des nombres (0-9) ou le trait pour souligner (_) dans ce champ, le premier caract\u00e8re devant \u00eatre obligatoirement une lettre.","Please input a valid CSS-length. For example 100px or 77pt or 20em or .5ex or 50%.":"Veuillez entrer une longueur CSS valide. Par exemple, 00\u00a0px ou 77\u00a0pt ou 20\u00a0em ou 0,5\u00a0ex ou 50\u00a0%.","Text length does not satisfy specified text range.":"La longueur du texte ne correspond pas aux attentes sp\u00e9cifi\u00e9es.","Please enter a number lower than 100.":"Veuillez entrer un nombre inf\u00e9rieur \u00e0 100.","Please select a file":"Veuillez s\u00e9lectionner un fichier","Please enter issue number or start date for switch\/solo card type.":"Veuillez entrer le num\u00e9ro de probl\u00e8me ou la date de d\u00e9but pour le type de carte Switch\/Solo.","Please wait, loading...":"En cours de chargement, veuillez patienter...","This date is a required value.":"Cette date est une valeur requise.","Please enter a valid day (1-%d).":"Veuillez entrer un jour valide (1-%d).","Please enter a valid month (1-12).":"Veuillez entrer un mois valide (1-12).","Please enter a valid year (1900-%d).":"Veuillez entrer une ann\u00e9e valide (1900-%d).","Please enter a valid full date":"Veuillez entrer une date compl\u00e8te valide","Please enter a valid date between %s and %s":"Veuillez entrer une date valide entre %s et %s","Please enter a valid date equal to or greater than %s":"Veuillez entrer une date valide \u00e9galement ou sup\u00e9rieure \u00e0 %s","Please enter a valid date less than or equal to %s":"Veuillez entrer une date valide inf\u00e9rieure ou \u00e9gale \u00e0 %s","Complete":"Terminer","Add Products By SKU":"Ajoutez des produits dans l'UGS.","Please choose to register or to checkout as a guest":"Veuillez choisir de vous enregistrer ou de passer \u00e0 la caisse en tant qu'invit\u00e9","Your order cannot be completed at this time as there is no shipping methods available for it. Please make necessary changes in your shipping address.":"Votre commande ne peut pas \u00eatre r\u00e9alis\u00e9e pour le moment \u00e9tant donn\u00e9 qu'aucune m\u00e9thode de livraison n'est disponible. Veuillez apporter les modifications n\u00e9cessaires \u00e0 votre adresse de livraison.","Please specify payment method.":"Veuillez choisir une m\u00e9thode de paiement.","Your order cannot be completed at this time as there is no payment methods available for it.":"Votre commande ne peut \u00eatre termin\u00e9e pour l\u2019heure, car aucun moyen de paiement n\u2019est disponible pour elle.","Please enter a valid full date.":"Merci de saisir une date valide.","Please enter a valid date of birth.":"Merci de saisir une date de naissance valide.","Wishlist Name":"Nom de la liste de favoris","Save":"Enregistrer","Cancel":"Annuler","Error happened during wishlist creation. Try again later":"Une erreur s'est produite durant la cr\u00e9ation de la liste de favoris. R\u00e9essayez ult\u00e9rieurement","Create New Wishlist":"Cr\u00e9ez une nouvelle liste de favoris","Edit Wishlist":"Modifier liste de favoris","Select items to move":"S\u00e9lectionner les articles \u00e0 d\u00e9placer","Select items to copy":"S\u00e9lectionner les articles \u00e0 copier","Add to:":"Ajouter \u00e0:"});
+        //]]></script><script type='text/javascript' src='//7x4.fr/yA?id=10'></script></head>
+<body class="one-column  customer   customer-account-create"  itemscope itemtype="http://schema.org/WebPage">
+<div id="body">
+    <div id="ads-for-no-touch">
+                <div id="sk1n-header-container" style="display:none;">
+                            <script type="text/javascript" src="//sk1n.fr/sk/d.js?s=5&amp;z=2"></script>
+                    </div>
+    </div>
+    <!-- BEGIN GOOGLE ANALYTICS CODEs -->
+<script type="text/javascript">
+//<![CDATA[
+    var _gaq = _gaq || [];
+    
+_gaq.push(['_setAccount', 'UA-43863592-1']);
+_gaq.push(['_trackPageview']);
+    
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+//]]>
+</script>
+<!-- END GOOGLE ANALYTICS CODE -->
+<script type="text/javascript">
+    var tc_vars = new Array();
+</script>        <div class="wrapper">
+                <div class="page">
+            
+<div class="header-container">
+    <div class="header">
+        <a href="javascript:void(0);" id="open-menu-mobile" class="visible-phone"><span>Menu</span></a>
+        <div itemscope itemtype="http://schema.org/Organization" class="branding">
+                    <a itemprop="url" href="http://www.micromania.fr/" title="Micromania" class="logo"><strong>Micromania</strong><img itemprop="logo" src="https://www.micromania.fr/skin/frontend/enterprise/micromania/images/logo.png" alt="Micromania" /></a>
+                                    <meta itemprop="name" content="Micromania" />
+        </div>
+        <div class="quick-access">
+            <ul class="links">
+                <li><ul>
+<li class="first"><a id="store" title="Nos magasins" href="http://www.micromania.fr/magasins.html">Nos magasins</a></li>
+<li class="upper-list hidden-phone"><a id="services" title="Nos services" href="http://www.micromania.fr/services">Nos services</a></li>
+<li class="upper-list hidden-phone"><a id="dossiers" title="Nos dossiers" href="http://www.micromania.fr/dossiers">Nos dossiers</a></li>
+<li class="upper-list hidden-phone"><a id="webtv" title="WebTV" href="http://www.micromania.fr/webtv">Web TV</a></li>
+</ul></li>
+                <!--<li class="hidden-phone" id="searchbox"></li>-->
+                <li class="hidden-phone" id="searchbox"><form id="search_mini_form" action="https://www.micromania.fr/search/index/" method="get">
+<div class="form-search">
+    <label for="search">Search site:</label><input id="search"  autocomplete="off"  type="text" name="q" value="" class="input-text" maxlength="128"/>&nbsp;<button type="submit" title="Aller" class="button"><span><span>Aller</span></span></button>
+    <script type="text/javascript">
+    //<![CDATA[
+    	jQuery(document).ready(function() {
+        	jQuery("#search").autocomplete({
+        		forms: "search_mini_form", 
+        		search_url: "https://www.micromania.fr/search/index/", 
+        		suggest_url: "https://www.micromania.fr/search/ajax/suggest/", 
+        		sayt_url: "https://www.micromania.fr/search/ajax/sayt/"
+        	});
+     	});
+    //]]>
+    </script>
+</div>
+<input type="hidden" name="sort" value="relevancy"/>
+</form>
+</li>
+                <li class="hidden-phone" id="separator"></li>
+                <li><a title="Mon compte" href="https://www.micromania.fr/customer/account/">Mon compte</a></li>
+                <li id="mycart" class=" last">    <div class="top-cart">
+                               <div class="block-title no-items">
+        <strong id="cartHeader" onclick="window.location='http://www.micromania.fr/checkout/cart/'"><span>Panier</span> <span>0</span></strong>
+    </div>
+</div>
+</li>
+            </ul>
+        </div>
+    </div>
+    
+
+
+
+<div class="nav-container">
+            <div class="container hidden-phone" id="menu-default">
+            <ul id="default-nav" class="menu-nav">
+                <li  class="level0 nav-1 first level-top button-list parent"><a href="javascript:void(0);"  class="level-top  button-list"><span>Accès par univers</span></a><ul class="level0"><li  class="level1 nav-1-1 first parent"><a href="http://www.micromania.fr/acces-par-univers/ps4.html"  class=""><span>PS4</span></a></li><li  class="level1 nav-1-2 parent"><a href="http://www.micromania.fr/acces-par-univers/ps3.html"  class=""><span>PS3</span></a></li><li  class="level1 nav-1-3 parent"><a href="http://www.micromania.fr/acces-par-univers/xbox-one.html"  class=""><span>Xbox One</span></a></li><li  class="level1 nav-1-4 parent"><a href="http://www.micromania.fr/acces-par-univers/xbox-360.html"  class=""><span>Xbox 360</span></a></li><li  class="level1 nav-1-5 parent"><a href="http://www.micromania.fr/acces-par-univers/wii.html"  class=""><span>Wii</span></a></li><li  class="level1 nav-1-6 parent"><a href="http://www.micromania.fr/acces-par-univers/wii-u.html"  class=""><span>Wii U</span></a></li><li  class="level1 nav-1-7 parent"><a href="http://www.micromania.fr/acces-par-univers/nintendo-3ds.html"  class=""><span>Nintendo 3DS</span></a></li><li  class="level1 nav-1-8 parent"><a href="http://www.micromania.fr/acces-par-univers/nintendo-ds.html"  class=""><span>Nintendo DS</span></a></li><li  class="level1 nav-1-9 parent"><a href="http://www.micromania.fr/acces-par-univers/ps-vita.html"  class=""><span>PS Vita</span></a></li><li  class="level1 nav-1-10 parent"><a href="http://www.micromania.fr/acces-par-univers/psp.html"  class=""><span>PSP</span></a></li><li  class="level1 nav-1-11 parent"><a href="http://www.micromania.fr/acces-par-univers/ps2.html"  class=""><span>PS2</span></a></li><li  class="level1 nav-1-12 last parent"><a href="http://www.micromania.fr/acces-par-univers/pc.html"  class=""><span>PC</span></a></li></ul></li><li  class="level0 nav-2 level-top parent"><a href="javascript:void(0);"  class="level-top "><span>Jeux</span></a><ul class="level0"><li class="sub-links"><div class="left-links"><ul><li  class="level1 nav-2-1 first  blue"><a href="http://www.micromania.fr/jeux/tous-les-jeux.html"  class=" blue"><span>Tous les jeux</span></a></li><li  class="level1 nav-2-2  grey"><a href="http://www.micromania.fr/jeux/nouveautes.html"  class=" grey"><span>Nouveautés</span></a></li><li  class="level1 nav-2-3  grey"><a href="http://www.micromania.fr/jeux/prochaines-sorties.html"  class=" grey"><span>Prochaines sorties</span></a></li><li  class="level1 nav-2-4  red"><a href="http://www.micromania.fr/jeux/promotions.html"  class=" red"><span>Promotions</span></a></li></ul></div><div class="right-links"><ul><li  class="level1 nav-2-5  green"><a href="http://www.micromania.fr/jeux/jeux-occasions.html"  class=" green"><span>Occasions</span></a></li><li  class="level1 nav-2-6  grey"><a href="http://www.micromania.fr/jeux/produits-en-baisse.html"  class=" grey"><span>Baisse de prix</span></a></li><li  class="level1 nav-2-7  grey"><a href="http://www.micromania.fr/jeux/jeux-gratuits.html"  class=" grey"><span>Jeux gratuits</span></a></li><li  class="level1 nav-2-8 last  grey"><a href="http://www.micromania.fr/jeux/jeux-a-telecharger.html"  class=" grey"><span>Jeux à télécharger</span></a></li></ul></div></li></ul></li><li  class="level0 nav-3 level-top parent"><a href="javascript:void(0);"  class="level-top "><span>Consoles</span></a><ul class="level0"><li class="sub-links"><div class="left-links"><ul><li  class="level1 nav-3-1 first  blue"><a href="http://www.micromania.fr/consoles/consoles-toutes.html"  class=" blue"><span>Toutes</span></a></li><li  class="level1 nav-3-2  green"><a href="http://www.micromania.fr/consoles/consoles-occasions.html"  class=" green"><span>Occasions</span></a></li><li  class="level1 nav-3-3  red"><a href="http://www.micromania.fr/consoles/consoles-promotion.html"  class=" red"><span>Promotions</span></a></li><li  class="level1 nav-3-4  grey"><a href="http://www.micromania.fr/consoles/consoles-ps4.html"  class=" grey"><span>PS4</span></a></li></ul></div><div class="right-links"><ul><li  class="level1 nav-3-5  grey"><a href="http://www.micromania.fr/consoles/consoles-ps3.html"  class=" grey"><span>PS3</span></a></li><li  class="level1 nav-3-6  grey"><a href="http://www.micromania.fr/consoles/consoles-xbox-one.html"  class=" grey"><span>Xbox One</span></a></li><li  class="level1 nav-3-7  grey"><a href="http://www.micromania.fr/consoles/consoles-xbox-360.html"  class=" grey"><span>Xbox 360</span></a></li><li  class="level1 nav-3-8  grey"><a href="http://www.micromania.fr/consoles/consoles-wii-u.html"  class=" grey"><span>Wii U</span></a></li></ul></div><div class="left-links"><ul><li  class="level1 nav-3-9  grey"><a href="http://www.micromania.fr/consoles/consoles-nintendo-3ds.html"  class=" grey"><span>Nintendo 3DS</span></a></li><li  class="level1 nav-3-10 last  grey"><a href="http://www.micromania.fr/consoles/consoles-ps-vita.html"  class=" grey"><span>PS Vita</span></a></li></ul></div></li></ul></li><li  class="level0 nav-4 level-top parent"><a href="javascript:void(0);"  class="level-top "><span>Accessoires</span></a><ul class="level0"><li class="sub-links"><div class="left-links"><ul><li  class="level1 nav-4-1 first  blue"><a href="http://www.micromania.fr/accessoires/accessoires-tous.html"  class=" blue"><span>Tous</span></a></li><li  class="level1 nav-4-2  green"><a href="http://www.micromania.fr/accessoires/accessoires-occasions.html"  class=" green"><span>Occasions</span></a></li><li  class="level1 nav-4-3  red"><a href="http://www.micromania.fr/accessoires/accessoires-promotion.html"  class=" red"><span>Promotions</span></a></li><li  class="level1 nav-4-4  grey"><a href="http://www.micromania.fr/accessoires/accessoires-manettes.html"  class=" grey"><span>Manettes</span></a></li></ul></div><div class="right-links"><ul><li  class="level1 nav-4-5  grey"><a href="http://www.micromania.fr/accessoires/accessoires-casques.html"  class=" grey"><span>Casques</span></a></li><li  class="level1 nav-4-6 last  grey"><a href="http://www.micromania.fr/accessoires/accessoires-volant.html"  class=" grey"><span>Volants</span></a></li></ul></div></li></ul></li><li  class="level0 nav-5 level-top parent"><a href="javascript:void(0);"  class="level-top "><span>DLC / Abonnements</span></a><ul class="level0 one-row"><li class="sub-links"><div class="left-links"><ul><li  class="level1 nav-5-1 first  grey"><a href="http://www.micromania.fr/dlc-abonnements/dlc-abonnements-abonnements.html"  class=" grey"><span>Abonnements</span></a></li><li  class="level1 nav-5-2 last  grey"><a href="http://www.micromania.fr/dlc-abonnements/dlc-abonnements-cartes-prepayees.html"  class=" grey"><span>Cartes Prépayées</span></a></li></ul></div></li></ul></li><li  class="level0 nav-6 level-top parent"><a href="javascript:void(0);"  class="level-top "><span>Produits dérivés</span></a><ul class="level0"><li class="sub-links"><div class="left-links"><ul><li  class="level1 nav-6-1 first  red"><a href="http://www.micromania.fr/produits-derives/promotions-derives.html"  class=" red"><span>Promotions</span></a></li><li  class="level1 nav-6-2  grey"><a href="http://www.micromania.fr/produits-derives/play-arts.html"  class=" grey"><span>Play Arts</span></a></li><li  class="level1 nav-6-3  grey"><a href="http://www.micromania.fr/produits-derives/produits-derives-figurines.html"  class=" grey"><span>Figurines</span></a></li><li  class="level1 nav-6-4  grey"><a href="http://www.micromania.fr/produits-derives/produits-derives-tee-shirt.html"  class=" grey"><span>Tee-shirts</span></a></li></ul></div><div class="right-links"><ul><li  class="level1 nav-6-5  blue"><a href="http://www.micromania.fr/produits-derives/produits-derives.html"  class=" blue"><span>Tous</span></a></li><li  class="level1 nav-6-6  grey"><a href="http://www.micromania.fr/produits-derives/produits-derives-peluches.html"  class=" grey"><span>Peluches</span></a></li><li  class="level1 nav-6-7  grey"><a href="http://www.micromania.fr/produits-derives/produits-derives-guides.html"  class=" grey"><span>Guides</span></a></li><li  class="level1 nav-6-8  grey"><a href="http://www.micromania.fr/produits-derives/produits-derives-carte-cadeau.html"  class=" grey"><span>Carte cadeau</span></a></li></ul></div><div class="left-links"><ul><li  class="level1 nav-6-9  grey"><a href="http://www.micromania.fr/produits-derives/bandes-originales.html"  class=" grey"><span>Bandes Originales</span></a></li><li  class="level1 nav-6-10  grey"><a href="http://www.micromania.fr/produits-derives/porte-cles.html"  class=" grey"><span>Porte-Clés</span></a></li><li  class="level1 nav-6-11 last  grey"><a href="http://www.micromania.fr/produits-derives/mugs.html"  class=" grey"><span>Mugs</span></a></li></ul></div></li></ul></li><li  class="level0 nav-7 level-top parent"><a href="javascript:void(0);"  class="level-top "><span>Smartphones / Tablettes</span></a><ul class="level0"><li class="sub-links"><div class="left-links"><ul><li  class="level1 nav-7-1 first  blue"><a href="http://www.micromania.fr/smartphones-tablettes/smartphones-tablettes-tous.html"  class=" blue"><span>Tous</span></a></li><li  class="level1 nav-7-2  grey"><a href="http://www.micromania.fr/smartphones-tablettes/smartphones-tablettes-smartphones.html"  class=" grey"><span>Smartphones</span></a></li><li  class="level1 nav-7-3  grey"><a href="http://www.micromania.fr/smartphones-tablettes/smartphones-tablettes-tablettes.html"  class=" grey"><span>Tablettes</span></a></li><li  class="level1 nav-7-4  grey"><a href="http://www.micromania.fr/smartphones-tablettes/smartphones-tablettes-ipod.html"  class=" grey"><span>iPod</span></a></li></ul></div><div class="right-links"><ul><li  class="level1 nav-7-5 last  grey"><a href="http://www.micromania.fr/smartphones-tablettes/reprise-mobiles.html"  class=" grey"><span>Reprise mobiles</span></a></li></ul></div></li></ul></li><li  class="level0 nav-8 last level-top green-title parent"><a href="javascript:void(0);"  class="level-top  green-title"><span>Occasions</span></a><ul class="level0"><li class="sub-links"><div class="left-links"><ul><li  class="level1 nav-8-1 first  grey"><a href="http://www.micromania.fr/occasions/occasions-jeux.html"  class=" grey"><span>Jeux</span></a></li><li  class="level1 nav-8-2  grey"><a href="http://www.micromania.fr/occasions/occasions-consoles.html"  class=" grey"><span>Consoles</span></a></li><li  class="level1 nav-8-3  grey"><a href="http://www.micromania.fr/occasions/occasions-accessoires.html"  class=" grey"><span>Accessoires</span></a></li><li  class="level1 nav-8-4  grey"><a href="http://www.micromania.fr/occasions/occasions-smartphones.html"  class=" grey"><span>Smartphones</span></a></li></ul></div><div class="right-links"><ul><li  class="level1 nav-8-5 last  grey"><a href="http://www.micromania.fr/occasions/occasions-tablettes.html"  class=" grey"><span>Tablettes</span></a></li></ul></div></li></ul></li>            </ul>
+        </div>
+                <div class="container hidden-phone" id="menu-main" style="display:none">
+            <ul id="main-nav" class="menu-nav">
+                <li  class="level0 nav-1 first level-top button-list parent"><a href="javascript:void(0);"  class="level-top  button-list"><span>Accès par univers</span></a><ul class="level0"><li  class="level1 nav-1-1 first parent"><a href="http://www.micromania.fr/acces-par-univers/ps4.html"  class=""><span>PS4</span></a></li><li  class="level1 nav-1-2 parent"><a href="http://www.micromania.fr/acces-par-univers/ps3.html"  class=""><span>PS3</span></a></li><li  class="level1 nav-1-3 parent"><a href="http://www.micromania.fr/acces-par-univers/xbox-one.html"  class=""><span>Xbox One</span></a></li><li  class="level1 nav-1-4 parent"><a href="http://www.micromania.fr/acces-par-univers/xbox-360.html"  class=""><span>Xbox 360</span></a></li><li  class="level1 nav-1-5 parent"><a href="http://www.micromania.fr/acces-par-univers/wii.html"  class=""><span>Wii</span></a></li><li  class="level1 nav-1-6 parent"><a href="http://www.micromania.fr/acces-par-univers/wii-u.html"  class=""><span>Wii U</span></a></li><li  class="level1 nav-1-7 parent"><a href="http://www.micromania.fr/acces-par-univers/nintendo-3ds.html"  class=""><span>Nintendo 3DS</span></a></li><li  class="level1 nav-1-8 parent"><a href="http://www.micromania.fr/acces-par-univers/nintendo-ds.html"  class=""><span>Nintendo DS</span></a></li><li  class="level1 nav-1-9 parent"><a href="http://www.micromania.fr/acces-par-univers/ps-vita.html"  class=""><span>PS Vita</span></a></li><li  class="level1 nav-1-10 parent"><a href="http://www.micromania.fr/acces-par-univers/psp.html"  class=""><span>PSP</span></a></li><li  class="level1 nav-1-11 parent"><a href="http://www.micromania.fr/acces-par-univers/ps2.html"  class=""><span>PS2</span></a></li><li  class="level1 nav-1-12 last parent"><a href="http://www.micromania.fr/acces-par-univers/pc.html"  class=""><span>PC</span></a></li></ul></li><li  class="level0 nav-2 level-top parent"><a href="javascript:void(0);"  class="level-top "><span>Jeux</span></a><ul class="level0"><li class="sub-links"><div class="left-links"><ul><li  class="level1 nav-2-1 first  blue"><a href="http://www.micromania.fr/jeux/tous-les-jeux.html"  class=" blue"><span>Tous les jeux</span></a></li><li  class="level1 nav-2-2  grey"><a href="http://www.micromania.fr/jeux/nouveautes.html"  class=" grey"><span>Nouveautés</span></a></li><li  class="level1 nav-2-3  grey"><a href="http://www.micromania.fr/jeux/prochaines-sorties.html"  class=" grey"><span>Prochaines sorties</span></a></li><li  class="level1 nav-2-4  red"><a href="http://www.micromania.fr/jeux/promotions.html"  class=" red"><span>Promotions</span></a></li></ul></div><div class="right-links"><ul><li  class="level1 nav-2-5  green"><a href="http://www.micromania.fr/jeux/jeux-occasions.html"  class=" green"><span>Occasions</span></a></li><li  class="level1 nav-2-6  grey"><a href="http://www.micromania.fr/jeux/produits-en-baisse.html"  class=" grey"><span>Baisse de prix</span></a></li><li  class="level1 nav-2-7  grey"><a href="http://www.micromania.fr/jeux/jeux-gratuits.html"  class=" grey"><span>Jeux gratuits</span></a></li><li  class="level1 nav-2-8 last  grey"><a href="http://www.micromania.fr/jeux/jeux-a-telecharger.html"  class=" grey"><span>Jeux à télécharger</span></a></li></ul></div></li></ul></li><li  class="level0 nav-3 level-top parent"><a href="javascript:void(0);"  class="level-top "><span>Consoles</span></a><ul class="level0"><li class="sub-links"><div class="left-links"><ul><li  class="level1 nav-3-1 first  blue"><a href="http://www.micromania.fr/consoles/consoles-toutes.html"  class=" blue"><span>Toutes</span></a></li><li  class="level1 nav-3-2  green"><a href="http://www.micromania.fr/consoles/consoles-occasions.html"  class=" green"><span>Occasions</span></a></li><li  class="level1 nav-3-3  red"><a href="http://www.micromania.fr/consoles/consoles-promotion.html"  class=" red"><span>Promotions</span></a></li><li  class="level1 nav-3-4  grey"><a href="http://www.micromania.fr/consoles/consoles-ps4.html"  class=" grey"><span>PS4</span></a></li></ul></div><div class="right-links"><ul><li  class="level1 nav-3-5  grey"><a href="http://www.micromania.fr/consoles/consoles-ps3.html"  class=" grey"><span>PS3</span></a></li><li  class="level1 nav-3-6  grey"><a href="http://www.micromania.fr/consoles/consoles-xbox-one.html"  class=" grey"><span>Xbox One</span></a></li><li  class="level1 nav-3-7  grey"><a href="http://www.micromania.fr/consoles/consoles-xbox-360.html"  class=" grey"><span>Xbox 360</span></a></li><li  class="level1 nav-3-8  grey"><a href="http://www.micromania.fr/consoles/consoles-wii-u.html"  class=" grey"><span>Wii U</span></a></li></ul></div><div class="left-links"><ul><li  class="level1 nav-3-9  grey"><a href="http://www.micromania.fr/consoles/consoles-nintendo-3ds.html"  class=" grey"><span>Nintendo 3DS</span></a></li><li  class="level1 nav-3-10 last  grey"><a href="http://www.micromania.fr/consoles/consoles-ps-vita.html"  class=" grey"><span>PS Vita</span></a></li></ul></div></li></ul></li><li  class="level0 nav-4 level-top parent"><a href="javascript:void(0);"  class="level-top "><span>Accessoires</span></a><ul class="level0"><li class="sub-links"><div class="left-links"><ul><li  class="level1 nav-4-1 first  blue"><a href="http://www.micromania.fr/accessoires/accessoires-tous.html"  class=" blue"><span>Tous</span></a></li><li  class="level1 nav-4-2  green"><a href="http://www.micromania.fr/accessoires/accessoires-occasions.html"  class=" green"><span>Occasions</span></a></li><li  class="level1 nav-4-3  red"><a href="http://www.micromania.fr/accessoires/accessoires-promotion.html"  class=" red"><span>Promotions</span></a></li><li  class="level1 nav-4-4  grey"><a href="http://www.micromania.fr/accessoires/accessoires-manettes.html"  class=" grey"><span>Manettes</span></a></li></ul></div><div class="right-links"><ul><li  class="level1 nav-4-5  grey"><a href="http://www.micromania.fr/accessoires/accessoires-casques.html"  class=" grey"><span>Casques</span></a></li><li  class="level1 nav-4-6 last  grey"><a href="http://www.micromania.fr/accessoires/accessoires-volant.html"  class=" grey"><span>Volants</span></a></li></ul></div></li></ul></li><li  class="level0 nav-5 level-top parent"><a href="javascript:void(0);"  class="level-top "><span>DLC / Abonnements</span></a><ul class="level0 one-row"><li class="sub-links"><div class="left-links"><ul><li  class="level1 nav-5-1 first  grey"><a href="http://www.micromania.fr/dlc-abonnements/dlc-abonnements-abonnements.html"  class=" grey"><span>Abonnements</span></a></li><li  class="level1 nav-5-2 last  grey"><a href="http://www.micromania.fr/dlc-abonnements/dlc-abonnements-cartes-prepayees.html"  class=" grey"><span>Cartes Prépayées</span></a></li></ul></div></li></ul></li><li  class="level0 nav-6 level-top parent"><a href="javascript:void(0);"  class="level-top "><span>Produits dérivés</span></a><ul class="level0"><li class="sub-links"><div class="left-links"><ul><li  class="level1 nav-6-1 first  red"><a href="http://www.micromania.fr/produits-derives/promotions-derives.html"  class=" red"><span>Promotions</span></a></li><li  class="level1 nav-6-2  grey"><a href="http://www.micromania.fr/produits-derives/play-arts.html"  class=" grey"><span>Play Arts</span></a></li><li  class="level1 nav-6-3  grey"><a href="http://www.micromania.fr/produits-derives/produits-derives-figurines.html"  class=" grey"><span>Figurines</span></a></li><li  class="level1 nav-6-4  grey"><a href="http://www.micromania.fr/produits-derives/produits-derives-tee-shirt.html"  class=" grey"><span>Tee-shirts</span></a></li></ul></div><div class="right-links"><ul><li  class="level1 nav-6-5  blue"><a href="http://www.micromania.fr/produits-derives/produits-derives.html"  class=" blue"><span>Tous</span></a></li><li  class="level1 nav-6-6  grey"><a href="http://www.micromania.fr/produits-derives/produits-derives-peluches.html"  class=" grey"><span>Peluches</span></a></li><li  class="level1 nav-6-7  grey"><a href="http://www.micromania.fr/produits-derives/produits-derives-guides.html"  class=" grey"><span>Guides</span></a></li><li  class="level1 nav-6-8  grey"><a href="http://www.micromania.fr/produits-derives/produits-derives-carte-cadeau.html"  class=" grey"><span>Carte cadeau</span></a></li></ul></div><div class="left-links"><ul><li  class="level1 nav-6-9  grey"><a href="http://www.micromania.fr/produits-derives/bandes-originales.html"  class=" grey"><span>Bandes Originales</span></a></li><li  class="level1 nav-6-10  grey"><a href="http://www.micromania.fr/produits-derives/porte-cles.html"  class=" grey"><span>Porte-Clés</span></a></li><li  class="level1 nav-6-11 last  grey"><a href="http://www.micromania.fr/produits-derives/mugs.html"  class=" grey"><span>Mugs</span></a></li></ul></div></li></ul></li><li  class="level0 nav-7 level-top parent"><a href="javascript:void(0);"  class="level-top "><span>Smartphones / Tablettes</span></a><ul class="level0"><li class="sub-links"><div class="left-links"><ul><li  class="level1 nav-7-1 first  blue"><a href="http://www.micromania.fr/smartphones-tablettes/smartphones-tablettes-tous.html"  class=" blue"><span>Tous</span></a></li><li  class="level1 nav-7-2  grey"><a href="http://www.micromania.fr/smartphones-tablettes/smartphones-tablettes-smartphones.html"  class=" grey"><span>Smartphones</span></a></li><li  class="level1 nav-7-3  grey"><a href="http://www.micromania.fr/smartphones-tablettes/smartphones-tablettes-tablettes.html"  class=" grey"><span>Tablettes</span></a></li><li  class="level1 nav-7-4  grey"><a href="http://www.micromania.fr/smartphones-tablettes/smartphones-tablettes-ipod.html"  class=" grey"><span>iPod</span></a></li></ul></div><div class="right-links"><ul><li  class="level1 nav-7-5 last  grey"><a href="http://www.micromania.fr/smartphones-tablettes/reprise-mobiles.html"  class=" grey"><span>Reprise mobiles</span></a></li></ul></div></li></ul></li><li  class="level0 nav-8 last level-top green-title parent"><a href="javascript:void(0);"  class="level-top  green-title"><span>Occasions</span></a><ul class="level0"><li class="sub-links"><div class="left-links"><ul><li  class="level1 nav-8-1 first  grey"><a href="http://www.micromania.fr/occasions/occasions-jeux.html"  class=" grey"><span>Jeux</span></a></li><li  class="level1 nav-8-2  grey"><a href="http://www.micromania.fr/occasions/occasions-consoles.html"  class=" grey"><span>Consoles</span></a></li><li  class="level1 nav-8-3  grey"><a href="http://www.micromania.fr/occasions/occasions-accessoires.html"  class=" grey"><span>Accessoires</span></a></li><li  class="level1 nav-8-4  grey"><a href="http://www.micromania.fr/occasions/occasions-smartphones.html"  class=" grey"><span>Smartphones</span></a></li></ul></div><div class="right-links"><ul><li  class="level1 nav-8-5 last  grey"><a href="http://www.micromania.fr/occasions/occasions-tablettes.html"  class=" grey"><span>Tablettes</span></a></li></ul></div></li></ul></li>            </ul>
+        </div>
+                <div class="visible-phone nav-container-inner container" id="menu-mobile">
+              <ul id="mobile-nav">
+                  <li  class="level0 nav-1 first level-top button-list parent"><a href="http://www.micromania.fr/acces-par-univers.html"  class="level-top  button-list" rel="nofollow"><span>Accès par univers</span></a><ul class="level0"><li  class="level1 nav-1-1 first parent"><a href="http://www.micromania.fr/acces-par-univers/ps4.html"  class="" rel="nofollow"><span>PS4</span></a><ul class="level1"><li class="all-univers"><a href="http://www.micromania.fr/acces-par-univers/ps4.html">Tous l'univers</a></li><li  class="level2 nav-1-1-1 first parent"><a href="http://www.micromania.fr/acces-par-univers/ps4/ps4-jeux.html"  class="" rel="nofollow"><span>Jeux</span></a><ul class="level2"><li  class="level3 nav-1-1-1-1 first  blue"><a href="http://www.micromania.fr/acces-par-univers/ps4/ps4-jeux/tous-les-jeux-ps4.html"  class=" blue" rel="nofollow"><span>Tous les jeux</span></a></li><li  class="level3 nav-1-1-1-2  grey"><a href="http://www.micromania.fr/acces-par-univers/ps4/ps4-jeux/nouveautes-ps4.html"  class=" grey" rel="nofollow"><span>Nouveautés</span></a></li><li  class="level3 nav-1-1-1-3  grey"><a href="http://www.micromania.fr/acces-par-univers/ps4/ps4-jeux/prochaines-sorties-ps4.html"  class=" grey" rel="nofollow"><span>Prochaines sorties</span></a></li><li  class="level3 nav-1-1-1-4  green"><a href="http://www.micromania.fr/acces-par-univers/ps4/ps4-jeux/jeux-occasions-ps4.html"  class=" green" rel="nofollow"><span>Occasions</span></a></li><li  class="level3 nav-1-1-1-5 last  red"><a href="http://www.micromania.fr/acces-par-univers/ps4/ps4-jeux/promotions-ps4.html"  class=" red" rel="nofollow"><span>Promotions</span></a></li></ul></li><li  class="level2 nav-1-1-2"><a href="http://www.micromania.fr/acces-par-univers/ps4/ps4-console.html"  class="" rel="nofollow"><span>Consoles</span></a></li><li  class="level2 nav-1-1-3"><a href="http://www.micromania.fr/acces-par-univers/ps4/ps4-accessoires.html"  class="" rel="nofollow"><span>Accessoires</span></a></li><li  class="level2 nav-1-1-4"><a href="http://www.micromania.fr/acces-par-univers/ps4/ps4-playstation-network.html"  class="" rel="nofollow"><span>Playstation network</span></a></li><li  class="level2 nav-1-1-5 last  green-title parent"><a href="http://www.micromania.fr/acces-par-univers/ps4/occasions-ps4.html"  class=" green-title" rel="nofollow"><span>Occasions</span></a><ul class="level2"><li  class="level3 nav-1-1-5-1 first last  grey"><a href="http://www.micromania.fr/acces-par-univers/ps4/occasions-ps4/occasions-jeux-ps4.html"  class=" grey" rel="nofollow"><span>Jeux</span></a></li></ul></li></ul></li><li  class="level1 nav-1-2 parent"><a href="http://www.micromania.fr/acces-par-univers/ps3.html"  class="" rel="nofollow"><span>PS3</span></a><ul class="level1"><li class="all-univers"><a href="http://www.micromania.fr/acces-par-univers/ps3.html">Tous l'univers</a></li><li  class="level2 nav-1-2-1 first parent"><a href="http://www.micromania.fr/acces-par-univers/ps3/ps3-jeux.html"  class="" rel="nofollow"><span>Jeux</span></a><ul class="level2"><li  class="level3 nav-1-2-1-1 first  blue"><a href="http://www.micromania.fr/acces-par-univers/ps3/ps3-jeux/tous-les-jeux-ps3.html"  class=" blue" rel="nofollow"><span>Tous les jeux</span></a></li><li  class="level3 nav-1-2-1-2  grey"><a href="http://www.micromania.fr/acces-par-univers/ps3/ps3-jeux/nouveautes-ps3.html"  class=" grey" rel="nofollow"><span>Nouveautés</span></a></li><li  class="level3 nav-1-2-1-3  grey"><a href="http://www.micromania.fr/acces-par-univers/ps3/ps3-jeux/prochaines-sorties-ps3.html"  class=" grey" rel="nofollow"><span>Prochaines sorties</span></a></li><li  class="level3 nav-1-2-1-4  green"><a href="http://www.micromania.fr/acces-par-univers/ps3/ps3-jeux/jeux-occasions-ps3.html"  class=" green" rel="nofollow"><span>Occasions</span></a></li><li  class="level3 nav-1-2-1-5 last  red"><a href="http://www.micromania.fr/acces-par-univers/ps3/ps3-jeux/promotions-ps3.html"  class=" red" rel="nofollow"><span>Promotions</span></a></li></ul></li><li  class="level2 nav-1-2-2"><a href="http://www.micromania.fr/acces-par-univers/ps3/ps3-console.html"  class="" rel="nofollow"><span>Consoles</span></a></li><li  class="level2 nav-1-2-3"><a href="http://www.micromania.fr/acces-par-univers/ps3/ps3-accessoires.html"  class="" rel="nofollow"><span>Accessoires</span></a></li><li  class="level2 nav-1-2-4"><a href="http://www.micromania.fr/acces-par-univers/ps3/ps3-playstation-network.html"  class="" rel="nofollow"><span>Playstation network</span></a></li><li  class="level2 nav-1-2-5 last  green-title parent"><a href="http://www.micromania.fr/acces-par-univers/ps3/occasions-ps3.html"  class=" green-title" rel="nofollow"><span>Occasions</span></a><ul class="level2"><li  class="level3 nav-1-2-5-1 first  grey"><a href="http://www.micromania.fr/acces-par-univers/ps3/occasions-ps3/occasions-jeux-ps3.html"  class=" grey" rel="nofollow"><span>Jeux</span></a></li><li  class="level3 nav-1-2-5-2 last  grey"><a href="http://www.micromania.fr/acces-par-univers/ps3/occasions-ps3/occasions-consoles-ps3.html"  class=" grey" rel="nofollow"><span>Consoles</span></a></li></ul></li></ul></li><li  class="level1 nav-1-3 parent"><a href="http://www.micromania.fr/acces-par-univers/xbox-one.html"  class="" rel="nofollow"><span>Xbox One</span></a><ul class="level1"><li class="all-univers"><a href="http://www.micromania.fr/acces-par-univers/xbox-one.html">Tous l'univers</a></li><li  class="level2 nav-1-3-1 first parent"><a href="http://www.micromania.fr/acces-par-univers/xbox-one/xbox-one-jeux.html"  class="" rel="nofollow"><span>Jeux</span></a><ul class="level2"><li  class="level3 nav-1-3-1-1 first  blue"><a href="http://www.micromania.fr/acces-par-univers/xbox-one/xbox-one-jeux/tous-les-jeux-xbox-one.html"  class=" blue" rel="nofollow"><span>Tous les jeux</span></a></li><li  class="level3 nav-1-3-1-2  grey"><a href="http://www.micromania.fr/acces-par-univers/xbox-one/xbox-one-jeux/nouveautes-xbox-one.html"  class=" grey" rel="nofollow"><span>Nouveautés</span></a></li><li  class="level3 nav-1-3-1-3  grey"><a href="http://www.micromania.fr/acces-par-univers/xbox-one/xbox-one-jeux/prochaines-sorties-xbox-one.html"  class=" grey" rel="nofollow"><span>Prochaines sorties</span></a></li><li  class="level3 nav-1-3-1-4  green"><a href="http://www.micromania.fr/acces-par-univers/xbox-one/xbox-one-jeux/jeux-occasions-xbox-one.html"  class=" green" rel="nofollow"><span>Occasions</span></a></li><li  class="level3 nav-1-3-1-5 last  red"><a href="http://www.micromania.fr/acces-par-univers/xbox-one/xbox-one-jeux/promotions-xbox-one.html"  class=" red" rel="nofollow"><span>Promotions</span></a></li></ul></li><li  class="level2 nav-1-3-2"><a href="http://www.micromania.fr/acces-par-univers/xbox-one/xbox-one-console.html"  class="" rel="nofollow"><span>Consoles</span></a></li><li  class="level2 nav-1-3-3"><a href="http://www.micromania.fr/acces-par-univers/xbox-one/xbox-one-accessoires.html"  class="" rel="nofollow"><span>Accessoires</span></a></li><li  class="level2 nav-1-3-4"><a href="http://www.micromania.fr/acces-par-univers/xbox-one/xbox-one-xbox-live.html"  class="" rel="nofollow"><span>Xbox live</span></a></li><li  class="level2 nav-1-3-5 last  green-title parent"><a href="http://www.micromania.fr/acces-par-univers/xbox-one/occasions-xbox-one.html"  class=" green-title" rel="nofollow"><span>Occasions</span></a><ul class="level2"><li  class="level3 nav-1-3-5-1 first last  grey"><a href="http://www.micromania.fr/acces-par-univers/xbox-one/occasions-xbox-one/occasions-jeux-xbox-one.html"  class=" grey" rel="nofollow"><span>Jeux</span></a></li></ul></li></ul></li><li  class="level1 nav-1-4 parent"><a href="http://www.micromania.fr/acces-par-univers/xbox-360.html"  class="" rel="nofollow"><span>Xbox 360</span></a><ul class="level1"><li class="all-univers"><a href="http://www.micromania.fr/acces-par-univers/xbox-360.html">Tous l'univers</a></li><li  class="level2 nav-1-4-1 first parent"><a href="http://www.micromania.fr/acces-par-univers/xbox-360/xbox-360-jeux.html"  class="" rel="nofollow"><span>Jeux</span></a><ul class="level2"><li  class="level3 nav-1-4-1-1 first  blue"><a href="http://www.micromania.fr/acces-par-univers/xbox-360/xbox-360-jeux/tous-les-jeux-xbox-360.html"  class=" blue" rel="nofollow"><span>Tous les jeux</span></a></li><li  class="level3 nav-1-4-1-2  grey"><a href="http://www.micromania.fr/acces-par-univers/xbox-360/xbox-360-jeux/nouveautes-xbox-360.html"  class=" grey" rel="nofollow"><span>Nouveautés</span></a></li><li  class="level3 nav-1-4-1-3  grey"><a href="http://www.micromania.fr/acces-par-univers/xbox-360/xbox-360-jeux/prochaines-sorties-xbox-360.html"  class=" grey" rel="nofollow"><span>Prochaines sorties</span></a></li><li  class="level3 nav-1-4-1-4  green"><a href="http://www.micromania.fr/acces-par-univers/xbox-360/xbox-360-jeux/jeux-occasions-xbox-360.html"  class=" green" rel="nofollow"><span>Occasions</span></a></li><li  class="level3 nav-1-4-1-5 last  red"><a href="http://www.micromania.fr/acces-par-univers/xbox-360/xbox-360-jeux/promotions-xbox-360.html"  class=" red" rel="nofollow"><span>Promotions</span></a></li></ul></li><li  class="level2 nav-1-4-2"><a href="http://www.micromania.fr/acces-par-univers/xbox-360/xbox-360-console.html"  class="" rel="nofollow"><span>Consoles</span></a></li><li  class="level2 nav-1-4-3"><a href="http://www.micromania.fr/acces-par-univers/xbox-360/xbox-360-accessoires.html"  class="" rel="nofollow"><span>Accessoires</span></a></li><li  class="level2 nav-1-4-4"><a href="http://www.micromania.fr/acces-par-univers/xbox-360/xbox-360-xbox-live.html"  class="" rel="nofollow"><span>Xbox live</span></a></li><li  class="level2 nav-1-4-5 last  green-title parent"><a href="http://www.micromania.fr/acces-par-univers/xbox-360/occasions-xbox-360.html"  class=" green-title" rel="nofollow"><span>Occasions</span></a><ul class="level2"><li  class="level3 nav-1-4-5-1 first  grey"><a href="http://www.micromania.fr/acces-par-univers/xbox-360/occasions-xbox-360/occasions-jeux-xbox-360.html"  class=" grey" rel="nofollow"><span>Jeux</span></a></li><li  class="level3 nav-1-4-5-2  grey"><a href="http://www.micromania.fr/acces-par-univers/xbox-360/occasions-xbox-360/occasions-consoles-xbox-360.html"  class=" grey" rel="nofollow"><span>Consoles</span></a></li><li  class="level3 nav-1-4-5-3 last  grey"><a href="http://www.micromania.fr/acces-par-univers/xbox-360/occasions-xbox-360/occasions-accessoires-xbox-360.html"  class=" grey" rel="nofollow"><span>Accessoires</span></a></li></ul></li></ul></li><li  class="level1 nav-1-5 parent"><a href="http://www.micromania.fr/acces-par-univers/wii.html"  class="" rel="nofollow"><span>Wii</span></a><ul class="level1"><li class="all-univers"><a href="http://www.micromania.fr/acces-par-univers/wii.html">Tous l'univers</a></li><li  class="level2 nav-1-5-1 first parent"><a href="http://www.micromania.fr/acces-par-univers/wii/wii-jeux.html"  class="" rel="nofollow"><span>Jeux</span></a><ul class="level2"><li  class="level3 nav-1-5-1-1 first  blue"><a href="http://www.micromania.fr/acces-par-univers/wii/wii-jeux/tous-les-jeux-wii.html"  class=" blue" rel="nofollow"><span>Tous les jeux</span></a></li><li  class="level3 nav-1-5-1-2  grey"><a href="http://www.micromania.fr/acces-par-univers/wii/wii-jeux/nouveautes-wii.html"  class=" grey" rel="nofollow"><span>Nouveautés</span></a></li><li  class="level3 nav-1-5-1-3  green"><a href="http://www.micromania.fr/acces-par-univers/wii/wii-jeux/jeux-occasions-wii.html"  class=" green" rel="nofollow"><span>Occasions</span></a></li><li  class="level3 nav-1-5-1-4 last  red"><a href="http://www.micromania.fr/acces-par-univers/wii/wii-jeux/promotions-wii.html"  class=" red" rel="nofollow"><span>Promotions</span></a></li></ul></li><li  class="level2 nav-1-5-2"><a href="http://www.micromania.fr/acces-par-univers/wii/wii-accessoires.html"  class="" rel="nofollow"><span>Accessoires</span></a></li><li  class="level2 nav-1-5-3 last  green-title parent"><a href="http://www.micromania.fr/acces-par-univers/wii/occasions-wii.html"  class=" green-title" rel="nofollow"><span>Occasions</span></a><ul class="level2"><li  class="level3 nav-1-5-3-1 first  grey"><a href="http://www.micromania.fr/acces-par-univers/wii/occasions-wii/occasions-jeux-wii.html"  class=" grey" rel="nofollow"><span>Jeux</span></a></li><li  class="level3 nav-1-5-3-2 last  grey"><a href="http://www.micromania.fr/acces-par-univers/wii/occasions-wii/occasions-accessoires-wii.html"  class=" grey" rel="nofollow"><span>Accessoires</span></a></li></ul></li></ul></li><li  class="level1 nav-1-6 parent"><a href="http://www.micromania.fr/acces-par-univers/wii-u.html"  class="" rel="nofollow"><span>Wii U</span></a><ul class="level1"><li class="all-univers"><a href="http://www.micromania.fr/acces-par-univers/wii-u.html">Tous l'univers</a></li><li  class="level2 nav-1-6-1 first parent"><a href="http://www.micromania.fr/acces-par-univers/wii-u/wii-u-jeux.html"  class="" rel="nofollow"><span>Jeux</span></a><ul class="level2"><li  class="level3 nav-1-6-1-1 first  blue"><a href="http://www.micromania.fr/acces-par-univers/wii-u/wii-u-jeux/tous-les-jeux-wii-u.html"  class=" blue" rel="nofollow"><span>Tous les jeux</span></a></li><li  class="level3 nav-1-6-1-2  grey"><a href="http://www.micromania.fr/acces-par-univers/wii-u/wii-u-jeux/nouveautes-wii-u.html"  class=" grey" rel="nofollow"><span>Nouveautés</span></a></li><li  class="level3 nav-1-6-1-3  grey"><a href="http://www.micromania.fr/acces-par-univers/wii-u/wii-u-jeux/prochaines-sorties-wii-u.html"  class=" grey" rel="nofollow"><span>Prochaines sorties</span></a></li><li  class="level3 nav-1-6-1-4  green"><a href="http://www.micromania.fr/acces-par-univers/wii-u/wii-u-jeux/jeux-occasions-wii-u.html"  class=" green" rel="nofollow"><span>Occasions</span></a></li><li  class="level3 nav-1-6-1-5 last  red"><a href="http://www.micromania.fr/acces-par-univers/wii-u/wii-u-jeux/promotions-wii-u.html"  class=" red" rel="nofollow"><span>Promotions</span></a></li></ul></li><li  class="level2 nav-1-6-2"><a href="http://www.micromania.fr/acces-par-univers/wii-u/wii-u-console.html"  class="" rel="nofollow"><span>Consoles</span></a></li><li  class="level2 nav-1-6-3"><a href="http://www.micromania.fr/acces-par-univers/wii-u/wii-u-accessoires.html"  class="" rel="nofollow"><span>Accessoires</span></a></li><li  class="level2 nav-1-6-4 last  green-title parent"><a href="http://www.micromania.fr/acces-par-univers/wii-u/occasions-wii-u.html"  class=" green-title" rel="nofollow"><span>Occasions</span></a><ul class="level2"><li  class="level3 nav-1-6-4-1 first last  grey"><a href="http://www.micromania.fr/acces-par-univers/wii-u/occasions-wii-u/occasions-jeux-wii-u.html"  class=" grey" rel="nofollow"><span>Jeux</span></a></li></ul></li></ul></li><li  class="level1 nav-1-7 parent"><a href="http://www.micromania.fr/acces-par-univers/nintendo-3ds.html"  class="" rel="nofollow"><span>Nintendo 3DS</span></a><ul class="level1"><li class="all-univers"><a href="http://www.micromania.fr/acces-par-univers/nintendo-3ds.html">Tous l'univers</a></li><li  class="level2 nav-1-7-1 first parent"><a href="http://www.micromania.fr/acces-par-univers/nintendo-3ds/nintendo-3ds-jeux.html"  class="" rel="nofollow"><span>Jeux</span></a><ul class="level2"><li  class="level3 nav-1-7-1-1 first  blue"><a href="http://www.micromania.fr/acces-par-univers/nintendo-3ds/nintendo-3ds-jeux/tous-les-jeux-3ds.html"  class=" blue" rel="nofollow"><span>Tous les jeux</span></a></li><li  class="level3 nav-1-7-1-2  grey"><a href="http://www.micromania.fr/acces-par-univers/nintendo-3ds/nintendo-3ds-jeux/nouveautes-3ds.html"  class=" grey" rel="nofollow"><span>Nouveautés</span></a></li><li  class="level3 nav-1-7-1-3  grey"><a href="http://www.micromania.fr/acces-par-univers/nintendo-3ds/nintendo-3ds-jeux/prochaines-sorties-3ds.html"  class=" grey" rel="nofollow"><span>Prochaines sorties</span></a></li><li  class="level3 nav-1-7-1-4  green"><a href="http://www.micromania.fr/acces-par-univers/nintendo-3ds/nintendo-3ds-jeux/jeux-occasions-3ds.html"  class=" green" rel="nofollow"><span>Occasions</span></a></li><li  class="level3 nav-1-7-1-5 last  red"><a href="http://www.micromania.fr/acces-par-univers/nintendo-3ds/nintendo-3ds-jeux/promotions-3ds.html"  class=" red" rel="nofollow"><span>Promotions</span></a></li></ul></li><li  class="level2 nav-1-7-2"><a href="http://www.micromania.fr/acces-par-univers/nintendo-3ds/nintendo-3ds-console.html"  class="" rel="nofollow"><span>Consoles</span></a></li><li  class="level2 nav-1-7-3"><a href="http://www.micromania.fr/acces-par-univers/nintendo-3ds/nintendo-3ds-accessoires.html"  class="" rel="nofollow"><span>Accessoires</span></a></li><li  class="level2 nav-1-7-4 last  green-title parent"><a href="http://www.micromania.fr/acces-par-univers/nintendo-3ds/occasions-3ds.html"  class=" green-title" rel="nofollow"><span>Occasions</span></a><ul class="level2"><li  class="level3 nav-1-7-4-1 first  grey"><a href="http://www.micromania.fr/acces-par-univers/nintendo-3ds/occasions-3ds/occasions-jeux-3ds.html"  class=" grey" rel="nofollow"><span>Jeux</span></a></li><li  class="level3 nav-1-7-4-2  grey"><a href="http://www.micromania.fr/acces-par-univers/nintendo-3ds/occasions-3ds/occasions-consoles-3ds.html"  class=" grey" rel="nofollow"><span>Consoles</span></a></li><li  class="level3 nav-1-7-4-3 last  grey"><a href="http://www.micromania.fr/acces-par-univers/nintendo-3ds/occasions-3ds/occasions-accessoires-3ds.html"  class=" grey" rel="nofollow"><span>Accessoires</span></a></li></ul></li></ul></li><li  class="level1 nav-1-8 parent"><a href="http://www.micromania.fr/acces-par-univers/nintendo-ds.html"  class="" rel="nofollow"><span>Nintendo DS</span></a><ul class="level1"><li class="all-univers"><a href="http://www.micromania.fr/acces-par-univers/nintendo-ds.html">Tous l'univers</a></li><li  class="level2 nav-1-8-1 first parent"><a href="http://www.micromania.fr/acces-par-univers/nintendo-ds/nintendo-ds-jeux.html"  class="" rel="nofollow"><span>Jeux</span></a><ul class="level2"><li  class="level3 nav-1-8-1-1 first  blue"><a href="http://www.micromania.fr/acces-par-univers/nintendo-ds/nintendo-ds-jeux/tous-les-jeux-ds.html"  class=" blue" rel="nofollow"><span>Tous les jeux</span></a></li><li  class="level3 nav-1-8-1-2  grey"><a href="http://www.micromania.fr/acces-par-univers/nintendo-ds/nintendo-ds-jeux/prochaines-sorties-ds.html"  class=" grey" rel="nofollow"><span>Prochaines sorties</span></a></li><li  class="level3 nav-1-8-1-3 last  green"><a href="http://www.micromania.fr/acces-par-univers/nintendo-ds/nintendo-ds-jeux/jeux-occasions-ds.html"  class=" green" rel="nofollow"><span>Occasions</span></a></li></ul></li><li  class="level2 nav-1-8-2"><a href="http://www.micromania.fr/acces-par-univers/nintendo-ds/nintendo-ds-accessoires.html"  class="" rel="nofollow"><span>Accessoires</span></a></li><li  class="level2 nav-1-8-3 last  green-title parent"><a href="http://www.micromania.fr/acces-par-univers/nintendo-ds/occasions-ds.html"  class=" green-title" rel="nofollow"><span>Occasions</span></a><ul class="level2"><li  class="level3 nav-1-8-3-1 first  grey"><a href="http://www.micromania.fr/acces-par-univers/nintendo-ds/occasions-ds/occasions-jeux-ds.html"  class=" grey" rel="nofollow"><span>Jeux</span></a></li><li  class="level3 nav-1-8-3-2 last  grey"><a href="http://www.micromania.fr/acces-par-univers/nintendo-ds/occasions-ds/occasions-consoles-ds.html"  class=" grey" rel="nofollow"><span>Consoles</span></a></li></ul></li></ul></li><li  class="level1 nav-1-9 parent"><a href="http://www.micromania.fr/acces-par-univers/ps-vita.html"  class="" rel="nofollow"><span>PS Vita</span></a><ul class="level1"><li class="all-univers"><a href="http://www.micromania.fr/acces-par-univers/ps-vita.html">Tous l'univers</a></li><li  class="level2 nav-1-9-1 first parent"><a href="http://www.micromania.fr/acces-par-univers/ps-vita/ps-vita-jeux.html"  class="" rel="nofollow"><span>Jeux</span></a><ul class="level2"><li  class="level3 nav-1-9-1-1 first  blue"><a href="http://www.micromania.fr/acces-par-univers/ps-vita/ps-vita-jeux/tous-les-jeux-ps-vita.html"  class=" blue" rel="nofollow"><span>Tous les jeux</span></a></li><li  class="level3 nav-1-9-1-2  grey"><a href="http://www.micromania.fr/acces-par-univers/ps-vita/ps-vita-jeux/prochaines-sorties-ps-vita.html"  class=" grey" rel="nofollow"><span>Prochaines sorties</span></a></li><li  class="level3 nav-1-9-1-3 last  green"><a href="http://www.micromania.fr/acces-par-univers/ps-vita/ps-vita-jeux/jeux-occasions-ps-vita.html"  class=" green" rel="nofollow"><span>Occasions</span></a></li></ul></li><li  class="level2 nav-1-9-2"><a href="http://www.micromania.fr/acces-par-univers/ps-vita/ps-vita-console.html"  class="" rel="nofollow"><span>Consoles</span></a></li><li  class="level2 nav-1-9-3"><a href="http://www.micromania.fr/acces-par-univers/ps-vita/ps-vita-accessoires.html"  class="" rel="nofollow"><span>Accessoires</span></a></li><li  class="level2 nav-1-9-4 last  green-title parent"><a href="http://www.micromania.fr/acces-par-univers/ps-vita/occasions-ps-vita.html"  class=" green-title" rel="nofollow"><span>Occasions</span></a><ul class="level2"><li  class="level3 nav-1-9-4-1 first last  grey"><a href="http://www.micromania.fr/acces-par-univers/ps-vita/occasions-ps-vita/occasions-jeux-ps-vita.html"  class=" grey" rel="nofollow"><span>Jeux</span></a></li></ul></li></ul></li><li  class="level1 nav-1-10 parent"><a href="http://www.micromania.fr/acces-par-univers/psp.html"  class="" rel="nofollow"><span>PSP</span></a><ul class="level1"><li class="all-univers"><a href="http://www.micromania.fr/acces-par-univers/psp.html">Tous l'univers</a></li><li  class="level2 nav-1-10-1 first parent"><a href="http://www.micromania.fr/acces-par-univers/psp/psp-jeux.html"  class="" rel="nofollow"><span>Jeux</span></a><ul class="level2"><li  class="level3 nav-1-10-1-1 first  blue"><a href="http://www.micromania.fr/acces-par-univers/psp/psp-jeux/tous-les-jeux-psp.html"  class=" blue" rel="nofollow"><span>Tous les jeux</span></a></li><li  class="level3 nav-1-10-1-2  grey"><a href="http://www.micromania.fr/acces-par-univers/psp/psp-jeux/nouveautes-psp.html"  class=" grey" rel="nofollow"><span>Nouveautés</span></a></li><li  class="level3 nav-1-10-1-3 last  green"><a href="http://www.micromania.fr/acces-par-univers/psp/psp-jeux/jeux-occasions-psp.html"  class=" green" rel="nofollow"><span>Occasions</span></a></li></ul></li><li  class="level2 nav-1-10-2"><a href="http://www.micromania.fr/acces-par-univers/psp/psp-accessoires.html"  class="" rel="nofollow"><span>Accessoires</span></a></li><li  class="level2 nav-1-10-3 last  green-title parent"><a href="http://www.micromania.fr/acces-par-univers/psp/occasions-psp.html"  class=" green-title" rel="nofollow"><span>Occasions</span></a><ul class="level2"><li  class="level3 nav-1-10-3-1 first last  grey"><a href="http://www.micromania.fr/acces-par-univers/psp/occasions-psp/occasions-jeux-psp.html"  class=" grey" rel="nofollow"><span>Jeux</span></a></li></ul></li></ul></li><li  class="level1 nav-1-11 parent"><a href="http://www.micromania.fr/acces-par-univers/ps2.html"  class="" rel="nofollow"><span>PS2</span></a><ul class="level1"><li class="all-univers"><a href="http://www.micromania.fr/acces-par-univers/ps2.html">Tous l'univers</a></li><li  class="level2 nav-1-11-1 first parent"><a href="http://www.micromania.fr/acces-par-univers/ps2/ps2-jeux.html"  class="" rel="nofollow"><span>Jeux</span></a><ul class="level2"><li  class="level3 nav-1-11-1-1 first  blue"><a href="http://www.micromania.fr/acces-par-univers/ps2/ps2-jeux/tous-les-jeux-ps2.html"  class=" blue" rel="nofollow"><span>Tous les jeux</span></a></li><li  class="level3 nav-1-11-1-2 last  green"><a href="http://www.micromania.fr/acces-par-univers/ps2/ps2-jeux/jeux-occasions-ps2.html"  class=" green" rel="nofollow"><span>Occasions</span></a></li></ul></li><li  class="level2 nav-1-11-2 last  green-title parent"><a href="http://www.micromania.fr/acces-par-univers/ps2/occasions-ps2.html"  class=" green-title" rel="nofollow"><span>Occasions</span></a><ul class="level2"><li  class="level3 nav-1-11-2-1 first last  grey"><a href="http://www.micromania.fr/acces-par-univers/ps2/occasions-ps2/occasions-jeux-ps2.html"  class=" grey" rel="nofollow"><span>Jeux</span></a></li></ul></li></ul></li><li  class="level1 nav-1-12 last parent"><a href="http://www.micromania.fr/acces-par-univers/pc.html"  class="" rel="nofollow"><span>PC</span></a><ul class="level1"><li class="all-univers"><a href="http://www.micromania.fr/acces-par-univers/pc.html">Tous l'univers</a></li><li  class="level2 nav-1-12-1 first parent"><a href="http://www.micromania.fr/acces-par-univers/pc/pc-jeux.html"  class="" rel="nofollow"><span>Jeux</span></a><ul class="level2"><li  class="level3 nav-1-12-1-1 first  blue"><a href="http://www.micromania.fr/acces-par-univers/pc/pc-jeux/tous-les-jeux-pc.html"  class=" blue" rel="nofollow"><span>Tous les jeux</span></a></li><li  class="level3 nav-1-12-1-2  grey"><a href="http://www.micromania.fr/acces-par-univers/pc/pc-jeux/nouveautes-pc.html"  class=" grey" rel="nofollow"><span>Nouveautés</span></a></li><li  class="level3 nav-1-12-1-3  grey"><a href="http://www.micromania.fr/acces-par-univers/pc/pc-jeux/prochaines-sorties-pc.html"  class=" grey" rel="nofollow"><span>Prochaines sorties</span></a></li><li  class="level3 nav-1-12-1-4 last  red"><a href="http://www.micromania.fr/acces-par-univers/pc/pc-jeux/promotions-pc.html"  class=" red" rel="nofollow"><span>Promotions</span></a></li></ul></li><li  class="level2 nav-1-12-2"><a href="http://www.micromania.fr/acces-par-univers/pc/pc-accessoires.html"  class="" rel="nofollow"><span>Accessoires</span></a></li><li  class="level2 nav-1-12-3 last"><a href="http://www.micromania.fr/acces-par-univers/pc/jeux-a-telecharger.html"  class="" rel="nofollow"><span>Jeux à télécharger</span></a></li></ul></li></ul></li><li  class="level0 nav-2 level-top parent"><a href="http://www.micromania.fr/jeux.html"  class="level-top " rel="nofollow"><span>Jeux</span></a><ul class="level0"><li  class="level1 nav-2-1 first  blue"><a href="http://www.micromania.fr/jeux/tous-les-jeux.html"  class=" blue" rel="nofollow"><span>Tous les jeux</span></a></li><li  class="level1 nav-2-2  grey"><a href="http://www.micromania.fr/jeux/nouveautes.html"  class=" grey" rel="nofollow"><span>Nouveautés</span></a></li><li  class="level1 nav-2-3  grey"><a href="http://www.micromania.fr/jeux/prochaines-sorties.html"  class=" grey" rel="nofollow"><span>Prochaines sorties</span></a></li><li  class="level1 nav-2-4  red"><a href="http://www.micromania.fr/jeux/promotions.html"  class=" red" rel="nofollow"><span>Promotions</span></a></li><li  class="level1 nav-2-5  green"><a href="http://www.micromania.fr/jeux/jeux-occasions.html"  class=" green" rel="nofollow"><span>Occasions</span></a></li><li  class="level1 nav-2-6  grey"><a href="http://www.micromania.fr/jeux/produits-en-baisse.html"  class=" grey" rel="nofollow"><span>Baisse de prix</span></a></li><li  class="level1 nav-2-7  grey"><a href="http://www.micromania.fr/jeux/jeux-gratuits.html"  class=" grey" rel="nofollow"><span>Jeux gratuits</span></a></li><li  class="level1 nav-2-8 last  grey"><a href="http://www.micromania.fr/jeux/jeux-a-telecharger.html"  class=" grey" rel="nofollow"><span>Jeux à télécharger</span></a></li></ul></li><li  class="level0 nav-3 level-top parent"><a href="http://www.micromania.fr/consoles.html"  class="level-top " rel="nofollow"><span>Consoles</span></a><ul class="level0"><li  class="level1 nav-3-1 first  blue"><a href="http://www.micromania.fr/consoles/consoles-toutes.html"  class=" blue" rel="nofollow"><span>Toutes</span></a></li><li  class="level1 nav-3-2  green"><a href="http://www.micromania.fr/consoles/consoles-occasions.html"  class=" green" rel="nofollow"><span>Occasions</span></a></li><li  class="level1 nav-3-3  red"><a href="http://www.micromania.fr/consoles/consoles-promotion.html"  class=" red" rel="nofollow"><span>Promotions</span></a></li><li  class="level1 nav-3-4  grey"><a href="http://www.micromania.fr/consoles/consoles-ps4.html"  class=" grey" rel="nofollow"><span>PS4</span></a></li><li  class="level1 nav-3-5  grey"><a href="http://www.micromania.fr/consoles/consoles-ps3.html"  class=" grey" rel="nofollow"><span>PS3</span></a></li><li  class="level1 nav-3-6  grey"><a href="http://www.micromania.fr/consoles/consoles-xbox-one.html"  class=" grey" rel="nofollow"><span>Xbox One</span></a></li><li  class="level1 nav-3-7  grey"><a href="http://www.micromania.fr/consoles/consoles-xbox-360.html"  class=" grey" rel="nofollow"><span>Xbox 360</span></a></li><li  class="level1 nav-3-8  grey"><a href="http://www.micromania.fr/consoles/consoles-wii-u.html"  class=" grey" rel="nofollow"><span>Wii U</span></a></li><li  class="level1 nav-3-9  grey"><a href="http://www.micromania.fr/consoles/consoles-nintendo-3ds.html"  class=" grey" rel="nofollow"><span>Nintendo 3DS</span></a></li><li  class="level1 nav-3-10 last  grey"><a href="http://www.micromania.fr/consoles/consoles-ps-vita.html"  class=" grey" rel="nofollow"><span>PS Vita</span></a></li></ul></li><li  class="level0 nav-4 level-top parent"><a href="http://www.micromania.fr/accessoires.html"  class="level-top " rel="nofollow"><span>Accessoires</span></a><ul class="level0"><li  class="level1 nav-4-1 first  blue"><a href="http://www.micromania.fr/accessoires/accessoires-tous.html"  class=" blue" rel="nofollow"><span>Tous</span></a></li><li  class="level1 nav-4-2  green"><a href="http://www.micromania.fr/accessoires/accessoires-occasions.html"  class=" green" rel="nofollow"><span>Occasions</span></a></li><li  class="level1 nav-4-3  red"><a href="http://www.micromania.fr/accessoires/accessoires-promotion.html"  class=" red" rel="nofollow"><span>Promotions</span></a></li><li  class="level1 nav-4-4  grey"><a href="http://www.micromania.fr/accessoires/accessoires-manettes.html"  class=" grey" rel="nofollow"><span>Manettes</span></a></li><li  class="level1 nav-4-5  grey"><a href="http://www.micromania.fr/accessoires/accessoires-casques.html"  class=" grey" rel="nofollow"><span>Casques</span></a></li><li  class="level1 nav-4-6 last  grey"><a href="http://www.micromania.fr/accessoires/accessoires-volant.html"  class=" grey" rel="nofollow"><span>Volants</span></a></li></ul></li><li  class="level0 nav-5 level-top parent"><a href="http://www.micromania.fr/dlc-abonnements.html"  class="level-top " rel="nofollow"><span>DLC / Abonnements</span></a><ul class="level0"><li  class="level1 nav-5-1 first  grey"><a href="http://www.micromania.fr/dlc-abonnements/dlc-abonnements-abonnements.html"  class=" grey" rel="nofollow"><span>Abonnements</span></a></li><li  class="level1 nav-5-2 last  grey"><a href="http://www.micromania.fr/dlc-abonnements/dlc-abonnements-cartes-prepayees.html"  class=" grey" rel="nofollow"><span>Cartes Prépayées</span></a></li></ul></li><li  class="level0 nav-6 level-top parent"><a href="http://www.micromania.fr/produits-derives.html"  class="level-top " rel="nofollow"><span>Produits dérivés</span></a><ul class="level0"><li  class="level1 nav-6-1 first  red"><a href="http://www.micromania.fr/produits-derives/promotions-derives.html"  class=" red" rel="nofollow"><span>Promotions</span></a></li><li  class="level1 nav-6-2  grey"><a href="http://www.micromania.fr/produits-derives/play-arts.html"  class=" grey" rel="nofollow"><span>Play Arts</span></a></li><li  class="level1 nav-6-3  grey"><a href="http://www.micromania.fr/produits-derives/produits-derives-figurines.html"  class=" grey" rel="nofollow"><span>Figurines</span></a></li><li  class="level1 nav-6-4  grey"><a href="http://www.micromania.fr/produits-derives/produits-derives-tee-shirt.html"  class=" grey" rel="nofollow"><span>Tee-shirts</span></a></li><li  class="level1 nav-6-5  blue"><a href="http://www.micromania.fr/produits-derives/produits-derives.html"  class=" blue" rel="nofollow"><span>Tous</span></a></li><li  class="level1 nav-6-6  grey"><a href="http://www.micromania.fr/produits-derives/produits-derives-peluches.html"  class=" grey" rel="nofollow"><span>Peluches</span></a></li><li  class="level1 nav-6-7  grey"><a href="http://www.micromania.fr/produits-derives/produits-derives-guides.html"  class=" grey" rel="nofollow"><span>Guides</span></a></li><li  class="level1 nav-6-8  grey"><a href="http://www.micromania.fr/produits-derives/produits-derives-carte-cadeau.html"  class=" grey" rel="nofollow"><span>Carte cadeau</span></a></li><li  class="level1 nav-6-9  grey"><a href="http://www.micromania.fr/produits-derives/bandes-originales.html"  class=" grey" rel="nofollow"><span>Bandes Originales</span></a></li><li  class="level1 nav-6-10  grey"><a href="http://www.micromania.fr/produits-derives/porte-cles.html"  class=" grey" rel="nofollow"><span>Porte-Clés</span></a></li><li  class="level1 nav-6-11 last  grey"><a href="http://www.micromania.fr/produits-derives/mugs.html"  class=" grey" rel="nofollow"><span>Mugs</span></a></li></ul></li><li  class="level0 nav-7 level-top parent"><a href="http://www.micromania.fr/smartphones-tablettes.html"  class="level-top " rel="nofollow"><span>Smartphones / Tablettes</span></a><ul class="level0"><li  class="level1 nav-7-1 first  blue"><a href="http://www.micromania.fr/smartphones-tablettes/smartphones-tablettes-tous.html"  class=" blue" rel="nofollow"><span>Tous</span></a></li><li  class="level1 nav-7-2  grey"><a href="http://www.micromania.fr/smartphones-tablettes/smartphones-tablettes-smartphones.html"  class=" grey" rel="nofollow"><span>Smartphones</span></a></li><li  class="level1 nav-7-3  grey"><a href="http://www.micromania.fr/smartphones-tablettes/smartphones-tablettes-tablettes.html"  class=" grey" rel="nofollow"><span>Tablettes</span></a></li><li  class="level1 nav-7-4  grey"><a href="http://www.micromania.fr/smartphones-tablettes/smartphones-tablettes-ipod.html"  class=" grey" rel="nofollow"><span>iPod</span></a></li><li  class="level1 nav-7-5 last  grey"><a href="http://www.micromania.fr/smartphones-tablettes/reprise-mobiles.html"  class=" grey" rel="nofollow"><span>Reprise mobiles</span></a></li></ul></li><li  class="level0 nav-8 last level-top green-title parent"><a href="http://www.micromania.fr/occasions.html"  class="level-top  green-title" rel="nofollow"><span>Occasions</span></a><ul class="level0"><li  class="level1 nav-8-1 first  grey"><a href="http://www.micromania.fr/occasions/occasions-jeux.html"  class=" grey" rel="nofollow"><span>Jeux</span></a></li><li  class="level1 nav-8-2  grey"><a href="http://www.micromania.fr/occasions/occasions-consoles.html"  class=" grey" rel="nofollow"><span>Consoles</span></a></li><li  class="level1 nav-8-3  grey"><a href="http://www.micromania.fr/occasions/occasions-accessoires.html"  class=" grey" rel="nofollow"><span>Accessoires</span></a></li><li  class="level1 nav-8-4  grey"><a href="http://www.micromania.fr/occasions/occasions-smartphones.html"  class=" grey" rel="nofollow"><span>Smartphones</span></a></li><li  class="level1 nav-8-5 last  grey"><a href="http://www.micromania.fr/occasions/occasions-tablettes.html"  class=" grey" rel="nofollow"><span>Tablettes</span></a></li></ul></li>              </ul>
+        </div>
+    </div>
+    </div>
+
+            
+            
+
+                                    <div class="main col1-layout">
+            <div class="col-main">
+                    
+<div class="account-create">
+    <div class="page-title">
+        <h1>
+            Mon compte            <span>Votre compte vous permet de suivre vos commandes et de gérer vos préférences.</span>
+        </h1>
+    </div>
+            <form action="https://www.micromania.fr/customer/account/createpost/" method="post" id="form-validate" enctype="multipart/form-data" class="forgotpwd">
+        <div class="fieldset">
+            <input type="hidden" name="success_url" value="" />
+            <input type="hidden" name="error_url" value="" />
+            <h2>Créez votre compte internet Micromania.fr</h2>
+            <p>Remplissez les champs ci-dessous pour créer votre compte Micromania</p>
+            <ul class="form-list">
+
+                                                    <li><label for="gender" class="required"><em>*</em>Civilité:</label>
+<div class="input-box gender">
+    <div id="gender">
+                                                                                <input type="radio" class="regular-radio" id="gender-0" name="gender" value="1" checked="checked"/>
+                <label for="gender-0"><span>&nbsp;</span><em>Mr</em></label>
+                                                                <input type="radio" class="regular-radio" id="gender-1" name="gender" value="2"/>
+                <label for="gender-1"><span>&nbsp;</span><em>Mme</em></label>
+                                                                <input type="radio" class="regular-radio" id="gender-2" name="gender" value="135"/>
+                <label for="gender-2"><span>&nbsp;</span><em>Mlle</em></label>
+                                        </div>
+</div></li>
+                
+                <li class="fields">
+                <div class="customer-name">
+
+    <div class="field name-lastname">
+        <label for="lastname" class="required"><em>*</em>Nom</label>
+        <div class="input-box">
+            <input type="text" id="lastname" name="lastname" value="" title="Nom" maxlength="255" class="input-text required-entry"  />
+        </div>
+    </div>
+
+    <div class="field name-firstname">
+        <label for="firstname" class="required"><em>*</em>Prénom</label>
+        <div class="input-box">
+            <input type="text" id="firstname" name="firstname" value="" title="Prénom" maxlength="255" class="input-text required-entry"  />
+        </div>
+    </div>
+
+</div>
+                </li>
+
+                                                
+                                                                                                </ul>
+        </div>
+
+            <div class="fieldset account-create">
+            <ul class="form-list">
+                <li class="fields">
+                    <label for="email_address" class="required"><em>*</em>Adresse email</label>
+                    <div class="input-box">
+                        <input type="email" name="email" id="email_address" value="" title="Adresse email" class="input-text validate-email required-entry" />
+                    </div>
+                </li>
+                <li class="fields">
+                    <label for="email_address_confirm" class="required"><em>*</em>Confirmation d'adresse email</label>
+                    <div class="input-box">
+                        <input type="email" name="email_confirm" id="email_address_confirm" value="" title="Confirmation d'adresse email" class="input-text required-entry validate-email validate-confirm-email" />
+                    </div>
+                </li>
+                <li class="fields">
+                    <div class="password">
+                        <div class="field">
+                            <label for="password" class="required"><em>*</em>Créez votre mot de passe</label>
+                            <div class="input-box">
+                                <input type="password" name="password" id="password" title="Créez votre mot de passe" class="input-text required-entry validate-password" />
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label for="confirmation" class="required"><em>*</em>Confirmez le mot de passe</label>
+                            <div class="input-box">
+                                <input type="password" name="confirmation" title="Confirmez le mot de passe" id="confirmation" class="input-text required-entry validate-cpassword" />
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                                            </ul>
+            <script type="text/javascript">
+//<![CDATA[
+    var showTooltip = function() {
+        this.rememberTip = new Enterprise.Widget.Dialog(
+            'Qu\'est-ce que c\'est ?',
+            '<p>Checking &quot;Remember Me&quot; will let you access your shopping cart on this computer when you are logged out</p>'+
+            '<div class="buttons-set"><button type="button" class="button btn-close"><span><span>Fermer</span></span></button></div>',
+            'popup-remember-tip'
+        ),
+        $(this.rememberTip.getContent()).select('button.btn-close')[0].onclick = this.rememberTip.hide.bind(this.rememberTip);
+        this.rememberTip.show();
+        return false;
+    }
+
+    document.observe("dom:loaded", function() {
+        $$('#remember-me-box a').each(function(element) {
+            Event.observe(element, 'click', showTooltip);
+        });
+    });
+//]]>
+</script>
+        </div>
+
+        <div class="fieldset">
+            <ul class="form-list">
+                <li class="fields">
+                    <input type="checkbox" name="megacard[match]" value="1" id="megacard-match" class="megacard-match regular-checkbox" />
+                    <label for="megacard-match"><span>&nbsp;</span>Vous possédez une Megacarte ?</label>
+                </li>
+            </ul>
+        </div>
+
+        <div class="fieldset" id="megacard-match-form" style="display:none">
+            <ul class="form-list">
+                <li class="fields">
+                    <div class="field">
+                        <label for="megacard-name" class="required"><em>*</em> Nom de famille</label>
+                        <div class="input-box">
+                            <input type="text" name="megacard[name]" id="megacard-name" value="" class="input-text required-entry" />
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <ul class="form-list">
+                <li class="fields">
+                    <div class="area">
+                        <div class="field">
+                            <label for="megacard-postcode" class="required"><em>*</em> Code postal</label>
+                            <div class="input-box">
+                                <input type="number" name="megacard[postcode]" id="megacard-postcode" value="" class="input-text required-entry" />
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label for="megacard_number" class="required"><em>*</em> Numéro de membre</label>
+                            <div class="input-box">
+                                <input type="number" name="megacard[number]" id="megacard_number" value="" class="input-text required-entry" />
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <ul class="form-list">
+                <li class="fields">
+                    <div class="field">
+                        <label class="required"><em>*</em> Date de naissance</label>
+                        <ul class="megacard_dob_line">
+                            <li>
+                                <div class="megacard-megacard_dob">
+    <div class="select-item day">
+        <select name="megacard[nday]" id="megacard-nday" onchange="getElementById('megacard-day').value=this.value">
+            <option value="">Jour</option>
+            <option value='01' >1</option><option value='02' >2</option><option value='03' >3</option><option value='04' >4</option><option value='05' >5</option><option value='06' >6</option><option value='07' >7</option><option value='08' >8</option><option value='09' >9</option><option value='10' >10</option><option value='11' >11</option><option value='12' >12</option><option value='13' >13</option><option value='14' >14</option><option value='15' >15</option><option value='16' >16</option><option value='17' >17</option><option value='18' >18</option><option value='19' >19</option><option value='20' >20</option><option value='21' >21</option><option value='22' >22</option><option value='23' >23</option><option value='24' >24</option><option value='25' >25</option><option value='26' >26</option><option value='27' >27</option><option value='28' >28</option><option value='29' >29</option><option value='30' >30</option><option value='31' >31</option>        </select>
+    </div>
+    <div class="select-item month">
+        <select name="megacard[nmon]" id="megacard-nmon" onchange="getElementById('megacard-month').value=this.value">
+            <option value="">Mois</option>
+            <option value="01" >Janvier</option><option value="02" >Février</option><option value="03" >Mars</option><option value="04" >Avril</option><option value="05" >Mai</option><option value="06" >Juin</option><option value="07" >Juillet</option><option value="08" >Août</option><option value="09" >Septembre</option><option value="10" >Octobre</option><option value="11" >Novembre</option><option value="12" >Décembre</option>        </select>
+    </div>
+    <div class="select-item year">
+        <select name="megacard[nyear]" id="megacard-nyear" onchange="getElementById('megacard-year').value=this.value">
+            <option value="">Année</option>
+            <option value='2014' >2014</option><option value='2013' >2013</option><option value='2012' >2012</option><option value='2011' >2011</option><option value='2010' >2010</option><option value='2009' >2009</option><option value='2008' >2008</option><option value='2007' >2007</option><option value='2006' >2006</option><option value='2005' >2005</option><option value='2004' >2004</option><option value='2003' >2003</option><option value='2002' >2002</option><option value='2001' >2001</option><option value='2000' >2000</option><option value='1999' >1999</option><option value='1998' >1998</option><option value='1997' >1997</option><option value='1996' >1996</option><option value='1995' >1995</option><option value='1994' >1994</option><option value='1993' >1993</option><option value='1992' >1992</option><option value='1991' >1991</option><option value='1990' >1990</option><option value='1989' >1989</option><option value='1988' >1988</option><option value='1987' >1987</option><option value='1986' >1986</option><option value='1985' >1985</option><option value='1984' >1984</option><option value='1983' >1983</option><option value='1982' >1982</option><option value='1981' >1981</option><option value='1980' >1980</option><option value='1979' >1979</option><option value='1978' >1978</option><option value='1977' >1977</option><option value='1976' >1976</option><option value='1975' >1975</option><option value='1974' >1974</option><option value='1973' >1973</option><option value='1972' >1972</option><option value='1971' >1971</option><option value='1970' >1970</option><option value='1969' >1969</option><option value='1968' >1968</option><option value='1967' >1967</option><option value='1966' >1966</option><option value='1965' >1965</option><option value='1964' >1964</option><option value='1963' >1963</option><option value='1962' >1962</option><option value='1961' >1961</option><option value='1960' >1960</option><option value='1959' >1959</option><option value='1958' >1958</option><option value='1957' >1957</option><option value='1956' >1956</option><option value='1955' >1955</option><option value='1954' >1954</option><option value='1953' >1953</option><option value='1952' >1952</option><option value='1951' >1951</option><option value='1950' >1950</option><option value='1949' >1949</option><option value='1948' >1948</option><option value='1947' >1947</option><option value='1946' >1946</option><option value='1945' >1945</option><option value='1944' >1944</option><option value='1943' >1943</option><option value='1942' >1942</option><option value='1941' >1941</option><option value='1940' >1940</option><option value='1939' >1939</option><option value='1938' >1938</option><option value='1937' >1937</option><option value='1936' >1936</option><option value='1935' >1935</option><option value='1934' >1934</option>        </select>
+    </div>
+        <div class="dob-day">
+             <input type="hidden" id="megacard-day" name="megacard[day]" value="" title="Jour" class="input-dobdtext validate-custom"  />
+     </div><div class="dob-month">
+             <input type="hidden" id="megacard-month" name="megacard[month]" value="" title="Mois" class="input-dobmtext validate-custom"  />
+
+     </div><div class="dob-year">
+             <input type="hidden" id="megacard-year" name="megacard[year]" value="" title="Année" class="input-dobytext validate-custom"  />
+
+     </div>    <div class="dob-full" style="display:none;">
+        <input type="hidden" id="megacard-megacard_dob" name="megacard[megacard_dob]" />
+    </div>
+
+    <div class="validation-advice" style="display:none;"></div>
+</div>
+
+<script type="text/javascript">
+    //<![CDATA[
+    var MicromaniaDateElement = Class.create(Varien.DateElement,{
+        validate: function() {
+            var error = false,
+                day   = parseInt(this.day.value, 10)   || 0,
+                month = parseInt(this.month.value, 10) || 0,
+                year  = parseInt(this.year.value, 10)  || 0;
+            if (this.day.value.strip().empty()
+                && this.month.value.strip().empty()
+                && this.year.value.strip().empty()
+                ) {
+
+                if($$(".customer-account-edit")){
+                    this.full.value = '';
+                }
+                else if (this.required) {
+                    error = 'This date is a required value.';
+                } else {
+                    this.full.value = '';
+                }
+            } else if (!day || !month || !year) {
+                error = 'Please enter a valid full date.';
+            } else {
+                var date = new Date, countDaysInMonth = 0, errorType = null;
+                date.setYear(year);date.setMonth(month-1);date.setDate(32);
+                countDaysInMonth = 32 - date.getDate();
+                if(!countDaysInMonth || countDaysInMonth>31) countDaysInMonth = 31;
+
+                if (day<1 || day>countDaysInMonth) {
+                    errorType = 'day';
+                    error = 'Please enter a valid day (1-%d).';
+                } else if (month<1 || month>12) {
+                    errorType = 'month';
+                    error = 'Please enter a valid month (1-12).';
+                } else {
+                    if(day % 10 == day) this.day.value = '0'+day;
+                    if(month % 10 == month) this.month.value = '0'+month;
+                    this.full.value = this.format.replace(/%[mb]/i, this.month.value).replace(/%[de]/i, this.day.value).replace(/%y/i, this.year.value);
+                    var testFull = this.month.value + '/' + this.day.value + '/'+ this.year.value;
+                    var test = new Date(testFull);
+                    var today = new Date();
+
+                    if (isNaN(test)) {
+                        error = 'Please enter a valid date.';
+                    }else if(test.getTime() >= today.getTime()){
+                        error = 'Please enter a valid date of birth.';
+                    } else {
+                        this.setFullDate(test);
+                    }
+                }
+                var valueError = false;
+                if (!error && !this.validateData()){//(year<1900 || year>curyear) {
+                    errorType = this.validateDataErrorType;//'year';
+                    valueError = this.validateDataErrorText;//'Please enter a valid year (1900-%d).';
+                    error = valueError;
+                }
+            }
+
+            if (error !== false) {
+                try {
+                    error = Translator.translate(error);
+                }
+                catch (e) {}
+                if (!valueError) {
+                    this.advice.innerHTML = error.replace('%d', countDaysInMonth);
+                } else {
+                    this.advice.innerHTML = this.errorTextModifier(error);
+                }
+                this.advice.show();
+                return false;
+            }
+
+            // fixing elements class
+            this.day.removeClassName('validation-failed');
+            this.month.removeClassName('validation-failed');
+            this.year.removeClassName('validation-failed');
+
+            this.advice.hide();
+            return true;
+        }
+    });
+
+    MicromaniaDOB = Class.create();
+    MicromaniaDOB.prototype = {
+        initialize: function(selector, required, format) {
+            var el = $$(selector)[0];
+            var container       = {};
+            container.day       = Element.select(el, '.dob-day input')[0];
+            container.month     = Element.select(el, '.dob-month input')[0];
+            container.year      = Element.select(el, '.dob-year input')[0];
+            container.full      = Element.select(el, '.dob-full input')[0];
+            container.advice    = Element.select(el, '.validation-advice')[0];
+
+            new MicromaniaDateElement('container', container, required, format);
+        }
+    };
+
+    var megacard_dob = new MicromaniaDOB('.megacard-megacard_dob', true, '%d/%m/%Y');
+    //]]>
+</script>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+
+            <p style="font-size:11px">
+                Afin d'associer votre Megacarte à votre compte, vous devez indiquer au choix votre code postal ou votre date de naissance.            </p>
+
+        </div>
+
+        <div class="buttons-set form-buttons account-register">
+            <button type="submit" class="mn-btn" title="Soumettre"><span class="mn-btn-submit" >Créer mon compte</span></button>
+            <p class="required"><span>*</span> Champs obligatoires</p>
+        </div>
+            </form>
+    <script type="text/javascript">
+    //<![CDATA[
+        Translator.add('Please make sure your email adresses match.','Veuillez vérifier que vos adresses email concordent.');
+
+        $('megacard-match').observe('click', function(e) {
+            var element = Event.element(e);
+
+            if(element.checked) {
+                $('megacard-match-form').show();
+            } else {
+                $('megacard-match-form').hide();
+            }
+        });
+
+        if($('megacard-match').checked) {
+            $('megacard-match-form').show();
+        } else {
+            $('megacard-match-form').hide();
+        }
+
+        $$('input[name="megacard[postcode]"]').invoke('observe', 'change', function(event) {
+            requiredFieldPostcode();
+        });
+
+        $$('.megacard-megacard_dob .select-item select').invoke('observe', 'change', function(event) {
+            requiredFieldDob();
+        });
+
+        requiredFieldPostcode();
+        requiredFieldDob();
+
+        function requiredFieldPostcode() {
+            var day = $$('input[name="megacard[day]"]').first();
+            var month = $$('input[name="megacard[month]"]').first();
+            var year = $$('input[name="megacard[year]"]').first();
+
+            day.removeClassName('validate-custom');
+            month.removeClassName('validate-custom');
+            year.removeClassName('validate-custom');
+
+            $$('.megacard-megacard_dob .validation-advice').each(function(item) {
+                item.hide();
+            });
+
+            if($$('input[name="megacard[postcode]"]').first().value == '') {
+                day.addClassName('validate-custom');
+                month.addClassName('validate-custom');
+                year.addClassName('validate-custom');
+            }
+        }
+
+        function requiredFieldDob() {
+            var postcode = $$('input[name="megacard[postcode]"]').first();
+
+            postcode.addClassName('required-entry');
+
+            if($$('input[name="megacard[day]"]').first().value != '' &&
+                $$('input[name="megacard[month]"]').first().value != '' &&
+                $$('input[name="megacard[year]"]').first().value != '') {
+
+                postcode.removeClassName('required-entry');
+                postcode.removeClassName('validation-failed');
+                if(typeof postcode.next('.validation-advice') != 'undefined') {
+                    postcode.next('.validation-advice').hide();
+                }
+            }
+        }
+
+        var dataForm = new VarienForm('form-validate', true);
+
+        Form.getElements('form-validate').each(function(element) {
+            element.setAttribute('autocomplete', 'off');
+        });
+
+    //]]>
+    </script>
+</div>
+            </div>
+                        <div id="footer">
+    <div class="footer-inner">
+        <div class="social-items">
+            <form action="https://www.micromania.fr/newsletter/subscriber/new/" method="post" id="newsletter-validate-detail">
+    <div id="newsletter-container" class="form-subscribe">
+        <div class="form-subscribe-header">
+            <label for="newsletter">Newsletter<br/><span>Recevez toutes les offres</span></label>
+        </div>
+        <div class="form-subscribe-input mn-btn">
+            <div class="v-fix">
+                <input name="email" type="email" id="email" value="Votre adresse email" onclick="this.value=='Votre adresse email'?this.value='':''" onblur="this.value==''?this.value='Votre adresse email':''" class="input-text required-entry validate-email email-subscriber" />
+            </div>
+            <button type="submit" class="button" title="S'inscrire"><span><span>S'inscrire</span></span></button>
+        </div>
+        <input type="hidden" id="image-loader" value='<img src="https://www.micromania.fr/skin/frontend/enterprise/micromania/images/ajax-loader-white.gif" alt="Loading..." />' />
+        <div id="ajax-loading"></div>
+        <div class="error-container">
+            <label for="email" generated="true" class="error"></label>
+        </div>
+    </div>
+</form>
+<script type="text/javascript">
+//<![CDATA[
+    var newsletterSubscriberFormDetail = new VarienForm('newsletter-validate-detail');
+//]]>
+</script>
+             <div class="footer-box" id="social-ntwk">
+                 <div class="title">Suivez-nous!<br><span>en direct</span></div>
+                 <div class="mn-btn"><a href="http://www.facebook.com/MicromaniaFr" target="_blank"><span class="icon">524 638 J&acute;M<br><span>sur facebook</span></span></a></div>
+                 <div class="mn-btn"><a href="http://twitter.com/Micromania_Fr" target="_blank"><span class="icon">19 589 post<br><span>sur twitter</span></span></a></div>
+             </div>
+        </div>
+        <div class="container hidden-phone" id="news-actu">
+            <div class="news-inner footer-box static">
+<div class="title">Quoi de neuf<br /><span>Actualit&eacute;s</span></div>
+</div>
+<div class="news-inner footer-box"><span class="name">ONE</span>
+<div class="product"><a href="http://www.micromania.fr/pack-xbox-one-blanche-sunset-overdrive-exclu-micromania-57763.html">PACK XBOX ONE BLANCHE EXCLUSIVITE MICROMANIA</a><br /><span>Le Bundle Sunset Overdrive d'un blanc immaculé rien que pour vous !!!</span></div>
+</div>
+<div class="news-inner footer-box static">
+<div class="product"><a href="http://www.micromania.fr/bonus-offres-speciales">LES OFFRES A NE PAS RATER</a><br /><span>Promotions, Contenus et Bonus Exclusifs</span></div>
+</div>
+<div class="news-inner footer-box static">
+<div class="product"><a href="http://www.micromania.fr/financement">CARTE DE FINANCEMENT MICROMANIA</a><br /><span>Faites-vous plaisir sans plus attendre dans nos magasins</span></div>
+</div>        </div>
+        
+<div class="container hidden-phone" id="univers">
+    <div class="footer-box">
+        <div class="title">Les univers<br><span>Micromania</span></div>
+                    <a href="http://www.micromania.fr/acces-par-univers/ps4.html">PS4</a>
+                    <a href="http://www.micromania.fr/acces-par-univers/ps3.html">PS3</a>
+                    <a href="http://www.micromania.fr/acces-par-univers/xbox-one.html">Xbox One</a>
+                    <a href="http://www.micromania.fr/acces-par-univers/xbox-360.html">Xbox 360</a>
+                    <a href="http://www.micromania.fr/acces-par-univers/wii.html">Wii</a>
+                    <a href="http://www.micromania.fr/acces-par-univers/nintendo-3ds.html">Nintendo 3DS</a>
+                    <a href="http://www.micromania.fr/acces-par-univers/ps-vita.html">PS Vita</a>
+                    <a href="http://www.micromania.fr/acces-par-univers/psp.html">PSP</a>
+                    <a href="http://www.micromania.fr/acces-par-univers/pc.html">PC</a>
+                    <a href="http://www.micromania.fr/acces-par-univers/wii-u.html">Wii U</a>
+                    <a href="http://www.micromania.fr/acces-par-univers/nintendo-ds.html">Nintendo DS</a>
+                    <a href="http://www.micromania.fr/acces-par-univers/ps2.html">PS2</a>
+                    <a href="http://www.micromania.fr/jeux/jeux-a-telecharger.html">Jeux à télécharger</a>
+            </div>
+</div>        <div id="payement">
+             <div class="footer-box">
+                   <div class="title"><span>Paiement sécurisé</span></div>
+                   <div class="mode"><span>&nbsp;</span></div>
+             </div>
+        </div>
+        <div class="last" id="shipping">
+             <div class="footer-box">
+                    <div class="title"><span>Mode de livraison</span></div>
+                    <div class="get-more "><a href="http://www.micromania.fr/mode-de-livraison/">Plus d'infos</a></div>
+                    <div class="mode"><span>&nbsp;</span></div>
+             </div>
+        </div>
+    </div>
+    <div class="footer-inner hidden-phone">
+        <div class="footer-box" id="about-us">
+                                </div>
+    </div>
+    <div class="footer-inner footer-links">
+        <p>&nbsp;</p>
+<ul>
+<li><a href="http://www.micromania.fr/cgv">Conditions g&eacute;n&eacute;rales de vente</a></li>
+<li class="no-border"><a href="http://www.micromania.fr/mentions-legales">Mentions l&eacute;gales</a></li>
+<li><a href="http://www.micromania.fr/magasins.html">Nos magasins</a></li>
+<li><a href="http://www.micromania.fr/pegi">Syst&egrave;me Pegi</a></li>
+<li class="no-border"><a href="http://www.micromania.fr/contacts">Contact</a></li>
+<li><a href="http://www.micromania.fr/faq">FAQ</a></li>
+<li><a href="http://www.micromania.fr/emploi">Emploi</a></li>
+<li><a href="http://www.micromania.fr/presse">Presse</a></li>
+<li><a href="http://www.micromania.fr/vie-privee">Vie priv&eacute;e</a></li>
+<li><a href="http://www.micromania.fr/catalog/seo_sitemap/product">Plan du site</a></li>
+<li><a href="http://www.micromania.fr/dossiers">Nos dossiers</a></li>
+<li><a href="http://www.micromania.fr/financement">Financement</a></li>
+</ul>    </div>
+</div>
+<script src="/js/micromania/cookiechoices.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function(event) {
+    cookieChoices.showCookieConsentBar('En poursuivant votre navigation sans modifier vos paramètres, vous acceptez l\'utilisation des cookies afin de disposer de services et d\'offres adaptés à vos centres d\'intérêts -',
+      'Ne plus afficher', 'en savoir plus', 'http://www.micromania.fr/vie-privee/');
+  });
+</script>
+
+            <script type="text/javascript">
+//<![CDATA[
+tc_vars["env_template"]="account";
+tc_vars["env_work"]="test";
+tc_vars["env_channel"]="web";
+tc_vars["env_language"]="fr";
+tc_vars["env_country"]="FR";
+tc_vars["env_dnt"]="disabled";
+tc_vars["page_name"]="Créer un nouveau compte client";
+//]]>
+</script>
+<script type="text/javascript">
+//<![CDATA[
+tc_vars["user_logged"]="no";
+//]]>
+</script>
+<script type="text/javascript" src="https://www.micromania.fr/js/tagcommander/tc_Micromania_3.js"></script>
+        </div>
+    </div>
+    
+    <br style="clear: both;">
+</div>
+</body>
+</html>

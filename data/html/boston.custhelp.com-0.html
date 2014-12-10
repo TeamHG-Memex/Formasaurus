@@ -1,0 +1,396 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <title>Ask a Question</title>
+        
+    
+<meta http-equiv="Pragma" content="no-cache"/>
+<meta http-equiv="Expires" content="-1"/>
+<style type='text/css'>
+.rn_ScreenReaderOnly{position:absolute; height:1px; left:-10000px; overflow:hidden; top:auto; width:1px;}
+.rn_Hidden{display:none;}
+</style>
+<base href='http://boston.custhelp.com/euf/rightnow/optimized/1415682238/themes/Boston/'></base>
+<link href='/euf/rightnow/optimized/1415682238/templates/standard.themes.Boston.SITE.css' rel='stylesheet' type='text/css' media='all' />
+<style type="text/css">.rn_NavigationTab2{display:inline-block;}
+.rn_NavigationTab2 a{cursor:pointer;float:left;font-size:1em;font-weight:bold;height:20px;_height:18px;margin-right:0px;padding:5px 20px;position:relative;}
+.rn_NavigationTab2 .rn_DropDown{padding-right:28px;}
+.rn_NavigationTab2 a em{display:block;font-size:xx-small;height:18px;margin:3px 4px 0 0;position:absolute;right:0;top:0;width:20px;}
+.rn_NavigationTab2 .rn_SubNavigation{display:block;float:none;position:absolute;z-index:1;width:150px;}
+.rn_NavigationTab2 .rn_SubNavigation.rn_Hidden, .rn_NavigationTab2.rn_Hidden{display:none;}
+.rn_NavigationTab2 .rn_SubNavigation a{display:block;float:none;margin:0;padding:5px 0 0 10px;width:140px;}
+.rn_NavigationTab2 a{background:#EEEEEE url(/euf/assets/themes/Boston/images/bcom_nav_main_off.gif) repeat-x scroll 0 0px;border-top:1px solid #FFF;border-right:1px dotted #FFF;color:#203C73;text-decoration:none;text-transform:uppercase}
+.rn_NavigationTab2 a:hover, .rn_NavigationTab2 a:focus{background: url(/euf/assets/themes/Boston/images/bcom_nav_main_on.gif) repeat-x scroll 0 0px #EEEEEE;color:#FFF;}
+.rn_NavigationTab2 a:focus{outline:thin dotted #FFF;}
+.rn_NavigationTab2 a.rn_SelectedTab{background:url(/euf/assets/themes/Boston/images/bcom_nav_main_on.gif) repeat-x scroll 0 0px #EEEEEE;color:#FFF;}
+.rn_NavigationTab2 a em{background:url(/euf/assets/themes/Boston/images/tabBackground.png) no-repeat -20px 0;color:#000;font-size:0em;}
+.rn_NavigationTab2 a:hover em, .rn_NavigationTab2 a:focus em{background-position:0px 0;}
+.rn_NavigationTab2 .rn_SubNavigation{background:#FFF none repeat scroll 0 0;border:1px solid #CCC;padding:10px 0 0;top:100px;}
+.rn_NavigationTab2 .rn_SubNavigation a{background:#FFF;border:none;color:#404040;height:auto !important;height:23px;margin-bottom:1px;min-height:23px;text-transform: none;}
+.rn_NavigationTab2 .rn_SubNavigation a:hover{background:#EEE;}
+.rn_NavigationTab2 .rn_SubNavigation a:focus{outline:thin dotted #777;}
+.rn_SimpleSearch{position:relative;}
+.rn_SimpleSearch .rn_SearchField{width:97%;}
+.rn_SimpleSearch .rn_SearchImage{border:none;padding:0;position:absolute;right:0.2em;top:0.46em;*right:0.28em;*top:0.6em;}
+.rn_SimpleSearch{margin:auto;max-width:400px;width:180px;}
+.rn_SimpleSearch form{background-color:#FFF;border:1px solid #B1B1B1;}
+.rn_SimpleSearch .rn_SearchField{border:0px none;color:#222;font-weight:bold;height:1.8em;max-width:200px;padding:4px 4px 0px;width:85%;}
+.rn_RightNowLogo a{background:url(/euf/rightnow/images/PoweredByOracle.png) no-repeat scroll right 0 !important;display:block !important;height:29px !important;width:134px !important;}
+.rn_RightNowLogo a:focus, .rn_RightNowLogo a:hover{background-position:right -37px !important;}
+</style>
+<link href='/euf/rightnow/optimized/1415682238/pages/ask.themes.Boston.css' rel='stylesheet' type='text/css' media='all' />
+<link type="text/css" rel="stylesheet" href="/rnt/rnw/yui_2.7/treeview/assets/treeview-menu.css" />
+
+    <link rel="icon" href="images/favicon.png" type="image/png"/>
+</head>
+<body class="yui-skin-sam">
+<form class='rn_Hidden'><input id='rn_History_Field' type='hidden'/></form>
+
+<!-- SiteCatalyst code version: H.23.8. Copyright 1996-2011 Adobe, Inc. All Rights Reserved. More info available at http://www.omniture.com -->
+<script language="JavaScript" type="text/javascript" src="https://cache.boston.com/omniture/hcode/s_code.js"></script>
+<script language="JavaScript" type="text/javascript"><!--
+s.pageName='Help | Customer Help | Customer help pages (all)';
+s.channel='Help';
+s.prop1='Help | Customer Help';
+s.server='',s.pageType='',s.prop2='',s.prop3='',s.prop4='',s.prop5='',s.prop6='Custhelp.com page',s.prop7='',s.prop8='',s.prop9='',s.prop10='',s.prop14='',s.prop41=s.eVar41='Boston.com';
+/* Conversion Variables */
+s.campaign='',s.state='',s.zip='',s.events='',s.products='',s.purchaseID='',s.eVar1='',s.eVar2='',s.eVar3='',s.eVar4='',s.eVar5='',s.eVar6='',s.eVar7='',s.eVar8='',s.eVar9='',s.eVar10='';
+/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+var s_code=s.t();if(s_code)document.write(s_code)//--></script>
+<script language="JavaScript" type="text/javascript"><!--
+if(navigator.appVersion.indexOf('MSIE')>=0)document.write(unescape('%3C')+'\!-'+'-')
+//--></script><noscript><img src="http://nytbglobe.112.2O7.net/b/ss/nytbglobe/1/H.19.3--NS/0" height="1" width="1" border="0" alt="" /></noscript><!--/DO NOT REMOVE/-->
+<!-- End SiteCatalyst code version: H.23.8. -->
+<div id="rn_Container" >
+    <div id="rn_SkipNav"><a href="#rn_MainContent">Skip Navigation</a></div>
+    <div id="rn_Header" role="banner">
+    <noscript><h1>Scripting must be enabled to use this site.</h1></noscript>
+        <div id="rn_Logo"><a href="http://boston.com"><img src="/euf/assets/images/bcom_small2.gif" alt="Boston.com" /></a></div>
+                    <div id="rn_LoginStatus">
+                                    <!--<a href="javascript:void(0);" id="rn_LoginLink">Log In</a>
+                    <rn:condition hide_on_pages="utils/create_account, utils/login_form, utils/account_assistance">
+                        <rn:widget path="login/LoginDialog2" trigger_element="rn_LoginLink"/>
+                    </rn:condition>
+                    <rn:condition show_on_pages="utils/create_account, utils/login_form, utils/account_assistance">
+                        <rn:widget path="login/LoginDialog2" trigger_element="rn_LoginLink" redirect_url="/app/account/overview" />
+                    </rn:condition>-->
+                            </div>
+            </div>
+    <div id="rn_Navigation">
+            <div id="rn_NavigationBar" role="navigation">
+            <ul>
+                <li><span id="rn_NavigationTab2_1" class="rn_NavigationTab2 ">
+    <a class="" href="/app/home"  target="_self">
+        <span>Support Home</span>
+    </a>
+</span>
+</li>
+                <li><span id="rn_NavigationTab2_2" class="rn_NavigationTab2 ">
+    <a class="" href="/app/answers/list"  target="_self">
+        <span>Answers</span>
+    </a>
+</span>
+</li>
+                <li><span id="rn_NavigationTab2_3" class="rn_NavigationTab2 ">
+    <a class="rn_SelectedTab" href="/app/ask"  target="_self">
+        <span>Contact Us</span>
+    </a>
+</span>
+</li>
+               <!-- <li><rn:widget path="custom/navigation/NavigationTab2" label_tab="Your Account" link="/app/account/overview" pages="utils/account_assistance, account/overview, account/profile, account/notif, account/change_password, account/questions/list, account/questions/detail, account/notif/list, utils/login_form, utils/create_account, utils/submit/password_changed, utils/submit/profile_updated"
+                subpages="Account Overview > /app/account/overview, Support History > /app/account/questions/list, Notifications > /app/account/notif/list"/></li>-->
+            </ul>
+        </div>
+        </div>
+    <div id="rn_Body">
+        <div id="rn_MainColumn" role="main">
+            <a name="rn_MainContent" id="rn_MainContent"></a>
+            
+
+<div id="rn_PageTitle" class="rn_AskQuestion">
+    <h1>Submit a question to our support team:</h1>
+</div>
+<div id="rn_PageContent" class="rn_AskQuestion">
+    <div class="rn_Padding">
+        <form id="rn_QuestionSubmit" method="post" action="" onsubmit="return false;">
+            <div id="rn_ErrorLocation"></div>
+                            <div id="rn_TextInput_5" class="rn_TextInput">
+        <label for="rn_TextInput_5_email" id="rn_TextInput_5_Label" class="rn_Label">E-mail Address            <span class="rn_Required"> * </span><span class="rn_ScreenReaderOnly">Required</span>
+            </label>
+        <input type="text" id="rn_TextInput_5_email" name="rn_TextInput_5_email" class="rn_Text"  maxlength="80" value=""/>
+    </div>
+                <div id="rn_ProductCategoryInput_6" class="rn_ProductCategoryInput">
+    <a href="javascript:void(0);" class="rn_ScreenReaderOnly" id="rn_ProductCategoryInput_6_LinksTrigger">Screen Reader users press enter to select a Subject.&nbsp;<span id="rn_ProductCategoryInput_6_TreeDescription"></span></a>
+        <span class="rn_Label">
+        Subject                <span class="rn_Required"> *</span><span id="rn_ProductCategoryInput_6_RequiredLabel" class="rn_RequiredLabel">
+            <span class="rn_ScreenReaderOnly">
+                Required            </span>
+        </span>
+            </span>
+        <button type="button" id="rn_ProductCategoryInput_6_categories_Button" class="rn_DisplayButton" ><span class="rn_ScreenReaderOnly">This button does not work with screen readers. Please use the previous link instead.</span> <span id="rn_ProductCategoryInput_6_Button_Visible_Text">Select a category</span></button>
+    <div class="rn_Hidden" id="rn_ProductCategoryInput_6_Links"></div>
+            <div id="rn_ProductCategoryInput_6_Tree" class="rn_Panel rn_Hidden">
+                </div>
+        </div>
+                                        <div id="rn_TextInput_8" class="rn_TextInput">
+        <label for="rn_TextInput_8_thread" id="rn_TextInput_8_Label" class="rn_Label">Question            <span class="rn_Required"> * </span><span class="rn_ScreenReaderOnly">Required</span>
+            </label>
+        <textarea id="rn_TextInput_8_thread" class="rn_TextArea" rows="7" cols="60"  ></textarea>
+</div>
+                <div id="rn_SelectionInput_9" class="rn_SelectionInput">
+        <label for="rn_SelectionInput_9_user_contact_pref" id="rn_SelectionInput_9_Label" class="rn_Label">Please send me a reply            <span class="rn_Required"> * </span><span class="rn_ScreenReaderOnly">Required</span>
+            </label>
+        <select id="rn_SelectionInput_9_user_contact_pref" >
+            <option value="">--</option>
+                            <option value="13" >Yes</option>
+                    <option value="14" >No</option>
+                    <option value="15" >No Preference</option>
+                </select>
+</div>
+                <div id="rn_FileAttachmentUpload2_10" class="rn_FileAttachmentUpload2">
+    <label for="rn_FileAttachmentUpload2_10_FileInput" id="rn_FileAttachmentUpload2_10_Label">Attach Documents        </label>
+    <input name="file" id="rn_FileAttachmentUpload2_10_FileInput" type="file" />
+        <img id="rn_FileAttachmentUpload2_10_LoadingIcon" class="rn_Hidden" alt="" src="images/indicator.gif" />
+        <span id="rn_FileAttachmentUpload2_10_StatusMessage"></span>
+</div>
+		<div id="rn_TextInput_12" class="rn_TextInput">
+        <label for="rn_TextInput_12_problem_url" id="rn_TextInput_12_Label" class="rn_Label">URL where issue occurred (if applicable)            </label>
+        <input type="text" id="rn_TextInput_12_problem_url" name="rn_TextInput_12_problem_url" class="rn_Text"  maxlength="175" value=""/>
+    </div>
+				
+                <div id="screenResContainer" style="display: none;">
+                    <div id="rn_TextInput_14" class="rn_TextInput">
+        <input type="text" id="rn_TextInput_14_user_screen_resolution" name="rn_TextInput_14_user_screen_resolution" class="rn_Text"  maxlength="25" value="Unavailable"/>
+    </div>
+		</div>
+                <div id="rn_SelectionInputHidden_15" class="rn_SelectionInput rn_Hidden">
+            <fieldset>
+                    <legend id="rn_SelectionInputHidden_15_Label" class="rn_Label">user_cookies</legend>
+                            <input type="radio" name="rn_SelectionInputHidden_15_Radio" id="rn_SelectionInputHidden_15_user_cookies_1"  value="1"/>
+            <label for="rn_SelectionInputHidden_15_user_cookies_1">Yes</label>
+                    <input type="radio" name="rn_SelectionInputHidden_15_Radio" id="rn_SelectionInputHidden_15_user_cookies_0"  value="0"/>
+            <label for="rn_SelectionInputHidden_15_user_cookies_0">No</label>
+                </fieldset>
+    </div>
+                            
+		<script type="text/javascript">
+                    document.getElementById('screenResContainer').childNodes[1].childNodes[1].setAttribute('value', screen.width + ' x ' + screen.height);			
+		</script>
+
+				<div id="rn_FormSubmit_16" class="rn_FormSubmit">
+    <input type="submit" id="rn_FormSubmit_16_Button"  value="Submit"/>
+        <img id="rn_FormSubmit_16_LoadingIcon" class="rn_Hidden" alt="Loading" src="images/indicator.gif" />
+        <span id="rn_FormSubmit_16_StatusMessage"></span>
+    <span class="rn_Hidden">
+        <input id="rn_FormSubmit_16_Submission" type="checkbox" class="rn_Hidden"/>
+        <label for="rn_FormSubmit_16_Submission" class="rn_Hidden">&nbsp;</label>
+    </span>
+</div>
+
+
+
+        </form>
+
+           <div id="rn_SmartAssistantDialogCustom_17" class="rn_SmartAssistantDialog rn_Hidden">
+    <div class="rn_MessageBox rn_InfoMessage">
+        <span class="rn_Heading">Your question hasn't been submitted yet.</span>
+    </div>
+    <div id="rn_SmartAssistantDialogCustom_17_DialogContent"></div>
+</div>
+        
+    </div>
+</div>
+
+        </div>
+                    <div id="rn_SideBar" role="navigation">
+                <div class="rn_Padding">
+                                        <div class="rn_Module" role="search">
+                        <h2>Find Answers</h2>
+                        <div id="rn_SimpleSearch_18" class="rn_SimpleSearch">
+    <form id="rn_SimpleSearch_18_SearchForm" onsubmit="return false;">
+        <input type="text" id="rn_SimpleSearch_18_SearchField" name="rn_SimpleSearch_18_SearchField" class="rn_SearchField" maxlength="255" value="Search" title="Search" />
+                        <input type="image" id="rn_SimpleSearch_18_Submit" class="rn_SearchImage" src="images/icons/search.png" alt="Search"/>
+    </form>
+</div>
+                    </div>
+                                        <div class="rn_Module">
+                        <h2>Contact Us</h2>
+                        <div class="rn_HelpResources">
+                            <div class="rn_Questions">
+                                <a href="/app/ask">Ask a Question</a>
+                                <span>Submit a question to our support team:</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+    <div id="rn_Footer" role="contentinfo">
+        <div id="rn_RightNowCredit">
+        <div id="tp_footerBar">
+          <ul>
+            <li class="tp_bottomLinks">
+            <span id="tp_footerLink" class="tp_footerLink">
+              <a href="http://www.boston.com/help/bostoncom_info/" rel="nofollow">Contact Boston.com</a>
+            </span>
+            </li>
+            <li class="tp_bottomLinks">|</li>
+            <li class="tp_bottomLinks">
+            <span id="tp_footerLink" class="tp_footerLink">
+              <a href="http://www.boston.com/help/" rel="nofollow">Help</a>
+            </span>
+            </li>
+            <li class="tp_bottomLinks">|</li>
+            <li class="tp_bottomLinks">
+            <span id="tp_footerLink" class="tp_footerLink">
+              <a href="http://services.bostonglobe.com/advertiser/online/online.aspx?id=13052" rel="nofollow">Advertise</a>
+            </span>
+            </li>
+            <li class="tp_bottomLinks">|</li>
+            <li class="tp_bottomLinks">
+            <span id="tp_footerLink" class="tp_footerLink">
+              <a href="http://jobsearch.boston.monster.com/jobs/boston-globe-media+boston-globe+boston_2ecom_666?where=boston_2C-MA&amp;rad=10&amp;sort=rv.dt&amp;cy=us">Work here</a>
+            </span>
+            </li>
+            <li class="tp_bottomLinks">|</li>
+            <li class="tp_bottomLinks">
+            <span id="tp_footerLink" class="tp_footerLink">
+              <a href="http://www.boston.com/help/privacy-policy/" rel="nofollow">Privacy Policy</a>
+            </span>
+            </li>
+            <li class="tp_bottomLinks">|</li>
+            <li class="tp_bottomLinks">
+            <span id="tp_footerLink" class="tp_footerLink">
+              <a href="http://www.boston.com/help/privacy-policy/" rel="nofollow">Your Ad Choices</a>
+            </span>
+            </li>
+            <li class="tp_bottomLinks">|</li>
+            <li class="tp_bottomLinks">
+            <span id="tp_footerLink" class="tp_footerLink">
+              <a href="http://www.boston.com/help/memberagreement/" rel="nofollow">Terms of Service</a>
+            </span>
+            </li>
+            <li class="tp_bottomLinks">|</li>
+            <li class="tp_bottomLinks">
+            <span id="tp_footerLink" class="tp_footerLink">
+              <a href="http://www.boston.com/Boston/email">Newsletters</a>
+            </span>
+            </li>
+            <li class="tp_bottomLinks">|</li>
+            <li class="tp_bottomLinks">
+            <span id="tp_footerLink" class="tp_footerLink">
+              <a href="http://www.boston.com/tools/mobile" rel="nofollow">Mobile</a>
+            </span>
+            </li>
+            <li class="tp_bottomLinks">|</li>
+            <li class="tp_bottomLinks">
+            <span id="tp_footerLink" class="tp_footerLink">
+              <a href="http://www.boston.com/tools/rss" rel="nofollow">RSS feeds</a>
+            </span>
+            </li>
+            <li class="tp_bottomLinks">|</li>
+          </ul>
+          <ul>
+            <li class="tp_bottomLinks">
+            <span id="tp_footerLink" class="tp_footerLink">
+              <a href="http://services.bostonglobe.com/aboutus/contact_us/default.aspx" rel="nofollow">Contact The Boston Globe</a>
+            </span>
+            </li>
+            <li class="tp_bottomLinks">|</li>
+            <li	class="tp_bottomLinks">
+            <span id="tp_footerLink" class="tp_footerLink">
+              <a href="http://services.bostonglobe.com/subscribers/homedelivery.aspx?id=5278">Subscribe</a>
+            </span>
+            </li>
+            <li class="tp_bottomLinks">|</li>
+            <li class="tp_bottomLinks">
+            <span id="tp_footerLink" class="tp_footerLink">
+              <a href="http://services.bostonglobe.com/subscribers/custserv.aspx?id=5274" rel="nofollow">Manage your subscription</a>
+            </span>
+            </li>
+            <li class="tp_bottomLinks">|</li>
+            <li class="tp_bottomLinks">
+            <span id="tp_footerLink" class="tp_footerLink">
+              <a href="http://services.bostonglobe.com/advertiser/default.aspx" rel="nofollow">Advertise</a>
+            </span>
+            </li>
+            <li class="tp_bottomLinks">|</li>
+            <li class="tp_bottomLinks">
+            <span id="tp_footerLink" class="tp_footerLink">
+              <a href="http://bostonglobe.com/insiders" rel="nofollow">Boston Globe Insiders</a>
+            </span>
+            </li>
+            <li class="tp_bottomLinks">|</li>
+            <li class="tp_bottomLinks">
+            <span id="tp_footerLink" class="tp_footerLink">
+              <a href="http://www.doriancolor.com/page3.html" rel="nofollow">The Boston Globe Gallery</a>
+            </span>
+            </li>
+            <li class="tp_bottomLinks">|</li>
+            <li class="tp_bottomLinks">
+            <span id="tp_footerLink" class="tp_footerLink">
+              <a href="http://services.bostonglobe.com/news/contentservices/services.aspx?id=6354" rel="nofollow">Reprints</a>
+            </span>
+            </li>
+            <li class="tp_bottomLinks">|</li>
+            <li class="tp_bottomLinks">&copy;<span>2014</span> BOSTON GLOBE MEDIA PARTNERS, LLC</li>
+            <li class="tp_bottomLinks">|</li>
+          </ul>
+          </div>
+        </div>
+        <div></div>
+          <div class="tp_bottomLogo">
+            <div class="rn_FloatRight">
+                <span id="rn_RightNowLogo_19" class="rn_RightNowLogo">
+<a href="http://www.oracle.com/rightnowcx" target="_blank"  title="Powered By Oracle"><span class="rn_ScreenReaderOnly">Powered By Oracle</span></a>
+</span>
+            </div>
+          </div>
+    </div>
+</div>
+<script type="text/javascript" src="/euf/rightnow/js/14.5.0.1.3.119/min/RightNow.js"></script>
+<script type="text/javascript" src="/euf/rightnow/optimized/1415682238/templates/standard.js"></script>
+<script type="text/javascript" src="/euf/rightnow/optimized/1415682238/pages/ask.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+RightNow.Url.setParameterSegment(4);
+RightNow.Event.setNoSessionCookies(true);
+RightNow.Interface.Constants = 
+{"ACTION_ADD":1,"ANY_FILTER_VALUE":"~any~","EUF_DT_CHECK":12,"EUF_DT_DATE":1,"EUF_DT_DATETIME":2,"EUF_DT_FATTACH":11,"EUF_DT_HIERMENU":9,"EUF_DT_INT":5,"EUF_DT_MEMO":6,"EUF_DT_PASSWORD":7,"EUF_DT_RADIO":3,"EUF_DT_SELECT":4,"EUF_DT_THREAD":10,"EUF_DT_VARCHAR":8,"INT_NULL":-2147483647,"CAN_USE_ARIA":false,"API_VALIDATION_REGEX_EMAIL":"((([-_!#$%&'*+\/=?^~`{|}\\w]+([.][-_!#$%&'*+\/=?^~`{|}\\w]*)*)|(\"[^\"]+\"))@[0-9A-Za-z]+([\\-]+[0-9A-Za-z]+)*(\\.[0-9A-Za-z]+([\\-]+[0-9A-Za-z]+)*)+[;, ]*)+"};
+RightNow.Interface.setMessagebase(function(){return {"WARNING_LBL":"Warning","INFORMATION_LBL":"Information","HELP_LBL":"Help","ERROR_REQUEST_ACTION_COMPLETED_MSG":"There was an error with the request and the action could not be completed.","OK_LBL":"OK","DIALOG_LBL":"dialog","DIALOG_PLEASE_READ_TEXT_DIALOG_MSG_MSG":"dialog, please read above text for dialog message","BEG_DIALOG_PLS_DISMISS_DIALOG_BEF_MSG":"Beginning of dialog, please dismiss dialog before continuing","END_DIALOG_PLS_DISMISS_DIALOG_BEF_MSG":"End of dialog, please dismiss dialog before continuing","ERR_SUBMITTING_FORM_DUE_INV_INPUT_LBL":"There was an error submitting the form due to invalid input","ERR_SUBMITTING_SEARCH_MSG":"There was a problem with your request.  Please change your search terms and try again.","CLOSE_CMD":"Close","BACK_LBL":"Back","ALT_LBL":"Alt","ALT_PLUS_SHIFT_LBL":"Alt + Shift","CTRL_LBL":"Ctrl","CTRL_PLUS_OPT_LBL":"Ctrl + Opt","ACCESSKEY_LBL":"Accesskey","LOADING_ELLIPSES_LBL":"Loading...","PCT_S_IS_NOT_COMPLETELY_FILLED_IN_MSG":"%s is not completely filled in","PCT_S_VALUE_MIN_VALUE_PCT_S_MSG":"%s value is too small (min value: %s)","PCT_S_IS_NOT_A_VALID_DATE_MSG":"%s is not a valid date","VALUE_MUST_BE_AN_INTEGER_MSG":"value must be an integer","VALUE_IS_TOO_LARGE_MAX_VALUE_MSG":"value is too large (max value: ","VALUE_IS_TOO_SMALL_MIN_VALUE_MSG":"value is too small (min value: ","PCT_S_REQUIREMENTS_MET_LBL":"%s requirements have not been met","PCT_S_DOES_NOT_MATCH_LBL":"%s does not match","EXCEEDS_SZ_LIMIT_PCT_D_CHARS_PCT_D_LBL":"exceeds its size limit of %d characters by %d characters","MEET_MINIMUM_CHAR_LNG_PCT_D_CHARS_LBL":"does not meet the minimum character length of %d characters by %d characters","CONTAIN_SPACES_PLEASE_TRY_MSG":"must not contain spaces. Please try again.","CONT_DOUBLE_QUOTE_CHARS_PLS_TRY_MSG":"must not contain double quote characters. Please try again.","NOT_CONT_EITHER_GT_LT_MSG":"must not contain either '<' or '>'","PCT_S_IS_AN_INVALID_POSTAL_CODE_MSG":"%s is an invalid postal code","PCT_S_IS_AN_INVALID_PHONE_NUMBER_MSG":"%s is an invalid phone number","PCT_S_IS_INVALID_MSG":"%s is invalid","IS_NOT_A_VALID_URL_MSG":"is not a valid URL","EXPECTED_INPUT_LBL":"Expected Input","PCT_S_DIDNT_MATCH_EXPECTED_INPUT_LBL":"%s didn't match expected input","WAITING_FOR_CHARACTER_LBL":"Waiting for character: ' ","PLEASE_TYPE_A_NUMBER_MSG":"Please type a number","PLEASE_ENTER_UPPERCASE_LETTER_MSG":"Please enter an uppercase letter or a number","PLEASE_ENTER_AN_UPPERCASE_LETTER_MSG":"Please enter an uppercase letter","PLS_ENTER_UPPERCASE_LETTER_SPECIAL_MSG":"Please enter an uppercase letter, a number or a special character","PLEASE_ENTER_LOWERCASE_LETTER_MSG":"Please enter a lowercase letter or a number","PLEASE_ENTER_A_LOWERCASE_LETTER_MSG":"Please enter a lowercase letter","PLS_ENTER_LOWERCASE_LETTER_SPECIAL_MSG":"Please enter a lowercase letter, a number or a special character","PLEASE_ENTER_A_LETTER_OR_A_NUMBER_MSG":"Please enter a letter or a number","PLEASE_ENTER_A_LETTER_MSG":"Please enter a letter","PLEASE_ENTER_LETTER_SPECIAL_CHAR_MSG":"Please enter a letter, a number or a special character","THE_INPUT_IS_TOO_LONG_MSG":"The input is too long","THE_INPUT_IS_TOO_SHORT_MSG":"The input is too short","CHARACTER_LBL":"Character","PERFECT_LBL":"Perfect","PASSWORD_IS_TOO_INSECURE_MSG":"Password is too insecure","PASSWORD_IS_TOO_SHORT_MSG":"Password is too short","COMPLETE_LBL":"Complete","INCOMPLETE_LBL":"Incomplete","CANCEL_CMD":"Cancel","NO_VAL_LBL":"No Value","SELECTION_PCT_S_ACTIVATE_LINK_JUMP_MSG":"The current selection is: '%s'. Activate this link to jump to the current selection.","PCT_S_LNKS_DEPTH_ANNOUNCED_MSG":"%s below using the links provided. Depth is announced as you navigate through the list.","UPLOADING_ELLIPSIS_MSG":"Uploading...","FILE_UPLOAD_COMPLETE_LBL":"File upload complete","FILE_PATH_FOUND_MSG":"The specified file path could not be found","FILE_ATT_UPLOAD_EMPTY_PLS_ENSURE_MSG":"The file you are attempting to upload is empty. Please ensure that you've selected the correct file to attach and try again.","KB_LBL":"KB","FILE_DELETED_LBL":"File deleted","FORMSUBMIT_PLACED_FORM_UNIQUE_ID_MSG":"FormSubmit must be placed within a form with a unique ID.","SUBMITTING_ELLIPSIS_MSG":"Submitting...","ERROR_PAGE_PLEASE_S_TRY_MSG":"There is an error on the page. Please correct the problem(s) and try again.","PLS_VERIFY_REQ_ENTERING_TEXT_IMG_MSG":"Please verify your request by entering the text in the image.","FORM_EXP_PLS_CONFIRM_WISH_CONTINUE_MSG":"This form is about to expire. Please confirm that you wish to continue filling it out."};});
+RightNow.Interface.setConfigbase(function(){return {"DE_VALID_EMAIL_PATTERN":"^(([-!#$%&'*+\/=?^~`{|}\\w\\x80-\\xFF]+(\\.[-!#$%&'*+\/=?^~`{|}\\w\\x80-\\xFF]+)*)|(\"[^\"]+\"))@[0-9A-Za-z]+(-[0-9A-Za-z]+)*(\\.[0-9A-Za-z]+(-[0-9A-Za-z]+)*)+$","CP_HOME_URL":"home","CP_FILE_UPLOAD_MAX_TIME":300,"OE_WEB_SERVER":"boston.custhelp.com","CP_ANSWERS_DETAIL_URL":"answers\/detail"};});
+YAHOO.util.Event.onDOMReady(function(){this.Dialog.setRenderDiv(); this.prepareVirtualBufferUpdateTrigger(); this.ariaHideFrames();}, null, RightNow.UI);
+YAHOO.util.Event.onDOMReady(function(){
+var W = RightNow.Widget,
+c = 'createWidgetInstance';
+W[c]({"i":{"c":"NavigationTab2","n":"NavigationTab2_1","w":1},"a":{"label_tab":"Support Home","link":"\/app\/home","pages":["home",""],"subpages":"","css_class":"rn_SelectedTab","target":"_self","external":false,"searches_done":0},"j":[]},'NavigationTab2_1','custom/navigation/NavigationTab2','NavigationTab2','1');
+W[c]({"i":{"c":"NavigationTab2","n":"NavigationTab2_2","w":2},"a":{"label_tab":"Answers","link":"\/app\/answers\/list","pages":["answers\/list","answers\/detail"],"subpages":"","css_class":"rn_SelectedTab","target":"_self","external":false,"searches_done":0},"j":[]},'NavigationTab2_2','custom/navigation/NavigationTab2','NavigationTab2','2');
+W[c]({"i":{"c":"NavigationTab2","n":"NavigationTab2_3","w":3},"a":{"label_tab":"Contact Us","link":"\/app\/ask","pages":["ask","ask_confirm"],"subpages":"","css_class":"rn_SelectedTab","target":"_self","external":false,"searches_done":0},"j":[]},'NavigationTab2_3','custom/navigation/NavigationTab2','NavigationTab2','3');
+W[c]({"i":{"c":"FormInput","n":"FormInput_4","w":4},"a":{"label_input":"E-mail Address","label_error":"","label_required":"%s is required","name":"contacts.email","required":true,"hint":"","always_show_hint":false,"initial_focus":true,"validate_on_blur":false,"always_show_mask":false,"default_value":"","allow_external_login_updates":false,"hide_hint":false,"require_validation":false,"label_validation_incorrect":"%s does not match %s","label_validation":"Re-enter %s","maximum_length":0,"minimum_length":0,"disable_password_autocomplete":false},"j":{"type":8,"table":"contacts","name":"email","mask":null,"prev":null,"contactToken":"_p1kmWKZbJl8mXiZfJl2mUaZSJlOmU4H9gfQIeQXxiMHn58!"}},'TextInput_5','standard/input/TextInput','TextInput','5');
+W[c]({"i":{"c":"ProductCategoryInput","n":"ProductCategoryInput_6","w":6},"a":{"default_value":"","label_input":"Subject","label_error":"","label_set_button":"Products","label_required":"Please select an item under %s","label_confirm_button":"OK","label_cancel_button":"Cancel","label_nothing_selected":"Select a category","label_accessible_interface":"This button does not work with screen readers. Please use the previous link instead.","label_screen_reader_selected":"Values selected:","label_screen_reader_accessible_option":"Screen Reader users press enter to select a %s.","data_type":"categories","table":"incidents","required_lvl":1,"max_lvl":6,"linking_off":false,"set_button":false,"allow_external_login_updates":false,"treeview_css":"\/rnt\/rnw\/yui_2.7\/treeview\/assets\/treeview-menu.css","show_confirm_button_in_dialog":false,"hint":"","always_show_hint":false},"j":{"linkingOn":1,"hierData":[[{"value":0,"label":"No Value"},{"value":307,"label":"Registration","parentID":0,"selected":false,"hasChildren":1},{"value":315,"label":"Suggestion\/Comments","parentID":0,"selected":false,"hasChildren":0},{"value":325,"label":"Site Content","parentID":0,"selected":false,"hasChildren":1},{"value":429,"label":"RadioBDC","parentID":0,"selected":false,"hasChildren":1},{"value":352,"label":"Technical Problems","parentID":0,"selected":false,"hasChildren":0},{"value":356,"label":"Help Finding Something","parentID":0,"selected":false,"hasChildren":0},{"value":300,"label":"Advertisements","parentID":0,"selected":false,"hasChildren":0},{"value":303,"label":"Article comments and forums","parentID":0,"selected":false,"hasChildren":0},{"value":304,"label":"Mobile","parentID":0,"selected":false,"hasChildren":1},{"value":301,"label":"E-mail Newsletters","parentID":0,"selected":false,"hasChildren":1},{"value":290,"label":"Other","parentID":0,"selected":false,"hasChildren":0}]],"hm_type":14,"hierDataNone":[[{"value":0,"label":"No Value"},{"value":307,"label":"Registration","parentID":0,"selected":false,"hasChildren":1},{"value":315,"label":"Suggestion\/Comments","parentID":0,"selected":false,"hasChildren":0},{"value":325,"label":"Site Content","parentID":0,"selected":false,"hasChildren":1},{"value":429,"label":"RadioBDC","parentID":0,"selected":false,"hasChildren":1},{"value":352,"label":"Technical Problems","parentID":0,"selected":false,"hasChildren":0},{"value":356,"label":"Help Finding Something","parentID":0,"selected":false,"hasChildren":0},{"value":300,"label":"Advertisements","parentID":0,"selected":false,"hasChildren":0},{"value":303,"label":"Article comments and forums","parentID":0,"selected":false,"hasChildren":0},{"value":304,"label":"Mobile","parentID":0,"selected":false,"hasChildren":1},{"value":301,"label":"E-mail Newsletters","parentID":0,"selected":false,"hasChildren":1},{"value":290,"label":"Other","parentID":0,"selected":false,"hasChildren":0}]]}},'ProductCategoryInput_6','standard/input/ProductCategoryInput','ProductCategoryInput','6');
+W[c]({"i":{"c":"FormInput","n":"FormInput_7","w":7},"a":{"label_input":"Question","label_error":"","label_required":"%s is required","name":"incidents.thread","required":true,"hint":"","always_show_hint":false,"initial_focus":false,"validate_on_blur":false,"always_show_mask":false,"default_value":"","allow_external_login_updates":false,"hide_hint":false,"require_validation":false,"label_validation_incorrect":"%s does not match %s","label_validation":"Re-enter %s","maximum_length":0,"minimum_length":0,"disable_password_autocomplete":false},"j":{"type":10,"table":"incidents","name":"thread","mask":null,"prev":null,"contactToken":"_p1kmWKZbJl8mXiZfJl2mUaZSJlOmU4H9gfQIeQXxiMHn58!"}},'TextInput_8','standard/input/TextInput','TextInput','8');
+W[c]({"i":{"c":"SelectionInput","n":"SelectionInput_9","w":9},"a":{"label_input":"Please send me a reply","label_error":"","label_required":"%s is required","name":"incidents.c$user_contact_pref","required":true,"hint":"","always_show_hint":false,"initial_focus":false,"validate_on_blur":false,"default_value":"","allow_external_login_updates":false,"hide_hint":false,"display_as_checkbox":false},"j":{"type":4,"table":"incidents","name":"user_contact_pref","mask":null,"customID":33,"prev":null}},'SelectionInput_9','standard/input/SelectionInput','SelectionInput','9');
+W[c]({"i":{"c":"FileAttachmentUpload2","n":"FileAttachmentUpload2_10","w":10},"a":{"label_input":"Attach Documents","label_error":"","label_remove":"Remove","max_attachments":0,"label_max_attachment_limit":"You have reached the limit of files that may be uploaded. To add another file, you must first remove one of the files above.","label_generic_error":"The file could not be successfully uploaded. Either the file was too large, or the path to the file was incorrect.","loading_icon_path":"images\/indicator.gif","min_required_attachments":0,"label_min_required":"%s requires %s file(s)","valid_file_extensions":"","label_invalid_extension":"Only the following file types are allowed: %s"},"j":[]},'FileAttachmentUpload2_10','standard/input/FileAttachmentUpload2','FileAttachmentUpload2','10');
+W[c]({"i":{"c":"FormInput","n":"FormInput_11","w":11},"a":{"label_input":"URL where issue occurred (if applicable)","label_error":"","label_required":"%s is required","name":"incidents.c$problem_url","required":false,"hint":"","always_show_hint":false,"initial_focus":false,"validate_on_blur":false,"always_show_mask":false,"default_value":"","allow_external_login_updates":false,"hide_hint":false,"require_validation":false,"label_validation_incorrect":"%s does not match %s","label_validation":"Re-enter %s","maximum_length":0,"minimum_length":0,"disable_password_autocomplete":false},"j":{"type":8,"table":"incidents","name":"problem_url","mask":null,"customID":34,"prev":null,"contactToken":"_p1kmWKZbJl8mXiZfJl2mUaZSJlOmU4H9gfQIeQXxiMHn58!"}},'TextInput_12','standard/input/TextInput','TextInput','12');
+W[c]({"i":{"c":"FormInput","n":"FormInput_13","w":13},"a":{"label_input":"","label_error":"","label_required":"%s is required","name":"incidents.c$user_screen_resolution","required":false,"hint":"","always_show_hint":false,"initial_focus":false,"validate_on_blur":false,"always_show_mask":false,"default_value":"Unavailable","allow_external_login_updates":false,"hide_hint":false,"require_validation":false,"label_validation_incorrect":"%s does not match %s","label_validation":"Re-enter %s","maximum_length":0,"minimum_length":0,"disable_password_autocomplete":false},"j":{"type":8,"table":"incidents","name":"user_screen_resolution","mask":null,"customID":21,"prev":"Unavailable","contactToken":"_p1kmWKZbJl8mXiZfJl2mUaZSJlOmU4H9gfQIeQXxiMHn58!"}},'TextInput_14','standard/input/TextInput','TextInput','14');
+W[c]({"i":{"c":"SelectionInputHidden","n":"SelectionInputHidden_15","w":15},"a":{"label_input":"user_cookies","label_error":"","label_required":"%s is required","name":"incidents.c$user_cookies","required":false,"hint":"","always_show_hint":false,"initial_focus":false,"validate_on_blur":false,"default_value":"","allow_external_login_updates":false,"hide_hint":false,"display_as_checkbox":false},"j":{"type":3,"table":"incidents","name":"user_cookies","mask":null,"customID":22,"prev":null}},'SelectionInputHidden_15','custom/input/SelectionInputHidden','SelectionInputHidden','15');
+W[c]({"i":{"c":"FormSubmit","n":"FormSubmit_16","w":16},"a":{"label_button":"Submit","label_confirm_dialog":"","on_success_url":"\/app\/ask_confirm","loading_icon_path":"images\/indicator.gif","error_location":"rn_ErrorLocation","add_params_to_url":"","challenge_location":"","challenge_required":false},"j":{"f_tok":"_p9kmWKZbJl8mXiZfJl2mUaZSJlOmUwH9gfQIeQXxiMHn58!","formExpiration":1500000}},'FormSubmit_16','standard/input/FormSubmit','FormSubmit','16');
+W[c]({"i":{"c":"SmartAssistantDialogCustom","n":"SmartAssistantDialogCustom_17","w":17},"a":{"label_banner":"Your question hasn't been submitted yet.","label_prompt":"The following answers might help you immediately. (Answers open in a separate window.)","label_no_results":"No matches were found.","label_submit_button":"Finish Submitting Question","label_cancel_button":"Back","label_dialog_title":"Finish submitting your question","display_answers_inline":false,"label_collapsed":"Answer closed, click or double tap to open","label_expanded":"Answer opened, click or double tap to close","label_accesskey":"If you prefer the keyboard, you can use %s + 1-%d to access each answer","accesskeys_enabled":true,"dialog_width":"600px"},"j":[]},'SmartAssistantDialogCustom_17','custom/input/SmartAssistantDialogCustom','SmartAssistantDialogCustom','17');
+W[c]({"i":{"c":"SimpleSearch","n":"SimpleSearch_18","w":18},"a":{"initial_focus":false,"report_page_url":"\/app\/answers\/list","icon_path":"images\/icons\/search.png","alt_text":"Search","label_hint":"Search"},"j":[]},'SimpleSearch_18','standard/search/SimpleSearch','SimpleSearch','18');
+RightNow.Url.transformLinks();});
+/* ]]> */
+</script>
+<script type="text/javascript">
+var _rnq=_rnq||[];_rnq.push({"s":"9N2xF49m","uh":"e1c229e6","uc":"boston.custhelp.com\/app\/ask","b":"ca57239","i":"bostonglobe:boston","f":"rnw","p":"Customer Portal","v":"14.5.0.1-b119-sp3","th":"www.rnengage.com"});
+(function(f){var b,d,a=document.createElement("iframe"),c=document.getElementsByTagName("script");a.src="javascript:false";a.title="";a.role="presentation";(a.frameElement||a).style.cssText="width:0;height:0;border:0";c=c[c.length-1];c.parentNode.insertBefore(a,c);try{b=a.contentWindow.document}catch(g){d=document.domain,a.src="javascript:var d=document.open();d.domain='"+d+"';void(0);",b=a.contentWindow.document}b.open()._l=function(){for(var a;f.length;)a=this.createElement("script"),d&&(this.domain=
+d),a.src=f.pop(),this.body.appendChild(a)};b.write('<body onload="document._l();">');b.close()})(["https://www.rnengage.com/api/e/ca57239/e.js","//www.rnengage.com/api/1/javascript/acs.js"]);
+</script>
+<script type='text/javascript' src='/rnt/rnw/yui_2.7/treeview/treeview-min.js'></script>
+</body>
+
+</html>

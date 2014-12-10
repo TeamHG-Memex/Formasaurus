@@ -1,0 +1,2528 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-gb" lang="en-gb" >
+<head><link rel="stylesheet" type="text/css" href="/plugins/editors/jckeditor/typography/typography.php"/>
+  <base href="http://yellowdeli.com/guest-book-oneonta/addpost" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="robots" content="index, follow" />
+  <meta name="keywords" content="the yellow deli, deli rose, sandwiches, drinks, restaurant, reuben, bakery" />
+  <meta name="description" content="The Yellow Deli - We Serve the Fruit of the Spirit, Why not Ask?" />
+  <meta name="generator" content="Joomla! 1.5 - Open Source Content Management" />
+  <title>Guest Book</title>
+  <link rel="stylesheet" href="/media/system/css/modal.css" type="text/css" />
+  <style type="text/css">
+    <!--
+body {}table.admintable {width: 100%;}
+    -->
+  </style>
+  <script type="text/javascript" src="/media/system/js/mootools.js"></script>
+  <script type="text/javascript" src="http://yellowdeli.com/plugins/system/ninja.shadowbox/js/lib/dojo.js"></script>
+  <script type="text/javascript" src="http://yellowdeli.com/plugins/system/ninja.shadowbox/js/adapter/shadowbox-dojo.js"></script>
+  <script type="text/javascript" src="http://yellowdeli.com/plugins/system/ninja.shadowbox/js/shadowbox.js"></script>
+  <script type="text/javascript" src="/media/system/js/validate.js"></script>
+  <script type="text/javascript" src="/media/system/js/modal.js"></script>
+  <script type="text/javascript">
+
+		Shadowbox.loadSkin("classic", "http://yellowdeli.com/plugins/system/ninja.shadowbox/js/skin");
+		Shadowbox.loadLanguage("en", "http://yellowdeli.com/plugins/system/ninja.shadowbox/js/lang");
+		Shadowbox.loadPlayer(["img","swf","flv","qt","wmp","iframe","html"], "http://yellowdeli.com/plugins/system/ninja.shadowbox/js/player");
+			dojo.addOnLoad(function(){
+		 var options = { animSequence: 'wh',flvPlayer: 'plugins/system/ninja.shadowbox/js/flvplayer.swf',overlayColor: '#000',overlayOpacity: 0.85,flashBgColor: '#ffffff',resizeDuration: 0.35,fadeDuration: 0.35,counterType: 'skip',counterLimit: '10',initialHeight: '320px',initialWidth: '320px',handleOversize: 'resize',handleUnsupported: 'link' } 
+		Shadowbox.init(options);
+	});
+		window.addEvent('domready', function() {
+
+			SqueezeBox.initialize({});
+
+			$$('a.modal-button').each(function(el) {
+				el.addEvent('click', function(e) {
+					new Event(e).stop();
+					SqueezeBox.fromElement(el);
+				});
+			});
+		});
+	
+			if (typeof JCKEvent == 'undefined') {
+			
+			var JCKEvent = {};
+			
+			JCKEvent.domReady = {
+			  add: function(fn) {
+				
+				
+				if (JCKEvent.domReady.loaded) return fn();
+				
+		
+				var observers = JCKEvent.domReady.observers;
+				if (!observers) observers = JCKEvent.domReady.observers = [];
+				observers[observers.length] = fn;
+		
+				if (typeof JCKEvent.domReady.callback != 'undefined') return;
+		
+				JCKEvent.domReady.callback = function() {
+				  if (JCKEvent.domReady.loaded) return;
+				  
+				  JCKEvent.domReady.loaded = true;
+				  if (JCKEvent.domReady.timer) {
+					clearInterval(JCKEvent.domReady.timer);
+					JCKEvent.domReady.timer = null;
+				  }
+				 
+				  var observers = JCKEvent.domReady.observers;
+				  for (var i = 0, length = observers.length; i < length; i++) {
+					var fn = observers[i];
+					observers[i] = null;
+					fn(); // make 'this' as window
+				  }
+				  JCKEvent.domReady.callback = JCKEvent.domReady.observers = null;
+				};
+		
+			
+				var ie = !!(window.attachEvent && !window.opera);
+				var webkit = navigator.userAgent.indexOf('AppleWebKit/') > -1;
+				
+				if (document.readyState && webkit) {
+				  
+				  // Apple WebKit (Safari, OmniWeb, ...)
+				  JCKEvent.domReady.timer = setInterval(function() {
+					var state = document.readyState;
+					if (state == 'loaded' || state == 'complete') {
+					  JCKEvent.domReady.callback();
+					}
+				  }, 50);
+				  
+				} else if (document.readyState && ie) {
+				  
+				  // Windows IE 
+				  var src = (window.location.protocol == 'https:') ? '://0' : 'javascript:void(0)';
+				  document.write(
+					'<script type="text/javascript" defer="defer" src="' + src + '" ' + 
+					'onreadystatechange="if (this.readyState == \'complete\') JCKEvent.domReady.callback();"' + 
+					'><\/script>');
+				  
+				} else {
+				  
+				  if (window.addEventListener) {
+					// for Mozilla browsers, Opera 9
+					document.addEventListener("DOMContentLoaded", JCKEvent.domReady.callback, false);
+					// Fail safe 
+					window.addEventListener("load", JCKEvent.domReady.callback, false);
+				  } else if (window.attachEvent) {
+					window.attachEvent('onload', JCKEvent.domReady.callback);
+				  } else {
+					// Legacy browsers (e.g. Mac IE 5)
+					var fn = window.onload;
+					window.onload = function() {
+					  JCKEvent.domReady.callback();
+					  if (fn) fn();
+					}
+				  }
+				  
+				}
+				
+			  }
+			}
+		
+			window.addDomReadyEvent = {};
+			if(typeof window.addDomReadyEvent.add == 'undefined')
+				window.addDomReadyEvent.add = JCKEvent.domReady.add;
+		}
+		
+		window.addDomReadyEvent.add(function() 
+		{
+		
+			CKEDITOR.on('instanceCreated',function(evt)
+			{
+				 var editor = evt.editor;
+				 
+				 
+				 
+				 editor.on( 'customConfigLoaded', function()
+				 {
+					 CKEDITOR.tools.extend( editor.config, 
+											{
+												removePlugins : 'dialog,htmldataprocessor,flash,filebrowser,save,about,jlink,jdocumentlistener,jtoolbar', 
+												extraPlugins :	'toolbar,jhtmldataprocessor,jflash,jfilebrowser,jsave,safariroverride,stylesoverride,jabout,ajaxoverride,tableresize,autofixlink,multipleclickdialoghandler,autofixbackgroundimage,jhtmlencode,readmore,jtreelink,scayt,forcesimpleamp,ieelementpathfix,html5support,video,audio,uicolor,imagedragndrop,ie9selectionoverride'
+											}, true );
+	
+				 });	 
+				 
+				 //addCustom CSS
+				 editor.addCss( 'body { background: #FFFFFF none;}' );
+				 
+			 
+			});
+								
+		});window.addDomReadyEvent.add(function() 
+		{
+	
+			
+						
+			(function()
+			{
+				var mooTools = typeof MooTools != 'undefined' ? MooTools : false , 
+				browser = typeof Browser != 'undefined' ? Browser : false;
+				
+				CKEDITOR.env.ie9Compat = document.documentMode == 9;
+				
+				CKEDITOR.env.opera = mooTools && browser && browser.Engine && (browser.Engine.name == 'presto') && true || CKEDITOR.env.opera;
+				
+				CKEDITOR.env.version = 
+					mooTools && CKEDITOR.env.opera && browser && browser.Engine && browser.Engine.version && browser.Engine.version/100 || CKEDITOR.env.version;
+				
+				var env = CKEDITOR.env;
+					version = CKEDITOR.env.version;
+					
+				var agent = navigator.userAgent.toLowerCase();	
+				
+				CKEDITOR.env.iOS = /(ipad|iphone|ipod)/.test(agent); 	
+					
+				CKEDITOR.env.isCompatible =
+				
+				// White list of mobile devices that supports. Patch 7190
+				env.iOS && version >= 534 || 
+				
+				!env.mobile && (
+				( env.ie && version >= 6 ) ||
+				( env.gecko && version >= 10801 ) ||
+				( env.opera && version >= 9.5 ) ||
+				( env.air && version >= 1 ) ||
+				( env.webkit && version >= 522 ) ||
+				false );	
+			}
+			)();(function(){var jfunctions = {};
+		CKEDITOR.tools.extend(CKEDITOR.tools,
+		{
+			getData : function(IdOrName)
+			{
+				 return CKEDITOR.instances[IdOrName] && CKEDITOR.instances[IdOrName].getData() || oEditor && oEditor.getData();	
+			},
+			setData : function(IdOrName,ohtml)
+			{
+				 if(oEditor) {oEditor.setData(ohtml);} 
+				 else { CKEDITOR.instances[IdOrName].setData(ohtml);}
+			},
+			addHashFunction : function( fn, ref)
+			{
+				jfunctions[ref] =  function()
+				{
+					fn.apply( window, arguments );
+				};
+			},
+			callHashFunction : function( ref )
+			{
+				var fn = jfunctions[ ref ];
+				return fn && fn.apply( window, Array.prototype.slice.call( arguments, 1 ) );
+			}
+		});})();	
+			
+			CKEDITOR.on('instanceCreated',function(evt)
+			{
+				 var editor = evt.editor;
+				 editor.on( 'customConfigLoaded', function()
+				 {
+					editor.config.toolbar_Full = [	['Source','Save'],	['Cut','Copy','Paste','PasteText','PasteFromWord','SelectAll','-','Print','SpellChecker','Scayt'],	['Undo','Redo','RemoveFormat','-','Find','Replace','-'],	['Bold','Italic','Underline','Strike','-','Subscript','Superscript','Blockquote','SpecialChar'],	['Form','Checkbox','Radio','TextField','Textarea','Select','Button','ImageButton','HiddenField'],	['NumberedList','BulletedList','-','Outdent','Indent'],	['JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock'],	['JTreeLink','Link','Unlink','Anchor'],	['Image','Flash','Templates','Table','HorizontalRule','Smiley'],	['Styles','Format','CreateDiv','ShowBlocks'],	['Font','FontSize','TextColor','BGColor'],	['Maximize','Preview','-','About','Video','Audio','UIColor']];
+	
+				 });
+			editor.on( 'configLoaded', function()
+			{
+				
+				if(editor.config.extraPlugins)
+					editor.config.extraPlugins += ',adddialogfieldexample,codemirrorresize,ietoolbarcollasperfix';
+				else 	
+					editor.config.extraPlugins += 'adddialogfieldexample,codemirrorresize,ietoolbarcollasperfix';
+			});
+			editor.config['startupFocus'] = 0;
+			editor.config['forcesimpleAmpersand'] = 0;editor.on( 'configLoaded', function()
+			{
+				editor.config.EnableImageDragndrop = 1;
+			});editor.on( 'configLoaded', function()
+			{
+				if(editor.config.removePlugins)
+					editor.config.removePlugins += ',jroverride';
+				else 	
+					editor.config.removePlugins += 'jroverride';
+			});editor.on( 'configLoaded', function()
+			{
+				if(editor.config.contentsCss instanceof Array)
+					editor.config.contentsCss.unshift('http://yellowdeli.com/plugins/editors/jckeditor/typography/typography.php');
+				else	
+				editor.config.contentsCss = ['http://yellowdeli.com/plugins/editors/jckeditor/typography/typography.php',editor.config.contentsCss];
+			});	
+					 
+			});
+		});window.addDomReadyEvent.add(function() 
+		{
+			CKEDITOR.on('instanceReady',function(evt)
+			{
+				 var editor = evt.editor;
+				 
+				editor.dataProcessor.writer.setRules( 'pre',
+				{
+					indent : false,
+					breakAfterOpen : false,	
+				    breakBeforeClose: false
+				}); 
+			
+				 				 
+				 
+			editor.config['client'] = 0;
+			editor.config['imagePath'] = 'images';
+			editor.config['sigPath'] = 'images/stories/slideshow';	
+			});
+		});var oEditor;
+								   
+				function ReplaceTextContainer(div,autoHeight)
+				{
+					//destroy editor instance if one already exist 
+					if ( oEditor )
+						oEditor.destroy();
+					
+								
+					CKEDITOR.config.startupFocus = true;		
+					//create editor instance
+					oEditor = CKEDITOR.replace(div,
+					{ 
+						 baseHref : 'http://yellowdeli.com/',
+						 imagePath :  'images/stories',     
+						 toolbar : CKEDITOR.config.expandedToolbar ? 'Full' : 'Image',
+						 toolbarStartupExpanded : CKEDITOR.config.expandedToolbar,
+						 uiColor	: '#D6E6F4',
+						 skin : 'office2007',	
+						 contentsCss :'http://yellowdeli.com/templates/jp_praiseu_j1.5/css/template.css',
+						 contentsLangDirection : 'ltr',
+						 language : 'en',
+						 defaultLanguage :'en', 
+						 enterMode : '1',
+						 shiftEnterMode : '0',
+						 stylesSet : [{
+name : 'contentheading',
+element : 'P', 
+attributes : {
+	'class' : 'contentheading'
+}},{
+name : 'componentheading',
+element : 'P', 
+attributes : {
+	'class' : 'componentheading'
+}},{
+name : 'h1',
+element : 'P', 
+attributes : {
+	'class' : 'h1'
+}},{
+name : 'h2',
+element : 'P', 
+attributes : {
+	'class' : 'h2'
+}},{
+name : 'h3',
+element : 'P', 
+attributes : {
+	'class' : 'h3'
+}},{
+name : 'h4',
+element : 'P', 
+attributes : {
+	'class' : 'h4'
+}},{
+name : 'h5',
+element : 'P', 
+attributes : {
+	'class' : 'h5'
+}},{
+name : 'h6',
+element : 'P', 
+attributes : {
+	'class' : 'h6'
+}},{
+name : 'small',
+element : 'P', 
+attributes : {
+	'class' : 'small'
+}},{
+name : 'createdate',
+element : 'P', 
+attributes : {
+	'class' : 'createdate'
+}},{
+name : 'modifydate',
+element : 'P', 
+attributes : {
+	'class' : 'modifydate'
+}},{
+name : 'alert',
+element : 'P', 
+attributes : {
+	'class' : 'alert'
+}},{
+name : 'info',
+element : 'P', 
+attributes : {
+	'class' : 'info'
+}},{
+name : 'download',
+element : 'P', 
+attributes : {
+	'class' : 'download'
+}},{
+name : 'note',
+element : 'P', 
+attributes : {
+	'class' : 'note'
+}},{
+name : 'dropcap',
+element : 'span', 
+attributes : {
+	'class' : 'dropcap'
+}},{
+name : 'bluhlight-jck',
+element : 'span', 
+attributes : {
+	'class' : 'bluhlight-jck'
+}},{
+name : 'grehlight-jck',
+element : 'span', 
+attributes : {
+	'class' : 'grehlight-jck'
+}},{
+name : 'redhlight-jck',
+element : 'span', 
+attributes : {
+	'class' : 'redhlight-jck'
+}},{
+name : 'blahlight-jck',
+element : 'span', 
+attributes : {
+	'class' : 'blahlight-jck'
+}},{
+name : 'yelhlight-jck',
+element : 'span', 
+attributes : {
+	'class' : 'yelhlight-jck'
+}},{
+name : 'blubox-jck',
+element : 'P', 
+attributes : {
+	'class' : 'blubox-jck'
+}},{
+name : 'grebox-jck',
+element : 'P', 
+attributes : {
+	'class' : 'grebox-jck'
+}},{
+name : 'redbox-jck',
+element : 'P', 
+attributes : {
+	'class' : 'redbox-jck'
+}},{
+name : 'blabox-jck',
+element : 'P', 
+attributes : {
+	'class' : 'blabox-jck'
+}},{
+name : 'yelbox-jck',
+element : 'P', 
+attributes : {
+	'class' : 'yelbox-jck'
+}},{
+name : 'info-jck',
+element : 'P', 
+attributes : {
+	'class' : 'info-jck'
+}},{
+name : 'warning-jck',
+element : 'P', 
+attributes : {
+	'class' : 'warning-jck'
+}},{
+name : 'film-jck',
+element : 'P', 
+attributes : {
+	'class' : 'film-jck'
+}},{
+name : 'pin-jck',
+element : 'P', 
+attributes : {
+	'class' : 'pin-jck'
+}},{
+name : 'lightbulb-jck',
+element : 'P', 
+attributes : {
+	'class' : 'lightbulb-jck'
+}},{
+name : 'recycle-jck',
+element : 'P', 
+attributes : {
+	'class' : 'recycle-jck'
+}},{
+name : 'camera-jck',
+element : 'P', 
+attributes : {
+	'class' : 'camera-jck'
+}},{
+name : 'comment-jck',
+element : 'P', 
+attributes : {
+	'class' : 'comment-jck'
+}},{
+name : 'chat-jck',
+element : 'P', 
+attributes : {
+	'class' : 'chat-jck'
+}},{
+name : 'document-jck',
+element : 'P', 
+attributes : {
+	'class' : 'document-jck'
+}},{
+name : 'accessible-jck',
+element : 'P', 
+attributes : {
+	'class' : 'accessible-jck'
+}},{
+name : 'star-jck',
+element : 'P', 
+attributes : {
+	'class' : 'star-jck'
+}},{
+name : 'heart-jck',
+element : 'P', 
+attributes : {
+	'class' : 'heart-jck'
+}},{
+name : 'previous-jck',
+element : 'P', 
+attributes : {
+	'class' : 'previous-jck'
+}},{
+name : 'cart-jck',
+element : 'P', 
+attributes : {
+	'class' : 'cart-jck'
+}},{
+name : 'attachment-jck',
+element : 'P', 
+attributes : {
+	'class' : 'attachment-jck'
+}},{
+name : 'calculator-jck',
+element : 'P', 
+attributes : {
+	'class' : 'calculator-jck'
+}},{
+name : 'cut-jck',
+element : 'P', 
+attributes : {
+	'class' : 'cut-jck'
+}},{
+name : 'dollar-jck',
+element : 'P', 
+attributes : {
+	'class' : 'dollar-jck'
+}},{
+name : 'pound-jck',
+element : 'P', 
+attributes : {
+	'class' : 'pound-jck'
+}},{
+name : 'euro-jck',
+element : 'P', 
+attributes : {
+	'class' : 'euro-jck'
+}},{
+name : 'mail-jck',
+element : 'P', 
+attributes : {
+	'class' : 'mail-jck'
+}},{
+name : 'support-jck',
+element : 'P', 
+attributes : {
+	'class' : 'support-jck'
+}},{
+name : 'next-jck',
+element : 'P', 
+attributes : {
+	'class' : 'next-jck'
+}},{
+name : 'sound-jck',
+element : 'P', 
+attributes : {
+	'class' : 'sound-jck'
+}},{
+name : 'infotip-jck',
+element : 'P', 
+attributes : {
+	'class' : 'infotip-jck'
+}},{
+name : 'warningtip-jck',
+element : 'P', 
+attributes : {
+	'class' : 'warningtip-jck'
+}},{
+name : 'filmtip-jck',
+element : 'P', 
+attributes : {
+	'class' : 'filmtip-jck'
+}},{
+name : 'pintip-jck',
+element : 'P', 
+attributes : {
+	'class' : 'pintip-jck'
+}},{
+name : 'lightbulbtip-jck',
+element : 'P', 
+attributes : {
+	'class' : 'lightbulbtip-jck'
+}},{
+name : 'recycletip-jck',
+element : 'P', 
+attributes : {
+	'class' : 'recycletip-jck'
+}},{
+name : 'cameratip-jck',
+element : 'P', 
+attributes : {
+	'class' : 'cameratip-jck'
+}},{
+name : 'commenttip-jck',
+element : 'P', 
+attributes : {
+	'class' : 'commenttip-jck'
+}},{
+name : 'chattip-jck',
+element : 'P', 
+attributes : {
+	'class' : 'chattip-jck'
+}},{
+name : 'documenttip-jck',
+element : 'P', 
+attributes : {
+	'class' : 'documenttip-jck'
+}},{
+name : 'accessibletip-jck',
+element : 'P', 
+attributes : {
+	'class' : 'accessibletip-jck'
+}},{
+name : 'startip-jck',
+element : 'P', 
+attributes : {
+	'class' : 'startip-jck'
+}},{
+name : 'hearttip-jck',
+element : 'P', 
+attributes : {
+	'class' : 'hearttip-jck'
+}},{
+name : 'previoustip-jck',
+element : 'P', 
+attributes : {
+	'class' : 'previoustip-jck'
+}},{
+name : 'carttip-jck',
+element : 'P', 
+attributes : {
+	'class' : 'carttip-jck'
+}},{
+name : 'attachmenttip-jck',
+element : 'P', 
+attributes : {
+	'class' : 'attachmenttip-jck'
+}},{
+name : 'calculatortip-jck',
+element : 'P', 
+attributes : {
+	'class' : 'calculatortip-jck'
+}},{
+name : 'cuttip-jck',
+element : 'P', 
+attributes : {
+	'class' : 'cuttip-jck'
+}},{
+name : 'dollartip-jck',
+element : 'P', 
+attributes : {
+	'class' : 'dollartip-jck'
+}},{
+name : 'poundtip-jck',
+element : 'P', 
+attributes : {
+	'class' : 'poundtip-jck'
+}},{
+name : 'eurotip-jck',
+element : 'P', 
+attributes : {
+	'class' : 'eurotip-jck'
+}},{
+name : 'mailtip-jck',
+element : 'P', 
+attributes : {
+	'class' : 'mailtip-jck'
+}},{
+name : 'supporttip-jck',
+element : 'P', 
+attributes : {
+	'class' : 'supporttip-jck'
+}},{
+name : 'nexttip-jck',
+element : 'P', 
+attributes : {
+	'class' : 'nexttip-jck'
+}},{
+name : 'soundtip-jck',
+element : 'P', 
+attributes : {
+	'class' : 'soundtip-jck'
+}},{
+name : 'download-DOC',
+element : 'P', 
+attributes : {
+	'class' : 'download-DOC'
+}},{
+name : 'download-IMG',
+element : 'P', 
+attributes : {
+	'class' : 'download-IMG'
+}},{
+name : 'ainfotip-jck',
+element : 'P', 
+attributes : {
+	'class' : 'ainfotip-jck'
+}},{
+name : 'awarningtip-jck',
+element : 'P', 
+attributes : {
+	'class' : 'awarningtip-jck'
+}},{
+name : 'afilmtip-jck',
+element : 'P', 
+attributes : {
+	'class' : 'afilmtip-jck'
+}},{
+name : 'apintip-jck',
+element : 'P', 
+attributes : {
+	'class' : 'apintip-jck'
+}},{
+name : 'alightbulbtip-jck',
+element : 'P', 
+attributes : {
+	'class' : 'alightbulbtip-jck'
+}},{
+name : 'arecycletip-jck',
+element : 'P', 
+attributes : {
+	'class' : 'arecycletip-jck'
+}},{
+name : 'acameratip-jck',
+element : 'P', 
+attributes : {
+	'class' : 'acameratip-jck'
+}},{
+name : 'acommenttip-jck',
+element : 'P', 
+attributes : {
+	'class' : 'acommenttip-jck'
+}},{
+name : 'achattip-jck',
+element : 'P', 
+attributes : {
+	'class' : 'achattip-jck'
+}},{
+name : 'adocumenttip-jck',
+element : 'P', 
+attributes : {
+	'class' : 'adocumenttip-jck'
+}},{
+name : 'aaccessibletip-jck',
+element : 'P', 
+attributes : {
+	'class' : 'aaccessibletip-jck'
+}},{
+name : 'astartip-jck',
+element : 'P', 
+attributes : {
+	'class' : 'astartip-jck'
+}},{
+name : 'ahearttip-jck',
+element : 'P', 
+attributes : {
+	'class' : 'ahearttip-jck'
+}},{
+name : 'aprevioustip-jck',
+element : 'P', 
+attributes : {
+	'class' : 'aprevioustip-jck'
+}},{
+name : 'acarttip-jck',
+element : 'P', 
+attributes : {
+	'class' : 'acarttip-jck'
+}},{
+name : 'aattachmenttip-jck',
+element : 'P', 
+attributes : {
+	'class' : 'aattachmenttip-jck'
+}},{
+name : 'acalculatortip-jck',
+element : 'P', 
+attributes : {
+	'class' : 'acalculatortip-jck'
+}},{
+name : 'acuttip-jck',
+element : 'P', 
+attributes : {
+	'class' : 'acuttip-jck'
+}},{
+name : 'adollartip-jck',
+element : 'P', 
+attributes : {
+	'class' : 'adollartip-jck'
+}},{
+name : 'apoundtip-jck',
+element : 'P', 
+attributes : {
+	'class' : 'apoundtip-jck'
+}},{
+name : 'aeurotip-jck',
+element : 'P', 
+attributes : {
+	'class' : 'aeurotip-jck'
+}},{
+name : 'amailtip-jck',
+element : 'P', 
+attributes : {
+	'class' : 'amailtip-jck'
+}},{
+name : 'asupporttip-jck',
+element : 'P', 
+attributes : {
+	'class' : 'asupporttip-jck'
+}},{
+name : 'anexttip-jck',
+element : 'P', 
+attributes : {
+	'class' : 'anexttip-jck'
+}},{
+name : 'asoundtip-jck',
+element : 'P', 
+attributes : {
+	'class' : 'asoundtip-jck'
+}},{
+name : 'bludisc-jck',
+element : 'span', 
+attributes : {
+	'class' : 'bludisc-jck'
+}},{
+name : 'bludisc-black-jck',
+element : 'span', 
+attributes : {
+	'class' : 'bludisc-black-jck'
+}},{
+name : 'gredisc-jck',
+element : 'span', 
+attributes : {
+	'class' : 'gredisc-jck'
+}},{
+name : 'gredisc-black-jck',
+element : 'span', 
+attributes : {
+	'class' : 'gredisc-black-jck'
+}},{
+name : 'reddisc-jck',
+element : 'span', 
+attributes : {
+	'class' : 'reddisc-jck'
+}},{
+name : 'reddisc-black-jck',
+element : 'span', 
+attributes : {
+	'class' : 'reddisc-black-jck'
+}},{
+name : 'bladisc-jck',
+element : 'span', 
+attributes : {
+	'class' : 'bladisc-jck'
+}},{
+name : 'bladisc-black-jck',
+element : 'span', 
+attributes : {
+	'class' : 'bladisc-black-jck'
+}},{
+name : 'yeldisc-jck',
+element : 'span', 
+attributes : {
+	'class' : 'yeldisc-jck'
+}},{
+name : 'yeldisc-black-jck',
+element : 'span', 
+attributes : {
+	'class' : 'yeldisc-black-jck'
+}},{
+name : 'jck_img_align_left',
+element : 'img', 
+attributes : {
+	'class' : 'jck_img_align_left'
+}},{
+name : 'jck_img_align_right',
+element : 'img', 
+attributes : {
+	'class' : 'jck_img_align_right'
+}},{
+name : 'caption',
+element : 'img', 
+attributes : {
+	'class' : 'caption'
+}},{
+name : 'image_holder',
+element : 'img', 
+attributes : {
+	'class' : 'image_holder'
+}},{
+name : 'fade_in',
+element : 'img', 
+attributes : {
+	'class' : 'fade_in'
+}},{
+name : 'zoom',
+element : 'img', 
+attributes : {
+	'class' : 'zoom'
+}},{
+name : 'polaroids_zoom',
+element : 'img', 
+attributes : {
+	'class' : 'polaroids_zoom'
+}},{
+name : 'screenshot_blue',
+element : 'img', 
+attributes : {
+	'class' : 'screenshot_blue'
+}},{
+name : 'screenshot_green',
+element : 'img', 
+attributes : {
+	'class' : 'screenshot_green'
+}},{
+name : 'screenshot_red',
+element : 'img', 
+attributes : {
+	'class' : 'screenshot_red'
+}},{
+name : 'screenshot_black',
+element : 'img', 
+attributes : {
+	'class' : 'screenshot_black'
+}},{
+name : 'screenshot_gray',
+element : 'img', 
+attributes : {
+	'class' : 'screenshot_gray'
+}},{
+name : 'screenshot_yellow',
+element : 'img', 
+attributes : {
+	'class' : 'screenshot_yellow'
+}},{
+name : 'table_style_blue',
+element : 'table', 
+attributes : {
+	'class' : 'table_style_blue'
+}},{
+name : 'table_style_green',
+element : 'table', 
+attributes : {
+	'class' : 'table_style_green'
+}},{
+name : 'table_style_red',
+element : 'table', 
+attributes : {
+	'class' : 'table_style_red'
+}},{
+name : 'table_style_black',
+element : 'table', 
+attributes : {
+	'class' : 'table_style_black'
+}},{
+name : 'table_style_yellow',
+element : 'table', 
+attributes : {
+	'class' : 'table_style_yellow'
+}},{
+name : 'width',
+element : 'P', 
+attributes : {
+	'class' : 'width'
+}},{
+name : 'clr',
+element : 'P', 
+attributes : {
+	'class' : 'clr'
+}},{
+name : 'inside',
+element : 'P', 
+attributes : {
+	'class' : 'inside'
+}},{
+name : 'header-left',
+element : 'P', 
+attributes : {
+	'id' : 'header-left'
+}},{
+name : 'header-right',
+element : 'P', 
+attributes : {
+	'id' : 'header-right'
+}},{
+name : 'logo',
+element : 'P', 
+attributes : {
+	'id' : 'logo'
+}},{
+name : 'topmenu',
+element : 'P', 
+attributes : {
+	'id' : 'topmenu'
+}},{
+name : 'search',
+element : 'P', 
+attributes : {
+	'class' : 'search'
+}},{
+name : 'mainmenu-inner',
+element : 'P', 
+attributes : {
+	'id' : 'mainmenu-inner'
+}},{
+name : 'container-inner2',
+element : 'P', 
+attributes : {
+	'id' : 'container-inner2'
+}},{
+name : 'banner',
+element : 'P', 
+attributes : {
+	'id' : 'banner'
+}},{
+name : 'pathway',
+element : 'P', 
+attributes : {
+	'id' : 'pathway'
+}},{
+name : 'mainbody',
+element : 'P', 
+attributes : {
+	'id' : 'mainbody'
+}},{
+name : 'content',
+element : 'P', 
+attributes : {
+	'id' : 'content'
+}},{
+name : 'sidebar',
+element : 'P', 
+attributes : {
+	'id' : 'sidebar'
+}},{
+name : 'sidebar2',
+element : 'P', 
+attributes : {
+	'id' : 'sidebar2'
+}},{
+name : 'elements',
+element : 'P', 
+attributes : {
+	'class' : 'elements'
+}},{
+name : 'elements-1',
+element : 'P', 
+attributes : {
+	'class' : 'elements-1'
+}},{
+name : 'elements-2',
+element : 'P', 
+attributes : {
+	'class' : 'elements-2'
+}},{
+name : 'elements-3',
+element : 'P', 
+attributes : {
+	'class' : 'elements-3'
+}},{
+name : 'elements-4',
+element : 'P', 
+attributes : {
+	'class' : 'elements-4'
+}},{
+name : 'footer',
+element : 'P', 
+attributes : {
+	'id' : 'footer'
+}},{
+name : 'inputbox',
+element : 'P', 
+attributes : {
+	'class' : 'inputbox'
+}},{
+name : 'validate-email',
+element : 'P', 
+attributes : {
+	'class' : 'validate-email'
+}},{
+name : 'adminform',
+element : 'P', 
+attributes : {
+	'class' : 'adminform'
+}},{
+name : 'readon',
+element : 'P', 
+attributes : {
+	'class' : 'readon'
+}},{
+name : 'readmore',
+element : 'P', 
+attributes : {
+	'class' : 'readmore'
+}},{
+name : 'button',
+element : 'P', 
+attributes : {
+	'class' : 'button'
+}},{
+name : 'validate',
+element : 'P', 
+attributes : {
+	'class' : 'validate'
+}},{
+name : 'blog',
+element : 'P', 
+attributes : {
+	'class' : 'blog'
+}},{
+name : 'article_column',
+element : 'P', 
+attributes : {
+	'class' : 'article_column'
+}},{
+name : 'column_separator',
+element : 'P', 
+attributes : {
+	'class' : 'column_separator'
+}},{
+name : 'article_separator',
+element : 'P', 
+attributes : {
+	'class' : 'article_separator'
+}},{
+name : 'contentpaneopen',
+element : 'P', 
+attributes : {
+	'class' : 'contentpaneopen'
+}},{
+name : 'blog_more',
+element : 'P', 
+attributes : {
+	'class' : 'blog_more'
+}},{
+name : 'pagination',
+element : 'P', 
+attributes : {
+	'class' : 'pagination'
+}},{
+name : 'contenescription',
+element : 'P', 
+attributes : {
+	'class' : 'contenescription'
+}},{
+name : 'sectionheader',
+element : 'td', 
+attributes : {
+	'class' : 'sectionheader'
+}},{
+name : 'sectiontableentry1',
+element : 'tr', 
+attributes : {
+	'class' : 'sectiontableentry1'
+}},{
+name : 'sectiontableentry2',
+element : 'tr', 
+attributes : {
+	'class' : 'sectiontableentry2'
+}},{
+name : 'sectiontableentry0',
+element : 'tr', 
+attributes : {
+	'class' : 'sectiontableentry0'
+}},{
+name : 'limit',
+element : 'P', 
+attributes : {
+	'id' : 'limit'
+}},{
+name : 'contenttoc',
+element : 'P', 
+attributes : {
+	'class' : 'contenttoc'
+}},{
+name : 'pagenavbar',
+element : 'P', 
+attributes : {
+	'class' : 'pagenavbar'
+}},{
+name : 'search_searchword',
+element : 'P', 
+attributes : {
+	'id' : 'search_searchword'
+}},{
+name : 'searchpaseall',
+element : 'P', 
+attributes : {
+	'id' : 'searchpaseall'
+}},{
+name : 'ordering',
+element : 'P', 
+attributes : {
+	'id' : 'ordering'
+}},{
+name : 'searchino',
+element : 'P', 
+attributes : {
+	'class' : 'searchino'
+}},{
+name : 'highlight',
+element : 'P', 
+attributes : {
+	'class' : 'highlight'
+}},{
+name : 'name',
+element : 'P', 
+attributes : {
+	'id' : 'name'
+}},{
+name : 'email',
+element : 'P', 
+attributes : {
+	'id' : 'email'
+}},{
+name : 'password2',
+element : 'P', 
+attributes : {
+	'id' : 'password2'
+}},{
+name : 'password',
+element : 'P', 
+attributes : {
+	'id' : 'password'
+}},{
+name : 'jformcatid',
+element : 'P', 
+attributes : {
+	'id' : 'jformcatid'
+}},{
+name : 'jformtitle',
+element : 'P', 
+attributes : {
+	'id' : 'jformtitle'
+}},{
+name : 'jformurl',
+element : 'P', 
+attributes : {
+	'id' : 'jformurl'
+}},{
+name : 'jformdescription',
+element : 'P', 
+attributes : {
+	'id' : 'jformdescription'
+}},{
+name : 'paramlist',
+element : 'P', 
+attributes : {
+	'class' : 'paramlist'
+}},{
+name : 'tool-tip',
+element : 'P', 
+attributes : {
+	'class' : 'tool-tip'
+}},{
+name : 'tool-title',
+element : 'P', 
+attributes : {
+	'class' : 'tool-title'
+}},{
+name : 'tool-text',
+element : 'P', 
+attributes : {
+	'class' : 'tool-text'
+}},{
+name : 'system-message',
+element : 'P', 
+attributes : {
+	'id' : 'system-message'
+}},{
+name : 'moduletable',
+element : 'P', 
+attributes : {
+	'class' : 'moduletable'
+}},{
+name : 'moduletable_menu',
+element : 'P', 
+attributes : {
+	'class' : 'moduletable_menu'
+}},{
+name : 'moduletable_text',
+element : 'P', 
+attributes : {
+	'class' : 'moduletable_text'
+}},{
+name : 'module-ms1',
+element : 'P', 
+attributes : {
+	'class' : 'module-ms1'
+}},{
+name : 'module-ms2',
+element : 'P', 
+attributes : {
+	'class' : 'module-ms2'
+}},{
+name : 'module-ms3',
+element : 'P', 
+attributes : {
+	'class' : 'module-ms3'
+}},{
+name : 'module-ms4',
+element : 'P', 
+attributes : {
+	'class' : 'module-ms4'
+}},{
+name : 'banneritem_text',
+element : 'P', 
+attributes : {
+	'class' : 'banneritem_text'
+}},{
+name : 'bannerheader',
+element : 'P', 
+attributes : {
+	'class' : 'bannerheader'
+}},{
+name : 'poll',
+element : 'P', 
+attributes : {
+	'class' : 'poll'
+}},{
+name : 'pollsborder',
+element : 'P', 
+attributes : {
+	'class' : 'pollsborder'
+}}
+],
+						 width : '40%',
+						 height: autoHeight ? div.clientHeight +28 : '150',
+						 entities : 0
+					});
+				}
+								   
+				
+		window.addDomReadyEvent.add(function() 
+		{
+ 			CKEDITOR.tools.addHashFunction(function(div)
+			{
+				//create editor instance
+				var oEditor = CKEDITOR.replace(div,
+				{ 
+					 baseHref : 'http://yellowdeli.com/',
+					 imagePath :  'images/stories',     
+					 toolbar : CKEDITOR.config.expandedToolbar ? 'Full' : 'Image',
+					 toolbarStartupExpanded : CKEDITOR.config.expandedToolbar,
+					 uiColor	: '#D6E6F4',
+					 skin : 'office2007',	
+					 contentsCss :'http://yellowdeli.com/templates/jp_praiseu_j1.5/css/template.css',
+					 contentsLangDirection : 'ltr',
+					 language : 'en',
+					 defaultLanguage :'en', 
+					 enterMode : '1',
+					 shiftEnterMode : '0',
+					 stylesSet : [{
+name : 'contentheading',
+element : 'P', 
+attributes : {
+	'class' : 'contentheading'
+}},{
+name : 'componentheading',
+element : 'P', 
+attributes : {
+	'class' : 'componentheading'
+}},{
+name : 'h1',
+element : 'P', 
+attributes : {
+	'class' : 'h1'
+}},{
+name : 'h2',
+element : 'P', 
+attributes : {
+	'class' : 'h2'
+}},{
+name : 'h3',
+element : 'P', 
+attributes : {
+	'class' : 'h3'
+}},{
+name : 'h4',
+element : 'P', 
+attributes : {
+	'class' : 'h4'
+}},{
+name : 'h5',
+element : 'P', 
+attributes : {
+	'class' : 'h5'
+}},{
+name : 'h6',
+element : 'P', 
+attributes : {
+	'class' : 'h6'
+}},{
+name : 'small',
+element : 'P', 
+attributes : {
+	'class' : 'small'
+}},{
+name : 'createdate',
+element : 'P', 
+attributes : {
+	'class' : 'createdate'
+}},{
+name : 'modifydate',
+element : 'P', 
+attributes : {
+	'class' : 'modifydate'
+}},{
+name : 'alert',
+element : 'P', 
+attributes : {
+	'class' : 'alert'
+}},{
+name : 'info',
+element : 'P', 
+attributes : {
+	'class' : 'info'
+}},{
+name : 'download',
+element : 'P', 
+attributes : {
+	'class' : 'download'
+}},{
+name : 'note',
+element : 'P', 
+attributes : {
+	'class' : 'note'
+}},{
+name : 'dropcap',
+element : 'span', 
+attributes : {
+	'class' : 'dropcap'
+}},{
+name : 'bluhlight-jck',
+element : 'span', 
+attributes : {
+	'class' : 'bluhlight-jck'
+}},{
+name : 'grehlight-jck',
+element : 'span', 
+attributes : {
+	'class' : 'grehlight-jck'
+}},{
+name : 'redhlight-jck',
+element : 'span', 
+attributes : {
+	'class' : 'redhlight-jck'
+}},{
+name : 'blahlight-jck',
+element : 'span', 
+attributes : {
+	'class' : 'blahlight-jck'
+}},{
+name : 'yelhlight-jck',
+element : 'span', 
+attributes : {
+	'class' : 'yelhlight-jck'
+}},{
+name : 'blubox-jck',
+element : 'P', 
+attributes : {
+	'class' : 'blubox-jck'
+}},{
+name : 'grebox-jck',
+element : 'P', 
+attributes : {
+	'class' : 'grebox-jck'
+}},{
+name : 'redbox-jck',
+element : 'P', 
+attributes : {
+	'class' : 'redbox-jck'
+}},{
+name : 'blabox-jck',
+element : 'P', 
+attributes : {
+	'class' : 'blabox-jck'
+}},{
+name : 'yelbox-jck',
+element : 'P', 
+attributes : {
+	'class' : 'yelbox-jck'
+}},{
+name : 'info-jck',
+element : 'P', 
+attributes : {
+	'class' : 'info-jck'
+}},{
+name : 'warning-jck',
+element : 'P', 
+attributes : {
+	'class' : 'warning-jck'
+}},{
+name : 'film-jck',
+element : 'P', 
+attributes : {
+	'class' : 'film-jck'
+}},{
+name : 'pin-jck',
+element : 'P', 
+attributes : {
+	'class' : 'pin-jck'
+}},{
+name : 'lightbulb-jck',
+element : 'P', 
+attributes : {
+	'class' : 'lightbulb-jck'
+}},{
+name : 'recycle-jck',
+element : 'P', 
+attributes : {
+	'class' : 'recycle-jck'
+}},{
+name : 'camera-jck',
+element : 'P', 
+attributes : {
+	'class' : 'camera-jck'
+}},{
+name : 'comment-jck',
+element : 'P', 
+attributes : {
+	'class' : 'comment-jck'
+}},{
+name : 'chat-jck',
+element : 'P', 
+attributes : {
+	'class' : 'chat-jck'
+}},{
+name : 'document-jck',
+element : 'P', 
+attributes : {
+	'class' : 'document-jck'
+}},{
+name : 'accessible-jck',
+element : 'P', 
+attributes : {
+	'class' : 'accessible-jck'
+}},{
+name : 'star-jck',
+element : 'P', 
+attributes : {
+	'class' : 'star-jck'
+}},{
+name : 'heart-jck',
+element : 'P', 
+attributes : {
+	'class' : 'heart-jck'
+}},{
+name : 'previous-jck',
+element : 'P', 
+attributes : {
+	'class' : 'previous-jck'
+}},{
+name : 'cart-jck',
+element : 'P', 
+attributes : {
+	'class' : 'cart-jck'
+}},{
+name : 'attachment-jck',
+element : 'P', 
+attributes : {
+	'class' : 'attachment-jck'
+}},{
+name : 'calculator-jck',
+element : 'P', 
+attributes : {
+	'class' : 'calculator-jck'
+}},{
+name : 'cut-jck',
+element : 'P', 
+attributes : {
+	'class' : 'cut-jck'
+}},{
+name : 'dollar-jck',
+element : 'P', 
+attributes : {
+	'class' : 'dollar-jck'
+}},{
+name : 'pound-jck',
+element : 'P', 
+attributes : {
+	'class' : 'pound-jck'
+}},{
+name : 'euro-jck',
+element : 'P', 
+attributes : {
+	'class' : 'euro-jck'
+}},{
+name : 'mail-jck',
+element : 'P', 
+attributes : {
+	'class' : 'mail-jck'
+}},{
+name : 'support-jck',
+element : 'P', 
+attributes : {
+	'class' : 'support-jck'
+}},{
+name : 'next-jck',
+element : 'P', 
+attributes : {
+	'class' : 'next-jck'
+}},{
+name : 'sound-jck',
+element : 'P', 
+attributes : {
+	'class' : 'sound-jck'
+}},{
+name : 'infotip-jck',
+element : 'P', 
+attributes : {
+	'class' : 'infotip-jck'
+}},{
+name : 'warningtip-jck',
+element : 'P', 
+attributes : {
+	'class' : 'warningtip-jck'
+}},{
+name : 'filmtip-jck',
+element : 'P', 
+attributes : {
+	'class' : 'filmtip-jck'
+}},{
+name : 'pintip-jck',
+element : 'P', 
+attributes : {
+	'class' : 'pintip-jck'
+}},{
+name : 'lightbulbtip-jck',
+element : 'P', 
+attributes : {
+	'class' : 'lightbulbtip-jck'
+}},{
+name : 'recycletip-jck',
+element : 'P', 
+attributes : {
+	'class' : 'recycletip-jck'
+}},{
+name : 'cameratip-jck',
+element : 'P', 
+attributes : {
+	'class' : 'cameratip-jck'
+}},{
+name : 'commenttip-jck',
+element : 'P', 
+attributes : {
+	'class' : 'commenttip-jck'
+}},{
+name : 'chattip-jck',
+element : 'P', 
+attributes : {
+	'class' : 'chattip-jck'
+}},{
+name : 'documenttip-jck',
+element : 'P', 
+attributes : {
+	'class' : 'documenttip-jck'
+}},{
+name : 'accessibletip-jck',
+element : 'P', 
+attributes : {
+	'class' : 'accessibletip-jck'
+}},{
+name : 'startip-jck',
+element : 'P', 
+attributes : {
+	'class' : 'startip-jck'
+}},{
+name : 'hearttip-jck',
+element : 'P', 
+attributes : {
+	'class' : 'hearttip-jck'
+}},{
+name : 'previoustip-jck',
+element : 'P', 
+attributes : {
+	'class' : 'previoustip-jck'
+}},{
+name : 'carttip-jck',
+element : 'P', 
+attributes : {
+	'class' : 'carttip-jck'
+}},{
+name : 'attachmenttip-jck',
+element : 'P', 
+attributes : {
+	'class' : 'attachmenttip-jck'
+}},{
+name : 'calculatortip-jck',
+element : 'P', 
+attributes : {
+	'class' : 'calculatortip-jck'
+}},{
+name : 'cuttip-jck',
+element : 'P', 
+attributes : {
+	'class' : 'cuttip-jck'
+}},{
+name : 'dollartip-jck',
+element : 'P', 
+attributes : {
+	'class' : 'dollartip-jck'
+}},{
+name : 'poundtip-jck',
+element : 'P', 
+attributes : {
+	'class' : 'poundtip-jck'
+}},{
+name : 'eurotip-jck',
+element : 'P', 
+attributes : {
+	'class' : 'eurotip-jck'
+}},{
+name : 'mailtip-jck',
+element : 'P', 
+attributes : {
+	'class' : 'mailtip-jck'
+}},{
+name : 'supporttip-jck',
+element : 'P', 
+attributes : {
+	'class' : 'supporttip-jck'
+}},{
+name : 'nexttip-jck',
+element : 'P', 
+attributes : {
+	'class' : 'nexttip-jck'
+}},{
+name : 'soundtip-jck',
+element : 'P', 
+attributes : {
+	'class' : 'soundtip-jck'
+}},{
+name : 'download-DOC',
+element : 'P', 
+attributes : {
+	'class' : 'download-DOC'
+}},{
+name : 'download-IMG',
+element : 'P', 
+attributes : {
+	'class' : 'download-IMG'
+}},{
+name : 'ainfotip-jck',
+element : 'P', 
+attributes : {
+	'class' : 'ainfotip-jck'
+}},{
+name : 'awarningtip-jck',
+element : 'P', 
+attributes : {
+	'class' : 'awarningtip-jck'
+}},{
+name : 'afilmtip-jck',
+element : 'P', 
+attributes : {
+	'class' : 'afilmtip-jck'
+}},{
+name : 'apintip-jck',
+element : 'P', 
+attributes : {
+	'class' : 'apintip-jck'
+}},{
+name : 'alightbulbtip-jck',
+element : 'P', 
+attributes : {
+	'class' : 'alightbulbtip-jck'
+}},{
+name : 'arecycletip-jck',
+element : 'P', 
+attributes : {
+	'class' : 'arecycletip-jck'
+}},{
+name : 'acameratip-jck',
+element : 'P', 
+attributes : {
+	'class' : 'acameratip-jck'
+}},{
+name : 'acommenttip-jck',
+element : 'P', 
+attributes : {
+	'class' : 'acommenttip-jck'
+}},{
+name : 'achattip-jck',
+element : 'P', 
+attributes : {
+	'class' : 'achattip-jck'
+}},{
+name : 'adocumenttip-jck',
+element : 'P', 
+attributes : {
+	'class' : 'adocumenttip-jck'
+}},{
+name : 'aaccessibletip-jck',
+element : 'P', 
+attributes : {
+	'class' : 'aaccessibletip-jck'
+}},{
+name : 'astartip-jck',
+element : 'P', 
+attributes : {
+	'class' : 'astartip-jck'
+}},{
+name : 'ahearttip-jck',
+element : 'P', 
+attributes : {
+	'class' : 'ahearttip-jck'
+}},{
+name : 'aprevioustip-jck',
+element : 'P', 
+attributes : {
+	'class' : 'aprevioustip-jck'
+}},{
+name : 'acarttip-jck',
+element : 'P', 
+attributes : {
+	'class' : 'acarttip-jck'
+}},{
+name : 'aattachmenttip-jck',
+element : 'P', 
+attributes : {
+	'class' : 'aattachmenttip-jck'
+}},{
+name : 'acalculatortip-jck',
+element : 'P', 
+attributes : {
+	'class' : 'acalculatortip-jck'
+}},{
+name : 'acuttip-jck',
+element : 'P', 
+attributes : {
+	'class' : 'acuttip-jck'
+}},{
+name : 'adollartip-jck',
+element : 'P', 
+attributes : {
+	'class' : 'adollartip-jck'
+}},{
+name : 'apoundtip-jck',
+element : 'P', 
+attributes : {
+	'class' : 'apoundtip-jck'
+}},{
+name : 'aeurotip-jck',
+element : 'P', 
+attributes : {
+	'class' : 'aeurotip-jck'
+}},{
+name : 'amailtip-jck',
+element : 'P', 
+attributes : {
+	'class' : 'amailtip-jck'
+}},{
+name : 'asupporttip-jck',
+element : 'P', 
+attributes : {
+	'class' : 'asupporttip-jck'
+}},{
+name : 'anexttip-jck',
+element : 'P', 
+attributes : {
+	'class' : 'anexttip-jck'
+}},{
+name : 'asoundtip-jck',
+element : 'P', 
+attributes : {
+	'class' : 'asoundtip-jck'
+}},{
+name : 'bludisc-jck',
+element : 'span', 
+attributes : {
+	'class' : 'bludisc-jck'
+}},{
+name : 'bludisc-black-jck',
+element : 'span', 
+attributes : {
+	'class' : 'bludisc-black-jck'
+}},{
+name : 'gredisc-jck',
+element : 'span', 
+attributes : {
+	'class' : 'gredisc-jck'
+}},{
+name : 'gredisc-black-jck',
+element : 'span', 
+attributes : {
+	'class' : 'gredisc-black-jck'
+}},{
+name : 'reddisc-jck',
+element : 'span', 
+attributes : {
+	'class' : 'reddisc-jck'
+}},{
+name : 'reddisc-black-jck',
+element : 'span', 
+attributes : {
+	'class' : 'reddisc-black-jck'
+}},{
+name : 'bladisc-jck',
+element : 'span', 
+attributes : {
+	'class' : 'bladisc-jck'
+}},{
+name : 'bladisc-black-jck',
+element : 'span', 
+attributes : {
+	'class' : 'bladisc-black-jck'
+}},{
+name : 'yeldisc-jck',
+element : 'span', 
+attributes : {
+	'class' : 'yeldisc-jck'
+}},{
+name : 'yeldisc-black-jck',
+element : 'span', 
+attributes : {
+	'class' : 'yeldisc-black-jck'
+}},{
+name : 'jck_img_align_left',
+element : 'img', 
+attributes : {
+	'class' : 'jck_img_align_left'
+}},{
+name : 'jck_img_align_right',
+element : 'img', 
+attributes : {
+	'class' : 'jck_img_align_right'
+}},{
+name : 'caption',
+element : 'img', 
+attributes : {
+	'class' : 'caption'
+}},{
+name : 'image_holder',
+element : 'img', 
+attributes : {
+	'class' : 'image_holder'
+}},{
+name : 'fade_in',
+element : 'img', 
+attributes : {
+	'class' : 'fade_in'
+}},{
+name : 'zoom',
+element : 'img', 
+attributes : {
+	'class' : 'zoom'
+}},{
+name : 'polaroids_zoom',
+element : 'img', 
+attributes : {
+	'class' : 'polaroids_zoom'
+}},{
+name : 'screenshot_blue',
+element : 'img', 
+attributes : {
+	'class' : 'screenshot_blue'
+}},{
+name : 'screenshot_green',
+element : 'img', 
+attributes : {
+	'class' : 'screenshot_green'
+}},{
+name : 'screenshot_red',
+element : 'img', 
+attributes : {
+	'class' : 'screenshot_red'
+}},{
+name : 'screenshot_black',
+element : 'img', 
+attributes : {
+	'class' : 'screenshot_black'
+}},{
+name : 'screenshot_gray',
+element : 'img', 
+attributes : {
+	'class' : 'screenshot_gray'
+}},{
+name : 'screenshot_yellow',
+element : 'img', 
+attributes : {
+	'class' : 'screenshot_yellow'
+}},{
+name : 'table_style_blue',
+element : 'table', 
+attributes : {
+	'class' : 'table_style_blue'
+}},{
+name : 'table_style_green',
+element : 'table', 
+attributes : {
+	'class' : 'table_style_green'
+}},{
+name : 'table_style_red',
+element : 'table', 
+attributes : {
+	'class' : 'table_style_red'
+}},{
+name : 'table_style_black',
+element : 'table', 
+attributes : {
+	'class' : 'table_style_black'
+}},{
+name : 'table_style_yellow',
+element : 'table', 
+attributes : {
+	'class' : 'table_style_yellow'
+}},{
+name : 'width',
+element : 'P', 
+attributes : {
+	'class' : 'width'
+}},{
+name : 'clr',
+element : 'P', 
+attributes : {
+	'class' : 'clr'
+}},{
+name : 'inside',
+element : 'P', 
+attributes : {
+	'class' : 'inside'
+}},{
+name : 'header-left',
+element : 'P', 
+attributes : {
+	'id' : 'header-left'
+}},{
+name : 'header-right',
+element : 'P', 
+attributes : {
+	'id' : 'header-right'
+}},{
+name : 'logo',
+element : 'P', 
+attributes : {
+	'id' : 'logo'
+}},{
+name : 'topmenu',
+element : 'P', 
+attributes : {
+	'id' : 'topmenu'
+}},{
+name : 'search',
+element : 'P', 
+attributes : {
+	'class' : 'search'
+}},{
+name : 'mainmenu-inner',
+element : 'P', 
+attributes : {
+	'id' : 'mainmenu-inner'
+}},{
+name : 'container-inner2',
+element : 'P', 
+attributes : {
+	'id' : 'container-inner2'
+}},{
+name : 'banner',
+element : 'P', 
+attributes : {
+	'id' : 'banner'
+}},{
+name : 'pathway',
+element : 'P', 
+attributes : {
+	'id' : 'pathway'
+}},{
+name : 'mainbody',
+element : 'P', 
+attributes : {
+	'id' : 'mainbody'
+}},{
+name : 'content',
+element : 'P', 
+attributes : {
+	'id' : 'content'
+}},{
+name : 'sidebar',
+element : 'P', 
+attributes : {
+	'id' : 'sidebar'
+}},{
+name : 'sidebar2',
+element : 'P', 
+attributes : {
+	'id' : 'sidebar2'
+}},{
+name : 'elements',
+element : 'P', 
+attributes : {
+	'class' : 'elements'
+}},{
+name : 'elements-1',
+element : 'P', 
+attributes : {
+	'class' : 'elements-1'
+}},{
+name : 'elements-2',
+element : 'P', 
+attributes : {
+	'class' : 'elements-2'
+}},{
+name : 'elements-3',
+element : 'P', 
+attributes : {
+	'class' : 'elements-3'
+}},{
+name : 'elements-4',
+element : 'P', 
+attributes : {
+	'class' : 'elements-4'
+}},{
+name : 'footer',
+element : 'P', 
+attributes : {
+	'id' : 'footer'
+}},{
+name : 'inputbox',
+element : 'P', 
+attributes : {
+	'class' : 'inputbox'
+}},{
+name : 'validate-email',
+element : 'P', 
+attributes : {
+	'class' : 'validate-email'
+}},{
+name : 'adminform',
+element : 'P', 
+attributes : {
+	'class' : 'adminform'
+}},{
+name : 'readon',
+element : 'P', 
+attributes : {
+	'class' : 'readon'
+}},{
+name : 'readmore',
+element : 'P', 
+attributes : {
+	'class' : 'readmore'
+}},{
+name : 'button',
+element : 'P', 
+attributes : {
+	'class' : 'button'
+}},{
+name : 'validate',
+element : 'P', 
+attributes : {
+	'class' : 'validate'
+}},{
+name : 'blog',
+element : 'P', 
+attributes : {
+	'class' : 'blog'
+}},{
+name : 'article_column',
+element : 'P', 
+attributes : {
+	'class' : 'article_column'
+}},{
+name : 'column_separator',
+element : 'P', 
+attributes : {
+	'class' : 'column_separator'
+}},{
+name : 'article_separator',
+element : 'P', 
+attributes : {
+	'class' : 'article_separator'
+}},{
+name : 'contentpaneopen',
+element : 'P', 
+attributes : {
+	'class' : 'contentpaneopen'
+}},{
+name : 'blog_more',
+element : 'P', 
+attributes : {
+	'class' : 'blog_more'
+}},{
+name : 'pagination',
+element : 'P', 
+attributes : {
+	'class' : 'pagination'
+}},{
+name : 'contenescription',
+element : 'P', 
+attributes : {
+	'class' : 'contenescription'
+}},{
+name : 'sectionheader',
+element : 'td', 
+attributes : {
+	'class' : 'sectionheader'
+}},{
+name : 'sectiontableentry1',
+element : 'tr', 
+attributes : {
+	'class' : 'sectiontableentry1'
+}},{
+name : 'sectiontableentry2',
+element : 'tr', 
+attributes : {
+	'class' : 'sectiontableentry2'
+}},{
+name : 'sectiontableentry0',
+element : 'tr', 
+attributes : {
+	'class' : 'sectiontableentry0'
+}},{
+name : 'limit',
+element : 'P', 
+attributes : {
+	'id' : 'limit'
+}},{
+name : 'contenttoc',
+element : 'P', 
+attributes : {
+	'class' : 'contenttoc'
+}},{
+name : 'pagenavbar',
+element : 'P', 
+attributes : {
+	'class' : 'pagenavbar'
+}},{
+name : 'search_searchword',
+element : 'P', 
+attributes : {
+	'id' : 'search_searchword'
+}},{
+name : 'searchpaseall',
+element : 'P', 
+attributes : {
+	'id' : 'searchpaseall'
+}},{
+name : 'ordering',
+element : 'P', 
+attributes : {
+	'id' : 'ordering'
+}},{
+name : 'searchino',
+element : 'P', 
+attributes : {
+	'class' : 'searchino'
+}},{
+name : 'highlight',
+element : 'P', 
+attributes : {
+	'class' : 'highlight'
+}},{
+name : 'name',
+element : 'P', 
+attributes : {
+	'id' : 'name'
+}},{
+name : 'email',
+element : 'P', 
+attributes : {
+	'id' : 'email'
+}},{
+name : 'password2',
+element : 'P', 
+attributes : {
+	'id' : 'password2'
+}},{
+name : 'password',
+element : 'P', 
+attributes : {
+	'id' : 'password'
+}},{
+name : 'jformcatid',
+element : 'P', 
+attributes : {
+	'id' : 'jformcatid'
+}},{
+name : 'jformtitle',
+element : 'P', 
+attributes : {
+	'id' : 'jformtitle'
+}},{
+name : 'jformurl',
+element : 'P', 
+attributes : {
+	'id' : 'jformurl'
+}},{
+name : 'jformdescription',
+element : 'P', 
+attributes : {
+	'id' : 'jformdescription'
+}},{
+name : 'paramlist',
+element : 'P', 
+attributes : {
+	'class' : 'paramlist'
+}},{
+name : 'tool-tip',
+element : 'P', 
+attributes : {
+	'class' : 'tool-tip'
+}},{
+name : 'tool-title',
+element : 'P', 
+attributes : {
+	'class' : 'tool-title'
+}},{
+name : 'tool-text',
+element : 'P', 
+attributes : {
+	'class' : 'tool-text'
+}},{
+name : 'system-message',
+element : 'P', 
+attributes : {
+	'id' : 'system-message'
+}},{
+name : 'moduletable',
+element : 'P', 
+attributes : {
+	'class' : 'moduletable'
+}},{
+name : 'moduletable_menu',
+element : 'P', 
+attributes : {
+	'class' : 'moduletable_menu'
+}},{
+name : 'moduletable_text',
+element : 'P', 
+attributes : {
+	'class' : 'moduletable_text'
+}},{
+name : 'module-ms1',
+element : 'P', 
+attributes : {
+	'class' : 'module-ms1'
+}},{
+name : 'module-ms2',
+element : 'P', 
+attributes : {
+	'class' : 'module-ms2'
+}},{
+name : 'module-ms3',
+element : 'P', 
+attributes : {
+	'class' : 'module-ms3'
+}},{
+name : 'module-ms4',
+element : 'P', 
+attributes : {
+	'class' : 'module-ms4'
+}},{
+name : 'banneritem_text',
+element : 'P', 
+attributes : {
+	'class' : 'banneritem_text'
+}},{
+name : 'bannerheader',
+element : 'P', 
+attributes : {
+	'class' : 'bannerheader'
+}},{
+name : 'poll',
+element : 'P', 
+attributes : {
+	'class' : 'poll'
+}},{
+name : 'pollsborder',
+element : 'P', 
+attributes : {
+	'class' : 'pollsborder'
+}}
+],
+					 width : '40%',
+					 height : '150',
+					 entities : 0
+				});
+			},'post_desc');
+		});function jInsertEditorText( text,editor) {
+				if(oEditor) 
+					oEditor.insertHtml( text ); 
+				else
+					CKEDITOR.instances[editor].insertHtml( text );
+		}
+  </script>
+  <script type="text/javascript" src="http://yellowdeli.com/plugins/editors/jckeditor/ckeditor.js"></script>
+
+<link rel="stylesheet" href="/templates/system/css/general.css" type="text/css" />
+<link rel="stylesheet" href="/templates/system/css/system.css" type="text/css" />
+<link rel="stylesheet" href="/templates/jp_praiseu_j1.5/css/template.css" type="text/css" />
+<link rel="stylesheet" href="/templates/jp_praiseu_j1.5/css/theme1.css" type="text/css" />
+<style type="text/css">
+#mainbody{width:100%} #content{width:700px;} #sidebar{width:220px;}
+</style>
+<meta name="google-site-verification" content="0D_IxHmaV_uTAN-pT-KHRLSAp-dMtOtTUV_3noGFaNo" />
+</head>
+<body>
+<div id="header-bg">
+   <div id="header">
+	<div class="width">   
+    	<div class="inside"> 	
+            <div id="header-left">
+                <a href="/" id="logo" title="The Yellow Deli">
+                <h1>The Yellow Deli</h1>
+                </a>
+                <div class="clr"></div>
+            </div>
+            <div id="header-right">
+            	                                <div class="clr"></div>
+            </div>
+            <div class="clr"></div>
+    </div>
+    </div>
+  </div>
+</div>
+<div id="mainmenu">
+            <div id="mainmenu-inner">
+                <ul class="menu"><li class="item128"><a href="/chattanooga"><img border="0" alt="Chattanooga" src="/modules/mod_imgttfmenu/ttf_image_generator.php?caption=Chattanooga&amp;font_color=FFFFFF&amp;font_file=GASTON-R.TTF&amp;font_size=19&amp;padding_left=0&amp;padding_right=0&amp;padding_bottom=0&amp;padding_top=0&amp;txt_align=1&amp;txt_valign=1&amp;bg_color=000000&amp;bg_trans=1&amp;txt_angle=0" onmouseover="this.src='/modules/mod_imgttfmenu/ttf_image_generator.php?caption=Chattanooga&amp;font_color=fae603&amp;font_file=GASTON-R.TTF&amp;font_size=18&amp;padding_left=0&amp;padding_right=0&amp;padding_bottom=0&amp;padding_top=0&amp;txt_align=1&amp;txt_valign=1&amp;bg_color=000000&amp;bg_trans=1&amp;txt_angle=0'" onmouseout="this.src='/modules/mod_imgttfmenu/ttf_image_generator.php?caption=Chattanooga&amp;font_color=FFFFFF&amp;font_file=GASTON-R.TTF&amp;font_size=19&amp;padding_left=0&amp;padding_right=0&amp;padding_bottom=0&amp;padding_top=0&amp;txt_align=1&amp;txt_valign=1&amp;bg_color=000000&amp;bg_trans=1&amp;txt_angle=0'" /></a></li><li rel="228" class="item241"><a href="/pulaski"><img border="0" alt="Pulaski" src="/modules/mod_imgttfmenu/ttf_image_generator.php?caption=Pulaski&amp;font_color=FFFFFF&amp;font_file=GASTON-R.TTF&amp;font_size=19&amp;padding_left=0&amp;padding_right=0&amp;padding_bottom=0&amp;padding_top=0&amp;txt_align=1&amp;txt_valign=1&amp;bg_color=000000&amp;bg_trans=1&amp;txt_angle=0" onmouseover="this.src='/modules/mod_imgttfmenu/ttf_image_generator.php?caption=Pulaski&amp;font_color=fae603&amp;font_file=GASTON-R.TTF&amp;font_size=18&amp;padding_left=0&amp;padding_right=0&amp;padding_bottom=0&amp;padding_top=0&amp;txt_align=1&amp;txt_valign=1&amp;bg_color=000000&amp;bg_trans=1&amp;txt_angle=0'" onmouseout="this.src='/modules/mod_imgttfmenu/ttf_image_generator.php?caption=Pulaski&amp;font_color=FFFFFF&amp;font_file=GASTON-R.TTF&amp;font_size=19&amp;padding_left=0&amp;padding_right=0&amp;padding_bottom=0&amp;padding_top=0&amp;txt_align=1&amp;txt_valign=1&amp;bg_color=000000&amp;bg_trans=1&amp;txt_angle=0'" /></a></li><li class="item131"><a href="/boulder"><img border="0" alt="Boulder" src="/modules/mod_imgttfmenu/ttf_image_generator.php?caption=Boulder&amp;font_color=FFFFFF&amp;font_file=GASTON-R.TTF&amp;font_size=19&amp;padding_left=0&amp;padding_right=0&amp;padding_bottom=0&amp;padding_top=0&amp;txt_align=1&amp;txt_valign=1&amp;bg_color=000000&amp;bg_trans=1&amp;txt_angle=0" onmouseover="this.src='/modules/mod_imgttfmenu/ttf_image_generator.php?caption=Boulder&amp;font_color=fae603&amp;font_file=GASTON-R.TTF&amp;font_size=18&amp;padding_left=0&amp;padding_right=0&amp;padding_bottom=0&amp;padding_top=0&amp;txt_align=1&amp;txt_valign=1&amp;bg_color=000000&amp;bg_trans=1&amp;txt_angle=0'" onmouseout="this.src='/modules/mod_imgttfmenu/ttf_image_generator.php?caption=Boulder&amp;font_color=FFFFFF&amp;font_file=GASTON-R.TTF&amp;font_size=19&amp;padding_left=0&amp;padding_right=0&amp;padding_bottom=0&amp;padding_top=0&amp;txt_align=1&amp;txt_valign=1&amp;bg_color=000000&amp;bg_trans=1&amp;txt_angle=0'" /></a></li><li class="item129"><a href="/vista"><img border="0" alt="Vista" src="/modules/mod_imgttfmenu/ttf_image_generator.php?caption=Vista&amp;font_color=FFFFFF&amp;font_file=GASTON-R.TTF&amp;font_size=19&amp;padding_left=0&amp;padding_right=0&amp;padding_bottom=0&amp;padding_top=0&amp;txt_align=1&amp;txt_valign=1&amp;bg_color=000000&amp;bg_trans=1&amp;txt_angle=0" onmouseover="this.src='/modules/mod_imgttfmenu/ttf_image_generator.php?caption=Vista&amp;font_color=fae603&amp;font_file=GASTON-R.TTF&amp;font_size=18&amp;padding_left=0&amp;padding_right=0&amp;padding_bottom=0&amp;padding_top=0&amp;txt_align=1&amp;txt_valign=1&amp;bg_color=000000&amp;bg_trans=1&amp;txt_angle=0'" onmouseout="this.src='/modules/mod_imgttfmenu/ttf_image_generator.php?caption=Vista&amp;font_color=FFFFFF&amp;font_file=GASTON-R.TTF&amp;font_size=19&amp;padding_left=0&amp;padding_right=0&amp;padding_bottom=0&amp;padding_top=0&amp;txt_align=1&amp;txt_valign=1&amp;bg_color=000000&amp;bg_trans=1&amp;txt_angle=0'" /></a></li><li class="item188"><a href="/valley-center"><img border="0" alt="Valley Center" src="/modules/mod_imgttfmenu/ttf_image_generator.php?caption=Valley%20Center&amp;font_color=FFFFFF&amp;font_file=GASTON-R.TTF&amp;font_size=19&amp;padding_left=0&amp;padding_right=0&amp;padding_bottom=0&amp;padding_top=0&amp;txt_align=1&amp;txt_valign=1&amp;bg_color=000000&amp;bg_trans=1&amp;txt_angle=0" onmouseover="this.src='/modules/mod_imgttfmenu/ttf_image_generator.php?caption=Valley%20Center&amp;font_color=fae603&amp;font_file=GASTON-R.TTF&amp;font_size=18&amp;padding_left=0&amp;padding_right=0&amp;padding_bottom=0&amp;padding_top=0&amp;txt_align=1&amp;txt_valign=1&amp;bg_color=000000&amp;bg_trans=1&amp;txt_angle=0'" onmouseout="this.src='/modules/mod_imgttfmenu/ttf_image_generator.php?caption=Valley%20Center&amp;font_color=FFFFFF&amp;font_file=GASTON-R.TTF&amp;font_size=19&amp;padding_left=0&amp;padding_right=0&amp;padding_bottom=0&amp;padding_top=0&amp;txt_align=1&amp;txt_valign=1&amp;bg_color=000000&amp;bg_trans=1&amp;txt_angle=0'" /></a></li><li class="item155"><a href="/oneonta"><img border="0" alt="Oneonta" src="/modules/mod_imgttfmenu/ttf_image_generator.php?caption=Oneonta&amp;font_color=FFFFFF&amp;font_file=GASTON-R.TTF&amp;font_size=19&amp;padding_left=0&amp;padding_right=0&amp;padding_bottom=0&amp;padding_top=0&amp;txt_align=1&amp;txt_valign=1&amp;bg_color=000000&amp;bg_trans=1&amp;txt_angle=0" onmouseover="this.src='/modules/mod_imgttfmenu/ttf_image_generator.php?caption=Oneonta&amp;font_color=fae603&amp;font_file=GASTON-R.TTF&amp;font_size=18&amp;padding_left=0&amp;padding_right=0&amp;padding_bottom=0&amp;padding_top=0&amp;txt_align=1&amp;txt_valign=1&amp;bg_color=000000&amp;bg_trans=1&amp;txt_angle=0'" onmouseout="this.src='/modules/mod_imgttfmenu/ttf_image_generator.php?caption=Oneonta&amp;font_color=FFFFFF&amp;font_file=GASTON-R.TTF&amp;font_size=19&amp;padding_left=0&amp;padding_right=0&amp;padding_bottom=0&amp;padding_top=0&amp;txt_align=1&amp;txt_valign=1&amp;bg_color=000000&amp;bg_trans=1&amp;txt_angle=0'" /></a></li><li class="item187"><a href="/oak-hill"><img border="0" alt="Oak Hill" src="/modules/mod_imgttfmenu/ttf_image_generator.php?caption=Oak%20Hill&amp;font_color=FFFFFF&amp;font_file=GASTON-R.TTF&amp;font_size=19&amp;padding_left=0&amp;padding_right=0&amp;padding_bottom=0&amp;padding_top=0&amp;txt_align=1&amp;txt_valign=1&amp;bg_color=000000&amp;bg_trans=1&amp;txt_angle=0" onmouseover="this.src='/modules/mod_imgttfmenu/ttf_image_generator.php?caption=Oak%20Hill&amp;font_color=fae603&amp;font_file=GASTON-R.TTF&amp;font_size=18&amp;padding_left=0&amp;padding_right=0&amp;padding_bottom=0&amp;padding_top=0&amp;txt_align=1&amp;txt_valign=1&amp;bg_color=000000&amp;bg_trans=1&amp;txt_angle=0'" onmouseout="this.src='/modules/mod_imgttfmenu/ttf_image_generator.php?caption=Oak%20Hill&amp;font_color=FFFFFF&amp;font_file=GASTON-R.TTF&amp;font_size=19&amp;padding_left=0&amp;padding_right=0&amp;padding_bottom=0&amp;padding_top=0&amp;txt_align=1&amp;txt_valign=1&amp;bg_color=000000&amp;bg_trans=1&amp;txt_angle=0'" /></a></li><li class="item211"><a href="/rutland"><img border="0" alt="Rutland" src="/modules/mod_imgttfmenu/ttf_image_generator.php?caption=Rutland&amp;font_color=FFFFFF&amp;font_file=GASTON-R.TTF&amp;font_size=19&amp;padding_left=0&amp;padding_right=0&amp;padding_bottom=0&amp;padding_top=0&amp;txt_align=1&amp;txt_valign=1&amp;bg_color=000000&amp;bg_trans=1&amp;txt_angle=0" onmouseover="this.src='/modules/mod_imgttfmenu/ttf_image_generator.php?caption=Rutland&amp;font_color=fae603&amp;font_file=GASTON-R.TTF&amp;font_size=18&amp;padding_left=0&amp;padding_right=0&amp;padding_bottom=0&amp;padding_top=0&amp;txt_align=1&amp;txt_valign=1&amp;bg_color=000000&amp;bg_trans=1&amp;txt_angle=0'" onmouseout="this.src='/modules/mod_imgttfmenu/ttf_image_generator.php?caption=Rutland&amp;font_color=FFFFFF&amp;font_file=GASTON-R.TTF&amp;font_size=19&amp;padding_left=0&amp;padding_right=0&amp;padding_bottom=0&amp;padding_top=0&amp;txt_align=1&amp;txt_valign=1&amp;bg_color=000000&amp;bg_trans=1&amp;txt_angle=0'" /></a></li><li class="item226"><a href="/chilliwack"><img border="0" alt="Chilliwack" src="/modules/mod_imgttfmenu/ttf_image_generator.php?caption=Chilliwack&amp;font_color=FFFFFF&amp;font_file=GASTON-R.TTF&amp;font_size=19&amp;padding_left=0&amp;padding_right=0&amp;padding_bottom=0&amp;padding_top=0&amp;txt_align=1&amp;txt_valign=1&amp;bg_color=000000&amp;bg_trans=1&amp;txt_angle=0" onmouseover="this.src='/modules/mod_imgttfmenu/ttf_image_generator.php?caption=Chilliwack&amp;font_color=fae603&amp;font_file=GASTON-R.TTF&amp;font_size=18&amp;padding_left=0&amp;padding_right=0&amp;padding_bottom=0&amp;padding_top=0&amp;txt_align=1&amp;txt_valign=1&amp;bg_color=000000&amp;bg_trans=1&amp;txt_angle=0'" onmouseout="this.src='/modules/mod_imgttfmenu/ttf_image_generator.php?caption=Chilliwack&amp;font_color=FFFFFF&amp;font_file=GASTON-R.TTF&amp;font_size=19&amp;padding_left=0&amp;padding_right=0&amp;padding_bottom=0&amp;padding_top=0&amp;txt_align=1&amp;txt_valign=1&amp;bg_color=000000&amp;bg_trans=1&amp;txt_angle=0'" /></a></li><li rel="229" class="item240"><a href="/katoomba"><img border="0" alt="Katoomba" src="/modules/mod_imgttfmenu/ttf_image_generator.php?caption=Katoomba&amp;font_color=FFFFFF&amp;font_file=GASTON-R.TTF&amp;font_size=19&amp;padding_left=0&amp;padding_right=0&amp;padding_bottom=0&amp;padding_top=0&amp;txt_align=1&amp;txt_valign=1&amp;bg_color=000000&amp;bg_trans=1&amp;txt_angle=0" onmouseover="this.src='/modules/mod_imgttfmenu/ttf_image_generator.php?caption=Katoomba&amp;font_color=fae603&amp;font_file=GASTON-R.TTF&amp;font_size=18&amp;padding_left=0&amp;padding_right=0&amp;padding_bottom=0&amp;padding_top=0&amp;txt_align=1&amp;txt_valign=1&amp;bg_color=000000&amp;bg_trans=1&amp;txt_angle=0'" onmouseout="this.src='/modules/mod_imgttfmenu/ttf_image_generator.php?caption=Katoomba&amp;font_color=FFFFFF&amp;font_file=GASTON-R.TTF&amp;font_size=19&amp;padding_left=0&amp;padding_right=0&amp;padding_bottom=0&amp;padding_top=0&amp;txt_align=1&amp;txt_valign=1&amp;bg_color=000000&amp;bg_trans=1&amp;txt_angle=0'" /></a></li></ul> 
+                <div class="clr"></div>
+            </div>
+</div>
+<div id="container">
+<div id="container-inner">
+	<div class="width">
+    	<div id="container-inner2">
+        	        	<div id="mainbody">
+            	            	<div id="pathway">
+            		<div class="inside">
+                    	<span class="breadcrumbs pathway">
+<a href="http://yellowdeli.com/" class="pathway">Home</a> <img src="/templates/jp_praiseu_j1.5/images/arrow.png" alt=""  /> <a href="/guest-book-oneonta" class="pathway">Guest Book</a> <img src="/templates/jp_praiseu_j1.5/images/arrow.png" alt=""  /> Add Comment</span>
+ 
+                	</div>
+                </div>
+				                <div id="content">
+                	<div class="inside"> 
+                    	
+                        
+						<link rel="stylesheet" type="text/css" href="/components/com_guestbook/style.css">
+<form action="/guest-book-oneonta/addpost" method="post" id="josForm" name="josForm"  class="form-validate" enctype="multipart/form-data">
+<div>
+<div>
+	<div class="contentheading"> Add Comment to Guest Book </div>
+</div>
+	<div id="clsTableTdPadd">
+	<table cellpadding="0" cellspacing="0" border="0" width="100%">
+		<tr>
+			<td height="25" valign="top" colspan="2"><label id="postedbymsg" for="postedby">Your Name:</label>
+			<div><input type="text" maxlength="200" size="40%"  class="inputbox required" name="postedby" id="postedby" value="" /> *</div></td>
+		</tr>
+		<tr>
+			<td height="25" valign="top" colspan="2"><label id="post_emailmsg" for="post_email">Your e-Mail:</label>
+			<div><input type="text" maxlength="200" size="40%"  class="inputbox validate-email" name="post_email" id="post_email" value="" /></div></td>
+		</tr>
+		<tr>
+			<td height="25" valign="top" colspan="2"><label id="post_urlmsg" for="post_url">URL:</label>
+			<div><input type="text" maxlength="200" size="40%"  class="inputbox" name="post_url" id="post_url" value="" /></div></td>
+		</tr>
+			<td colspan="2" height="25" valign="top"><label id="post_descmsg" for="post_desc">Comment:</label>
+			<div id="clsTableTdPadd">
+			<!-- Start Editor --><textarea rows="6" cols="50" style="width:40%;height:150" id="post_desc" name="post_desc"></textarea><script type="text/javascript">window.addDomReadyEvent.add(function()
+				{	
+					CKEDITOR.config.expandedToolbar = true;
+					CKEDITOR.tools.callHashFunction("post_desc","post_desc");
+				});</script><!-- End Editor -->			</div>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" height="25" valign="top">Upload Image 			<div id="clsTableTdPadd">
+				<input type="file" name="image" id="file-upload" /> (.jpeg, .gif, .png only)
+				<input type="hidden" name="image_old" id="image_old" value="" />
+			</div>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" height="25" align="right" class="clsTDBorderTop">
+				* Required			</td>
+		</tr>
+		<tr>
+			<td height="25"></td>
+			<td>
+				<button class="button validate" type="button"  onClick="javascript:window.location='/guest-book-oneonta'"> Cancel </button>
+				<button class="button validate" type="submit">Save Comment</button>	</td>
+		</tr>
+	</table>
+	</div>
+</div>
+<input type="hidden" name="option" value="com_guestbook" />
+<input type="hidden" name="view" value="addpost" />
+<input type="hidden" name="user_id" value="0" />
+<input type="hidden" name="id" value="" />
+<input type="hidden" name="controller" value="guestbook" />
+<input type="hidden" name="task" value="save_guestbookpost" />
+</form>
+                        
+                    </div>
+                </div>
+                                <div id="sidebar">
+                	<div class="inside">
+                    			<div class="moduletable">
+					<h3>Chilliwack</h3>
+					<ul class="menu"><li class="item216"><a href="/chilliwack"><span>About</span></a></li><li class="item218"><a href="/photos-chilliwack"><span>Photos</span></a></li><li id="current" class="active item221"><a href="/guest-book-oneonta"><span>Guest Book</span></a></li><li class="item224"><a href="/locations-chilliwack"><span>Locations</span></a></li></ul>		</div>
+	
+                    </div>
+                </div>
+                                <div class="clr"></div>
+            </div>
+                    	<div class="clr"></div>
+        </div>
+    </div>
+<div id="footer">
+    	<div class="inside">
+        	                        <div id="copy">
+            	
+<div>Copyright &#169; 2014 The Yellow Deli. All Rights Reserved.</div>
+ 
+                <div class="clr"></div>
+            </div>
+                    </div>
+</div>
+</div>
+<div class="inside">
+	
+</div>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-12471633-3");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+</html>

@@ -1,0 +1,827 @@
+
+
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8" />
+        <title>Password reset | PyCon 2015 in Montr&#233;al</title>
+        
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+
+        
+    <link rel="stylesheet" href="/2015/site_media/static/cache/css/a69b123b6daf.css" type="text/css" />
+
+    
+        <link rel="stylesheet" href="/2015/site_media/static/cache/css/b3b136717260.css" type="text/css" media="all" />
+    
+
+    <link rel="stylesheet" href="/2015/site_media/static/cache/css/d4513089840c.css" type="text/css" />
+
+    
+
+
+        
+            <!-- HTML5 shim, for IE6-8 support of HTML elements -->
+            <!--[if lt IE 9]>
+                <script src="/2015/site_media/static/pinax/js/html5shiv.js"></script>
+            <![endif]-->
+        
+
+        
+    <meta property="og:image" content="/2015/site_media/static/img/pycon2015-logo.png" />
+    <link href="/2015/site_media/static/img/pycon-2015.png" rel="shortcut icon" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    
+
+<script type="text/javascript" src="/2015/site_media/static/cache/js/ea388955cc03.js"></script>
+
+    
+    <meta name="google-site-verification" content="fG_DG4G4eFtBcgIKht-bJKdirGhDa_51X6yeCS8daDs" />
+
+    </head>
+    <body class="" id="">
+        <div class="">
+
+            
+    
+    <header class="main">
+        <a id="skip" href="#content">Skip to main content</a>
+        <div class="container">
+        <div class="account-bar">
+            
+            
+
+
+
+<div class="account-links row">
+    
+        <a class="login" href="/2015/account/login/">Log in</a>
+        <a class="signup" href="/2015/account/signup/">Sign up</a>
+    
+</div>
+
+            
+        </div>
+        
+            <nav>
+                <div class="container">
+                    <a class="logo-small" href="/2015/">PyCon 2015 in Montr&#233;al</a>
+                    <div class="navbar navbar-inverse">
+                        <div class="navbar-inner">
+                            
+                                
+                                
+
+<ul class="nav">
+    
+        <li class="dropdown ">
+            <a href="/2015/about/what-is-pycon/" class="dropdown-toggle" data-toggle="dropdown">
+                About
+                <b class="caret"></b>
+            </a>
+            
+                
+<ul class="dropdown-menu">
+    
+        <li >
+            <a href="/2015/about/what-is-pycon/" >What is PyCon?</a>
+        </li>
+    
+        <li >
+            <a href="/2015/about/code-of-conduct/" >Code of Conduct</a>
+        </li>
+    
+        <li >
+            <a href="/2015/about/press/" >Press</a>
+        </li>
+    
+        <li >
+            <a href="/2015/about/staff/" >Staff Information</a>
+        </li>
+    
+        <li >
+            <a href="/2015/sitemap/" >Sitemap</a>
+        </li>
+    
+</ul>
+            
+        </li>
+    
+        <li class="dropdown ">
+            <a href="/2015/speaking/speakatpycon/" class="dropdown-toggle" data-toggle="dropdown">
+                Speaking
+                <b class="caret"></b>
+            </a>
+            
+                
+<ul class="dropdown-menu">
+    
+        <li >
+            <a href="/2015/speaking/cfp/" >Call For Proposals</a>
+        </li>
+    
+        <li >
+            <a href="/2015/speaking/proposal-resources/" >Proposal Resources</a>
+        </li>
+    
+        <li >
+            <a href="/2015/speaking/proposal_advice/" >Proposal Advice</a>
+        </li>
+    
+        <li >
+            <a href="/2015/speaking/recording/" >Recording Release</a>
+        </li>
+    
+</ul>
+            
+        </li>
+    
+        <li class="dropdown ">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                Events
+                <b class="caret"></b>
+            </a>
+            
+                
+<ul class="dropdown-menu">
+    
+        <li >
+            <a href="/2015/schedule/" >Full Schedule</a>
+        </li>
+    
+        <li >
+            <a href="/2015/community/sprints/" >Development Sprints</a>
+        </li>
+    
+        <li >
+            <a href="/2015/community/openspaces/" >Open Spaces</a>
+        </li>
+    
+        <li >
+            <a href="/2015/events/reception/" >Opening Reception</a>
+        </li>
+    
+        <li >
+            <a href="/2015/sponsors/jobs/" >Jobs Fair</a>
+        </li>
+    
+        <li >
+            <a href="/2015/sponsors/charityauction/" >Charity Auction</a>
+        </li>
+    
+        <li >
+            <a href="/2015/5k/" >5k Charity Fun Run</a>
+        </li>
+    
+        <li >
+            <a href="/2015/events/pyladieslunch/" >PyLadies Lunch</a>
+        </li>
+    
+        <li >
+            <a href="/2015/events/letslearnpython/" >Young Coders</a>
+        </li>
+    
+        <li >
+            <a href="/2015/events/edusummit/" >Education Summit</a>
+        </li>
+    
+        <li >
+            <a href="/2015/events/startup_row/" >Startup Row</a>
+        </li>
+    
+        <li >
+            <a href="/2015/events/explore_montreal/" >Explore Montreal</a>
+        </li>
+    
+</ul>
+            
+        </li>
+    
+        <li class="dropdown ">
+            <a href="/2015/sponsors/" class="dropdown-toggle" data-toggle="dropdown">
+                Sponsors
+                <b class="caret"></b>
+            </a>
+            
+                
+<ul class="dropdown-menu">
+    
+        <li >
+            <a href="/2015/sponsors/" >PyCon Sponsors</a>
+        </li>
+    
+        <li >
+            <a href="/2015/sponsors/jobs/" >Jobs Fair</a>
+        </li>
+    
+        <li >
+            <a href="/2015/sponsors/prospectus/" >Sponsorship Prospectus</a>
+        </li>
+    
+        <li >
+            <a href="/2015/sponsors/whysponsor/" >Why sponsor PyCon?</a>
+        </li>
+    
+        <li >
+            <a href="/2015/sponsors/apply/" >Apply to be a Sponsor</a>
+        </li>
+    
+        <li >
+            <a href="/2015/sponsors/information/" >Sponsor Information</a>
+        </li>
+    
+        <li >
+            <a href="/2015/sponsors/exhibitfloor/" >Exhibit Floor Information</a>
+        </li>
+    
+</ul>
+            
+        </li>
+    
+        <li class="dropdown ">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                Venue
+                <b class="caret"></b>
+            </a>
+            
+                
+<ul class="dropdown-menu">
+    
+        <li >
+            <a href="/2015/venue/" >Venue Map</a>
+        </li>
+    
+        <li >
+            <a href="/2015/venue/hotels/" >Hotels</a>
+        </li>
+    
+        <li >
+            <a href="/2015/venue/traveling/" >Traveling to Montreal</a>
+        </li>
+    
+        <li >
+            <a href="/2015/venue/restaurants/" >Restaurants</a>
+        </li>
+    
+        <li >
+            <a href="/2015/venue/weather/" >Weather</a>
+        </li>
+    
+        <li >
+            <a href="/2015/community/cellphone/" >Cellphone and GSM</a>
+        </li>
+    
+</ul>
+            
+        </li>
+    
+        <li class=" ">
+            <a href="http://pycon.blogspot.com/" >
+                News
+                
+            </a>
+            
+        </li>
+    
+        <li class="dropdown ">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                PSF
+                <b class="caret"></b>
+            </a>
+            
+                
+<ul class="dropdown-menu">
+    
+        <li >
+            <a href="http://www.python.org/psf/" >About</a>
+        </li>
+    
+        <li >
+            <a href="http://pyfound.blogspot.com/" >Blog</a>
+        </li>
+    
+</ul>
+            
+        </li>
+    
+        <li class="dropdown ">
+            <a href="/2015/registration/" class="dropdown-toggle" data-toggle="dropdown">
+                Registration
+                <b class="caret"></b>
+            </a>
+            
+                
+<ul class="dropdown-menu">
+    
+        <li >
+            <a href="/2015/registration/" >Registration Information</a>
+        </li>
+    
+        <li >
+            <a href="/2015/registration/register/" >Register for PyCon 2015</a>
+        </li>
+    
+        <li >
+            <a href="/2015/community/roomsharing/" >Room Sharing</a>
+        </li>
+    
+        <li >
+            <a href="/2015/assistance/" >Financial Aid</a>
+        </li>
+    
+        <li >
+            <a href="/2015/childcare/" >Childcare</a>
+        </li>
+    
+</ul>
+            
+        </li>
+    
+</ul>
+
+                                
+                            
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        
+        </div>
+    </header>
+    
+
+
+            
+    <div id="content">
+        
+            <div class="page-head">
+                <div class="container">
+                    <h1></h1>
+                    
+                </div>
+            </div>
+            <div class="top-banner">
+                <div class="row">
+                    <img src="/2015/site_media/static/img/pageHeader2.png" alt="top band">
+                </div>
+            </div>
+            <div class="page-content">
+                
+                <div class="container">
+
+                    <div class="row">
+                        <div class="span9">
+                            
+                            <div class="box">
+                                <div class="box-content">
+    <form method="POST" action="">
+        <legend>Password reset</legend>
+        <p>Forgotten your password? Enter your email address below, and we'll send you an email allowing you to reset it.</p>
+        <fieldset>
+            <input type='hidden' name='csrfmiddlewaretoken' value='Ah9DkmbAOUEyrePMISbc7GO1LvLRxIz3' />
+            
+
+
+
+
+    
+
+
+    <div id="div_id_email" class="control-group  ">
+
+        
+            <label for="id_email" class="control-label required-field">
+                Email
+            </label>
+        
+
+        <div class="controls">
+            
+            
+            
+                
+                    <input id="id_email" name="email" type="text" />
+                    
+                    
+                
+            
+        </div>
+    </div>
+
+
+
+            <div class="form-actions">
+                <button type="submit" class="btn btn-primary">Reset my password</button>
+            </div>
+        </fieldset>
+    </form>
+    
+    <p>If you have any trouble resetting your password, contact us at <a href="mailto:pycon-reg@python.org">pycon-reg@python.org</a>.</p>
+</div>
+                            </div>
+                        </div>
+                        <aside class="span2">
+                            
+                            
+                                <div class="sponsor-list">
+                                    <h2>SPONSORS</h2>
+                                    
+                                    
+                                        
+                                            <h3 style="margin-top: 20px;">Financial Aid Sponsor</h3>
+                                            
+                                                <a href="https://www.dropbox.com/">
+                                                    <img src="/2015/site_media/media/sponsor_files/dropbox-logos_dropbox-logotype-blue.png.100x60_q85.png" alt="Dropbox" />
+                                                </a>
+                                            
+                                        
+                                    
+                                        
+                                            <h3>Coffee Sponsor</h3>
+                                            
+                                                <a href="http://mandrill.com/">
+                                                    <img src="/2015/site_media/media/sponsor_files/mandrill.png.100x60_q85.jpg" alt="Mandrill" />
+                                                </a>
+                                            
+                                        
+                                    
+                                        
+                                            <h3>Diamond</h3>
+                                            
+                                                <a href="http://google.com/">
+                                                    <img src="/2015/site_media/media/sponsor_files/logo_col_498x192.png.100x60_q85.png" alt="Google" />
+                                                </a>
+                                            
+                                                <a href="http://rackspace.com/">
+                                                    <img src="/2015/site_media/media/sponsor_files/Rackspace_logo_No_1_Mgd_small_use_no_tag_color.png.100x60_q85.jpg" alt="Rackspace" />
+                                                </a>
+                                            
+                                        
+                                    
+                                        
+                                            <h3>Platinum</h3>
+                                            
+                                                <a href="http://www.caktusgroup.com/">
+                                                    <img src="/2015/site_media/media/sponsor_files/caktus_logo.png.100x60_q85.png" alt="Caktus Consulting Group" />
+                                                </a>
+                                            
+                                                <a href="http://www.hpcloud.com/">
+                                                    <img src="/2015/site_media/media/sponsor_files/HP_Blue_CMYKC.jpg.100x60_q85.jpg" alt="Hewlett Packard" />
+                                                </a>
+                                            
+                                                <a href="http://www.thumbtack.com/">
+                                                    <img src="/2015/site_media/media/sponsor_files/Thumbtack-logotype-orangetransparent.png.100x60_q85.png" alt="Thumbtack" />
+                                                </a>
+                                            
+                                                <a href="https://codeclimate.com/pycon">
+                                                    <img src="/2015/site_media/media/sponsor_files/code-climate-logo.jpg.100x60_q85.jpg" alt="Code Climate" />
+                                                </a>
+                                            
+                                                <a href="https://rhodecode.com/">
+                                                    <img src="/2015/site_media/media/sponsor_files/hb-full.png.100x60_q85.png" alt="RhodeCode Inc." />
+                                                </a>
+                                            
+                                                <a href="http://surveymonkey.com/">
+                                                    <img src="/2015/site_media/media/sponsor_files/sm_logo_stacked_standard_JiuJhBe.png.100x60_q85.png" alt="SurveyMonkey" />
+                                                </a>
+                                            
+                                                <a href="http://www.facebook.com/">
+                                                    <img src="/2015/site_media/media/sponsor_files/FB_Full_Logo_DMQIUzv.png.100x60_q85.jpg" alt="Facebook" />
+                                                </a>
+                                            
+                                                <a href="http://Cars.com/">
+                                                    <img src="/2015/site_media/media/sponsor_files/newcarsLogo.png.150x80_q85.png.150x80_q85_Tp3TZsD.png.100x60_q85.png" alt="Cars.com" />
+                                                </a>
+                                            
+                                                <a href="https://www.linkedin.com/">
+                                                    <img src="/2015/site_media/media/sponsor_files/Logo-2C-CMYK-Medium-TM_1.png.150x80_q85_HFdKKbz.png.100x60_q85.png" alt="LinkedIn" />
+                                                </a>
+                                            
+                                        
+                                    
+                                        
+                                            <h3>Gold</h3>
+                                            
+                                                <a href="http://www.redhat.com/">
+                                                    <img src="/2015/site_media/media/sponsor_files/RHCLogoHCE_1.png.100x60_q85.png" alt="Red Hat" />
+                                                </a>
+                                            
+                                                <a href="http://www.disneyanimation.com/">
+                                                    <img src="/2015/site_media/media/sponsor_files/WDAS_LOGO_FINAL_2.png.100x60_q85.png" alt="Walt Disney Animation Studios" />
+                                                </a>
+                                            
+                                                <a href="http://www.americangreetings.com/">
+                                                    <img src="/2015/site_media/media/sponsor_files/AG.png.150x80_q85.jpg.100x60_q85.jpg" alt="American Greetings" />
+                                                </a>
+                                            
+                                                <a href="http://getsentry.com/">
+                                                    <img src="/2015/site_media/media/sponsor_files/sentry.png.100x60_q85.png" alt="Sentry" />
+                                                </a>
+                                            
+                                                <a href="http://www.fusionbox.com/">
+                                                    <img src="/2015/site_media/media/sponsor_files/fusionbox_vector_logo.jpg.100x60_q85.jpg" alt="Fusionbox" />
+                                                </a>
+                                            
+                                                <a href="https://www.twilio.com/">
+                                                    <img src="/2015/site_media/media/sponsor_files/logos_downloadable_logobrand.png.100x60_q85.png" alt="Twilio" />
+                                                </a>
+                                            
+                                                <a href="http://www.amplify.com/">
+                                                    <img src="/2015/site_media/media/sponsor_files/Amplify_logo.jpg.100x60_q85.jpg" alt="Amplify" />
+                                                </a>
+                                            
+                                                <a href="http://continuum.io/">
+                                                    <img src="/2015/site_media/media/sponsor_files/CA-logo.png.100x60_q85.png" alt="Continuum Analytics, Inc." />
+                                                </a>
+                                            
+                                                <a href="http://lincolnloop.com/">
+                                                    <img src="/2015/site_media/media/sponsor_files/ll_logo_landscape_color.png.100x60_q85.png" alt="Lincoln Loop" />
+                                                </a>
+                                            
+                                                <a href="http://www.saltstack.com/">
+                                                    <img src="/2015/site_media/media/sponsor_files/SaltStack.png.100x60_q85.png" alt="SaltStack" />
+                                                </a>
+                                            
+                                                <a href="https://www.counsyl.com/">
+                                                    <img src="/2015/site_media/media/sponsor_files/github-logo_1.png.100x60_q85.png" alt="Counsyl" />
+                                                </a>
+                                            
+                                                <a href="http://openedx.org/">
+                                                    <img src="/2015/site_media/media/sponsor_files/logo-edx-openedx.png.100x60_q85.png" alt="Open edX" />
+                                                </a>
+                                            
+                                                <a href="https://www.pythonanywhere.com/">
+                                                    <img src="/2015/site_media/media/sponsor_files/PA-logo-1400x560.png.100x60_q85.png" alt="PythonAnywhere" />
+                                                </a>
+                                            
+                                                <a href="http://wingware.com/">
+                                                    <img src="/2015/site_media/media/sponsor_files/wingware-button-2014.png.100x60_q85.png" alt="Wingware" />
+                                                </a>
+                                            
+                                                <a href="http://www.bankofamerica.com/">
+                                                    <img src="/2015/site_media/media/sponsor_files/BAML-160x41_1.png.100x60_q85.png" alt="Bank of America" />
+                                                </a>
+                                            
+                                                <a href="http://www.aldryn.com/en/">
+                                                    <img src="/2015/site_media/media/sponsor_files/aldryn-vertical_blue_2.png.100x60_q85.png" alt="Aldryn" />
+                                                </a>
+                                            
+                                                <a href="http://outboxtechnology.com/">
+                                                    <img src="/2015/site_media/media/sponsor_files/Outbox_coul_hfL40m2.png.100x60_q85.png" alt="Outbox" />
+                                                </a>
+                                            
+                                                <a href="http://www.pdtpartners.com/">
+                                                    <img src="/2015/site_media/media/sponsor_files/PDT_WORDMARK.jpg.100x60_q85.jpg" alt="PDT Partners" />
+                                                </a>
+                                            
+                                                <a href="http://www.leapfrogonline.com/">
+                                                    <img src="/2015/site_media/media/sponsor_files/LFO_logo_new_v8_large_0009_467J5bR.png.100x60_q85.png" alt="Leapfrog Online" />
+                                                </a>
+                                            
+                                                <a href="http://github.com/">
+                                                    <img src="/2015/site_media/media/sponsor_files/GitHub_Logo.png.100x60_q85.png" alt="GitHub" />
+                                                </a>
+                                            
+                                                <a href="http://www.shopify.com/">
+                                                    <img src="/2015/site_media/media/sponsor_files/Shopify-bag-and-logotype.png.100x60_q85.png" alt="Shopify" />
+                                                </a>
+                                            
+                                                <a href="https://www.box.com/">
+                                                    <img src="/2015/site_media/media/sponsor_files/box_cyan_jwn7Se1.jpg.100x60_q85.jpg" alt="Box" />
+                                                </a>
+                                            
+                                                <a href="https://www.aqr.com/">
+                                                    <img src="/2015/site_media/media/sponsor_files/AQR_Cyan_rgb.png.100x60_q85.png" alt="AQR Capital Management" />
+                                                </a>
+                                            
+                                                <a href="http://jobs.savoirfairelinux.com/">
+                                                    <img src="/2015/site_media/media/sponsor_files/logo-sfl-coul-rgb-72dpi.jpg.100x60_q85.jpg" alt="Savoir-faire Linux" />
+                                                </a>
+                                            
+                                                <a href="http://yelp.com/">
+                                                    <img src="/2015/site_media/media/sponsor_files/Yelp_Logo-_No_outline.jpg.100x60_q85.jpg" alt="Yelp" />
+                                                </a>
+                                            
+                                                <a href="http://www.pluralsight.com/">
+                                                    <img src="/2015/site_media/media/sponsor_files/pluralsight_logo-Gray.jpg.100x60_q85.jpg" alt="Pluralsight" />
+                                                </a>
+                                            
+                                                <a href="http://www.lyst.com/">
+                                                    <img src="/2015/site_media/media/sponsor_files/Lyst_Black.png.100x60_q85.png" alt="Lyst" />
+                                                </a>
+                                            
+                                        
+                                    
+                                        
+                                            <h3>Silver</h3>
+                                            
+                                                <a href="https://labs.aweber.com/">
+                                                    <img src="/2015/site_media/media/sponsor_files/aweber.png.100x60_q85.png" alt="AWeber" />
+                                                </a>
+                                            
+                                                <a href="http://oddbird.net/">
+                                                    <img src="/2015/site_media/media/sponsor_files/logo.png.100x60_q85.png" alt="OddBird" />
+                                                </a>
+                                            
+                                                <a href="http://www.net-ng.com/en">
+                                                    <img src="/2015/site_media/media/sponsor_files/net-ng.png.150x80_q85.png.100x60_q85.png" alt="Net-ng" />
+                                                </a>
+                                            
+                                                <a href="http://oreilly.com/">
+                                                    <img src="/2015/site_media/media/sponsor_files/ORM_logo_box75lg_hex.jpg.100x60_q85.jpg" alt="O&#39;Reilly" />
+                                                </a>
+                                            
+                                                <a href="http://www.found.no/">
+                                                    <img src="/2015/site_media/media/sponsor_files/found_cmyk.png.100x60_q85.png" alt="Found" />
+                                                </a>
+                                            
+                                                <a href="http://trackmaven.com/">
+                                                    <img src="/2015/site_media/media/sponsor_files/TM_logo.png.100x60_q85.png" alt="TrackMaven" />
+                                                </a>
+                                            
+                                                <a href="http://www.python-academy.com/">
+                                                    <img src="/2015/site_media/media/sponsor_files/pya_logo_cmyk.png.100x60_q85.png" alt="Python Academy" />
+                                                </a>
+                                            
+                                                <a href="http://www.mysql.com/">
+                                                    <img src="/2015/site_media/media/sponsor_files/logo-mysql-170x115_1.png.100x60_q85.jpg" alt="MySQL" />
+                                                </a>
+                                            
+                                                <a href="http://www.ansible.com/">
+                                                    <img src="/2015/site_media/media/sponsor_files/ansible2014_logo_black.png.100x60_q85.png" alt="Ansible, Inc." />
+                                                </a>
+                                            
+                                                <a href="http://www.dreamhost.com/">
+                                                    <img src="/2015/site_media/media/sponsor_files/DH_logo_white-01.png.100x60_q85.png" alt="DreamHost" />
+                                                </a>
+                                            
+                                                <a href="http://www.gadventures.com/">
+                                                    <img src="/2015/site_media/media/sponsor_files/gap-logo.png.100x60_q85.png" alt="G Adventures" />
+                                                </a>
+                                            
+                                                <a href="http://pgexperts.com/">
+                                                    <img src="/2015/site_media/media/sponsor_files/PGXlogo_1.jpg.100x60_q85.jpg" alt="PostgreSQL Experts, Inc." />
+                                                </a>
+                                            
+                                                <a href="http://www.stratasan.com/">
+                                                    <img src="/2015/site_media/media/sponsor_files/stratasan_logo_2_2.png.100x60_q85.png" alt="Stratasan" />
+                                                </a>
+                                            
+                                                <a href="http://meetup.com/">
+                                                    <img src="/2015/site_media/media/sponsor_files/logo_flat.jpeg.100x60_q85.jpg" alt="Meetup" />
+                                                </a>
+                                            
+                                                <a href="https://nvisium.com/">
+                                                    <img src="/2015/site_media/media/sponsor_files/full_color-on_light_bg.png.100x60_q85.png" alt="nVisium" />
+                                                </a>
+                                            
+                                                <a href="http://stackstorm.com/">
+                                                    <img src="/2015/site_media/media/sponsor_files/StackStorm-logo.png.100x60_q85.png" alt="StackStorm" />
+                                                </a>
+                                            
+                                                <a href="http://www.mozilla.org/">
+                                                    <img src="/2015/site_media/media/sponsor_files/mozilla_wordmark_300dpi.jpg.100x60_q85.jpg" alt="Mozilla" />
+                                                </a>
+                                            
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                            <h3>Open Source and Community</h3>
+                                            
+                                                <a href="http://www.python.org/psf/">
+                                                    <img src="/2015/site_media/media/sponsor_files/psf-logo-317x71-alpha_1.png.100x60_q85.png" alt="Python Software Foundation" />
+                                                </a>
+                                            
+                                                <a href="http://www.pyladies.com/">
+                                                    <img src="/2015/site_media/media/sponsor_files/pyladies_2.png.100x60_q85.png" alt="PyLadies" />
+                                                </a>
+                                            
+                                                <a href="http://bigapplepy.org/">
+                                                    <img src="/2015/site_media/media/sponsor_files/logo-mid.png.100x60_q85.png" alt="Big Apple Py" />
+                                                </a>
+                                            
+                                                <a href="http://plone.org/">
+                                                    <img src="/2015/site_media/media/sponsor_files/ijiiiach_2.png.100x60_q85.png" alt="Plone Foundation" />
+                                                </a>
+                                            
+                                                <a href="http://www.pylonsproject.org/">
+                                                    <img src="/2015/site_media/media/sponsor_files/pyramid_logo_onmk67v.png.100x60_q85.png" alt="Pyramid Framework / Pylons Project" />
+                                                </a>
+                                            
+                                                <a href="http://magic.rit.edu/foss/">
+                                                    <img src="/2015/site_media/media/sponsor_files/foxxbox.png.100x60_q85.png" alt="FOSS@MAGIC" />
+                                                </a>
+                                            
+                                                <a href="http://owasp.org/">
+                                                    <img src="/2015/site_media/media/sponsor_files/Logo3.jpg.100x60_q85.jpg" alt="OWASP" />
+                                                </a>
+                                            
+                                                <a href="http://www.girldevelopit.com/">
+                                                    <img src="/2015/site_media/media/sponsor_files/girldevelopit-logo_kz1gBmr.png.100x60_q85.png" alt="Girl Develop It" />
+                                                </a>
+                                            
+                                                <a href="http://zerovm.org/">
+                                                    <img src="/2015/site_media/media/sponsor_files/zero_vm_M0R2CjK.jpg.100x60_q85.jpg" alt="ZeroVM" />
+                                                </a>
+                                            
+                                                <a href="https://www.hackerschool.com/">
+                                                    <img src="/2015/site_media/media/sponsor_files/Hacker_School_logo_1.png.100x60_q85.jpg" alt="Hacker School" />
+                                                </a>
+                                            
+                                                <a href="http://kidscodejeunesse.org/">
+                                                    <img src="/2015/site_media/media/sponsor_files/kcj.png.100x60_q85.png" alt="Kids Code Jeunesse" />
+                                                </a>
+                                            
+                                                <a href="https://gratipay.com/">
+                                                    <img src="/2015/site_media/media/sponsor_files/gratipay.png.100x60_q85.png" alt="Gratipay" />
+                                                </a>
+                                            
+                                                <a href="http://centerforopenscience.org/">
+                                                    <img src="/2015/site_media/media/sponsor_files/cos_logo.png.150x80_q85_JKweqne.png.100x60_q85.png" alt="Center for Open Science" />
+                                                </a>
+                                            
+                                        
+                                    
+                                        
+                                    
+                                </div>
+                            
+                            
+                        </aside>
+                    </div>
+                </div>
+                
+            </div>
+        
+    </div>
+    <div class="bottombg">
+        <img class="img-responsive" src="/2015/site_media/static/img/bottombg.png" alt="bottom band background">
+    </div>
+    <footer>
+        <div class="container">
+        
+            <div class="row-fluid footer-content col-centered">
+                <div class="span4">
+                    <div class="footer-left">
+                        <p>
+                          
+                            PyCon 2015 in Montr&#233;al is a production of the <a href="http://python.org/psf/">Python Software Foundation</a>.</br>
+                            Site utilizes <a href="http://eldarion.com/symposion/" title="Symposion — An Open Platform for Conference Websites">Symposion</a> 
+                          
+                        </p>
+                    </div>
+                </div>
+                <div class="span4">
+                    <div class="span3">
+                        <div class="row-fluid">
+                            <a href="http://caktusgroup.com">
+                                <img class="caktus-logo" src="/2015/site_media/static/img/caktusgroup-logo-black.png" alt="Caktus Consulting Group">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="span9">
+                        <div class="footer-center">
+                            <p>
+                                Site built and designed by <a href="http://caktusgroup.com">Caktus Consulting Group, LLC.</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="span4">
+                    <div class="footer-right">
+                        <p>
+                          
+                            Questions? Comments? Contact <a href="mailto:pycon-organizers@python.org">pycon-organizers@python.org</a></br>
+                            Hosting provided by <a href="http://osuosl.org">OSU Open Source Lab</a>.
+                          
+                        </p>
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+    </footer>
+
+        </div>
+
+        
+    <script src="/2015/site_media/static/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/2015/site_media/static/pinax/js/theme.js"></script>
+    
+
+
+        
+    
+    
+    <script>
+        $("#id_email").focus();
+    </script>
+
+
+    </body>
+</html>

@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+	<title>Tunnuksen rekisteröinti - Riemurasia</title>
+	<meta charset="ISO-8859-1" />
+	<meta name="viewport" content="width=1066" />
+	<meta name="robots" content="noodp, noydir" />
+	<meta name="description" content="Klikkaa itsesi Riemurasian villiin maailmaan!" />
+	<link rel="index" title="Riemurasia" href="http://www.riemurasia.net/" />
+	<link rel="shortcut icon" href="/favicon.ico" />
+	<link rel="publisher" href="https://plus.google.com/+Riemurasia" />
+	<link rel="stylesheet" type="text/css" href="/css/classic.css?05122014" />
+	<link rel="stylesheet" type="text/css" href="/css/lightbox.css" />
+	<link rel="stylesheet" type="text/css" href="/css/jquery-ui-1.10.1.custom.classic.css?20112014" />
+	<script type="text/javascript" src="/js/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript" src="/js/jquery-ui-1.10.3.custom.min.js"></script>
+	<script type="text/javascript" src="/js/jquery.timeago.js"></script>
+	<script type="text/javascript" src="/js/jquery.cookie.js"></script>
+</head>
+<body class="index">
+<div id="header">
+	<div class="headerFixed">
+
+	<div class="headerSearchBackground">
+		<div id="headerSearch">
+			<div class="searchContainer">
+				<input type="text" name="searchMedia" placeholder="Hae sivustolta" id="searchMedia" />
+				<button class="searchMediaButton">HAE SIVUSTOLTA</button>
+				<div id="mediasuggestions"></div>
+			</div>
+		</div>
+	</div>
+	<div class="headerBackground">
+	<div class="headerContent noadsHeader">
+		<div class="headerBlock">
+			<a href="/"><span class="title">Etusivu</span></a>
+		</div>
+                <div class="headerBlock">
+                        <a href="/users.php"><span class="title">Käyttäjät</span></a>
+                </div>
+                <div class="headerBlock">
+                        <a href="/jylppy/" id="subMenuJylppy" class="showMenu"><span class="title">Jylppy-Galleria</span></a>
+                </div>
+                <div class="headerBlock">
+                        <a href="/rasiatube/" id="subMenuRasiatube" class="showMenu"><span class="title">Rasiatube</span></a>
+                </div>
+                <div class="headerBlock">
+                        <a href="/pelit/" id="subMenuPelit" class="showMenu"><span class="title">Pelit</span></a>
+                </div>
+                <div class="headerBlock">
+                        <a href="/linkit/" id="subMenuLinkit" class="showMenu"><span class="title">Linkit</span></a>
+                </div>
+		<div class="headerBlock">
+			<a href="/tv/browse.php"><span class="title">RasiaTV</span></a>
+                </div>
+		<div class="headerBlock">
+                        <a href="http://www.riemurasia.net/pelit/goodgame_empire.php" target="_blank" style="color: #F528DC;"><span class="title">Goodgame Empire</span></a>
+                </div>
+                <div class="headerBlock">
+                        <a href="#" id="subMenuMuut" class="showMenu"><span class="title">Lisää..</span></a>
+                </div><div class="headerBlock">
+<div class="themeSelect">
+Teema: <select id="selectTheme">
+	<option value="classic" selected>Klassinen</option>
+	<option value="newstyle">Uusi tyyli</option>
+</select>
+</div>
+</div>
+		<div class="rightBlock">
+			<div class="loginBlock">
+				<a href="https://www.riemurasia.net/login.php"><span class="loginButton">Kirjaudu</span></a>
+			</div>
+			<div class="searchBlock">
+				<a href="/jylppy/mediasearch.php" id="searchHeaderButton"></a>
+			</div>
+		</div>
+		<div class="subMenuJylppy">
+		<div class="menuItem">
+			<div class="menuContent">
+			<div class="topBlock">
+				<div class="leftBlock">
+					<p class="frontpage heading"><a href="/jylppy/">JYLPPY-GALLERIA ETUSIVU <img src="/images/menuArrow.png" alt="Jylppy-Galleria etusivu" /></a></p>
+				</div>
+
+				<div class="centerBlock">
+					<p class="heading"><a href="/jylppy/browse.php?page=1&amp;cat=1">KUVAT <img src="/images/menuArrow.png" alt="Kuvat" /></a></p>
+					<div class="innerContent">
+						<p><a href="/jylppy/browse.php?page=1&amp;cat=1" class="links">Uusimmat kuvat</a></p>
+						<p><a href="/jylppy/browse.php?page=1&amp;cat=1&amp;h=1" class="links">Katsotuimmat kuvat</a></p>
+                                                <p><a href="/jylppy/browse.php?page=1&amp;cat=1&amp;r=1" class="links">Suosituimmat kuvat</a></p>
+                                                <p><a href="/jylppy/browse.php?page=1&amp;cat=1&amp;d=1" class="links">Puhutuimmat kuvat</a></p>
+					</div>
+				</div>
+
+                               <div class="centerBlock">
+                                        <p class="heading"><a href="/jylppy/browse.php?page=1&amp;cat=2">VIDEOT <img src="/images/menuArrow.png" alt="Videot" /></a></p>
+                                        <div class="innerContent">
+                                                <p><a href="/jylppy/browse.php?page=1&amp;cat=2" class="links">Uusimmat videot</a></p>
+                                                <p><a href="/jylppy/browse.php?page=1&amp;cat=2&amp;h=1" class="links">Katsotuimmat videot</a></p>
+                                                <p><a href="/jylppy/browse.php?page=1&amp;cat=2&amp;r=1" class="links">Suosituimmat videot</a></p>
+                                                <p><a href="/jylppy/browse.php?page=1&amp;cat=2&amp;d=1" class="links">Puhutuimmat videot</a></p>
+                                        </div>
+                                </div>
+
+                               <div class="centerBlock">
+                                        <p class="heading"><a href="/jylppy/browse.php?page=1&amp;cat=3">TEKSTIT <img src="/images/menuArrow.png" alt="Tekstit" /></a></p>
+                                        <div class="innerContent">
+                                                <p><a href="/jylppy/browse.php?page=1&amp;cat=3" class="links">Uusimmat tekstit</a></p>
+                                                <p><a href="/jylppy/browse.php?page=1&amp;cat=3&amp;h=1" class="links">Katsotuimmat tekstit</a></p>
+                                                <p><a href="/jylppy/browse.php?page=1&amp;cat=3&amp;r=1" class="links">Suosituimmat tekstit</a></p>
+                                                <p><a href="/jylppy/browse.php?page=1&amp;cat=3&amp;d=1" class="links">Puhutuimmat tekstit</a></p>
+                                        </div>
+                                </div>
+
+                              <div class="centerBlock">
+                                        <p class="heading"><a href="/jylppy/browse.php?page=1&amp;cat=4">ÄÄNET <img src="/images/menuArrow.png" alt="Äänet" /></a></p>
+                                        <div class="innerContent">
+                                                <p><a href="/jylppy/browse.php?page=1&amp;cat=4" class="links">Uusimmat äänet</a></p>
+                                                <p><a href="/jylppy/browse.php?page=1&amp;cat=4&amp;h=1" class="links">Katsotuimmat äänet</a></p>
+                                                <p><a href="/jylppy/browse.php?page=1&amp;cat=4&amp;r=1" class="links">Suosituimmat äänet</a></p>
+                                                <p><a href="/jylppy/browse.php?page=1&amp;cat=4&amp;d=1" class="links">Puhutuimmat äänet</a></p>
+                                        </div>
+                                </div>
+
+				<div class="rightBlock">
+                                        <p class="heading"><a href="/jylppy/browse.php?page=1&amp;cat=5">FLASH <img src="/images/menuArrow.png" alt="Flash" /></a></p>
+                                        <div class="innerContent">
+                                                <p><a href="/jylppy/browse.php?page=1&amp;cat=5" class="links">Uusimmat flashit</a></p>
+                                                <p><a href="/jylppy/browse.php?page=1&amp;cat=5&amp;h=1" class="links">Katsotuimmat flashit</a></p>
+                                                <p><a href="/jylppy/browse.php?page=1&amp;cat=5&amp;r=1" class="links">Suosituimmat flashit</a></p>
+                                                <p><a href="/jylppy/browse.php?page=1&amp;cat=5&amp;d=1" class="links">Puhutuimmat flashit</a></p>
+                                        </div>
+                                </div>
+
+			</div>
+			<div class="bottomBlock">
+					<p class="headingLeft"><a href="/jylppy/browse.php?page=1">SELAA MEDIOITA <img src="/images/menuArrow.png" alt="Selaa medioita" /></a></p>
+					<p class="headingCenter"><a href="/jylppy/mediasearch.php">HAKUKONE <img src="/images/menuArrow.png" alt="Hakukone" /></a></p>
+                                        <p class="headingCenter"><a href="/rejected/">HYLÄTYT <img src="/images/menuArrow.png" alt="Hylätyt" /></a></p>
+					<p class="headingCenter"><a href="https://www.riemurasia.net/jylppy/upload.php">LISÄÄ MEDIA <img src="/images/menuArrow.png" alt="Lisää media" /></a></p>
+					<p class="headingCenter"><a href="/jylppy/gecheck.php">KULTAMUNA TARKASTUS <img src="/images/menuArrow.png" alt="Kultamuna tarkastus" /></a></p>
+			</div>
+
+			</div>
+		</div>
+		</div>
+
+		<div class="subMenuRasiatube">
+                <div class="menuItem">
+                        <div class="menuContent">
+				<div class="topBlock">
+                                	<div class="leftBlock">
+                                        	<p class="frontpage heading"><a href="/rasiatube/">RASIATUBE<br /> ETUSIVU <img src="/images/menuArrow.png" alt="Rasiatube etusivu" /></a></p>
+                                	</div>
+
+                                	<div class="centerBlock">
+                                        	<p class="heading"><a href="/rasiatube/browse.php">VIDEOT <img src="/images/menuArrow.png" alt="Videot" /></a></p>
+	                                        <div class="innerContent">
+        	                                        <p><a href="/rasiatube/browse.php" class="links">Uusimmat videot</a></p>
+                	                                <p><a href="/rasiatube/browse.php?h=1" class="links">Katsotuimmat videot</a></p>
+                        	                        <p><a href="/rasiatube/browse.php?r=1" class="links">Suosituimmat videot</a></p>
+                                	                <p><a href="/rasiatube/browse.php?d=1" class="links">Puhutuimmat videot</a></p>
+                                        	</div>
+        	                        </div>
+				</div>
+
+				<div class="bottomBlock">
+                                 	<p class="headingLeft"><a href="/rasiatube/browse.php">SELAA VIDEOITA <img src="/images/menuArrow.png" alt="Selaa videoita" /></a></p>
+                                        <p class="headingCenter"><a href="/rasiatube/mediasearch.php">HAKUKONE <img src="/images/menuArrow.png" alt="Hakukone" /></a></p>
+					<p class="headingCenter"><a href="/rasiatube/upload.php">LISÄÄ VIDEO <img src="/images/menuArrow.png" alt="Lisää video" /></a></p>
+					<!--<p class="headingCenter"><a href="/rasiatube/kpvote.php">KM TARKASTUS <img src="/images/menuArrow.png" alt="Km tarkastus" /></a></p>-->
+
+				</div>
+			</div>
+		</div>
+		</div>
+
+		<div class="subMenuLinkit">
+                <div class="menuItem">
+                        <div class="menuContent">
+                                <div class="topBlock">
+                                        <div class="leftBlock">
+                                                <p class="frontpage heading"><a href="/linkit/">LINKIT<br /> ETUSIVU <img src="/images/menuArrow.png" alt="Linkit etusivu" /></a></p>
+                                        </div>
+
+                                        <div class="centerBlock">
+                                                <p class="heading"><a href="/linkit/browse.php">LINKIT <img src="/images/menuArrow.png" alt="Linkit" /></a></p>
+                                                <div class="innerContent">
+                                                        <p><a href="/linkit/browse.php" class="links">Uusimmat linkit</a></p>
+                                                        <p><a href="/linkit/browse.php?h=1" class="links">Katsotuimmat linkit</a></p>
+                                                        <p><a href="/linkit/browse.php?r=1" class="links">Suosituimmat linkit</a></p>
+                                                        <p><a href="/linkit/browse.php?d=1" class="links">Puhutuimmat linkit</a></p>
+                                                </div>
+                                        </div>
+                                </div>
+
+                                <div class="bottomBlock">
+                                        <p class="headingLeft"><a href="/linkit/browse.php">SELAA LINKKEJÄ <img src="/images/menuArrow.png" alt="Selaa linkkejä" /></a></p>
+                                        <p class="headingCenter"><a href="/linkit/mediasearch.php">HAKUKONE <img src="/images/menuArrow.png" alt="Hakukone" /></a></p>
+                                        <p class="headingCenter"><a href="/linkit/upload.php">LISÄÄ LINKKI <img src="/images/menuArrow.png" alt="Lisää linkki" /></a></p>
+                                </div>
+                        </div>
+                </div>
+		</div>
+
+		<div class="subMenuPelit">
+                <div class="menuItem">
+                        <div class="menuContent">
+                                <div class="topBlock">
+                                        <div class="leftBlock">
+                                                <p class="frontpage heading"><a href="/pelit/">PELIT<br /> ETUSIVU <img src="/images/menuArrow.png" alt="Pelit etusivu" /></a></p>
+                                        </div>
+
+                                        <div class="centerBlock">
+                                                <p class="heading"><a href="/pelit/browse.php">PELIT <img src="/images/menuArrow.png" alt="Pelit" /></a></p>
+                                                <div class="innerContent">
+                                                        <p><a href="/pelit/browse.php" class="links">Uusimmat pelit</a></p>
+                                                        <p><a href="/pelit/browse.php?h=1" class="links">Pelatuimmat pelit</a></p>
+                                                        <p><a href="/pelit/browse.php?r=1" class="links">Suosituimmat pelit</a></p>
+                                                        <p><a href="/pelit/browse.php?d=1" class="links">Puhutuimmat pelit</a></p>
+                                                </div>
+                                        </div>
+                                </div>
+
+                                <div class="bottomBlock">
+                                        <p class="headingLeft"><a href="/pelit/browse.php">SELAA PELEJÄ <img src="/images/menuArrow.png" alt="Selaa pelejä" /></a></p>
+                                        <p class="headingCenter"><a href="/pelit/mediasearch.php">HAKUKONE <img src="/images/menuArrow.png" alt="Hakukone" /></a></p>
+                                        <p class="headingCenter"><a href="/pelit/upload.php">LISÄÄ PELI <img src="/images/menuArrow.png" alt="Lisää peli" /></a></p>
+                                </div>
+                        </div>
+                </div>
+		</div>
+
+		<div class="subMenuMuut">
+                <div class="menuItem">
+                        <div class="menuContent">
+                                <div class="topBlock">
+                                        <div class="leftBlock">
+						<p class="frontpage heading"><a href="/webcam">Webcam-keskustelu <img src="/images/menuArrow.png" alt="Webcam" /></a></p>
+                                        </div>
+				        <div class="centerBlock">
+						<p class="heading"><a href="/feedback.php">Palaute ylläpidolle <img src="/images/menuArrow.png" alt="Palaute" /></a></p>
+                                        </div>
+					<div class="centerBlock">
+		                       		<p class="heading"><a href="/mediakortti/" target="_blank">Mainostus <img src="/images/menuArrow.png" alt="Mainostus" /></a></p>
+			                </div>
+                                </div>
+                        </div>
+                </div>
+		</div>
+	</div>
+	</div>
+
+	<div id="headerRiemurasia">
+                <div id="release">
+                        <p>1</p>
+                </div>
+	</div>
+
+        <div id="releaseMsg" class="clearfix">
+                <div class="releaseMsgInner">
+                        <div class="closeRelease">
+                                <a href="javascript: void(0);" id="closeReleaseButton"><img src="/images/announcement-close.png" alt="Sulje" /></a>
+                        </div>
+                        <div class="releasePic">
+                                <a href="/kuka/Jylppy69"><img src="//www.riemurasia.net/images/thumb_nopic_extrasmall.jpg" alt="Jylppy69" /></a>
+                        </div>
+			<div class="releaseTitle">
+				Riemurasian kansainvälistyminen ja Flexvee yhteistyö
+			</div>
+			<div class="relTime">
+				5.12.2014: <a href="/kuka/Jylppy69">Jylppy69</a> kirjoitti
+			</div>
+
+                        <div class="releaseText">
+                                <p>Tarkoitus on julkaista Riemurasiasta englanninkielinen versio kansainvälisille markkinoille vuoden 2015 aikana, tämä ei kuitenkaan tarkoita sitä, että koko Riemurasia suomenkielisenä palveluna lopetetaan vaan rinnalle tuodaan eri nimellä toimiva ja kansainvälisille markkinoille suunnattu sivusto.
+<br /><br />
+Kaikki tutut ja turvalliset Riemurasian palvelut ja toiminnot tulevat olevaan saatavilla samalla tavalla kuin ennenkin ja kansainvälinen toiminta voi mahdollistaa uusia huikeita asioita myös Riemurasian kehittämiseen jotka eivät pelkästään suomen mittapuulla olisi olleet mahdollisia, vuodesta 2015 tulee taatusti jännittävä kaikinpuolin ja pyrimme tekemään parhaamme että viihdytte palvelumme parissa vielä pitkän ajan.
+<br /><br />
+Neonella Oy on tullut kanssamme mukaan strategiseen yhteistyöhön ja keräämme yhdessä rahoitusta.
+<br /><br />
+Tarkoitus on tehdä syventävää yhteistyötä kummankin palvelun kehittämiseksi ja tuoda myös Riemurasian käyttäjiä mukaan Flexveen palvelujen pariin.
+<br /><br />
+Tällä hetkellä Riemurasia ja Flexvee (Neonella Oy) kerää yhteisrahoitusta FundedByMe joukkorahoitusalustan kautta niin, että sijoittaja saa jomman kumman
+yrityksen osakkeita haluamansa määrän ja saa sijoittamansa rahan myöhemmin takaisin mahdollisten osinkojen kautta.
+<br /><br />
+Kommenteissa liikkuneisiin spekulointeihin vastauksena siis, että mistään pyramidihuijauksesta ei ole kyse ja yhteistyöllä ei ole mitään negatiivisia vaikutuksia Riemurasiaan tulevaisuudessa. :)
+<br /><br />
+Neonella ei myöskään puutu Riemurasian sisältöön, kommentteihin sensuroimalla tai poistamalla medioita.
+<br /><br />
+<h4>Mikä on Flexvee?</h4>
+<br />
+Flexvee on suomalaisen Neonella Oy:n kehittämä markkinointiin ja viihdesisältöön keskittynyt liiketoimintakonsepti. Sen tekninen alusta mahdollistaa vuorovaikutteisuuden sekä tv-ohjelmissa että videoissa ja palkitsee osallistumisesta. Lisäksi Flexvee mahdollistaa rahaliikenteen interaktiivisen sisällön yhteydessä. Flexvee-järjestelmää voidaan käyttää myös perinteisen online-markkinoinnin yhteydessä, kuten esimerkiksi bannereissa. Flexvee on ainutlaatuinen tapa tehdä liiketoimintaa, eikä markkinoilla ole samanlaisella konseptilla toimivaa kilpailijaa.
+<br /><br />
+FundedByMe kampanja: <a href="https://www.fundedbyme.com/fi/campaign/5117/enjoy-flexvee-and-earn-bitcoins/?type=e&language=secondary" target="_blank">https://www.fundedbyme.com/fi/campaign/5117/enjoy-flexvee-and-earn-bitcoins/?type=e&language=secondary</a><br />
+Flexvee: <a href="http://www.flexvee.fi/" target="_blank">http://www.flexvee.fi/</a></p>
+                        </div>
+                </div>
+	</div>
+
+	</div>
+</div>
+<div id="container">
+	<div style="height: 26px;"></div>
+	<div class="main-div noads clearfix">
+	<!--[if lt IE 9]>
+	Käytät vanhentunutta selainta. Ole hyvä ja päivitä selain uusimpaan versioon.<br />
+	Suosittelemme käytettäväksi seuraavia selaimia Riemurasian onnistuneeseen selailuun:<br /><br />
+	&raquo; <a href="http://www.google.fi/intl/fi/chrome/browser/" target="_blank">Lataa Chrome verkkoselain - Käyttöjärjestelmät: Windows, Mac OS X, Linux</a> (Suositeltu)<br />
+	&raquo; <a href="http://www.mozilla.org/fi/firefox/new/" target="_blank">Lataa Firefox verkkoselain - Käyttöjärjestelmät: Windows, Mac OS X, Linux</a><br />
+	&raquo; <a href="http://support.apple.com/kb/DL1531?viewlocale=fi_FI" target="_blank">Lataa Safari verkkoselain - Käyttöjärjestelmät: Windows, Mac OS X</a><br />
+	&raquo; <a href="http://www.opera.com/fi/computer/windows" target="_blank">Lataa Opera verkkoselain - Käyttöjärjestelmät: Windows, Mac OS X, Linux</a><br />
+	&raquo; <a href="http://windows.microsoft.com/fi-fi/internet-explorer/download-ie" target="_blank">Lataa uusin versio Internet Explorer verkkoselaimesta - Käyttöjärjestelmät: Windows</a><br /><br />
+	<![endif]-->
+	<div class="register-container">
+
+		<div class="register clearfix">
+			<h1 class="medium">LUO TUNNUS RIEMURASIAAN</h1>
+
+			<div class="registerLeft">
+				<div class="leftPic">
+					<img src="/images/registerLogo.jpg" alt="" />
+				</div>
+
+                                <div class="leftPic">
+                                        <a href="/kultamuna"><img src="/images/orderGoldegg.jpg" alt="" /></a>
+                                </div>
+			</div>
+
+			<div class="registerCenter">
+				<h2>RIEMURASIA ON ENEMMÄN KUIN VIIHDEPORTAALI</h2>
+				<p class="riemurasia"><span class="firstwords">Riemurasia koostuu pääosin neljästä</span> osiosta.
+				Jylppy-Galleriasta, joka sisältää noin 99328 hulvatonta mediatiedostoa, kuten ajankohtaisempia kuvia, videoita, vitsejä sekä äänitiedostoja. Linkit -osiosta, joka sisältää tuhansia linkkejä mielenkiintoiseen sisältöön, sekä Pelit -osiosta, joka sisältää monia eri nettipelejä ajankuluksi.
+				Rasiatube -osio kerää eri palveluiden (YouTube, Google, Dailymotion, Liveleak, Vimeo) parhaimmat videot yhteen osioon.
+				</p>
+
+				<h2>TILAA KULTAMUNA JA VÄLTÄ MAINOKSET</h2>
+				<p class="goldegg">
+					<span class="firstwords">Kultamuna on tarkoitettu niille,</span> jotka haluavat ottaa enemmän irti Riemurasiasta.
+					Maksullinen Kultamuna-ominaisuus pitää sisällään tällä hetkellä 10 lisäominaisuutta, kuten mainoksien piilottamisen.
+				</p>
+
+				<div id="registerError"><h3>VIRHEITÄ LOMAKKEESSA!</h3></div>
+			</div>
+
+			<div class="registerRight">
+				<div class="form">
+				<form id="registerForm" accept-charset="utf-8">
+					<fieldset>
+
+                                                <div class="inputs">
+                                                        <p>Nimimerkki</p>
+                                                        <input type="text" id="username" name="username" placeholder="Nimimerkki" autocomplete="off" required /> 
+							<span class="error1 error2"> *</span>
+                                                </div>
+
+                                                <div class="inputs">
+                                                        <p>Salasana</p>
+                                                        <input type="password" id="password1" name="password1" placeholder="Salasana" autocomplete="off" required /> 
+							<span class="error3 error4 error5 error6"> *</span>
+                                                </div>
+
+                                                <div class="inputs">
+                                                        <p>Salasana uudelleen</p>
+                                                        <input type="password" id="password2" name="password2" placeholder="Salasana uudelleen" autocomplete="off" required /> 
+							<span class="error3 error4 error5 error6"> *</span>
+                                                </div>
+
+                                                <div class="inputs">
+                                                        <p>Sukupuoli</p>
+							<select id="gender" name="gender" required>
+		                                                <option value="" selected>Sukupuoli</option>
+                        	                                <option value="0">Mies</option>
+                	                                        <option value="1">Nainen</option>
+	                                                </select>
+							<span class="error7"> *</span>
+                                                </div>
+
+                                                <div class="inputs">
+                                                        <p>Asuinpaikka</p>
+	                                                <select id="location" name="location" required>
+        	                                                <option value="" selected>Asuinpaikka</option>                                              <option value="2">Akaa</option>                                              <option value="3">Alajärvi</option>                                              <option value="4">Alavieska</option>                                              <option value="5">Alavus</option>                                              <option value="6">Artjärvi</option>                                              <option value="7">Asikkala</option>                                              <option value="8">Askola</option>                                              <option value="9">Aura</option>                                              <option value="10">Brändö</option>                                              <option value="11">Eckerö</option>                                              <option value="12">Enonkoski</option>                                              <option value="13">Enontekiö</option>                                              <option value="14">Espoo</option>                                              <option value="15">Eura</option>                                              <option value="16">Eurajoki</option>                                              <option value="17">Evijärvi</option>                                              <option value="18">Finström</option>                                              <option value="19">Forssa</option>                                              <option value="20">Föglö</option>                                              <option value="21">Geta</option>                                              <option value="22">Haapajärvi</option>                                              <option value="23">Haapavesi</option>                                              <option value="24">Hailuoto</option>                                              <option value="25">Halsua</option>                                              <option value="26">Hamina</option>                                              <option value="27">Hammarland</option>                                              <option value="28">Hankasalmi</option>                                              <option value="29">Hanko</option>                                              <option value="30">Harjavalta</option>                                              <option value="31">Hartola</option>                                              <option value="32">Hattula</option>                                              <option value="33">Haukipudas</option>                                              <option value="34">Hausjärvi</option>                                              <option value="35">Heinola</option>                                              <option value="36">Heinävesi</option>                                              <option value="37">Helsinki</option>                                              <option value="38">Himanka</option>                                              <option value="39">Hirvensalmi</option>                                              <option value="40">Hollola</option>                                              <option value="41">Honkajoki</option>                                              <option value="42">Huittinen</option>                                              <option value="43">Humppila</option>                                              <option value="44">Hyrynsalmi</option>                                              <option value="45">Hyvinkää</option>                                              <option value="46">Hämeenkoski</option>                                              <option value="47">Hämeenkyrö</option>                                              <option value="48">Hämeenlinna</option>                                              <option value="49">Ii</option>                                              <option value="50">Iisalmi</option>                                              <option value="51">Iitti</option>                                              <option value="52">Ikaalinen</option>                                              <option value="53">Ilmajoki</option>                                              <option value="54">Ilomantsi</option>                                              <option value="55">Imatra</option>                                              <option value="56">Inari</option>                                              <option value="57">Inkoo</option>                                              <option value="58">Isojoki</option>                                              <option value="59">Isokyrö</option>                                              <option value="60">Jalasjärvi</option>                                              <option value="61">Janakkala</option>                                              <option value="62">Joensuu</option>                                              <option value="63">Jokioinen</option>                                              <option value="64">Jomala</option>                                              <option value="65">Joroinen</option>                                              <option value="66">Joutsa</option>                                              <option value="67">Juankoski</option>                                              <option value="68">Juuka</option>                                              <option value="69">Juupajoki</option>                                              <option value="70">Juva</option>                                              <option value="71">Jyväskylä</option>                                              <option value="72">Jämijärvi</option>                                              <option value="73">Jämsä</option>                                              <option value="74">Järvenpää</option>                                              <option value="75">Kaarina</option>                                              <option value="76">Kaavi</option>                                              <option value="77">Kajaani</option>                                              <option value="78">Kalajoki</option>                                              <option value="79">Kangasala</option>                                              <option value="80">Kangasniemi</option>                                              <option value="81">Kankaanpää</option>                                              <option value="82">Kannonkoski</option>                                              <option value="83">Kannus</option>                                              <option value="84">Karijoki</option>                                              <option value="85">Karjalohja</option>                                              <option value="86">Karkkila</option>                                              <option value="87">Karstula</option>                                              <option value="88">Karttula</option>                                              <option value="89">Karvia</option>                                              <option value="90">Kaskinen</option>                                              <option value="91">Kauhajoki</option>                                              <option value="92">Kauhava</option>                                              <option value="93">Kauniainen</option>                                              <option value="94">Kaustinen</option>                                              <option value="95">Keitele</option>                                              <option value="96">Kemi</option>                                              <option value="97">Kemijärvi</option>                                              <option value="98">Keminmaa</option>                                              <option value="99">Kemiönsaari</option>                                              <option value="100">Kempele</option>                                              <option value="101">Kerava</option>                                              <option value="102">Kerimäki</option>                                              <option value="103">Kesälahti</option>                                              <option value="104">Keuruu</option>                                              <option value="105">Kihniö</option>                                              <option value="106">Kiikoinen</option>                                              <option value="107">Kiiminki</option>                                              <option value="108">Kinnula</option>                                              <option value="109">Kirkkonummi</option>                                              <option value="110">Kitee</option>                                              <option value="111">Kittilä</option>                                              <option value="112">Kiuruvesi</option>                                              <option value="113">Kivijärvi</option>                                              <option value="114">Kokemäki</option>                                              <option value="115">Kokkola</option>                                              <option value="116">Kolari</option>                                              <option value="117">Konnevesi</option>                                              <option value="118">Kontiolahti</option>                                              <option value="119">Korsnäs</option>                                              <option value="120">Koski tl</option>                                              <option value="121">Kotka</option>                                              <option value="122">Kouvola</option>                                              <option value="123">Kristiinankaupunki</option>                                              <option value="124">Kruunupyy</option>                                              <option value="125">Kuhmalahti</option>                                              <option value="126">Kuhmo</option>                                              <option value="127">Kuhmoinen</option>                                              <option value="128">Kumlinge</option>                                              <option value="129">Kuopio</option>                                              <option value="130">Kuortane</option>                                              <option value="131">Kurikka</option>                                              <option value="132">Kustavi</option>                                              <option value="133">Kuusamo</option>                                              <option value="134">Kylmäkoski</option>                                              <option value="135">Kyyjärvi</option>                                              <option value="136">Kärkölä</option>                                              <option value="137">Kärsämäki</option>                                              <option value="138">Kökar</option>                                              <option value="139">Köyliö</option>                                              <option value="140">Lahti</option>                                              <option value="141">Laihia</option>                                              <option value="142">Laitila</option>                                              <option value="143">Lapinjärvi</option>                                              <option value="144">Lapinlahti</option>                                              <option value="145">Lappajärvi</option>                                              <option value="146">Lappeenranta</option>                                              <option value="147">Lapua</option>                                              <option value="148">Laukaa</option>                                              <option value="149">Lavia</option>                                              <option value="150">Leivonmäki</option>                                              <option value="151">Lemi</option>                                              <option value="152">Lemland</option>                                              <option value="153">Lempäälä</option>                                              <option value="154">Leppävirta</option>                                              <option value="155">Lestijärvi</option>                                              <option value="156">Lieksa</option>                                              <option value="157">Lieto</option>                                              <option value="158">Liljendal</option>                                              <option value="159">Liminka</option>                                              <option value="160">Liperi</option>                                              <option value="161">Lohja</option>                                              <option value="162">Loimaa</option>                                              <option value="163">Loppi</option>                                              <option value="164">Loviisa</option>                                              <option value="165">Luhanka</option>                                              <option value="166">Lumijoki</option>                                              <option value="167">Lumparland</option>                                              <option value="168">Luoto</option>                                              <option value="169">Luumäki</option>                                              <option value="170">Luvia</option>                                              <option value="172">Maalahti</option>                                              <option value="173">Maaninka</option>                                              <option value="174">Maarianhamina</option>                                              <option value="175">Marttila</option>                                              <option value="176">Masku</option>                                              <option value="177">Merijärvi</option>                                              <option value="178">Merikarvia</option>                                              <option value="179">Miehikkälä</option>                                              <option value="180">Mikkeli</option>                                              <option value="181">Muhos</option>                                              <option value="182">Multia</option>                                              <option value="183">Muonio</option>                                              <option value="184">Mustasaari</option>                                              <option value="185">Muurame</option>                                              <option value="186">Mynämäki</option>                                              <option value="187">Myrskylä</option>                                              <option value="188">Mäntsälä</option>                                              <option value="189">Mänttä-Vilppula</option>                                              <option value="190">Mäntyharju</option>                                              <option value="191">Naantali</option>                                              <option value="192">Nakkila</option>                                              <option value="193">Nastola</option>                                              <option value="194">Nilsiä</option>                                              <option value="195">Nivala</option>                                              <option value="196">Nokia</option>                                              <option value="197">Noormarkku</option>                                              <option value="198">Nousiainen</option>                                              <option value="199">Nummi-Pusula</option>                                              <option value="200">Nurmes</option>                                              <option value="201">Nurmijärvi</option>                                              <option value="202">Närpiö</option>                                              <option value="203">Oravainen</option>                                              <option value="204">Orimattila</option>                                              <option value="205">Oripää</option>                                              <option value="206">Orivesi</option>                                              <option value="207">Oulainen</option>                                              <option value="208">Oulu</option>                                              <option value="209">Oulunsalo</option>                                              <option value="210">Outokumpu</option>                                              <option value="211">Padasjoki</option>                                              <option value="212">Paimio</option>                                              <option value="213">Paltamo</option>                                              <option value="171">Parainen</option>                                              <option value="214">Parikkala</option>                                              <option value="215">Parkano</option>                                              <option value="216">Pedersören kunta</option>                                              <option value="217">Pelkosenniemi</option>                                              <option value="218">Pello</option>                                              <option value="219">Perho</option>                                              <option value="220">Pernaja</option>                                              <option value="221">Pertunmaa</option>                                              <option value="222">Petäjävesi</option>                                              <option value="223">Pieksämäki</option>                                              <option value="224">Pielavesi</option>                                              <option value="225">Pietarsaari</option>                                              <option value="226">Pihtipudas</option>                                              <option value="227">Pirkkala</option>                                              <option value="228">Polvijärvi</option>                                              <option value="229">Pomarkku</option>                                              <option value="230">Pori</option>                                              <option value="231">Pornainen</option>                                              <option value="232">Porvoo</option>                                              <option value="233">Posio</option>                                              <option value="234">Pudasjärvi</option>                                              <option value="235">Pukkila</option>                                              <option value="236">Punkaharju</option>                                              <option value="237">Punkalaidun</option>                                              <option value="238">Puolanka</option>                                              <option value="239">Puumala</option>                                              <option value="240">Pyhtää</option>                                              <option value="241">Pyhäjoki</option>                                              <option value="242">Pyhäjärvi</option>                                              <option value="243">Pyhäntä</option>                                              <option value="244">Pyhäranta</option>                                              <option value="245">Pälkäne</option>                                              <option value="246">Pöytyä</option>                                              <option value="247">Raahe</option>                                              <option value="248">Raasepori</option>                                              <option value="249">Raisio</option>                                              <option value="250">Rantasalmi</option>                                              <option value="251">Ranua</option>                                              <option value="252">Rauma</option>                                              <option value="253">Rautalampi</option>                                              <option value="254">Rautavaara</option>                                              <option value="255">Rautjärvi</option>                                              <option value="256">Reisjärvi</option>                                              <option value="257">Riihimäki</option>                                              <option value="258">Ristiina</option>                                              <option value="259">Ristijärvi</option>                                              <option value="260">Rovaniemi</option>                                              <option value="261">Ruokolahti</option>                                              <option value="262">Ruotsinpyhtää</option>                                              <option value="263">Ruovesi</option>                                              <option value="264">Rusko</option>                                              <option value="265">Rääkkylä</option>                                              <option value="266">Saarijärvi</option>                                              <option value="267">Salla</option>                                              <option value="268">Salo</option>                                              <option value="269">Saltvik</option>                                              <option value="270">Sastamala</option>                                              <option value="271">Sauvo</option>                                              <option value="272">Savitaipale</option>                                              <option value="273">Savonlinna</option>                                              <option value="274">Savukoski</option>                                              <option value="275">Seinäjoki</option>                                              <option value="276">Sievi</option>                                              <option value="277">Siikainen</option>                                              <option value="278">Siikajoki</option>                                              <option value="279">Siikalatva</option>                                              <option value="280">Siilinjärvi</option>                                              <option value="281">Simo</option>                                              <option value="282">Sipoo</option>                                              <option value="283">Siuntio</option>                                              <option value="284">Sodankylä</option>                                              <option value="285">Soini</option>                                              <option value="286">Somero</option>                                              <option value="287">Sonkajärvi</option>                                              <option value="288">Sotkamo</option>                                              <option value="289">Sottunga</option>                                              <option value="290">Sulkava</option>                                              <option value="291">Sund</option>                                              <option value="292">Suomenniemi</option>                                              <option value="293">Suomussalmi</option>                                              <option value="294">Suonenjoki</option>                                              <option value="295">Sysmä</option>                                              <option value="296">Säkylä</option>                                              <option value="297">Taipalsaari</option>                                              <option value="298">Taivalkoski</option>                                              <option value="299">Taivassalo</option>                                              <option value="300">Tammela</option>                                              <option value="301">Tampere</option>                                              <option value="302">Tarvasjoki</option>                                              <option value="303">Tervo</option>                                              <option value="304">Tervola</option>                                              <option value="305">Teuva</option>                                              <option value="306">Tohmajärvi</option>                                              <option value="307">Toholampi</option>                                              <option value="308">Toivakka</option>                                              <option value="309">Tornio</option>                                              <option value="310">Turku</option>                                              <option value="311">Tuusniemi</option>                                              <option value="312">Tuusula</option>                                              <option value="313">Tyrnävä</option>                                              <option value="314">Töysä</option>                                              <option value="1">Ulkomailla</option>                                              <option value="315">Ulvila</option>                                              <option value="316">Urjala</option>                                              <option value="317">Utajärvi</option>                                              <option value="318">Utsjoki</option>                                              <option value="319">Uurainen</option>                                              <option value="320">Uusikaarlepyy</option>                                              <option value="321">Uusikaupunki</option>                                              <option value="322">Vaala</option>                                              <option value="323">Vaasa</option>                                              <option value="324">Valkeakoski</option>                                              <option value="325">Valtimo</option>                                              <option value="326">Vantaa</option>                                              <option value="327">Varkaus</option>                                              <option value="328">Varpaisjärvi</option>                                              <option value="329">Vehmaa</option>                                              <option value="330">Vesanto</option>                                              <option value="331">Vesilahti</option>                                              <option value="332">Veteli</option>                                              <option value="333">Vieremä</option>                                              <option value="334">Vihanti</option>                                              <option value="335">Vihti</option>                                              <option value="351">Viipuri</option>                                              <option value="336">Viitasaari</option>                                              <option value="337">Vimpeli</option>                                              <option value="338">Virolahti</option>                                              <option value="339">Virrat</option>                                              <option value="340">Vårdö</option>                                              <option value="341">Vähäkyrö</option>                                              <option value="342">Vöyri-Maksamaa</option>                                              <option value="343">Yli-Ii</option>                                              <option value="344">Ylitornio</option>                                              <option value="345">Ylivieska</option>                                              <option value="346">Ylämaa</option>                                              <option value="347">Ylöjärvi</option>                                              <option value="348">Ypäjä</option>                                              <option value="349">Ähtäri</option>                                              <option value="350">Äänekoski</option>						<option value="1">Ulkomailla</option>
+							</select>
+							<span class="error14"> *</span>
+                                                </div>
+
+                                                <div class="inputs">
+                                                        <p>Syntymäaika</p>
+							<select id="year" name="year" required>
+								<option value="">Vuosi</option><option value="2005">2005</option>
+<option value="2004">2004</option>
+<option value="2003">2003</option>
+<option value="2002">2002</option>
+<option value="2001">2001</option>
+<option value="2000">2000</option>
+<option value="1999">1999</option>
+<option value="1998">1998</option>
+<option value="1997">1997</option>
+<option value="1996">1996</option>
+<option value="1995">1995</option>
+<option value="1994">1994</option>
+<option value="1993">1993</option>
+<option value="1992">1992</option>
+<option value="1991">1991</option>
+<option value="1990">1990</option>
+<option value="1989">1989</option>
+<option value="1988">1988</option>
+<option value="1987">1987</option>
+<option value="1986">1986</option>
+<option value="1985">1985</option>
+<option value="1984">1984</option>
+<option value="1983">1983</option>
+<option value="1982">1982</option>
+<option value="1981">1981</option>
+<option value="1980">1980</option>
+<option value="1979">1979</option>
+<option value="1978">1978</option>
+<option value="1977">1977</option>
+<option value="1976">1976</option>
+<option value="1975">1975</option>
+<option value="1974">1974</option>
+<option value="1973">1973</option>
+<option value="1972">1972</option>
+<option value="1971">1971</option>
+<option value="1970">1970</option>
+<option value="1969">1969</option>
+<option value="1968">1968</option>
+<option value="1967">1967</option>
+<option value="1966">1966</option>
+<option value="1965">1965</option>
+<option value="1964">1964</option>
+<option value="1963">1963</option>
+<option value="1962">1962</option>
+<option value="1961">1961</option>
+<option value="1960">1960</option>
+<option value="1959">1959</option>
+<option value="1958">1958</option>
+<option value="1957">1957</option>
+<option value="1956">1956</option>
+<option value="1955">1955</option>
+<option value="1954">1954</option>
+<option value="1953">1953</option>
+<option value="1952">1952</option>
+<option value="1951">1951</option>
+<option value="1950">1950</option>
+<option value="1949">1949</option>
+<option value="1948">1948</option>
+<option value="1947">1947</option>
+<option value="1946">1946</option>
+<option value="1945">1945</option>
+<option value="1944">1944</option>
+<option value="1943">1943</option>
+<option value="1942">1942</option>
+<option value="1941">1941</option>
+<option value="1940">1940</option>
+<option value="1939">1939</option>
+<option value="1938">1938</option>
+<option value="1937">1937</option>
+
+							</select>
+
+                                                        <select id="month" name="month" required>
+                                                                <option value="">Kuukausi</option><option value="1">Tammikuu</option>
+<option value="2">Helmikuu</option>
+<option value="3">Maaliskuu</option>
+<option value="4">Huhtikuu</option>
+<option value="5">Toukokuu</option>
+<option value="6">Kesäkuu</option>
+<option value="7">Heinäkuu</option>
+<option value="8">Elokuu</option>
+<option value="9">Syyskuu</option>
+<option value="10">Lokakuu</option>
+<option value="11">Marraskuu</option>
+<option value="12">Joulukuu</option>
+
+							</select>
+
+                                                        <select id="day" name="day" required>
+                                                                <option value="">Päivä</option><option value="1">1 </option>
+<option value="2">2 </option>
+<option value="3">3 </option>
+<option value="4">4 </option>
+<option value="5">5 </option>
+<option value="6">6 </option>
+<option value="7">7 </option>
+<option value="8">8 </option>
+<option value="9">9 </option>
+<option value="10">10 </option>
+<option value="11">11 </option>
+<option value="12">12 </option>
+<option value="13">13 </option>
+<option value="14">14 </option>
+<option value="15">15 </option>
+<option value="16">16 </option>
+<option value="17">17 </option>
+<option value="18">18 </option>
+<option value="19">19 </option>
+<option value="20">20 </option>
+<option value="21">21 </option>
+<option value="22">22 </option>
+<option value="23">23 </option>
+<option value="24">24 </option>
+<option value="25">25 </option>
+<option value="26">26 </option>
+<option value="27">27 </option>
+<option value="28">28 </option>
+<option value="29">29 </option>
+<option value="30">30 </option>
+<option value="31">31 </option>
+
+							</select>
+							<span class="error13"> *</span>
+                                                </div>
+
+                                                <div class="inputs">
+                                                        <p>Matkapuhelinnumero</p>
+                                                        <input type="number" id="mobile" name="mobile" placeholder="Matkapuhelinnumero" autocomplete="off" />
+                                                </div>
+
+                                                <div class="inputs">
+                                                        <p>Sähköpostiosoite</p>
+                                                        <input type="email" id="email" name="email" placeholder="Sähköpostiosoite" autocomplete="off" required />
+							<span class="error10"> *</span>
+                                                </div>
+                                                <div class="inputs">
+                                                        <p>Tarkiste: <span class="verificationq_4" id="verificationq">Minkä värinen on paloauto?</span></p>
+                                                        <input type="text" id="verification" name="verification" placeholder="Vastaa tarkistekysymykseen" autocomplete="off" required>
+							<span class="error15"> *</span>
+                                                </div>
+						
+						<div class="checkboxs">
+							<p><input type="checkbox" id="partners" name="partners" checked><span class="text">Haluan vastaanottaa Riemurasian yhteistyökumppaneilta sähköistä viestintää.</span><span class="description">Lue <a href="javascript: void(0)" id="popupMsg1">tästä</a> millaisesta viestinnästä on kyse. Palvelun käyttöehdot löytyvät <a href="javascript: void(0)" id="popupMsg2">tästä</a>.</p>
+							<p><input type="checkbox" id="riemuinfo" name="riemuinfo" checked><span class="text">Haluan vastaanottaa Riemurasian ylläpidolta tiedotteita.</span></p>
+						</div>
+
+						<div class="riemuRegister">
+							Riemurasian rekisteselosteen voit lukea <a href="javascript: void(0);" id="popupMsg3">tästä</a>.
+						</div>
+
+						<div class="button">
+							<input type="submit" class="submitButton" id="register" value="REKISTERÖIDY">
+						</div>
+
+					</fieldset>
+				</form>
+				</div> 
+			</div>			<div id="popupRegister1">
+				<div class="popupInner">
+					<h2 class="medium">SÄHKÖINEN VIESTINTÄ</h2>
+					Liittymällä Riemurasian sähköisen viestinnän palveluun saat kutsuja tapahtumiin, keikoille, messuille ja näyttelyihin. Pääset mukaan myös uusien tuotteiden kokeiluun, uutuusautojen koeajoille tai sinua kiinnostavien tuotteiden ja palveluiden esittelyihin. Unohtamatta tietenkään Riemurasian käyttäjille suunnattuja erikoistarjouksia mm. elektroniikkatuotteista. Saat max. 2 viestiä per kuukausi.
+				</div>
+			</div>
+			<div id="popupRegister2">
+				<div class="popupInner">
+					<h2 class="medium">KÄYTTÖEHDOT</h2>
+				<p>Riemurasia.net- palvelun käyttäjänä olen tietoinen siitä, että henkilötietojani (nimi, puhelinnumero, sähköposti, syntymäaika, sukupuoli, asuinpaikka) saatetaan kerätä Riemurasia.net- palvelun käytön yhteydessä. Annan suostumukseni Riemurasia.net- palvelun yhteydessä luovuttamieni henkilötietojeni käsittelyn osalta seuraavaan:</p>
+				<p>a) Riemurasia Oy:llä on oikeus käyttää Riemurasia- palvelun yhteydessä luovuttamiani henkilötietojani tiedottamiseen ja markkinointiin Riemurasian käyttäjille soveltuvista Riemurasian ja yhteistyökumppaneiden tuotteista, palveluista, tapahtumista ja muista uutisista sähköisessä muodossa matkapuhelimeen tai sähköpostiin.</p>
+				<p>b) Riemurasia Oy:llä on oikeus vapaasti siirtää ja luovuttaa Riemurasia- palvelun yhteydessä luovuttamiani henkilötietoja kolmannelle osapuolelle Euroopan unionin (EU) alueella sekä Euroopan talousalueella (ETA); ja </p>
+				<p>c) Tällä suostumuksella vahvistan myös tutustuneeni Riemurasia Oy:n henkilötietojen suojaperiaatteisiin sekä Riemurasia.net- palvelun käyttöehtoihin, joissa on tarkemmin kuvattu miten henkilötietojani kerätään ja mihin tarkoituksiin Riemurasia Oy henkilötietojani käyttää.</p>
+				</div>
+			</div>
+
+			<div id="popupRegister3">
+				<div class="popupInner">
+					<h2 class="medium">REKISTERISELOSTE</h2>
+					<p><b>Riemurasian rekisteriseloste:</b><br /><br />
+<b>1. - 2. Rekisterin pitäjä ja rekisteriasioista vastaava</b><br />
+Riemurasia Oy, Y-tunnus: 1909504-6, sähköposti: <img src="/images/staffmail.png" class="staffmail"><br /><br />
+
+<b>3. Rekisterin nimi</b><br />
+Riemurasian käyttäjätietokanta<br /><br />
+
+<b>4. Rekisterin käyttötarkoitus</b><br />
+Henkilötietoja käsitellään henkilötietolain sallimissa ja velvoittamissa rajoissa käyttäjäsuhteen hallintaan, analysointiin, tilastointiin sekä
+tietopalveluiden tuottamiseen, tarjoamiseen ja kehittämiseen.
+<br /><br />
+<b>5. Rekisterin tietosisältö</b><br /><br />
+
+Pakolliset tiedot:<br />
+&emsp;Nimimerkki<br />
+&emsp;Salasana<br />
+&emsp;Sukupuoli<br />
+&emsp;Asuinpaikka<br />
+&emsp;Syntymäaika<br />
+&emsp;Sähköpostiosoite<br /><br />
+Vapaaehtoiset tiedot:<br />
+&emsp;Nimi<br />
+&emsp;Puhelinnumero<br />
+&emsp;Kotisivun osoite<br />
+<br />
+<b>6. Säännönmukaiset tietolähteet</b><br />
+Rekisteröidyt ovat luovuttaneet tiedot itse omalla suostumuksellaan.<br /><br />
+
+<b>7. Säännönmukaiset tietojen luovutukset ja tietojen siirto EU:n tai Euroopan talousalueen ulkopuolelle</b><br />
+Rekisteriin annetut tiedot näkyvät sivustolla salasanaa lukuun ottamatta sivuston luonteen vuoksi. Luovuttaessaan tiedot Riemurasialle rekisteröity suostuu
+siihen, että kyseiset tiedot näkyvät muille sivuston käyttäjille. Rekisteröidyillä on mahdollisuus muuttaa ja poistaa ja piilottaa tietoja halutessaan.
+Tietoja ei luovuteta kolmansille osapuolille EU:n ja ETA:n sisällä eikä ulkopuolella.<br /><br />
+
+<b>8. Rekisterin suojauksen periaatteet</b><br />
+Jokaisella rekisteröityneellä on käyttöoikeus rekisteriin hänelle myönnetyllä käyttäjätunnuksella. Käyttäjätunnuksella ei kuitenkaan pääse näkemään
+eikä muuttamaan muita salaisia tietoja kuin rekisteröidyn itsensä tietoja.
+</p>
+
+				</div>
+			</div>
+                        <div class="statistics">
+                                <div class="statisticsBox">
+                                        <div class="boxContentLeft">
+                                                <h6 class="statisticTitle">REKISTERÖITYNEITÄ KÄYTTÄJIÄ</h6>
+
+                                                <div class="statisticNumber">
+                                                        501,341
+                                                </div>
+                                        </div>
+
+                                        <div class="boxContentCenter">
+                                                <h6 class="statisticTitle">VIERAILIJOITA VIIME VIIKOLLA</h6>
+
+                                                <div class="statisticNumber">
+                                                        534
+                                                </div>
+                                        </div>
+
+                                        <div class="boxContentCenter">
+                                                <h6 class="statisticTitle">MEDIAA YHTEENSÄ</h6>
+
+                                                <div class="statisticNumber">
+                                                        141,436
+                                                </div>
+                                        </div>
+
+                                        <div class="boxContentRight">
+                                                <h6 class="statisticTitle">YHTEISÖT</h6>
+
+                                                <div class="statisticNumber">
+                                                        1,400
+                                                </div>
+                                        </div>
+					<div class="boxContentBottom"></div>
+                                </div>
+			</div>
+		</div>
+	</div><script type='text/javascript'>
+$(document).ready(function() {
+        /*<![CDATA[*/
+
+	$('#container').on('click', '.register-container .register .registerRight #popupMsg1', function() {
+	        $('#popupRegister1').dialog({
+			dialogClass: 'noTitle',
+		        modal: true,
+			width: 500,
+                	buttons: {
+                		'OK': function() {
+					$(this).dialog('close');
+				}
+			}
+		});
+	});
+
+
+        $('#container').on('click', '.register-container .register .registerRight #popupMsg2', function() {
+                $('#popupRegister2').dialog({
+			dialogClass: 'noTitle',
+                        modal: true,
+			width: 500,
+                        buttons: {
+                                'OK': function() {
+                                        $(this).dialog('close');
+                                }
+                        }
+                });
+        });
+
+        $('#container').on('click', '.register-container .register .registerRight #popupMsg3', function() {
+                $('#popupRegister3').dialog({
+                        dialogClass: 'noTitle',
+                        modal: true,
+                        width: 500,
+                        buttons: {
+                                'OK': function() {
+                                        $(this).dialog('close');
+                                }
+                        }
+                });
+        });
+
+
+
+	$('#registerForm').submit(function(e) {
+		e.preventDefault();
+		$('#registerError').hide();
+		$('#registerError').html('');
+		$('#container .register-container .registerRight #registerForm .inputs').find('.error').removeClass('error');
+
+		var registerRequest = {
+			'firstname': $('input#firstname').val(),
+			'surname': $('input#surname').val(),
+			'username': $('input#username').val(),
+			'password1': $('input#password1').val(),
+			'password2': $('input#password2').val(),
+			'gender': $('select#gender').val(),
+			'location': $('select#location').val(),
+			'year': $('select#year').val(),
+			'month': $('select#month').val(),
+			'day': $('select#day').val(),
+			'mobile': $('input#mobile').val(),
+			'email': $('input#email').val(),
+			'verificationq': $('#verificationq').attr('class'),
+			'verification': $('input#verification').val(),
+			'partners': $('input#partners').is(':checked'),
+			'riemuinfo': $('input#riemuinfo').is(':checked')
+		}
+
+		$.ajax('checkregister.php', {
+			type: 'POST',
+			data: {
+				'registerRequest': JSON.stringify(registerRequest)
+			},
+			success: function(jsonRequest) {
+				var registerData = JSON.parse(jsonRequest);
+				if(registerData.result=='success') {
+					window.location.href = '/kuka/' + registerData.username;
+				} else {
+					$('#registerError').append(registerData.errors);
+					$('#registerError').fadeIn(500);
+					if(registerData.error1||registerData.error2||registerData.error11) {
+						$('#container .register-container .registerRight #registerForm .inputs .error1').addClass('error');
+					} if(registerData.error3||registerData.error4||registerData.error5||registerData.error6) {
+						$('#container .register-container .registerRight #registerForm .inputs .error3').addClass('error');
+                                        } if(registerData.error14) {
+                        	                $('#container .register-container .registerRight #registerForm .inputs .error14').addClass('error');
+                                        } if(registerData.error13) {
+                	                        $('#container .register-container .registerRight #registerForm .inputs .error13').addClass('error');
+                                        } if(registerData.error10) {
+        	                                $('#container .register-container .registerRight #registerForm .inputs .error10').addClass('error');
+                                        } if(registerData.error15) {
+	                                        $('#container .register-container .registerRight #registerForm .inputs .error15').addClass('error');
+					}
+				}
+			},
+			error: function() {
+				alert('Tuntematon virhe!');
+			}
+		});
+
+	});
+
+        /*]]>*/
+});
+
+
+</script>
+</div>
+<div id="footer" class="noads">
+	<div class="copyright">
+		&copy; 2003 - 2014 Riemurasia
+	</div>
+	<div class="links">
+		<a href="/mediakortti">Mainostus Riemurasiassa</a> / <a href="/mediakortti/?lang=en">Advertising in Riemurasia</a> / <a href="/termsofservice.php">Käyttöehdot ja rekisteriseloste</a> / <a href="/termsofservice.php">Terms Of Service</a>
+		<br />
+		<a href="/feedback.php">Yhteydenotto</a> / <a href="/feedback.php?lang=en">Contact</a>
+	</div>
+	<div class="design">
+		Design &#8212; <a href="http://billion.fi/" target="_blank" rel="nofollow">Billion AD</a>
+	</div>
+</div>
+</div>
+<script type='text/javascript'>
+$(document).ready(function() {
+
+	var loclicked = 0;
+	$('.logoLeft').click(function() {
+		if (!loclicked) {
+			$('#joinRiemurasia').animate({left: '+=150px', height: 'toggle'}, 5000, function() {
+				$('.joinBackground').css('background','none');
+				$('#joinRiemurasia').animate({left: '+=150px', height: 'toggle'}, 5000, function() {
+					loclicked++;
+				});
+			});
+		}
+		else {
+			$('#joinRiemurasia').animate({left: '+=150px', height: 'toggle'}, 5000, function() {
+				$('.joinBackground').removeAttr('style');
+				$('#joinRiemurasia').animate({left: '+=150px', height: 'toggle'}, 5000, function() {
+					loclicked = 0;
+				});
+			});
+		}
+	});
+	
+        var cbclicked = 0;
+        var cb = $('.cbhover');
+	cb.click(function(e) {
+		e.preventDefault();
+		if (!cbclicked) {
+ 		updatecb();
+			cbclicked++;
+			$('#cbmenu').slideDown('fast');
+		}
+		else {
+			$('#cbmenu').slideUp('fast');
+			cbclicked = 0;
+		}
+	});
+
+	// Ylänurkan kirjautuneen käyttäjän profiilikuvan animointi ja menu
+	var clicked = 0;
+	var pic = $('#loggedUserpic');
+	pic.mouseenter(function() {
+		if (!clicked) {pic.css('background-position','left -47px');}
+		else {pic.css('background-position','left -141px');}
+	});
+	pic.mouseleave(function() {
+		if (!clicked) {pic.css('background-position','top');}
+		else {pic.css('background-position','left -94px');}
+	});
+	pic.click(function(e) {
+		e.preventDefault();
+		if (!clicked) {
+			clicked++;
+			pic.css('background-position','left -94px');
+			$('#header .headerContent .loggedBlock #loggedUsermenu').slideDown('fast');
+	                $('#header .headerFixed .headerContent .menuActivity').show();
+			if( $('#activityWrapper .actionRow').length === 0) {
+				var method = $('#header .headerFixed .headerContent .menuActivity .activityItem .innerActivity .activityMethods a.active').trigger('click');
+			}
+		}
+		else {
+			pic.css('background-position','top');
+			$('#header .headerContent .loggedBlock #loggedUsermenu').slideUp('fast');
+	    		$('#header .headerFixed .headerContent .menuActivity').hide();
+			clicked = 0;
+		}
+
+	});
+
+	// Flexvee korjaus
+	$('#loggedUserpic').click(function(e){
+		$('#flexvee_iframe_2_parent').toggle();
+	});
+
+	// Headerin valikot
+	$('#header .showMenu').click(function(e){
+
+		$('#flexvee_iframe_2_parent').toggle();
+
+		e.preventDefault();
+		var id = $(this).attr('id');
+		var div = $('[class^="'+id+'"]');
+		if(div.is(':visible')){
+			div.hide();
+			$('#header .headerContent .headerBlock .showMenu span.title').removeClass('open');
+		} else {
+			$('#header .headerContent div[class^="subMenu"]').hide();
+			$('#header .headerContent .headerBlock .showMenu span.title').removeClass('open');
+			if ($('#header .headerContent .loggedBlock #loggedUsermenu').is(':visible')) {
+  				$('#header .headerContent .loggedBlock #loggedUserpic').css('background-position','top');
+				$('#header .headerContent .loggedBlock #loggedUsermenu').slideUp('fast');
+	 			$('#header .headerFixed .headerContent .menuActivity').hide();
+				clicked = 0;
+			}
+			div.show();
+			$('#'+id+' span.title').addClass('open');
+		}
+	});
+
+	var headerScroll = 0;
+	if ($('.headerFixed').css('position') != 'relative') { headerScroll = 1; }
+	$(window).resize(function () {
+		if ($('.headerFixed').css('position') == 'relative') { headerScroll = 0; }
+		else { headerScroll = 1; }
+	});
+	var _mypos = $(window).scrollTop()+59;
+	var _up = 0;
+	var _newScroll;
+	$(window).scroll(function() {
+		if (headerScroll) {
+			_newScroll = $(window).scrollTop();
+			if (_newScroll >= _mypos && !_up) {
+				$('.headerFixed').css('position', 'absolute');
+				$('.headerFixed').stop().fadeOut('fast');
+				_up = !_up;
+			} else if (_newScroll < _mypos && _up) {
+				$('.headerFixed').css('position', 'fixed');
+				$('.headerFixed').stop().fadeIn('fast');
+				_up = !_up;
+			}
+			if (_newScroll > 59) { _mypos = _newScroll; }
+		}
+	});
+	////
+
+	// Headerin valikot klikkaus ulkopuolelle
+	$(document).mouseup(function (e) {
+		e.stopPropagation();
+		var container = $('#header .headerContent .menuItem');
+		if (e.target.nodeName != 'SPAN') {
+			if (container.has(e.target).length === 0) {
+				$('#header .headerContent div[class^="subMenu"]').hide();
+				$('#header .headerContent .headerBlock .showMenu span.title').removeClass('open');
+			}
+		}
+		var container2 = $('#header .searchContainer');
+		if (container2.has(e.target).length === 0) {
+			$('#mediasuggestions').hide();
+		}
+        });
+	////
+
+	$('#logoutButton, #logoutButton2').click(function() {
+		sessionStorage.clear();
+		window.location.href = '/logout.php';
+	});
+
+
+        $('#searchMedia').keydown(function(e) {
+                if(e.keyCode == 13) {
+                        e.preventDefault();
+                }
+        });
+
+        var minlength = 4;
+        $('#searchMedia').keyup(function() {
+                var that = this,
+                value = $(this).val();
+
+                if(value.length >= minlength) {
+                        $.ajax('searchmedia.php', {
+                                type: 'GET',
+                                data: {
+                                        'search': value
+                                },
+                                dataType: 'text',
+                                'success': function(msg) {
+                                        $('#mediasuggestions').show();
+                                        if(value==$(that).val()) {
+                                                $('#mediasuggestions').html(msg);
+                                        }
+                                }
+
+                        });
+                }
+                else {
+                        $('#mediasuggestions').hide();
+                }
+        });
+
+	$('#headerRiemurasia').click(function() {
+		if( $('#releaseMsg').is(':hidden')) {
+			var seen=1;
+			$.cookie('releaseMsg_322', seen, { expires: 300, path: '/', domain: '.riemurasia.net' } );
+			$('#releaseMsg').fadeIn('fast');
+		} else {
+			$('#release').fadeOut(1000);
+			$('#releaseMsg').fadeOut('fast');
+		}
+	});
+
+
+	$('#closeReleaseButton').click(function() {
+		$('#releaseMsg').fadeOut('fast');
+	});
+
+        // THEME SELECT
+
+	$('#selectTheme').change(function() {
+	   var theme = $('#selectTheme').val();
+	   $.cookie('theme', theme, { expires: 60, path: '/', domain: '.riemurasia.net' });
+	   location.reload(true);
+	});
+
+});
+</script>
+<!-- InterQuest begin v3.0 --> <script> if(1>(Math.random()*20))setTimeout(function(){ var t="script",d=document,e=d.createElement(t),f=d.getElementsByTagName(t)[0]; e.async=1;e.src="//survey.interquest.com/cgi/invite?id=f0a7a4649ef7b382&js20"; f.parentNode.insertBefore(e,f);},1); </script> <!-- InterQuest end -->
+<script type="text/javascript" src="/js/spring.js"></script>
+<script type="text/javascript">
+var sp_e0 = {
+"s":"nauru",
+"cp":"aggregate/klikklik",
+"url":document.location.href
+}
+spring.c(sp_e0);
+</script>
+<noscript><img src="https://ssl-nauru.spring-tns.net/j0=,,,;+,,cp=aggregate;;;;" alt=""></noscript>
+</body>
+</html>

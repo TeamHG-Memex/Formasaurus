@@ -1,0 +1,1792 @@
+<!doctype html>
+
+<html lang="en">
+
+<head id="www.capitalbikeshare.com" data-template-set="html5-reset">
+
+	<meta charset="utf-8">
+
+	<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<title>Sign Up | Capital Bikeshare</title>
+
+	<meta name="title" content="Capital Bikeshare">
+	<meta name="description" content="Your bike sharing system in Washington, D.C.">
+	<!-- Google will often use this as its description of your page/site. Make it good. -->
+
+	<meta name="google-site-verification" content="">
+	<!-- Speaking of Google, don't forget to set your site up: http://google.com/webmasters -->
+
+	<meta name="author" content="Alta Bicycle Share">
+	<meta name="Copyright" content="Copyright Alta Bicycle Share 2011. All Rights Reserved.">
+
+	<!-- Dublin Core Metadata : http://dublincore.org/ -->
+	<meta name="DC.title" content="Capital Bikeshare">
+	<meta name="DC.subject" content="Bicycle Sharing Systems">
+	<meta name="DC.creator" content="Alta Bicycle Share">
+
+	<!--  Mobile Viewport Fix
+	j.mp/mobileviewport & davidbcalhoun.com/2010/viewport-metatag 
+	device-width : Occupy full width of the screen in its current orientation
+	initial-scale = 1.0 retains dimensions instead of zooming out if page height > device height
+	maximum-scale = 1.0 retains dimensions instead of zooming in if page width < device width
+	-->
+	<!-- Uncomment to use use thoughtfully!
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+	-->
+
+	<link rel="shortcut icon" href="/assets/images/favicon.ico">
+	<!-- This is the traditional favicon.
+		 - size: 16x16 or 32x32
+		 - transparency is OK
+		 - see wikipedia for info on browser support: http://mky.be/favicon/ -->
+
+	<link rel="apple-touch-icon" href="_/img/apple-touch-icon.png">
+	<!-- The is the icon for iOS's Web Clip.
+		 - size: 57x57 for older iPhones, 72x72 for iPads, 114x114 for iPhone4's retina display (IMHO, just go ahead and use the biggest one)
+		 - To prevent iOS from applying its styles to the icon name it thusly: apple-touch-icon-precomposed.png
+		 - Transparency is not recommended (iOS will put a black BG behind the icon) -->
+	
+	<!-- CSS Styles for every page -->
+	<link href="/assets/css/cabi/reset.css?c=-62169966000" media="all" rel="stylesheet"/>
+	<link href="/assets/css/cabi/fonts.css?c=-62169966000" media="all" rel="stylesheet"/>
+	<link href="/assets/css/cabi/cabi.css?c=-62169966000" media="all" rel="stylesheet"/>
+		
+	<!-- CSS Styles only appropriate for certain pages -->
+			
+	<!-- all our JS is at the bottom of the page, except for HTML5 shiv. -->
+    <!--[if lt IE 9]>
+    	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+	
+	<!-- Fuel Blog -->
+		<base href="https://www.capitalbikeshare.com/" />
+	
+	<!-- Google Translate -->
+	<meta name="google-translate-customization" content="4d28787f698ce0ad-470d2cfee79910df-g81cd7cb7c481ddc3-18"></meta>
+
+</head>
+
+<body class="<!--__FUEL_MARKER__0-->Body Class">
+
+	<!-- Header - Includes black bar across top and main navigation -->
+	<header id="header">
+		
+    	<div id="topbar">
+        	<div id="topbar-content">
+        		
+                <a id="logo" href="https://www.capitalbikeshare.com/"><h1>Capital Bikeshare</h1></a>                
+                
+                <nav id="sub">   
+                	    
+                	
+<ul>
+	<li class="first"><a href="https://www.capitalbikeshare.com/about" title="About">About</a></li>
+	<li><a href="https://www.capitalbikeshare.com/faq" title="FAQ">FAQ</a></li>
+	<li><a href="https://www.capitalbikeshare.com/contact" title="Contact">Contact</a></li>
+	<li class="last"><a href="https://www.capitalbikeshare.com/store" title="Store">Store</a></li>
+</ul>
+                	
+                	<ul>
+                		                			<li ><a href="https://www.capitalbikeshare.com/login">Member Login</a></li>
+            			        				
+        					        				
+	        				<li id="renew" ><a class="top-bar-button" href="https://www.capitalbikeshare.com/member/renew">Renew</a></li>
+	        				
+	        			        				
+                    	<li id="join" class="active"><a class="top-bar-button" href="https://www.capitalbikeshare.com/signup">Join</a></li>
+                	</ul>   
+
+                </nav>
+                
+            </div>
+        </div>
+        
+    	<nav id="main">
+    		
+    		
+        		
+<ul>
+	<li class="first"><a href="https://www.capitalbikeshare.com/home" title="Home">Home</a></li>
+	<li><a href="https://www.capitalbikeshare.com/how-it-works" title="How It Works">How It Works</a></li>
+	<li><a href="https://www.capitalbikeshare.com/stations" title="Station Map">Station Map</a></li>
+	<li><a href="https://www.capitalbikeshare.com/pricing" title="Pricing">Pricing</a></li>
+	<li><a href="https://www.capitalbikeshare.com/explore-by-bike" title="Explore By Bike">Explore By Bike</a></li>
+	<li><a href="https://www.capitalbikeshare.com/safety" title="Safety">Safety</a></li>
+	<li><a href="https://www.capitalbikeshare.com/partners" title="Partners">Partners</a></li>
+	<li><a href="https://www.capitalbikeshare.com/news" title="News">News</a></li>
+	<li class="last"><a href="https://www.capitalbikeshare.com/system-data" title="System Data">System Data</a></li>
+</ul>
+        		
+                    </nav>
+        
+    </header>
+<div id="content-wrapper">
+	
+	<!-- Messages -->
+		
+	<!-- Main Content -->
+	<div id="content">
+
+		<h1 class="center">Join</h1>
+
+		<!-- Open the Form securely on just Remote Servers -->
+		<form action="https://www.capitalbikeshare.com/signup" method="post" accept-charset="utf-8">		
+			<!-- Language -->
+			<input type="hidden" value="en" name="language">
+			
+			<!-- Instruction Message -->
+			<!--__FUEL_MARKER__1--><p style="text-indent:40px;" ><b>By mail</b>:  For Annual, Annual Installment, 30-Day, Daily Key and corporate memberships, please complete this form to open an account and have your fob (and helmet, if purchased) mailed to you. </p>
+
+<p style="text-indent:40px;" ><b>In person:</b>  To open an account and pick up your fob in person for Annual, Annual Installment, 30-Day, Daily Key and corporate memberships, visit any Arlington County <a href="http://www.commuterpage.com/pages/tools-resources/commuter-store-commuter-direct/" title="Commuter Store" target="_self">Commuter Store</a>. Your fob will be activated on the spot and ready for use. Hours for pick-up are Monday - Friday between 9:30am - 5pm and Saturday at the Ballston and Rosslyn locations between 8am - 2pm. If you purchase a helmet, it will be mailed separately.</p>
+
+<p class="center">
+
+              <p><center>24-hour and 3-day memberships can be purchased at any station kiosk.</p></center> 
+
+              <p><center>Note:  You must be at least 16 years of age to become a Member of Capital Bikeshare.</p></center>			
+			<!-- Error Messages -->
+		    <div class="errorMsg" id="errorMessages"></div>
+		    
+		    <!-- Form Fieldsets -->
+			<fieldset>
+<legend>Personal Information</legend>
+			
+				<!--__FUEL_MARKER__2--><p style="color:#FF300B; font-family: UbuntuMedium; text-align:center; "><strong style="font-family:UbuntuBold;">NOTE: </strong>Please provide the address where you wish to receive your Capital Bikeshare key. Please allow up to 7 business days to receive your key.</p>			
+				<!-- Gender -->
+				<div class="form-field">
+			        <label><span class="require">*</span>Gender</label>
+					<input id="male" type="radio" value="m" name="gender" class="mandatory" /><label for="male" class="inline">Male</label>
+					<input id="female" type="radio" value="f" name="gender" class="mandatory" /><label for="female" class="inline">Female</label>
+				</div>
+				
+				<!-- First Name -->
+				<div class="form-field">
+					<label for="firstName"><span class="require">*</span>First Name</label>
+					<input type="text" style="width: 200px;" id="firstName" value="" name="firstName" />
+				</div>
+				
+				<!-- Last Name -->
+				<div class="form-field">
+					<label for="lastName"><span class="require">*</span>Last Name</label>
+					<input type="text" style="width: 200px;" id="lastName" value="" name="lastName" /> 
+				</div>
+				
+				<!-- Birthday -->
+				<div class="form-field">
+					<label for="birthDay"><span class="require">*</span>Date of Birth</label>
+					<label for="birthMonth" style="display: none"></label>
+					<label for="birthYear" style="display: none"></label>
+						<select name="birthDay" id="birthDay" class="styled">
+<option value="01">1</option>
+<option value="02">2</option>
+<option value="03">3</option>
+<option value="04">4</option>
+<option value="05">5</option>
+<option value="06">6</option>
+<option value="07">7</option>
+<option value="08">8</option>
+<option value="09">9</option>
+<option value="10">10</option>
+<option value="11">11</option>
+<option value="12">12</option>
+<option value="13">13</option>
+<option value="14">14</option>
+<option value="15">15</option>
+<option value="16">16</option>
+<option value="17">17</option>
+<option value="18">18</option>
+<option value="19">19</option>
+<option value="20">20</option>
+<option value="21">21</option>
+<option value="22">22</option>
+<option value="23">23</option>
+<option value="24">24</option>
+<option value="25">25</option>
+<option value="26">26</option>
+<option value="27">27</option>
+<option value="28">28</option>
+<option value="29">29</option>
+<option value="30">30</option>
+<option value="31">31</option>
+</select>&nbsp;/&nbsp;<select name="birthMonth" id="birthMonth" class="styled">
+<option value="01">January</option>
+<option value="02">February</option>
+<option value="03">March</option>
+<option value="04">April</option>
+<option value="05">May</option>
+<option value="06">June</option>
+<option value="07">July</option>
+<option value="08">August</option>
+<option value="09">September</option>
+<option value="10">October</option>
+<option value="11">November</option>
+<option value="12">December</option>
+</select>&nbsp;/&nbsp;<select name="birthYear" id="birthYear" class="styled">
+<option value="1998">1998</option>
+<option value="1997">1997</option>
+<option value="1996">1996</option>
+<option value="1995">1995</option>
+<option value="1994">1994</option>
+<option value="1993">1993</option>
+<option value="1992">1992</option>
+<option value="1991">1991</option>
+<option value="1990">1990</option>
+<option value="1989">1989</option>
+<option value="1988">1988</option>
+<option value="1987">1987</option>
+<option value="1986">1986</option>
+<option value="1985">1985</option>
+<option value="1984">1984</option>
+<option value="1983">1983</option>
+<option value="1982">1982</option>
+<option value="1981">1981</option>
+<option value="1980">1980</option>
+<option value="1979">1979</option>
+<option value="1978">1978</option>
+<option value="1977">1977</option>
+<option value="1976">1976</option>
+<option value="1975">1975</option>
+<option value="1974">1974</option>
+<option value="1973">1973</option>
+<option value="1972">1972</option>
+<option value="1971">1971</option>
+<option value="1970">1970</option>
+<option value="1969">1969</option>
+<option value="1968">1968</option>
+<option value="1967">1967</option>
+<option value="1966">1966</option>
+<option value="1965">1965</option>
+<option value="1964">1964</option>
+<option value="1963">1963</option>
+<option value="1962">1962</option>
+<option value="1961">1961</option>
+<option value="1960">1960</option>
+<option value="1959">1959</option>
+<option value="1958">1958</option>
+<option value="1957">1957</option>
+<option value="1956">1956</option>
+<option value="1955">1955</option>
+<option value="1954">1954</option>
+<option value="1953">1953</option>
+<option value="1952">1952</option>
+<option value="1951">1951</option>
+<option value="1950">1950</option>
+<option value="1949">1949</option>
+<option value="1948">1948</option>
+<option value="1947">1947</option>
+<option value="1946">1946</option>
+<option value="1945">1945</option>
+<option value="1944">1944</option>
+<option value="1943">1943</option>
+<option value="1942">1942</option>
+<option value="1941">1941</option>
+<option value="1940">1940</option>
+<option value="1939">1939</option>
+<option value="1938">1938</option>
+<option value="1937">1937</option>
+<option value="1936">1936</option>
+<option value="1935">1935</option>
+<option value="1934">1934</option>
+<option value="1933">1933</option>
+<option value="1932">1932</option>
+<option value="1931">1931</option>
+<option value="1930">1930</option>
+<option value="1929">1929</option>
+<option value="1928">1928</option>
+<option value="1927">1927</option>
+<option value="1926">1926</option>
+<option value="1925">1925</option>
+<option value="1924">1924</option>
+<option value="1923">1923</option>
+<option value="1922">1922</option>
+<option value="1921">1921</option>
+<option value="1920">1920</option>
+<option value="1919">1919</option>
+<option value="1918">1918</option>
+<option value="1917">1917</option>
+<option value="1916">1916</option>
+<option value="1915">1915</option>
+<option value="1914">1914</option>
+<option value="1913">1913</option>
+<option value="1912">1912</option>
+<option value="1911">1911</option>
+<option value="1910">1910</option>
+<option value="1909">1909</option>
+<option value="1908">1908</option>
+<option value="1907">1907</option>
+<option value="1906">1906</option>
+<option value="1905">1905</option>
+<option value="1904">1904</option>
+<option value="1903">1903</option>
+<option value="1902">1902</option>
+<option value="1901">1901</option>
+<option value="1900">1900</option>
+</select>				</div>				
+		
+				<!-- Phone (Primary) -->
+				<div class="form-field">
+					<label><span class="require">*</span>Phone</label>
+					<input type="text" maxlength="3" value="" id="areaCode" title="areaCode" name="areaCode"><span class="form-hyphen">  -  </span>
+					<input type="text" maxlength="3" value="" id="phonePrefix" title="phonePrefix" name="phonePrefix"><span class="form-hyphen">  -  </span>
+					<input type="text" maxlength="4" value="" id="phoneSuffix" title="phoneSuffix" name="phoneSuffix">
+				</div>
+				
+				<!-- Phone (Alternate) -->
+				<div class="form-field">
+					<label>Alternate Phone</label>
+					<input type="text" maxlength="3" value="" id="areaCode2" title="areaCode2" name="areaCode2"><span class="form-hyphen">  -  </span>
+					<input type="text" maxlength="3" value="" id="phonePrefix2" title="phonePrefix2" name="phonePrefix2"><span class="form-hyphen">  -  </span>
+					<input type="text" maxlength="4" value="" id="phoneSuffix2" title="phoneSuffix2" name="phoneSuffix2">
+				</div>
+				
+				<!-- Email -->
+				<div class="form-field">
+					<label for="email"><span class="require">*</span>Email</label>
+					<input type="text" id="email" style="width: 250px;" value="" name="email">
+				</div>
+				
+									
+				<!-- Street Number -->				
+				<div class="form-field">
+					<label for="civicNumber"><span class="require">*</span>Street Number</label>		
+					<input type="text" id="civicNumber" style="width: 50px;" name="civicNumber" value="">
+					<span class="hint">(or PO Box Number)</span>
+				</div>
+				
+				<!-- Street Name -->				
+				<div class="form-field">
+					<label for="street"><span class="require">*</span>Street Name</label>	
+					<input type="text" id="street" style="width: 200px;" value="" name="street">
+					<span class="hint">(enter "PO Box" if it is a PO Box)</span>
+				</div>					
+				
+				<!-- Apartment Number -->				
+				<div class="form-field">
+					<label for="apartment">Apartment</label>
+					<input type="text" id="apartment" name="apartment" style="width: 50px;" value="">
+				</div>
+				
+				<!-- City -->				
+				<div class="form-field">
+					<label for="city"><span class="require">*</span>City</label>
+					<input type="text" value="" id="city" name="city">
+				</div>
+				
+				<!-- State -->				
+				<div class="form-field">
+					<label for="province"><span class="require">*</span>State</label>					
+					<select name="province" id="province">
+		<option value="" label="Select a State...">Select a State...</option>
+		<option value="AL" label="Alabama">Alabama</option>
+		<option value="AK" label="Alaska">Alaska</option>
+		<option value="AS" label="American Samoa">American Samoa</option>
+		<option value="AZ" label="Arizona">Arizona</option>
+		<option value="AR" label="Arkansas">Arkansas</option>
+		<option value="CA" label="California">California</option>
+		<option value="CO" label="Colorado">Colorado</option>
+		<option value="CT" label="Connecticut">Connecticut</option>
+		<option value="DE" label="Delaware">Delaware</option>
+		<option value="DC" label="District Of Columbia">District Of Columbia</option>
+		<option value="FL" label="Florida">Florida</option>
+		<option value="GA" label="Georgia">Georgia</option>
+		<option value="HI" label="Hawaii">Hawaii</option>
+		<option value="ID" label="Idaho">Idaho</option>
+		<option value="IL" label="Illinois">Illinois</option>
+		<option value="IN" label="Indiana">Indiana</option>
+		<option value="IA" label="Iowa">Iowa</option>
+		<option value="KS" label="Kansas">Kansas</option>
+		<option value="KY" label="Kentucky">Kentucky</option>
+		<option value="LA" label="Louisiana">Louisiana</option>
+		<option value="ME" label="Maine">Maine</option>
+		<option value="MH" label="Marshall Islands">Marshall Islands</option>
+		<option value="MD" label="Maryland">Maryland</option>
+		<option value="MA" label="Massachusetts">Massachusetts</option>
+		<option value="MI" label="Michigan">Michigan</option>
+		<option value="FM" label="Micronesia">Micronesia</option>
+		<option value="MN" label="Minnesota">Minnesota</option>
+		<option value="MS" label="Mississippi">Mississippi</option>
+		<option value="MO" label="Missouri">Missouri</option>
+		<option value="MT" label="Montana">Montana</option>
+		<option value="NE" label="Nebraska">Nebraska</option>
+		<option value="NV" label="Nevada">Nevada</option>
+		<option value="NH" label="New Hampshire">New Hampshire</option>
+		<option value="NJ" label="New Jersey">New Jersey</option>
+		<option value="NM" label="New Mexico">New Mexico</option>
+		<option value="NY" label="New York">New York</option>
+		<option value="NC" label="North Carolina">North Carolina</option>
+		<option value="ND" label="North Dakota">North Dakota</option>
+		<option value="MP" label="Northern Marianas">Northern Marianas</option>
+		<option value="OH" label="Ohio">Ohio</option>
+		<option value="OK" label="Oklahoma">Oklahoma</option>
+		<option value="OR" label="Oregon">Oregon</option>
+		<option value="PW" label="Palau">Palau</option>
+		<option value="PA" label="Pennsylvania">Pennsylvania</option>
+		<option value="RI" label="Rhode Island">Rhode Island</option>
+		<option value="SC" label="South Carolina">South Carolina</option>
+		<option value="SD" label="South Dakota">South Dakota</option>
+		<option value="TN" label="Tennessee">Tennessee</option>
+		<option value="TX" label="Texas">Texas</option>
+		<option value="UT" label="Utah">Utah</option>
+		<option value="VT" label="Vermont">Vermont</option>
+		<option value="VA" label="Virginia">Virginia</option>
+		<option value="VI" label="Virgin Islands">Virgin Islands</option>
+		<option value="WA" label="Washington">Washington</option>
+		<option value="WV" label="West Virginia">West Virginia</option>
+		<option value="WI" label="Wisconsin">Wisconsin</option>
+		<option value="WY" label="Wyoming">Wyoming</option>
+</select>
+				</div>
+				
+				<!-- Country -->				
+				<div class="form-field">
+					<label for="country"><span class="require">*</span>Country</label>
+					<select name="country" id="country" class="styled">
+<option value="US">United States</option>
+<option value="AF">Afghanistan</option>
+<option value="AL">Albania</option>
+<option value="AG">Algeria</option>
+<option value="AN">Andorra</option>
+<option value="AO">Angola</option>
+<option value="AC">Antigua and Barbuda</option>
+<option value="AR">Argentina</option>
+<option value="AM">Armenia</option>
+<option value="AS">Australia</option>
+<option value="AU">Austria</option>
+<option value="AJ">Azerbaijan</option>
+<option value="BF">Bahamas, The</option>
+<option value="BA">Bahrain</option>
+<option value="BG">Bangladesh</option>
+<option value="BB">Barbados </option>
+<option value="BO">Belarus </option>
+<option value="BE">Belgium </option>
+<option value="BH">Belize </option>
+<option value="BN">Benin </option>
+<option value="BT">Bhutan</option>
+<option value="BL">Bolivia</option>
+<option value="BK">Bosnia and Herzegovina</option>
+<option value="BC">Botswana</option>
+<option value="BR">Brazil</option>
+<option value="BX">Brunei</option>
+<option value="BU">Bulgaria</option>
+<option value="UV">Burkina Faso</option>
+<option value="BM">Burma</option>
+<option value="BY">Burundi</option>
+<option value="CB">Cambodia</option>
+<option value="CM">Cameroon</option>
+<option value="CA">Canada</option>
+<option value="CV">Cape Verde</option>
+<option value="CT">Central African Republic</option>
+<option value="CD">Chad</option>
+<option value="CI">Chile</option>
+<option value="CH">China</option>
+<option value="CO">Colombia</option>
+<option value="CN">Comoros</option>
+<option value="CF">Congo (Brazzaville)</option>
+<option value="CG">Congo (Kinshasa)</option>
+<option value="CS">Costa Rica</option>
+<option value="IV">Côte d'Ivoire</option>
+<option value="HR">Croatia</option>
+<option value="CU">Cuba</option>
+<option value="CY">Cyprus</option>
+<option value="EZ">Czech Republic</option>
+<option value="DA">Denmark</option>
+<option value="DJ">Djibouti</option>
+<option value="DO">Dominica</option>
+<option value="DR">Dominican Republic</option>
+<option value="EC">Ecuador</option>
+<option value="EG">Egypt</option>
+<option value="ES">El Salvador</option>
+<option value="EK">Equatorial Guinea</option>
+<option value="ER">Eritrea</option>
+<option value="EN">Estonia</option>
+<option value="ET">Ethiopia</option>
+<option value="FJ">Fiji</option>
+<option value="FI">Finland</option>
+<option value="FR">France</option>
+<option value="GB">Gabon</option>
+<option value="GA">Gambia, The</option>
+<option value="GG">Georgia</option>
+<option value="GM">Germany</option>
+<option value="GH">Ghana</option>
+<option value="GR">Greece</option>
+<option value="GJ">Grenada</option>
+<option value="GT">Guatemala</option>
+<option value="GV">Guinea</option>
+<option value="PU">Guinea-Bissau</option>
+<option value="GY">Guyana</option>
+<option value="HA">Haiti</option>
+<option value="VT">Holy See</option>
+<option value="HO">Honduras</option>
+<option value="HU">Hungary</option>
+<option value="IC">Iceland</option>
+<option value="IN">India</option>
+<option value="ID">Indonesia</option>
+<option value="IZ">Iraq</option>
+<option value="EI">Ireland</option>
+<option value="IS">Israel</option>
+<option value="IT">Italy</option>
+<option value="JM">Jamaica</option>
+<option value="JA">Japan</option>
+<option value="JO">Jordan</option>
+<option value="KZ">Kazakhstan</option>
+<option value="KE">Kenya</option>
+<option value="KR">Kiribati</option>
+<option value="KS">Korea, South</option>
+<option value="KV">Kosovo</option>
+<option value="KU">Kuwait</option>
+<option value="KG">Kyrgyzstan</option>
+<option value="LA">Laos</option>
+<option value="LG">Latvia</option>
+<option value="LE">Lebanon</option>
+<option value="LT">Lesotho</option>
+<option value="LI">Liberia</option>
+<option value="LY">Libya</option>
+<option value="LS">Liechtenstein</option>
+<option value="LH">Lithuania</option>
+<option value="LU">Luxembourg</option>
+<option value="MK">Macedonia</option>
+<option value="MA">Madagascar</option>
+<option value="MI">Malawi</option>
+<option value="MY">Malaysia</option>
+<option value="MV">Maldives</option>
+<option value="ML">Mali</option>
+<option value="MT">Malta</option>
+<option value="RM">Marshall Islands</option>
+<option value="MR">Mauritania</option>
+<option value="MP">Mauritius</option>
+<option value="MX">Mexico</option>
+<option value="FM">Micronesia</option>
+<option value="MD">Moldova</option>
+<option value="MN">Monaco</option>
+<option value="MG">Mongolia</option>
+<option value="MJ">Montenegro</option>
+<option value="MO">Morocco</option>
+<option value="MZ">Mozambique</option>
+<option value="WA">Namibia</option>
+<option value="NR">Nauru</option>
+<option value="NP">Nepal</option>
+<option value="NL">Netherlands</option>
+<option value="NZ">New Zealand</option>
+<option value="NU">Nicaragua</option>
+<option value="NG">Niger</option>
+<option value="NI">Nigeria</option>
+<option value="NO">Norway</option>
+<option value="MU">Oman</option>
+<option value="PK">Pakistan</option>
+<option value="PS">Palau</option>
+<option value="PM">Panama</option>
+<option value="PP">Papua New Guinea</option>
+<option value="PA">Paraguay</option>
+<option value="PE">Peru</option>
+<option value="RP">Philippines</option>
+<option value="PL">Poland</option>
+<option value="PO">Portugal</option>
+<option value="QA">Qatar</option>
+<option value="RO">Romania</option>
+<option value="RS">Russia</option>
+<option value="RW">Rwanda</option>
+<option value="SC">Saint Kitts and Nevis</option>
+<option value="ST">Saint Lucia</option>
+<option value="VC">Saint Vincent and the Grenadines</option>
+<option value="WS">Samoa</option>
+<option value="SM">San Marino</option>
+<option value="TP">Sao Tome and Principe</option>
+<option value="SA">Saudi Arabia</option>
+<option value="SG">Senegal</option>
+<option value="RI">Serbia</option>
+<option value="SE">Seychelles</option>
+<option value="SL">Sierra Leone</option>
+<option value="SN">Singapore</option>
+<option value="LO">Slovakia</option>
+<option value="SI">Slovenia</option>
+<option value="BP">Solomon Islands</option>
+<option value="SO">Somalia</option>
+<option value="SF">South Africa</option>
+<option value="SP">Spain</option>
+<option value="CE">Sri Lanka</option>
+<option value="SU">Sudan</option>
+<option value="NS">Suriname</option>
+<option value="WZ">Swaziland</option>
+<option value="SW">Sweden</option>
+<option value="SZ">Switzerland</option>
+<option value="SY">Syria</option>
+<option value="TI">Tajikistan</option>
+<option value="TZ">Tanzania</option>
+<option value="TH">Thailand</option>
+<option value="TT">Timor-Leste</option>
+<option value="TO">Togo</option>
+<option value="TN">Tonga</option>
+<option value="TD">Trinidad and Tobago</option>
+<option value="TS">Tunisia</option>
+<option value="TU">Turkey</option>
+<option value="TX">Turkmenistan</option>
+<option value="TV">Tuvalu</option>
+<option value="UG">Uganda</option>
+<option value="UP">Ukraine</option>
+<option value="AE">United Arab Emirates</option>
+<option value="UK">United Kingdom</option>
+<option value="UY">Uruguay</option>
+<option value="UZ">Uzbekistan</option>
+<option value="NH">Vanuatu</option>
+<option value="VE">Venezuela</option>
+<option value="VM">Vietnam</option>
+<option value="YM">Yemen</option>
+<option value="ZA">Zambia</option>
+<option value="ZI">Zimbabwe</option>
+</select>				</div>
+				
+				<!-- Zip Code -->				
+				<div class="form-field">
+					<label for="postalCode"><span class="require">*</span>Postal Code</label>
+					<input type="text" maxlength="5" style="width: 50px;" value="" id="postalCode" name="postalCode">
+				</div>														
+				
+			</fieldset>			
+			<fieldset>
+<legend>Account Information</legend>
+		
+				<!-- User Name -->
+				<div class="form-field">
+					<label for="username"><span class="require">*</span>User Name</label>
+					<input id="username" name="username" type="text" value="">
+					<span class="require">&nbsp;(no spaces)</span>
+				</div>
+		
+				<!-- Password -->
+				<div class="form-field">
+					<label for="password"><span class="require">*</span>Password</label>
+					<input type="password" id="password" name="password" value="">
+					<span class="require">&nbsp;(no spaces)</span>
+				</div>
+		
+				<!-- Confirm Password -->
+				<div class="form-field">
+					<label for="password_confirm"><span class="require">*</span>Confirm password</label>
+					<input type="password" id="password_confirm" name="password_confirm" value="">
+					<span class="require">&nbsp;(no spaces)</span>
+				</div>
+		
+				<!-- Membership Type -->
+				<table id="membership-types-signup" class="membership-types">
+    				<thead>
+    					<tr>
+    						<th colspan="2"><span class="require">*</span>Membership Type (select one) <br/><a target="_blank" href="https://www.capitalbikeshare.com/pricing" class="underline emphasis small normal-weight" >Help me choose my perfect membership type!</a></th>
+    					</tr>
+    				</thead>
+    				<tbody>
+    					<tr>
+    						<td>
+    							<input id="standard_account" title="standard_account" type="radio" name="membership_type" value="standard"  />&nbsp;Standard
+    						</td>
+    						<td>
+    							<select name="subscription_type" id="subscription_type" title="subscription_type">
+<option value="2">Annual (one-time payment of $75)</option>
+<option value="3">30 days (one-time payment of $25)</option>
+<option value="22">Annual membership with monthly payment (12 monthly payments of $7, total cost $84)</option>
+<option value="32">Daily Key (initial payment $10, renewal cost $7)</option>
+</select>&nbsp;&nbsp;&nbsp;&nbsp;
+    							<img class="cabi-spinner" alt="Spinner - please wait while plan loads" src="/assets/images/ajax/cabi-spinner-form-field-gray-speed4.gif" style="display:none" />
+    							    							<input type="checkbox" name="auto_renew_subscription_type" value="TRUE" checked="checked" id="auto_renew_subscription_type" style="display:none" disabled="disabled"  /><label for="auto_renew_subscription_type" id="auto_renew_subscription_type_label" style="display:none; font-size:12px;">Enable Auto-Renew   <a href="faq#auto-renew" target="_blank" class="underline emphasis small">What's This?</a></label>
+    						</td>
+    					</tr>
+    					<tr>
+    						<td>
+    							<input id="corporate_account" title="corporate_account" type="radio" name="membership_type" value="corporate"  />&nbsp;Corporate
+    						</td>
+    						<td>
+    							<div class="table-cell">
+    								<label class="top" for="corporate_partner">Company</label> 
+    								<select name="corporate_partner" id="corporate-partner" title="corporate-partner" style="width:204px;">
+		<option value="" label="Select a company...">Select a company...</option>
+		<option value="4" label="Akridge">Akridge</option>
+		<option value="1" label="Alta Bicycle Share">Alta Bicycle Share</option>
+		<option value="8" label="Alta Planning + Design">Alta Planning + Design</option>
+		<option value="16" label="Bloomberg - 1101">Bloomberg - 1101</option>
+		<option value="17" label="Bloomberg - 1399">Bloomberg - 1399</option>
+		<option value="11" label="BuckleySandler, LLP">BuckleySandler, LLP</option>
+		<option value="6" label="Catalist">Catalist</option>
+		<option value="15" label="Council of the District of Columbia">Council of the District of Columbia</option>
+		<option value="3" label="County of Arlington, VA">County of Arlington, VA</option>
+		<option value="21" label="County of Montgomery">County of Montgomery</option>
+		<option value="2" label="District Department of Transportation">District Department of Transportation</option>
+		<option value="10" label="Downtown DC BID">Downtown DC BID</option>
+		<option value="13" label="Georgetown University GUWellness">Georgetown University GUWellness</option>
+		<option value="9" label="Google DC">Google DC</option>
+		<option value="7" label="Human Rights Campaign">Human Rights Campaign</option>
+		<option value="18" label="Job Access Reverse Commute Membership">Job Access Reverse Commute Membership</option>
+		<option value="12" label="National Geographic Society">National Geographic Society</option>
+		<option value="14" label="Ocean Conservancy">Ocean Conservancy</option>
+		<option value="20" label="Peace Corps">Peace Corps</option>
+		<option value="19" label="The Wilderness Society">The Wilderness Society</option>
+		<option value="5" label="USDA Foreign Agricultural Service">USDA Foreign Agricultural Service</option>
+</select>
+    							</div>
+    							<div class="table-cell">
+    								<label class="top" for="corporate_password">Password</label>
+    								<input id="corporate-password" type="password" name="corporate_password" value="" autocomplete="off" style="width:125px;"/>
+    							</div>	    
+    							<div class="table-cell">
+    								<a id="verify" class="thin button">Check</a>
+    							</div>								
+    						</td>
+    					</tr>
+    				</tbody>
+    			</table>
+    			
+    			<!-- Corporate Password Validation Box -->
+    			<div id="corporate_subscription_details_signup" class="corporate_subscription_details" style="display:none;"></div>
+		
+			</fieldset>					
+
+							
+				
+				<fieldset>
+<legend>Helmet Option</legend>
+	
+					<!-- Helmet Check Box -->
+					<div class="form-field">
+											
+						<input type="checkbox" name="helmet" value="yes" id="helmet"  />						<label for="helmet" style="display:inline; font-size:14px;">Check this box if you would like to purchase a Helmet for an additional cost of $16.00.</label>								
+					</div>
+					
+					<!-- Image/Description of Helmet -->
+					<img id="bell-helmet" src="/assets/images/helmets/helmet.png" alt="Capital Bikeshare Bell Impulse Bike Helmet" style="float:left; padding:30px 20px 0px 0px;"/>
+					<p></p>
+					<table id="bell-helmet-info" style="font-size:13px; min-width:0px;">
+						<tr>
+							<td>Model</td>
+							<td>Top Gear Model 9</td>
+						</tr>
+						<tr>
+							<td>Sizing</td>
+							<td>Helmet fits 22.83 to 24.4 inches through instant fitting dial turn retention system, includes snap-on visor, a quick release Nexus buckle, and meets the CPSC standards.</td>
+						</tr>
+						<tr>
+							<td>Total Price</td>
+							<td><strong>$16.00</strong></td>
+						</tr>
+					</table>
+					
+					<!--__FUEL_MARKER__3--><div style="margin-top:15px; font-family: UbuntuMedium; line-height:23px;">	
+	<p>
+		<strong style="font-family:UbuntuBold">NOTE: </strong>
+		
+		Helmets will be shipped separately from your member key within 5 business days. All helmet sales are final. Inquiries regarding helmet shipments may be made to <a href="mailto:helmets@capitalbikeshare.com">helmets@capitalbikeshare.com</a>.	
+	</p>
+</div>					
+						
+				</fieldset>			
+						
+			<fieldset>
+<legend>Redeem a Gift Certificate</legend>
+			
+				<!-- Gift Certificate Instructions -->				
+				<p>To redeem your gift certificate, enter the certificate number in the space below. After entering your certificate number, you must provide your credit card information to establish your account. You will be responsible for any trip usage fees incurred during your membership. Trip fees are charged for trips lasting more than 30 minutes.</p>
+
+				<!-- Gift Certificate Number -->
+				<div class="form-field">
+					<label for="gift_certificate_number">Gift certificate number</label>
+					<input type="text" id="gift_certificate_number" name="gift_certificate_number" value="">
+				</div>
+				
+			</fieldset>		
+			<fieldset>
+<legend>Credit/Debit Card Information <a id="bankondc" title="Click here to learn about Bank on DC (opens in a new window)" href="bankondc" target="_blank">don't have one?</a></legend>
+							
+		
+				<img class="credit-card right" src="/assets/images/visa_mastercard.gif" alt="Visa, Mastercard icons" />
+		
+				<!-- Card Number -->
+				<div class="form-field">
+					<label for="credit_card_number"><span class="require">*</span>Card Number</label>
+					<input type="text" id="credit_card_number" name="credit_card_number" value="" autocomplete="off">
+				</div>
+		
+				<!-- Validation Code -->
+				<div class="form-field">
+					<label for="credit_card_vcode"><span class="require">*</span>Validation Code</label>
+					<input type="password" maxlength="3" id="credit_card_vcode" name="credit_card_vcode" value="" autocomplete="off">
+					<span class="hint">(3 numbers on back of card)</span>
+				</div>
+		
+				<!-- Expiration Date -->
+				<div class="form-field">
+					<label><span class="require">*</span>Expiration</label>
+					<select name="expiration_month" id="expiration_month" title="expiration_month" class="styled">
+<option value="01">January</option>
+<option value="02">February</option>
+<option value="03">March</option>
+<option value="04">April</option>
+<option value="05">May</option>
+<option value="06">June</option>
+<option value="07">July</option>
+<option value="08">August</option>
+<option value="09">September</option>
+<option value="10">October</option>
+<option value="11">November</option>
+<option value="12">December</option>
+</select>&nbsp;/&nbsp;<select name="expiration_year" id="expiration_year" title="expiration_year" class="styled">
+<option value="14">2014</option>
+<option value="15">2015</option>
+<option value="16">2016</option>
+<option value="17">2017</option>
+<option value="18">2018</option>
+<option value="19">2019</option>
+<option value="20">2020</option>
+<option value="21">2021</option>
+<option value="22">2022</option>
+<option value="23">2023</option>
+</select>				</div>
+				
+				<!-- Cardholder Name -->
+				<div class="form-field">
+					<label for="credit_card_holder"><span class="require">*</span>Cardholder Name</label>
+					<input type="text" id="credit_card_holder" name="credit_card_holder" value="">
+				</div>
+
+				<!-- Address (associated with card) -->
+				<p><span class="require">*</span>Address associated <strong>with card</strong></p>
+		
+				<!-- Same Address As Above -->
+				<div class="form-field">
+					<div class="same-address">
+		    			<input type="checkbox" name="credit_card_address_same" value="true" id="credit_card_address_same" title="credit_card_address_same"  />		            	Same address as above
+					</div>
+		        </div>
+		        
+		        <!-- Credit Card Street Number -->					
+				<div class="form-field">
+					<label for="credit_card_street_number"><span class="require">*</span>Street Number</label>
+					<input type="text" id="credit_card_street_number" name="credit_card_street_number" value="">
+					<span class="hint">(or PO Box number)</span>					
+				</div>
+				
+				<!-- Credit Card Street Name -->
+				<div class="form-field">
+					<label for="credit_card_street_name"><span class="require">*</span>Street Name</label>
+					<input type="text" class="mandatory" id="credit_card_street_name" value="" name="credit_card_street_name">
+					<span class="hint">(enter "PO Box" if it is a PO Box)</span>
+				</div>
+				
+				<!-- Credit Card Apartment -->
+				<div class="form-field">
+					<label for="credit_card_apartment">Apartment</label>
+					<input type="text" id="credit_card_apartment" name="credit_card_apartment" value="" style="width: 70px;">
+				</div>
+				
+				<!-- Credit Card City -->
+				<div class="form-field">
+					<label for="credit_card_city"><span class="require">*</span>City</label>
+					<input type="text" value="" id="credit_card_city" name="credit_card_city"> <input type="hidden" value="us" name="country_pp">
+				</div>
+				
+				<!-- Credit Card State -->
+				<div class="form-field">
+					<label for="credit_card_state"><span class="require">*</span>State</label>
+					<select name="credit_card_state" id="credit_card_state">
+		<option value="" label="Select a State...">Select a State...</option>
+		<option value="AL" label="Alabama">Alabama</option>
+		<option value="AK" label="Alaska">Alaska</option>
+		<option value="AS" label="American Samoa">American Samoa</option>
+		<option value="AZ" label="Arizona">Arizona</option>
+		<option value="AR" label="Arkansas">Arkansas</option>
+		<option value="CA" label="California">California</option>
+		<option value="CO" label="Colorado">Colorado</option>
+		<option value="CT" label="Connecticut">Connecticut</option>
+		<option value="DE" label="Delaware">Delaware</option>
+		<option value="DC" label="District Of Columbia">District Of Columbia</option>
+		<option value="FL" label="Florida">Florida</option>
+		<option value="GA" label="Georgia">Georgia</option>
+		<option value="HI" label="Hawaii">Hawaii</option>
+		<option value="ID" label="Idaho">Idaho</option>
+		<option value="IL" label="Illinois">Illinois</option>
+		<option value="IN" label="Indiana">Indiana</option>
+		<option value="IA" label="Iowa">Iowa</option>
+		<option value="KS" label="Kansas">Kansas</option>
+		<option value="KY" label="Kentucky">Kentucky</option>
+		<option value="LA" label="Louisiana">Louisiana</option>
+		<option value="ME" label="Maine">Maine</option>
+		<option value="MH" label="Marshall Islands">Marshall Islands</option>
+		<option value="MD" label="Maryland">Maryland</option>
+		<option value="MA" label="Massachusetts">Massachusetts</option>
+		<option value="MI" label="Michigan">Michigan</option>
+		<option value="FM" label="Micronesia">Micronesia</option>
+		<option value="MN" label="Minnesota">Minnesota</option>
+		<option value="MS" label="Mississippi">Mississippi</option>
+		<option value="MO" label="Missouri">Missouri</option>
+		<option value="MT" label="Montana">Montana</option>
+		<option value="NE" label="Nebraska">Nebraska</option>
+		<option value="NV" label="Nevada">Nevada</option>
+		<option value="NH" label="New Hampshire">New Hampshire</option>
+		<option value="NJ" label="New Jersey">New Jersey</option>
+		<option value="NM" label="New Mexico">New Mexico</option>
+		<option value="NY" label="New York">New York</option>
+		<option value="NC" label="North Carolina">North Carolina</option>
+		<option value="ND" label="North Dakota">North Dakota</option>
+		<option value="MP" label="Northern Marianas">Northern Marianas</option>
+		<option value="OH" label="Ohio">Ohio</option>
+		<option value="OK" label="Oklahoma">Oklahoma</option>
+		<option value="OR" label="Oregon">Oregon</option>
+		<option value="PW" label="Palau">Palau</option>
+		<option value="PA" label="Pennsylvania">Pennsylvania</option>
+		<option value="RI" label="Rhode Island">Rhode Island</option>
+		<option value="SC" label="South Carolina">South Carolina</option>
+		<option value="SD" label="South Dakota">South Dakota</option>
+		<option value="TN" label="Tennessee">Tennessee</option>
+		<option value="TX" label="Texas">Texas</option>
+		<option value="UT" label="Utah">Utah</option>
+		<option value="VT" label="Vermont">Vermont</option>
+		<option value="VA" label="Virginia">Virginia</option>
+		<option value="VI" label="Virgin Islands">Virgin Islands</option>
+		<option value="WA" label="Washington">Washington</option>
+		<option value="WV" label="West Virginia">West Virginia</option>
+		<option value="WI" label="Wisconsin">Wisconsin</option>
+		<option value="WY" label="Wyoming">Wyoming</option>
+</select>
+				</div>
+				
+				<!-- Credit Card Zip -->
+				<div class="form-field">
+					<label for="credit_card_zip"><span class="require">*</span>Postal Code</label>
+					<input type="text" maxlength="5" id="credit_card_zip" style="text-transform: uppercase;" value="" id="credit_card_zip" name="credit_card_zip">
+				</div>
+			
+			</fieldset>			
+			<fieldset>
+<legend>Rental Agreement</legend>
+			
+				<div class="agreement">
+					<!--__FUEL_MARKER__4--><article id="user-agreement">
+	<header>
+		<h1>Capital Bikeshare Member Agreement, Liability Waiver, and Release</h1>
+	</header>
+	
+	<p>
+		Capital Bikeshare is a self-serve bicycle rental system ("<u>Service</u>"), made available by Arlington County, Virginia, the District of Columbia, Montgomery County, Maryland, and the City of Alexandria (“<u>Clients</u>”) and managed by Alta Bicycle Share, Inc. ("<u>Alta</u>," "<u>Our,</u>" or "<u>We</u>"). In consideration of your use of any Service, Alta requires that you ("<u>Member</u>", "<u>You</u>", or "<u>Your</u>") agree to all terms and conditions in this User Agreement, Liability Waiver, and Release ("<u>Agreement</u>"), which are intended to promote the safe use of Capital Bikeshare bicycles, and which apply to all Registered Members and to all Casual Members, as defined below. In this Agreement, "Member" means and includes both Registered Members and Casual Members. 
+	</p>
+	<p>
+		<strong>Section 1 <u>Modifications to Agreement</u>.</strong>
+Alta, in consultation with our Clients, reserves the right to unilaterally amend, modify, or change this Agreement, at any time and from time to time in its sole discretion, without notice and without Member's consent. By continuing to use any Service after any amendment, modification, or change, Member has agreed to be bound by all such amendments, modifications, and changes. Member must carefully review this Agreement on a regular basis to maintain awareness of all amendments, modifications, and changes. Whenever a change is made to this Agreement, Alta will post a notification on <a href="http://www.capitalbikeshare.com/">www.capitalbikeshare.com</a> ("Website"). 		
+	</p>
+	<p>
+		<strong>Section 2 <u>Term of Agreement</u>.</strong>
+The term of this Agreement begins when You first use any Service, and the term ends 10 years after Your last use of any Service; <u>provided</u>, <u>however</u>, that Your personal financial responsibility under Section 15 of this Agreement, titled Credit Card Matters, expires one year after the later of (i) Your last use of any Service, or (ii) the expiration of Your Membership. At any time and from time to time, and without Member's consent, Alta may unilaterally terminate Your right to use any Service, in Alta's sole discretion and without any notice or cause. This Agreement remains in full force and effect after any termination of Your right to use any Service. 
+	</p>
+	<p>
+		<strong>Section 3 <u>Service System</u>.</strong>
+		The Service is comprised of Capital Bikeshare bicycle stations ("<u>Stations</u>"), which include an automated pay station ("<u>Pay Station</u>"), and separate stands that allow the docking of Capital Bikeshare bicycles ("<u>Bike Docks</u>"). The Stations are for the purposes of the renting, docking, and locking of Capital Bikeshare bicycles, as well as the identification of the Member. Under the Service, Capital Bikeshare bicycles can be rented and returned to any Station. 
+	</p>
+	<p>
+		<strong>Section 4 <u>Membership to Service</u>.</strong>
+Member may purchase a long-term membership for the Service ("<u>Membership</u>"), which can be for a period of either one year, 30 days, or a Daily Key membership ("<u>Membership</u>").  Daily Key members will be issued a key which will activate one day memberships when used. To purchase a Membership, Member must complete a registration form and create an account ("<u>Account</u>") at www.capitalbikeshare.com ("<u>Website</u>"), to become a Registered member ("<u>Registered Member</u>"). When a Member subscribes to the Service, Alta will charge the Registered Member's credit card the amount for the Membership, as described in Section 5. Once Registered Member's credit card payment clears, Alta will mail a system key to the mailing address listed by Registered Member. Member must activate the system key on the Website, under the "Member Login" heading, before using the Service for the first time. A Membership becomes valid and active once the system key is activated on the Website. The one year and 30 days memberships allows Registered Member to use the Service without having to pay the $7 charge applicable to Casual 24-Hour Members or the $15 charge applicable to Casual 3-Day Members (definitions below), and Daily Key members will be charged the one day $7 charge for each day they activate their key; <u>provided</u>; <u>however</u>, that Registered Member must still pay the hourly rates as set forth in Section 7 for all trips in excess of 30 minutes. Within one year after a prior Membership expires, Registered Member may renew the Membership on the Website, under the "Member Login" heading. If the Membership is not renewed within this period of time, then Registered Member might need to (i) take certain actions to reactivate Registered Member's old Account, or (ii) create an entirely new Account for a new Membership. The Membership, and the personal identification number and system key related thereto, are non-transferable and may be terminated if Member breaches this Agreement, as decided by Alta in its sole discretion. If a Membership is terminated for any reason, then no refund is provided. 
+	</p>
+	<p>
+		<strong>Section 5 <u>Registered Member Rates and Benefits</u>.</strong>
+Member may purchase a Membership only by using a Visa or MasterCard credit card. A one-year "Annual" Membership may be purchased for $75, and a 30-day "Monthly" Membership may be purchased for $25 (taxes are included), a one-year "Annual Installment" Membership payable in monthly installments may be purchased for $84, a Daily Key Membership may be purchased for $10.  For Annual, Monthly and Installment memberships, on the 10th day of each month, the total amount of chargeable trips (i.e., those trips in excess of 30 minutes) and/or monthly installment payments will be charged to Registered Member's credit card. Daily Key members will be charged for usage fees at the end of each one day membership activated.  At any time a registered member can access their trip history and associated charges by logging into their member profile on the website. If Registered Member has any claim or dispute regarding a chargeable trip, then Registered Member must, within 10 business days from the end of the prior month with the disputed claim, provide to Alta the corresponding trip number to identify the place and time the Capital Bikeshare bicycle was rented and returned. The receipt, if any, indicating the date and time the Capital Bikeshare bicycle was returned would be additional proof that the Capital Bikeshare bicycle had been properly returned. Registered Member is encouraged to maintain all trip receipts. All annual memberships created on or after March 13, 2012 will be enrolled in the Auto-Renew feature by default unless the Auto-Renew Membership box is deselected on the Join form during membership purchase. Registered Members whom have been enrolled into auto-renew may discontinue their membership from auto-renewing by deselecting the Auto-Renew Membership box found on the Profile page within the Member Area of the Website. Registered Members whom wish to be enrolled into auto-renew may do so by selecting the Auto-Renew Membership box found on the Profile page within the Member Area of the Website.  
+	</p>
+	<p>
+		<strong>Section 6 <u>Casual Membership Rates and Benefits</u>.</strong>
+f Member does not elect to purchase an Annual, 30-Day Membership, or Daily Key membership and merely uses the Service for any time between 24-Hours and 3-Days, then Member is a Casual Member. A Casual Member must pay a $7 flat fee for a 24-Hour Membership or $15 flat fee for a 3-Day Membership, plus additional hourly charges pursuant to the rates set forth in Section 7. Casual Members have the option of renting a second bike using the same credit card.  When a Casual Member signs up to the Service at the Station, Alta will charge $101 to ensure the credit card is valid  and that amount could remain on the Casual Member's credit card for an amount of time to be determined by the Member's bank's policies regarding holds. This hold will be placed on Casual Member's credit card for each bike rented. In this Agreement, "Member" also includes anyone who is a Casual Member. 
+	</p>
+	<p>
+		<strong>Section 7 <u>Hourly Rates</u>.</strong>
+In addition to the Registered and Casual Membership rates outlined in Sections 4 to 6, all Members are subject to hourly rates. The hourly rates are set forth in the chart below. So long as Member returns the Capital Bikeshare bicycle to a Bike Dock within 30 minutes, no hourly charge applies. Member may remove another Capital Bikeshare bicycle from a Bike Dock after returning the previous Capital Bikeshare bicycle after a 15 second wait. 
+	</p>
+	<table border="0" cellpadding="0">
+		<thead>
+			<tr>
+				<td>
+					<p align="center">
+						<strong>Ride Time</strong>
+					</p>
+				</td>
+				<td>
+					<p align="center">
+						<strong>30-day, Annual, Annual Installment, Daily Key Members</strong>
+					</p>
+				</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>
+					<p>
+						0-29:59 min
+					</p>
+				</td>
+				<td>
+					<p>
+						FREE
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>
+						30:00-59:59 min
+					</p>
+				</td>
+				<td>
+					<p>
+						$1.50
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>
+						60:00-89:59 min
+					</p>
+				</td>
+				<td>
+					<p>
+						$4.50
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>
+						90:00-119:59 min
+					</p>
+				</td>
+				<td>
+					<p>
+						$10.50
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>
+						2:00:00 - 2:29:59 hours
+					</p>
+				</td>
+				<td>
+					<p>
+						$16.50
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>
+						2:30:00 - 2:59:59 hours
+					</p>
+				</td>
+				<td>
+					<p>
+						$22.50
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>
+						3:00:00 - 3:29:59 hours
+					</p>
+				</td>
+				<td>
+					<p>
+						$28.50
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>
+						3:30:00 - 3:59:59 hours
+					</p>
+				</td>
+				<td>
+					<p>
+						$34.50
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>
+						4:00:00 - 4:29:59 hours
+					</p>
+				</td>
+				<td>
+					<p>
+						$40.50
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>
+						4:30:00 - 4:59:59 hours
+					</p>
+				</td>
+				<td>
+					<p>
+						$46.50
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>
+						5:00:00 - 5:29:59 hours
+					</p>
+				</td>
+				<td>
+					<p>
+						$52.50
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>
+						5:30:00 - 5:59:59 hours
+					</p>
+				</td>
+				<td>
+					<p>
+						$58.50
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>
+						6:00:00 - 6:29:59 hours
+					</p>
+				</td>
+				<td>
+					<p>
+						$64.50
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>
+						6:30:00 - 23:59:59 hours
+					</p>
+				</td>
+				<td>
+					<p>
+						$70.50
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>
+						&gt; 24:00:00 hours
+					</p>
+				</td>
+				<td>
+					<p>
+						$1,000.00
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+				</td>
+				<td>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<table border="0" cellpadding="0">
+		<thead>
+			<tr>
+				<td>
+					<p align="center">
+						<strong>Ride Time</strong>
+					</p>
+				</td>
+				<td>
+					<p align="center">
+						<strong>24-hour and 3-day Members</strong>
+					</p>
+				</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>
+					<p>
+						0-29:59 min
+					</p>
+				</td>
+				<td>
+					<p>
+						FREE
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>
+						30:00-59:59 min
+					</p>
+				</td>
+				<td>
+					<p>
+						$2.00
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>
+						60:00-89:59 min
+					</p>
+				</td>
+				<td>
+					<p>
+						$6.00
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>
+						90:00-119:59 min
+					</p>
+				</td>
+				<td>
+					<p>
+						$14.00
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>
+						2:00:00 - 2:29:59 hours
+					</p>
+				</td>
+				<td>
+					<p>
+						$22.00
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>
+						2:30:00 - 2:59:59 hours
+					</p>
+				</td>
+				<td>
+					<p>
+						$30.00
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>
+						3:00:00 - 3:29:59 hours
+					</p>
+				</td>
+				<td>
+					<p>
+						$38.00
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>
+						3:30:00 - 3:59:59 hours
+					</p>
+				</td>
+				<td>
+					<p>
+						$46.00
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>
+						4:00:00 - 4:29:59 hours
+					</p>
+				</td>
+				<td>
+					<p>
+						$54.00
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>
+						4:30:00 - 4:59:59 hours
+					</p>
+				</td>
+				<td>
+					<p>
+						$62.00
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>
+						5:00:00 - 5:29:59 hours
+					</p>
+				</td>
+				<td>
+					<p>
+						$70.00
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>
+						5:30:00 - 5:59:59 hours
+					</p>
+				</td>
+				<td>
+					<p>
+						$78.00
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>
+						6:00:00 - 6:29:59 hours
+					</p>
+				</td>
+				<td>
+					<p>
+						$86.00
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>
+						6:30:00 - 23:59:59 hours
+					</p>
+				</td>
+				<td>
+					<p>
+						$94.00
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>
+						&gt; 24:00:00 hours
+					</p>
+				</td>
+				<td>
+					<p>
+						$1,000.00
+					</p>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<p>
+		<strong>Section 8 <u>Availability of Service</u>.</strong>
+Alta makes every effort to provide the Service for 365 days per year, but does not guarantee that the Service will be available at all times, as force majeure events or other circumstances might prevent Alta from providing the Service. Access to the Service also is conditioned on the availability of Capital Bikeshare bicycles at each Station. Alta does not represent or warrant the availability of any Service or the availability of any Capital Bikeshare bicycle at any Station. Member may use the Website to consult the inventory of Capital Bikeshare bicycles available at a Station. 
+	</p>
+	<p>
+		<strong>Section 9 <u>Directions for Using Service</u>.</strong>
+	</p>
+	<p>
+		<strong>Section 9.1 <u>Removing Bicycle</u>. </strong>
+	</p>
+	<p>
+		<strong>Section 9.1(a) <u>Removing Bicycle by Registered Member</u>.</strong>
+Registered Member must insert their system key into the reader slot on the Bike Dock keyboard, to remove the Capital Bikeshare bicycle from the Bike Dock. After the system key has been inserted into the reader slot, Registered Member has 15 seconds to remove the Capital Bikeshare bicycle from the Bike Dock. The signal light remains yellow during the validation of Registered Member's system key, and the signal light turns green when the Capital Bikeshare bicycle can be removed. Two sounds signals are also emitted. If the Capital Bikeshare bicycle is not removed within 15 seconds, the Bike Dock locks and Registered Member must repeat the process described above. 
+	</p>
+	<p>
+		<strong>Section 9.1(b) <u>Removing Bicycle by Casual Member</u>.</strong>
+A Casual Member must insert a credit card into the Pay Station, agree to Alta’s Terms and Conditions, and obtain a 5-digit code after completing the payment process. The Casual Member must then type the 5-digit code into the Bike Dock keyboard, to remove the Capital Bikeshare bicycle from the Bike Dock. After the 5-digit code has been entered, the Casual Member has 15 seconds to remove the Capital Bikeshare bicycle from the Bike Dock. The signal light remains yellow during the validation of the Casual Member's 5-digit code, and the signal light turns green when the Capital Bikeshare bicycle can be removed. Two sounds signals are also emitted. If the Capital Bikeshare bicycle is not removed within 15 seconds, the Bike Dock locks and the Casual Member must repeat the process described above. Each time a Casual Member would like to remove a new Capital Bikeshare bicycle from a Bike Dock, Casual Member must insert a credit card into the Pay Station and obtain a new 5-digit code, to remove the next Capital Bikeshare bicycle. A Casual Member may remove up to two Capital Bikeshare bicycles on each credit card account, and Casual Member will be charged for the use of two Capital Bikeshare bicycles.  The Casual Member using the second bicycle must agree to all Terms and Conditions before a code is issued. 
+	</p>
+	<p>
+		<strong>Section 9.2 <u>Returning Bicycle</u>.</strong>
+To return the Capital Bikeshare bicycle, Member must secure it into an available Bike Dock. A sound signal is emitted, and the signal light turns yellow, then green, confirming that the Capital Bikeshare bicycle has been properly secured to the Bike Dock. If the Capital Bikeshare bicycle is not properly secured in the Bike Dock, then the signal light turns red, and a longer signal sound is emitted. If the signal light turns red, Member must repeat the operation until the signal light turns green, and the Capital Bikeshare bicycle is properly secured in the Bike Dock. If the signal light does not turn green, Member must return the Capital Bikeshare bicycle to another available Bike Dock. If there is no available Bike Dock at the Station, then Members must push the "Time Credit" icon on the Pay Station screen under the "More Options" menu. Registered Members must input the 7-digit code on the back of the system key or insert their key into the reader slot on the Pay Station and Casual Members must swipe their credit card at the Pay Station, to obtain an additional 15-minute credit in which to return the Capital Bikeshare bicycle to another Station. No fee is charged to Member for the additional 15-minute credit. Member may immediately remove another Capital Bikeshare bicycle from a Bike Dock. Any Capital Bikeshare bicycle that is not properly secured remains the sole responsibility of Member, and the hourly rates set forth in Section 7 will be charged until the Capital Bikeshare bicycle is properly secured. 
+	</p>
+	<p>
+		<strong>Section 9.3 <u>Obtaining Receipt</u>.</strong>
+Member may print a receipt to confirm that the Capital Bikeshare bicycle has been properly returned to the Bike Dock. The date and time of return are indicated on the receipt, and the receipt may be used to dispute a chargeable trip. To obtain a receipt, Member must push the "Rental Receipt" icon on the Pay Station screen under the "More Options" menu. Registered Members must input the 7-digit code on the back of the system key or insert their system key into the reader slot on the Pay Station and Casual Members must swipe their credit card at the Pay Station. 
+	</p>
+	<p>
+		<strong>Section 9.4 <u>Permitted Period of Continuous Use; Lost or Stolen Bicycle</u>.</strong>
+Use of the Service is limited to a period of 24 consecutive hours ("<u>Permitted Period of Continuous Use</u>"). If Member maintains possession of the Capital Bikeshare bicycle beyond the Permitted Period of Continuous Use, then the Capital Bikeshare bicycle is deemed lost or stolen, Member's credit card will be charged a fee of $1,000, and a police report may be filed with local authorities. Alta will attempt to contact the Member via telephone and/or email prior to charging the credit card, using the contact information provided by the Member upon subscribing, in an attempt to locate the Capital Bikeshare bicycle. The data generated by the Service's computer is conclusive evidence of the period of use of a Capital Bikeshare bicycle by Member. For any disappearance of a Capital Bikeshare bicycle where Member will be held responsible, Member must report the disappearance to Alta within 24 hours following the disappearance and must report the disappearance to the local police department within 48 hours. Any use that exceeds the Permitted Period of Continuous Use is deemed a disappearance of the Capital Bikeshare bicycle, until the Capital Bikeshare bicycle is found or returned to a Bike Dock. 
+	</p>
+	<p>
+		<strong>Section 9.5 <u>Lost or Damaged System Key</u>.</strong>
+If Member's system key has been lost or damaged, a replacement may be purchased by calling 877-430-BIKE (2453) or by emailing<a href="mailto:customerservice@capitalbikeshare.com">customerservice@capitalbikeshare.com</a> and reporting that the system key has been lost or damaged. Members are required to report stolen or lost keys immediately so the key may be deactivated.  The Member will be responsible for any theft charges or usage fees of any bike rented with a lost or stolen key that has not been reported to customer service. A replacement charge of $10 for the lost or damaged service key will be charged, and a replacement system key will be mailed to Member's mailing address of record. 
+	</p>
+	<p>
+		<strong>Section 10 <u>General Assumption of Risk by Member</u>.</strong>
+Member agrees that riding a Capital Bikeshare bicycle involves many obvious and not-so-obvious risks, dangers, and hazards, which may result in injury or death to Member or others, as well as damage to property, and that such risks, dangers, and hazards cannot always be predicted or avoided. Member agrees that such risks, dangers, and hazards are Member's sole responsibility. Member agrees that if Member's use of any Service causes injury or damage to another person or property, then Member may be liable for all resulting injuries, damages, and related costs. By choosing to ride a Capital Bikeshare bicycle, Member assumes all responsibility for all related risks, dangers, and hazards, and Member agrees that Alta is not responsible for any injury, damage, or cost caused by Member with respect to any person or property, including the Capital Bikeshare bicycle itself. Member is solely and fully responsible for the safe operation of the Capital Bikeshare bicycle at all times. Member may need to take additional safety measures or precautions not specifically addressed in this Agreement. 
+	</p>
+	<p>
+		<strong>Section 11 <u>Confidentiality of Personal and Financial Data and Usage Information. </u>.</strong>
+All personally identifiable information that is held by Alta and pertains to Members, including all names, addresses, phone numbers, email addresses, and credit card numbers, will be kept confidential by Alta; provided, however, that (i) if there is any accident where a Member is unable to communicate personal information to the appropriate authorities, then Alta may, in its sole discretion, provide the Member’s name, address, phone number, and other important information to such authorities, (ii) if Alta receives any subpoena from any court or other authority, then Alta will provide all requested information in accordance with applicable law, which may include Member names, rental dates, rental locations, and rental durations (including starting rental times and ending rental times), and (iii) Alta may disclose aggregate and other data about Members to its clients including rental dates, rental locations, rental durations (including starting rental times and ending rental times), and latitude and longitude data for Member addresses (which would not allow any individual's address to be separately identified) and (iv) Alta may disclose any or all email addresses of any or all Members to solely to any state or local government or governmental agency that participates in or is otherwise involved in the Capital Bikeshare program, upon any of their request. 
+	</p>
+	<p>
+		<strong>Section 12 <u>Prohibited Acts</u>. </strong>
+	</p>
+	<p>
+		a. Member must not ride a Capital Bikeshare bicycle while carrying any briefcase, backpack, bag, or other item else, if it impedes Member's ability to
+		operate a Capital Bikeshare bicycle safely.
+	</p>
+	<p>
+		b. Member must not use any cellular telephone, text messaging device, portable music player, or other device that may distract Member from safely
+		operating a Capital Bikeshare bicycle; <u>provided</u>, <u>however</u>, that Member may use a cellular telephone only while employing an activated
+		hands-free device that does not hinder Member 's ability to safely ride a Capital Bikeshare bicycle.
+	</p>
+	<p>
+		c. Member must not operate a Capital Bikeshare bicycle while under the influence of any alcohol, drugs, or other substance that may impair Member's
+		ability to safely operate a Capital Bikeshare bicycle.
+	</p>
+	<p>
+		d. Member must not carry a second person on a Capital Bikeshare bicycle.
+	</p>
+	<p>
+		e. Member must not dock or lock any bicycle in any Station other than Capital Bikeshare bicycles.
+	</p>
+	<p>
+		f. Member must not use any locking mechanism, other than the locking mechanism provided by Alta at the Bike Dock, to lock a Capital Bikeshare bicycle
+		to a Bike Dock.
+	</p>
+	<p>
+		g. Member must not violate any applicable federal, state, or local law, including those for bicycle riders.
+	</p>
+	<p>
+		h. Member must not dismantle or modify a Capital Bikeshare bicycle in any way. This rule does not apply to the use of the seat height adjustment
+		feature on Capital Bikeshare bicycles.
+	</p>
+	<p>
+		i. Member must not exceed the maximum weight limit for the Capital Bikeshare bicycle (260 pounds) or the cargo carrier (17 pounds).
+	</p>
+	<p>
+		j. Member must not operate a Capital Bikeshare bicycle in extreme weather conditions, including snow, hail, and electrical storms, which make it more
+		dangerous to operate a Capital Bikeshare bicycle. Member is advised to adjust Member's riding behavior and braking distance to suit the weather
+		conditions.
+	</p>
+	<p>
+		k. Member must not allow others to use a Capital Bikeshare bicycle that Member has removed from a Bike Dock. Member understands that when Member
+		removes from a Capital Bikeshare bicycle from a Bike Dock, it is to be used only by Member. Member must not transfer Member's system key, 7-digit code
+		on the system key, 5-digit code at the Pay Station or any other Account information to any other person.
+	</p>
+	<p>
+		<strong>Section 13 <u>Additional Membe</u></strong>
+		r<strong><u> Obligations</u>.</strong>
+	</p>
+	<p>
+		a. Member agrees that Member is a competent bicycle operator, is sufficiently fit to safely operate a Capital Bikeshare bicycle, and has received
+		medical clearances for such physical activity. Like any physical activity, riding a Capital Bikeshare bicycle may cause minor or major injuries or
+		discomfort and may worsen or complicate underlying medical conditions or diseases. By choosing to ride a Capital Bikeshare bicycle, Member assumes all
+		responsibility for all such injuries or other medical conditions.
+	</p>
+	<p>
+		b. Member agrees that bicycles are machines that may malfunction, even if the bicycle is properly maintained, and that such malfunction may cause
+		injury. Member agrees that before using a Capital Bikeshare bicycle, Member must conduct a safety inspection of the Capital Bikeshare bicycle, which
+		includes inspecting the following: (i) proper tire pressure; (ii) trueness of the wheels; (iii) safe operation of all brakes and lights; (iv) proper
+		attachment of the seat, pedals, and basket; (v) good condition of the frame; and (vi) any sign of damage, unusual or excessive wear, or other
+		mechanical problem or maintenance need. Member agrees not to ride the Capital Bikeshare bicycle if Member notices any mechanical or other problem or
+		safety issue, and Member agrees to promptly notify Alta of all problems and issues and to use a different Capital Bikeshare bicycle. Member agrees to
+		press the "Faulty Bike" button within 1 minute of docking a Capital Bikeshare bicycle that Member notices has any mechanical or other problem or safety
+		issue.
+	</p>
+	<p>
+		c. Member agrees that Alta does not provide or maintain places where to ride Capital Bikeshare bicycles, and that Alta does not guarantee that there
+		will always be a safe place to ride a Capital Bikeshare bicycle. Roads, bicycle lanes, and bicycle routes may become dangerous due to weather, traffic,
+		or other hazards. Member must not use a Capital Bikeshare bicycle for racing, riding off road, or any other use, besides safe operation on public or
+		private roads or property and designated bicycle routes.
+	</p>
+	<p>
+		d. Member agrees that Alta is not a common carrier. Alternative means of public and private transportation are available to the general public and to
+		Member individually, including public buses and light rail service, taxis, and pedestrian paths. Alta provides Capital Bikeshare bicycles only as a
+		convenience, and such rental availability is intended by Alta to be used only by those persons who are able and qualified to operate a Capital
+		Bikeshare bicycle on their own and who have agreed to all terms and conditions of this Agreement.
+	</p>
+	<p>
+		e. Member must return the Capital Bikeshare bicycle to a Station and must insert the Capital Bikeshare bicycle into a Bike Dock, within 24 hours from
+		the time the Capital Bikeshare bicycle was originally removed from a Bike Dock. Member agrees that if the Capital Bikeshare bicycle is not returned to
+		a Station and inserted into a Bike Dock within 24 hours, then the Capital Bikeshare bicycle is deemed missing or stolen, and Member does hereby
+		authorize Alta to charge Member's credit card a $1,000 fee.
+	</p>
+	<p>
+		f. Member agrees that Alta may require Member to return a Capital Bikeshare bicycle at any time.
+	</p>
+	<p>
+		g. Member agrees that access to the Service is denied to any person less than 16 years of age, whether or not accompanied by a parent or guardian.
+		Minors who are at least 16 years of age may use the Service, but only if the Service is subscribed for by or under the responsibility of the minor's
+		parent or guardian; and, the parent or guardian is fully liable for all injuries, damages, and costs caused by the minor's use of the Service.
+	</p>
+	<p>
+		h. Member must report all accidents and injuries involving a Capital Bikeshare bicycle to the local authorities and to Capital Bikeshare's Customer
+		Service at 1-877-430-BIKE (2453) as soon as possible, but in no event later than 24 hours after the occurrence of the accident or injury.
+	</p>
+	<p>
+		i. Member agrees if Member is unable to report identifying information due to a medical emergency, Alta may, at its discretion, provide personal and
+		contact information to the authorities upon their request.
+	</p>
+	<p>
+		<strong>Section 14 <u>Additional Fees</u>.</strong>
+If the Capital Bikeshare bicycle is not returned to a Bike Dock within the Permitted Period of Continuous Use, then Member will be charged a fee of $1,000. Such fees may be charged as soon as 24 hours after the Capital Bikeshare bicycle is not returned or is returned in a damaged state. Alta will attempt to contact the Member via telephone and email before charging the Member's credit card, by using the contact information provided by the Member when subscribing to the Service.
+If the member is unable to return a Capital Bikeshare bicycle to a Bike Dock, and requests the bike be picked up by Alta staff, Alta, at its sole discretion, may choose to charge the member a $30 pick-up fee.  All usage fees accrued during the time the bicycle is not docked will be the responsibility of the member.  If the bicycle is abandoned by the member without contacting the customer service center, the member will be responsible for all usage fees until the bike is recovered and redocked, plus a $30 service charge to recover the bike.
+Rider agrees to pay for any damage to a Capital Bikeshare bicycle attributable to the Member, including replacement parts and repair charges, even if the damage was caused by a third party.  All repairs needed as a result of any destruction or damage, will be charged to Rider at the normal, customary labor rates.  Such fees may be charged as soon as 24 hours after the Capital Bikeshare bicycle is returned in a damaged state. Alta will attempt to contact the Member via telephone and email before charging the Member's credit card, by using the contact information provided by the Member when subscribing to the Service. 
+	</p>
+	<p>
+		<strong>Section 15 <u>Helmets</u>.</strong>
+Wearing a Snell, CPSC, ANSI, or ASTM approved helmet, properly sized, fitted, and fastened, while cycling may protect against an injury, or may lessen the severity of an injury, caused by an impact to the head; however, bicycle helmets are not 100% effective, do not protect against all head injuries, and do not protect against other injuries. Although some state and local laws do not require bicycle riders to wear helmets, Alta recommends that all riders wear a Snell, CPSC, ANSI, or ASTM approved helmet that has been properly sized, fitted, and fastened, according to the manufacturer's instructions. Alta does not represent or warrant the quality or safety characteristics of any helmet, and Member agrees that Alta must not be held liable for any injury suffered by Member while using the Service, whether or not Member is wearing a helmet at the time of injury. 
+	</p>
+	<p>
+		<strong>Section 16 <u>Credit Card Matters</u>. </strong>
+You must input a valid credit card number and expiration date before You will be allowed to use the Service, and You do hereby represent and warrant that You are authorized to use the credit card (Alta accepts only Visa or MasterCard). You do hereby authorize Alta to charge Your credit card for all expenses incurred on Your Account, including all additional fees and repair charges. If you dispute any charge on Your Account, then you must contact Alta within 10 days of Your receipt of Your statement containing the disputed charge. Members have an on-going duty to update all changes relating to their credit card. A $101 charge will be put on the  Casual Member's credit card when a Casual Member signs up for the service at the Pay Station in order to validate the card Alta uses www.authorize.net ("Processor") as Our transaction payment processor. The transmission of data to Processor and the approval of a credit card should take less than 10 seconds; however, a credit card might not allow for an overcharge/overdraft, which means that a Member's transaction request could be denied. All denials of a transaction by a Member's bank, all holds, and all other similar issues are the Member's sole responsibility and should be dealt with between the Member and his or her bank. Alta takes reasonable steps to ensure that all data transmitted by Alta is done safely and privately; however, despite those steps, Alta cannot guarantee the complete security of all credit card and other data transmitted by Alta or Processor. Please review the DISCLAIMERS and LIMITED LIABILITY sections set forth below, which are applicable to Member's use of the Service, including the transmission of credit card and other data. 
+	</p>
+	<p>
+		<strong>Section 17 <u>Termination</u>.</strong>
+Member may terminate Member 's use of the Service at any time, and Member may cancel Member's Membership at any time; <u>provided</u>, <u>however</u>, that (i) no refund will be provided by Alta, (ii) the term of this Agreement continues in accordance with Section 2 of this Agreement, (iii) the hold may remain on Member's credit card account for up to 10 days, even if Member terminates Member 's use of the Service, and (iv) Member may still be charged any applicable additional fees in accordance with Section 13 of this Agreement. 
+	</p>
+	<p>
+		<strong>Section 18 <u>Choice of Law; Dispute Resolution</u>.</strong>
+This Agreement is governed by, and must be construed and enforced in accordance with, the laws of the District of Columbia, excluding principles of conflicts of laws. For every dispute regarding this Agreement: (i) the prevailing party is entitled to its costs, expenses, and reasonable attorney fees (whether incurred at trial, on appeal, or otherwise) incurred in resolving or settling the dispute, in addition to all other damages or awards to which the party may be entitled; (ii) each party consents to the jurisdiction of the courts of District of Columbia and agrees that those courts have personal jurisdiction over each party; (iii) venue must be in District of Columbia; and (iv) the parties must submit the dispute to mandatory mediation held in District of Columbia. Every mediation must be completed within 4 months of the date when the initial notice demanding mediation was provided by any party. If, for any reason, the dispute is not resolved through mediation within the 4-month period, then the parties may continue seeking to resolve the dispute by use of any process, including litigation by trial. 
+	</p>
+	<p>
+		<strong>Section 19 <u>Waiver</u>.</strong>
+No waiver of any breach of any provision of this Agreement is a waiver of any other breach or of any other provision of this Agreement. The terms of this Agreement may be waived or amended only in writing and only by the party that is entitled to the benefits of the term being waived or amended
+	</p>
+	<p>
+		<strong>Section 20 <u>Cumulative Remedies</u>. </strong>
+All rights and remedies granted under or referred to in this Agreement are cumulative and nonexclusive, and resort to one does not preclude resort to another or to any other right or remedy provided by law. 
+	</p>
+	<p>
+		<strong>Section 21 <u>Final Agreement</u>.</strong>
+This Agreement contains the complete, final, and exclusive integrated agreement between the parties with respect to its subject matter. This Agreement supersedes all other prior agreements, written or oral, relating to such subject matter. At any time and from time to time, and without Member's consent, Alta may unilaterally amend, modify, or change this Agreement, in its sole discretion and without any notice or cause. By continuing to use any Service after any amendment, modification, or change, Member has agreed to be bound by all such amendments, modifications, and changes. Member must carefully review this Agreement on a regular basis to maintain awareness of all amendments, modifications, and changes. 
+	</p>
+	<p>
+		<strong>Section 22 <u>Representations</u>.</strong>
+Each party ("Promising Party") represents and warrants to the other party that: (i) the Promising Party has the legal power and authority to enter into this Agreement and to undertake and perform all of its duties and obligations hereunder; (ii) there is no contract or other legal obligation that prevents the Promising Party from entering into this Agreement or from undertaking or performing all of its duties 
+	</p>
+	<p>
+		<strong>Section 23 <u>Contract Interpretation</u>. </strong>
+The headings in this Agreement do not affect the interpretation of this Agreement. "Or" is not be exclusive in its meaning. "Including" means "including, but not limited to." "Herein," "hereunder," and other similar terms refer to this Agreement as a whole and are not limited to the specific section on paragraph where they appear. Plural terms refer to all members of the relevant class, and singular terms refer to one or more members of the relevant class. All pronouns include the masculine, feminine, and neuter pronoun forms. All schedules and exhibits referred to herein are hereby incorporated by reference. 
+	</p>
+	<p>
+		<strong>Section 24 <u>Notices</u>.</strong>
+		You may contact Alta by writing, calling, or emailing Alta at the street address, telephone number, and email address listed below:
+	</p>
+	<p>
+		Alta Bicycle Share, Inc.
+	</p>
+	<p>
+		711 SE Grand Ave.
+	</p>
+	<p>
+		Portland, OR 97214
+	</p>
+	<p>
+		Customer Service: 877-430-BIKE (2453)
+	</p>
+	<p>
+		customerservice@capitalbikeshare.com
+	</p>
+	<p>
+		<strong>Section 25 <u>Releases</u>.</strong>
+		"<u>Claims</u>" means, collectively, any and all claims, injuries, demands, liabilities, disputes, causes of action (including statutory, contract,
+		negligence, or other tort theories), proceedings, obligations, debts, liens, fines, charges, penalties, contracts, promises, costs, expenses (including
+		attorneys' fees, whether incurred at trial, on appeal, or otherwise), damages (including consequential, compensatory, or punitive damages), or losses
+		(whether known, unknown, asserted, unasserted, fixed, conditional, or contingent) that arise from or relate to any Service, Capital Bikeshare bicycle,
+		Station, Bike Dock, or related information, including Member's use of any of the foregoing. In exchange for being allowed to use any Service, Capital
+		Bikeshare bicycle, Station, Bike Dock, or related information, Member (acting for Member and for all of Member 's agents, affiliates, representatives,
+		successors, heirs, and assigns) does hereby (i) fully and forever release and discharge Alta and all of its owners, officers, directors, affiliates,
+		employees, agents, representatives, successors, and assigns (collectively, "<u>Alta and its Related Parties</u>") from all Claims that Member has or
+		may have against Alta and its Related Parties, except for Claims caused by Alta's gross negligence or willful misconduct, and (ii) Member agrees to
+		indemnify and hold harmless Alta and its Related Parties from and against all Claims, except for Claims caused by Alta's gross negligence or willful
+		misconduct. Such releases are intended to be general and complete releases of all Claims. Alta and its Related Parties may plead such releases as a
+		complete and sufficient defense to any Claim, as intended 3<sup>rd</sup> beneficiaries of such releases.
+	</p>
+	<p>
+		<strong>Section 26 <u>DISCLAIMERS</u>.</strong>
+		YOU DO HEREBY ACKNOWLEDGE AND AGREE THAT YOUR USE OF ANY SERVICE, BICYCLE, STATION, BIKE DOCK, OR RELATED INFORMATION IS AT YOUR SOLE RISK. TO THE
+		FULLEST EXTENT PERMITTED BY LAW, ALTA AND ITS RELATED PARTIES DISCLAIM ALL EXPRESS AND IMPLIED WARRANTIES, INCLUDING WARRANTIES OF MERCHANTABILITY,
+		FITNESS FOR A PARTICULAR PURPOSE, TITLE, COMPATIBILITY, SECURITY, ACCURACY, NONINFRINGEMENT, AND USEFULNESS, WITH RESPECT TO ANY SERVICE, BICYCLE,
+		STATION, BIKE DOCK, OR RELATED INFORMATION, WHICH ARE ALL PROVIDED "<u>AS IS</u>" AND "<u>AS AVAILABLE</u>" (AND YOU RELY ON THEM SOLELY AT YOUR OWN
+		RISK). WE DO NOT REPRESENT OR WARRANT THAT ANY SERVICE, BICYCLE, STATION, BIKE DOCK, OR RELATED INFORMATION WILL BE IN GOOD REPAIR OR ERROR-FREE, AND
+		DELAYS, OMISSIONS, INTERRUPTIONS, OR INACCURACIES COULD EXIST IN ANY SERVICE, BICYCLE, STATION, BIKE DOCK, OR INFORMATION. YOU ASSUME FULL
+		RESPONSIBILITY AND RISK OF LOSS FOR USING ANY SERVICE, BICYCLE, STATION, BIKE DOCK, OR RELATED INFORMATION, AND WE ARE NOT LIABLE FOR ANY CLAIM
+		ATTRIBUTABLE TO ANY OF THE FOREGOING.
+	</p>
+	<p>
+		<strong>Section 27 <u>LIMITED LIABILITY</u>.</strong>
+		YOU DO HEREBY ACKNOWLEDGE AND AGREE THAT ALTA AND ITS RELATED PARTIES ARE NOT RESPONSIBLE OR LIABLE FOR ANY CLAIM, INCLUDING THOSE THAT ARISE OUT OF OR
+		RELATE TO (A) ANY RISK, DANGER, OR HAZARD DESCRIBED IN THIS AGREEMENT, (B) YOUR USE OF, OR INABILITY TO USE, ANY SERVICE, BICYCLE, STATION, BIKE DOCK,
+		OR RELATED INFORMATION, (C) YOUR BREACH OF THIS AGREEMENT OR YOUR VIOLATION OF ANY LAW, (D) ANY NEGLIGENCE, MISCONDUCT, OR OTHER ACTION OR INACTION BY
+		YOU, (E) YOUR FAILURE TO WEAR A BICYCLE HELMET WHILE USING A CAPITAL BIKESHARE BICYCLE, OR (F) ANY NEGLIGENCE, MISCONDUCT, OR OTHER ACTION OR INACTION
+		OF ANY THIRD PARTY. YOU DO HEREBY WAIVE ALL CLAIMS WITH RESPECT TO ANY OF THE FOREGOING, INCLUDING THOSE BASED IN CONTRACT, TORT (INCLUDING
+		NEGLIGENCE), STATUTORY, OR OTHER GROUNDS, EVEN IF WE HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH CLAIMS. OUR TOTAL LIABILITY FOR ALL CLAIMS, INCLUDING
+		THOSE BASED IN CONTRACT, TORT (INCLUDING NEGLIGENCE), STATUTORY, OR OTHER GROUNDS, IS LIMITED TO THE SUM OF $100. SOME JURISDICTIONS DO NOT ALLOW FOR
+		LIMITED LIABILITY OR EXCLUSION OF IMPLIED WARRANTIES; AND, IF ANY OF THOSE LAWS APPLY TO YOU, THEN SOME OR ALL OF THE ABOVE DISCLAIMERS, EXCLUSIONS, OR
+		LIMITATIONS MIGHT NOT APPLY TO YOU, AND YOU MIGHT HAVE ADDITIONAL RIGHTS.
+	</p>
+</article>				</div>
+				
+				<p><a href="https://www.capitalbikeshare.com/user-agreement" target="_blank" class="thin button">Click here to view the Rental Agreement in a separate window</a></p>
+				
+			    <p><strong>Check ONE field below:</strong></p>
+				<p>
+					<span class="require">*</span><input type="radio" value="18" name="age" title="over18" class="mandatory">&nbsp;
+					<label for="age">I certify that I am the Member, I am 18 years old or over, and I have read and agree to the conditions set forth in User Agreement.</label>
+				</p>
+				<p>OR</p>
+				<p>
+					<span class="require">*</span><input type="radio" value="legal_guardian" name="age" title="legal_guardian" class="mandatory">&nbsp;
+					<label for="age">I certify that I am the Parent and/or Legal Guardian of the Member, who is at least 16 years old, and I am 18 years old or over. I have read, and I agree to, the conditions set forth in the User Agreement on behalf of the Member.</label>
+				</p>
+		
+		    </fieldset>		    		   
+		    
+		    <fieldset>
+<legend>Safety</legend>
+		    
+				<span class="require">*</span>	
+				<input type="checkbox" name="read_safety_page" value="true" id="read_safety_page" title="read_safety_page" style="display: inline; padding-right: 5px;"  />				<label for="read_safety_page">
+					I have read the contents of the <a href="/safety" target="_blank">Safety</a> page on this Website, and agree to abide by the safety guidelines described on the Safety page, and in the User Agreement.
+				</label>
+			
+			</fieldset>		
+			<p class="mandatory center"><span class="require">*</span>Mandatory fields</p>	
+			
+			<!-- Echo the Form Button with CI's function -->
+			<button name="valid" type="submit" class="submit" value="Join" id="subscribe_submit" >JOIN</button>	  
+			
+		</form>
+	</div>
+
+</div>
+
+    <!-- Footer -->
+    <footer id="footer">
+    	<div class="inner-shadow">
+        	<div class="content">          
+                
+               <section id="sponsors">
+               		<!--__FUEL_MARKER__5--><a href="http://ddot.dc.gov/DC/DDOT/On+Your+Street/Bicycles+and+Pedestrians/View+All/Bicycle+Sharing" target="_blank">
+<img src="/assets/images/logo_ddot.png" alt="District Department of Transportation logo" />
+</a>
+		
+<a href="http://www.arlingtonva.us" target="_blank">
+<img src="/assets/images/logo_arlington.png" alt="Arlington Virginia logo" />
+</a>
+
+<a href="http://www.alexandriava.gov/" target="_blank">
+<img src="/assets/images/logo-alexandria.png" alt="Alexandria Virginia logo" />
+</a>
+
+<a href="http://www.montgomerycountymd.gov/" target="_blank">
+<img src="/assets/images/logo_montgomery_co.png" alt="Montgomery County logo" />
+</a>
+		
+<a href="http://www.altabicycleshare.com" target="_blank">
+<img src="/assets/images/logo-alta.png" alt="Alta Bicycle Share logo" />
+</a>				</section>
+				
+				<nav id="main-footer">
+					
+<ul>
+	<li class="first"><a href="https://www.capitalbikeshare.com/home" title="Home">Home</a></li>
+	<li><a href="https://www.capitalbikeshare.com/how-it-works" title="How It Works">How It Works</a></li>
+	<li><a href="https://www.capitalbikeshare.com/stations" title="Station Map">Station Map</a></li>
+	<li><a href="https://www.capitalbikeshare.com/pricing" title="Pricing">Pricing</a></li>
+	<li><a href="https://www.capitalbikeshare.com/explore-by-bike" title="Explore By Bike">Explore By Bike</a></li>
+	<li><a href="https://www.capitalbikeshare.com/safety" title="Safety">Safety</a></li>
+	<li><a href="https://www.capitalbikeshare.com/partners" title="Partners">Partners</a></li>
+	<li><a href="https://www.capitalbikeshare.com/news" title="News">News</a></li>
+	<li class="last"><a href="https://www.capitalbikeshare.com/system-data" title="System Data">System Data</a></li>
+</ul>
+					
+					
+<ul>
+	<li class="first"><a href="https://www.capitalbikeshare.com/login" title="Member Login">Member Login</a></li>
+	<li><a href="https://www.capitalbikeshare.com/accessibility" title="ADA">ADA</a></li>
+	<li><a href="https://www.capitalbikeshare.com/faq" title="FAQ">FAQ</a></li>
+	<li><a href="https://www.capitalbikeshare.com/about" title="About Capital Bikeshare">About Capital Bikeshare</a></li>
+	<li><a href="https://www.capitalbikeshare.com/privacy" title="Privacy">Privacy</a></li>
+	<li class="last"><a href="https://www.capitalbikeshare.com/contact" title="Contact">Contact</a></li>
+</ul>
+				</nav>
+								
+				<section id="copyright">					
+					<p>&copy; Copyright 2010 - 2014. All rights reserved.</p>
+					<!--__FUEL_MARKER__6--><p>Use of this Web site constitutes acceptance of the Capital Bikeshare <a href="https://www.capitalbikeshare.com/terms-of-use">Website Terms of Use Agreement</a> and <a href="https://www.capitalbikeshare.com/privacy">Privacy Policy</a>.  These agreements may change from time to time.  If this occurs, a notification will be included here.</p>									
+				</div>
+				
+				<section id="translate">
+					<div id="MicrosoftTranslatorWidget" style="width: 360px; min-height: 57px; border-color: #5E544A; background-color: #9F9387;"><noscript><a href="http://www.microsofttranslator.com/bv.aspx?a=http%3a%2f%2fwww.capitalbikeshare.com%2f">Translate this page</a><br />Powered by <a href="http://www.bing.com/translator">Microsoft® Translator</a></noscript></div> <script type="text/javascript"> /* <![CDATA[ */ setTimeout(function() { var s = document.createElement("script"); s.type = "text/javascript"; s.charset = "UTF-8"; s.src = ((location && location.href && location.href.indexOf('https') == 0) ? "https://ssl.microsofttranslator.com" : "http://www.microsofttranslator.com" ) + "/ajax/v2/widget.aspx?mode=auto&from=en&layout=ts"; var p = document.getElementsByTagName('head')[0] || document.documentElement; p.insertBefore(s, p.firstChild); }, 0); /* ]]> */ </script> 
+				</section>
+                             
+            </div>
+        </div>
+    </footer>	
+
+<!-- here comes the javascript -->
+
+<!-- Grab Google CDN's jQuery. fall back to local if necessary -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+<script>window.jQuery || document.write("<script src='/assets/js/jquery.js'>\x3C/script>")</script>
+
+<!-- Grab Google CDN's jQuery UI. fall back to local if necessary -->
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.4/jquery-ui.min.js"></script>
+<script>window.jQuery || document.write("<script src='/assets/js/jquery-ui.min.js'>\x3C/script>")</script>
+
+<!-- this is where we put our custom functions -->
+
+<!-- jQuery Plugins that only load where appropriate -->
+
+<!-- Auto-Load any Javascript specific to a page by its URL only if it exists -->
+
+
+
+
+
+
+
+	<script src="/assets/js/verify-corporate-password.js?c=-62169966000" type="text/javascript" charset="utf-8"></script>
+		<script src="/assets/js/auto-renew-signup.js?c=-62169966000" type="text/javascript" charset="utf-8"></script>
+	
+
+
+<!-- Final custom JS Calls (keep this below all other javascript files) -->
+<script src="/assets/js/css_browser_selector.js?c=-62169966000" type="text/javascript" charset="utf-8"></script>
+	<script src="/assets/js/jquery.translate.js?c=-62169966000" type="text/javascript" charset="utf-8"></script>
+	<script src="/assets/js/jquery.cookie.js?c=-62169966000" type="text/javascript" charset="utf-8"></script>
+	<script src="/assets/js/main.js?c=-62169966000" type="text/javascript" charset="utf-8"></script>
+	
+
+<!-- Asynchronous google analytics; this is the official snippet.
+	 Replace UA-XXXXXX-XX with your site's ID and uncomment to enable. -->
+	 
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-17974252-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+  
+</script>
+
+</body>
+</html>

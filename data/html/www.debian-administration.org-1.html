@@ -1,0 +1,322 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Language" content="en" />
+  <meta name="description" content="Tips for a Debian GNU/Linux System Administrator." />
+<meta name="keywords"  content="Debian System Administration News, Debian Sysadmin, Linux Administration, Linux Sysadmin, Sysadmin" />
+<meta name="copyright" content="(c) 2004-2014 Debian Administration" />
+<meta name="author"  content="Debian Administration" />
+<meta name="robots" content="index,follow" />
+<meta name="resource-type" content="document" />
+<meta name="classification" content="Personal" />
+<meta name="language" content="en" />
+<link rel="icon" href="/favicon.ico"  />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="top"    title="home"    href="/"  />
+<link rel="stylesheet" type="text/css" href="/css/view.css" media="screen" title="Site Layout" />
+<link rel="search" title="Search" href="/about/search" />
+<link rel="alternate" title="Debian Administration RSS" href="/articles.rdf" type="application/rdf+xml" />
+<link rel="alternate" title="Atom" href="/atom.xml" type="application/atom+xml" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+
+  
+
+
+  <title>Register Account</title>
+
+  <!--[if lte IE 6]>
+   <style type='text/css'>
+    * html #main, * html #container {height:1%}
+   </style>
+  <![endif]-->
+  <!--[if !lt IE 6]><!-->
+  <link rel="stylesheet" type="text/css" href="/css/jquery.socialshareprivacy.min.css">
+<!-- jQuery: remotely, then locally -->
+    <link rel="stylesheet" type="text/css" href="/css/jquery.autocomplete.css" />
+    <script src="/js/jquery-1.9.0.min.js" type="text/javascript"></script>
+    <script src="/js/jquery.autocomplete.js" type="text/javascript"></script>
+    <script src="/js/jquery.autogrow.js"     type="text/javascript"></script>
+  <script type="text/javascript">
+/* <![CDATA[ */
+    (function() {
+        var s = document.createElement('script'), t = document.getElementsByTagName('script')[0];
+        s.type = 'text/javascript';
+        s.async = true;
+        s.src = '//api.flattr.com/js/0.6/load.js?mode=auto';
+        t.parentNode.insertBefore(s, t);
+    })();
+/* ]]> */
+  </script>
+  <script type="text/javascript" src="/js/jquery.sidebarToggler.102.js"></script>
+  <script type="text/javascript">
+<!--//--><![CDATA[//><!--
+$(function() {
+  $("#rightcol").toggleSidebar({animation: "queuedEffects",
+				initState:"shown",
+				event:"click",
+				triggerShow: "Menu"});
+});
+//--><!]]>
+   </script>
+<!--<![endif]-->
+
+
+<script type="text/javascript">
+
+      var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-37997217-1']);
+          _gaq.push(['_trackPageview']);
+
+            (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                          })();
+
+                      </script>
+ </head>
+ <body>
+   <div id="header">
+     <h1><a href="/">Debian Administration</a></h1>
+     <ul>
+       <li><a href="/about/Debian%20Administration">About</a></li>
+       <li><a href="/archive/">Archive</a></li>
+       <li><a href="/about/Contribute">Contribute</a></li>
+       <li><a href="/about/FAQ">FAQ</a></li>
+       <li><a href="/about/Search">Search</a></li>
+       <li><a href="/tag/">Tags</a></li>
+     </ul>
+   </div>
+    <div id="wrapper">
+      <div id="content">
+        <div id="container">
+            <div id="inner">
+                <div id="main">
+
+<h1>Create a new user account</h1>
+
+
+
+<p>To register an account please fill out the following details:</p>
+<form action="/create/user" method="post">
+  <input type="hidden" name="session" value="7041dc8ff52764d34a4e470e5e59e065" />
+  <input type="hidden" name="mode" value="new_user" />
+  <table>
+    <tr>
+      <td valign="top"><b>Username:</b></td>
+      <td><input name="new_user_name" type="text" size="25" maxlength="25" value=""/>
+	
+	
+	
+	
+	
+
+	
+      </td>
+    </tr>
+
+    <tr>
+      <td valign="top"><b>Email Address:</b></td>
+      <td><input name="new_user_email" type="text" size="50" maxlength="50" value=""/>
+	
+	
+    </td></tr>
+
+    <tr><td></td><td>
+        <p><input type="submit" name="submit" value="Create User" /> &nbsp;
+</form>
+</td></tr></table>
+<p>Your email address is needed to send you your password.  If you wish you can also receive email notification of new replies to any articles and comments you post.</p>
+<p>Please make sure it is a valid email address and you have entered it correctly, if you make a mistake you will create an account you cannot use - and you will have to choose another username.</p>
+<p>We do not and will not sell, trade, or otherwise disclose our users' email addresses to anyone, for any reason, ever.  Your email address will not be displayed publicly upon the website, unless you choose to add it yourself.</p>
+
+
+
+                </div>
+            </div>
+        </div>
+        <div id="rightcol" class="side">
+            <div class="slide">
+              
+
+
+
+
+<h4>Sign In</h4>
+<form id="user-login" action="/login" method="post">
+<input type="hidden" name="mode" value="login">
+<input type="hidden" name="target" value="/create/user/" />
+
+<p><b>Username</b>:<br/> <input id="name" name="lname" type="text" size="14" maxlength="25" /></p>
+<p><b>Password</b>:<br /> <input id="pass" name="lpass" type="password" size="15" maxlength="25" /></p>
+<p><input type="submit" name="submit" value="Login" /> </p>
+<p>[<a href="/create/user/">Register</a>|<a href="/login">Advanced</a>]</p>
+
+ 
+
+            </form>
+
+
+
+
+              
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <p>&nbsp;</p>
+ <div id="flattr">
+ <h3>Flattr</h3>
+ <div style="text-align:center;"><a class="FlattrButton" style="display:none;" href="http://debian-administration.org"></a></div>
+ </div>
+
+
+
+<p>&nbsp;</p>
+<div id="poll">
+<h3>Current Poll</h3>
+
+ <form method="post" action="/polls/164">
+ <p><input type="hidden" name="poll_id" value="164" /><b>What do you use for configuration management?</b></p><p>
+	
+	<label><input type="radio" name="pollanswer" value="1" />Chef</label><br />
+	
+	<label><input type="radio" name="pollanswer" value="2" />Puppet</label><br />
+	
+	<label><input type="radio" name="pollanswer" value="3" />SaltStack</label><br />
+	
+	<label><input type="radio" name="pollanswer" value="4" />CFEngine</label><br />
+	
+	<label><input type="radio" name="pollanswer" value="5" />Other tool</label><br />
+	
+	<label><input type="radio" name="pollanswer" value="6" />Nothing</label><br />
+	
+        <input type="hidden" name="mode" value="poll_vote" />
+        <input type="hidden" name="id" value="164" />
+	<input type="submit"  value="Vote" /><br />
+        <span class="votescast">
+	( <a href="/polls/164">754 votes ~ 10 comments</a> )</span></p>
+	</form>
+	
+ </div>
+
+
+
+<p>&nbsp;</p>
+<div id="blogs">
+ <h3>Recent Weblogs</h3>
+    
+    <div class="weblogs">
+       
+       <div class="body">
+	<div class="title"><a href="/users/rkreider/weblog/5">It&#39;s been 7 Years</a></div>
+        <div class="tagline">by <a href="/users/rkreider">rkreider</a></div>
+	<div class="comments"> </div>
+	</div>
+       
+       <div class="body">
+	<div class="title"><a href="/users/dkg/weblog/110">GnuPG 2.1.0 in debian experimental</a></div>
+        <div class="tagline">by <a href="/users/dkg">dkg</a></div>
+	<div class="comments">  <a href="/users/dkg/weblog/110#comments">8 comments</a></div>
+	</div>
+       
+       <div class="body">
+	<div class="title"><a href="/users/Steve/weblog/241">Site code is public once again.</a></div>
+        <div class="tagline">by <a href="/users/Steve">Steve</a></div>
+	<div class="comments">  <a href="/users/Steve/weblog/241#comments">1 comment</a></div>
+	</div>
+       
+       <div class="body">
+	<div class="title"><a href="/users/lee/weblog/50">Using Amazon SES with Exim (Submission)</a></div>
+        <div class="tagline">by <a href="/users/lee">lee</a></div>
+	<div class="comments"> </div>
+	</div>
+       
+       <div class="body">
+	<div class="title"><a href="/users/simonw/weblog/490">Web Application Vulnerability scanners</a></div>
+        <div class="tagline">by <a href="/users/simonw">simonw</a></div>
+	<div class="comments"> </div>
+	</div>
+       
+       <div class="body">
+	<div class="title"><a href="/users/ajt/weblog/211">Strange Dovecot behaviour solved</a></div>
+        <div class="tagline">by <a href="/users/ajt">ajt</a></div>
+	<div class="comments">  <a href="/users/ajt/weblog/211#comments">1 comment</a></div>
+	</div>
+       
+       <div class="body">
+	<div class="title"><a href="/users/fugit/weblog/9">Problem with Bonding and Vlan on Wheezy</a></div>
+        <div class="tagline">by <a href="/users/fugit">fugit</a></div>
+	<div class="comments">  <a href="/users/fugit/weblog/9#comments">1 comment</a></div>
+	</div>
+       
+       <div class="body">
+	<div class="title"><a href="/users/blackm/weblog/17">I have a Debian server again</a></div>
+        <div class="tagline">by <a href="/users/blackm">blackm</a></div>
+	<div class="comments"> </div>
+	</div>
+       
+       <div class="body">
+	<div class="title"><a href="/users/cisco/weblog/1">Hello World!</a></div>
+        <div class="tagline">by <a href="/users/cisco">cisco</a></div>
+	<div class="comments"> </div>
+	</div>
+       
+       <div class="body">
+	<div class="title"><a href="/users/tong/weblog/7">Planning for Disk Encryption</a></div>
+        <div class="tagline">by <a href="/users/tong">tong</a></div>
+	<div class="comments"> </div>
+	</div>
+       
+     </div>
+
+<p><a href="http://planet.debian-administration.org" title="Planet Debian Administration" style="float:right;">Archived weblogs</a></p>
+ <p></p>
+
+  </div>
+
+	    
+
+
+              <p>&nbsp;</p>
+
+
+
+   
+
+
+  
+
+
+
+
+
+
+
+            </div>
+        </div>
+      </div> <!-- end #content -->
+    </div> <!-- end #wrapper -->
+ <div id="footer">
+<p>Articles and comments are the property of their respective posters.</p>
+<p>Trademarks are the property of their respective owners.<br />  Debian is <a
+href="http://tarr.uspto.gov/servlet/tarr?regser=serial&amp;entry=75386376&amp;action=Request+Status">a registered trademark</a> of <a href="http://www.spi-inc.org">Software in the Public Interest, Inc</a>.</p>
+<p>This site is copyright &copy; 2004-2014 <a href="http://www.steve.org.uk/">Steve Kemp</a>.<br />Site hosting provided by <a href="http://www.bytemark.co.uk/">Bytemark Hosting</a> on the <a href="http://bigv.io/">BigV</a> platform.</p>
+<p><a href="/about/Syndication">Article Feeds in Atom, RSS, &amp; RDF formats</a></p>
+</div>
+</body>
+</html>

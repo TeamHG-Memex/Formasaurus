@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href='//fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+<meta charset="utf-8">
+<title>Sign-up - OnePlus Account</title>
+<meta name="description" content="Never settle."/>
+<meta property="og:title" content="Sign-up"/>
+<meta property="og:description" content="Never settle."/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://account.oneplus.net/sign-up"/>
+<meta property="og:image" content="https://account.oneplus.net/media/images/logo-square-large.png"/>
+<script src="/media/js/head.min.js"></script>
+<link href="/media/css/base.css" rel="stylesheet">
+<link href="/media/css/combine/5-invitecss.css" rel="stylesheet"/>
+<script src="/media/js/combined.js"></script>
+<script>
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-46480385-2']);
+		_gaq.push(['_setDomainName', 'account.oneplus.net']);
+		_gaq.push(['_trackPageview']);
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+		</script>
+<script src="/media/js/autocomplete/jquery.autocomplete.js"></script>
+<script src="/media/js/colorbox/jquery.colorbox.js"></script>
+<link href="/media/js/datepicker/datepicker3.css" rel="stylesheet">
+<link href="/media/js/autocomplete/jquery.autocomplete.css" rel="stylesheet">
+<link href="/media/js/colorbox/colorbox.css" rel="stylesheet"/>
+<!--[if lt IE 9]>
+			<script src="/media/js/html5shiv.min.js"></script>
+		<![endif]-->
+<!--[if lte IE 7]>
+			<link href="/media/css/ie7.css" rel="stylesheet">
+		<![endif]-->
+<!--[if IE 8]>
+			<script src="/media/js/respond.min.js"></script>
+		<![endif]-->
+<script src="//www.google.com/recaptcha/api.js"></script>
+</head>
+<body>
+<header>
+<div id="header-sticky" class="header-sticky-no-line header-sticky-logo-center">
+<div class="container"><div class="row"><div class="col-xs-12">
+<div class="logo-main"><a href="/"><span class="i-logo-48"></span></a></div>
+</div></div>
+</div>
+</div>
+</header>
+<div class="margin-medium"></div>
+<div class="container">
+<div class="row">
+<div class="col-xs-4 col-lg-3"></div>
+<div class="col-xs-6 col-lg-6">
+<div class="margin-huge"></div>
+<h2>SIGN UP</h2>
+<div class="margin-medium"></div>
+<script type="text/javascript">
+			var RecaptchaOptions = {
+				theme : 'white',
+				tabindex : 5
+			};
+			</script>
+<form method="POST" action="https://account.oneplus.net/sign-up" accept-charset="UTF-8" class="form-horizontal" role="form"><input name="_token" type="hidden" value="WcFQDsmsdztUYLsdlyjC1rO4BW1cJzwl7Yh50ZjQ"> <div class="row">
+<input name="phone" type="hidden"> <div class="form-group">
+<label for="inputUsername" class="col-xs-2 control-label">Username</label>
+<div class="col-xs-6">
+<input class="form-control" id="inputUsername" tabindex="1" autofocus="autofocus" required="required" pattern=".{3,25}" title="Between 3 and 25 characters" name="username" type="text"> </div>
+<div class="col-xs-4 form-aside"><a href="/login">Log in</a></div>
+</div>
+<div class="form-group">
+<label for="inputEmail" class="col-xs-2 control-label">Email</label>
+<div class="col-xs-6">
+<input class="form-control" id="inputEmail" tabindex="2" required="required" name="email" type="email"> </div>
+</div>
+<div class="form-group">
+<label for="inputPassword" class="col-xs-2 control-label">Password</label>
+<div class="col-xs-6">
+<input class="form-control" id="inputCurrentPassword" tabindex="3" required="required" pattern=".{6,}" title="Must be at least 6 characters" name="password" type="password" value=""> </div>
+</div>
+<div class="form-group">
+<label for="inputPasswordConfirmation" class="col-xs-2 control-label">Confirm</label>
+<div class="col-xs-6">
+<input class="form-control" id="inputPasswordConfirmation" tabindex="4" required="required" pattern=".{6,}" title="Must be at least 6 characters" name="password_confirmation" type="password" value=""> </div>
+</div>
+<div class="form-group">
+<label for="inputPasswordConfirmation" class="col-xs-2 control-label">Human?</label>
+<div class="col-xs-6">
+<div class="g-recaptcha" data-sitekey="6LetnfISAAAAAE6zIyc28qs7B8Hgyn0jyPeeJs_I"></div>
+</div>
+</div>
+<div class="form-group">
+<div class="col-xs-offset-2 col-xs-6">
+<button type="submit" class="btn btn-primary btn-md btn-wide" tabindex="6">Sign up</button>
+</div>
+</div>
+</div>
+</form> </div>
+<div class="col-xs-2 col-lg-3"></div>
+</div>
+</div>
+<script>
+$('#inputEmail').blur(function(e) {
+	if (this.value.indexOf('@oneplus.net') === -1)
+	{
+		$('.op-email').remove();
+	}
+	else
+	{
+		var error = '<div class="text-primary op-email">Please use your own email, you are not signing up for a oneplus.net email address.</div>';
+		if ($('.op-email').length !== 0)
+		{
+			$('.op-email').replaceWith(error)
+		}
+		else
+		{
+			console.log('wat2');
+			$('h2').after(error);
+		}
+	}
+});
+</script>
+<footer class="footer-center-no-line">
+<div class="container">
+<div class="row">
+<div class="col-xs-12">
+<p class="text-muted">Copyright © OnePlus</p>
+</div>
+</div>
+</div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,4826 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="de" id="vbulletin_html">
+<head>
+	<link rel="canonical" href="https://forum.mindfactory.de/forum.php" />
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-15" />
+<meta id="e_vb_meta_bburl" name="vb_meta_bburl" content="https://forum.mindfactory.de" />
+<base href="https://forum.mindfactory.de/" /><!--[if IE]></base><![endif]-->
+
+	<link rel="Shortcut Icon" href="https://www.mindfactory.de/favicon.ico" type="image/x-icon" />
+
+
+
+
+
+
+<script type="text/javascript">
+<!--
+	if (typeof YAHOO === 'undefined') // Load ALL YUI Local
+	{
+		document.write('<script type="text/javascript" src="clientscript/yui/yuiloader-dom-event/yuiloader-dom-event.js?v=421"><\/script>');
+		document.write('<script type="text/javascript" src="clientscript/yui/connection/connection-min.js?v=421"><\/script>');
+		var yuipath = 'clientscript/yui';
+		var yuicombopath = '';
+		var remoteyui = false;
+	}
+	else	// Load Rest of YUI remotely (where possible)
+	{
+		var yuipath = 'clientscript/yui';
+		var yuicombopath = '';
+		var remoteyui = true;
+		if (!yuicombopath)
+		{
+			document.write('<script type="text/javascript" src="clientscript/yui/connection/connection-min.js"><\/script>');
+		}
+	}
+	var SESSIONURL = "s=1669ed2f03e1e06bac45cb0712e78d91&";
+	var SECURITYTOKEN = "guest";
+	var IMGDIR_MISC = "images/misc";
+	var IMGDIR_BUTTON = "images/buttons";
+	var vb_disable_ajax = parseInt("0", 10);
+	var SIMPLEVERSION = "421";
+	var BBURL = "https://forum.mindfactory.de";
+	var LOGGEDIN = 0 > 0 ? true : false;
+	var THIS_SCRIPT = "index";
+	var RELPATH = "forum.php";
+	var PATHS = {
+		forum : "",
+		cms   : "",
+		blog  : ""
+	};
+	var AJAXBASEURL = "https://forum.mindfactory.de/";
+// -->
+</script>
+<script type="text/javascript" src="https://forum.mindfactory.de/clientscript/vbulletin-core.js?v=421"></script>
+
+
+
+	<link rel="alternate" type="application/rss+xml" title="Mindfactory Forum RSS-Feed" href="https://forum.mindfactory.de/external.php?type=RSS2" />
+	
+
+
+
+	<link rel="stylesheet" type="text/css" href="https://forum.mindfactory.de/css.php?styleid=7&amp;langid=1&amp;d=1392926000&amp;td=ltr&amp;sheet=bbcode.css,editor.css,popupmenu.css,reset-fonts.css,vbulletin.css,vbulletin-chrome.css,vbulletin-formcontrols.css," />
+
+	<!--[if lt IE 8]>
+	<link rel="stylesheet" type="text/css" href="https://forum.mindfactory.de/css.php?styleid=7&amp;langid=1&amp;d=1392926000&amp;td=ltr&amp;sheet=popupmenu-ie.css,vbulletin-ie.css,vbulletin-chrome-ie.css,vbulletin-formcontrols-ie.css,editor-ie.css" />
+	<![endif]-->
+
+
+<script type="text/javascript" src="mobiquo/tapatalkdetect.js"></script>
+
+
+
+        <!-- twitter app card start-->
+        <!-- https://dev.twitter.com/docs/cards/types/app-card -->
+        <meta name="twitter:card" content="app" />
+    
+        <meta name="twitter:app:id:iphone" content="307880732" />
+        <meta name="twitter:app:url:iphone" content="tapatalk://forum.mindfactory.de?location=index" />
+        <meta name="twitter:app:id:ipad" content="307880732" />
+        <meta name="twitter:app:url:ipad" content="tapatalk://forum.mindfactory.de?location=index" />
+        
+        <meta name="twitter:app:id:googleplay" content="com.quoord.tapatalkpro.activity" />
+        <meta name="twitter:app:url:googleplay" content="tapatalk://forum.mindfactory.de?location=index" />
+        
+    <!-- twitter app card -->
+    
+        <!-- Tapatalk Banner&Welcome head start -->
+        <link href="https://forum.mindfactory.de/mobiquo/smartbanner/appbanner.css" rel="stylesheet" type="text/css" media="screen" />
+        <script type="text/javascript">
+            var is_mobile_skin     = 0;
+            var app_ios_id         = "";
+            var app_android_id     = "";
+            var app_kindle_url     = "";
+            var app_banner_message = "";
+            var app_forum_name     = "Mindfactory Forum";
+            var app_location_url   = "tapatalk://forum.mindfactory.de?location=index";
+            var app_board_url      = "https%3A%2F%2Fforum.mindfactory.de";
+            var functionCallAfterWindowLoad = 0;
+            
+            var app_forum_code = "e4ae6fd91e55951450ac95ba27aec2f0";
+            var app_referer = "https%3A%2F%2Fforum.mindfactory.de%2Fforum.php";
+            var app_welcome_url = "https://forum.mindfactory.de/mobiquo/smartbanner/welcome.php";
+            var app_welcome_enable = "1";
+        </script>
+        <script src="https://forum.mindfactory.de/mobiquo/smartbanner/appbanner.js" type="text/javascript"></script>
+        <!-- Tapatalk Banner head end-->
+    
+        <!-- App Indexing for Google Search -->
+        <link href="android-app://tapatalk-byo/forum.mindfactory.de%3Flocation%3Dindex" rel="alternate" />
+        
+	<title>Mindfactory Forum</title>
+
+
+		<meta name="keywords" content="computer hardware software versand handel" />
+		<meta name="description" content="Mindfactory AG Hard und Software Versand Handel" />
+
+	<script type="text/javascript" src="clientscript/vbulletin_read_marker.js?v=421"></script>
+	
+	<link rel="stylesheet" type="text/css" href="https://forum.mindfactory.de/css.php?styleid=7&amp;langid=1&amp;d=1392926000&amp;td=ltr&amp;sheet=forumbits.css,forumhome.css,options.css" />
+        
+	<!--[if lt IE 8]><link rel="stylesheet" type="text/css" href="https://forum.mindfactory.de/css.php?styleid=7&amp;langid=1&amp;d=1392926000&amp;td=ltr&amp;sheet=forumbits-ie.css,options-ie.css" /><![endif]-->
+        
+	<link rel="stylesheet" type="text/css" href="https://forum.mindfactory.de/css.php?styleid=7&amp;langid=1&amp;d=1392926000&amp;td=ltr&amp;sheet=additional.css" />
+
+
+<script type="text/javascript"><!--
+window.google_analytics_uacct = 'UA-5790906-3'; var _gaq = _gaq || []; _gaq.push(['_setAccount', 'UA-5790906-3'], ['_trackPageview'], ['_trackPageLoadTime']); (function() { var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);  })();
+//--></script>
+</head>
+	<body>
+
+	
+<!-- Tapatalk Detect body start -->
+<style type="text/css">
+.ui-mobile [data-role="page"], .ui-mobile [data-role="dialog"], .ui-page 
+{
+top:auto;
+}
+</style>
+<script type="text/javascript">tapatalkDetect()</script>
+<!-- Tapatalk Detect banner body end -->
+
+<!-- Start Alexa Certify Javascript -->
+<script type="text/javascript">
+_atrk_opts = { atrk_acct:"+aQGh1asp100GB", domain:"mindfactory.de",dynamic: true};
+(function() { var as = document.createElement('script'); as.type = 'text/javascript'; as.async = true; as.src = "https://d31qbv1cthcecs.cloudfront.net/atrk.js"; var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(as, s); })();
+</script>
+<noscript><img src="https://d5nxst8fruw4z.cloudfront.net/atrk.gif?account=+aQGh1asp100GB" style="display:none" height="1" width="1" alt="" /></noscript>
+<!-- End Alexa Certify Javascript -->
+<!-- Generated by Revive Adserver 3.0.5 -->
+<script type='text/javascript' src='https://ads.mindfactory.de/openx/www/delivery/spcjs.php?id=1&amp;target=_blank'></script>
+<div class="above_body"> <!-- closing tag is in template navbar -->
+<div id="header" class="floatcontainer doc_header">
+	
+  	<div style="padding-left:20px;">
+    
+    
+    <div style="float:left;">
+    <a name="top" href="https://forum.mindfactory.de/forum.php" class="logo-image" style="text-decoration:none;"><img src="images/mf/logo.png" alt="Mindfactory Forum" />&nbsp;</a>
+    
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a onclick="_gaq.push(['_trackEvent', 'Outgoing', 'www.mindfactory.de', '']);" href="http://www.mindfactory.de" target="_blank" title="zum Online-Shop"><img src="/images/mf/zum-shop.png" border="0" alt="zum Online-Shop" /></a>
+<a onclick="_gaq.push(['_trackEvent', 'Outgoing', 'twitter.com', '/mindfactory_de']);" href="http://twitter.com/mindfactory_de" target="_blank" title="Follow us on Twitter!"><img src="/images/mf/twitter_tab.png" border="0" alt="follow us on twitter.com" /></a>
+<a onclick="_gaq.push(['_trackEvent', 'Outgoing', 'www.facebook.com', '/pages/Wilhelmshaven-Germany/Mindfactory-AG/116848583625?ref=mf']);" rel="nofollow" href="http://www.facebook.com/pages/Wilhelmshaven-Germany/Mindfactory-AG/116848583625?ref=mf" target="_blank" title="Besuchen Sie uns auf Facebook!"><img src="/images/mf/facebook_tab.png" border="0" alt="Besuchen Sie uns auf Facebook!" /></a>
+<a onclick="_gaq.push(['_trackEvent', 'Outgoing', 'plus.google.com', '/102920144157665111122/posts']);" rel="nofollow" href="http://plus.google.com/102920144157665111122/posts" target="_blank" title="Besuchen Sie uns auf Facebook!"><img src="/images/mf/google_tab.png" border="0" alt="Besuchen Sie uns auf Google Plus!" /></a>
+
+</div>
+
+
+
+
+<div style="float:right;padding-top:37px;margin-right:10px;"><script type='text/javascript'><!--//<![CDATA[
+   var m3_u = (location.protocol=='https:'?'https://ads.mindfactory.de/openx/www/delivery/ajs.php':'http://ads.mindfactory.de/openx/www/delivery/ajs.php');
+   var m3_r = Math.floor(Math.random()*99999999999);
+   if (!document.MAX_used) document.MAX_used = ',';
+   document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+   document.write ("?zoneid=1");
+   document.write ('&amp;cb=' + m3_r);
+   if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+   document.write (document.charset ? '&amp;charset='+document.charset : (document.characterSet ? '&amp;charset='+document.characterSet : ''));
+   document.write ("&amp;loc=" + escape(window.location));
+   if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+   if (document.context) document.write ("&context=" + escape(document.context));
+   if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+   document.write ("'><\/scr"+"ipt>");
+//]]>--></script><noscript><a onclick="_gaq.push(['_trackEvent', 'Outgoing', 'ads.mindfactory.de', '/openx/www/delivery/ck.php?n=a4772dd7&amp;cb=mf38882']);" href='https://ads.mindfactory.de/openx/www/delivery/ck.php?n=a4772dd7&amp;cb=mf38882' target='_blank'><img src='https://ads.mindfactory.de/openx/www/delivery/avw.php?zoneid=1&amp;cb=mf38882&amp;n=a4772dd7' border='0' alt='' /></a></noscript></div>
+
+
+
+
+<div style="clear:both;"></div>
+
+
+
+
+
+
+</div>
+
+
+	<div id="toplinks" class="toplinks">
+		
+			<ul class="nouser">
+			
+				<li><a href="https://forum.mindfactory.de/register.php" rel="nofollow" style="color:#FFF;">Registrieren</a></li>
+			
+				<li><a rel="help" href="https://forum.mindfactory.de/faq.php" style="color:#FFF;">Hilfe</a></li>
+				<li>
+			<script type="text/javascript" src="clientscript/vbulletin_md5.js?v=421"></script>
+			<form id="navbar_loginform" action="https://forum.mindfactory.de/login.php?do=login" method="post" onsubmit="md5hash(vb_login_password, vb_login_md5password, vb_login_md5password_utf, 0)">
+				<fieldset id="logindetails" class="logindetails">
+					<div>
+						<div>
+					<input type="text" class="textbox default-value" name="vb_login_username" id="navbar_username" size="20" accesskey="u" tabindex="101" value="Benutzername" />
+					<input type="password" class="textbox" tabindex="102" name="vb_login_password" id="navbar_password" size="20" />
+					<input type="text" class="textbox default-value" tabindex="102" name="vb_login_password_hint" id="navbar_password_hint" size="20" value="Kennwort" style="display:none;" />
+					<input type="submit" class="loginbutton" tabindex="104" value="Anmelden" title="Geben Sie zur Anmeldung Ihren Benutzernamen und Ihr Kennwort in die dafür vorgesehenen Textfelder ein oder klicken Sie auf die 'Registrieren'-Schaltfläche, um ein neues Benutzerkonto anzulegen." accesskey="s" />
+          <label for="cb_cookieuser_navbar"><input type="checkbox" name="cookieuser" value="1" id="cb_cookieuser_navbar" class="cb_cookieuser_navbar" accesskey="c" tabindex="103" /> <acronym style="border-bottom: 1px dotted #000000; cursor: help;" title="Sie bleiben angemeldet, bis Sie sich selbst abmelden.">Angemeldet bleiben?</acronym></label>
+						</div>
+					</div>
+				</fieldset>
+        <!--
+				<div id="remember" class="remember" style="padding-left:55px;">
+					<label for="cb_cookieuser_navbar"><input type="checkbox" name="cookieuser" value="1" id="cb_cookieuser_navbar" class="cb_cookieuser_navbar" accesskey="c" tabindex="103" /> <acronym style="border-bottom: 1px dotted #000000; cursor: help;" title="Sie bleiben angemeldet, bis Sie sich selbst abmelden.">Angemeldet bleiben?</acronym></label>
+				</div>
+        -->
+
+				<input type="hidden" name="s" value="1669ed2f03e1e06bac45cb0712e78d91" />
+				<input type="hidden" name="securitytoken" value="guest" />
+				<input type="hidden" name="do" value="login" />
+				<input type="hidden" name="vb_login_md5password" />
+				<input type="hidden" name="vb_login_md5password_utf" />
+			</form>
+			<script type="text/javascript">
+			YAHOO.util.Dom.setStyle('navbar_password_hint', "display", "inline");
+			YAHOO.util.Dom.setStyle('navbar_password', "display", "none");
+			vB_XHTML_Ready.subscribe(function()
+			{
+			//
+				YAHOO.util.Event.on('navbar_username', "focus", navbar_username_focus);
+				YAHOO.util.Event.on('navbar_username', "blur", navbar_username_blur);
+				YAHOO.util.Event.on('navbar_password_hint', "focus", navbar_password_hint);
+				YAHOO.util.Event.on('navbar_password', "blur", navbar_password);
+			});
+			
+			function navbar_username_focus(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				if (textbox.value == 'Benutzername')
+				{
+				//
+					textbox.value='';
+					textbox.style.color='#000000';
+				}
+			}
+
+			function navbar_username_blur(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				if (textbox.value == '')
+				{
+				//
+					textbox.value='Benutzername';
+					textbox.style.color='#777777';
+				}
+			}
+			
+			function navbar_password_hint(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				
+				YAHOO.util.Dom.setStyle('navbar_password_hint', "display", "none");
+				YAHOO.util.Dom.setStyle('navbar_password', "display", "inline");
+				YAHOO.util.Dom.get('navbar_password').focus();
+			}
+
+			function navbar_password(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				
+				if (textbox.value == '')
+				{
+					YAHOO.util.Dom.setStyle('navbar_password_hint', "display", "inline");
+					YAHOO.util.Dom.setStyle('navbar_password', "display", "none");
+				}
+			}
+			</script>
+				</li>
+				
+			</ul>
+		
+	</div>
+	<div class="ad_global_header">
+		 
+		 
+	</div>
+	<hr />
+</div>
+
+	<div id="navbar" class="navbar">
+
+	<ul id="navtabs" class="navtabs floatcontainer">
+		
+		
+			<li class="selected"><a class="navtab" href="https://forum.mindfactory.de/forum.php">Forum</a>
+				<ul class="floatcontainer">
+					
+					
+						
+						<li><a href="https://forum.mindfactory.de/search.php?do=getdaily&amp;contenttype=vBForum_Post">Heutige Beiträge</a></li>
+						
+					
+                                        
+						
+					
+
+                                       
+                                                
+					
+
+
+					
+					
+					
+					<li><a rel="help" href="https://forum.mindfactory.de/faq.php" accesskey="5">Hilfe</a></li>
+					
+					<li><a href="https://forum.mindfactory.de/calendar.php">Kalender</a></li>
+
+                                        
+                    <li><a rel="nofollow" href="http://forum.mindfactory.de/misc.php?do=showrules?s=1669ed2f03e1e06bac45cb0712e78d91"></a></li>
+
+					
+					
+					<li class="popupmenu">
+						<a href="javascript://" class="popupctrl">Aktionen</a>
+						<ul class="popupbody popuphover">
+							<li>
+								<a rel="nofollow" href="https://forum.mindfactory.de/forumdisplay.php?do=markread&amp;markreadhash=guest" onclick="return confirm('')">Alle Foren als gelesen markieren</a>
+							</li>
+                                                        
+						</ul>
+					</li>
+					<li class="popupmenu">
+						<a href="javascript://" class="popupctrl" accesskey="3">Nützliche Links</a>
+						<ul class="popupbody popuphover">
+							
+							
+							
+							
+							
+							
+							
+						</ul>
+					</li>
+					
+				</ul>
+
+			</li>
+		
+		
+	<li><a class="navtab" href="https://forum.mindfactory.de/vbsoccer.php">Fussball-Tippspiele</a></li>
+
+		
+			<li><a class="navtab" href="https://forum.mindfactory.de/search.php?do=getdaily&amp;contenttype=vBForum_Post" accesskey="2">Was ist neu?</a></li>
+		
+		
+	</ul>
+
+	
+	<div id="globalsearch" class="globalsearch" style="margin:1px;">
+		<form action="https://forum.mindfactory.de/search.php?do=process" method="post" id="navbar_search" class="navbar_search">
+			
+			<input type="hidden" name="securitytoken" value="guest" />
+			<input type="hidden" name="do" value="process" />
+			<span class="textboxcontainer"><span><input type="text" value="" name="query" class="textbox" tabindex="99"/></span></span>
+			<span class="buttoncontainer"><span><input type="image" class="searchbutton" src="images/buttons/search.png" name="submit" onclick="document.getElementById('navbar_search').submit;" tabindex="100"/></span></span>
+		</form>
+		<ul class="navbar_advanced_search">
+			<li><a rel="nofollow" href="https://forum.mindfactory.de/search.php?search_type=1" accesskey="4">Erweiterte Suche</a></li>
+		</ul>
+	</div>
+	
+</div>
+</div><!-- closing div for above_body -->
+
+<div class="body_wrapper">
+<div id="breadcrumb" class="breadcrumb">
+	<ul class="floatcontainer">
+		<li class="navbithome"><a href="https://forum.mindfactory.de/forum.php" accesskey="1"><img src="images/misc/navbit-home.png" alt="Startseite" /></a></li>
+
+		
+		
+	<li class="navbit lastnavbit"><span>Forum</span></li>
+
+	</ul>
+	<hr />
+</div>
+
+
+ 
+
+
+	<form action="https://forum.mindfactory.de/profile.php?do=dismissnotice" method="post" id="notices" class="notices">
+		<input type="hidden" name="do" value="dismissnotice" />
+		<input type="hidden" name="s" value="s=1669ed2f03e1e06bac45cb0712e78d91&amp;" />
+		<input type="hidden" name="securitytoken" value="guest" />
+		<input type="hidden" id="dismiss_notice_hidden" name="dismiss_noticeid" value="" />
+		<input type="hidden" name="url" value="" />
+		<div id="vbseo_vhtml_0"></div>
+	</form>
+
+
+	<div id="pagetitle">
+		<h1>Mindfactory Forum</h1>
+		<p id="welcomemessage" class="description">Willkommen bei Mindfactory Forum.</p>
+	</div>
+
+	
+	<!-- main -->
+        
+	<ol id="forums" class="floatcontainer">
+		<li class="forumbit_nopost old_lock L1" id="cat234">
+	<div class="forumhead foruminfo L1 collapse">
+		<h2>
+			<span class="forumtitle"><a href="https://forum.mindfactory.de/f234-mindfactory-ag-forum">Mindfactory AG Forum</a></span>
+			<span class="forumthreadpost">Themen / Beiträge&nbsp;</span>
+			<span class="forumlastpost">Letzter Beitrag</span>
+		
+			<a class="collapse" id="collapse_c_cat234" href="https://forum.mindfactory.de/forum.php#top"><img src="images/buttons/collapse_40b.png" alt="" /></a>
+		
+		</h2>
+
+		
+	</div>
+	
+	<ol id="c_cat234" class="childforum">
+		<li id="forum29" class="forumbit_post old_lock L2">
+	<div class="forumrow table">
+		<div class="foruminfo td">
+			<img src="images/mf/statusicon/forum_old_lock-48.png" class="forumicon" id="forum_statusicon_29" alt="" />
+			<div class="forumdata">
+				<div class="datacontainer">
+					<div class="titleline">
+						<h2 class="forumtitle"><a href="https://forum.mindfactory.de/f29-wichtig-bitte-lesen">Wichtig! Bitte lesen!</a></h2>
+						
+					</div>
+					<p class="forumdescription">Wichtige Informationen für alle Forenteilnehmer</p>
+
+					
+
+					
+				</div>
+			</div>
+		</div>
+        
+		<h4 class="nocss_label">Aktionen:</h4>
+        	
+		<ul class="forumactionlinks td">
+			<li class="forumactionlink rsslink"><a rel="nofollow" href="https://forum.mindfactory.de/external.php?type=RSS2&amp;forumids=29" title="RSS-Feed dieses Forums anzeigen">RSS-Feed dieses Forums anzeigen</a></li>
+			
+		</ul>
+		
+        <h4 class="nocss_label">Statistik:</h4>
+		<ul class="forumstats td">
+			<li>Themen: 5</li>
+			<li>Beiträge: 18</li>
+		</ul>
+		<div class="forumlastpost td">
+			<h4 class="lastpostlabel">Letzter Beitrag:</h4>
+			<div>
+				
+	<p class="lastposttitle">
+	<img src="images/icons/icon1.png" class="postimg" alt="" border="0" />
+	
+	<a href="https://forum.mindfactory.de/t29333-hausordnung.html" class="threadtitle" >Hausordnung</a>
+	<a href="https://forum.mindfactory.de/t29333-hausordnung-post705549.html#post705549"><img src="images/buttons/lastpost-right.png" alt="Gehe zum letzten Beitrag" /></a>
+	</p>
+	<div class="lastpostby">
+	
+		von <div class="popupmenu memberaction">
+	<a rel="nofollow" class="username offline " href="https://forum.mindfactory.de/member59.html" title="jimknopf26419 ist offline"><strong>jimknopf26419</strong></a>
+	
+</div>
+	
+	</div>
+	<p class="lastpostdate">22.06.2010, <span class="time">14:42</span></p>
+
+			</div>
+		</div>
+        
+	</div>
+	
+</li><li id="forum13" class="forumbit_post old_lock L2">
+	<div class="forumrow table">
+		<div class="foruminfo td">
+			<img src="images/mf/statusicon/forum_old_lock-48.png" class="forumicon" id="forum_statusicon_13" alt="" />
+			<div class="forumdata">
+				<div class="datacontainer">
+					<div class="titleline">
+						<h2 class="forumtitle"><a href="https://forum.mindfactory.de/f13-impressum">Impressum</a></h2>
+						
+					</div>
+					<p class="forumdescription">Das Impressum</p>
+
+					
+
+					
+				</div>
+			</div>
+		</div>
+        
+		<h4 class="nocss_label">Aktionen:</h4>
+        	
+		<ul class="forumactionlinks td">
+			
+		</ul>
+		
+        <h4 class="nocss_label">Statistik:</h4>
+		<ul class="forumstats td">
+			<li>Themen: 1</li>
+			<li>Beiträge: 1</li>
+		</ul>
+		<div class="forumlastpost td">
+			<h4 class="lastpostlabel">Letzter Beitrag:</h4>
+			<div>
+				
+	<p class="lastposttitle">
+	<img src="images/icons/icon1.png" class="postimg" alt="" border="0" />
+	
+	<a href="https://forum.mindfactory.de/t1-impressum.html" class="threadtitle" >Impressum</a>
+	<a href="https://forum.mindfactory.de/t1-impressum-post1.html#post1"><img src="images/buttons/lastpost-right.png" alt="Gehe zum letzten Beitrag" /></a>
+	</p>
+	<div class="lastpostby">
+	
+		von <div class="popupmenu memberaction">
+	<a rel="nofollow" class="username offline " href="https://forum.mindfactory.de/member1.html" title="Administrator ist offline"><strong>Administrator</strong></a>
+	
+</div>
+	
+	</div>
+	<p class="lastpostdate">04.01.2005, <span class="time">18:56</span></p>
+
+			</div>
+		</div>
+        
+	</div>
+	
+</li><li id="forum41" class="forumbit_post old_lock L2">
+	<div class="forumrow table">
+		<div class="foruminfo td">
+			<img src="images/mf/statusicon/forum_old_lock-48.png" class="forumicon" id="forum_statusicon_41" alt="" />
+			<div class="forumdata">
+				<div class="datacontainer">
+					<div class="titleline">
+						<h2 class="forumtitle"><a href="https://forum.mindfactory.de/f41-news">News</a></h2>
+						<span class="viewing">(1 Betrachter)</span>
+					</div>
+					<p class="forumdescription">Neuigkeiten der Mindfactory AG</p>
+
+					
+
+					
+				</div>
+			</div>
+		</div>
+        
+		<h4 class="nocss_label">Aktionen:</h4>
+        	
+		<ul class="forumactionlinks td">
+			<li class="forumactionlink rsslink"><a rel="nofollow" href="https://forum.mindfactory.de/external.php?type=RSS2&amp;forumids=41" title="RSS-Feed dieses Forums anzeigen">RSS-Feed dieses Forums anzeigen</a></li>
+			
+		</ul>
+		
+        <h4 class="nocss_label">Statistik:</h4>
+		<ul class="forumstats td">
+			<li>Themen: 181</li>
+			<li>Beiträge: 284</li>
+		</ul>
+		<div class="forumlastpost td">
+			<h4 class="lastpostlabel">Letzter Beitrag:</h4>
+			<div>
+				
+	<p class="lastposttitle">
+	<img src="images/icons/icon7.png" class="postimg" alt="L&auml;cheln" border="0" />
+	
+	<a href="https://forum.mindfactory.de/t85203-mindfactory-feiert-geburtstag.html" class="threadtitle" >Mindfactory feiert Geburtstag!</a>
+	<a href="https://forum.mindfactory.de/t85203-mindfactory-feiert-geburtstag-post999195.html#post999195"><img src="images/buttons/lastpost-right.png" alt="Gehe zum letzten Beitrag" /></a>
+	</p>
+	<div class="lastpostby">
+	
+		von <div class="popupmenu memberaction">
+	<a rel="nofollow" class="username offline " href="https://forum.mindfactory.de/member32628.html" title="Ms. Marketing ist offline"><strong>Ms. Marketing</strong></a>
+	
+</div>
+	
+	</div>
+	<p class="lastpostdate">12.11.2014, <span class="time">12:02</span></p>
+
+			</div>
+		</div>
+        
+	</div>
+	
+</li><li id="forum172" class="forumbit_post old_lock L2">
+	<div class="forumrow table">
+		<div class="foruminfo td">
+			<img src="images/mf/statusicon/forum_old_lock-48.png" class="forumicon" id="forum_statusicon_172" alt="" />
+			<div class="forumdata">
+				<div class="datacontainer">
+					<div class="titleline">
+						<h2 class="forumtitle"><a href="https://forum.mindfactory.de/f172-top-poster">Top-Poster</a></h2>
+						<span class="viewing">(1 Betrachter)</span>
+					</div>
+					<p class="forumdescription">unsere fleißigsten Mitglieder :)</p>
+
+					
+
+					
+				</div>
+			</div>
+		</div>
+        
+		<h4 class="nocss_label">Aktionen:</h4>
+        	
+		<ul class="forumactionlinks td">
+			<li class="forumactionlink rsslink"><a rel="nofollow" href="https://forum.mindfactory.de/external.php?type=RSS2&amp;forumids=172" title="RSS-Feed dieses Forums anzeigen">RSS-Feed dieses Forums anzeigen</a></li>
+			
+		</ul>
+		
+        <h4 class="nocss_label">Statistik:</h4>
+		<ul class="forumstats td">
+			<li>Themen: 33</li>
+			<li>Beiträge: 2.297</li>
+		</ul>
+		<div class="forumlastpost td">
+			<h4 class="lastpostlabel">Letzter Beitrag:</h4>
+			<div>
+				
+	<p class="lastposttitle">
+	<img src="images/icons/icon1.png" class="postimg" alt="" border="0" />
+	
+	<a href="https://forum.mindfactory.de/t47028-glueckwunsch-topposter.html" class="threadtitle" >Glückwunsch an die TopPoster</a>
+	<a href="https://forum.mindfactory.de/t47028-glueckwunsch-topposter-post1003660.html#post1003660"><img src="images/buttons/lastpost-right.png" alt="Gehe zum letzten Beitrag" /></a>
+	</p>
+	<div class="lastpostby">
+	
+		von <div class="popupmenu memberaction">
+	<a rel="nofollow" class="username offline " href="https://forum.mindfactory.de/member26636.html" title="elnino ist offline"><strong>elnino</strong></a>
+	
+</div>
+	
+	</div>
+	<p class="lastpostdate">04.12.2014, <span class="time">17:33</span></p>
+
+			</div>
+		</div>
+        
+	</div>
+	
+</li>
+	</ol>
+	
+</li><li class="forumbit_nopost old_lock L1" id="cat3">
+	<div class="forumhead foruminfo L1 collapse">
+		<h2>
+			<span class="forumtitle"><a href="https://forum.mindfactory.de/f3-mindfactory-ag-bestellungen-reklamation-beschaffung">Mindfactory AG - Bestellungen, Reklamation und Beschaffung</a></span>
+			<span class="forumthreadpost">Themen / Beiträge&nbsp;</span>
+			<span class="forumlastpost">Letzter Beitrag</span>
+		
+			<a class="collapse" id="collapse_c_cat3" href="https://forum.mindfactory.de/forum.php#top"><img src="images/buttons/collapse_40b.png" alt="" /></a>
+		
+		</h2>
+
+		
+		<div class="forumrowdata">
+			<p class="subforumdescription">Rund um Bestellungen, Reklamationen und Beschaffung</p>
+			
+		</div>
+		
+	</div>
+	
+	<ol id="c_cat3" class="childforum">
+		<li id="forum9" class="forumbit_post old_lock L2">
+	<div class="forumrow table">
+		<div class="foruminfo td">
+			<img src="images/mf/statusicon/forum_old_lock-48.png" class="forumicon" id="forum_statusicon_9" alt="" />
+			<div class="forumdata">
+				<div class="datacontainer">
+					<div class="titleline">
+						<h2 class="forumtitle"><a href="https://forum.mindfactory.de/f9-allgemeines">Allgemeines</a></h2>
+						<span class="viewing">(6 Betrachter)</span>
+					</div>
+					<p class="forumdescription">Für alles, was nicht in andere Kategorien passt</p>
+
+					
+
+					
+				</div>
+			</div>
+		</div>
+        
+		<h4 class="nocss_label">Aktionen:</h4>
+        	
+		<ul class="forumactionlinks td">
+			<li class="forumactionlink rsslink"><a rel="nofollow" href="https://forum.mindfactory.de/external.php?type=RSS2&amp;forumids=9" title="RSS-Feed dieses Forums anzeigen">RSS-Feed dieses Forums anzeigen</a></li>
+			
+		</ul>
+		
+        <h4 class="nocss_label">Statistik:</h4>
+		<ul class="forumstats td">
+			<li>Themen: 2.881</li>
+			<li>Beiträge: 31.289</li>
+		</ul>
+		<div class="forumlastpost td">
+			<h4 class="lastpostlabel">Letzter Beitrag:</h4>
+			<div>
+				
+	<p class="lastposttitle">
+	<img src="images/icons/icon1.png" class="postimg" alt="" border="0" />
+	
+	<a href="https://forum.mindfactory.de/t85895-paypal-bestellen-kosten.html" class="threadtitle" >PayPal bestellen Kosten?!</a>
+	<a href="https://forum.mindfactory.de/t85895-paypal-bestellen-kosten-post1004941.html#post1004941"><img src="images/buttons/lastpost-right.png" alt="Gehe zum letzten Beitrag" /></a>
+	</p>
+	<div class="lastpostby">
+	
+		von <div class="popupmenu memberaction">
+	<a rel="nofollow" class="username offline " href="https://forum.mindfactory.de/member31707.html" title="micha37 ist offline"><strong>micha37</strong></a>
+	
+</div>
+	
+	</div>
+	<p class="lastpostdate">Heute, <span class="time">16:33</span></p>
+
+			</div>
+		</div>
+        
+	</div>
+	
+</li><li id="forum42" class="forumbit_post old_lock L2">
+	<div class="forumrow table">
+		<div class="foruminfo td">
+			<img src="images/mf/statusicon/forum_old_lock-48.png" class="forumicon" id="forum_statusicon_42" alt="" />
+			<div class="forumdata">
+				<div class="datacontainer">
+					<div class="titleline">
+						<h2 class="forumtitle"><a href="https://forum.mindfactory.de/f42-bestellungen">Bestellungen</a></h2>
+						<span class="viewing">(6 Betrachter)</span>
+					</div>
+					<p class="forumdescription">Fragen zu Ihren Bestellungen</p>
+
+					
+
+					
+				</div>
+			</div>
+		</div>
+        
+		<h4 class="nocss_label">Aktionen:</h4>
+        	
+		<ul class="forumactionlinks td">
+			<li class="forumactionlink rsslink"><a rel="nofollow" href="https://forum.mindfactory.de/external.php?type=RSS2&amp;forumids=42" title="RSS-Feed dieses Forums anzeigen">RSS-Feed dieses Forums anzeigen</a></li>
+			
+		</ul>
+		
+        <h4 class="nocss_label">Statistik:</h4>
+		<ul class="forumstats td">
+			<li>Themen: 14.971</li>
+			<li>Beiträge: 80.982</li>
+		</ul>
+		<div class="forumlastpost td">
+			<h4 class="lastpostlabel">Letzter Beitrag:</h4>
+			<div>
+				
+	<p class="lastposttitle">
+	<img src="images/icons/icon1.png" class="postimg" alt="" border="0" />
+	
+	<a href="https://forum.mindfactory.de/t85897-vorgangsnummer-4041238-a.html" class="threadtitle" >Vorgangsnummer: 4041238</a>
+	<a href="https://forum.mindfactory.de/t85897-vorgangsnummer-4041238-a-post1004964.html#post1004964"><img src="images/buttons/lastpost-right.png" alt="Gehe zum letzten Beitrag" /></a>
+	</p>
+	<div class="lastpostby">
+	
+		von <div class="popupmenu memberaction">
+	<a rel="nofollow" class="username online " href="https://forum.mindfactory.de/member36038.html" title="Collat3ral ist gerade online"><strong>Collat3ral</strong></a>
+	
+</div>
+	
+	</div>
+	<p class="lastpostdate">Heute, <span class="time">17:57</span></p>
+
+			</div>
+		</div>
+        
+	</div>
+	
+</li><li id="forum44" class="forumbit_post old_lock L2">
+	<div class="forumrow table">
+		<div class="foruminfo td">
+			<img src="images/mf/statusicon/forum_old_lock-48.png" class="forumicon" id="forum_statusicon_44" alt="" />
+			<div class="forumdata">
+				<div class="datacontainer">
+					<div class="titleline">
+						<h2 class="forumtitle"><a href="https://forum.mindfactory.de/f44-reklamation">Reklamation</a></h2>
+						<span class="viewing">(2 Betrachter)</span>
+					</div>
+					<p class="forumdescription">Sorgen mit Reklamationen</p>
+
+					
+
+					
+				</div>
+			</div>
+		</div>
+        
+		<h4 class="nocss_label">Aktionen:</h4>
+        	
+		<ul class="forumactionlinks td">
+			<li class="forumactionlink rsslink"><a rel="nofollow" href="https://forum.mindfactory.de/external.php?type=RSS2&amp;forumids=44" title="RSS-Feed dieses Forums anzeigen">RSS-Feed dieses Forums anzeigen</a></li>
+			
+		</ul>
+		
+        <h4 class="nocss_label">Statistik:</h4>
+		<ul class="forumstats td">
+			<li>Themen: 6.802</li>
+			<li>Beiträge: 45.534</li>
+		</ul>
+		<div class="forumlastpost td">
+			<h4 class="lastpostlabel">Letzter Beitrag:</h4>
+			<div>
+				
+	<p class="lastposttitle">
+	<img src="images/icons/icon1.png" class="postimg" alt="" border="0" />
+	
+	<a href="https://forum.mindfactory.de/t85889-lange-wartezeit-reklamation-intel-cpu.html" class="threadtitle" >Lange Wartezeit bei Reklamation von Intel CPU</a>
+	<a href="https://forum.mindfactory.de/t85889-lange-wartezeit-reklamation-intel-cpu-post1004883.html#post1004883"><img src="images/buttons/lastpost-right.png" alt="Gehe zum letzten Beitrag" /></a>
+	</p>
+	<div class="lastpostby">
+	
+		von <div class="popupmenu memberaction">
+	<a rel="nofollow" class="username offline " href="https://forum.mindfactory.de/member36667.html" title="musikos ist offline"><strong>musikos</strong></a>
+	
+</div>
+	
+	</div>
+	<p class="lastpostdate">Heute, <span class="time">12:39</span></p>
+
+			</div>
+		</div>
+        
+	</div>
+	
+</li><li id="forum35" class="forumbit_post old_lock L2">
+	<div class="forumrow table">
+		<div class="foruminfo td">
+			<img src="images/mf/statusicon/forum_old_lock-48.png" class="forumicon" id="forum_statusicon_35" alt="" />
+			<div class="forumdata">
+				<div class="datacontainer">
+					<div class="titleline">
+						<h2 class="forumtitle"><a href="https://forum.mindfactory.de/f35-schwer-lieferbare-artikel">Schwer lieferbare Artikel?</a></h2>
+						<span class="viewing">(12 Betrachter)</span>
+					</div>
+					<p class="forumdescription">Hier werden schwer lieferbare Artikel "gesammelt".
+Bitte teilen Sie uns Ihre Erfahrungen mit.</p>
+
+					
+
+					
+				</div>
+			</div>
+		</div>
+        
+		<h4 class="nocss_label">Aktionen:</h4>
+        	
+		<ul class="forumactionlinks td">
+			<li class="forumactionlink rsslink"><a rel="nofollow" href="https://forum.mindfactory.de/external.php?type=RSS2&amp;forumids=35" title="RSS-Feed dieses Forums anzeigen">RSS-Feed dieses Forums anzeigen</a></li>
+			
+		</ul>
+		
+        <h4 class="nocss_label">Statistik:</h4>
+		<ul class="forumstats td">
+			<li>Themen: 990</li>
+			<li>Beiträge: 9.996</li>
+		</ul>
+		<div class="forumlastpost td">
+			<h4 class="lastpostlabel">Letzter Beitrag:</h4>
+			<div>
+				
+	<p class="lastposttitle">
+	<img src="images/icons/icon1.png" class="postimg" alt="" border="0" />
+	
+	<a href="https://forum.mindfactory.de/t84226-geforce-gtx-970-lieferbar.html" class="threadtitle" >GeForce GTX 970 lieferbar?</a>
+	<a href="https://forum.mindfactory.de/t84226-geforce-gtx-970-lieferbar-post1004966.html#post1004966"><img src="images/buttons/lastpost-right.png" alt="Gehe zum letzten Beitrag" /></a>
+	</p>
+	<div class="lastpostby">
+	
+		von <div class="popupmenu memberaction">
+	<a rel="nofollow" class="username online " href="https://forum.mindfactory.de/member36140.html" title="Rome81 ist gerade online"><strong>Rome81</strong></a>
+	
+</div>
+	
+	</div>
+	<p class="lastpostdate">Heute, <span class="time">18:06</span></p>
+
+			</div>
+		</div>
+        
+	</div>
+	
+</li><li id="forum28" class="forumbit_post old_lock L2">
+	<div class="forumrow table">
+		<div class="foruminfo td">
+			<img src="images/mf/statusicon/forum_old_lock-48.png" class="forumicon" id="forum_statusicon_28" alt="" />
+			<div class="forumdata">
+				<div class="datacontainer">
+					<div class="titleline">
+						<h2 class="forumtitle"><a href="https://forum.mindfactory.de/f28-produktwuensche">Produktwünsche</a></h2>
+						<span class="viewing">(3 Betrachter)</span>
+					</div>
+					<p class="forumdescription">Vermissen Sie Produkte bei uns?</p>
+
+					
+
+					
+				</div>
+			</div>
+		</div>
+        
+		<h4 class="nocss_label">Aktionen:</h4>
+        	
+		<ul class="forumactionlinks td">
+			<li class="forumactionlink rsslink"><a rel="nofollow" href="https://forum.mindfactory.de/external.php?type=RSS2&amp;forumids=28" title="RSS-Feed dieses Forums anzeigen">RSS-Feed dieses Forums anzeigen</a></li>
+			
+		</ul>
+		
+        <h4 class="nocss_label">Statistik:</h4>
+		<ul class="forumstats td">
+			<li>Themen: 2.536</li>
+			<li>Beiträge: 12.201</li>
+		</ul>
+		<div class="forumlastpost td">
+			<h4 class="lastpostlabel">Letzter Beitrag:</h4>
+			<div>
+				
+	<p class="lastposttitle">
+	<img src="images/icons/icon1.png" class="postimg" alt="" border="0" />
+	
+	<a href="https://forum.mindfactory.de/t85805-asus-matrix-gtx-980-a.html" class="threadtitle" >ASUS Matrix GTX 980</a>
+	<a href="https://forum.mindfactory.de/t85805-asus-matrix-gtx-980-a-post1004035.html#post1004035"><img src="images/buttons/lastpost-right.png" alt="Gehe zum letzten Beitrag" /></a>
+	</p>
+	<div class="lastpostby">
+	
+		von <div class="popupmenu memberaction">
+	<a rel="nofollow" class="username offline " href="https://forum.mindfactory.de/member10.html" title="SiXX ist offline"><strong>SiXX</strong></a>
+	
+</div>
+	
+	</div>
+	<p class="lastpostdate">05.12.2014, <span class="time">17:25</span></p>
+
+			</div>
+		</div>
+        
+	</div>
+	
+</li>
+	</ol>
+	
+</li><li class="forumbit_nopost old_lock L1" id="cat235">
+	<div class="forumhead foruminfo L1 collapse">
+		<h2>
+			<span class="forumtitle"><a href="https://forum.mindfactory.de/f235-mindfactory-ag-meinungen-fehlermeldungen-vorschlaege">Mindfactory AG - Meinungen, Fehlermeldungen und Vorschläge</a></span>
+			<span class="forumthreadpost">Themen / Beiträge&nbsp;</span>
+			<span class="forumlastpost">Letzter Beitrag</span>
+		
+			<a class="collapse" id="collapse_c_cat235" href="https://forum.mindfactory.de/forum.php#top"><img src="images/buttons/collapse_40b.png" alt="" /></a>
+		
+		</h2>
+
+		
+		<div class="forumrowdata">
+			<p class="subforumdescription">Meinungen und Fehler melden</p>
+			
+		</div>
+		
+	</div>
+	
+	<ol id="c_cat235" class="childforum">
+		<li id="forum43" class="forumbit_post old_lock L2">
+	<div class="forumrow table">
+		<div class="foruminfo td">
+			<img src="images/mf/statusicon/forum_old_lock-48.png" class="forumicon" id="forum_statusicon_43" alt="" />
+			<div class="forumdata">
+				<div class="datacontainer">
+					<div class="titleline">
+						<h2 class="forumtitle"><a href="https://forum.mindfactory.de/f43-meinung-uns-wichtig">Ihre Meinung ist uns wichtig</a></h2>
+						<span class="viewing">(3 Betrachter)</span>
+					</div>
+					<p class="forumdescription">Lob und Tadel</p>
+
+					
+
+					
+				</div>
+			</div>
+		</div>
+        
+		<h4 class="nocss_label">Aktionen:</h4>
+        	
+		<ul class="forumactionlinks td">
+			<li class="forumactionlink rsslink"><a rel="nofollow" href="https://forum.mindfactory.de/external.php?type=RSS2&amp;forumids=43" title="RSS-Feed dieses Forums anzeigen">RSS-Feed dieses Forums anzeigen</a></li>
+			
+		</ul>
+		
+        <h4 class="nocss_label">Statistik:</h4>
+		<ul class="forumstats td">
+			<li>Themen: 4.381</li>
+			<li>Beiträge: 19.209</li>
+		</ul>
+		<div class="forumlastpost td">
+			<h4 class="lastpostlabel">Letzter Beitrag:</h4>
+			<div>
+				
+	<p class="lastposttitle">
+	<img src="images/icons/icon1.png" class="postimg" alt="" border="0" />
+	
+	<a href="https://forum.mindfactory.de/t85472-gebrauchte-grafikkarte-erhalten.html" class="threadtitle" >Gebrauchte Grafikkarte erhalten.</a>
+	<a href="https://forum.mindfactory.de/t85472-gebrauchte-grafikkarte-erhalten-post1004929.html#post1004929"><img src="images/buttons/lastpost-right.png" alt="Gehe zum letzten Beitrag" /></a>
+	</p>
+	<div class="lastpostby">
+	
+		von <div class="popupmenu memberaction">
+	<a rel="nofollow" class="username offline " href="https://forum.mindfactory.de/member36520.html" title="khajit1906 ist offline"><strong>khajit1906</strong></a>
+	
+</div>
+	
+	</div>
+	<p class="lastpostdate">Heute, <span class="time">15:08</span></p>
+
+			</div>
+		</div>
+        
+	</div>
+	
+</li><li id="forum30" class="forumbit_post old_lock L2">
+	<div class="forumrow table">
+		<div class="foruminfo td">
+			<img src="images/mf/statusicon/forum_old_lock-48.png" class="forumicon" id="forum_statusicon_30" alt="" />
+			<div class="forumdata">
+				<div class="datacontainer">
+					<div class="titleline">
+						<h2 class="forumtitle"><a href="https://forum.mindfactory.de/f30-probleme-internetshop">Probleme mit dem Internetshop</a></h2>
+						<span class="viewing">(2 Betrachter)</span>
+					</div>
+					<p class="forumdescription">Funktioniert etwas in unserem Shop nicht?</p>
+
+					
+
+					
+				</div>
+			</div>
+		</div>
+        
+		<h4 class="nocss_label">Aktionen:</h4>
+        	
+		<ul class="forumactionlinks td">
+			<li class="forumactionlink rsslink"><a rel="nofollow" href="https://forum.mindfactory.de/external.php?type=RSS2&amp;forumids=30" title="RSS-Feed dieses Forums anzeigen">RSS-Feed dieses Forums anzeigen</a></li>
+			
+		</ul>
+		
+        <h4 class="nocss_label">Statistik:</h4>
+		<ul class="forumstats td">
+			<li>Themen: 955</li>
+			<li>Beiträge: 6.148</li>
+		</ul>
+		<div class="forumlastpost td">
+			<h4 class="lastpostlabel">Letzter Beitrag:</h4>
+			<div>
+				
+	<p class="lastposttitle">
+	<img src="images/icons/icon1.png" class="postimg" alt="" border="0" />
+	
+	<a href="https://forum.mindfactory.de/t85711-finanzierung.html" class="threadtitle" >Finanzierung</a>
+	<a href="https://forum.mindfactory.de/t85711-finanzierung-post1003248.html#post1003248"><img src="images/buttons/lastpost-right.png" alt="Gehe zum letzten Beitrag" /></a>
+	</p>
+	<div class="lastpostby">
+	
+		von <div class="popupmenu memberaction">
+	<a rel="nofollow" class="username offline " href="https://forum.mindfactory.de/member32898.html" title="BOGA50 ist offline"><strong>BOGA50</strong></a>
+	
+</div>
+	
+	</div>
+	<p class="lastpostdate">03.12.2014, <span class="time">11:36</span></p>
+
+			</div>
+		</div>
+        
+	</div>
+	
+</li><li id="forum23" class="forumbit_post old_lock L2">
+	<div class="forumrow table">
+		<div class="foruminfo td">
+			<img src="images/mf/statusicon/forum_old_lock-48.png" class="forumicon" id="forum_statusicon_23" alt="" />
+			<div class="forumdata">
+				<div class="datacontainer">
+					<div class="titleline">
+						<h2 class="forumtitle"><a href="https://forum.mindfactory.de/f23-anregungen-verbesserungsvorschlaege">Anregungen und Verbesserungsvorschläge</a></h2>
+						
+					</div>
+					<p class="forumdescription">Hier könnt ihr Anregungen und Verbesserungen los werden</p>
+
+					
+
+					
+				</div>
+			</div>
+		</div>
+        
+		<h4 class="nocss_label">Aktionen:</h4>
+        	
+		<ul class="forumactionlinks td">
+			<li class="forumactionlink rsslink"><a rel="nofollow" href="https://forum.mindfactory.de/external.php?type=RSS2&amp;forumids=23" title="RSS-Feed dieses Forums anzeigen">RSS-Feed dieses Forums anzeigen</a></li>
+			
+		</ul>
+		
+        <h4 class="nocss_label">Statistik:</h4>
+		<ul class="forumstats td">
+			<li>Themen: 730</li>
+			<li>Beiträge: 7.021</li>
+		</ul>
+		<div class="forumlastpost td">
+			<h4 class="lastpostlabel">Letzter Beitrag:</h4>
+			<div>
+				
+	<p class="lastposttitle">
+	<img src="images/icons/icon1.png" class="postimg" alt="" border="0" />
+	
+	<a href="https://forum.mindfactory.de/t77441-faq-wiki-thread.html" class="threadtitle" >der faq/wiki thread</a>
+	<a href="https://forum.mindfactory.de/t77441-faq-wiki-thread-post1003410.html#post1003410"><img src="images/buttons/lastpost-right.png" alt="Gehe zum letzten Beitrag" /></a>
+	</p>
+	<div class="lastpostby">
+	
+		von <div class="popupmenu memberaction">
+	<a rel="nofollow" class="username offline " href="https://forum.mindfactory.de/member20352.html" title="Anne ist offline"><strong>Anne</strong></a>
+	
+</div>
+	
+	</div>
+	<p class="lastpostdate">03.12.2014, <span class="time">20:53</span></p>
+
+			</div>
+		</div>
+        
+	</div>
+	
+</li>
+	</ol>
+	
+</li><li class="forumbit_nopost old_lock L1" id="cat299">
+	<div class="forumhead foruminfo L1 collapse">
+		<h2>
+			<span class="forumtitle"><a href="https://forum.mindfactory.de/f299-reviews">Reviews</a></span>
+			<span class="forumthreadpost">Themen / Beiträge&nbsp;</span>
+			<span class="forumlastpost">Letzter Beitrag</span>
+		
+			<a class="collapse" id="collapse_c_cat299" href="https://forum.mindfactory.de/forum.php#top"><img src="images/buttons/collapse_40b.png" alt="" /></a>
+		
+		</h2>
+
+		
+	</div>
+	
+	<ol id="c_cat299" class="childforum">
+		<li id="forum300" class="forumbit_post old_lock L2">
+	<div class="forumrow table">
+		<div class="foruminfo td">
+			<img src="images/mf/statusicon/forum_old_lock-48.png" class="forumicon" id="forum_statusicon_300" alt="" />
+			<div class="forumdata">
+				<div class="datacontainer">
+					<div class="titleline">
+						<h2 class="forumtitle"><a href="https://forum.mindfactory.de/f300-pc-komplettsysteme-note-netbooks">PC Komplettsysteme,  Note- &amp; Netbooks</a></h2>
+						
+					</div>
+					<p class="forumdescription">Reviews für Komplettsysteme Note- und Netbooks</p>
+
+					
+
+					
+				</div>
+			</div>
+		</div>
+        
+		<h4 class="nocss_label">Aktionen:</h4>
+        	
+		<ul class="forumactionlinks td">
+			<li class="forumactionlink rsslink"><a rel="nofollow" href="https://forum.mindfactory.de/external.php?type=RSS2&amp;forumids=300" title="RSS-Feed dieses Forums anzeigen">RSS-Feed dieses Forums anzeigen</a></li>
+			
+		</ul>
+		
+        <h4 class="nocss_label">Statistik:</h4>
+		<ul class="forumstats td">
+			<li>Themen: 38</li>
+			<li>Beiträge: 409</li>
+		</ul>
+		<div class="forumlastpost td">
+			<h4 class="lastpostlabel">Letzter Beitrag:</h4>
+			<div>
+				
+	<p class="lastposttitle">
+	<img src="images/icons/icon1.png" class="postimg" alt="" border="0" />
+	
+	<a href="https://forum.mindfactory.de/t66872-review-notebook-dell-vostro-3350-13-3-a.html" class="threadtitle" >[Review] [Notebook] Dell Vostro 3350 13,3&quot;</a>
+	<a href="https://forum.mindfactory.de/t66872-review-notebook-dell-vostro-3350-13-3-a-post971772.html#post971772"><img src="images/buttons/lastpost-right.png" alt="Gehe zum letzten Beitrag" /></a>
+	</p>
+	<div class="lastpostby">
+	
+		von <div class="popupmenu memberaction">
+	<a rel="nofollow" class="username offline " href="https://forum.mindfactory.de/member33308.html" title="NeveR ist offline"><strong>NeveR</strong></a>
+	
+</div>
+	
+	</div>
+	<p class="lastpostdate">07.05.2014, <span class="time">22:32</span></p>
+
+			</div>
+		</div>
+        
+	</div>
+	
+</li><li id="forum301" class="forumbit_post old_lock L2">
+	<div class="forumrow table">
+		<div class="foruminfo td">
+			<img src="images/mf/statusicon/forum_old_lock-48.png" class="forumicon" id="forum_statusicon_301" alt="" />
+			<div class="forumdata">
+				<div class="datacontainer">
+					<div class="titleline">
+						<h2 class="forumtitle"><a href="https://forum.mindfactory.de/f301-pc-komponenten">PC Komponenten</a></h2>
+						<span class="viewing">(2 Betrachter)</span>
+					</div>
+					<p class="forumdescription">hier sind Reviews zu PC Komponenten</p>
+
+					
+
+					
+				</div>
+			</div>
+		</div>
+        
+		<h4 class="nocss_label">Aktionen:</h4>
+        	
+		<ul class="forumactionlinks td">
+			<li class="forumactionlink rsslink"><a rel="nofollow" href="https://forum.mindfactory.de/external.php?type=RSS2&amp;forumids=301" title="RSS-Feed dieses Forums anzeigen">RSS-Feed dieses Forums anzeigen</a></li>
+			
+		</ul>
+		
+        <h4 class="nocss_label">Statistik:</h4>
+		<ul class="forumstats td">
+			<li>Themen: 269</li>
+			<li>Beiträge: 2.378</li>
+		</ul>
+		<div class="forumlastpost td">
+			<h4 class="lastpostlabel">Letzter Beitrag:</h4>
+			<div>
+				
+	<p class="lastposttitle">
+	<img src="images/icons/icon1.png" class="postimg" alt="" border="0" />
+	
+	<a href="https://forum.mindfactory.de/t75295-review-ac-accelero-hybrid-vga-cooler.html" class="threadtitle" >REVIEW: AC Accelero Hybrid VGA Cooler</a>
+	<a href="https://forum.mindfactory.de/t75295-review-ac-accelero-hybrid-vga-cooler-post980586.html#post980586"><img src="images/buttons/lastpost-right.png" alt="Gehe zum letzten Beitrag" /></a>
+	</p>
+	<div class="lastpostby">
+	
+		von <div class="popupmenu memberaction">
+	<a rel="nofollow" class="username offline " href="https://forum.mindfactory.de/member17648.html" title="rbn ist offline"><strong>rbn</strong></a>
+	
+</div>
+	
+	</div>
+	<p class="lastpostdate">06.07.2014, <span class="time">17:01</span></p>
+
+			</div>
+		</div>
+        
+	</div>
+	
+</li><li id="forum302" class="forumbit_post old_lock L2">
+	<div class="forumrow table">
+		<div class="foruminfo td">
+			<img src="images/mf/statusicon/forum_old_lock-48.png" class="forumicon" id="forum_statusicon_302" alt="" />
+			<div class="forumdata">
+				<div class="datacontainer">
+					<div class="titleline">
+						<h2 class="forumtitle"><a href="https://forum.mindfactory.de/f302-pc-umgebung-peripherie">PC Umgebung und  Peripherie</a></h2>
+						<span class="viewing">(1 Betrachter)</span>
+					</div>
+					<p class="forumdescription">Reviews zu allem rund um den PC</p>
+
+					
+
+					
+				</div>
+			</div>
+		</div>
+        
+		<h4 class="nocss_label">Aktionen:</h4>
+        	
+		<ul class="forumactionlinks td">
+			<li class="forumactionlink rsslink"><a rel="nofollow" href="https://forum.mindfactory.de/external.php?type=RSS2&amp;forumids=302" title="RSS-Feed dieses Forums anzeigen">RSS-Feed dieses Forums anzeigen</a></li>
+			
+		</ul>
+		
+        <h4 class="nocss_label">Statistik:</h4>
+		<ul class="forumstats td">
+			<li>Themen: 165</li>
+			<li>Beiträge: 925</li>
+		</ul>
+		<div class="forumlastpost td">
+			<h4 class="lastpostlabel">Letzter Beitrag:</h4>
+			<div>
+				
+	<p class="lastposttitle">
+	<img src="images/icons/icon1.png" class="postimg" alt="" border="0" />
+	
+	<a href="https://forum.mindfactory.de/t85790-review-maus-strix-claw-glide-control-mauspad.html" class="threadtitle" >[Review] [Maus] Strix Claw + Glide Control Mauspad</a>
+	<a href="https://forum.mindfactory.de/t85790-review-maus-strix-claw-glide-control-mauspad-post1004123.html#post1004123"><img src="images/buttons/lastpost-right.png" alt="Gehe zum letzten Beitrag" /></a>
+	</p>
+	<div class="lastpostby">
+	
+		von <div class="popupmenu memberaction">
+	<a rel="nofollow" class="username offline " href="https://forum.mindfactory.de/member36553.html" title="MarloParlo ist offline"><strong>MarloParlo</strong></a>
+	
+</div>
+	
+	</div>
+	<p class="lastpostdate">05.12.2014, <span class="time">20:42</span></p>
+
+			</div>
+		</div>
+        
+	</div>
+	
+</li><li id="forum303" class="forumbit_post old_lock L2">
+	<div class="forumrow table">
+		<div class="foruminfo td">
+			<img src="images/mf/statusicon/forum_old_lock-48.png" class="forumicon" id="forum_statusicon_303" alt="" />
+			<div class="forumdata">
+				<div class="datacontainer">
+					<div class="titleline">
+						<h2 class="forumtitle"><a href="https://forum.mindfactory.de/f303-software-spiele">Software &amp; Spiele</a></h2>
+						
+					</div>
+					<p class="forumdescription">Reviews zu Software und Spielen</p>
+
+					
+
+					
+				</div>
+			</div>
+		</div>
+        
+		<h4 class="nocss_label">Aktionen:</h4>
+        	
+		<ul class="forumactionlinks td">
+			<li class="forumactionlink rsslink"><a rel="nofollow" href="https://forum.mindfactory.de/external.php?type=RSS2&amp;forumids=303" title="RSS-Feed dieses Forums anzeigen">RSS-Feed dieses Forums anzeigen</a></li>
+			
+		</ul>
+		
+        <h4 class="nocss_label">Statistik:</h4>
+		<ul class="forumstats td">
+			<li>Themen: 6</li>
+			<li>Beiträge: 34</li>
+		</ul>
+		<div class="forumlastpost td">
+			<h4 class="lastpostlabel">Letzter Beitrag:</h4>
+			<div>
+				
+	<p class="lastposttitle">
+	<img src="images/icons/icon1.png" class="postimg" alt="" border="0" />
+	
+	<a href="https://forum.mindfactory.de/t81883-review-fibunet-buchhaltunggssoftware.html" class="threadtitle" >[Review] Fibunet Buchhaltunggssoftware</a>
+	<a href="https://forum.mindfactory.de/t81883-review-fibunet-buchhaltunggssoftware-post980584.html#post980584"><img src="images/buttons/lastpost-right.png" alt="Gehe zum letzten Beitrag" /></a>
+	</p>
+	<div class="lastpostby">
+	
+		von <div class="popupmenu memberaction">
+	<a rel="nofollow" class="username offline " href="https://forum.mindfactory.de/member17648.html" title="rbn ist offline"><strong>rbn</strong></a>
+	
+</div>
+	
+	</div>
+	<p class="lastpostdate">06.07.2014, <span class="time">16:53</span></p>
+
+			</div>
+		</div>
+        
+	</div>
+	
+</li><li id="forum304" class="forumbit_post old_lock L2">
+	<div class="forumrow table">
+		<div class="foruminfo td">
+			<img src="images/mf/statusicon/forum_old_lock-48.png" class="forumicon" id="forum_statusicon_304" alt="" />
+			<div class="forumdata">
+				<div class="datacontainer">
+					<div class="titleline">
+						<h2 class="forumtitle"><a href="https://forum.mindfactory.de/f304-unterhaltungselektronik-haushaltsgeraete">Unterhaltungselektronik &amp; Haushaltsgeräte</a></h2>
+						
+					</div>
+					<p class="forumdescription">Reviews zu Unterhaltungselektronik und Haushaltsgeräten</p>
+
+					
+
+					
+				</div>
+			</div>
+		</div>
+        
+		<h4 class="nocss_label">Aktionen:</h4>
+        	
+		<ul class="forumactionlinks td">
+			<li class="forumactionlink rsslink"><a rel="nofollow" href="https://forum.mindfactory.de/external.php?type=RSS2&amp;forumids=304" title="RSS-Feed dieses Forums anzeigen">RSS-Feed dieses Forums anzeigen</a></li>
+			
+		</ul>
+		
+        <h4 class="nocss_label">Statistik:</h4>
+		<ul class="forumstats td">
+			<li>Themen: 17</li>
+			<li>Beiträge: 182</li>
+		</ul>
+		<div class="forumlastpost td">
+			<h4 class="lastpostlabel">Letzter Beitrag:</h4>
+			<div>
+				
+	<p class="lastposttitle">
+	<img src="images/icons/icon14.png" class="postimg" alt="Daumen hoch" border="0" />
+	
+	<a href="https://forum.mindfactory.de/t77949-review-schreiben-5-eur-mf-gutschein-erhalten.html" class="threadtitle" >Review schreiben und 5,- EUR MF-Gutschein erhalten</a>
+	<a href="https://forum.mindfactory.de/t77949-review-schreiben-5-eur-mf-gutschein-erhalten-post937877.html#post937877"><img src="images/buttons/lastpost-right.png" alt="Gehe zum letzten Beitrag" /></a>
+	</p>
+	<div class="lastpostby">
+	
+		von <div class="popupmenu memberaction">
+	<a rel="nofollow" class="username online " href="https://forum.mindfactory.de/member4129.html" title="Witala ist gerade online"><strong>Witala</strong></a>
+	
+</div>
+	
+	</div>
+	<p class="lastpostdate">01.11.2013, <span class="time">10:09</span></p>
+
+			</div>
+		</div>
+        
+	</div>
+	
+</li>
+	</ol>
+	
+</li><li class="forumbit_nopost old_lock L1" id="cat260">
+	<div class="forumhead foruminfo L1 collapse">
+		<h2>
+			<span class="forumtitle"><a href="https://forum.mindfactory.de/f260-komplettsysteme">Komplettsysteme</a></span>
+			<span class="forumthreadpost">Themen / Beiträge&nbsp;</span>
+			<span class="forumlastpost">Letzter Beitrag</span>
+		
+			<a class="collapse" id="collapse_c_cat260" href="https://forum.mindfactory.de/forum.php#top"><img src="images/buttons/collapse_40b.png" alt="" /></a>
+		
+		</h2>
+
+		
+	</div>
+	
+	<ol id="c_cat260" class="childforum">
+		<li id="forum45" class="forumbit_post old_lock L2">
+	<div class="forumrow table">
+		<div class="foruminfo td">
+			<img src="images/mf/statusicon/forum_old_lock-48.png" class="forumicon" id="forum_statusicon_45" alt="" />
+			<div class="forumdata">
+				<div class="datacontainer">
+					<div class="titleline">
+						<h2 class="forumtitle"><a href="https://forum.mindfactory.de/f45-pc-konfigurationen">PC-Konfigurationen</a></h2>
+						<span class="viewing">(5 Betrachter)</span>
+					</div>
+					<p class="forumdescription">Sind sie sich nicht sicher ob Ihre ausgewählten Komponenten kompatibel sind? Wir und erfahrene Forenuser helfen Ihnen gern.</p>
+
+					
+
+					
+				</div>
+			</div>
+		</div>
+        
+		<h4 class="nocss_label">Aktionen:</h4>
+        	
+		<ul class="forumactionlinks td">
+			<li class="forumactionlink rsslink"><a rel="nofollow" href="https://forum.mindfactory.de/external.php?type=RSS2&amp;forumids=45" title="RSS-Feed dieses Forums anzeigen">RSS-Feed dieses Forums anzeigen</a></li>
+			
+		</ul>
+		
+        <h4 class="nocss_label">Statistik:</h4>
+		<ul class="forumstats td">
+			<li>Themen: 7.269</li>
+			<li>Beiträge: 133.352</li>
+		</ul>
+		<div class="forumlastpost td">
+			<h4 class="lastpostlabel">Letzter Beitrag:</h4>
+			<div>
+				
+	<p class="lastposttitle">
+	<img src="images/icons/icon1.png" class="postimg" alt="" border="0" />
+	
+	<a href="https://forum.mindfactory.de/t85880-gaming-pc-900-a.html" class="threadtitle" >Gaming pc bis 900€</a>
+	<a href="https://forum.mindfactory.de/t85880-gaming-pc-900-a-post1004959.html#post1004959"><img src="images/buttons/lastpost-right.png" alt="Gehe zum letzten Beitrag" /></a>
+	</p>
+	<div class="lastpostby">
+	
+		von <div class="popupmenu memberaction">
+	<a rel="nofollow" class="username offline " href="https://forum.mindfactory.de/member1096.html" title="Max ist offline"><strong>Max</strong></a>
+	
+</div>
+	
+	</div>
+	<p class="lastpostdate">Heute, <span class="time">17:48</span></p>
+
+			</div>
+		</div>
+        
+	</div>
+	
+</li><li id="forum46" class="forumbit_post old_lock L2">
+	<div class="forumrow table">
+		<div class="foruminfo td">
+			<img src="images/mf/statusicon/forum_old_lock-48.png" class="forumicon" id="forum_statusicon_46" alt="" />
+			<div class="forumdata">
+				<div class="datacontainer">
+					<div class="titleline">
+						<h2 class="forumtitle"><a href="https://forum.mindfactory.de/f46-komplettsysteme-mf">Komplettsysteme von MF</a></h2>
+						
+					</div>
+					<p class="forumdescription">Komplettsysteme von Mindfactory</p>
+
+					
+
+					
+				</div>
+			</div>
+		</div>
+        
+		<h4 class="nocss_label">Aktionen:</h4>
+        	
+		<ul class="forumactionlinks td">
+			<li class="forumactionlink rsslink"><a rel="nofollow" href="https://forum.mindfactory.de/external.php?type=RSS2&amp;forumids=46" title="RSS-Feed dieses Forums anzeigen">RSS-Feed dieses Forums anzeigen</a></li>
+			
+		</ul>
+		
+        <h4 class="nocss_label">Statistik:</h4>
+		<ul class="forumstats td">
+			<li>Themen: 172</li>
+			<li>Beiträge: 2.790</li>
+		</ul>
+		<div class="forumlastpost td">
+			<h4 class="lastpostlabel">Letzter Beitrag:</h4>
+			<div>
+				
+	<p class="lastposttitle">
+	<img src="images/icons/icon1.png" class="postimg" alt="" border="0" />
+	
+	<a href="https://forum.mindfactory.de/t85437-zotac-mini-pc-welchen-nehmen.html" class="threadtitle" >Zotac Mini PC....welchen nehmen</a>
+	<a href="https://forum.mindfactory.de/t85437-zotac-mini-pc-welchen-nehmen-post1000947.html#post1000947"><img src="images/buttons/lastpost-right.png" alt="Gehe zum letzten Beitrag" /></a>
+	</p>
+	<div class="lastpostby">
+	
+		von <div class="popupmenu memberaction">
+	<a rel="nofollow" class="username offline " href="https://forum.mindfactory.de/member24022.html" title="Ralf1963 ist offline"><strong>Ralf1963</strong></a>
+	
+</div>
+	
+	</div>
+	<p class="lastpostdate">21.11.2014, <span class="time">15:17</span></p>
+
+			</div>
+		</div>
+        
+	</div>
+	
+</li><li id="forum295" class="forumbit_post old_lock L2">
+	<div class="forumrow table">
+		<div class="foruminfo td">
+			<img src="images/mf/statusicon/forum_old_lock-48.png" class="forumicon" id="forum_statusicon_295" alt="" />
+			<div class="forumdata">
+				<div class="datacontainer">
+					<div class="titleline">
+						<h2 class="forumtitle"><a href="https://forum.mindfactory.de/f295-probleme-rechner">Probleme mit dem Rechner?</a></h2>
+						<span class="viewing">(4 Betrachter)</span>
+					</div>
+					<p class="forumdescription">Hier helfen User Usern</p>
+
+					
+
+					
+				</div>
+			</div>
+		</div>
+        
+		<h4 class="nocss_label">Aktionen:</h4>
+        	
+		<ul class="forumactionlinks td">
+			<li class="forumactionlink rsslink"><a rel="nofollow" href="https://forum.mindfactory.de/external.php?type=RSS2&amp;forumids=295" title="RSS-Feed dieses Forums anzeigen">RSS-Feed dieses Forums anzeigen</a></li>
+			
+		</ul>
+		
+        <h4 class="nocss_label">Statistik:</h4>
+		<ul class="forumstats td">
+			<li>Themen: 1.573</li>
+			<li>Beiträge: 23.207</li>
+		</ul>
+		<div class="forumlastpost td">
+			<h4 class="lastpostlabel">Letzter Beitrag:</h4>
+			<div>
+				
+	<p class="lastposttitle">
+	<img src="images/icons/icon1.png" class="postimg" alt="" border="0" />
+	
+	<a href="https://forum.mindfactory.de/t85893-pc-funktioniert-ausbau-grafikkarte-mehr.html" class="threadtitle" >PC funktioniert nach Ausbau der Grafikkarte nicht mehr!</a>
+	<a href="https://forum.mindfactory.de/t85893-pc-funktioniert-ausbau-grafikkarte-mehr-post1004965.html#post1004965"><img src="images/buttons/lastpost-right.png" alt="Gehe zum letzten Beitrag" /></a>
+	</p>
+	<div class="lastpostby">
+	
+		von <div class="popupmenu memberaction">
+	<a rel="nofollow" class="username online " href="https://forum.mindfactory.de/member36524.html" title="Raoul ist gerade online"><strong>Raoul</strong></a>
+	
+</div>
+	
+	</div>
+	<p class="lastpostdate">Heute, <span class="time">18:00</span></p>
+
+			</div>
+		</div>
+        
+	</div>
+	
+</li>
+	</ol>
+	
+</li><li class="forumbit_nopost old_lock L1" id="cat261">
+	<div class="forumhead foruminfo L1 collapse">
+		<h2>
+			<span class="forumtitle"><a href="https://forum.mindfactory.de/f261-komponenten-rund-um-pc">Komponenten rund um den PC</a></span>
+			<span class="forumthreadpost">Themen / Beiträge&nbsp;</span>
+			<span class="forumlastpost">Letzter Beitrag</span>
+		
+			<a class="collapse" id="collapse_c_cat261" href="https://forum.mindfactory.de/forum.php#top"><img src="images/buttons/collapse_40b.png" alt="" /></a>
+		
+		</h2>
+
+		
+	</div>
+	
+	<ol id="c_cat261" class="childforum">
+		<li id="forum262" class="forumbit_post old_lock L2">
+	<div class="forumrow table">
+		<div class="foruminfo td">
+			<img src="images/mf/statusicon/forum_old_lock-48.png" class="forumicon" id="forum_statusicon_262" alt="" />
+			<div class="forumdata">
+				<div class="datacontainer">
+					<div class="titleline">
+						<h2 class="forumtitle"><a href="https://forum.mindfactory.de/f262-mainboards">Mainboards</a></h2>
+						<span class="viewing">(5 Betrachter)</span>
+					</div>
+					<p class="forumdescription">Fragen zu Mainboards</p>
+
+					
+
+					
+				</div>
+			</div>
+		</div>
+        
+		<h4 class="nocss_label">Aktionen:</h4>
+        	
+		<ul class="forumactionlinks td">
+			<li class="forumactionlink rsslink"><a rel="nofollow" href="https://forum.mindfactory.de/external.php?type=RSS2&amp;forumids=262" title="RSS-Feed dieses Forums anzeigen">RSS-Feed dieses Forums anzeigen</a></li>
+			
+		</ul>
+		
+        <h4 class="nocss_label">Statistik:</h4>
+		<ul class="forumstats td">
+			<li>Themen: 1.154</li>
+			<li>Beiträge: 12.795</li>
+		</ul>
+		<div class="forumlastpost td">
+			<h4 class="lastpostlabel">Letzter Beitrag:</h4>
+			<div>
+				
+	<p class="lastposttitle">
+	<img src="images/icons/icon1.png" class="postimg" alt="" border="0" />
+	
+	<a href="https://forum.mindfactory.de/t85876-beratung-mb-genug-gut-genug-andres.html" class="threadtitle" >Beratung: Ist mein MB genug/gut genug oder soll ein andres ?</a>
+	<a href="https://forum.mindfactory.de/t85876-beratung-mb-genug-gut-genug-andres-post1004782.html#post1004782"><img src="images/buttons/lastpost-right.png" alt="Gehe zum letzten Beitrag" /></a>
+	</p>
+	<div class="lastpostby">
+	
+		von <div class="popupmenu memberaction">
+	<a rel="nofollow" class="username offline " href="https://forum.mindfactory.de/member33450.html" title="Isabelle ist offline"><strong>Isabelle</strong></a>
+	
+</div>
+	
+	</div>
+	<p class="lastpostdate">Gestern, <span class="time">22:09</span></p>
+
+			</div>
+		</div>
+        
+	</div>
+	
+</li><li id="forum266" class="forumbit_post old_lock L2">
+	<div class="forumrow table">
+		<div class="foruminfo td">
+			<img src="images/mf/statusicon/forum_old_lock-48.png" class="forumicon" id="forum_statusicon_266" alt="" />
+			<div class="forumdata">
+				<div class="datacontainer">
+					<div class="titleline">
+						<h2 class="forumtitle"><a href="https://forum.mindfactory.de/f266-prozessoren-cpu">Prozessoren (CPU)</a></h2>
+						<span class="viewing">(2 Betrachter)</span>
+					</div>
+					<p class="forumdescription">Fragen zu Prozessoren</p>
+
+					
+
+					
+				</div>
+			</div>
+		</div>
+        
+		<h4 class="nocss_label">Aktionen:</h4>
+        	
+		<ul class="forumactionlinks td">
+			<li class="forumactionlink rsslink"><a rel="nofollow" href="https://forum.mindfactory.de/external.php?type=RSS2&amp;forumids=266" title="RSS-Feed dieses Forums anzeigen">RSS-Feed dieses Forums anzeigen</a></li>
+			
+		</ul>
+		
+        <h4 class="nocss_label">Statistik:</h4>
+		<ul class="forumstats td">
+			<li>Themen: 374</li>
+			<li>Beiträge: 5.749</li>
+		</ul>
+		<div class="forumlastpost td">
+			<h4 class="lastpostlabel">Letzter Beitrag:</h4>
+			<div>
+				
+	<p class="lastposttitle">
+	<img src="images/icons/icon1.png" class="postimg" alt="" border="0" />
+	
+	<a href="https://forum.mindfactory.de/t85817-passende-mainboard-fuer-intel-core-i3-4150-gesucht.html" class="threadtitle" >Passende Mainboard für die Intel Core i3 4150 gesucht</a>
+	<a href="https://forum.mindfactory.de/t85817-passende-mainboard-fuer-intel-core-i3-4150-gesucht-post1004220.html#post1004220"><img src="images/buttons/lastpost-right.png" alt="Gehe zum letzten Beitrag" /></a>
+	</p>
+	<div class="lastpostby">
+	
+		von <div class="popupmenu memberaction">
+	<a rel="nofollow" class="username offline " href="https://forum.mindfactory.de/member35565.html" title="SanxD ist offline"><strong>SanxD</strong></a>
+	
+</div>
+	
+	</div>
+	<p class="lastpostdate">06.12.2014, <span class="time">00:05</span></p>
+
+			</div>
+		</div>
+        
+	</div>
+	
+</li><li id="forum287" class="forumbit_post old_lock L2">
+	<div class="forumrow table">
+		<div class="foruminfo td">
+			<img src="images/mf/statusicon/forum_old_lock-48.png" class="forumicon" id="forum_statusicon_287" alt="" />
+			<div class="forumdata">
+				<div class="datacontainer">
+					<div class="titleline">
+						<h2 class="forumtitle"><a href="https://forum.mindfactory.de/f287-arbeitsspeicher-ram">Arbeitsspeicher (RAM)</a></h2>
+						<span class="viewing">(2 Betrachter)</span>
+					</div>
+					<p class="forumdescription">Fragen zu Arbeitsspeicher</p>
+
+					
+
+					
+				</div>
+			</div>
+		</div>
+        
+		<h4 class="nocss_label">Aktionen:</h4>
+        	
+		<ul class="forumactionlinks td">
+			<li class="forumactionlink rsslink"><a rel="nofollow" href="https://forum.mindfactory.de/external.php?type=RSS2&amp;forumids=287" title="RSS-Feed dieses Forums anzeigen">RSS-Feed dieses Forums anzeigen</a></li>
+			
+		</ul>
+		
+        <h4 class="nocss_label">Statistik:</h4>
+		<ul class="forumstats td">
+			<li>Themen: 1.207</li>
+			<li>Beiträge: 14.917</li>
+		</ul>
+		<div class="forumlastpost td">
+			<h4 class="lastpostlabel">Letzter Beitrag:</h4>
+			<div>
+				
+	<p class="lastposttitle">
+	<img src="images/icons/icon1.png" class="postimg" alt="" border="0" />
+	
+	<a href="https://forum.mindfactory.de/t85535-welcher-ram-passend-system.html" class="threadtitle" >Welcher RAM passend zum System</a>
+	<a href="https://forum.mindfactory.de/t85535-welcher-ram-passend-system-post1001662.html#post1001662"><img src="images/buttons/lastpost-right.png" alt="Gehe zum letzten Beitrag" /></a>
+	</p>
+	<div class="lastpostby">
+	
+		von <div class="popupmenu memberaction">
+	<a rel="nofollow" class="username offline " href="https://forum.mindfactory.de/member23856.html" title="madwursd ist offline"><strong>madwursd</strong></a>
+	
+</div>
+	
+	</div>
+	<p class="lastpostdate">25.11.2014, <span class="time">16:57</span></p>
+
+			</div>
+		</div>
+        
+	</div>
+	
+</li><li id="forum18" class="forumbit_post old_lock L2">
+	<div class="forumrow table">
+		<div class="foruminfo td">
+			<img src="images/mf/statusicon/forum_old_lock-48.png" class="forumicon" id="forum_statusicon_18" alt="" />
+			<div class="forumdata">
+				<div class="datacontainer">
+					<div class="titleline">
+						<h2 class="forumtitle"><a href="https://forum.mindfactory.de/f18-festplatten-ssds-laufwerke">Festplatten, SSDs &amp; Laufwerke</a></h2>
+						<span class="viewing">(1 Betrachter)</span>
+					</div>
+					<p class="forumdescription"><a onclick="_gaq.push(['_trackEvent', 'Outgoing', 'www.mindfactory.de', '/Hardware/Festplatten+%28HDD%29.html']);" href="http://www.mindfactory.de/Hardware/Festplatten+%28HDD%29.html" target=_blank>Festplatten</a>, <a onclick="_gaq.push(['_trackEvent', 'Outgoing', 'www.mindfactory.de', '/Hardware/Solid+State+Drives+%28SSD%29.htmll']);" href="http://www.mindfactory.de/Hardware/Solid+State+Drives+%28SSD%29.htmll" target=_blank>SSD</a>,<a onclick="_gaq.push(['_trackEvent', 'Outgoing', 'www.mindfactory.de', '/Hardware/Laufwerke+~+Medien/Diskettenlaufwerke.html']);" href="http://www.mindfactory.de/Hardware/Laufwerke+~+Medien/Diskettenlaufwerke.html"
+target=_blank>Diskettenlaufwerke</a>, <a onclick="_gaq.push(['_trackEvent', 'Outgoing', 'www.mindfactory.de', '/Hardware/Laufwerke+~+Medien/DVD.html']);" href="http://www.mindfactory.de/Hardware/Laufwerke+~+Medien/DVD.html" target=_blank>DVD</a> und <a onclick="_gaq.push(['_trackEvent', 'Outgoing', 'www.mindfactory.de', '/Hardware/Laufwerke+~+Medien/Blu-ray.html']);" href="http://www.mindfactory.de/Hardware/Laufwerke+~+Medien/Blu-ray.html" target=_blank>BlueRay</a> finden Sie ebenfalls in unserem Shop.</p>
+
+					
+
+					
+				</div>
+			</div>
+		</div>
+        
+		<h4 class="nocss_label">Aktionen:</h4>
+        	
+		<ul class="forumactionlinks td">
+			<li class="forumactionlink rsslink"><a rel="nofollow" href="https://forum.mindfactory.de/external.php?type=RSS2&amp;forumids=18" title="RSS-Feed dieses Forums anzeigen">RSS-Feed dieses Forums anzeigen</a></li>
+			
+		</ul>
+		
+        <h4 class="nocss_label">Statistik:</h4>
+		<ul class="forumstats td">
+			<li>Themen: 2.228</li>
+			<li>Beiträge: 27.301</li>
+		</ul>
+		<div class="forumlastpost td">
+			<h4 class="lastpostlabel">Letzter Beitrag:</h4>
+			<div>
+				
+	<p class="lastposttitle">
+	<img src="images/icons/icon1.png" class="postimg" alt="" border="0" />
+	
+	<a href="https://forum.mindfactory.de/t85615-hdd-einfach-so-anderen-pc-haengen.html" class="threadtitle" >HDD einfach so an anderen PC hängen?</a>
+	<a href="https://forum.mindfactory.de/t85615-hdd-einfach-so-anderen-pc-haengen-post1002862.html#post1002862"><img src="images/buttons/lastpost-right.png" alt="Gehe zum letzten Beitrag" /></a>
+	</p>
+	<div class="lastpostby">
+	
+		von <div class="popupmenu memberaction">
+	<a rel="nofollow" class="username offline " href="https://forum.mindfactory.de/member23856.html" title="madwursd ist offline"><strong>madwursd</strong></a>
+	
+</div>
+	
+	</div>
+	<p class="lastpostdate">01.12.2014, <span class="time">19:00</span></p>
+
+			</div>
+		</div>
+        
+	</div>
+	
+</li><li id="forum275" class="forumbit_post old_lock L2">
+	<div class="forumrow table">
+		<div class="foruminfo td">
+			<img src="images/mf/statusicon/forum_old_lock-48.png" class="forumicon" id="forum_statusicon_275" alt="" />
+			<div class="forumdata">
+				<div class="datacontainer">
+					<div class="titleline">
+						<h2 class="forumtitle"><a href="https://forum.mindfactory.de/f275-grafikkarten">Grafikkarten</a></h2>
+						<span class="viewing">(3 Betrachter)</span>
+					</div>
+					<p class="forumdescription">In unserem Shop finden Sie auch <a onclick="_gaq.push(['_trackEvent', 'Outgoing', 'www.mindfactory.de', '/Hardware/Grafikkarten+%28VGA%29.html']);" href="http://www.mindfactory.de/Hardware/Grafikkarten+%28VGA%29.html" target=_blank>Grafikkarten</a> und</p>
+
+					
+
+					
+				</div>
+			</div>
+		</div>
+        
+		<h4 class="nocss_label">Aktionen:</h4>
+        	
+		<ul class="forumactionlinks td">
+			<li class="forumactionlink rsslink"><a rel="nofollow" href="https://forum.mindfactory.de/external.php?type=RSS2&amp;forumids=275" title="RSS-Feed dieses Forums anzeigen">RSS-Feed dieses Forums anzeigen</a></li>
+			
+		</ul>
+		
+        <h4 class="nocss_label">Statistik:</h4>
+		<ul class="forumstats td">
+			<li>Themen: 1.916</li>
+			<li>Beiträge: 26.017</li>
+		</ul>
+		<div class="forumlastpost td">
+			<h4 class="lastpostlabel">Letzter Beitrag:</h4>
+			<div>
+				
+	<p class="lastposttitle">
+	<img src="images/icons/icon1.png" class="postimg" alt="" border="0" />
+	
+	<a href="https://forum.mindfactory.de/t85896-erfahrung-zotac-geforce-gtx-980-amp-edition.html" class="threadtitle" >Erfahrung mit der ZOTAC GeForce GTX 980 AMP! Edition?</a>
+	<a href="https://forum.mindfactory.de/t85896-erfahrung-zotac-geforce-gtx-980-amp-edition-post1004963.html#post1004963"><img src="images/buttons/lastpost-right.png" alt="Gehe zum letzten Beitrag" /></a>
+	</p>
+	<div class="lastpostby">
+	
+		von <div class="popupmenu memberaction">
+	<a rel="nofollow" class="username online " href="https://forum.mindfactory.de/member27229.html" title="DerGunsula ist gerade online"><strong>DerGunsula</strong></a>
+	
+</div>
+	
+	</div>
+	<p class="lastpostdate">Heute, <span class="time">17:56</span></p>
+
+			</div>
+		</div>
+        
+	</div>
+	
+</li><li id="forum17" class="forumbit_post old_lock L2">
+	<div class="forumrow table">
+		<div class="foruminfo td">
+			<img src="images/mf/statusicon/forum_old_lock-48.png" class="forumicon" id="forum_statusicon_17" alt="" />
+			<div class="forumdata">
+				<div class="datacontainer">
+					<div class="titleline">
+						<h2 class="forumtitle"><a href="https://forum.mindfactory.de/f17-tv-karten">TV-Karten</a></h2>
+						<span class="viewing">(2 Betrachter)</span>
+					</div>
+					<p class="forumdescription">In unserem Shop finden Sie auch <a onclick="_gaq.push(['_trackEvent', 'Outgoing', 'www.mindfactory.de', '/Hardware/TV-+und+Videokarten.html']);" href="http://www.mindfactory.de/Hardware/TV-+und+Videokarten.html" target=_blank>TV-Karten</a>.</p>
+
+					
+
+					
+				</div>
+			</div>
+		</div>
+        
+		<h4 class="nocss_label">Aktionen:</h4>
+        	
+		<ul class="forumactionlinks td">
+			<li class="forumactionlink rsslink"><a rel="nofollow" href="https://forum.mindfactory.de/external.php?type=RSS2&amp;forumids=17" title="RSS-Feed dieses Forums anzeigen">RSS-Feed dieses Forums anzeigen</a></li>
+			
+		</ul>
+		
+        <h4 class="nocss_label">Statistik:</h4>
+		<ul class="forumstats td">
+			<li>Themen: 1.944</li>
+			<li>Beiträge: 28.594</li>
+		</ul>
+		<div class="forumlastpost td">
+			<h4 class="lastpostlabel">Letzter Beitrag:</h4>
+			<div>
+				
+	<p class="lastposttitle">
+	<img src="images/icons/icon1.png" class="postimg" alt="" border="0" />
+	
+	<a href="https://forum.mindfactory.de/t82418-technisat-cablestar-hd2-spannungsversorgung.html" class="threadtitle" >Technisat Cablestar HD2 - Spannungsversorgung???</a>
+	<a href="https://forum.mindfactory.de/t82418-technisat-cablestar-hd2-spannungsversorgung-post979191.html#post979191"><img src="images/buttons/lastpost-right.png" alt="Gehe zum letzten Beitrag" /></a>
+	</p>
+	<div class="lastpostby">
+	
+		von <div class="popupmenu memberaction">
+	<a rel="nofollow" class="username offline " href="https://forum.mindfactory.de/member18493.html" title="Black &amp; White ist offline"><strong>Black &amp; White</strong></a>
+	
+</div>
+	
+	</div>
+	<p class="lastpostdate">26.06.2014, <span class="time">11:48</span></p>
+
+			</div>
+		</div>
+        
+	</div>
+	
+</li><li id="forum283" class="forumbit_post old_lock L2">
+	<div class="forumrow table">
+		<div class="foruminfo td">
+			<img src="images/mf/statusicon/forum_old_lock-48.png" class="forumicon" id="forum_statusicon_283" alt="" />
+			<div class="forumdata">
+				<div class="datacontainer">
+					<div class="titleline">
+						<h2 class="forumtitle"><a href="https://forum.mindfactory.de/f283-gehaeuse">Gehäuse</a></h2>
+						<span class="viewing">(1 Betrachter)</span>
+					</div>
+					<p class="forumdescription">Fragen zu Gehäusen</p>
+
+					
+
+					
+				</div>
+			</div>
+		</div>
+        
+		<h4 class="nocss_label">Aktionen:</h4>
+        	
+		<ul class="forumactionlinks td">
+			<li class="forumactionlink rsslink"><a rel="nofollow" href="https://forum.mindfactory.de/external.php?type=RSS2&amp;forumids=283" title="RSS-Feed dieses Forums anzeigen">RSS-Feed dieses Forums anzeigen</a></li>
+			
+		</ul>
+		
+        <h4 class="nocss_label">Statistik:</h4>
+		<ul class="forumstats td">
+			<li>Themen: 837</li>
+			<li>Beiträge: 9.362</li>
+		</ul>
+		<div class="forumlastpost td">
+			<h4 class="lastpostlabel">Letzter Beitrag:</h4>
+			<div>
+				
+	<p class="lastposttitle">
+	<img src="images/icons/icon1.png" class="postimg" alt="" border="0" />
+	
+	<a href="https://forum.mindfactory.de/t85877-gehaeuse-klein-mainboard-gross.html" class="threadtitle" >Gehäuse zu klein, Mainboard zu groß! Was nun?</a>
+	<a href="https://forum.mindfactory.de/t85877-gehaeuse-klein-mainboard-gross-post1004781.html#post1004781"><img src="images/buttons/lastpost-right.png" alt="Gehe zum letzten Beitrag" /></a>
+	</p>
+	<div class="lastpostby">
+	
+		von <div class="popupmenu memberaction">
+	<a rel="nofollow" class="username offline " href="https://forum.mindfactory.de/member12920.html" title="Maverick64 ist offline"><strong>Maverick64</strong></a>
+	
+</div>
+	
+	</div>
+	<p class="lastpostdate">Gestern, <span class="time">22:06</span></p>
+
+			</div>
+		</div>
+        
+	</div>
+	
+</li><li id="forum284" class="forumbit_post old_lock L2">
+	<div class="forumrow table">
+		<div class="foruminfo td">
+			<img src="images/mf/statusicon/forum_old_lock-48.png" class="forumicon" id="forum_statusicon_284" alt="" />
+			<div class="forumdata">
+				<div class="datacontainer">
+					<div class="titleline">
+						<h2 class="forumtitle"><a href="https://forum.mindfactory.de/f284-netzteile">Netzteile</a></h2>
+						<span class="viewing">(2 Betrachter)</span>
+					</div>
+					<p class="forumdescription">Fragen zu Netzteilen</p>
+
+					
+
+					
+				</div>
+			</div>
+		</div>
+        
+		<h4 class="nocss_label">Aktionen:</h4>
+        	
+		<ul class="forumactionlinks td">
+			<li class="forumactionlink rsslink"><a rel="nofollow" href="https://forum.mindfactory.de/external.php?type=RSS2&amp;forumids=284" title="RSS-Feed dieses Forums anzeigen">RSS-Feed dieses Forums anzeigen</a></li>
+			
+		</ul>
+		
+        <h4 class="nocss_label">Statistik:</h4>
+		<ul class="forumstats td">
+			<li>Themen: 867</li>
+			<li>Beiträge: 12.213</li>
+		</ul>
+		<div class="forumlastpost td">
+			<h4 class="lastpostlabel">Letzter Beitrag:</h4>
+			<div>
+				
+	<p class="lastposttitle">
+	<img src="images/icons/icon1.png" class="postimg" alt="" border="0" />
+	
+	<a href="https://forum.mindfactory.de/t85868-welches-netzteil-sollte-kaufen.html" class="threadtitle" >Welches Netzteil sollte ich kaufen?</a>
+	<a href="https://forum.mindfactory.de/t85868-welches-netzteil-sollte-kaufen-post1004967.html#post1004967"><img src="images/buttons/lastpost-right.png" alt="Gehe zum letzten Beitrag" /></a>
+	</p>
+	<div class="lastpostby">
+	
+		von <div class="popupmenu memberaction">
+	<a rel="nofollow" class="username online " href="https://forum.mindfactory.de/member36446.html" title="Sp1derschwein ist gerade online"><strong>Sp1derschwein</strong></a>
+	
+</div>
+	
+	</div>
+	<p class="lastpostdate">Heute, <span class="time">18:18</span></p>
+
+			</div>
+		</div>
+        
+	</div>
+	
+</li><li id="forum15" class="forumbit_post old_lock L2">
+	<div class="forumrow table">
+		<div class="foruminfo td">
+			<img src="images/mf/statusicon/forum_old_lock-48.png" class="forumicon" id="forum_statusicon_15" alt="" />
+			<div class="forumdata">
+				<div class="datacontainer">
+					<div class="titleline">
+						<h2 class="forumtitle"><a href="https://forum.mindfactory.de/f15-luftkuehlung">Luftkühlung</a></h2>
+						<span class="viewing">(1 Betrachter)</span>
+					</div>
+					<p class="forumdescription">Fragen zur Kühlung (Luft)</p>
+
+					
+
+					
+				</div>
+			</div>
+		</div>
+        
+		<h4 class="nocss_label">Aktionen:</h4>
+        	
+		<ul class="forumactionlinks td">
+			<li class="forumactionlink rsslink"><a rel="nofollow" href="https://forum.mindfactory.de/external.php?type=RSS2&amp;forumids=15" title="RSS-Feed dieses Forums anzeigen">RSS-Feed dieses Forums anzeigen</a></li>
+			
+		</ul>
+		
+        <h4 class="nocss_label">Statistik:</h4>
+		<ul class="forumstats td">
+			<li>Themen: 1.997</li>
+			<li>Beiträge: 28.787</li>
+		</ul>
+		<div class="forumlastpost td">
+			<h4 class="lastpostlabel">Letzter Beitrag:</h4>
+			<div>
+				
+	<p class="lastposttitle">
+	<img src="images/icons/icon1.png" class="postimg" alt="" border="0" />
+	
+	<a href="https://forum.mindfactory.de/t85875-corsair-sp120-schwere-montage.html" class="threadtitle" >Corsair SP120 schwere Montage</a>
+	<a href="https://forum.mindfactory.de/t85875-corsair-sp120-schwere-montage-post1004920.html#post1004920"><img src="images/buttons/lastpost-right.png" alt="Gehe zum letzten Beitrag" /></a>
+	</p>
+	<div class="lastpostby">
+	
+		von <div class="popupmenu memberaction">
+	<a rel="nofollow" class="username offline " href="https://forum.mindfactory.de/member36520.html" title="khajit1906 ist offline"><strong>khajit1906</strong></a>
+	
+</div>
+	
+	</div>
+	<p class="lastpostdate">Heute, <span class="time">14:37</span></p>
+
+			</div>
+		</div>
+        
+	</div>
+	
+</li><li id="forum76" class="forumbit_post old_lock L2">
+	<div class="forumrow table">
+		<div class="foruminfo td">
+			<img src="images/mf/statusicon/forum_old_lock-48.png" class="forumicon" id="forum_statusicon_76" alt="" />
+			<div class="forumdata">
+				<div class="datacontainer">
+					<div class="titleline">
+						<h2 class="forumtitle"><a href="https://forum.mindfactory.de/f76-wasserkuehlung">Wasserkühlung</a></h2>
+						
+					</div>
+					<p class="forumdescription"><a onclick="_gaq.push(['_trackEvent', 'Outgoing', 'www.mindfactory.de', '/Hardware/Kuehlung+Wasser+%28WaKue%29.html']);" href="http://www.mindfactory.de/Hardware/Kuehlung+Wasser+%28WaKue%29.html" target=_blank>Wasserkühlung</a>  in unserem Shop!</p>
+
+					
+
+					
+				</div>
+			</div>
+		</div>
+        
+		<h4 class="nocss_label">Aktionen:</h4>
+        	
+		<ul class="forumactionlinks td">
+			<li class="forumactionlink rsslink"><a rel="nofollow" href="https://forum.mindfactory.de/external.php?type=RSS2&amp;forumids=76" title="RSS-Feed dieses Forums anzeigen">RSS-Feed dieses Forums anzeigen</a></li>
+			
+		</ul>
+		
+        <h4 class="nocss_label">Statistik:</h4>
+		<ul class="forumstats td">
+			<li>Themen: 121</li>
+			<li>Beiträge: 2.133</li>
+		</ul>
+		<div class="forumlastpost td">
+			<h4 class="lastpostlabel">Letzter Beitrag:</h4>
+			<div>
+				
+	<p class="lastposttitle">
+	<img src="images/icons/icon1.png" class="postimg" alt="" border="0" />
+	
+	<a href="https://forum.mindfactory.de/t85835-leise-starke-cpu-wasserkuehlung-gesucht-max-150-a.html" class="threadtitle" >Leise aber starke CPU-Wasserkühlung gesucht (max. 150€)</a>
+	<a href="https://forum.mindfactory.de/t85835-leise-starke-cpu-wasserkuehlung-gesucht-max-150-a-post1004413.html#post1004413"><img src="images/buttons/lastpost-right.png" alt="Gehe zum letzten Beitrag" /></a>
+	</p>
+	<div class="lastpostby">
+	
+		von <div class="popupmenu memberaction">
+	<a rel="nofollow" class="username offline " href="https://forum.mindfactory.de/member5817.html" title="BigWhoop ist offline"><strong>BigWhoop</strong></a>
+	
+</div>
+	
+	</div>
+	<p class="lastpostdate">07.12.2014, <span class="time">10:35</span></p>
+
+			</div>
+		</div>
+        
+	</div>
+	
+</li>
+	</ol>
+	
+</li><li class="forumbit_nopost old_lock L1" id="cat253">
+	<div class="forumhead foruminfo L1 collapse">
+		<h2>
+			<span class="forumtitle"><a href="https://forum.mindfactory.de/f253-pc-peripherie-umzu">PC Peripherie und umzu</a></span>
+			<span class="forumthreadpost">Themen / Beiträge&nbsp;</span>
+			<span class="forumlastpost">Letzter Beitrag</span>
+		
+			<a class="collapse" id="collapse_c_cat253" href="https://forum.mindfactory.de/forum.php#top"><img src="images/buttons/collapse_40b.png" alt="" /></a>
+		
+		</h2>
+
+		
+		<div class="forumrowdata">
+			<p class="subforumdescription">Alles was außerhalb des Gehäuses benötigt wird.</p>
+			
+		</div>
+		
+	</div>
+	
+	<ol id="c_cat253" class="childforum">
+		<li id="forum179" class="forumbit_post old_lock L2">
+	<div class="forumrow table">
+		<div class="foruminfo td">
+			<img src="images/mf/statusicon/forum_old_lock-48.png" class="forumicon" id="forum_statusicon_179" alt="" />
+			<div class="forumdata">
+				<div class="datacontainer">
+					<div class="titleline">
+						<h2 class="forumtitle"><a href="https://forum.mindfactory.de/f179-eingabegeraete">Eingabegeräte</a></h2>
+						
+					</div>
+					<p class="forumdescription"><a onclick="_gaq.push(['_trackEvent', 'Outgoing', 'www.mindfactory.de', '/Hardware/Eingabegeraete/Tastaturen.html']);" href="http://www.mindfactory.de/Hardware/Eingabegeraete/Tastaturen.html" target=_blank>Tastaturen</a>, <a onclick="_gaq.push(['_trackEvent', 'Outgoing', 'www.mindfactory.de', '/Hardware/Eingabegeraete/Maeuse.html']);" href="http://www.mindfactory.de/Hardware/Eingabegeraete/Maeuse.html" target=_blank>Mäuse</a>, <a onclick="_gaq.push(['_trackEvent', 'Outgoing', 'www.mindfactory.de', '/Hardware/Eingabegeraete/Grafiktabletts.html']);" href="http://www.mindfactory.de/Hardware/Eingabegeraete/Grafiktabletts.html" target=_blank>Grafiktabletts</a>, <a onclick="_gaq.push(['_trackEvent', 'Outgoing', 'www.mindfactory.de', '/Hardware/Eingabegeraete/Gamepads.html']);" href="http://www.mindfactory.de/Hardware/Eingabegeraete/Gamepads.html" target=_blank>Joysticks</a> und <a onclick="_gaq.push(['_trackEvent', 'Outgoing', 'www.mindfactory.de', '/Hardware/Eingabegeraete/Lenkraeder.html']);" href="http://www.mindfactory.de/Hardware/Eingabegeraete/Lenkraeder.html" target=_blank>Lenkräder</a> in unserem Shop</p>
+
+					
+
+					
+				</div>
+			</div>
+		</div>
+        
+		<h4 class="nocss_label">Aktionen:</h4>
+        	
+		<ul class="forumactionlinks td">
+			<li class="forumactionlink rsslink"><a rel="nofollow" href="https://forum.mindfactory.de/external.php?type=RSS2&amp;forumids=179" title="RSS-Feed dieses Forums anzeigen">RSS-Feed dieses Forums anzeigen</a></li>
+			
+		</ul>
+		
+        <h4 class="nocss_label">Statistik:</h4>
+		<ul class="forumstats td">
+			<li>Themen: 451</li>
+			<li>Beiträge: 5.474</li>
+		</ul>
+		<div class="forumlastpost td">
+			<h4 class="lastpostlabel">Letzter Beitrag:</h4>
+			<div>
+				
+	<p class="lastposttitle">
+	<img src="images/icons/icon1.png" class="postimg" alt="" border="0" />
+	
+	<a href="https://forum.mindfactory.de/t85827-peripherie-zusammengebautem-pc.html" class="threadtitle" >Peripherie bei zusammengebautem PC</a>
+	<a href="https://forum.mindfactory.de/t85827-peripherie-zusammengebautem-pc-post1004518.html#post1004518"><img src="images/buttons/lastpost-right.png" alt="Gehe zum letzten Beitrag" /></a>
+	</p>
+	<div class="lastpostby">
+	
+		von <div class="popupmenu memberaction">
+	<a rel="nofollow" class="username offline " href="https://forum.mindfactory.de/member26636.html" title="elnino ist offline"><strong>elnino</strong></a>
+	
+</div>
+	
+	</div>
+	<p class="lastpostdate">07.12.2014, <span class="time">18:58</span></p>
+
+			</div>
+		</div>
+        
+	</div>
+	
+</li><li id="forum22" class="forumbit_post old_lock L2">
+	<div class="forumrow table">
+		<div class="foruminfo td">
+			<img src="images/mf/statusicon/forum_old_lock-48.png" class="forumicon" id="forum_statusicon_22" alt="" />
+			<div class="forumdata">
+				<div class="datacontainer">
+					<div class="titleline">
+						<h2 class="forumtitle"><a href="https://forum.mindfactory.de/f22-drucker-scanner">Drucker &amp;  Scanner</a></h2>
+						<span class="viewing">(1 Betrachter)</span>
+					</div>
+					<p class="forumdescription"><a onclick="_gaq.push(['_trackEvent', 'Outgoing', 'www.mindfactory.de', '/Hardware/Drucker.html']);" href="http://www.mindfactory.de/Hardware/Drucker.html" target=_blank>Drucker</a> und <a onclick="_gaq.push(['_trackEvent', 'Outgoing', 'www.mindfactory.de', '/Hardware/Scanner.html']);" href="http://www.mindfactory.de/Hardware/Scanner.html" target=_blank>Scanner</a> finden Sie ebenfalls in unserem Shop!</p>
+
+					
+
+					
+				</div>
+			</div>
+		</div>
+        
+		<h4 class="nocss_label">Aktionen:</h4>
+        	
+		<ul class="forumactionlinks td">
+			<li class="forumactionlink rsslink"><a rel="nofollow" href="https://forum.mindfactory.de/external.php?type=RSS2&amp;forumids=22" title="RSS-Feed dieses Forums anzeigen">RSS-Feed dieses Forums anzeigen</a></li>
+			
+		</ul>
+		
+        <h4 class="nocss_label">Statistik:</h4>
+		<ul class="forumstats td">
+			<li>Themen: 345</li>
+			<li>Beiträge: 2.916</li>
+		</ul>
+		<div class="forumlastpost td">
+			<h4 class="lastpostlabel">Letzter Beitrag:</h4>
+			<div>
+				
+	<p class="lastposttitle">
+	<img src="images/icons/icon1.png" class="postimg" alt="" border="0" />
+	
+	<a href="https://forum.mindfactory.de/t85856-pixma-mg5250-scannen-ueber-w-lan-moeglich.html" class="threadtitle" >Pixma MG5250 - scannen über W-Lan nicht möglich</a>
+	<a href="https://forum.mindfactory.de/t85856-pixma-mg5250-scannen-ueber-w-lan-moeglich-post1004670.html#post1004670"><img src="images/buttons/lastpost-right.png" alt="Gehe zum letzten Beitrag" /></a>
+	</p>
+	<div class="lastpostby">
+	
+		von <div class="popupmenu memberaction">
+	<a rel="nofollow" class="username offline " href="https://forum.mindfactory.de/member5817.html" title="BigWhoop ist offline"><strong>BigWhoop</strong></a>
+	
+</div>
+	
+	</div>
+	<p class="lastpostdate">Gestern, <span class="time">14:11</span></p>
+
+			</div>
+		</div>
+        
+	</div>
+	
+</li><li id="forum21" class="forumbit_post old_lock L2">
+	<div class="forumrow table">
+		<div class="foruminfo td">
+			<img src="images/mf/statusicon/forum_old_lock-48.png" class="forumicon" id="forum_statusicon_21" alt="" />
+			<div class="forumdata">
+				<div class="datacontainer">
+					<div class="titleline">
+						<h2 class="forumtitle"><a href="https://forum.mindfactory.de/f21-displays">Displays</a></h2>
+						<span class="viewing">(1 Betrachter)</span>
+					</div>
+					<p class="forumdescription"><a onclick="_gaq.push(['_trackEvent', 'Outgoing', 'www.mindfactory.de', '/Hardware/Monitore+%28TFT%29.htmll']);" href="http://www.mindfactory.de/Hardware/Monitore+%28TFT%29.htmll" target=_blank>TFTs</a> in großer Auswahl und <a onclick="_gaq.push(['_trackEvent', 'Outgoing', 'www.mindfactory.de', '/Hardware/Monitore+%28TFT%29/Zubehoer+fuer+Monitore.html']);" href="http://www.mindfactory.de/Hardware/Monitore+%28TFT%29/Zubehoer+fuer+Monitore.html" target=_blank>Zubehör</a> in unserem Shop!</p>
+
+					
+
+					
+				</div>
+			</div>
+		</div>
+        
+		<h4 class="nocss_label">Aktionen:</h4>
+        	
+		<ul class="forumactionlinks td">
+			<li class="forumactionlink rsslink"><a rel="nofollow" href="https://forum.mindfactory.de/external.php?type=RSS2&amp;forumids=21" title="RSS-Feed dieses Forums anzeigen">RSS-Feed dieses Forums anzeigen</a></li>
+			
+		</ul>
+		
+        <h4 class="nocss_label">Statistik:</h4>
+		<ul class="forumstats td">
+			<li>Themen: 1.051</li>
+			<li>Beiträge: 12.552</li>
+		</ul>
+		<div class="forumlastpost td">
+			<h4 class="lastpostlabel">Letzter Beitrag:</h4>
+			<div>
+				
+	<p class="lastposttitle">
+	<img src="images/icons/icon1.png" class="postimg" alt="" border="0" />
+	
+	<a href="https://forum.mindfactory.de/t85850-monitor-g-sync.html" class="threadtitle" >Monitor mit G-Sync</a>
+	<a href="https://forum.mindfactory.de/t85850-monitor-g-sync-post1004591.html#post1004591"><img src="images/buttons/lastpost-right.png" alt="Gehe zum letzten Beitrag" /></a>
+	</p>
+	<div class="lastpostby">
+	
+		von <div class="popupmenu memberaction">
+	<a rel="nofollow" class="username offline " href="https://forum.mindfactory.de/member5817.html" title="BigWhoop ist offline"><strong>BigWhoop</strong></a>
+	
+</div>
+	
+	</div>
+	<p class="lastpostdate">Gestern, <span class="time">08:55</span></p>
+
+			</div>
+		</div>
+        
+	</div>
+	
+</li><li id="forum19" class="forumbit_post old_lock L2">
+	<div class="forumrow table">
+		<div class="foruminfo td">
+			<img src="images/mf/statusicon/forum_old_lock-48.png" class="forumicon" id="forum_statusicon_19" alt="" />
+			<div class="forumdata">
+				<div class="datacontainer">
+					<div class="titleline">
+						<h2 class="forumtitle"><a href="https://forum.mindfactory.de/f19-webcams-sound-multimedia">Webcams, Sound  &amp; Multimedia</a></h2>
+						<span class="viewing">(2 Betrachter)</span>
+					</div>
+					<p class="forumdescription"><a onclick="_gaq.push(['_trackEvent', 'Outgoing', 'www.mindfactory.de', '/Hardware/Sound/Soundkarten.html']);" href="http://www.mindfactory.de/Hardware/Sound/Soundkarten.html" target=_blank>Soundkarten</a> und <a onclick="_gaq.push(['_trackEvent', 'Outgoing', 'www.mindfactory.de', '/Hardware/Sound/Boxensysteme.html']);" href="http://www.mindfactory.de/Hardware/Sound/Boxensysteme.html" target=_blank>Boxen</a> oder <a onclick="_gaq.push(['_trackEvent', 'Outgoing', 'www.mindfactory.de', '/Hardware/Sound/Boxensysteme/5_1+Systeme.html']);" href="http://www.mindfactory.de/Hardware/Sound/Boxensysteme/5_1+Systeme.html" target=_blank>Surroundsysteme</a> in unserem Shop!</p>
+
+					
+
+					
+				</div>
+			</div>
+		</div>
+        
+		<h4 class="nocss_label">Aktionen:</h4>
+        	
+		<ul class="forumactionlinks td">
+			<li class="forumactionlink rsslink"><a rel="nofollow" href="https://forum.mindfactory.de/external.php?type=RSS2&amp;forumids=19" title="RSS-Feed dieses Forums anzeigen">RSS-Feed dieses Forums anzeigen</a></li>
+			
+		</ul>
+		
+        <h4 class="nocss_label">Statistik:</h4>
+		<ul class="forumstats td">
+			<li>Themen: 793</li>
+			<li>Beiträge: 8.743</li>
+		</ul>
+		<div class="forumlastpost td">
+			<h4 class="lastpostlabel">Letzter Beitrag:</h4>
+			<div>
+				
+	<p class="lastposttitle">
+	<img src="images/icons/icon1.png" class="postimg" alt="" border="0" />
+	
+	<a href="https://forum.mindfactory.de/t84987-kopfhoerer-fuer-spiele-musik-usw-fuers-pc-kein-headset.html" class="threadtitle" >Kopfhörer für Spiele, Musik usw. Fürs PC (Kein Headset)</a>
+	<a href="https://forum.mindfactory.de/t84987-kopfhoerer-fuer-spiele-musik-usw-fuers-pc-kein-headset-post999652.html#post999652"><img src="images/buttons/lastpost-right.png" alt="Gehe zum letzten Beitrag" /></a>
+	</p>
+	<div class="lastpostby">
+	
+		von <div class="popupmenu memberaction">
+	<a rel="nofollow" class="username offline " href="https://forum.mindfactory.de/member32355.html" title="joe84 ist offline"><strong>joe84</strong></a>
+	
+</div>
+	
+	</div>
+	<p class="lastpostdate">14.11.2014, <span class="time">13:49</span></p>
+
+			</div>
+		</div>
+        
+	</div>
+	
+</li><li id="forum288" class="forumbit_post old_lock L2">
+	<div class="forumrow table">
+		<div class="foruminfo td">
+			<img src="images/mf/statusicon/forum_old_lock-48.png" class="forumicon" id="forum_statusicon_288" alt="" />
+			<div class="forumdata">
+				<div class="datacontainer">
+					<div class="titleline">
+						<h2 class="forumtitle"><a href="https://forum.mindfactory.de/f288-speicherkarten-usb-sticks">Speicherkarten &amp; USB-Sticks</a></h2>
+						
+					</div>
+					<p class="forumdescription">Rund um Speicherkarten und USB Sticks</p>
+
+					
+
+					
+				</div>
+			</div>
+		</div>
+        
+		<h4 class="nocss_label">Aktionen:</h4>
+        	
+		<ul class="forumactionlinks td">
+			<li class="forumactionlink rsslink"><a rel="nofollow" href="https://forum.mindfactory.de/external.php?type=RSS2&amp;forumids=288" title="RSS-Feed dieses Forums anzeigen">RSS-Feed dieses Forums anzeigen</a></li>
+			
+		</ul>
+		
+        <h4 class="nocss_label">Statistik:</h4>
+		<ul class="forumstats td">
+			<li>Themen: 65</li>
+			<li>Beiträge: 606</li>
+		</ul>
+		<div class="forumlastpost td">
+			<h4 class="lastpostlabel">Letzter Beitrag:</h4>
+			<div>
+				
+	<p class="lastposttitle">
+	<img src="images/icons/icon1.png" class="postimg" alt="" border="0" />
+	
+	<a href="https://forum.mindfactory.de/t84957-usb-sticks-eimer.html" class="threadtitle" >USB Sticks im Eimer?</a>
+	<a href="https://forum.mindfactory.de/t84957-usb-sticks-eimer-post998459.html#post998459"><img src="images/buttons/lastpost-right.png" alt="Gehe zum letzten Beitrag" /></a>
+	</p>
+	<div class="lastpostby">
+	
+		von <div class="popupmenu memberaction">
+	<a rel="nofollow" class="username offline " href="https://forum.mindfactory.de/member25625.html" title="FastkeineAhnunghaber ist offline"><strong>FastkeineAhnunghaber</strong></a>
+	
+</div>
+	
+	</div>
+	<p class="lastpostdate">07.11.2014, <span class="time">12:37</span></p>
+
+			</div>
+		</div>
+        
+	</div>
+	
+</li><li id="forum248" class="forumbit_post old_lock L2">
+	<div class="forumrow table">
+		<div class="foruminfo td">
+			<img src="images/mf/statusicon/forum_old_lock-48.png" class="forumicon" id="forum_statusicon_248" alt="" />
+			<div class="forumdata">
+				<div class="datacontainer">
+					<div class="titleline">
+						<h2 class="forumtitle"><a href="https://forum.mindfactory.de/f248-internet-wlan-lan-netzwerktechnik">Internet, WLAN, LAN &amp; Netzwerktechnik</a></h2>
+						<span class="viewing">(2 Betrachter)</span>
+					</div>
+					<p class="forumdescription">Rund um Internet, Wlan, LAN und Netzwerktechnik</p>
+
+					
+
+					
+						<div class="subforums">
+	<h4 class="subforumlistlabel">Unterforen:</h4>
+	<ol class="subforumlist commalist">
+		
+			<li class="subforum">
+				
+					<img class="inlineimg" src="images/mf/statusicon/subforum_old-48.png" alt="" border="0" id="forum_statusicon_51" /> 
+				
+				<a href="https://forum.mindfactory.de/f51-internet">Internet</a>, 
+			</li>
+		
+			<li class="subforum">
+				
+					<img class="inlineimg" src="images/mf/statusicon/subforum_old-48.png" alt="" border="0" id="forum_statusicon_52" /> 
+				
+				<a href="https://forum.mindfactory.de/f52-wlan">WLAN</a>, 
+			</li>
+		
+			<li class="subforum">
+				
+					<img class="inlineimg" src="images/mf/statusicon/subforum_old-48.png" alt="" border="0" id="forum_statusicon_26" /> 
+				
+				<a href="https://forum.mindfactory.de/f26-modem-netzwerke-allgemein">Modem / Netzwerke allgemein</a>, 
+			</li>
+		
+			<li class="subforum">
+				
+					<img class="inlineimg" src="images/mf/statusicon/subforum_old-48.png" alt="" border="0" id="forum_statusicon_152" /> 
+				
+				<a href="https://forum.mindfactory.de/f152-webspace">Webspace</a>, 
+			</li>
+		
+			<li class="subforum">
+				
+					<img class="inlineimg" src="images/mf/statusicon/subforum_old-48.png" alt="" border="0" id="forum_statusicon_153" /> 
+				
+				<a href="https://forum.mindfactory.de/f153-serveradministration">Serveradministration</a>
+			</li>
+		
+	</ol>
+</div>
+
+					
+				</div>
+			</div>
+		</div>
+        
+		<h4 class="nocss_label">Aktionen:</h4>
+        	
+		<ul class="forumactionlinks td">
+			<li class="forumactionlink rsslink"><a rel="nofollow" href="https://forum.mindfactory.de/external.php?type=RSS2&amp;forumids=248" title="RSS-Feed dieses Forums anzeigen">RSS-Feed dieses Forums anzeigen</a></li>
+			
+		</ul>
+		
+        <h4 class="nocss_label">Statistik:</h4>
+		<ul class="forumstats td">
+			<li>Themen: 1.396</li>
+			<li>Beiträge: 16.295</li>
+		</ul>
+		<div class="forumlastpost td">
+			<h4 class="lastpostlabel">Letzter Beitrag:</h4>
+			<div>
+				
+	<p class="lastposttitle">
+	<img src="images/icons/icon1.png" class="postimg" alt="" border="0" />
+	
+	<a href="https://forum.mindfactory.de/t85432-probleme-neuem-mainboard.html" class="threadtitle" >Probleme mit neuem Mainboard</a>
+	<a href="https://forum.mindfactory.de/t85432-probleme-neuem-mainboard-post1002767.html#post1002767"><img src="images/buttons/lastpost-right.png" alt="Gehe zum letzten Beitrag" /></a>
+	</p>
+	<div class="lastpostby">
+	
+		von <div class="popupmenu memberaction">
+	<a rel="nofollow" class="username offline " href="https://forum.mindfactory.de/member18367.html" title="Tobl1411 ist offline"><strong>Tobl1411</strong></a>
+	
+</div>
+	
+	</div>
+	<p class="lastpostdate">01.12.2014, <span class="time">10:14</span></p>
+
+			</div>
+		</div>
+        
+	</div>
+	
+</li>
+	</ol>
+	
+</li><li class="forumbit_nopost old_lock L1" id="cat250">
+	<div class="forumhead foruminfo L1 collapse">
+		<h2>
+			<span class="forumtitle"><a href="https://forum.mindfactory.de/f250-notebooks-netbooks-mobile-endgeraete">Notebooks, Netbooks &amp; mobile Endgeräte</a></span>
+			<span class="forumthreadpost">Themen / Beiträge&nbsp;</span>
+			<span class="forumlastpost">Letzter Beitrag</span>
+		
+			<a class="collapse" id="collapse_c_cat250" href="https://forum.mindfactory.de/forum.php#top"><img src="images/buttons/collapse_40b.png" alt="" /></a>
+		
+		</h2>
+
+		
+	</div>
+	
+	<ol id="c_cat250" class="childforum">
+		<li id="forum39" class="forumbit_post old_lock L2">
+	<div class="forumrow table">
+		<div class="foruminfo td">
+			<img src="images/mf/statusicon/forum_old_lock-48.png" class="forumicon" id="forum_statusicon_39" alt="" />
+			<div class="forumdata">
+				<div class="datacontainer">
+					<div class="titleline">
+						<h2 class="forumtitle"><a href="https://forum.mindfactory.de/f39-note-netbooks">Note- &amp; Netbooks</a></h2>
+						<span class="viewing">(1 Betrachter)</span>
+					</div>
+					<p class="forumdescription"><a onclick="_gaq.push(['_trackEvent', 'Outgoing', 'www.mindfactory.de', '/Notebook+~+PC/Notebooks.html']);" href="http://www.mindfactory.de/Notebook+~+PC/Notebooks.html" target=_blank>Notebooks</a>  in unserem Shop!</p>
+
+					
+
+					
+				</div>
+			</div>
+		</div>
+        
+		<h4 class="nocss_label">Aktionen:</h4>
+        	
+		<ul class="forumactionlinks td">
+			<li class="forumactionlink rsslink"><a rel="nofollow" href="https://forum.mindfactory.de/external.php?type=RSS2&amp;forumids=39" title="RSS-Feed dieses Forums anzeigen">RSS-Feed dieses Forums anzeigen</a></li>
+			
+		</ul>
+		
+        <h4 class="nocss_label">Statistik:</h4>
+		<ul class="forumstats td">
+			<li>Themen: 979</li>
+			<li>Beiträge: 9.703</li>
+		</ul>
+		<div class="forumlastpost td">
+			<h4 class="lastpostlabel">Letzter Beitrag:</h4>
+			<div>
+				
+	<p class="lastposttitle">
+	<img src="images/icons/icon1.png" class="postimg" alt="" border="0" />
+	
+	<a href="https://forum.mindfactory.de/t85859-kaufberatung-notebook-17-zoll-ca-500-a.html" class="threadtitle" >[Kaufberatung] Notebook 17 Zoll - ca 500€</a>
+	<a href="https://forum.mindfactory.de/t85859-kaufberatung-notebook-17-zoll-ca-500-a-post1004686.html#post1004686"><img src="images/buttons/lastpost-right.png" alt="Gehe zum letzten Beitrag" /></a>
+	</p>
+	<div class="lastpostby">
+	
+		von <div class="popupmenu memberaction">
+	<a rel="nofollow" class="username offline " href="https://forum.mindfactory.de/member23856.html" title="madwursd ist offline"><strong>madwursd</strong></a>
+	
+</div>
+	
+	</div>
+	<p class="lastpostdate">Gestern, <span class="time">16:08</span></p>
+
+			</div>
+		</div>
+        
+	</div>
+	
+</li><li id="forum40" class="forumbit_post old_lock L2">
+	<div class="forumrow table">
+		<div class="foruminfo td">
+			<img src="images/mf/statusicon/forum_old_lock-48.png" class="forumicon" id="forum_statusicon_40" alt="" />
+			<div class="forumdata">
+				<div class="datacontainer">
+					<div class="titleline">
+						<h2 class="forumtitle"><a href="https://forum.mindfactory.de/f40-handy-organizer-pda-smartphones">Handy, Organizer, PDA &amp; Smartphones</a></h2>
+						
+					</div>
+					<p class="forumdescription"><a onclick="_gaq.push(['_trackEvent', 'Outgoing', 'www.mindfactory.de', '/Notebook+~+PC/Tablet+PCs+~+eBooks.html']);" href="http://www.mindfactory.de/Notebook+~+PC/Tablet+PCs+~+eBooks.html" target=_blank>Organizer, PDA,Tablets</a> und <a onclick="_gaq.push(['_trackEvent', 'Outgoing', 'www.mindfactory.de', '/Kommunikation/Navigation.html']);" href="http://www.mindfactory.de/Kommunikation/Navigation.html" target=_blank>Navigationssysteme</a> finden Sie in unserem Shop!</p>
+
+					
+
+					
+				</div>
+			</div>
+		</div>
+        
+		<h4 class="nocss_label">Aktionen:</h4>
+        	
+		<ul class="forumactionlinks td">
+			<li class="forumactionlink rsslink"><a rel="nofollow" href="https://forum.mindfactory.de/external.php?type=RSS2&amp;forumids=40" title="RSS-Feed dieses Forums anzeigen">RSS-Feed dieses Forums anzeigen</a></li>
+			
+		</ul>
+		
+        <h4 class="nocss_label">Statistik:</h4>
+		<ul class="forumstats td">
+			<li>Themen: 115</li>
+			<li>Beiträge: 1.410</li>
+		</ul>
+		<div class="forumlastpost td">
+			<h4 class="lastpostlabel">Letzter Beitrag:</h4>
+			<div>
+				
+	<p class="lastposttitle">
+	<img src="images/icons/icon1.png" class="postimg" alt="" border="0" />
+	
+	<a href="https://forum.mindfactory.de/t83937-suche-windows-8-8-1-tablet-convertible-500-a.html" class="threadtitle" >Suche Windows 8/8.1 Tablet oder Convertible bis 500€</a>
+	<a href="https://forum.mindfactory.de/t83937-suche-windows-8-8-1-tablet-convertible-500-a-post990678.html#post990678"><img src="images/buttons/lastpost-right.png" alt="Gehe zum letzten Beitrag" /></a>
+	</p>
+	<div class="lastpostby">
+	
+		von <div class="popupmenu memberaction">
+	<a rel="nofollow" class="username offline " href="https://forum.mindfactory.de/member35217.html" title="Bad Al ist offline"><strong>Bad Al</strong></a>
+	
+</div>
+	
+	</div>
+	<p class="lastpostdate">16.09.2014, <span class="time">15:37</span></p>
+
+			</div>
+		</div>
+        
+	</div>
+	
+</li><li id="forum251" class="forumbit_post old_lock L2">
+	<div class="forumrow table">
+		<div class="foruminfo td">
+			<img src="images/mf/statusicon/forum_old_lock-48.png" class="forumicon" id="forum_statusicon_251" alt="" />
+			<div class="forumdata">
+				<div class="datacontainer">
+					<div class="titleline">
+						<h2 class="forumtitle"><a href="https://forum.mindfactory.de/f251-aufruesten-veraendern-installieren">Aufrüsten, Verändern &amp; Installieren</a></h2>
+						
+					</div>
+					<p class="forumdescription">Rund um Aufrüsten, Verändern und Installieren</p>
+
+					
+
+					
+				</div>
+			</div>
+		</div>
+        
+		<h4 class="nocss_label">Aktionen:</h4>
+        	
+		<ul class="forumactionlinks td">
+			<li class="forumactionlink rsslink"><a rel="nofollow" href="https://forum.mindfactory.de/external.php?type=RSS2&amp;forumids=251" title="RSS-Feed dieses Forums anzeigen">RSS-Feed dieses Forums anzeigen</a></li>
+			
+		</ul>
+		
+        <h4 class="nocss_label">Statistik:</h4>
+		<ul class="forumstats td">
+			<li>Themen: 66</li>
+			<li>Beiträge: 990</li>
+		</ul>
+		<div class="forumlastpost td">
+			<h4 class="lastpostlabel">Letzter Beitrag:</h4>
+			<div>
+				
+	<p class="lastposttitle">
+	<img src="images/icons/icon5.png" class="postimg" alt="Frage" border="0" />
+	
+	<a href="https://forum.mindfactory.de/t84288-suche-neues-gebrauchtes-mainbord-fuer-notebook.html" class="threadtitle" >suche neues oder gebrauchtes mainbord für notebook</a>
+	<a href="https://forum.mindfactory.de/t84288-suche-neues-gebrauchtes-mainbord-fuer-notebook-post992728.html#post992728"><img src="images/buttons/lastpost-right.png" alt="Gehe zum letzten Beitrag" /></a>
+	</p>
+	<div class="lastpostby">
+	
+		von <div class="popupmenu memberaction">
+	<a rel="nofollow" class="username offline " href="https://forum.mindfactory.de/member5754.html" title="grigi ist offline"><strong>grigi</strong></a>
+	
+</div>
+	
+	</div>
+	<p class="lastpostdate">03.10.2014, <span class="time">23:05</span></p>
+
+			</div>
+		</div>
+        
+	</div>
+	
+</li>
+	</ol>
+	
+</li><li class="forumbit_nopost old_lock L1" id="cat7">
+	<div class="forumhead foruminfo L1 collapse">
+		<h2>
+			<span class="forumtitle"><a href="https://forum.mindfactory.de/f7-software">Software</a></span>
+			<span class="forumthreadpost">Themen / Beiträge&nbsp;</span>
+			<span class="forumlastpost">Letzter Beitrag</span>
+		
+			<a class="collapse" id="collapse_c_cat7" href="https://forum.mindfactory.de/forum.php#top"><img src="images/buttons/collapse_40b.png" alt="" /></a>
+		
+		</h2>
+
+		
+		<div class="forumrowdata">
+			<p class="subforumdescription"><a onclick="_gaq.push(['_trackEvent', 'Outgoing', 'www.mindfactory.de', '/Software.html']);" href="http://www.mindfactory.de/Software.html" target=_blank>Software</a> finden Sie in unserem Shop!</p>
+			
+		</div>
+		
+	</div>
+	
+	<ol id="c_cat7" class="childforum">
+		<li id="forum177" class="forumbit_post old_lock L2">
+	<div class="forumrow table">
+		<div class="foruminfo td">
+			<img src="images/mf/statusicon/forum_old_lock-48.png" class="forumicon" id="forum_statusicon_177" alt="" />
+			<div class="forumdata">
+				<div class="datacontainer">
+					<div class="titleline">
+						<h2 class="forumtitle"><a href="https://forum.mindfactory.de/f177-windows">Windows</a></h2>
+						<span class="viewing">(3 Betrachter)</span>
+					</div>
+					<p class="forumdescription"><a onclick="_gaq.push(['_trackEvent', 'Outgoing', 'www.mindfactory.de', '/Software/Betriebssysteme.html']);" href="http://www.mindfactory.de/Software/Betriebssysteme.html" target=_blank>Windows</a>  in unserem Shop!</p>
+
+					
+
+					
+				</div>
+			</div>
+		</div>
+        
+		<h4 class="nocss_label">Aktionen:</h4>
+        	
+		<ul class="forumactionlinks td">
+			<li class="forumactionlink rsslink"><a rel="nofollow" href="https://forum.mindfactory.de/external.php?type=RSS2&amp;forumids=177" title="RSS-Feed dieses Forums anzeigen">RSS-Feed dieses Forums anzeigen</a></li>
+			
+		</ul>
+		
+        <h4 class="nocss_label">Statistik:</h4>
+		<ul class="forumstats td">
+			<li>Themen: 1.625</li>
+			<li>Beiträge: 20.039</li>
+		</ul>
+		<div class="forumlastpost td">
+			<h4 class="lastpostlabel">Letzter Beitrag:</h4>
+			<div>
+				
+	<p class="lastposttitle">
+	<img src="images/icons/icon1.png" class="postimg" alt="" border="0" />
+	
+	<a href="https://forum.mindfactory.de/t85332-bootvorgang-ssd-eigene-dateien-hdd.html" class="threadtitle" >Bootvorgang auf SSD Eigene Dateien auf HDD  ?</a>
+	<a href="https://forum.mindfactory.de/t85332-bootvorgang-ssd-eigene-dateien-hdd-post1003001.html#post1003001"><img src="images/buttons/lastpost-right.png" alt="Gehe zum letzten Beitrag" /></a>
+	</p>
+	<div class="lastpostby">
+	
+		von <div class="popupmenu memberaction">
+	<a rel="nofollow" class="username offline " href="https://forum.mindfactory.de/member18493.html" title="Black &amp; White ist offline"><strong>Black &amp; White</strong></a>
+	
+</div>
+	
+	</div>
+	<p class="lastpostdate">02.12.2014, <span class="time">12:25</span></p>
+
+			</div>
+		</div>
+        
+	</div>
+	
+</li><li id="forum33" class="forumbit_post old_lock L2">
+	<div class="forumrow table">
+		<div class="foruminfo td">
+			<img src="images/mf/statusicon/forum_old_lock-48.png" class="forumicon" id="forum_statusicon_33" alt="" />
+			<div class="forumdata">
+				<div class="datacontainer">
+					<div class="titleline">
+						<h2 class="forumtitle"><a href="https://forum.mindfactory.de/f33-linux-mac-os">Linux &amp; Mac OS</a></h2>
+						
+					</div>
+					<p class="forumdescription">Rund um Linux und Mac OS</p>
+
+					
+
+					
+				</div>
+			</div>
+		</div>
+        
+		<h4 class="nocss_label">Aktionen:</h4>
+        	
+		<ul class="forumactionlinks td">
+			<li class="forumactionlink rsslink"><a rel="nofollow" href="https://forum.mindfactory.de/external.php?type=RSS2&amp;forumids=33" title="RSS-Feed dieses Forums anzeigen">RSS-Feed dieses Forums anzeigen</a></li>
+			
+		</ul>
+		
+        <h4 class="nocss_label">Statistik:</h4>
+		<ul class="forumstats td">
+			<li>Themen: 883</li>
+			<li>Beiträge: 8.378</li>
+		</ul>
+		<div class="forumlastpost td">
+			<h4 class="lastpostlabel">Letzter Beitrag:</h4>
+			<div>
+				
+	<p class="lastposttitle">
+	<img src="images/icons/icon1.png" class="postimg" alt="" border="0" />
+	
+	<a href="https://forum.mindfactory.de/t84823-unbuntu-14-10-festpaltte-mag-so.html" class="threadtitle" >Unbuntu (14.10) Festpaltte mag nicht so</a>
+	<a href="https://forum.mindfactory.de/t84823-unbuntu-14-10-festpaltte-mag-so-post996568.html#post996568"><img src="images/buttons/lastpost-right.png" alt="Gehe zum letzten Beitrag" /></a>
+	</p>
+	<div class="lastpostby">
+	
+		von <div class="popupmenu memberaction">
+	<a rel="nofollow" class="username offline " href="https://forum.mindfactory.de/member34247.html" title="FroschnVs.Schweins ist offline"><strong>FroschnVs.Schweins</strong></a>
+	
+</div>
+	
+	</div>
+	<p class="lastpostdate">26.10.2014, <span class="time">17:01</span></p>
+
+			</div>
+		</div>
+        
+	</div>
+	
+</li><li id="forum315" class="forumbit_post old_lock L2">
+	<div class="forumrow table">
+		<div class="foruminfo td">
+			<img src="images/mf/statusicon/forum_old_lock-48.png" class="forumicon" id="forum_statusicon_315" alt="" />
+			<div class="forumdata">
+				<div class="datacontainer">
+					<div class="titleline">
+						<h2 class="forumtitle"><a href="https://forum.mindfactory.de/f315-android">Android</a></h2>
+						
+					</div>
+					<p class="forumdescription">Rund um Android</p>
+
+					
+
+					
+				</div>
+			</div>
+		</div>
+        
+		<h4 class="nocss_label">Aktionen:</h4>
+        	
+		<ul class="forumactionlinks td">
+			<li class="forumactionlink rsslink"><a rel="nofollow" href="https://forum.mindfactory.de/external.php?type=RSS2&amp;forumids=315" title="RSS-Feed dieses Forums anzeigen">RSS-Feed dieses Forums anzeigen</a></li>
+			
+		</ul>
+		
+        <h4 class="nocss_label">Statistik:</h4>
+		<ul class="forumstats td">
+			<li>Themen: 21</li>
+			<li>Beiträge: 324</li>
+		</ul>
+		<div class="forumlastpost td">
+			<h4 class="lastpostlabel">Letzter Beitrag:</h4>
+			<div>
+				
+	<p class="lastposttitle">
+	<img src="images/icons/icon1.png" class="postimg" alt="" border="0" />
+	
+	<a href="https://forum.mindfactory.de/t84759-dualsim-2-unterschiedliche-datenverbindungen-nutzen.html" class="threadtitle" >DualSim 2 Unterschiedliche Datenverbindungen nutzen</a>
+	<a href="https://forum.mindfactory.de/t84759-dualsim-2-unterschiedliche-datenverbindungen-nutzen-post996094.html#post996094"><img src="images/buttons/lastpost-right.png" alt="Gehe zum letzten Beitrag" /></a>
+	</p>
+	<div class="lastpostby">
+	
+		von <div class="popupmenu memberaction">
+	<a rel="nofollow" class="username online " href="https://forum.mindfactory.de/member28455.html" title="JokoMono ist gerade online"><strong>JokoMono</strong></a>
+	
+</div>
+	
+	</div>
+	<p class="lastpostdate">22.10.2014, <span class="time">22:37</span></p>
+
+			</div>
+		</div>
+        
+	</div>
+	
+</li><li id="forum34" class="forumbit_post old_lock L2">
+	<div class="forumrow table">
+		<div class="foruminfo td">
+			<img src="images/mf/statusicon/forum_old_lock-48.png" class="forumicon" id="forum_statusicon_34" alt="" />
+			<div class="forumdata">
+				<div class="datacontainer">
+					<div class="titleline">
+						<h2 class="forumtitle"><a href="https://forum.mindfactory.de/f34-anwendungsprogramme-spiele">Anwendungsprogramme &amp; Spiele</a></h2>
+						<span class="viewing">(3 Betrachter)</span>
+					</div>
+					<p class="forumdescription">Rund um Spiele und Anwendungsprogramme</p>
+
+					
+
+					
+				</div>
+			</div>
+		</div>
+        
+		<h4 class="nocss_label">Aktionen:</h4>
+        	
+		<ul class="forumactionlinks td">
+			<li class="forumactionlink rsslink"><a rel="nofollow" href="https://forum.mindfactory.de/external.php?type=RSS2&amp;forumids=34" title="RSS-Feed dieses Forums anzeigen">RSS-Feed dieses Forums anzeigen</a></li>
+			
+		</ul>
+		
+        <h4 class="nocss_label">Statistik:</h4>
+		<ul class="forumstats td">
+			<li>Themen: 1.058</li>
+			<li>Beiträge: 10.740</li>
+		</ul>
+		<div class="forumlastpost td">
+			<h4 class="lastpostlabel">Letzter Beitrag:</h4>
+			<div>
+				
+	<p class="lastposttitle">
+	<img src="images/icons/icon1.png" class="postimg" alt="" border="0" />
+	
+	<a href="https://forum.mindfactory.de/t85581-litecam-gut.html" class="threadtitle" >LiteCAM gut?</a>
+	<a href="https://forum.mindfactory.de/t85581-litecam-gut-post1002190.html#post1002190"><img src="images/buttons/lastpost-right.png" alt="Gehe zum letzten Beitrag" /></a>
+	</p>
+	<div class="lastpostby">
+	
+		von <div class="popupmenu memberaction">
+	<a rel="nofollow" class="username offline " href="https://forum.mindfactory.de/member36251.html" title="iChill ist offline"><strong>iChill</strong></a>
+	
+</div>
+	
+	</div>
+	<p class="lastpostdate">27.11.2014, <span class="time">22:34</span></p>
+
+			</div>
+		</div>
+        
+	</div>
+	
+</li><li id="forum164" class="forumbit_post old_lock L2">
+	<div class="forumrow table">
+		<div class="foruminfo td">
+			<img src="images/mf/statusicon/forum_old_lock-48.png" class="forumicon" id="forum_statusicon_164" alt="" />
+			<div class="forumdata">
+				<div class="datacontainer">
+					<div class="titleline">
+						<h2 class="forumtitle"><a href="https://forum.mindfactory.de/f164-grafik-video-audio">Grafik, Video &amp; Audio</a></h2>
+						<span class="viewing">(1 Betrachter)</span>
+					</div>
+					<p class="forumdescription"><a onclick="_gaq.push(['_trackEvent', 'Outgoing', 'www.mindfactory.de', '/Software/Grafik+und+Design.html']);" href="http://www.mindfactory.de/Software/Grafik+und+Design.html" target=_blank>Grafik, Video &amp; Audio</a>  in unserem Shop!</p>
+
+					
+
+					
+				</div>
+			</div>
+		</div>
+        
+		<h4 class="nocss_label">Aktionen:</h4>
+        	
+		<ul class="forumactionlinks td">
+			<li class="forumactionlink rsslink"><a rel="nofollow" href="https://forum.mindfactory.de/external.php?type=RSS2&amp;forumids=164" title="RSS-Feed dieses Forums anzeigen">RSS-Feed dieses Forums anzeigen</a></li>
+			
+		</ul>
+		
+        <h4 class="nocss_label">Statistik:</h4>
+		<ul class="forumstats td">
+			<li>Themen: 147</li>
+			<li>Beiträge: 1.315</li>
+		</ul>
+		<div class="forumlastpost td">
+			<h4 class="lastpostlabel">Letzter Beitrag:</h4>
+			<div>
+				
+	<p class="lastposttitle">
+	<img src="images/icons/icon1.png" class="postimg" alt="" border="0" />
+	
+	<a href="https://forum.mindfactory.de/t85652-welche-soundkarte.html" class="threadtitle" >welche soundkarte?</a>
+	<a href="https://forum.mindfactory.de/t85652-welche-soundkarte-post1002753.html#post1002753"><img src="images/buttons/lastpost-right.png" alt="Gehe zum letzten Beitrag" /></a>
+	</p>
+	<div class="lastpostby">
+	
+		von <div class="popupmenu memberaction">
+	<a rel="nofollow" class="username offline " href="https://forum.mindfactory.de/member5817.html" title="BigWhoop ist offline"><strong>BigWhoop</strong></a>
+	
+</div>
+	
+	</div>
+	<p class="lastpostdate">01.12.2014, <span class="time">08:30</span></p>
+
+			</div>
+		</div>
+        
+	</div>
+	
+</li><li id="forum59" class="forumbit_post old_lock L2">
+	<div class="forumrow table">
+		<div class="foruminfo td">
+			<img src="images/mf/statusicon/forum_old_lock-48.png" class="forumicon" id="forum_statusicon_59" alt="" />
+			<div class="forumdata">
+				<div class="datacontainer">
+					<div class="titleline">
+						<h2 class="forumtitle"><a href="https://forum.mindfactory.de/f59-programmieren">Programmieren</a></h2>
+						
+					</div>
+					<p class="forumdescription">Webdesign, Programmierung und Scripting</p>
+
+					
+
+					
+				</div>
+			</div>
+		</div>
+        
+		<h4 class="nocss_label">Aktionen:</h4>
+        	
+		<ul class="forumactionlinks td">
+			<li class="forumactionlink rsslink"><a rel="nofollow" href="https://forum.mindfactory.de/external.php?type=RSS2&amp;forumids=59" title="RSS-Feed dieses Forums anzeigen">RSS-Feed dieses Forums anzeigen</a></li>
+			
+		</ul>
+		
+        <h4 class="nocss_label">Statistik:</h4>
+		<ul class="forumstats td">
+			<li>Themen: 231</li>
+			<li>Beiträge: 2.218</li>
+		</ul>
+		<div class="forumlastpost td">
+			<h4 class="lastpostlabel">Letzter Beitrag:</h4>
+			<div>
+				
+	<p class="lastposttitle">
+	<img src="images/icons/icon1.png" class="postimg" alt="" border="0" />
+	
+	<a href="https://forum.mindfactory.de/t69759-bestimmte-stelle-video.html" class="threadtitle" >Bestimmte Stelle im Video</a>
+	<a href="https://forum.mindfactory.de/t69759-bestimmte-stelle-video-post1004600.html#post1004600"><img src="images/buttons/lastpost-right.png" alt="Gehe zum letzten Beitrag" /></a>
+	</p>
+	<div class="lastpostby">
+	
+		von <div class="popupmenu memberaction">
+	<a rel="nofollow" class="username offline " href="https://forum.mindfactory.de/member36657.html" title="capgeti ist offline"><strong>capgeti</strong></a>
+	
+</div>
+	
+	</div>
+	<p class="lastpostdate">Gestern, <span class="time">09:54</span></p>
+
+			</div>
+		</div>
+        
+	</div>
+	
+</li>
+	</ol>
+	
+</li><li class="forumbit_nopost old_lock L1" id="cat50">
+	<div class="forumhead foruminfo L1 collapse">
+		<h2>
+			<span class="forumtitle"><a href="https://forum.mindfactory.de/f50-hifi-kommunikation-navigation-haushaltsgeraete">HiFi, Kommunikation, Navigation &amp; Haushaltsgeräte</a></span>
+			<span class="forumthreadpost">Themen / Beiträge&nbsp;</span>
+			<span class="forumlastpost">Letzter Beitrag</span>
+		
+			<a class="collapse" id="collapse_c_cat50" href="https://forum.mindfactory.de/forum.php#top"><img src="images/buttons/collapse_40b.png" alt="" /></a>
+		
+		</h2>
+
+		
+	</div>
+	
+	<ol id="c_cat50" class="childforum">
+		<li id="forum323" class="forumbit_post old_lock L2">
+	<div class="forumrow table">
+		<div class="foruminfo td">
+			<img src="images/mf/statusicon/forum_old_lock-48.png" class="forumicon" id="forum_statusicon_323" alt="" />
+			<div class="forumdata">
+				<div class="datacontainer">
+					<div class="titleline">
+						<h2 class="forumtitle"><a href="https://forum.mindfactory.de/f323-heimkino-tv-empfangstechnik">Heimkino, TV und Empfangstechnik</a></h2>
+						<span class="viewing">(3 Betrachter)</span>
+					</div>
+					
+
+					
+
+					
+						<div class="subforums">
+	<h4 class="subforumlistlabel">Unterforen:</h4>
+	<ol class="subforumlist commalist">
+		
+			<li class="subforum">
+				
+					<img class="inlineimg" src="images/mf/statusicon/subforum_old-48.png" alt="" border="0" id="forum_statusicon_108" /> 
+				
+				<a href="https://forum.mindfactory.de/f108-heimkino-tv-beamer">Heimkino, TV &amp; Beamer</a>, 
+			</li>
+		
+			<li class="subforum">
+				
+					<img class="inlineimg" src="images/mf/statusicon/subforum_old-48.png" alt="" border="0" id="forum_statusicon_114" /> 
+				
+				<a href="https://forum.mindfactory.de/f114-hdtv-empfangstechnik">HDTV &amp; Empfangstechnik</a>
+			</li>
+		
+	</ol>
+</div>
+
+					
+				</div>
+			</div>
+		</div>
+        
+		<h4 class="nocss_label">Aktionen:</h4>
+        	
+		<ul class="forumactionlinks td">
+			<li class="forumactionlink rsslink"><a rel="nofollow" href="https://forum.mindfactory.de/external.php?type=RSS2&amp;forumids=323" title="RSS-Feed dieses Forums anzeigen">RSS-Feed dieses Forums anzeigen</a></li>
+			
+		</ul>
+		
+        <h4 class="nocss_label">Statistik:</h4>
+		<ul class="forumstats td">
+			<li>Themen: 389</li>
+			<li>Beiträge: 4.574</li>
+		</ul>
+		<div class="forumlastpost td">
+			<h4 class="lastpostlabel">Letzter Beitrag:</h4>
+			<div>
+				
+	<p class="lastposttitle">
+	<img src="images/icons/icon5.png" class="postimg" alt="Frage" border="0" />
+	
+	<a href="https://forum.mindfactory.de/t85460-suche-5-1-system-boxen-receiver.html" class="threadtitle" >Suche 5.1 System (boxen + receiver)</a>
+	<a href="https://forum.mindfactory.de/t85460-suche-5-1-system-boxen-receiver-post1001470.html#post1001470"><img src="images/buttons/lastpost-right.png" alt="Gehe zum letzten Beitrag" /></a>
+	</p>
+	<div class="lastpostby">
+	
+		von <div class="popupmenu memberaction">
+	<a rel="nofollow" class="username offline " href="https://forum.mindfactory.de/member8528.html" title="Sascha ist offline"><strong>Sascha</strong></a>
+	
+</div>
+	
+	</div>
+	<p class="lastpostdate">24.11.2014, <span class="time">21:01</span></p>
+
+			</div>
+		</div>
+        
+	</div>
+	
+</li><li id="forum324" class="forumbit_post old_lock L2">
+	<div class="forumrow table">
+		<div class="foruminfo td">
+			<img src="images/mf/statusicon/forum_old_lock-48.png" class="forumicon" id="forum_statusicon_324" alt="" />
+			<div class="forumdata">
+				<div class="datacontainer">
+					<div class="titleline">
+						<h2 class="forumtitle"><a href="https://forum.mindfactory.de/f324-kameras-camcorder">Kameras&amp;Camcorder</a></h2>
+						
+					</div>
+					
+
+					
+
+					
+						<div class="subforums">
+	<h4 class="subforumlistlabel">Unterforen:</h4>
+	<ol class="subforumlist commalist">
+		
+			<li class="subforum">
+				
+					<img class="inlineimg" src="images/mf/statusicon/subforum_old-48.png" alt="" border="0" id="forum_statusicon_242" /> 
+				
+				<a href="https://forum.mindfactory.de/f242-camcorder">Camcorder</a>, 
+			</li>
+		
+			<li class="subforum">
+				
+					<img class="inlineimg" src="images/mf/statusicon/subforum_old-48.png" alt="" border="0" id="forum_statusicon_241" /> 
+				
+				<a href="https://forum.mindfactory.de/f241-kameras">Kameras</a>
+			</li>
+		
+	</ol>
+</div>
+
+					
+				</div>
+			</div>
+		</div>
+        
+		<h4 class="nocss_label">Aktionen:</h4>
+        	
+		<ul class="forumactionlinks td">
+			<li class="forumactionlink rsslink"><a rel="nofollow" href="https://forum.mindfactory.de/external.php?type=RSS2&amp;forumids=324" title="RSS-Feed dieses Forums anzeigen">RSS-Feed dieses Forums anzeigen</a></li>
+			
+		</ul>
+		
+        <h4 class="nocss_label">Statistik:</h4>
+		<ul class="forumstats td">
+			<li>Themen: 131</li>
+			<li>Beiträge: 1.387</li>
+		</ul>
+		<div class="forumlastpost td">
+			<h4 class="lastpostlabel">Letzter Beitrag:</h4>
+			<div>
+				
+	<p class="lastposttitle">
+	<img src="images/icons/icon1.png" class="postimg" alt="" border="0" />
+	
+	<a href="https://forum.mindfactory.de/t85512-frage-anschluss-highspeed-kamera.html" class="threadtitle" >Frage zum Anschluss einer Highspeed Kamera</a>
+	<a href="https://forum.mindfactory.de/t85512-frage-anschluss-highspeed-kamera-post1002414.html#post1002414"><img src="images/buttons/lastpost-right.png" alt="Gehe zum letzten Beitrag" /></a>
+	</p>
+	<div class="lastpostby">
+	
+		von <div class="popupmenu memberaction">
+	<a rel="nofollow" class="username offline " href="https://forum.mindfactory.de/member505.html" title="dj-attic ist offline"><strong>dj-attic</strong></a>
+	
+</div>
+	
+	</div>
+	<p class="lastpostdate">28.11.2014, <span class="time">19:27</span></p>
+
+			</div>
+		</div>
+        
+	</div>
+	
+</li><li id="forum325" class="forumbit_post old_lock L2">
+	<div class="forumrow table">
+		<div class="foruminfo td">
+			<img src="images/mf/statusicon/forum_old_lock-48.png" class="forumicon" id="forum_statusicon_325" alt="" />
+			<div class="forumdata">
+				<div class="datacontainer">
+					<div class="titleline">
+						<h2 class="forumtitle"><a href="https://forum.mindfactory.de/f325-telekommunikation-navigation">Telekommunikation&amp;Navigation</a></h2>
+						
+					</div>
+					
+
+					
+
+					
+						<div class="subforums">
+	<h4 class="subforumlistlabel">Unterforen:</h4>
+	<ol class="subforumlist commalist">
+		
+			<li class="subforum">
+				
+					<img class="inlineimg" src="images/mf/statusicon/subforum_old-48.png" alt="" border="0" id="forum_statusicon_66" /> 
+				
+				<a href="https://forum.mindfactory.de/f66-telekommunikation-festnetz-mobilfunk">Telekommunikation (Festnetz und Mobilfunk)</a>, 
+			</li>
+		
+			<li class="subforum">
+				
+					<img class="inlineimg" src="images/mf/statusicon/subforum_old-48.png" alt="" border="0" id="forum_statusicon_296" /> 
+				
+				<a href="https://forum.mindfactory.de/f296-navigationsgeraete">Navigationsgeräte</a>
+			</li>
+		
+	</ol>
+</div>
+
+					
+				</div>
+			</div>
+		</div>
+        
+		<h4 class="nocss_label">Aktionen:</h4>
+        	
+		<ul class="forumactionlinks td">
+			<li class="forumactionlink rsslink"><a rel="nofollow" href="https://forum.mindfactory.de/external.php?type=RSS2&amp;forumids=325" title="RSS-Feed dieses Forums anzeigen">RSS-Feed dieses Forums anzeigen</a></li>
+			
+		</ul>
+		
+        <h4 class="nocss_label">Statistik:</h4>
+		<ul class="forumstats td">
+			<li>Themen: 290</li>
+			<li>Beiträge: 3.635</li>
+		</ul>
+		<div class="forumlastpost td">
+			<h4 class="lastpostlabel">Letzter Beitrag:</h4>
+			<div>
+				
+	<p class="lastposttitle">
+	<img src="images/icons/icon1.png" class="postimg" alt="" border="0" />
+	
+	<a href="https://forum.mindfactory.de/t66184-neues-handy-smartphone.html" class="threadtitle" >Neues Handy/oder Smartphone.</a>
+	<a href="https://forum.mindfactory.de/t66184-neues-handy-smartphone-post979192.html#post979192"><img src="images/buttons/lastpost-right.png" alt="Gehe zum letzten Beitrag" /></a>
+	</p>
+	<div class="lastpostby">
+	
+		von <div class="popupmenu memberaction">
+	<a rel="nofollow" class="username offline " href="https://forum.mindfactory.de/member18493.html" title="Black &amp; White ist offline"><strong>Black &amp; White</strong></a>
+	
+</div>
+	
+	</div>
+	<p class="lastpostdate">26.06.2014, <span class="time">11:49</span></p>
+
+			</div>
+		</div>
+        
+	</div>
+	
+</li><li id="forum326" class="forumbit_post old_lock L2">
+	<div class="forumrow table">
+		<div class="foruminfo td">
+			<img src="images/mf/statusicon/forum_old_lock-48.png" class="forumicon" id="forum_statusicon_326" alt="" />
+			<div class="forumdata">
+				<div class="datacontainer">
+					<div class="titleline">
+						<h2 class="forumtitle"><a href="https://forum.mindfactory.de/f326-sonstige-hifi-co">Sonstige Hifi und Co.</a></h2>
+						<span class="viewing">(1 Betrachter)</span>
+					</div>
+					
+
+					
+
+					
+						<div class="subforums">
+	<h4 class="subforumlistlabel">Unterforen:</h4>
+	<ol class="subforumlist commalist">
+		
+			<li class="subforum">
+				
+					<img class="inlineimg" src="images/mf/statusicon/subforum_old-48.png" alt="" border="0" id="forum_statusicon_230" /> 
+				
+				<a href="https://forum.mindfactory.de/f230-kuechengeraete">Küchengeräte</a>, 
+			</li>
+		
+			<li class="subforum">
+				
+					<img class="inlineimg" src="images/mf/statusicon/subforum_old-48.png" alt="" border="0" id="forum_statusicon_237" /> 
+				
+				<a href="https://forum.mindfactory.de/f237-koerperpflege-wellness">Körperpflege &amp; Wellness</a>, 
+			</li>
+		
+			<li class="subforum">
+				
+					<img class="inlineimg" src="images/mf/statusicon/subforum_old-48.png" alt="" border="0" id="forum_statusicon_238" /> 
+				
+				<a href="https://forum.mindfactory.de/f238-sonstige-alt">Sonstige (alt)</a>
+			</li>
+		
+	</ol>
+</div>
+
+					
+				</div>
+			</div>
+		</div>
+        
+		<h4 class="nocss_label">Aktionen:</h4>
+        	
+		<ul class="forumactionlinks td">
+			<li class="forumactionlink rsslink"><a rel="nofollow" href="https://forum.mindfactory.de/external.php?type=RSS2&amp;forumids=326" title="RSS-Feed dieses Forums anzeigen">RSS-Feed dieses Forums anzeigen</a></li>
+			
+		</ul>
+		
+        <h4 class="nocss_label">Statistik:</h4>
+		<ul class="forumstats td">
+			<li>Themen: 35</li>
+			<li>Beiträge: 490</li>
+		</ul>
+		<div class="forumlastpost td">
+			<h4 class="lastpostlabel">Letzter Beitrag:</h4>
+			<div>
+				
+	<p class="lastposttitle">
+	<img src="images/icons/icon1.png" class="postimg" alt="" border="0" />
+	
+	<a href="https://forum.mindfactory.de/t75806-akkuschrauber.html" class="threadtitle" >Akkuschrauber</a>
+	<a href="https://forum.mindfactory.de/t75806-akkuschrauber-post962033.html#post962033"><img src="images/buttons/lastpost-right.png" alt="Gehe zum letzten Beitrag" /></a>
+	</p>
+	<div class="lastpostby">
+	
+		von <div class="popupmenu memberaction">
+	<a rel="nofollow" class="username offline " href="https://forum.mindfactory.de/member33221.html" title="Locka ist offline"><strong>Locka</strong></a>
+	
+</div>
+	
+	</div>
+	<p class="lastpostdate">05.03.2014, <span class="time">11:27</span></p>
+
+			</div>
+		</div>
+        
+	</div>
+	
+</li>
+	</ol>
+	
+</li><li class="forumbit_nopost old_lock L1" id="cat305">
+	<div class="forumhead foruminfo L1 collapse">
+		<h2>
+			<span class="forumtitle"><a href="https://forum.mindfactory.de/f305-overclocking-modding">Overclocking &amp; Modding</a></span>
+			<span class="forumthreadpost">Themen / Beiträge&nbsp;</span>
+			<span class="forumlastpost">Letzter Beitrag</span>
+		
+			<a class="collapse" id="collapse_c_cat305" href="https://forum.mindfactory.de/forum.php#top"><img src="images/buttons/collapse_40b.png" alt="" /></a>
+		
+		</h2>
+
+		
+	</div>
+	
+	<ol id="c_cat305" class="childforum">
+		<li id="forum306" class="forumbit_post old_lock L2">
+	<div class="forumrow table">
+		<div class="foruminfo td">
+			<img src="images/mf/statusicon/forum_old_lock-48.png" class="forumicon" id="forum_statusicon_306" alt="" />
+			<div class="forumdata">
+				<div class="datacontainer">
+					<div class="titleline">
+						<h2 class="forumtitle"><a href="https://forum.mindfactory.de/f306-overclocking">Overclocking</a></h2>
+						
+					</div>
+					<p class="forumdescription">Alles zum Thema Overclocking</p>
+
+					
+
+					
+				</div>
+			</div>
+		</div>
+        
+		<h4 class="nocss_label">Aktionen:</h4>
+        	
+		<ul class="forumactionlinks td">
+			<li class="forumactionlink rsslink"><a rel="nofollow" href="https://forum.mindfactory.de/external.php?type=RSS2&amp;forumids=306" title="RSS-Feed dieses Forums anzeigen">RSS-Feed dieses Forums anzeigen</a></li>
+			
+		</ul>
+		
+        <h4 class="nocss_label">Statistik:</h4>
+		<ul class="forumstats td">
+			<li>Themen: 326</li>
+			<li>Beiträge: 5.548</li>
+		</ul>
+		<div class="forumlastpost td">
+			<h4 class="lastpostlabel">Letzter Beitrag:</h4>
+			<div>
+				
+	<p class="lastposttitle">
+	<img src="images/icons/icon5.png" class="postimg" alt="Frage" border="0" />
+	
+	<a href="https://forum.mindfactory.de/t83444-wieviel-psu-leistung-fuer-4-grafikkarten-benoetigt.html" class="threadtitle" >Wieviel PSU Leistung wird für 4 Grafikkarten benötigt</a>
+	<a href="https://forum.mindfactory.de/t83444-wieviel-psu-leistung-fuer-4-grafikkarten-benoetigt-post987166.html#post987166"><img src="images/buttons/lastpost-right.png" alt="Gehe zum letzten Beitrag" /></a>
+	</p>
+	<div class="lastpostby">
+	
+		von <div class="popupmenu memberaction">
+	<a rel="nofollow" class="username offline " href="https://forum.mindfactory.de/member5754.html" title="grigi ist offline"><strong>grigi</strong></a>
+	
+</div>
+	
+	</div>
+	<p class="lastpostdate">22.08.2014, <span class="time">13:27</span></p>
+
+			</div>
+		</div>
+        
+	</div>
+	
+</li><li id="forum307" class="forumbit_post old_lock L2">
+	<div class="forumrow table">
+		<div class="foruminfo td">
+			<img src="images/mf/statusicon/forum_old_lock-48.png" class="forumicon" id="forum_statusicon_307" alt="" />
+			<div class="forumdata">
+				<div class="datacontainer">
+					<div class="titleline">
+						<h2 class="forumtitle"><a href="https://forum.mindfactory.de/f307-modding">Modding</a></h2>
+						
+					</div>
+					<p class="forumdescription">Rund um Modding</p>
+
+					
+
+					
+				</div>
+			</div>
+		</div>
+        
+		<h4 class="nocss_label">Aktionen:</h4>
+        	
+		<ul class="forumactionlinks td">
+			<li class="forumactionlink rsslink"><a rel="nofollow" href="https://forum.mindfactory.de/external.php?type=RSS2&amp;forumids=307" title="RSS-Feed dieses Forums anzeigen">RSS-Feed dieses Forums anzeigen</a></li>
+			
+		</ul>
+		
+        <h4 class="nocss_label">Statistik:</h4>
+		<ul class="forumstats td">
+			<li>Themen: 153</li>
+			<li>Beiträge: 8.130</li>
+		</ul>
+		<div class="forumlastpost td">
+			<h4 class="lastpostlabel">Letzter Beitrag:</h4>
+			<div>
+				
+	<p class="lastposttitle">
+	<img src="images/icons/icon1.png" class="postimg" alt="" border="0" />
+	
+	<a href="https://forum.mindfactory.de/t71712-quadcopter-eigenbau.html" class="threadtitle" >Quadcopter im Eigenbau</a>
+	<a href="https://forum.mindfactory.de/t71712-quadcopter-eigenbau-post992764.html#post992764"><img src="images/buttons/lastpost-right.png" alt="Gehe zum letzten Beitrag" /></a>
+	</p>
+	<div class="lastpostby">
+	
+		von <div class="popupmenu memberaction">
+	<a rel="nofollow" class="username offline " href="https://forum.mindfactory.de/member5817.html" title="BigWhoop ist offline"><strong>BigWhoop</strong></a>
+	
+</div>
+	
+	</div>
+	<p class="lastpostdate">04.10.2014, <span class="time">09:33</span></p>
+
+			</div>
+		</div>
+        
+	</div>
+	
+</li>
+	</ol>
+	
+</li><li class="forumbit_nopost old_lock L1" id="cat5">
+	<div class="forumhead foruminfo L1 collapse">
+		<h2>
+			<span class="forumtitle"><a href="https://forum.mindfactory.de/f5-marktplatz">Marktplatz</a></span>
+			<span class="forumthreadpost">Themen / Beiträge&nbsp;</span>
+			<span class="forumlastpost">Letzter Beitrag</span>
+		
+			<a class="collapse" id="collapse_c_cat5" href="https://forum.mindfactory.de/forum.php#top"><img src="images/buttons/collapse_40b.png" alt="" /></a>
+		
+		</h2>
+
+		
+	</div>
+	
+</li><li class="forumbit_nopost old_lock L1" id="cat188">
+	<div class="forumhead foruminfo L1 collapse">
+		<h2>
+			<span class="forumtitle"><a href="https://forum.mindfactory.de/f188-gaming">Gaming</a></span>
+			<span class="forumthreadpost">Themen / Beiträge&nbsp;</span>
+			<span class="forumlastpost">Letzter Beitrag</span>
+		
+			<a class="collapse" id="collapse_c_cat188" href="https://forum.mindfactory.de/forum.php#top"><img src="images/buttons/collapse_40b.png" alt="" /></a>
+		
+		</h2>
+
+		
+	</div>
+	
+	<ol id="c_cat188" class="childforum">
+		<li id="forum317" class="forumbit_post old_lock L2">
+	<div class="forumrow table">
+		<div class="foruminfo td">
+			<img src="images/mf/statusicon/forum_old_lock-48.png" class="forumicon" id="forum_statusicon_317" alt="" />
+			<div class="forumdata">
+				<div class="datacontainer">
+					<div class="titleline">
+						<h2 class="forumtitle"><a href="https://forum.mindfactory.de/f317-action-adventures">Action&amp;Adventures</a></h2>
+						
+					</div>
+					<p class="forumdescription">Rund um Action und Adventures Spiele</p>
+
+					
+
+					
+				</div>
+			</div>
+		</div>
+        
+		<h4 class="nocss_label">Aktionen:</h4>
+        	
+		<ul class="forumactionlinks td">
+			<li class="forumactionlink rsslink"><a rel="nofollow" href="https://forum.mindfactory.de/external.php?type=RSS2&amp;forumids=317" title="RSS-Feed dieses Forums anzeigen">RSS-Feed dieses Forums anzeigen</a></li>
+			
+		</ul>
+		
+        <h4 class="nocss_label">Statistik:</h4>
+		<ul class="forumstats td">
+			<li>Themen: 36</li>
+			<li>Beiträge: 1.619</li>
+		</ul>
+		<div class="forumlastpost td">
+			<h4 class="lastpostlabel">Letzter Beitrag:</h4>
+			<div>
+				
+	<p class="lastposttitle">
+	<img src="images/icons/icon1.png" class="postimg" alt="" border="0" />
+	
+	<a href="https://forum.mindfactory.de/t82165-assassin-s-creed-unity.html" class="threadtitle" >Assassin's Creed: Unity</a>
+	<a href="https://forum.mindfactory.de/t82165-assassin-s-creed-unity-post1003611.html#post1003611"><img src="images/buttons/lastpost-right.png" alt="Gehe zum letzten Beitrag" /></a>
+	</p>
+	<div class="lastpostby">
+	
+		von <div class="popupmenu memberaction">
+	<a rel="nofollow" class="username offline " href="https://forum.mindfactory.de/member7422.html" title="Atholon ist offline"><strong>Atholon</strong></a>
+	
+</div>
+	
+	</div>
+	<p class="lastpostdate">04.12.2014, <span class="time">14:46</span></p>
+
+			</div>
+		</div>
+        
+	</div>
+	
+</li><li id="forum318" class="forumbit_post old_lock L2">
+	<div class="forumrow table">
+		<div class="foruminfo td">
+			<img src="images/mf/statusicon/forum_old_lock-48.png" class="forumicon" id="forum_statusicon_318" alt="" />
+			<div class="forumdata">
+				<div class="datacontainer">
+					<div class="titleline">
+						<h2 class="forumtitle"><a href="https://forum.mindfactory.de/f318-shooter">Shooter</a></h2>
+						
+					</div>
+					<p class="forumdescription">Rund um Shooter</p>
+
+					
+
+					
+				</div>
+			</div>
+		</div>
+        
+		<h4 class="nocss_label">Aktionen:</h4>
+        	
+		<ul class="forumactionlinks td">
+			<li class="forumactionlink rsslink"><a rel="nofollow" href="https://forum.mindfactory.de/external.php?type=RSS2&amp;forumids=318" title="RSS-Feed dieses Forums anzeigen">RSS-Feed dieses Forums anzeigen</a></li>
+			
+		</ul>
+		
+        <h4 class="nocss_label">Statistik:</h4>
+		<ul class="forumstats td">
+			<li>Themen: 315</li>
+			<li>Beiträge: 21.997</li>
+		</ul>
+		<div class="forumlastpost td">
+			<h4 class="lastpostlabel">Letzter Beitrag:</h4>
+			<div>
+				
+	<p class="lastposttitle">
+	<img src="images/icons/icon1.png" class="postimg" alt="" border="0" />
+	
+	<a href="https://forum.mindfactory.de/t85390-far-cry-4-a.html" class="threadtitle" >Far Cry 4</a>
+	<a href="https://forum.mindfactory.de/t85390-far-cry-4-a-post1002752.html#post1002752"><img src="images/buttons/lastpost-right.png" alt="Gehe zum letzten Beitrag" /></a>
+	</p>
+	<div class="lastpostby">
+	
+		von <div class="popupmenu memberaction">
+	<a rel="nofollow" class="username offline " href="https://forum.mindfactory.de/member5817.html" title="BigWhoop ist offline"><strong>BigWhoop</strong></a>
+	
+</div>
+	
+	</div>
+	<p class="lastpostdate">01.12.2014, <span class="time">08:28</span></p>
+
+			</div>
+		</div>
+        
+	</div>
+	
+</li><li id="forum319" class="forumbit_post old_lock L2">
+	<div class="forumrow table">
+		<div class="foruminfo td">
+			<img src="images/mf/statusicon/forum_old_lock-48.png" class="forumicon" id="forum_statusicon_319" alt="" />
+			<div class="forumdata">
+				<div class="datacontainer">
+					<div class="titleline">
+						<h2 class="forumtitle"><a href="https://forum.mindfactory.de/f319-sport-simulationen">Sport&amp;Simulationen</a></h2>
+						
+					</div>
+					<p class="forumdescription">Rund um Simulationen und Sport Spiele</p>
+
+					
+
+					
+				</div>
+			</div>
+		</div>
+        
+		<h4 class="nocss_label">Aktionen:</h4>
+        	
+		<ul class="forumactionlinks td">
+			<li class="forumactionlink rsslink"><a rel="nofollow" href="https://forum.mindfactory.de/external.php?type=RSS2&amp;forumids=319" title="RSS-Feed dieses Forums anzeigen">RSS-Feed dieses Forums anzeigen</a></li>
+			
+		</ul>
+		
+        <h4 class="nocss_label">Statistik:</h4>
+		<ul class="forumstats td">
+			<li>Themen: 47</li>
+			<li>Beiträge: 846</li>
+		</ul>
+		<div class="forumlastpost td">
+			<h4 class="lastpostlabel">Letzter Beitrag:</h4>
+			<div>
+				
+	<p class="lastposttitle">
+	<img src="images/icons/icon1.png" class="postimg" alt="" border="0" />
+	
+	<a href="https://forum.mindfactory.de/t85549-trackmania-stadium-hamachi.html" class="threadtitle" >Trackmania Stadium - Hamachi</a>
+	<a href="https://forum.mindfactory.de/t85549-trackmania-stadium-hamachi-post1003293.html#post1003293"><img src="images/buttons/lastpost-right.png" alt="Gehe zum letzten Beitrag" /></a>
+	</p>
+	<div class="lastpostby">
+	
+		von <div class="popupmenu memberaction">
+	<a rel="nofollow" class="username online " href="https://forum.mindfactory.de/member27229.html" title="DerGunsula ist gerade online"><strong>DerGunsula</strong></a>
+	
+</div>
+	
+	</div>
+	<p class="lastpostdate">03.12.2014, <span class="time">13:45</span></p>
+
+			</div>
+		</div>
+        
+	</div>
+	
+</li><li id="forum320" class="forumbit_post old_lock L2">
+	<div class="forumrow table">
+		<div class="foruminfo td">
+			<img src="images/mf/statusicon/forum_old_lock-48.png" class="forumicon" id="forum_statusicon_320" alt="" />
+			<div class="forumdata">
+				<div class="datacontainer">
+					<div class="titleline">
+						<h2 class="forumtitle"><a href="https://forum.mindfactory.de/f320-aufbau-strategie">Aufbau&amp;Strategie</a></h2>
+						
+					</div>
+					<p class="forumdescription">Rund um Aufbau und Strategie Spiele</p>
+
+					
+
+					
+				</div>
+			</div>
+		</div>
+        
+		<h4 class="nocss_label">Aktionen:</h4>
+        	
+		<ul class="forumactionlinks td">
+			<li class="forumactionlink rsslink"><a rel="nofollow" href="https://forum.mindfactory.de/external.php?type=RSS2&amp;forumids=320" title="RSS-Feed dieses Forums anzeigen">RSS-Feed dieses Forums anzeigen</a></li>
+			
+		</ul>
+		
+        <h4 class="nocss_label">Statistik:</h4>
+		<ul class="forumstats td">
+			<li>Themen: 56</li>
+			<li>Beiträge: 2.563</li>
+		</ul>
+		<div class="forumlastpost td">
+			<h4 class="lastpostlabel">Letzter Beitrag:</h4>
+			<div>
+				
+	<p class="lastposttitle">
+	<img src="images/icons/icon1.png" class="postimg" alt="" border="0" />
+	
+	<a href="https://forum.mindfactory.de/t79379-godus.html" class="threadtitle" >Godus</a>
+	<a href="https://forum.mindfactory.de/t79379-godus-post952024.html#post952024"><img src="images/buttons/lastpost-right.png" alt="Gehe zum letzten Beitrag" /></a>
+	</p>
+	<div class="lastpostby">
+	
+		von <div class="popupmenu memberaction">
+	<a rel="nofollow" class="username offline " href="https://forum.mindfactory.de/member26440.html" title="Symbi ist offline"><strong>Symbi</strong></a>
+	
+</div>
+	
+	</div>
+	<p class="lastpostdate">11.01.2014, <span class="time">14:50</span></p>
+
+			</div>
+		</div>
+        
+	</div>
+	
+</li><li id="forum321" class="forumbit_post old_lock L2">
+	<div class="forumrow table">
+		<div class="foruminfo td">
+			<img src="images/mf/statusicon/forum_old_lock-48.png" class="forumicon" id="forum_statusicon_321" alt="" />
+			<div class="forumdata">
+				<div class="datacontainer">
+					<div class="titleline">
+						<h2 class="forumtitle"><a href="https://forum.mindfactory.de/f321-rollenspiele">Rollenspiele</a></h2>
+						
+					</div>
+					<p class="forumdescription">Rund um Rollenspiele</p>
+
+					
+
+					
+				</div>
+			</div>
+		</div>
+        
+		<h4 class="nocss_label">Aktionen:</h4>
+        	
+		<ul class="forumactionlinks td">
+			<li class="forumactionlink rsslink"><a rel="nofollow" href="https://forum.mindfactory.de/external.php?type=RSS2&amp;forumids=321" title="RSS-Feed dieses Forums anzeigen">RSS-Feed dieses Forums anzeigen</a></li>
+			
+		</ul>
+		
+        <h4 class="nocss_label">Statistik:</h4>
+		<ul class="forumstats td">
+			<li>Themen: 36</li>
+			<li>Beiträge: 888</li>
+		</ul>
+		<div class="forumlastpost td">
+			<h4 class="lastpostlabel">Letzter Beitrag:</h4>
+			<div>
+				
+	<p class="lastposttitle">
+	<img src="images/icons/icon5.png" class="postimg" alt="Frage" border="0" />
+	
+	<a href="https://forum.mindfactory.de/t85621-hallo-wende-beim-spiel-two-worlds-zauber.html" class="threadtitle" >hallo, wie wende ich, beim spiel two worlds, den zauber an,</a>
+	<a href="https://forum.mindfactory.de/t85621-hallo-wende-beim-spiel-two-worlds-zauber-post1002445.html#post1002445"><img src="images/buttons/lastpost-right.png" alt="Gehe zum letzten Beitrag" /></a>
+	</p>
+	<div class="lastpostby">
+	
+		von <div class="popupmenu memberaction">
+	<a rel="nofollow" class="username offline " href="https://forum.mindfactory.de/member18493.html" title="Black &amp; White ist offline"><strong>Black &amp; White</strong></a>
+	
+</div>
+	
+	</div>
+	<p class="lastpostdate">29.11.2014, <span class="time">00:19</span></p>
+
+			</div>
+		</div>
+        
+	</div>
+	
+</li><li id="forum322" class="forumbit_post old_lock L2">
+	<div class="forumrow table">
+		<div class="foruminfo td">
+			<img src="images/mf/statusicon/forum_old_lock-48.png" class="forumicon" id="forum_statusicon_322" alt="" />
+			<div class="forumdata">
+				<div class="datacontainer">
+					<div class="titleline">
+						<h2 class="forumtitle"><a href="https://forum.mindfactory.de/f322-sonstiges-gaming">Sonstiges Gaming</a></h2>
+						<span class="viewing">(1 Betrachter)</span>
+					</div>
+					<p class="forumdescription">Rund um alles was nciht rein passt.</p>
+
+					
+
+					
+				</div>
+			</div>
+		</div>
+        
+		<h4 class="nocss_label">Aktionen:</h4>
+        	
+		<ul class="forumactionlinks td">
+			<li class="forumactionlink rsslink"><a rel="nofollow" href="https://forum.mindfactory.de/external.php?type=RSS2&amp;forumids=322" title="RSS-Feed dieses Forums anzeigen">RSS-Feed dieses Forums anzeigen</a></li>
+			
+		</ul>
+		
+        <h4 class="nocss_label">Statistik:</h4>
+		<ul class="forumstats td">
+			<li>Themen: 549</li>
+			<li>Beiträge: 7.086</li>
+		</ul>
+		<div class="forumlastpost td">
+			<h4 class="lastpostlabel">Letzter Beitrag:</h4>
+			<div>
+				
+	<p class="lastposttitle">
+	<img src="images/icons/icon1.png" class="postimg" alt="" border="0" />
+	
+	<a href="https://forum.mindfactory.de/t72824-suche-browsergames-fuer-zwischendrin.html" class="threadtitle" >Suche Browsergames für zwischendrin</a>
+	<a href="https://forum.mindfactory.de/t72824-suche-browsergames-fuer-zwischendrin-post990204.html#post990204"><img src="images/buttons/lastpost-right.png" alt="Gehe zum letzten Beitrag" /></a>
+	</p>
+	<div class="lastpostby">
+	
+		von <div class="popupmenu memberaction">
+	<a rel="nofollow" class="username offline " href="https://forum.mindfactory.de/member34502.html" title="MVoller ist offline"><strong>MVoller</strong></a>
+	
+</div>
+	
+	</div>
+	<p class="lastpostdate">12.09.2014, <span class="time">15:49</span></p>
+
+			</div>
+		</div>
+        
+	</div>
+	
+</li><li id="forum316" class="forumbit_post old_lock L2">
+	<div class="forumrow table">
+		<div class="foruminfo td">
+			<img src="images/mf/statusicon/forum_old_lock-48.png" class="forumicon" id="forum_statusicon_316" alt="" />
+			<div class="forumdata">
+				<div class="datacontainer">
+					<div class="titleline">
+						<h2 class="forumtitle"><a href="https://forum.mindfactory.de/f316-archiv">Archiv</a></h2>
+						<span class="viewing">(1 Betrachter)</span>
+					</div>
+					<p class="forumdescription">Alte Foreneinträge</p>
+
+					
+
+					
+						<div class="subforums">
+	<h4 class="subforumlistlabel">Unterforen:</h4>
+	<ol class="subforumlist commalist">
+		
+			<li class="subforum">
+				
+					<img class="inlineimg" src="images/mf/statusicon/subforum_old-48.png" alt="" border="0" id="forum_statusicon_189" /> 
+				
+				<a href="https://forum.mindfactory.de/f189-game-news-infos">Game-News-Infos</a>, 
+			</li>
+		
+			<li class="subforum">
+				
+					<img class="inlineimg" src="images/mf/statusicon/subforum_old-48.png" alt="" border="0" id="forum_statusicon_190" /> 
+				
+				<a href="https://forum.mindfactory.de/f190-pc">PC</a>, 
+			</li>
+		
+			<li class="subforum">
+				
+					<img class="inlineimg" src="images/mf/statusicon/subforum_old-48.png" alt="" border="0" id="forum_statusicon_191" /> 
+				
+				<a href="https://forum.mindfactory.de/f191-konsolen">Konsolen</a>, 
+			</li>
+		
+			<li class="subforum">
+				
+					<img class="inlineimg" src="images/mf/statusicon/subforum_old-48.png" alt="" border="0" id="forum_statusicon_205" /> 
+				
+				<a href="https://forum.mindfactory.de/f205-datings">Datings</a>, 
+			</li>
+		
+			<li class="subforum">
+				
+					<img class="inlineimg" src="images/mf/statusicon/subforum_old-48.png" alt="" border="0" id="forum_statusicon_193" /> 
+				
+				<a href="https://forum.mindfactory.de/f193-server-infos">Server Infos</a>, 
+			</li>
+		
+			<li class="subforum">
+				
+					<img class="inlineimg" src="images/mf/statusicon/subforum_old-48.png" alt="" border="0" id="forum_statusicon_213" /> 
+				
+				<a href="https://forum.mindfactory.de/f213-screens">Screens</a>, 
+			</li>
+		
+			<li class="subforum">
+				
+					<img class="inlineimg" src="images/mf/statusicon/subforum_old-48.png" alt="" border="0" id="forum_statusicon_69" /> 
+				
+				<a href="https://forum.mindfactory.de/f69-clan-link-area">Clan-Link-Area</a>, 
+			</li>
+		
+			<li class="subforum">
+				
+					<img class="inlineimg" src="images/mf/statusicon/subforum_old-48.png" alt="" border="0" id="forum_statusicon_209" /> 
+				
+				<a href="https://forum.mindfactory.de/f209-sonstige-games">Sonstige Games</a>, 
+			</li>
+		
+			<li class="subforum">
+				
+					<img class="inlineimg" src="images/mf/statusicon/subforum_old-48.png" alt="" border="0" id="forum_statusicon_194" /> 
+				
+				<a href="https://forum.mindfactory.de/f194-e-sport">E-Sport</a>, 
+			</li>
+		
+			<li class="subforum">
+				
+					<img class="inlineimg" src="images/mf/statusicon/subforum_old-48.png" alt="" border="0" id="forum_statusicon_310" /> 
+				
+				<a href="https://forum.mindfactory.de/f310-aktuelles">Aktuelles</a>, 
+			</li>
+		
+			<li class="subforum">
+				
+					<img class="inlineimg" src="images/mf/statusicon/subforum_old-48.png" alt="" border="0" id="forum_statusicon_311" /> 
+				
+				<a href="https://forum.mindfactory.de/f311-esl-pro-series">ESL Pro Series</a>, 
+			</li>
+		
+			<li class="subforum">
+				
+					<img class="inlineimg" src="images/mf/statusicon/subforum_old-48.png" alt="" border="0" id="forum_statusicon_312" /> 
+				
+				<a href="https://forum.mindfactory.de/f312-fragen-antworten-ueber-e-sport">Fragen &amp; Antworten über E-Sport</a>, 
+			</li>
+		
+			<li class="subforum">
+				
+					<img class="inlineimg" src="images/mf/statusicon/subforum_old-48.png" alt="" border="0" id="forum_statusicon_195" /> 
+				
+				<a href="https://forum.mindfactory.de/f195-gamers-playground">Gamers Playground</a>, 
+			</li>
+		
+			<li class="subforum">
+				
+					<img class="inlineimg" src="images/mf/statusicon/subforum_old-48.png" alt="" border="0" id="forum_statusicon_219" /> 
+				
+				<a href="https://forum.mindfactory.de/f219-gta">GTA</a>, 
+			</li>
+		
+			<li class="subforum">
+				
+					<img class="inlineimg" src="images/mf/statusicon/subforum_old-48.png" alt="" border="0" id="forum_statusicon_196" /> 
+				
+				<a href="https://forum.mindfactory.de/f196-battlefield">Battlefield</a>, 
+			</li>
+		
+			<li class="subforum">
+				
+					<img class="inlineimg" src="images/mf/statusicon/subforum_old-48.png" alt="" border="0" id="forum_statusicon_217" /> 
+				
+				<a href="https://forum.mindfactory.de/f217-c-c">C&amp;C</a>, 
+			</li>
+		
+			<li class="subforum">
+				
+					<img class="inlineimg" src="images/mf/statusicon/subforum_old-48.png" alt="" border="0" id="forum_statusicon_218" /> 
+				
+				<a href="https://forum.mindfactory.de/f218-s-t-l-k-e-r">S.T.A.L.K.E.R</a>, 
+			</li>
+		
+			<li class="subforum">
+				
+					<img class="inlineimg" src="images/mf/statusicon/subforum_old-48.png" alt="" border="0" id="forum_statusicon_221" /> 
+				
+				<a href="https://forum.mindfactory.de/f221-f-e-r">F.E.A.R</a>, 
+			</li>
+		
+			<li class="subforum">
+				
+					<img class="inlineimg" src="images/mf/statusicon/subforum_old-48.png" alt="" border="0" id="forum_statusicon_224" /> 
+				
+				<a href="https://forum.mindfactory.de/f224-age-conan">Age of Conan</a>, 
+			</li>
+		
+			<li class="subforum">
+				
+					<img class="inlineimg" src="images/mf/statusicon/subforum_old-48.png" alt="" border="0" id="forum_statusicon_225" /> 
+				
+				<a href="https://forum.mindfactory.de/f225-mass-effect">Mass Effect</a>, 
+			</li>
+		
+			<li class="subforum">
+				
+					<img class="inlineimg" src="images/mf/statusicon/subforum_old-48.png" alt="" border="0" id="forum_statusicon_203" /> 
+				
+				<a href="https://forum.mindfactory.de/f203-coh">COH</a>, 
+			</li>
+		
+			<li class="subforum">
+				
+					<img class="inlineimg" src="images/mf/statusicon/subforum_old-48.png" alt="" border="0" id="forum_statusicon_200" /> 
+				
+				<a href="https://forum.mindfactory.de/f200-nfs">NFS</a>, 
+			</li>
+		
+			<li class="subforum">
+				
+					<img class="inlineimg" src="images/mf/statusicon/subforum_old-48.png" alt="" border="0" id="forum_statusicon_197" /> 
+				
+				<a href="https://forum.mindfactory.de/f197-cod">COD</a>, 
+			</li>
+		
+			<li class="subforum">
+				
+					<img class="inlineimg" src="images/mf/statusicon/subforum_old-48.png" alt="" border="0" id="forum_statusicon_198" /> 
+				
+				<a href="https://forum.mindfactory.de/f198-wow">WoW</a>, 
+			</li>
+		
+			<li class="subforum">
+				
+					<img class="inlineimg" src="images/mf/statusicon/subforum_old-48.png" alt="" border="0" id="forum_statusicon_199" /> 
+				
+				<a href="https://forum.mindfactory.de/f199-cs-half-life">CS/Half Life</a>, 
+			</li>
+		
+			<li class="subforum">
+				
+					<img class="inlineimg" src="images/mf/statusicon/subforum_old-48.png" alt="" border="0" id="forum_statusicon_201" /> 
+				
+				<a href="https://forum.mindfactory.de/f201-moh">MoH</a>, 
+			</li>
+		
+			<li class="subforum">
+				
+					<img class="inlineimg" src="images/mf/statusicon/subforum_old-48.png" alt="" border="0" id="forum_statusicon_202" /> 
+				
+				<a href="https://forum.mindfactory.de/f202-unreal-tournament">Unreal Tournament</a>, 
+			</li>
+		
+			<li class="subforum">
+				
+					<img class="inlineimg" src="images/mf/statusicon/subforum_old-48.png" alt="" border="0" id="forum_statusicon_208" /> 
+				
+				<a href="https://forum.mindfactory.de/f208-anno-1503-1701">Anno 1503-1701</a>, 
+			</li>
+		
+			<li class="subforum">
+				
+					<img class="inlineimg" src="images/mf/statusicon/subforum_old-48.png" alt="" border="0" id="forum_statusicon_210" /> 
+				
+				<a href="https://forum.mindfactory.de/f210-bioshock">Bioshock</a>, 
+			</li>
+		
+			<li class="subforum">
+				
+					<img class="inlineimg" src="images/mf/statusicon/subforum_old-48.png" alt="" border="0" id="forum_statusicon_211" /> 
+				
+				<a href="https://forum.mindfactory.de/f211-crysis">Crysis</a>, 
+			</li>
+		
+			<li class="subforum">
+				
+					<img class="inlineimg" src="images/mf/statusicon/subforum_old-48.png" alt="" border="0" id="forum_statusicon_212" /> 
+				
+				<a href="https://forum.mindfactory.de/f212-tomb-raider">Tomb Raider</a>, 
+			</li>
+		
+			<li class="subforum">
+				
+					<img class="inlineimg" src="images/mf/statusicon/subforum_old-48.png" alt="" border="0" id="forum_statusicon_216" /> 
+				
+				<a href="https://forum.mindfactory.de/f216-siedler">Die Siedler</a>, 
+			</li>
+		
+			<li class="subforum">
+				
+					<img class="inlineimg" src="images/mf/statusicon/subforum_old-48.png" alt="" border="0" id="forum_statusicon_206" /> 
+				
+				<a href="https://forum.mindfactory.de/f206-etqw">ETQW</a>, 
+			</li>
+		
+			<li class="subforum">
+				
+					<img class="inlineimg" src="images/mf/statusicon/subforum_old-48.png" alt="" border="0" id="forum_statusicon_220" /> 
+				
+				<a href="https://forum.mindfactory.de/f220-silent-hunter">Silent Hunter</a>, 
+			</li>
+		
+			<li class="subforum">
+				
+					<img class="inlineimg" src="images/mf/statusicon/subforum_old-48.png" alt="" border="0" id="forum_statusicon_214" /> 
+				
+				<a href="https://forum.mindfactory.de/f214-world-conflict">World in Conflict</a>, 
+			</li>
+		
+			<li class="subforum">
+				
+					<img class="inlineimg" src="images/mf/statusicon/subforum_old-48.png" alt="" border="0" id="forum_statusicon_215" /> 
+				
+				<a href="https://forum.mindfactory.de/f215-empire-earth">Empire Earth</a>
+			</li>
+		
+	</ol>
+</div>
+
+					
+				</div>
+			</div>
+		</div>
+        
+		<h4 class="nocss_label">Aktionen:</h4>
+        	
+		<ul class="forumactionlinks td">
+			<li class="forumactionlink rsslink"><a rel="nofollow" href="https://forum.mindfactory.de/external.php?type=RSS2&amp;forumids=316" title="RSS-Feed dieses Forums anzeigen">RSS-Feed dieses Forums anzeigen</a></li>
+			
+		</ul>
+		
+        <h4 class="nocss_label">Statistik:</h4>
+		<ul class="forumstats td">
+			<li>Themen: 187</li>
+			<li>Beiträge: 1.226</li>
+		</ul>
+		<div class="forumlastpost td">
+			<h4 class="lastpostlabel">Letzter Beitrag:</h4>
+			<div>
+				
+	<p class="lastposttitle">
+	<img src="images/icons/icon1.png" class="postimg" alt="" border="0" />
+	
+	<a href="https://forum.mindfactory.de/t84610-gibts-hier-noch-s-t-l-k-e-r-freunde.html" class="threadtitle" >Gibts hier noch S.T.A.L.K.E.R Freunde?</a>
+	<a href="https://forum.mindfactory.de/t84610-gibts-hier-noch-s-t-l-k-e-r-freunde-post994962.html#post994962"><img src="images/buttons/lastpost-right.png" alt="Gehe zum letzten Beitrag" /></a>
+	</p>
+	<div class="lastpostby">
+	
+		von <div class="popupmenu memberaction">
+	<a rel="nofollow" class="username offline " href="https://forum.mindfactory.de/member35820.html" title="Der_Dude ist offline"><strong>Der_Dude</strong></a>
+	
+</div>
+	
+	</div>
+	<p class="lastpostdate">16.10.2014, <span class="time">15:40</span></p>
+
+			</div>
+		</div>
+        
+	</div>
+	
+</li>
+	</ol>
+	
+</li><li class="forumbit_nopost old_lock L1" id="cat53">
+	<div class="forumhead foruminfo L1 collapse">
+		<h2>
+			<span class="forumtitle"><a href="https://forum.mindfactory.de/f53-community">Community</a></span>
+			<span class="forumthreadpost">Themen / Beiträge&nbsp;</span>
+			<span class="forumlastpost">Letzter Beitrag</span>
+		
+			<a class="collapse" id="collapse_c_cat53" href="https://forum.mindfactory.de/forum.php#top"><img src="images/buttons/collapse_40b.png" alt="" /></a>
+		
+		</h2>
+
+		
+	</div>
+	
+	<ol id="c_cat53" class="childforum">
+		<li id="forum61" class="forumbit_post old_lock L2">
+	<div class="forumrow table">
+		<div class="foruminfo td">
+			<img src="images/mf/statusicon/forum_old_lock-48.png" class="forumicon" id="forum_statusicon_61" alt="" />
+			<div class="forumdata">
+				<div class="datacontainer">
+					<div class="titleline">
+						<h2 class="forumtitle"><a href="https://forum.mindfactory.de/f61-sonstiges">Sonstiges</a></h2>
+						<span class="viewing">(3 Betrachter)</span>
+					</div>
+					
+
+					
+
+					
+						<div class="subforums">
+	<h4 class="subforumlistlabel">Unterforen:</h4>
+	<ol class="subforumlist commalist">
+		
+			<li class="subforum">
+				
+					<img class="inlineimg" src="images/mf/statusicon/subforum_old-48.png" alt="" border="0" id="forum_statusicon_297" /> 
+				
+				<a href="https://forum.mindfactory.de/f297-archiv-hardwareberatung">Archiv Hardwareberatung</a>, 
+			</li>
+		
+			<li class="subforum">
+				
+					<img class="inlineimg" src="images/mf/statusicon/subforum_old-48.png" alt="" border="0" id="forum_statusicon_173" /> 
+				
+				<a href="https://forum.mindfactory.de/f173-jugendschutz-zensur">Jugendschutz &amp;  Zensur?</a>, 
+			</li>
+		
+			<li class="subforum">
+				
+					<img class="inlineimg" src="images/mf/statusicon/subforum_old-48.png" alt="" border="0" id="forum_statusicon_229" /> 
+				
+				<a href="https://forum.mindfactory.de/f229-schlemmerecke">Schlemmerecke</a>, 
+			</li>
+		
+			<li class="subforum">
+				
+					<img class="inlineimg" src="images/mf/statusicon/subforum_old-48.png" alt="" border="0" id="forum_statusicon_62" /> 
+				
+				<a href="https://forum.mindfactory.de/f62-sport">Sport</a>, 
+			</li>
+		
+			<li class="subforum">
+				
+					<img class="inlineimg" src="images/mf/statusicon/subforum_old-48.png" alt="" border="0" id="forum_statusicon_64" /> 
+				
+				<a href="https://forum.mindfactory.de/f64-musik">Musik</a>, 
+			</li>
+		
+			<li class="subforum">
+				
+					<img class="inlineimg" src="images/mf/statusicon/subforum_old-48.png" alt="" border="0" id="forum_statusicon_228" /> 
+				
+				<a href="https://forum.mindfactory.de/f228-literarisches-sofa">Literarisches Sofa</a>, 
+			</li>
+		
+			<li class="subforum">
+				
+					<img class="inlineimg" src="images/mf/statusicon/subforum_old-48.png" alt="" border="0" id="forum_statusicon_60" /> 
+				
+				<a href="https://forum.mindfactory.de/f60-politik-gesellschaft">Politik &amp; Gesellschaft</a>, 
+			</li>
+		
+			<li class="subforum">
+				
+					<img class="inlineimg" src="images/mf/statusicon/subforum_old-48.png" alt="" border="0" id="forum_statusicon_122" /> 
+				
+				<a href="https://forum.mindfactory.de/f122-neuveroeffentlichungen-bereits-erhaeltliche-filme">Neuveröffentlichungen &amp; bereits erhältliche Filme</a>, 
+			</li>
+		
+			<li class="subforum">
+				
+					<img class="inlineimg" src="images/mf/statusicon/subforum_old-48.png" alt="" border="0" id="forum_statusicon_127" /> 
+				
+				<a href="https://forum.mindfactory.de/f127-movietalk">Movietalk</a>, 
+			</li>
+		
+			<li class="subforum">
+				
+					<img class="inlineimg" src="images/mf/statusicon/subforum_old-48.png" alt="" border="0" id="forum_statusicon_175" /> 
+				
+				<a href="https://forum.mindfactory.de/f175-news-jade-weser-port-wilhelmshaven">News zum Jade-Weser-Port Wilhelmshaven</a>, 
+			</li>
+		
+			<li class="subforum">
+				
+					<img class="inlineimg" src="images/mf/statusicon/subforum_old-48.png" alt="" border="0" id="forum_statusicon_24" /> 
+				
+				<a href="https://forum.mindfactory.de/f24-off-topic">Off-Topic</a>, 
+			</li>
+		
+			<li class="subforum">
+				
+					<img class="inlineimg" src="images/mf/statusicon/subforum_old-48.png" alt="" border="0" id="forum_statusicon_36" /> 
+				
+				<a href="https://forum.mindfactory.de/f36-chaosecke">Chaosecke</a>
+			</li>
+		
+	</ol>
+</div>
+
+					
+				</div>
+			</div>
+		</div>
+        
+		<h4 class="nocss_label">Aktionen:</h4>
+        	
+		<ul class="forumactionlinks td">
+			<li class="forumactionlink rsslink"><a rel="nofollow" href="https://forum.mindfactory.de/external.php?type=RSS2&amp;forumids=61" title="RSS-Feed dieses Forums anzeigen">RSS-Feed dieses Forums anzeigen</a></li>
+			
+		</ul>
+		
+        <h4 class="nocss_label">Statistik:</h4>
+		<ul class="forumstats td">
+			<li>Themen: 5.588</li>
+			<li>Beiträge: 205.936</li>
+		</ul>
+		<div class="forumlastpost td">
+			<h4 class="lastpostlabel">Letzter Beitrag:</h4>
+			<div>
+				
+	<p class="lastposttitle">
+	<img src="images/icons/icon1.png" class="postimg" alt="" border="0" />
+	
+	<a href="https://forum.mindfactory.de/t13673-letztes-gekauft-thread-part-2-a.html" class="threadtitle" >Der &quot;als letztes gekauft&quot; Thread (Part 2)</a>
+	<a href="https://forum.mindfactory.de/t13673-letztes-gekauft-thread-part-2-a-post1004928.html#post1004928"><img src="images/buttons/lastpost-right.png" alt="Gehe zum letzten Beitrag" /></a>
+	</p>
+	<div class="lastpostby">
+	
+		von <div class="popupmenu memberaction">
+	<a rel="nofollow" class="username online " href="https://forum.mindfactory.de/member27229.html" title="DerGunsula ist gerade online"><strong>DerGunsula</strong></a>
+	
+</div>
+	
+	</div>
+	<p class="lastpostdate">Heute, <span class="time">15:07</span></p>
+
+			</div>
+		</div>
+        
+	</div>
+	
+</li><li id="forum71" class="forumbit_post old_lock L2">
+	<div class="forumrow table">
+		<div class="foruminfo td">
+			<img src="images/mf/statusicon/forum_old_lock-48.png" class="forumicon" id="forum_statusicon_71" alt="" />
+			<div class="forumdata">
+				<div class="datacontainer">
+					<div class="titleline">
+						<h2 class="forumtitle"><a href="https://forum.mindfactory.de/f71-lustiges">Lustiges</a></h2>
+						
+					</div>
+					
+
+					
+
+					
+						<div class="subforums">
+	<h4 class="subforumlistlabel">Unterforen:</h4>
+	<ol class="subforumlist commalist">
+		
+			<li class="subforum">
+				
+					<img class="inlineimg" src="images/mf/statusicon/subforum_old-48.png" alt="" border="0" id="forum_statusicon_72" /> 
+				
+				<a href="https://forum.mindfactory.de/f72-comics-bilder">Comics &amp; Bilder</a>, 
+			</li>
+		
+			<li class="subforum">
+				
+					<img class="inlineimg" src="images/mf/statusicon/subforum_old-48.png" alt="" border="0" id="forum_statusicon_73" /> 
+				
+				<a href="https://forum.mindfactory.de/f73-filme-clips">Filme &amp; Clips</a>, 
+			</li>
+		
+			<li class="subforum">
+				
+					<img class="inlineimg" src="images/mf/statusicon/subforum_old-48.png" alt="" border="0" id="forum_statusicon_70" /> 
+				
+				<a href="https://forum.mindfactory.de/f70-jokes">Jokes</a>, 
+			</li>
+		
+			<li class="subforum">
+				
+					<img class="inlineimg" src="images/mf/statusicon/subforum_old-48.png" alt="" border="0" id="forum_statusicon_74" /> 
+				
+				<a href="https://forum.mindfactory.de/f74-merkwuerdigkeiten">Merkwürdigkeiten</a>
+			</li>
+		
+	</ol>
+</div>
+
+					
+				</div>
+			</div>
+		</div>
+        
+		<h4 class="nocss_label">Aktionen:</h4>
+        	
+		<ul class="forumactionlinks td">
+			<li class="forumactionlink rsslink"><a rel="nofollow" href="https://forum.mindfactory.de/external.php?type=RSS2&amp;forumids=71" title="RSS-Feed dieses Forums anzeigen">RSS-Feed dieses Forums anzeigen</a></li>
+			
+		</ul>
+		
+        <h4 class="nocss_label">Statistik:</h4>
+		<ul class="forumstats td">
+			<li>Themen: 948</li>
+			<li>Beiträge: 2.269</li>
+		</ul>
+		<div class="forumlastpost td">
+			<h4 class="lastpostlabel">Letzter Beitrag:</h4>
+			<div>
+				
+	<p class="lastposttitle">
+	<img src="images/icons/icon12.png" class="postimg" alt="Blinzeln" border="0" />
+	
+	<a href="https://forum.mindfactory.de/t85795-achtung-leute.html" class="threadtitle" >&quot;achtung leute&quot;</a>
+	<a href="https://forum.mindfactory.de/t85795-achtung-leute-post1003925.html#post1003925"><img src="images/buttons/lastpost-right.png" alt="Gehe zum letzten Beitrag" /></a>
+	</p>
+	<div class="lastpostby">
+	
+		von <div class="popupmenu memberaction">
+	<a rel="nofollow" class="username offline " href="https://forum.mindfactory.de/member36502.html" title="Erste_Reklamation ist offline"><strong>Erste_Reklamation</strong></a>
+	
+</div>
+	
+	</div>
+	<p class="lastpostdate">05.12.2014, <span class="time">12:47</span></p>
+
+			</div>
+		</div>
+        
+	</div>
+	
+</li>
+	</ol>
+	
+</li>
+	</ol>
+        
+	<!-- /main -->
+
+        <div class="navlinks">
+        <a href="https://forum.mindfactory.de/forumdisplay.php?do=markread&amp;markreadhash=guest" rel="nofollow">Alle Foren als gelesen markieren</a>
+	
+        </div>
+	 
+	<!-- what's going on box -->
+	<div id="wgo" class="collapse wgo_block block">
+		<h2 class="blockhead">Aktuelle Informationen</h2>
+		<div class="blockbody formcontrols floatcontainer">
+			
+			
+			<!-- logged-in users -->
+			<div id="wgo_onlineusers" class="wgo_subblock section">
+				<h3 class="blocksubhead"><img src="images/misc/users_online.png" alt="Zurzeit aktive Benutzer" />Zurzeit aktive Benutzer</h3>
+				<div>
+					<p><a href="https://forum.mindfactory.de/online.php">120 Benutzer sind online</a>. <span class="shade">Registrierte Benutzer: 20, Gäste: 100</span></p>
+					<p>Mit 626 Benutzern waren die meisten Benutzer gleichzeitig online (11.12.2010 um <span class="time">00:30</span> Uhr).</p>
+					
+					<ol class="commalist" id="wgo_onlineusers_list">
+						
+							<li><a rel="nofollow" class="username" href="https://forum.mindfactory.de/member32253.html">bluescreen83</a>, </li>
+						
+							<li><a rel="nofollow" class="username" href="https://forum.mindfactory.de/member33781.html">ChristianH83</a>, </li>
+						
+							<li><a rel="nofollow" class="username" href="https://forum.mindfactory.de/member36038.html">Collat3ral</a>, </li>
+						
+							<li><a rel="nofollow" class="username" href="https://forum.mindfactory.de/member27229.html">DerGunsula</a>, </li>
+						
+							<li><a rel="nofollow" class="username" href="https://forum.mindfactory.de/member36645.html">fabo</a>, </li>
+						
+							<li><a rel="nofollow" class="username" href="https://forum.mindfactory.de/member36413.html">flos12</a>, </li>
+						
+							<li><a rel="nofollow" class="username" href="https://forum.mindfactory.de/member28504.html">FreddySimon</a>, </li>
+						
+							<li><a rel="nofollow" class="username" href="https://forum.mindfactory.de/member36300.html">GandalfDiesInTheEnd</a>, </li>
+						
+							<li><a rel="nofollow" class="username" href="https://forum.mindfactory.de/member28455.html">JokoMono</a>, </li>
+						
+							<li><a rel="nofollow" class="username" href="https://forum.mindfactory.de/member34966.html">Kl31n3rJ3d1</a>, </li>
+						
+							<li><a rel="nofollow" class="username" href="https://forum.mindfactory.de/member23856.html">madwursd</a>, </li>
+						
+							<li><a rel="nofollow" class="username" href="https://forum.mindfactory.de/member17528.html">Matti38</a>, </li>
+						
+							<li><a rel="nofollow" class="username" href="https://forum.mindfactory.de/member36451.html">meincloud</a>, </li>
+						
+							<li><a rel="nofollow" class="username" href="https://forum.mindfactory.de/member33099.html">nrgryder</a>, </li>
+						
+							<li><a rel="nofollow" class="username" href="https://forum.mindfactory.de/member36524.html">Raoul</a>, </li>
+						
+							<li><a rel="nofollow" class="username" href="https://forum.mindfactory.de/member36140.html">Rome81</a>, </li>
+						
+							<li><a rel="nofollow" class="username" href="https://forum.mindfactory.de/member36446.html">Sp1derschwein</a>, </li>
+						
+							<li><a rel="nofollow" class="username" href="https://forum.mindfactory.de/member35935.html">Toenizz</a>, </li>
+						
+							<li><a rel="nofollow" class="username" href="https://forum.mindfactory.de/member35114.html">virusmoere</a>, </li>
+						
+							<li><a rel="nofollow" class="username" href="https://forum.mindfactory.de/member4129.html">Witala</a>&nbsp;&nbsp;<a href="#"><img src="https://www.mindfactory.de/favicon.ico" border=0></a></li>
+						
+					</ol>
+					
+				</div>
+			</div>
+			<!-- end logged-in users -->
+			
+			
+			<!-- Start Members Today -->
+			
+			<!-- End Members Today -->
+			
+			
+			
+			
+			
+			<div id="wgo_stats" class="wgo_subblock section">
+				<h3 class="blocksubhead"><img src="images/misc/forum_stats.png" alt="Mindfactory Forum Statistiken" />Mindfactory Forum Statistiken</h3>
+				<div>
+					<dl>
+						<dt>Themen</dt>
+							<dd>78.779</dd>
+						<dt>Beiträge</dt>
+							<dd>956.467</dd>
+						<dt>Benutzer</dt>
+							<dd>34.275</dd>
+						
+							<dt>Aktive Benutzer</dt>
+							<dd>846</dd>
+						
+					</dl>
+					<p>Wir begrüßen unseren neuesten Benutzer, <a rel="nofollow" href="https://forum.mindfactory.de/member36677.html">Impact21</a>.</p>
+					
+				</div>
+			</div>
+			<div id="wgo_legend" class="wgo_subblock section">
+				<h3 class="blocksubhead"><img src="images/misc/legend.png" alt="Symbol-Legende" />Symbol-Legende</h3>
+				<div>
+					<dl id="icon_legends" class="icon_legends">
+						<dt><img src="images/mf/statusicon/forum_new-16.png" alt="Enthält ungelesene Beiträge" /></dt><dd>Enthält ungelesene Beiträge</dd>
+						<dt><img src="images/mf/statusicon/forum_old-16.png" alt="Enthält keine ungelesenen Beiträge" /></dt><dd>Enthält keine ungelesenen Beiträge</dd>
+						<dt><img src="images/mf/statusicon/forum_lock-16.png" alt="Forum ist geschlossen für neue Beiträge." /></dt><dd>Forum ist geschlossen für neue Beiträge.</dd>
+						<dt><img src="images/mf/statusicon/category-16.png" alt="Forum ist eine Kategorie" /></dt><dd>Forum ist eine Kategorie</dd>
+						<dt><img src="images/mf/statusicon/forum_link-16.png" alt="Forum ist ein Link" /></dt><dd>Forum ist ein Link</dd>
+					
+					</dl>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+	<!-- end what's going on box -->
+
+	 
+	
+	<script type="text/javascript">
+	<!--
+	vbphrase['doubleclick_forum_markread'] = "Klicken Sie doppelt auf diese Grafik, um dieses Forum und alle darin enthaltenen Themen als gelesen zu markieren.";
+	init_forum_readmarker_system();
+	//-->
+	</script>
+	
+<div style="clear: left">
+  
+   
+</div>
+
+<div id="footer" class="floatcontainer footer">
+
+	<form action="https://forum.mindfactory.de/forum.php" method="get" id="footer_select" class="footer_select">
+
+		
+			<select name="styleid" onchange="switch_id(this, 'style')">
+				<optgroup label="Style auswählen"><option class="hidden"></option></optgroup>
+				
+					
+					<optgroup label="&nbsp;Standard Styles">
+									
+					
+	<option value="7" class="" selected="selected">-- Mindfactory_standard</option>
+
+	<option value="5" class="" >---- Neues Farblayout</option>
+
+					
+					</optgroup>
+										
+				
+				
+					
+					<optgroup label="&nbsp;Mobile Styles">
+					
+					
+	<option value="6" class="" >-- Standard Mobile Style</option>
+
+					
+					</optgroup>
+										
+				
+			</select>	
+		
+		
+		
+	</form>
+
+	<ul id="footer_links" class="footer_links">
+		<li><a href="https://forum.mindfactory.de/sendmessage.php" rel="nofollow" accesskey="9">Kontakt</a></li>
+		<li><a onclick="_gaq.push(['_trackEvent', 'Outgoing', 'www.mindfactory.de', '']);" href="http://www.mindfactory.de">Mindfactory AG</a></li>
+		
+		
+		<li><a href="archive/index.php/">Archiv</a></li>
+		
+		<li><a onclick="_gaq.push(['_trackEvent', 'Outgoing', 'www.mindfactory.de', '/info_center.php/icID/60']);" href="http://www.mindfactory.de/info_center.php/icID/60">Datenschutzerklärung</a></li>
+		
+		<li><a href="https://forum.mindfactory.de/forum.php#top" onclick="document.location.hash='top'; return false;">Nach oben</a></li>
+	</ul>
+	
+	
+	
+	
+	<script type="text/javascript">
+	<!--
+		// Main vBulletin Javascript Initialization
+		vBulletin_init();
+	//-->
+	</script>
+        
+</div>
+</div> <!-- closing div for body_wrapper -->
+
+<div class="below_body">
+<div id="footer_time" class="shade footer_time">Alle Zeitangaben in WEZ +1. Es ist jetzt <span class="time">18:24</span> Uhr.</div>
+
+<div id="footer_copyright" class="shade footer_copyright">
+	
+	
+		
+</div>
+<div id="footer_morecopyright" class="shade footer_morecopyright">
+	
+	
+	
+	(c) Mindfactory AG 2013
+	
+</div>
+ 
+
+</div>
+
+			<!-- Piwik -->
+			<script type="text/javascript">
+			var pkBaseURL = (("https:" == document.location.protocol) ? "https://ads.mindfactory.de/piwik/" : "http://ads.mindfactory.de/piwik/");
+			document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+			</script><script type="text/javascript">
+			try {
+				var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 1);
+				piwikTracker.trackPageView();
+				piwikTracker.enableLinkTracking();
+			} catch( err ) {}
+			</script><noscript><p><img src="http://ads.mindfactory.de/piwik/piwik.php?idsite=1" style="border:0" alt=""/></p></noscript>
+			<!-- End Piwik Tag -->
+		<br /><div style="z-index:3" class="shade" align="center">Search Engine Optimization by vBSEO 3.6.1 &copy;2011, Crawlability, Inc.</div>
+
+<script type="text/javascript">
+//<![CDATA[
+
+var vbseo_jshtml = new Array();
+vbseo_jshtml[0] = "<"+"ol>			<"+"li class=\"restore\" id=\"navbar_notice_1\">		Wenn dies Ihr erster Besuch hier ist,		lesen Sie bitte zuerst die <"+"a href=\"https://forum.mindfactory.de/faq.php\" target=\"_blank\"><"+"b>Hilfe - Häufig gestellte Fragen<"+"/b><"+"/a>		durch. Sie müssen sich vermutlich <"+"a href=\"https://forum.mindfactory.de/register.php\" target=\"_blank\"><"+"b>registrieren<"+"/b><"+"/a>,		bevor Sie Beiträge verfassen können. Klicken Sie oben auf \'Registrieren\', um den Registrierungsprozess zu		starten. Sie können auch jetzt schon Beiträge lesen. Suchen Sie sich einfach das Forum aus, das Sie am meisten		interessiert.<"+"/li>		<"+"/ol>";
+
+for(var vi=0;vi<vbseo_jshtml.length;vi++)
+if(fetch_object("vbseo_vhtml_"+vi))fetch_object("vbseo_vhtml_"+vi).innerHTML = vbseo_jshtml[vi];
+
+window.orig_onload = window.onload;
+window.onload = function() {
+if (is_ie || is_moz) { var cpost=document.location.hash;if(cpost){ if(cobj = fetch_object(cpost.substring(1,cpost.length)))cobj.scrollIntoView(true); }}
+
+if(typeof window.orig_onload == "function") window.orig_onload();
+}
+
+//]]>
+</script>
+</body>
+</html>

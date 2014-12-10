@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Generate a list of random words</title>
+  	<meta name="description" content="Use this tool to generate a list of random words. Control the size of the words or how many syllables in each word. Also an option to choose the first letter in each word. You can all generate a table of paragraph of random words.">
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8">
+	<meta name="keywords" content="random,words,word,free generator, random word generator, webmaster tool,free tools, joeapple" />
+	<meta name="ROBOTS" content="INDEX, FOLLOW">
+	<link href="bootstrap.min.css" rel="stylesheet" media="screen">
+	<link href="style.css" rel="stylesheet">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/js/bootstrap.min.js"></script>
+	<script>
+
+		$(document).ready(function(){ 	
+			$(".oDisplay").click(function() {
+        		var theval = $(this).attr('theval');
+				var theaction = 'index.cfm?' + theval;
+				$('#theForm').attr('action', theaction);
+        		$("#oType").val(theval);
+				$("div.aOptions").hide();
+        		$("."+theval).show();
+    		});
+		
+			$(".wSizeCh").click(function() {
+	        	var theval = $(this).attr('id');
+	        	$("#wSizeType").val(theval);
+			});
+		
+			$(".wLenOpCh").click(function() {
+		        var oper = $(this).text();
+		        $("#lst_wLenOper").val(oper);
+		        $("#wLenOperLabel").text(oper);
+		    });
+
+			var $selected = $('input[name="oType"]:checked', '#theForm');
+
+			if($selected.length == 0) {
+   
+				} else {
+   				var whichOne = $selected.val();
+ 
+			   $("."+whichOne).show();   
+			}
+
+		if ($('#para').hasClass('active')) {
+   			var whichOne = $('#para').attr('theval');
+   				$("."+whichOne).show();
+			}
+ 		
+		if ($('#nlist').hasClass('active')) {
+   			var whichOne = $('#nlist').attr('theval');
+   			$("."+whichOne).show();
+		}
+	
+	    if ($('#blist').hasClass('active')) {
+	   		var whichOne = $('#blist').attr('theval');
+	   		$("."+whichOne).show();
+			}
+	    if ($('#table').hasClass('active')) {
+	   		var whichOne = $('#table').attr('theval');
+	   		$("."+whichOne).show();
+			}
+	   
+	    $("input[name$='oType']").click(function() {
+	        var test = $(this).val();
+	        $("div.aOptions").hide();
+	        $("."+test).show();
+	    }); 
+	});
+	</script>
+	<script type="text/javascript">
+	
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-95422-30']);
+	  _gaq.push(['_setDomainName', 'listofrandomwords.com']);
+	  _gaq.push(['_trackPageview']);
+	
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+	
+	</script>
+  </head>
+<body>
+	<div class="container">
+  		<header id="overview" class="jumbotron subhead">
+  			<div class="row btbd">
+    			<div class="span7">
+      				<h1><a href="http://listofrandomwords.com">List of random words</a></h1>
+      				<p class="lead">&nbsp;&nbsp;Because typing random stuff is hard.</p>
+    			</div>
+   				<div class="span5" style="padding-top:35px;text-align:center;">
+					<a href="http://cap.slocked.com" class="btn btn-default" target="_blank">http://cap.slocked.com</a>
+   				</div>
+  			</div>
+		</header>
+    	<div class="row">
+    		<div class="span7">
+    			<form class="form-horizontal well" id="theForm" action="index.cfm?blist" method="post">
+					
+					<fieldset>
+    					<legend>Use the form to generate a list, paragraph or table of random words</legend>
+    					<div class="control-group">
+    						<h4>Output Display:</h4>
+    						<div class="pull-right">
+								<div class="btn-group" data-toggle="buttons-radio">
+	  								<button type="button" class="btn btn-default oDisplay  active" theval="blist" id="blist">Bulleted list</button>
+									<button type="button" class="btn btn-default oDisplay  " theval="nlist" id="nlist">Numbered list</button>
+									<button type="button" class="btn btn-default oDisplay  " theval="para" id="para">Paragraph</button>
+									<button type="button" class="btn btn-default oDisplay  " theval="table" id="table">Table</button>
+								</div>
+								<input type="hidden" id="oType" name="oType" value="blist" />
+            				</div>
+						</div>
+						<div id="aoList" class="aOptions blist nlist">
+						<h4>Advanced Options for lists:</h4>
+						<div class="control-group">
+    						<label for="lst_howmany" class="control-label">How many:</label>
+							<div class="controls">
+								<select name="lst_howmany" id="lst_howmany">
+									<option value="5"   >5</option>
+							    	<option value="10"  selected>10</option>
+					                <option value="20"  >20</option>
+					                <option value="50"  >50</option>
+					                <option value="100" >100</option>
+					             </select>
+							</div>
+						</div>
+						<div class="control-group">
+            				<label for="lst_fLetter" class="control-label">First letter:</label>
+           						 <div class="controls">
+              						<input type="text" id="lst_fLetter" name="lst_fLetter" class="input-mini" value="">
+            					</div>
+          				</div>
+						<div class="control-group">
+							<label for="lst_nSyl" class="control-label">Word size by:</label>
+							<div class="controls">
+								<div class="btn-group" data-toggle="buttons-radio">
+									<button type="button" class="btn btn-default wSizeCh " id="numsybles">Number of syllables</button>
+  									<button type="button" class="btn btn-default wSizeCh " id="numlength">Word length</button>
+								</div>		
+								<input type="hidden" id="wSizeType" name="wSizeType" value="" />
+							</div>
+						</div>
+						<div class="control-group">
+            				
+           						 <div class="controls">
+              						    <div class="input-prepend">
+    										<div class="btn-group">
+   												 <button class="btn dropdown-toggle" data-toggle="dropdown">
+												    <span id="wLenOperLabel">Equals</span>
+												    <span class="caret"></span>
+												    </button>
+												    <ul class="dropdown-menu">
+												    	<li><a  class="wLenOpCh">Equals</a></li>
+														<li><a class="wLenOpCh">Less Than</a></li>
+														<li><a  class="wLenOpCh">Greater Than</a></li>
+												    </ul>
+												    </div>
+    								<input class="input-mini" id="lst_wLen" name="lst_wLen" type="text" value="">
+									<input type="hidden" id="lst_wLenOper" name="lst_wLenOper" value="Equals" />
+    							</div>
+            					</div>
+          					</div>
+						
+						
+						
+						
+						
+							
+							
+				</div>
+				<div id="aoPara" class="aOptions para">
+				<h4>Advanced options for Paragraph:</h4>
+				<div class="control-group">
+    						<label for="par_numPara" class="control-label">Number of paragraphs:</label>
+    					
+							<div class="controls">
+								
+								
+							<label class="radio inline">
+    							<input type="radio" id="numPara" name="par_numPara" value="1" > 1
+   							 </label>
+							 <label class="radio inline">
+   								 <input type="radio" id="numPara" name="par_numPara" value="3" checked> 3
+   						 	</label>
+ 						   	<label class="radio inline">
+   								 <input type="radio" id="numPara" name="par_numPara" value="5" > 5
+   						 	</label>
+    						<label class="radio inline">
+   						 		<input type="radio" id="numPara" name="par_numPara" value="10" >10
+    						</label>
+							
+								
+								
+								
+							</div>
+						</div>
+						
+				<div class="control-group">
+    						<label for="par_numSent" class="control-label">Number of sentences per paragraph:</label>
+    					
+							<div class="controls">
+								<select name="par_numSent" id="par_numSent">
+									<option>3</option>
+									<option SELECTED>5</option>
+							    	<option >7</option>
+					                <option>12</option>
+					                <option>20</option>
+					             </select>
+							</div>
+						</div>
+						<div class="control-group">
+    						<label for="par_numWordsSent" class="control-label">Number of words per sentences:</label>
+    					
+							<div class="controls">
+								<select name="par_numWordsSent" id="par_numWordsSent">
+									<option  >5</option>
+									<option  >8</option>
+							    	<option >11</option>
+					                <option selected>14</option>
+					                <option >17</option>
+									<option >21</option>
+									<option >25</option>
+									<option >29</option>
+									
+					             </select>
+							</div>
+						</div>
+						
+						</div>
+						<div id="aoTbl" class="aOptions table">
+				<h4>Advanced options for Table</h4>
+<div class="control-group">
+    						<label for="tbl_numCols" class="control-label">Number of columns:</label>
+    					
+							<div class="controls">
+								<select name="tbl_numCols" id="tbl_numCols">
+									<option></option>
+									<option >1</option>
+							    	<option >2</option>
+					                <option selected>3</option>
+					                <option >4</option>
+									<option >5</option>
+									<option >6</option>
+									<option >7</option>
+									<option >8</option>
+									<option >9</option>
+					             </select>
+							</div>
+					</div>					<div class="control-group">
+    						<label for="tbl_numRows" class="control-label">Number of rows:</label>
+    					
+							<div class="controls">
+								<select name="tbl_numRows" id="tbl_numRows">
+									<option></option>
+									<option >1</option>
+							    	<option >2</option>
+					                <option selected>3</option>
+					                <option >4</option>
+									<option >5</option>
+									<option >6</option>
+									<option >7</option>
+									<option >8</option>
+									<option >9</option>
+					             </select>
+							</div>
+					</div>
+					
+						<div class="control-group">
+    						<label for="tblHead" class="control-label">Table header:</label>
+    					
+							<div class="controls">
+								<label class="radio inline">
+    							<input type="radio" id="tblHead" name="tbl_tblHead" value="1"  > Yes
+   							 </label>
+ 						   	<label class="radio inline">
+   								 <input type="radio" id="tblHead" name="tbl_tblHead" value="0" checked> No
+   						 	</label>
+    						
+								
+							</div>
+						</div>
+						</div>
+							
+						<div class="form-actions genform" style="">
+            				<button class="btn btn-primary" type="submit">Generate!</button>
+						</div>
+					</fieldset>
+    			</form>
+    		</div>
+			<div class="span5" style="text-align:center;">
+				
+				<script type="text/javascript"><!--
+google_ad_client = "ca-pub-6345235116680072";
+/* randwords */
+google_ad_slot = "8321427914";
+google_ad_width = 336;
+google_ad_height = 280;
+//-->
+</script>
+<script type="text/javascript"
+src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-6345235116680072";
+/* randwords */
+google_ad_slot = "8321427914";
+google_ad_width = 336;
+google_ad_height = 280;
+//-->
+</script>
+<script type="text/javascript"
+src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+			</div>
+			
+    	</div>
+		<div class="span11" style="">
+			   <ul class="breadcrumb" style="text-align:center;">
+        <li class="active"><a href="http://listofrandomwords.com">Home</a> <span class="divider">/</span></li>
+        <li><a href="moretools">More Tools</a> <span class="divider">/</span></li>
+        <li><a href="contact">Contact</a></li>
+      </ul>
+			
+		</div>
+		
+		
+		<div class="span10 offset1">
+			<script type="text/javascript"><!--
+				google_ad_client = "ca-pub-6345235116680072";
+				/* lrow - 728x90 */
+				google_ad_slot = "6904674319";
+				google_ad_width = 728;
+				google_ad_height = 90;
+				//-->
+				</script>
+				<script type="text/javascript"
+				src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+			</script>
+			
+		</div>
+		<div class="span12">
+			&nbsp;
+		</div>
+		<hr style="clear:both;">
+		<div class="span5 offset3" style="text-align:center;"><span class="label label-primary">&copy; 2013 <a href="http://JoeApple.com" target="_blank">Joe Apple</a></span></div>
+	</div>
+  </body>
+    
+</html> 

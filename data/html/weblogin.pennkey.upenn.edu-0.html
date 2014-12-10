@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Please Log In</title>
+<style type="text/css">
+body,table,td {
+  font-family: Tahoma, Arial, Helvetica, sans-serif;
+  font-size: 0.80em;
+}
+
+a {
+  text-decoration: underline;
+}
+
+.fastBlueButton {
+  font-family: Tahoma, Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  color: #FFFFFF;
+  font-weight: bold;
+  white-space: nowrap;
+  font-size: 0.85em;
+  cursor: pointer;
+  text-align: center;
+  background-color: #7794C9;
+  border: 1px solid black;
+  border-top-color: #666;
+  border-left-color: #666;
+}
+
+.title,h1 {
+  font-size: 1.40em;
+  font-weight: bold;
+  color: #999999;
+}
+
+#banner {
+  background-image: url(/images/portal_banner4-bg.gif);
+}
+
+#theForm {
+  margin-top: 2.6em;
+  margin-left: 2em;
+  margin-right: 2em;
+}
+
+.formBox {
+  border: 1px solid #d5d5cf;
+  background-color: white;
+  padding-top: 0.7em;
+  padding-bottom: 0.5em;
+  width: 19em;
+}
+
+.formRow {
+  margin-top: 0.0em;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  margin-bottom: 0.0em;
+}
+
+.formLabel {
+  float: left;
+  padding-top: 0.2em;
+  width: 5em;
+}
+
+.formValue {
+  float: right;
+  width: 11.5em;
+  text-align: left;
+  margin-right: 1em;
+}
+
+.formValue .textfield {
+  width: 11em;
+}
+
+.formFooter {
+  clear: both;
+  font-size: 0.1em;
+}
+
+.buttonBox {
+  width: 19.5em;
+}
+
+.buttonRow {
+  margin-top: 0.0em;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  margin-bottom: 0.0em;
+}
+
+.buttonLabel {
+  float: left;
+  padding-top: 0.2em;
+  white-space: nowrap;
+}
+
+.buttonValue {
+  float: right;
+}
+
+.buttonFooter {
+  clear: both;
+  font-size: 0.1em;
+}
+
+.warning {
+  color: #990000;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+</style>
+
+</head>
+<body   onload="if (!document.activeElement.id) { document.loginform.login.focus(); } " alink="#cc6600" bgcolor="#f0f0ea"
+  text="#000000" vlink="#011d5c" link="#011d5c" 
+>
+
+<!-- banner -->
+<div id="banner"><a href="http://www.upenn.edu/"><img
+  src="/images/portal_penn-banner.gif" alt="Penn: University of Pennsylvania" border="0"
+  width="220" height="82"
+/></a></div>
+
+<div id="theForm">
+  <h1>Penn WebLogin</h1>
+  <br />
+  Enter your credentials to initiate <br />
+a 10-hour Penn WebLogin session.<br />
+  <br />
+  The session provides single sign-on access <br />
+to many protected University web resources. <br />
+  <br />
+  <form method="post" action="/login" name="loginform">
+  
+    <div class="formBox">
+      <div class="formRow">
+        <div class="formLabel"><b><label for="pennkey">PennKey</label></b></div>
+        <div class="formValue"><input name="login" id="pennkey" size="24" value="" autocomplete="off" class="textfield" /></div>
+        <div class="formFooter">&nbsp;</div>
+      </div>
+      <div class="formRow">
+        <div class="formLabel"><b><label for="password">Password</label></b></div>
+        <div class="formValue"><input name="password" id="password" size="24" value="" type="password" class="textfield" /></div>
+        <div class="formFooter">&nbsp;</div>
+      </div>
+    </div>
+    
+    <br />
+    <div class="buttonBox">
+      <div class="buttonRow">
+        <div class="buttonLabel"><a href="http://www.upenn.edu/computing/weblogin/guide/" style="font-size: smaller;">About Penn WebLogin</a></div>
+        <div class="buttonValue"><input class="fastBlueButton" value="Log in"
+        onmouseover="this.style.backgroundColor='#011D5C';"
+        onmouseout="this.style.backgroundColor='#7794C9';" type="submit"
+      /></div>
+        <div class="buttonFooter">&nbsp;</div>
+      </div>
+    </div>    
+    <br />
+    
+    <input type="hidden" name="required" value="UPENN.EDU,UPENN.EDU-PORTAL" />
+    <input type="hidden" name="ref"      value="https://portal.apps.upenn.edu/penn_portal/portalli.php" />
+    <input type="hidden" name="service"  value="cosign-isc-seo-portal_apps_prod-0" />
+  </form>
+  
+</div>
+
+</body>
+</html>

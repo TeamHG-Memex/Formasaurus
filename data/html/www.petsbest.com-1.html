@@ -1,0 +1,338 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=1000" />
+    <title>Pets Best Customer Portal Login</title>
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <link href="/customerportal/Content/PBLoginCss?v=TFbyt20t1lhHQ9grBaP54Om7MaBuJtEhD5056Tctc8U1" rel="stylesheet"/>
+
+    <script src="/customerportal/Scripts/PBLoginJs?v=RSLHywcWuZoH1AMHGozlMa_q185TLOLPkoOsWenCGA01"></script>
+
+
+    <!--[if IE]><script type="text/javascript" src="/customerportal/Scripts/ie.js"></script><![endif]-->
+    <!--[if lt IE 8]><link rel="stylesheet" type="text/css" href="/customerportal/Content/ie.css" media="screen"/><![endif]-->
+    <!--[if IE]>
+        
+		
+		<script type="text/javascript">
+			if(window.PIE) {
+				jQuery(function() {
+					jQuery('#twocolumns, .lightbox-2 .block-holder, .lightbox-2 .block-holder-2, .lightbox-2 .button-2, .lightbox-2 .add-block ,#content, .lightbox-2, .lightbox-2 .heading, .button, .button-2, #content .chat,.form input[type="submit"], input[type="button"], .panel ').each(function() {
+						PIE.attach(this);
+					});
+				});
+			}
+		</script>
+    <![endif]-->
+
+    <script type='text/javascript'>
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-219726-3']);
+_gaq.push(['_trackPageview']);
+(function () {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+</head>
+<body>
+    <div id="wrapper">
+		<div class="w1">
+            <div class="container">
+                
+<div id="header">
+    <div class="logo-box">
+        <strong class="logo"><a href="/">Pets Best Insurance. Simply the best pet insurance.</a></strong>
+        <span class="slogan">Pet Insurance for Dogs and Cats</span>
+    </div>
+    
+    <div class="block">
+        <div class="bar">
+            
+<form action="#" class="search-form">
+    <fieldset class=" ">
+        <input type="text" id="GoogleSearchTxt" class="TextMod" name="Pet Insurance Search" onblur="if(this.value=='')this.value=this.defaultValue;" onfocus="if(this.value==this.defaultValue)this.value='';" value="search" />
+        <input type="submit" id="GoogleSearchGo" value="go" onclick="DoGoogleSearch();" />
+    </fieldset>
+</form>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#GoogleSearchTxt").keyup(function (e) {
+            if (e.keyCode == 13) {
+                DoGoogleSearch();
+            }
+            return false;
+        });
+
+        $("#GoogleSearchGo").click(function () {
+            DoGoogleSearch();
+            return false;
+        });
+    });
+
+    function DoGoogleSearch() {
+        if ($("#GoogleSearchTxt").val() != "") {
+            var searchText = $("#GoogleSearchTxt").val();
+            window.location = "/SearchResults?cx=009855375231210710036%3aufh_uortyg4&q=" + searchText;
+        }
+    }
+</script>
+            <div class="add-info">
+                <span class="phone">1-877-738-7237</span>
+                <div class="box">
+                    <div class="login-box">
+                    
+                        <a href="/customerportal" class="login"></a>
+                        <span id="lhnChatButton" style="display: none;"></span>
+                        <div id="lhnContainer" style="float: left; margin-left: 10px;"></div>
+                        <a href="#" class="livechat" onclick="OpenLHNChat();return false;"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav id="nav">
+            <ul>
+				<li><a href="/pet-insurance-plans">Plan Information</a></li>
+				<li><a href="/dog-insurance">Dog Insurance</a></li>
+				<li><a href="/cat-insurance">Cat Insurance</a></li>
+				<li><a href="/customer-center">Customer Center</a></li>
+            </ul>
+        </nav>
+        <a href="/why-pets-best/underwriters-licensing" class="link">Underwriting Information</a>
+    </div>
+</div>
+
+
+                
+
+
+<div id="main">
+    <div class="main-block">
+        <div class="image">
+            <img src="/customerportal/images/img-05.jpg" width="1024" height="361" alt="image description" />
+            <div class="block-area">
+                <div class="block">
+<form action="/customerportal/Account/login?ReturnUrl=%2Fcustomerportal" class="form login-form" method="post">                        <fieldset>
+                            <h2>Your Account</h2>
+
+
+                            <div class="box ">
+                                <div class="row">
+                                    <span class="input">
+                                        <input Value="Email" data-val="true" data-val-email="Please enter a valid Email" data-val-required="Please enter your Email" id="Username" maxlength="50" name="Username" type="text" value="" />
+                                    </span>
+                                    <span class="warning" data-valmsg-for="Username" data-valmsg-replace="true"></span>
+                                </div>
+                                <div class="row">
+                                    <span class="input">
+                                        <input Value="Password" autocomplete="off" data-val="true" data-val-required="Please enter your Password" id="Password" maxlength="25" name="Password" type="password" />
+                                    </span>
+                                    <span class="warning" data-valmsg-for="Password" data-valmsg-replace="true"></span>
+                                    
+                                </div>
+                                <div class="btn-row">
+                                    <input class="button" type="submit" value="Log In" />
+                                </div>
+                                <ul class="add-row">
+                                    <li>
+                                        <input class="jcf-hidden" data-val="true" data-val-required="The Remember me for a week field is required." id="check" name="RememberMe" type="checkbox" value="true" /><input name="RememberMe" type="hidden" value="false" />
+                                        <label for="check">Remember me</label>
+                                    </li>
+                                    <li><a id="ForgotPasswordLink" href="#" onclick="return false;">Forgot password?</a></li>
+                                </ul>
+                            </div>
+                        </fieldset>
+</form>                </div>
+            </div>
+        </div>
+    </div>
+	<div class="content">
+		<div class="content-holder">
+			<!-- content -->
+			<article id="content">
+				<!-- aside -->
+				<div class="aside">
+					<div class="box">
+						<h2>Not Yet Registered?</h2>
+						<strong class="sub-title">Create your account to:</strong>
+						<div class="text-box">
+						    <ul class="list">
+						        <li>Add a new pet to your policy</li>
+						        <li>Submit or update claims</li>
+						        <li>Check claim status</li>
+						        <li>View your plan details</li>
+						        <li>Sign up for direct deposit</li>
+						    </ul>
+							<a href="/customerportal/account/registeraccount" class="button">Register</a>
+						</div>
+					</div>
+					<div class="box text-box">
+						<h3>Need Help?</h3>
+						<strong class="sub-title-2">Call Pets Best Customer Care</strong>
+                        <ul class="schedule">
+                            <li>1-877-738-7237 ext. 1</li>
+                            <li>8 AM - 5 PM Monday - Friday</li>
+                            <li>10 AM - 2 PM Saturday</li>
+                            <li>Mountain Time</li>
+                        </ul>
+                        
+                        
+
+<span id="lhnChatButton" style="display: none;"></span>
+<a href="#" class="chat" onclick="OpenLHNChat();return false;"><span>Live Chat</span></a>
+<div id="lhnContainer" style="float: left; margin-left: 10px;">
+    <a href="#" onclick="OpenLHNChat();return false;"></a>
+</div>
+
+                    </div>
+				</div>
+				<!-- text-holder -->
+				<div class="text-holder">
+					<div class="block">
+						<strong>If you enrolled your pet online, you already have a Customer Account.</strong>
+						<ul class="list">
+							<li>Your username is the email address you used to enroll your pet</li>
+							<li>Your password is the one you chose when you enrolled</li>
+						</ul>
+						<strong>If you enrolled your pet by phone, it’s easy to activate your Customer Account.</strong>
+						<ul class="list">
+							<li>Click the “Register” button on the left </li>
+							<li>Have your email address or policy number handy</li>
+						</ul>
+					</div>
+					<div class="mark-box">
+						<h2>Get Reimbursed Faster</h2>
+						<p>Direct deposit is the fastest, easiest way to get reimbursed, and it’s free for all policyholders! Simply log in and click “Personal & Payment Info”.</p>
+					</div>
+				</div>
+			</article>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript" language="javascript">
+    $(function () {
+        $("form").submit(function (e) {
+            // Custom unobtrusive validation CSS class handling
+            $(".warning").each(function() {
+                // No error
+                if ($(this).children().text() == "") {
+                    $(this).parent().removeClass("error");  // On class="row"
+                }
+                else {
+                    $(this).parent().addClass("error");   // On class="row"
+                }
+            });
+        });
+        
+        $("#Username, #Password").keyup(function () {
+            // Custom unobtrusive validation CSS class handling
+            // No error
+            if ($(this).parent().next().children().text() == "") {
+                $(this).removeClass("input-validation-error");
+                $(this).parent().parent().removeClass("error"); // On class="row"
+                $(this).parent().parent().parent().removeClass("incorrect"); // On class="box"
+            }
+            else {
+                $(this).parent().parent().addClass("error");
+            }
+        });
+
+        $("#Username, #Password").blur(function () {
+            // Custom unobtrusive validation CSS class handling
+            // No error
+            if ($(this).parent().next().children().text() == "") {
+                $(this).removeClass("input-validation-error");
+                $(this).parent().parent().removeClass("error"); // On class="row"
+                $(this).parent().parent().parent().removeClass("incorrect"); // On class="box"
+            }
+            else {
+                $(this).parent().parent().addClass("error");
+            }
+        });
+
+        $("#ForgotPasswordLink").click(function () {
+            ShowModalCustomClose("/customerportal/account/forgotpasswordmodal", "GET", $("#wrapper"), null, "462px", null);
+        });
+    });
+</script>
+
+            </div>
+        </div>
+        
+<div id="footer">
+    <div class="footer-holder">
+        <div class="footer-frame">
+            <div class="holder">
+                <nav class="add-nav">
+                    <ul class="add-nav">
+                        <li><a href="/why-pets-best/contact-us">Contact Us</a></li>
+                        <li><a href="/why-pets-best/about-us">About Pets Best</a></li>
+                        <li><a href="/careers/">Careers</a></li>
+                        <li><a href="/blog">Blog</a></li>
+                        <li><a href="/sitemap">Site Map</a></li>
+                        <li><a href="/why-pets-best/press-releases">Press</a></li>
+                        <li><a href="mailto: webmaster@petsbest.com">Webmaster</a></li>
+                        <li><a href="/terms-and-conditions">Terms &amp; Conditions</a></li>
+                        <li><a href="/terms-and-conditions/privacy-agreement">Privacy Agreement</a></li>
+                        <li><a href="/terms-and-conditions/application-agreement">Application Agreement</a></li>
+                        <li><a href="/why-pets-best/underwriters-licensing">Underwriting Info</a></li>
+                        <li><a href="/patent">Patent</a></li>
+                    </ul>
+                </nav>
+
+                <div class="block">
+                    <div class="add-box">
+                        <ul class="logo-list">
+							<li><a target="_blank" href="http://naphia.org"><img src="/customerportal/images/cssimg/logo_naphia.png" width="104" height="65" alt="North American Pet Health Insurance Association"></a></li>
+                            <li><a target="_blank" href="https://seal.qualys.com/sealserv/info/?i=93e34238-2457-43f1-9fff-cfccf304216a"><img src="//seal.qualys.com/sealserv/seal.gif?i=93e34238-2457-43f1-9fff-cfccf304216a" width="89" height="47" alt="" /></a></li>
+							<li><a target="_blank" href="http://www.bbb.org/boise/business-reviews/pet-health-plans/pets-best-insurance-in-boise-id-39001947/#bbbonlineclick"><img src="//ourbbbonline2.bbb.org/Boise/BBBOnlineSeal/39001947/H2/1/seal.png" width="200" height="65" alt="Pets Best BBB Business Review"></a></li>
+                        </ul>
+                        <div class="box">
+                            <div class="box-holder">
+                                <span class="text">Perfect for:</span>
+                                <ul class="list">
+                                    <li><a href="/veterinarians">Veterinarians</a></li>
+                                    <li><a href="/pet-insurance-partners">Affiliates</a></li>
+                                    <li><a href="/pet-insurance-partners/employers">Employers</a></li>
+                                    <li><a href="/pet-insurance-partners/agents-brokers">Brokers & Agents</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div itemscope itemtype="http://schema.org/Organization" class="foot-copywrite top">
+                        <strong>Copyright &copy; 2005-2014 <span itemprop="name">Pets Best Insurance Services, LLC</span></strong>
+                        <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                            <strong><span itemprop="streetAddress">2323 S. Vista Ave. Ste. 100</span>
+                                <span itemprop="addressLocality">Boise</span>, 
+                            <span itemprop="addressRegion">ID</span>
+                                <span itemprop="postalCode">83705</span>
+                            </strong>
+                        </span>
+                        - 
+                        <strong><span itemprop="telephone">877-738-7237</span></strong>
+                    </div>
+
+                    <p>Pet insurance coverage offered and administered by Pets Best Insurance Services, LLC is underwritten by Independence American Insurance Company, 
+                                    a Delaware insurance company. Independence American Insurance Company is a member of The IHC Group, an organization of insurance carriers and 
+                                    marketing and administrative affiliates that has been providing life, health, disability, medical stop-loss and specialty insurance solutions 
+                                    to groups and individuals for over 30 years. For information on The IHC Group, visit: www.ihcgroup.com. Additional insurance services administered 
+                                    by Pets Best Insurance Services, LLC are underwritten by Prime Insurance Company. Some existing business is underwritten by Aetna Insurance Company 
+                                    of Connecticut. Each insurer has sole financial responsibility for its own products.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<!--[if gte IE 9 ]><html class="ie ie9 scripts-not-loaded" lang="en"> <![endif]-->
+<!--[if !(IE)]><!--> <html class="not-ie scripts-not-loaded" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>  Log In to Canvas
+</title>
+  <!--[if lte IE 8]> <meta http-equiv=refresh content="0; URL=/ie-8-is-not-supported.html" /> <![endif]-->
+
+  
+  <link href="/assets/vendor_legacy_normal_contrast.css?1417652637" media="all" rel="stylesheet" type="text/css" />
+<link href="/assets/common_legacy_normal_contrast.css?1417652635" media="all" rel="stylesheet" type="text/css" />
+  
+  <meta content="app-id=480883488" name="apple-itunes-app" />
+  <link href="/assets/login_legacy_normal_contrast.css?1417652634" media="all" rel="stylesheet" type="text/css" />
+  
+  <link href="https://bluesweb.brookdalecc.edu/canvas/canvas.css" media="all" rel="stylesheet" type="text/css" />
+  <script>
+    // listen for any clicks on links that have href="#" and queue them to be fired on dom ready.
+      function _earlyClick(e){
+        var cur = e.target || e.srcElement;
+        while ( cur && cur.ownerDocument ) {
+          if ( cur.getAttribute('href') == '#' ) {
+            e.preventDefault();
+            _earlyClick.clicks = _earlyClick.clicks || [];
+            _earlyClick.clicks.push(cur);
+            break;
+          }
+          cur = cur.parentNode;
+        }
+      }
+      document.addEventListener('click', _earlyClick);
+  </script>
+</head>
+
+
+<body class="modal no-headers ">
+<div id="application">
+  <noscript><div role="alert" class="ic-flash-static ic-flash-error"><h1>You need to have JavaScript enabled in order to access this site.</h1></div></noscript>
+  
+<ul role="alert" aria-live="assertive" id="flash_message_holder"></ul>
+<div role="alert" aria-live="assertive" id="flash_screenreader_holder" class="screenreader-only"></div>
+
+
+
+
+  <div id="header" class="no-print no-user">
+    <div id="header-inner">
+      <a href="#content" id="skip_navigation_link">Skip To Content</a>
+      <a id="header-logo" href="https://brookdalecc.instructure.com/">My Dashboard</a>
+      <b id="header-logo-secondary"></b>
+      <div id="topbar" role="navigation" aria-label="User Menu">
+      <ul id="identity">
+      <li><a href="/login">Log In</a></li>
+    <li id="identity-help-container"><a href="http://help.instructure.com/" class="support_url help_dialog_trigger" data-track-category="help system" data-track-label="help button">Help</a></li>
+</ul>
+
+</div>
+      
+      
+    </div>
+  </div>
+
+  <div id="instructure_ajax_error_box">
+    <div style="text-align: right; background-color: #fff;"><a href="#" class="close_instructure_ajax_error_box_link">Close</a></div>
+    <iframe id="instructure_ajax_error_result" src="about:blank" style="border: 0;"></iframe>
+  </div>
+
+  
+
+  <div id="wrapper-container">
+    <div id="wrapper">
+      <div id="main">
+        <div id="not_right_side">
+          <div id="content-wrapper">
+            
+            
+            <div id="content" role="main" class="container-fluid">
+              
+<div id="modal-box" class="login-box">
+    <div id="modal-box-inner">
+    <h1>Canvas</h1>
+      <form accept-charset="UTF-8" action="/login" id="login_form" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="7CPB72ue/p6FkhgpxKleITCJMbGAyS9limuY97cq6+uIZvKWB+6Ky+2rL0SG8yRGduRFhvb+ayHyLNyl4GGFjQ==" /></div>
+        <h2 class="ui-helper-hidden-accessible">Log In</h2>
+        
+        <input type="hidden" name="redirect_to_ssl" value="1"/>
+        <div>
+          <span class=" field-with-fancyplaceholder"><label for="pseudonym_session_unique_id">Username</label><input class="text" id="pseudonym_session_unique_id" name="pseudonym_session[unique_id]" size="30" type="text" /></span>
+          <span class=" field-with-fancyplaceholder"><label for="pseudonym_session_password">Password</label><input class="text" id="pseudonym_session_password" name="pseudonym_session[password]" size="30" type="password" /></span>
+        </div>
+        <div>
+          <div class="login-options">
+              <input name="pseudonym_session[remember_me]" type="hidden" value="0" /><input id="pseudonym_session_remember_me" name="pseudonym_session[remember_me]" type="checkbox" value="1" />
+              <label for="pseudonym_session_remember_me">Stay signed in</label>
+
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <br />
+            <a href="https://netid.brookdalecc.edu/netid/reset_password.pl" class="not_external" id="login_forgot_password">Don&#x27;t know your password?</a>
+          </div>
+
+          <!-- crazy IE 8-9 workaround!, if you take this input type=submit out, you cannot just submit the form by hitting enter in ie8-9 -->
+          <input type="submit" style="position: absolute; height: 0px; width: 0px; border: none; padding: 0px;" hidefocus="true" tabindex="-1" />
+
+          <button type="submit" class="btn btn-primary">Log In</button>
+        </div>
+</form>
+    <form accept-charset="UTF-8" action="/forgot_password" id="forgot_password_form" method="post" style="display: none;"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="/qshEmPcvcIaAab+E5W4Hvqc2yS7WOSt4jXKzFJ96Saa7hJrD6zJl3I4kZNRz8J5vPGvE81voOmaco6eBTaHQA==" /></div>
+
+      <p id="forgot_password_instructions">Enter your Username and we&#x27;ll send you a link to change your password.</p>
+      <div>
+        <span class=" field-with-fancyplaceholder"><label for="pseudonym_session_unique_id_forgot">Username</label><input aria-describedby="forgot_password_instructions" class="email_address text" type="text" name="pseudonym_session[unique_id_forgot]" value="" id="pseudonym_session_unique_id_forgot" /></span>
+        <button type="submit" class="btn btn-primary">Request Password</button>
+      </div>
+
+      &larr; <a href="/login" class="login_link">Back to Login</a>
+</form>  </div>
+</div>
+<img alt="" src="//supportauth.instructure.com/zendesk/set_cookie?canvas_host=brookdalecc.instructure.com" width="0" height="0" style="position:absolute" />
+
+
+
+            </div>
+          </div>
+        </div>
+        <div id="right-side-wrapper">
+          <aside id="right-side" role="complementary">
+            
+          </aside>
+        </div>
+      </div>
+      <footer role="contentinfo" id="footer">
+        <a href="http://www.instructure.com" class="footer-logo">
+          <span class="screenreader-only">
+            By Instructure
+          </span>
+        </a>
+        <span id="footer-links">
+          <a href="http://help.instructure.com/" class="support_url help_dialog_trigger" data-track-category="help system" data-track-label="help button">Help</a>
+          <a href="http://www.canvaslms.com/policies/privacy-policy">Privacy policy</a>
+<a href="http://www.canvaslms.com/policies/terms-of-use">Terms of service</a>
+<a href="http://facebook.com/instructure">Facebook</a>
+<a href="http://twitter.com/instructure">Twitter</a>
+
+        </span>
+      </footer>
+    </div>
+  </div>
+
+
+
+    <div style="display:none;"><!-- Everything inside of this should always stay hidden -->
+    </div>
+  <div id="cant_record_dialog" style="display: none;">
+  <div>
+        In order to create video or audio recordings your computer needs to be 
+    webcam-enabled.  If you don&#x27;t have a webcam on your computer, you can still
+    record audio-only messages by first installing the Google Video Chat
+    plugin.
+
+  </div>
+  <div style="text-align: center; font-size: 1.5em; margin: 10px;">
+    <a href="http://www.google.com/chat/video" target="_blank" class="btn">Install the Video Plugin</a>
+  </div>
+  <div class="links" style="text-align: right; font-size: 0.8em; display: none;">
+    <a href="#" class="cant_record_link">Don&#x27;t have a webcam?</a>
+  </div>
+</div>
+  <div id='aria_alerts' class='hide-text affix' role="alert" aria-live="assertive"></div>
+  <script>
+  INST = {"environment":"production","kalturaSettings":{"domain":"nv.instructuremedia.com","resource_domain":"nv.instructuremedia.com","rtmp_domain":"fms-prod.instructuremedia.com","partner_id":"9","subpartner_id":"0","player_ui_conf":"0","kcw_ui_conf":"0","upload_ui_conf":"0","max_file_size_bytes":534773760,"do_analytics":false,"use_alt_record_widget":true,"hide_rte_button":false,"js_uploader":true},"googleAnalyticsAccount":"UA-9138420-1","disableScribdPreviews":true,"enableHtml5FirstVideos":true,"maxVisibleEditorButtons":3,"editorButtons":[]};
+  ENV = {"current_user_id":null,"current_user":{},"current_user_roles":null,"files_domain":"cluster19-files.instructure.com","DOMAIN_ROOT_ACCOUNT_ID":190000000081410,"SETTINGS":{"open_registration":false,"use_high_contrast":null},"context_asset_string":null,"TIMEZONE":"America\/New_York","LOCALE":"en-US","notices":[]};
+
+  // TODO: move this out when we have a single require call
+  require = {
+    translate: true,
+    baseUrl: '/optimized',
+    paths: {
+    "common":"compiled\/bundles\/common",
+    "jqueryui":"vendor\/jqueryui",
+    "uploadify":"..\/flash\/uploadify\/jquery.uploadify-3.1.min",
+    "compiled\/tinymce":"compiled\/tinymce.js?v2",
+    "instructure_misc_plugin":"plugins\/instructure_misc_plugin",
+    "multiple_root_accounts":"plugins\/multiple_root_accounts",
+    "migration_tool":"plugins\/migration_tool",
+    "demo_site":"plugins\/demo_site",
+    "canvasnet_registration":"plugins\/canvasnet_registration",
+    "analytics":"plugins\/analytics",
+    "compiled\/registration\/main_without_extensions":"compiled\/registration\/main",
+    "compiled\/registration\/main":"compiled\/registration\/main_with_extensions",
+    "compiled\/registration\/signupDialog_without_extensions":"compiled\/registration\/signupDialog",
+    "compiled\/registration\/signupDialog":"compiled\/registration\/signupDialog_with_extensions",
+    "compiled\/bundles\/modules\/account_quota_settings_without_extensions":"compiled\/bundles\/modules\/account_quota_settings",
+    "compiled\/bundles\/modules\/account_quota_settings":"compiled\/bundles\/modules\/account_quota_settings_with_extensions",
+    "canvas_quiz_statistics":"client_apps\/canvas_quiz_statistics"},
+    packages : [{"name":"ic-ajax","location":"bower\/ic-ajax\/dist\/amd"},{"name":"ic-styled","location":"bower\/ic-styled"},{"name":"ic-menu","location":"bower\/ic-menu"},{"name":"ic-tabs","location":"bower\/ic-tabs\/dist\/amd"},{"name":"ic-droppable","location":"bower\/ic-droppable\/dist\/amd"},{"name":"ic-sortable","location":"bower\/ic-sortable\/dist\/amd"},{"name":"ic-modal","location":"bower\/ic-modal\/dist\/amd"},{"name":"ic-lazy-list","location":"bower\/ic-lazy-list"},{"name":"ember-qunit","location":"bower\/ember-qunit\/dist\/amd"}],
+    shim: {
+    'bower/react-router/dist/react-router': {
+      deps: ['react'],
+      exports: 'ReactRouter'
+    },
+    'bower/react-modal/dist/react-modal': {
+      deps: ['react']
+    },
+    'bower/ember/ember': {
+      deps: ['jquery', 'handlebars'],
+      exports: 'Ember'
+    },
+    'bower/ember-data/ember-data': {
+      deps: ['ember'],
+      exports: 'DS'
+    },
+    'bower/handlebars/handlebars.runtime': {
+      exports: 'Handlebars'
+    },
+    'vendor/FileAPI/FileAPI.min': {
+      deps: ['jquery', 'vendor/FileAPI/config'],
+      exports: 'FileAPI'
+    },
+    'uploadify': {
+      deps: ['jquery'],
+      exports: '$'
+    },
+    'vendor/bootstrap-select/bootstrap-select' : {
+      deps: ['jquery'],
+      exports: '$'
+    },
+    'vendor/jquery.jcrop': {
+      deps: ['jquery'],
+      exports: '$'
+    },
+    'handlebars': {
+      deps: ['bower/handlebars/handlebars.runtime.amd'],
+      exports: 'Handlebars'
+    }
+  }
+,
+    map: {"canvas_quiz_statistics":{"lodash":"underscore","d3":"vendor\/d3.v3","tooltip":"compiled\/behaviors\/tooltip","backbone":"vendor\/backbone","jquery\/instructure_date_and_time":"jquery.instructure_date_and_time"}},
+    waitSeconds: 60
+  };
+</script>
+
+<script src="/optimized/vendor/require.js?1417652797" type="text/javascript"></script>
+<script src="/optimized/compiled/bundles/common.js?1417652833" type="text/javascript"></script>
+<script src="/optimized/compiled/bundles/login.js?1417652816" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+          (function() {
+            var inject = function(src) {
+              var s = document.createElement('script');
+              s.src = src;
+              s.type = 'text/javascript';
+              document.body.appendChild(s);
+            };
+            var srcs = ["https:\/\/bluesweb.brookdalecc.edu\/canvas\/canvas.js"];
+            require(['jquery'], function() {
+              for (var i = 0, l = srcs.length; i < l; i++) {
+                inject(srcs[i]);
+              }
+            });
+          })();
+
+//]]>
+</script>
+
+
+
+<script>
+// Determines if the scripts are loaded.
+// When we get everything out of the views, and have a single top-level
+// `require`, this becomes meaningless and will be abandoned.
+(function() {
+  var attempts = 0;
+  var timeout = 10;
+  var check = function() {
+    attempts++;
+    var done = !window.requirejs.s.contexts._.defQueue.length
+    var giveup = attempts === 100; // 1 second
+    if (done || giveup) {
+      var className = document.documentElement.className;
+      document.documentElement.className = className.replace(/scripts-not-loaded/, '');
+      return;
+    }
+    setTimeout(check, timeout);
+  };
+
+  check();
+}).call(this);
+</script>
+
+</div> <!-- #application -->
+</body>
+</html>

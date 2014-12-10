@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+	<base href="http://www.cardekho.com/FeedBack.jsp">
+<script type="text/javascript">
+	var basepath='http://www.cardekho.com';
+</script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<title>Feedback : CarDekho.com</title>
+		<link href="http://static.cardekho.com/css/structure3.69.css" rel="stylesheet" type="text/css" />
+		<script type="text/javascript" src="http://static.cardekho.com/javascript/jquery-1.5.min.js"></script>
+		<script type="text/javascript" src="http://static.cardekho.com/javascript/array-data17.38.js"></script>
+		<script type="text/javascript" src="http://static.cardekho.com/javascript/sendajax5.1.js"></script>
+	</head>
+<body>
+<div id="Wraper" class="WAuto">
+
+	<div class="PopupArea W580 BdrRadius5 MarginLRAuto BlackBorder">
+       <div class="FloatLeft Text12 TBold  MarginL20 MarginT10 WordNoWrap"><h2 class="Margin0">Feedback</h2></div>
+	   <form id="feedbackSubmit" action="/feedbackSubmit" method="Post">
+		<input name="currentUrl" id="parenturl" type="hidden" value="" />
+		<input type="hidden" id="usedCarId" name="usedCarId" value=""/>
+		<input type="hidden" id="carName" name="carName" value=""/>
+		<input type="hidden" id="termCondition" name="termCondition" value="0" />
+		
+		<div class="FormBox FloatLeft PosR MarginT5 MarginB20">
+               <div class="MainSection">
+               		<div class="W50Percent">
+                        <label>Your Name<span class="Red">*</span></label>
+						<input name="userName" type="text" maxlength="50" id="userName" value="" class="TxtField" onkeypress="return fnAlphabetWithSingleSpace(event,this);"/>
+                        <label>Email address<span class="Red">*</span></label>
+                        <input name="emailId" type="text" onkeypress="return fnNotSpace(event);" maxlength="50" id="emailId" value="" class="TxtField" />
+                        <label>Mobile No<span class="Red">*</span></label>
+                        <input name="mobileNo" type="text" maxlength="10" id="mobileNo" value="" onKeyPress="return fnNotAlphabet(event)" class="TxtField"/>
+						<label>City<span class="Red">*</span></label>
+						<input name="city" type="hidden" id="city" value=""/>
+						<select name="cityName" id="cityName">
+							<option value="">--Select City--</option>
+			    			</select>
+
+                    </div>
+                    <div class="W50Percent">
+                    	 <label>Comments<span class="Red">*</span></label>
+                        <textarea name="comment" rows="4" cols="25" id="comment"></textarea>
+                        <div class="Text11 MarginT20 FloatLeft">
+				<input id="termsConditionsField" type="checkbox" checked name="termsConditionsField" class="vAlignMid"/>
+				I agree to <a rel="nofollow" href="http://www.cardekho.com/info/terms_and_condition" title="terms and conditions" target="_blank">terms and conditions</a>.
+			</div>
+                 </div>
+                 <div class="CommonBlock Textcenter MarginT10 MarginB10"><input type="button" name="feedback" border="2" onclick="return feedBackActionURL();" value="Submit" class="BtnCommonNew"></div>
+                 <div class="Clear"></div>
+               </div>
+            </div>
+            <div class="Clear"></div>
+		</form>
+	</div>
+</div>
+</body>
+<script type="text/javascript">
+var metroCitiesNames="Ahmedabad,Bangalore,Chandigarh,Chennai,Cochin,Ghaziabad,Gurgaon,Hyderabad,Jaipur,Kolkata,Lucknow,Mumbai,New Delhi,Noida,Patna,Pune";
+var sessioncity='';
+getPopUpCity("feedbackSubmit","cityName","");
+var basepath='http://www.cardekho.com';
+		function feedBackActionURL()
+		{
+			var userName=document.getElementById("userName").value;
+			var emailId=document.getElementById("emailId").value;
+			var comments=escape(trim(document.getElementById("comment").value));
+			var mobileNo=document.getElementById("mobileNo").value;
+			userName=userName.trim();
+			if(!validateName("feedbackSubmit","userName","Enter your First Name") || !validateEmail("feedbackSubmit","emailId") || !validateMobileNumber('feedbackSubmit','mobileNo') || !validateSelectBox("feedbackSubmit","cityName","City") || !validateNotBlank("feedbackSubmit","comment","Enter valid Comments")) {
+				return false;
+			  }
+			if(comments.length<=20){
+				alert("Please Enter At least 20 character.");
+				return false;
+			}
+			document.getElementById("city").value = document.getElementById("cityName").value;
+			if(document.getElementById("termsConditionsField").checked==true){
+				document.getElementById("termCondition").value=1;
+			}else {
+				alert("Please agree to terms and conditions");
+				return false;
+			}
+			getParentWindowValue();
+			var urlstr= "user-feedback-submitted";
+			//alert(urlstr);
+			document.getElementById("feedbackSubmit").action=urlstr;
+			document.getElementById("feedbackSubmit").submit();
+		}
+		function getParentWindowValue(){
+			document.getElementById('parenturl').value=window.opener.location.href;
+		}
+		</script>
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+	var pluginUrl =  '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+	_gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+	  _gaq.push(['_setAccount', 'UA-3882094-1']);
+	  _gaq.push(['_setDomainName', 'www.cardekho.com']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();	
+	</script>
+<!--[if !IE]>Google Tag Manager<![endif]-->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-WG2J6S"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WG2J6S');</script>
+<!--[if !IE]>End Google Tag Manager<![endif]-->
+<!--[if !IE]>comscore<![endif]-->
+<script>
+var _comscore = _comscore || [];
+_comscore.push({ c1: "2", c2: "8234779" });
+(function() {
+  var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
+  s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
+  el.parentNode.insertBefore(s, el);
+})();
+</script>
+<noscript>
+<img src="http://b.scorecardresearch.com/p?c1=2&c2=8234779&cv=2.0&cj=1" />
+</noscript>
+<!--[if !IE]>comscore<![endif]-->
+</html>

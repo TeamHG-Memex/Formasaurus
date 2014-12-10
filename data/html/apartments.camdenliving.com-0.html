@@ -1,0 +1,1224 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"  xml:lang="en">
+<head id="ctl00_Head">
+
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+<meta name="description" content="Camden Apartments Search" />
+<meta name="keywords" content="Camden, Apartments Search, Apartments For Rent" />
+<meta name="language"  content="en-us" />
+<meta name="copyright" content="Copyright (c) Camden All Rights Reserved." />
+<meta name="distribution" content="global" />
+<meta name="revisit" content="7 days" />
+<meta name="robots" content="index all, follow all" />
+<meta name="googlebot" content="index,follow" />
+<meta name="MSNbot" content="index,follow" />
+    
+<title>
+	Camden Roosevelt
+</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+        
+    
+    <link rel="icon" type="image/png" href='/favicon.ico' />
+    <link rel="Shortcut Icon" href='/favicon.ico' />
+    <link href='/Resources/Styles/Global.css' rel="stylesheet" type="text/css" />
+        
+    
+        <link href='/App_Themes/Property/StyleSheet.css' rel="stylesheet"
+            type="text/css" />
+        <link rel="stylesheet" type="text/css" href="/Resources/Widgets/FPWidget/css/custom-theme/jquery-ui-1.8.6.custom.css" />
+        <link rel="stylesheet" type="text/css" href="/Resources/Widgets/FPWidget/css/camdenFloorplanWidget.css"
+            media="all" />
+        <link href='/Resources/Styles/Mappoint.css' rel="stylesheet"
+            type="text/css" />
+        <link href='/Resources/Styles/colorbox.css' rel="stylesheet"
+            type="text/css" />
+    
+    <style type="text/css">
+        </style>
+
+<script type="text/javascript">
+	var _gsc = _gsc || [];
+	_gsc.push(['_setWebsite', 'SMM3GH4C']);
+	(function() {
+		var gsc = document.createElement('script'); gsc.type = 'text/javascript'; gsc.async = true;
+		gsc.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'c.getsmartcontent.com/gsc.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(gsc, s);
+	})();
+</script>
+    <script language="JavaScript" type="text/javascript" src="http://admin.brightcove.com/js/BrightcoveExperiences.js"></script>
+
+    <script type="text/javascript">
+
+        function vidstop() {
+            $('#ctl00_cphContent_iframe_prop_vid ').removeAttr("src"); //stop video
+            $("div.div_vidcss").css({ visibility: "hidden", display: "none" });
+            $('#ctl00_cphContent_iframe_prop_vid ').css({ opacity: 1.0, visibility: "hidden", display: "none" }).animate({ opacity: 0.0 });
+            $("#div_vid_info").css({ opacity: 0.0, visibility: "visible" }).animate({ opacity: 1.0 });
+            $(".img_sel_video").css({ visibility: "visible", display: "block" });
+            
+        }
+            
+        function SelectRadTabStripTab(value) {
+            var tabStrip = $find("ctl00_cphContent_RadTabStrip1");
+            var tab = tabStrip.findTabByValue(value);
+            if (!tab) {
+                alert("There is no tab with text \"" + text + "\"");
+                return false;
+            }
+            tab.set_selected(true); //The same as tab.select();
+
+            return false;
+        }
+        function getImgSelectedImageID() {
+            return "ctl00_cphContent_imgSelectedImage";
+        }
+    </script>
+<style type="text/css">
+#primary-nav
+{
+    
+    display:block;
+    
+}
+
+.feedisclaimer {display:inline;}
+
+.PlayVideo_link
+{
+    font-size: medium;
+    
+    line-height:25px;
+}
+
+.img_sel_video
+{
+    position:absolute;
+    left:403px;
+    top:14px;
+    z-index:1;    
+}
+
+
+</style>
+
+<meta name="Copyright" content="Copyright (c) 2014 Camden Property Trust" /><meta name="Developers" content="Jay Cox, Ted Goodridge, Sibila Spalding, Clinton Smith - 2011" /><link href="/WebResource.axd?d=r91qn_5pzoB5jpfXcuYMTc7nIvTGaHOsnSehPEb21jW5hxU00YlXHNOjG8T0GIkp1erEASff9XsHN3LBa59MwfZPc_6HCdowvlXI6ecxrNesWDSIxhXyC6Aw62mDmhyDFfm33Q2&amp;t=634496934979031035" type="text/css" rel="stylesheet" class="Telerik_stylesheet" /><link href="/WebResource.axd?d=NMmLn9ghkyp20iB5PfymY2RsH98A4FoPNSRPT2CnQPGTMBjO3HERJsNpvUIAubDBKraNrBSWr6PbMn-iWyHHvIkCaFp6t7hnw6ef361t5ONdir1TmkE11n94FIkYyOb0ABPlsY0MBnIDjiaTvUkVyuRhNFE1&amp;t=634496934979031035" type="text/css" rel="stylesheet" class="Telerik_stylesheet" /><link href="/WebResource.axd?d=PQy-ZvAt5PI4dbytCiDsO3hbq_FvSxl67FLHSpn9Hj2Yk8DrNAgBXjC5KdsAKTKoNPKOSnVM7g5tXY9jxM2QNK5ddbGU8spqyISbXAiieJNG_LH6XffjYHJ-DPiEUuH7FS62Og2&amp;t=634496934979031035" type="text/css" rel="stylesheet" class="Telerik_stylesheet" /><link href="/WebResource.axd?d=sCPVznLwstuhWA0BjgdgLbTPZAqr_Okk14nDVgSoBkC_-hy6vhIZoO1H4UN86YNPnrNVwPTcngEc6F8fyv8UVQ_tjT2vvzEgACfAcLIDfhdusoK0XWYJ7CJbNC6_IfwSerOAdw2&amp;t=634496934979031035" type="text/css" rel="stylesheet" class="Telerik_stylesheet" /></head>
+<body>
+    <div id="MainFrame">
+        <div id="MasterHeader">
+            
+
+<script src='/Resources/Javascript/toggle_search.js' type="text/javascript"></script>
+
+<div id="header">
+    <div id="header-border">
+    </div>
+    <div id="secondary-nav" class="hiddenforprint">
+        
+        <div class="flex">
+            <a href="#access-apartments" class="read" tabindex="11" accesskey="s">Welcome to Camden. Here is a list of navigation links in our website. Use access-key S to skip to main content.</a>
+            <a id="ctl00_MasterHeader1_hlSearch" accesskey="4" tabindex="11" onclick="return Toggle();" href="../../UserControls/#" style="cursor: hand">search</a>
+            <a id="ctl00_MasterHeader1_hliPhone" accesskey="m" tabindex="12" href="http://m.camdenliving.com/" style="cursor: hand">iPhone site</a>
+            <a id="ctl00_MasterHeader1_hlMobile" accesskey="m" tabindex="12" href="http://m.camdenliving.com/wap" style="cursor: hand">mobile site</a>
+            <a id="ctl00_MasterHeader1_hlResident" accesskey="l" tabindex="12" href="http://apartments.camdenliving.com/ResidentPortal.aspx" style="cursor: hand">resident login</a>
+            <a id="ctl00_MasterHeader1_hlContact" accesskey="9" tabindex="12" href="http://www.camdenliving.com/contact-camden/index.htm" style="cursor: hand">contact camden</a>
+        </div>
+        
+        <div id="search-div" style="display: none">
+            <form action="http://www.camdenliving.com/search/search-results.html"
+            method="get">           
+            <input tabindex="11" class="text" title="Search Camden Now (Search Field)" name="q" />
+            <input tabindex="11" type="image" alt="Search Now" src='/Resources/Images/search.jpg' />
+            </form>
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+    <div id="logo">
+        <a href="http://www.camdenliving.com/index.htm" accesskey="1">
+            <img id="ctl00_MasterHeader1_imgLogo" src="../../Resources/Images/logo.gif" alt="Camden" border="0" /></a></div>
+    <div id="primary-nav" class="hiddenforprint">
+        <a href="#access-apartments" class="read" tabindex="12" accesskey="s">Here is a list of secondary navigation links in our website. Use access-key S to skip to main content.</a>
+        <ul>
+            <li>
+                <a id="ctl00_MasterHeader1_hlHome" accesskey="1" tabindex="12" href="http://www.camdenliving.com/index.htm" style="cursor: hand">Home</a></li>
+            <li>
+                <a id="ctl00_MasterHeader1_hlAptSearch" accesskey="a" tabindex="12" class="active" href="http://www.camdenliving.com/Apartment-Search/index.htm" style="cursor: hand">Apartment Search</a></li>
+            <li>
+                <a id="ctl00_MasterHeader1_hlForResidents" accesskey="f" tabindex="12" href="http://apartments.camdenliving.com/ResidentPortal.aspx" style="cursor: hand">For Residents</a></li>
+            <li>
+                <a id="ctl00_MasterHeader1_hlAbout" accesskey="b" tabindex="12" href="http://www.camdenliving.com/about-camden/meet-camden/who-we-are/index.htm" style="cursor: hand">About Camden</a></li>
+            <li>
+                <a id="ctl00_MasterHeader1_hlCareers" accesskey="c" tabindex="12" href="http://www.camdenliving.com/careers/index.htm" style="cursor: hand">Careers</a></li>
+            <li>
+                <a id="ctl00_MasterHeader1_hlInvestor" tabindex="12" href="http://www.snl.com/irweblinkx/corporateprofile.aspx?iid=103094" style="cursor: hand">Investor Relations</a></li>
+        </ul>
+    </div>
+</div>
+
+        </div>
+        
+        <form name="aspnetForm" method="post" action="default.aspx" id="aspnetForm" autocomplete="off">
+<div>
+<input type="hidden" name="ctl00_RadScriptManager1_TSM" id="ctl00_RadScriptManager1_TSM" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTI4Mjg4ODEzMg9kFgJmD2QWBgIDD2QWFmYPDxYCHgtOYXZpZ2F0ZVVybAUBIxYCHgdvbmNsaWNrBRByZXR1cm4gVG9nZ2xlKCk7ZAIBDw8WAh8ABRpodHRwOi8vbS5jYW1kZW5saXZpbmcuY29tL2RkAgIPDxYCHwAFHWh0dHA6Ly9tLmNhbWRlbmxpdmluZy5jb20vd2FwZGQCAw8PFgIfAAU2aHR0cDovL2FwYXJ0bWVudHMuY2FtZGVubGl2aW5nLmNvbS9SZXNpZGVudFBvcnRhbC5hc3B4ZGQCBA8PFgIfAAU0aHR0cDovL3d3dy5jYW1kZW5saXZpbmcuY29tL2NvbnRhY3QtY2FtZGVuL2luZGV4Lmh0bWRkAgYPDxYCHwAFJWh0dHA6Ly93d3cuY2FtZGVubGl2aW5nLmNvbS9pbmRleC5odG1kZAIHDw8WAh8ABTZodHRwOi8vd3d3LmNhbWRlbmxpdmluZy5jb20vQXBhcnRtZW50LVNlYXJjaC9pbmRleC5odG1kZAIIDw8WAh8ABTZodHRwOi8vYXBhcnRtZW50cy5jYW1kZW5saXZpbmcuY29tL1Jlc2lkZW50UG9ydGFsLmFzcHhkZAIJDw8WAh8ABUlodHRwOi8vd3d3LmNhbWRlbmxpdmluZy5jb20vYWJvdXQtY2FtZGVuL21lZXQtY2FtZGVuL3doby13ZS1hcmUvaW5kZXguaHRtZGQCCg8PFgIfAAUtaHR0cDovL3d3dy5jYW1kZW5saXZpbmcuY29tL2NhcmVlcnMvaW5kZXguaHRtZGQCCw8PFgIfAAU+aHR0cDovL3d3dy5zbmwuY29tL2lyd2VibGlua3gvY29ycG9yYXRlcHJvZmlsZS5hc3B4P2lpZD0xMDMwOTRkZAIFEGRkFgQCBQ9kFgJmDxQrAAIPFgYeC18hRGF0YUJvdW5kZx4TY2FjaGVkU2VsZWN0ZWRWYWx1ZWQeB1Zpc2libGVoZA8UKwAOFCsAAg8WBh4EVGV4dAUFQmxhY2seBVZhbHVlBQVCbGFjax4IU2VsZWN0ZWRoZGQUKwACDxYGHwUFB0RlZmF1bHQfBgUHRGVmYXVsdB8HZ2RkFCsAAg8WBh8FBQZGb3Jlc3QfBgUGRm9yZXN0HwdoZGQUKwACDxYGHwUFA0hheR8GBQNIYXkfB2hkZBQrAAIPFgYfBQUKT2ZmaWNlMjAwNx8GBQpPZmZpY2UyMDA3HwdoZGQUKwACDxYGHwUFB091dGxvb2sfBgUHT3V0bG9vax8HaGRkFCsAAg8WBh8FBQZTaW1wbGUfBgUGU2ltcGxlHwdoZGQUKwACDxYGHwUFClNpdGVmaW5pdHkfBgUKU2l0ZWZpbml0eR8HaGRkFCsAAg8WBh8FBQZTdW5zZXQfBgUGU3Vuc2V0HwdoZGQUKwACDxYGHwUFB1RlbGVyaWsfBgUHVGVsZXJpax8HaGRkFCsAAg8WBh8FBQVWaXN0YR8GBQVWaXN0YR8HaGRkFCsAAg8WBh8FBQVXZWIyMB8GBQVXZWIyMB8HaGRkFCsAAg8WBh8FBQdXZWJCbHVlHwYFB1dlYkJsdWUfB2hkZBQrAAIPFgYfBQUIV2luZG93czcfBgUIV2luZG93czcfB2hkZA8UKwEOZmZmZmZmZmZmZmZmZmYWAQV3VGVsZXJpay5XZWIuVUkuUmFkQ29tYm9Cb3hJdGVtLCBUZWxlcmlrLldlYi5VSSwgVmVyc2lvbj0yMDExLjIuNzEyLjM1LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPTEyMWZhZTc4MTY1YmEzZDQWIGYPDxYEHghDc3NDbGFzcwUJcmNiSGVhZGVyHgRfIVNCAgJkZAIBDw8WBB8IBQlyY2JGb290ZXIfCQICZGQCAg8PFgYfBQUFQmxhY2sfBgUFQmxhY2sfB2hkZAIDDw8WBh8FBQdEZWZhdWx0HwYFB0RlZmF1bHQfB2dkZAIEDw8WBh8FBQZGb3Jlc3QfBgUGRm9yZXN0HwdoZGQCBQ8PFgYfBQUDSGF5HwYFA0hheR8HaGRkAgYPDxYGHwUFCk9mZmljZTIwMDcfBgUKT2ZmaWNlMjAwNx8HaGRkAgcPDxYGHwUFB091dGxvb2sfBgUHT3V0bG9vax8HaGRkAggPDxYGHwUFBlNpbXBsZR8GBQZTaW1wbGUfB2hkZAIJDw8WBh8FBQpTaXRlZmluaXR5HwYFClNpdGVmaW5pdHkfB2hkZAIKDw8WBh8FBQZTdW5zZXQfBgUGU3Vuc2V0HwdoZGQCCw8PFgYfBQUHVGVsZXJpax8GBQdUZWxlcmlrHwdoZGQCDA8PFgYfBQUFVmlzdGEfBgUFVmlzdGEfB2hkZAINDw8WBh8FBQVXZWIyMB8GBQVXZWIyMB8HaGRkAg4PDxYGHwUFB1dlYkJsdWUfBgUHV2ViQmx1ZR8HaGRkAg8PDxYGHwUFCFdpbmRvd3M3HwYFCFdpbmRvd3M3HwdoZGQCCQ9kFhQCCw8PFgIfBQU8Q2FtZGVuIFJvb3NldmVsdCZuYnNwOyZuYnNwOyZuYnNwOyZuYnNwOyZuYnNwOyg4NjYpIDY4Ny01NDE1ZGQCEQ8PFgIeCEltYWdlVXJsBVFodHRwOi8vcHJvcGVydHkub25lc2l0ZS5yZWFscGFnZS5jb20vY2FtZGVucm9vc2V2ZWx0L2ltYWdlcy9waG90b3MvMDI1MHBoMTA4Ni5qcGdkZAIXDxYCHwUFUDIxMDEgMTZ0aCBTdCBOVzxiciAvPldhc2hpbmd0b24sIERDIDIwMDA5PGJyIC8+UmVzaWRlbnQgU2VydmljZXM6ICgyMDIpIDI2NS00NTQwZAIdDw8WAh8ABR1+L0NvbnRhY3RQb3B1cC5hc3B4P3M9MTA2OTM2NGRkAh8PDxYCHwAFM2h0dHA6Ly9jYW1kZW5ibG9ncy53b3JkcHJlc3MuY29tL2NhdGVnb3J5L2RjLW1ldHJvL2RkAiEPFgIfBQWpCTxBIGhyZWY9Imh0dHA6Ly90b3VyLmNhbWRlbmxpdmluZy5jb20vQ2FtZGVuLVJvb3NldmVsdC8iIHRhcmdldD1fYmxhbms+PElNRyBib3JkZXI9MCBhbHQ9IkxhdW5jaCAzNjAgdG91ciIgc3JjPSJodHRwOi8vaW1hZ2VzLmNhbWRlbmxpdmluZy5jb20vQ2FtZGVuTGl2aW5nLUJFVEEvMzYwLmpwZyI+PC9BPjxCUj48QlI+PEJSPkFkYW1zIE1vcmdhbiwgRHVwb250IENpcmNsZSwgdGhlIFUgU3RyZWV0IENvcnJpZG9yIGFuZCBvdGhlciBXYXNoaW5ndG9uIEQuQy4gaG90IHNwb3RzIGFyZSBqdXN0IHN0ZXBzIGZyb20geW91ciBkb29yIHdoZW4geW91IGxpdmUgYXQgQ2FtZGVuIFJvb3NldmVsdC4gQXMgb25lIG9mIG91ciByZXNpZGVudHMsIHlvdSB3aWxsIGJlIG92ZXJ3aGVsbWVkIGJ5IHRoZSBleHF1aXNpdGUgYXR0ZW50aW9uIHRvIGRldGFpbCBibGVuZGVkIHdpdGggbW9kZXJuIGFtZW5pdGllcyBpbiBlYWNoIG9mIG91ciBzdHVkaW8sIG9uZSBhbmQgdHdvIGJlZHJvb20gYXBhcnRtZW50IGhvbWVzLiBUaGUgcmVub3ZhdGVkIGhpc3RvcmljIHJlc2lkZW5jZXMgaW5jbHVkZSBmZWF0dXJlcyBsaWtlIGhhcmR3b29kIGZsb29ycywgZ3Jhbml0ZSBjb3VudGVydG9wcywgY3Jvd24gbW9sZGluZyBhbmQgaW5jbHVkZSB3YXNoZXJzIGFuZCBkcnllcnMuIEVuam95IFdpLUZpIGFjY2VzcyBpbiB0aGUgcmVzaWRlbnQgbG91bmdlLCB3b3JrIG91dCBpbiBvdXIgc3RhdGUtb2YtdGhlLWFydCBmaXRuZXNzIGNlbnRlciBvciBzdG9yZSB5b3VyIGZhdm9yaXRlIHZpbnRhZ2UgaW4gdGhlIHdpbmUgY2VsbGFyLiBPdGhlciBmZWF0dXJlcyBpbmNsdWRlIGEgMjQtaG91ciBjb25jaWVyZ2Ugc2VydmljZSBhbmQgdmFsZXQgcGFya2luZyBnYXJhZ2UgYXMgd2VsbCBhcyBkcnkgY2xlYW5pbmcgc2VydmljZS4gQ2FtZGVuIFJvb3NldmVsdCBpcyBpZGVhbGx5IGxvY2F0ZWQgaW4gV2FzaGluZ3RvbiBELkMuIGFuZCB0aGUgTWV0cm8gaXMgb25seSBibG9ja3MgYXdheSB3aGlsZSBhIFppcCBDYXIgaXMgcmlnaHQgYXQgeW91ciBkb29yc3RlcC48QlI+PEJSPjxTVFJPTkc+PEEgaHJlZj0iaHR0cDovL3d3dy5jYW1kZW5saXZpbmcuY29tL2RvY3MvYnJvY2h1cmVzL1Jvb3NldmVsdC5wZGYiIHRhcmdldD1fYmxhbms+RG93bmxvYWQgQ29tbXVuaXR5IEJyb2NodXJlPC9BPjwvU1RST05HPiAmI3gwRDsmI3gwQTs8UD48L1A+ZAIjDxQrAAIUKwACDxYCHhdFbmFibGVBamF4U2tpblJlbmRlcmluZ2hkEBYGZgIBAgICAwIEAgUWBhQrAAJkZBQrAAJkZBQrAAJkZBQrAAIPFgIfBGhkZBQrAAJkZBQrAAJkZA8WBmZmZmZmZhYBBW5UZWxlcmlrLldlYi5VSS5SYWRUYWIsIFRlbGVyaWsuV2ViLlVJLCBWZXJzaW9uPTIwMTEuMi43MTIuMzUsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49MTIxZmFlNzgxNjViYTNkNGQWAgIDDw8WAh8EaGRkAiUPFCsAAg8WAh8LaGQVBhJycHZTZWxlY3RBcGFydG1lbnQMcnB2QW1lbml0aWVzBnJwdk1hcBNycHZOZWlnaGJvcmhvb2RXaWtpCXJwdlNvY2lhbAhycHZWaWRlbxYIAgEPZBYGZg8QDxYCHwJnZBAVDBtQcml2YXRlIHBhdGlvcyAmIGJhbGNvbmllcyoWT3ZlcnNpemVkIGdhcmRlbiB0dWJzKhRHcmFuaXRlIGNvdW50ZXJ0b3BzKhdXYXNoZXIgJiBkcnllciBpbmNsdWRlZBVCdWlsdC1pbiBib29rc2hlbHZlcyocU3R1ZGlvIGZsb29yIHBsYW5zIGF2YWlsYWJsZSJSZW5vdmF0ZWQgaGlzdG9yaWMgYXBhcnRtZW50IGhvbWVzGUV4cGFuZGVkIGNhYmxlIFRWIHBhY2thZ2UQU3BhY2lvdXMgY2xvc2V0cw1Dcm93biBtb2xkaW5nEUtpdGNoZW4gcGFudHJpZXMqDkxpbmVuIGNsb3NldHMqFQwbUHJpdmF0ZSBwYXRpb3MgJiBiYWxjb25pZXMqFk92ZXJzaXplZCBnYXJkZW4gdHVicyoUR3Jhbml0ZSBjb3VudGVydG9wcyoXV2FzaGVyICYgZHJ5ZXIgaW5jbHVkZWQVQnVpbHQtaW4gYm9va3NoZWx2ZXMqHFN0dWRpbyBmbG9vciBwbGFucyBhdmFpbGFibGUiUmVub3ZhdGVkIGhpc3RvcmljIGFwYXJ0bWVudCBob21lcxlFeHBhbmRlZCBjYWJsZSBUViBwYWNrYWdlEFNwYWNpb3VzIGNsb3NldHMNQ3Jvd24gbW9sZGluZxFLaXRjaGVuIHBhbnRyaWVzKg5MaW5lbiBjbG9zZXRzKhQrAwxnZ2dnZ2dnZ2dnZ2cWAGQCAQ8QDxYCHwJnZBAVExFSZWN5Y2xpbmcgcHJvZ3JhbRwyNC1ob3VyIHZhbGV0IHBhcmtpbmcgZ2FyYWdlGjI0LWhvdXIgY29uY2llcmdlIHNlcnZpY2VzT0V4cGFuc2l2ZSAyNC1ob3VyIGZpdG5lc3MgY2VudGVyIHdpdGggZnJlZSB3ZWlnaHRzLCBjYXJkaW8gJiByb2NrIGNsaW1iaW5nIHdhbGwWU3RlYW0gcm9vbSAmIGRyeSBzYXVuYQtXaW5lIGNlbGxhcjNFeGVjdXRpdmUgYnVzaW5lc3MgY2VudGVyICYgcHJpdmF0ZSBjb25mZXJlbmNlIHJvb20jVmFsZXQgZHJ5IGNsZWFuaW5nIGRyb3Agb2ZmIHNlcnZpY2UaQWNjZXNzIGNvbnRyb2xsZWQgYnVpbGRpbmdQTXlDYW1kZW4uY29tIC0gb25saW5lIHJlbnQgcGF5bWVudHMsIG1haW50ZW5hbmNlIHJlcXVlc3RzICYgcmVzaWRlbnQgc29jaWFsIHNpdGU9Q29udmVuaWVudCB0byBEdXBvbnQgQ2lyY2xlLCBBZGFtcyBNb3JnYW4gJiBVIFN0cmVldCBDb3JyaWRvcj5WaWV3cyBvZiBNZXJpZGlhbiBIaWxsIFBhcmssIFdhc2hpbmd0b24gTW9udW1lbnQgJiB0aGUgQ2FwaXRvbBZSZXNpZGVudCBzb2NpYWwgZXZlbnRzHTI0LWhvdXIgZW1lcmdlbmN5IG1haW50ZW5hbmNlEEJpbGxpYXJkcyBsb3VuZ2URUGFja2FnZSByZWNlaXZpbmctQ2xvc2UgdG8gV2FzaGluZ3RvbiBDZW50cmFsIEJ1c2luZXNzIERpc3RyaWN0HVdhbGtpbmcgZGlzdGFuY2UgdG8gdGhlIE1ldHJvKFJlc2lkZW50IGxvdW5nZSAmIGNpbmVtYSByb29tIHdpdGggV2ktRmkVExFSZWN5Y2xpbmcgcHJvZ3JhbRwyNC1ob3VyIHZhbGV0IHBhcmtpbmcgZ2FyYWdlGjI0LWhvdXIgY29uY2llcmdlIHNlcnZpY2VzT0V4cGFuc2l2ZSAyNC1ob3VyIGZpdG5lc3MgY2VudGVyIHdpdGggZnJlZSB3ZWlnaHRzLCBjYXJkaW8gJiByb2NrIGNsaW1iaW5nIHdhbGwWU3RlYW0gcm9vbSAmIGRyeSBzYXVuYQtXaW5lIGNlbGxhcjNFeGVjdXRpdmUgYnVzaW5lc3MgY2VudGVyICYgcHJpdmF0ZSBjb25mZXJlbmNlIHJvb20jVmFsZXQgZHJ5IGNsZWFuaW5nIGRyb3Agb2ZmIHNlcnZpY2UaQWNjZXNzIGNvbnRyb2xsZWQgYnVpbGRpbmdQTXlDYW1kZW4uY29tIC0gb25saW5lIHJlbnQgcGF5bWVudHMsIG1haW50ZW5hbmNlIHJlcXVlc3RzICYgcmVzaWRlbnQgc29jaWFsIHNpdGU9Q29udmVuaWVudCB0byBEdXBvbnQgQ2lyY2xlLCBBZGFtcyBNb3JnYW4gJiBVIFN0cmVldCBDb3JyaWRvcj5WaWV3cyBvZiBNZXJpZGlhbiBIaWxsIFBhcmssIFdhc2hpbmd0b24gTW9udW1lbnQgJiB0aGUgQ2FwaXRvbBZSZXNpZGVudCBzb2NpYWwgZXZlbnRzHTI0LWhvdXIgZW1lcmdlbmN5IG1haW50ZW5hbmNlEEJpbGxpYXJkcyBsb3VuZ2URUGFja2FnZSByZWNlaXZpbmctQ2xvc2UgdG8gV2FzaGluZ3RvbiBDZW50cmFsIEJ1c2luZXNzIERpc3RyaWN0HVdhbGtpbmcgZGlzdGFuY2UgdG8gdGhlIE1ldHJvKFJlc2lkZW50IGxvdW5nZSAmIGNpbmVtYSByb29tIHdpdGggV2ktRmkUKwMTZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZxYAZAIDDxYCHwUFhgNXZSB3ZWxjb21lIHlvdXIgY2F0cywgd2l0aCBhIG1heGltdW0gb2YgdHdvIHBldHMgcGVyIGFwYXJ0bWVudC4gU29ycnksIG5vIGRvZ3MhIFNlZSBtYW5hZ2VtZW50IGZvciBwZXQgYXBwcm92YWwgYW5kIGRlcG9zaXQgYW5kIGZlZSBpbmZvcm1hdGlvbi48QlI+PEJSPjxTVFJPTkc+PEZPTlQgc2l6ZT0yPk15Q2FtZGVuLmNvbTxCUj48L0ZPTlQ+PC9TVFJPTkc+V2F0Y2ggdGhlIHZpZGVvIG5vdyB0byBmaW5kIG91dCBtb3JlIGFib3V0IG91ciByZXNpZGVudCBleGNsdXNpdmUgc2l0ZSBNeUNhbWRlbi5jb20hPEJSPjxCUj48QSBocmVmPSJodHRwOi8vbXljYW1kZW4uY29tL3NpdGVzL1Jvb3NldmVsdC8iIHRhcmdldD1fYmxhbms+PFNUUk9ORz5XYXRjaCBWaWRlbzwvU1RST05HPjwvQT5kAgIPZBYCAgEPFgIeC18hSXRlbUNvdW50AgUWCmYPZBYCZg8VBShjdGwwMF9jcGhDb250ZW50X3JwdHJNYXBBcmVhQ2hvaWNlc19jaGswN3sic2VhcmNoIjoicHVibGljIG9yIHByaXZhdGUgc2Nob29sIiwicGluIjoic2Nob29scGluIn0oY3RsMDBfY3BoQ29udGVudF9ycHRyTWFwQXJlYUNob2ljZXNfY2hrMDIvUmVzb3VyY2VzL0ltYWdlcy9NYXBQb2ludFNlYXJjaC9sYWJlbHMvc2Nob29sLnBuZwdTY2hvb2xzZAIBD2QWAmYPFQUoY3RsMDBfY3BoQ29udGVudF9ycHRyTWFwQXJlYUNob2ljZXNfY2hrMTd7InNlYXJjaCI6InVuaXZlcnNpdHkgZWR1Y2F0aW9uIiwicGluIjoidW5pdmVyc2l0eXBpbiJ9KGN0bDAwX2NwaENvbnRlbnRfcnB0ck1hcEFyZWFDaG9pY2VzX2NoazE2L1Jlc291cmNlcy9JbWFnZXMvTWFwUG9pbnRTZWFyY2gvbGFiZWxzL3VuaXZlcnNpdHkucG5nFUNvbGxlZ2VzL1VuaXZlcnNpdGllc2QCAg9kFgJmDxUFKGN0bDAwX2NwaENvbnRlbnRfcnB0ck1hcEFyZWFDaG9pY2VzX2NoazIueyJzZWFyY2giOiJHcm9jZXJ5IFN0b3JlcyIsInBpbiI6Imdyb2NlcnlwaW4ifShjdGwwMF9jcGhDb250ZW50X3JwdHJNYXBBcmVhQ2hvaWNlc19jaGsyOC9SZXNvdXJjZXMvSW1hZ2VzL01hcFBvaW50U2VhcmNoL2xhYmVscy9ncm9jZXJ5U3RvcmUucG5nDkdyb2NlcnkgU3RvcmVzZAIDD2QWAmYPFQUoY3RsMDBfY3BoQ29udGVudF9ycHRyTWFwQXJlYUNob2ljZXNfY2hrMzB7InNlYXJjaCI6InNob3BwaW5nIGNlbnRlciIsInBpbiI6InNob3BwaW5ncGluIn0oY3RsMDBfY3BoQ29udGVudF9ycHRyTWFwQXJlYUNob2ljZXNfY2hrMzQvUmVzb3VyY2VzL0ltYWdlcy9NYXBQb2ludFNlYXJjaC9sYWJlbHMvc2hvcHBpbmcucG5nEFNob3BwaW5nIENlbnRlcnNkAgQPZBYCZg8VBShjdGwwMF9jcGhDb250ZW50X3JwdHJNYXBBcmVhQ2hvaWNlc19jaGs0LXsic2VhcmNoIjoicmVzdGF1cmFudCIsInBpbiI6InJlc3RhdXJhbnRwaW4ifShjdGwwMF9jcGhDb250ZW50X3JwdHJNYXBBcmVhQ2hvaWNlc19jaGs0Ni9SZXNvdXJjZXMvSW1hZ2VzL01hcFBvaW50U2VhcmNoL2xhYmVscy9yZXN0YXVyYW50LnBuZwtSZXN0YXVyYW50c2QCBA9kFgICAQ9kFgQCAQ8PFgIfAAUzaHR0cDovL2NhbWRlbmJsb2dzLndvcmRwcmVzcy5jb20vY2F0ZWdvcnkvZGMtbWV0cm8vZGQCAw8WAh4Dc3JjBVZodHRwOi8vd3d3LmZhY2Vib29rLmNvbS9jb25uZWN0L2Nvbm5lY3QucGhwP2lkPTIwMDY1NjMxNjYxOTk0MiZjb25uZWN0aW9ucz0xMCZzdHJlYW09MWQCBQ9kFgICAw9kFgICBQ8WAh4DcmVsBRhodHRwOi8vYmNvdmUubWUvcWF1OW96ZHRkAicPFCsAAg8WBB8CZx8LaGQPFCsABhQrAAEPFgYeBVdpZHRoGwAAAAAAQGNAAQAAAB4GSGVpZ2h0GwAAAAAAwGJAAQAAAB8JAoADZBQrAAEPFgYfDxsAAAAAAEBjQAEAAAAfEBsAAAAAAMBiQAEAAAAfCQKAA2QUKwABDxYGHw8bAAAAAABAY0ABAAAAHxAbAAAAAADAYkABAAAAHwkCgANkFCsAAQ8WBh8PGwAAAAAAQGNAAQAAAB8QGwAAAAAAwGJAAQAAAB8JAoADZBQrAAEPFgYfDxsAAAAAAEBjQAEAAAAfEBsAAAAAAMBiQAEAAAAfCQKAA2QUKwABDxYGHw8bAAAAAABAY0ABAAAAHxAbAAAAAADAYkABAAAAHwkCgANkDxQrAQZmZmZmZmYWAQV2VGVsZXJpay5XZWIuVUkuUmFkUm90YXRvckl0ZW0sIFRlbGVyaWsuV2ViLlVJLCBWZXJzaW9uPTIwMTEuMi43MTIuMzUsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49MTIxZmFlNzgxNjViYTNkNBYMZg8PFgYfDxsAAAAAAEBjQAEAAAAfEBsAAAAAAMBiQAEAAAAfCQKAA2QWAmYPFQE1L2RjLW1ldHJvLXdhc2hpbmd0b24tZGMtYXBhcnRtZW50cy9jYW1kZW4tZ3JhbmQtcGFyYy9kAgEPDxYGHw8bAAAAAABAY0ABAAAAHxAbAAAAAADAYkABAAAAHwkCgANkFgJmDxUBNy9kYy1tZXRyby13YXNoaW5ndG9uLWRjLWFwYXJ0bWVudHMvY2FtZGVuLXBvdG9tYWMteWFyZC9kAgIPDxYGHw8bAAAAAABAY0ABAAAAHxAbAAAAAADAYkABAAAAHwkCgANkFgJmDxUBNy9kYy1tZXRyby13YXNoaW5ndG9uLWRjLWFwYXJ0bWVudHMvY2FtZGVuLWNvbGxlZ2UtcGFyay9kAgMPDxYGHw8bAAAAAABAY0ABAAAAHxAbAAAAAADAYkABAAAAHwkCgANkFgJmDxUBNi9kYy1tZXRyby13YXNoaW5ndG9uLWRjLWFwYXJ0bWVudHMvY2FtZGVuLXN1bW1lcmZpZWxkL2QCBA8PFgYfDxsAAAAAAEBjQAEAAAAfEBsAAAAAAMBiQAEAAAAfCQKAA2QWAmYPFQE4L2RjLW1ldHJvLXdhc2hpbmd0b24tZGMtYXBhcnRtZW50cy9jYW1kZW4tc291dGgtY2FwaXRvbC9kAgUPDxYGHw8bAAAAAABAY0ABAAAAHxAbAAAAAADAYkABAAAAHwkCgANkFgJmDxUBLy9kYy1tZXRyby13YXNoaW5ndG9uLWRjLWFwYXJ0bWVudHMvY2FtZGVuLW5vbWEvZAIrDxQrAAIPFgQfAmcfC2hkDxQrAAEUKwABDxYGHw8bAAAAAABAY0ABAAAAHxAbAAAAAADAYkABAAAAHwkCgANkDxQrAQFmFgEFdlRlbGVyaWsuV2ViLlVJLlJhZFJvdGF0b3JJdGVtLCBUZWxlcmlrLldlYi5VSSwgVmVyc2lvbj0yMDExLjIuNzEyLjM1LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPTEyMWZhZTc4MTY1YmEzZDQWAmYPDxYGHw8bAAAAAABAY0ABAAAAHxAbAAAAAADAYkABAAAAHwkCgANkFgJmDxUBNC9kYy1tZXRyby13YXNoaW5ndG9uLWRjLWFwYXJ0bWVudHMvY2FtZGVuLXJvb3NldmVsdC9kAgcPZBYCAgQPZBYCAgMPFgIfDAICFgRmD2QWAgIBDxYCHwwCChYUZg9kFgJmDxUCOGh0dHA6Ly9hcGFydG1lbnRzLmNhbWRlbmxpdmluZy5jb20vcGhvZW5peC1hei1hcGFydG1lbnRzFkFyaXpvbmEsIFBob2VuaXggTWV0cm9kAgEPZBYCZg8VAj5odHRwOi8vYXBhcnRtZW50cy5jYW1kZW5saXZpbmcuY29tL2lubGFuZC1lbXBpcmUtY2EtYXBhcnRtZW50cxlDYWxpZm9ybmlhLCBJbmxhbmQgRW1waXJlZAICD2QWAmYPFQJKaHR0cDovL2FwYXJ0bWVudHMuY2FtZGVubGl2aW5nLmNvbS9sb3MtYW5nZWxlcy1vcmFuZ2UtY291bnR5LWNhLWFwYXJ0bWVudHMcQ2FsaWZvcm5pYSwgTEEvT3JhbmdlIENvdW50eWQCAw9kFgJmDxUCOmh0dHA6Ly9hcGFydG1lbnRzLmNhbWRlbmxpdmluZy5jb20vc2FuLWRpZWdvLWNhLWFwYXJ0bWVudHMVQ2FsaWZvcm5pYSwgU2FuIERpZWdvZAIED2QWAmYPFQI3aHR0cDovL2FwYXJ0bWVudHMuY2FtZGVubGl2aW5nLmNvbS9kZW52ZXItY28tYXBhcnRtZW50cxZDb2xvcmFkbywgRGVudmVyIE1ldHJvZAIFD2QWAmYPFQI4aHR0cDovL2FwYXJ0bWVudHMuY2FtZGVubGl2aW5nLmNvbS9vcmxhbmRvLWZsLWFwYXJ0bWVudHMWRmxvcmlkYSwgT3JsYW5kbyBNZXRyb2QCBg9kFgJmDxUCQ2h0dHA6Ly9hcGFydG1lbnRzLmNhbWRlbmxpdmluZy5jb20vc291dGgtZWFzdC1mbG9yaWRhLWZsLWFwYXJ0bWVudHMaRmxvcmlkYSwgU291dGhlYXN0IEZsb3JpZGFkAgcPZBYCZg8VAjZodHRwOi8vYXBhcnRtZW50cy5jYW1kZW5saXZpbmcuY29tL3RhbXBhLWZsLWFwYXJ0bWVudHMURmxvcmlkYSwgVGFtcGEgTWV0cm9kAggPZBYCZg8VAj5odHRwOi8vYXBhcnRtZW50cy5jYW1kZW5saXZpbmcuY29tL2F0bGFudGEtbWV0cm8tZ2EtYXBhcnRtZW50cxZHZW9yZ2lhLCBBdGxhbnRhIE1ldHJvZAIJD2QWAmYPFQJEaHR0cDovL2FwYXJ0bWVudHMuY2FtZGVubGl2aW5nLmNvbS9kYy1tZXRyby13YXNoaW5ndG9uLWRjLWFwYXJ0bWVudHMSTWFyeWxhbmQsIERDIE1ldHJvZAIBD2QWAgIBDxYCHwwCCRYSZg9kFgJmDxUCOmh0dHA6Ly9hcGFydG1lbnRzLmNhbWRlbmxpdmluZy5jb20vbGFzLXZlZ2FzLW52LWFwYXJ0bWVudHMXTmV2YWRhLCBMYXMgVmVnYXMgTWV0cm9kAgEPZBYCZg8VAjpodHRwOi8vYXBhcnRtZW50cy5jYW1kZW5saXZpbmcuY29tL2NoYXJsb3R0ZS1uYy1hcGFydG1lbnRzH05vcnRoIENhcm9saW5hLCBDaGFybG90dGUgTWV0cm9kAgIPZBYCZg8VAjhodHRwOi8vYXBhcnRtZW50cy5jYW1kZW5saXZpbmcuY29tL3JhbGVpZ2gtbmMtYXBhcnRtZW50cx1Ob3J0aCBDYXJvbGluYSwgUmFsZWlnaCBNZXRyb2QCAw9kFgJmDxUCN2h0dHA6Ly9hcGFydG1lbnRzLmNhbWRlbmxpdmluZy5jb20vYXVzdGluLXR4LWFwYXJ0bWVudHMNVGV4YXMsIEF1c3RpbmQCBA9kFgJmDxUCP2h0dHA6Ly9hcGFydG1lbnRzLmNhbWRlbmxpdmluZy5jb20vY29ycHVzLWNocmlzdGktdHgtYXBhcnRtZW50cxVUZXhhcywgQ29ycHVzIENocmlzdGlkAgUPZBYCZg8VAkJodHRwOi8vYXBhcnRtZW50cy5jYW1kZW5saXZpbmcuY29tL2RhbGxhcy1mb3J0LXdvcnRoLXR4LWFwYXJ0bWVudHMXVGV4YXMsIERhbGxhcy9GdC4gV29ydGhkAgYPZBYCZg8VAjhodHRwOi8vYXBhcnRtZW50cy5jYW1kZW5saXZpbmcuY29tL2hvdXN0b24tdHgtYXBhcnRtZW50cxRUZXhhcywgSG91c3RvbiBNZXRyb2QCBw9kFgJmDxUCRGh0dHA6Ly9hcGFydG1lbnRzLmNhbWRlbmxpdmluZy5jb20vZGMtbWV0cm8td2FzaGluZ3Rvbi1kYy1hcGFydG1lbnRzElZpcmdpbmlhLCBEQyBNZXRyb2QCCA9kFgJmDxUCRGh0dHA6Ly9hcGFydG1lbnRzLmNhbWRlbmxpdmluZy5jb20vZGMtbWV0cm8td2FzaGluZ3Rvbi1kYy1hcGFydG1lbnRzF1dhc2hpbmd0b24gREMsIERDIE1ldHJvZBgCBR5fX0NvbnRyb2xzUmVxdWlyZVBvc3RCYWNrS2V5X18WBQUoY3RsMDAkY3BoQ29udGVudCRSYWRSb3RhdG9yX0N1cnJlbnRfUHJvcAUdY3RsMDAkY3BoQ29udGVudCRSYWRUYWJTdHJpcDEFFWN0bDAwJGNwaENvbnRlbnQkcm1wMQU0Y3RsMDAkY3BoQ29udGVudCRSYWRSb3RhdG9yQ29tbXVuaXRpZXNZb3VNYXlBbHNvTGlrZQU0Y3RsMDAkY3BoQ29udGVudCRSYWRSb3RhdG9yQ29tbXVuaXRpZXNSZWNlbnRseVZpZXdlZAURY3RsMDAkU2tpbkNob29zZXIPFCsAAmUFB0RlZmF1bHRkob1/cwVaRtDFzrXgpgA+COag6uI=" />
+</div>
+
+
+<script src="/ScriptResource.axd?d=R7Vlp5MdNQDUrz3j1EHya3ZvVped60Q0Fu0P0EiMwQWzpho5no2SnYhshElvhOaMP0x88ksn8qzk-e1Xu239fCOlrHQaxET43f8UlTZlfWa0zv9UOhgw4uXYbFDZe9fFkKIIectTLc-1TXxWDp3oVGL4qhiori3Kyeb8Dhz8P0EiD-kq0&amp;t=ffffffffb868b5f4" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side framework failed to load.');
+//]]>
+</script>
+
+<script src="/ScriptResource.axd?d=DJ0rcVbg-HsZhrNh0mYp071YveYRoRJC6NI92ZsSH4wmgNmICfiloVmfcpeGy-PvRrydfgWkoFAGchNb1EVR42OKSGW0kh26_ka0YwBQ1Xmc70VeB-wja60PyowcNb7G6pzO1Q2&amp;t=ffffffff8d5e1eaf" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=s5Wglw0ny8z1sijK_Tsy9v5E-5846HNb3hj19G94QTR0qEj-_mIR2jkkQQi0CbFaA4GFWJCAAm_30lDrE34KAxccpvaR_EgNL1UJYNlBQeKSwRBZAHfLTVTq_asqp-9zpl3VFA2&amp;t=ffffffff8d5e1eaf" type="text/javascript"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=0DYdXVW9EDmF-Bjr6cIV8QVEC1wsBzK1oTxOOt8WJg3KcXiTTHZLzt_3auPPXEoYODlYf2_tSNM4QwgGIzm7R9_muCXc_eW7nWEZHIw8tabERkLW43VoD_r0QDFKNEO-n1PaVQ2&amp;t=ffffffff8d5e1eaf" type="text/javascript"></script>
+<script src="../../Resources/Javascript/jquery.colorbox-min.js" type="text/javascript"></script>
+<script src="../../Resources/Javascript/jQuery.loadingCover.js" type="text/javascript"></script>
+<script src="../../Resources/Widgets/FPWidget/scripts/jquery-ui-1.8.6.custom.min.js" type="text/javascript"></script>
+<script src="../../Resources/Widgets/FPWidget/scripts/camden_uawidget.js" type="text/javascript"></script>
+<script src="../../Resources/Javascript/MapPoint.js" type="text/javascript"></script>
+<script src="../../Resources/Javascript/jquery.tools.min.js" type="text/javascript"></script>
+<script src="../../Resources/Javascript/jquery.scrollTo-min.js" type="text/javascript"></script>
+<script src="../../Resources/Javascript/jquery.labelify.js" type="text/javascript"></script>
+<script src="../../Resources/Javascript/MapPointCompareCommon.js" type="text/javascript"></script>
+<script src="../../Resources/Javascript/Property.js" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=53t0cpGt-zBbE2fJiTe39VbAnJquZcjOyBQW6ns0F96pg9fKtJN2L8jjIfIZPdwZmbFaICKa4n3v2RdKZ2Qcq0e4rxte3MwYMV-umoT_5zszwr8ose3d42KGRcwHgYng-Gd_Cw2&amp;t=ffffffff8d5e1eaf" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=OGlaB5ka9uoykeRWXq0aF1_lTtiupwIFPOkFGyQTkQ_S15aphz9fv5WtJ919d8ns_fFbJiJbBWW8gLmKHEAHXbEksfa7n-5s4Wx8uGsJ1C3aSkw84SbU-717ERJm4IPpkQ5pAQ2&amp;t=ffffffff8d5e1eaf" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=_CGr9Gp3fSwuCzsXU_xrHz8DdtxT2OFq4YXXGjLbn3orpsuYfWYAP0kx1CQ5VeH01RjJfajzZ7hOJckD2gxQJ3DsP3VwfWZXSJYoqUBQmI7jJ49oOsbhCH4p8k3jBGkQv3vZxxVjkTmukn1a46dixuqzyYM1&amp;t=ffffffff8d5e1eaf" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=Xj7pk1oAkjqX2DYdOjQS_Tr6BMx7S2lQUOnbqlGYU5snVX3QuvTNC6lzyC-ihdBLx8LcL1Cg7qAIhE82poKBR_FAXCS0YU6eTb06r3wfcK6us3lxyEPCGbCJZFU2MoOUbCVoxQ2&amp;t=ffffffff8d5e1eaf" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=EAL5QzQqRT2FZcaXP2h_zbZfiXVh5CYR2kEWndnki7M5B2MBHkSQ9r1lX1Db24mCFq8GfmnJoPRb-8VImKl7zqWUNwPfinykZ17OnjN_OH7ezjftwpTS23_Z3WY5QdJgIC5FT1XtKBXNOQYgwg2A4Erex4E1&amp;t=ffffffff8d5e1eaf" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=1Uv_eKw_gGdC4zLSXMenG0qEJ4JPrDiyKN7XdzWDKQD4-4NtYwRj9dan7q4Zs6fxBNATyQAVzguZSPhMvnVgj5ehCv7een1_jp3E-1rfQxmbw68vLlMrVnWkhR4m56mwHvRDM8mfLmgQHqb0108SWQ2tTe81&amp;t=ffffffff8d5e1eaf" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=9ASHvgquTrkYBpzlEMyx8pP_ynbeBlDsggJibSA4lGXPLJLW3IxWdx6OEaQBariOjqsQdTz1MfJzb5VIdeL-hh_o9gNVJSr4bQYMSrlgnd713_jsYdI4huJkFzPsEkGWwuKqxDgc9ItC188U7Fi3zZcEOE81&amp;t=ffffffff8d5e1eaf" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=hMmxdWagB6820YyU5cmg4yxf4ZWWR-pcIxymVQugxt6rrcdlwf055MeBNWsWO7vCouU3O4neKBhJbtLZgdp7f3A0hQgy7FDoBFh9eb8RbGMQFv-ilgV1FGyQ5NMVikbTtbuwTc1LvXHJNPafZHyblwbkXY6ywJB3lT1AN4Y9h15Lmf4B0&amp;t=ffffffff8d5e1eaf" type="text/javascript"></script>
+<script src="../../services/SearchService.svc/json/jsdebug" type="text/javascript"></script>
+<div>
+
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWBAKOjtelCAK++4KjCwKvgLa2AwL0ttSgDyIh693L1p7/7e2nf/rtkUFYHnqG" />
+</div>
+        
+        
+
+        
+        <script type="text/javascript">
+            function AppRoot() {
+                return $(document).find("link[rel=icon]").attr("href").replace("favicon.ico", "");
+            }
+            function onRequestStart(sender, arguments) {
+                //
+                $(document).trigger("Telerik_onRequestStart", { "sender": sender, "arguments": arguments });
+            };
+            function onResponseEnd(sender, arguments) {
+                //            
+                $(document).trigger("Telerik_onResponseEnd", { "sender": sender, "arguments": arguments });
+            };
+        </script>
+
+        <!-- 2011.2.712.35 --><div id="ctl00_RadAjaxManager1SU">
+	<span id="ctl00_RadAjaxManager1" style="display:none;"></span>
+</div>
+        
+        <div id="MasterContent">
+            <div class="TitleBox">
+                
+
+            </div>
+            <div class="ContentBox">
+                
+    
+    
+    
+    <input type="hidden" name="ctl00$cphContent$Hidden_wparamsdeadtome" id="ctl00_cphContent_Hidden_wparamsdeadtome" value="~camdenbrookside~Camdenparkcommons~Camdenforest~camdencedarlakes~camdencovewest~camdencrosscreek~camdenivyhall~southsummit~camdensweetwater~camdenwestview~camdenlaurelridge~camdensteeplechase~CamdenProspectPark~CamdenValleybrook~CamdenMeadows~oasisbay~oasiscrossings~oasisemerald~oasisgateway~oasisisland~oasislanding~oasismeadows~oasispalms~oasispearl~oasisplace~oasisridge~oasissierra~oasissprings~oasisvinings~" />
+
+    
+    <input type="hidden" name="ctl00$cphContent$hiddenCFAFutureDays" id="ctl00_cphContent_hiddenCFAFutureDays" />
+
+    <div id="cphContentContent">
+    
+        <div id="TopHeader" class="TopBg">
+    
+        <div id="ImportantLinkBlock">
+            <div class="l1">
+                <a id="lkBackToResults" href='http://apartments.camdenliving.com/Default.aspx'>Back to Results</a><span
+                    class="sep">|</span> <a id="lkStartNewSearch" href='/Default.aspx'>
+                        Start New Search</a>
+            </div>
+        </div>
+    
+            <div class="CompareLink">
+                <a id="ctl00_cphContent_HyperLink1" accesskey="o" href="../../Compare.aspx">View Compare List</a>
+            </div>
+            <h1>
+                <span id="ctl00_cphContent_lTitle">Camden Roosevelt&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(866) 687-5415</span>&nbsp;<img src="../../Resources/Images/CallUs24-7-II.png" style="border-width:0px;" />
+            </h1>
+        </div>
+        <div id="TopPartII">
+            <div id="ImgDiv">
+                
+                <div class="guh">
+                    <img id="ctl00_cphContent_imgSelectedImage" src="http://crossfiremedia.realpage.com/camdenroosevelt/photos/ph1086_w591_h380.jpg" style="border-width:0px;" />
+                    <div id="curr_propview_rot" class="curr_prop" style="z-index: -1;">
+                        <div id="ctl00_cphContent_RadRotator_Current_Prop" class="RadRotator RadRotator_Default" style="height:150px;width:462px;">
+	<div class="rrRelativeWrapper">
+		<div class="rrClipRegion">
+			<ul class="rrItemsList">
+				<li class="rrItem" style="height:150px;width:154px;"><div id="ctl00_cphContent_RadRotator_Current_Prop_i0">
+					
+                                <div class="community">
+                                    <a class="bigImageRef" id="bigImageRefid" href="http://crossfiremedia.realpage.com/camdenroosevelt/photos/ph1086_w591_h380.jpg">
+                                        <img id="ctl00_cphContent_RadRotator_Current_Prop_i0_imgCurrentProp" class="selectedCommunity" src="http://crossfiremedia.realpage.com/camdenroosevelt/photos/ph1086_w138_h76.jpg" style="border-width:4px;border-style:solid;" /></a>
+                                </div>
+                            
+				</div></li><li class="rrItem" style="height:150px;width:154px;"><div id="ctl00_cphContent_RadRotator_Current_Prop_i1">
+					
+                                <div class="community">
+                                    <a class="bigImageRef" id="bigImageRefid" href="http://crossfiremedia.realpage.com/camdenroosevelt/photos/ph1087_w591_h380.jpg">
+                                        <img id="ctl00_cphContent_RadRotator_Current_Prop_i1_imgCurrentProp" class="selectedCommunity" src="http://crossfiremedia.realpage.com/camdenroosevelt/photos/ph1087_w138_h76.jpg" style="border-width:4px;border-style:solid;" /></a>
+                                </div>
+                            
+				</div></li><li class="rrItem" style="height:150px;width:154px;"><div id="ctl00_cphContent_RadRotator_Current_Prop_i2">
+					
+                                <div class="community">
+                                    <a class="bigImageRef" id="bigImageRefid" href="http://crossfiremedia.realpage.com/camdenroosevelt/photos/ph1088_w591_h380.jpg">
+                                        <img id="ctl00_cphContent_RadRotator_Current_Prop_i2_imgCurrentProp" class="selectedCommunity" src="http://crossfiremedia.realpage.com/camdenroosevelt/photos/ph1088_w138_h76.jpg" style="border-width:4px;border-style:solid;" /></a>
+                                </div>
+                            
+				</div></li><li class="rrItem" style="height:150px;width:154px;"><div id="ctl00_cphContent_RadRotator_Current_Prop_i3">
+					
+                                <div class="community">
+                                    <a class="bigImageRef" id="bigImageRefid" href="http://crossfiremedia.realpage.com/camdenroosevelt/photos/ph1089_w591_h380.jpg">
+                                        <img id="ctl00_cphContent_RadRotator_Current_Prop_i3_imgCurrentProp" class="selectedCommunity" src="http://crossfiremedia.realpage.com/camdenroosevelt/photos/ph1089_w138_h76.jpg" style="border-width:4px;border-style:solid;" /></a>
+                                </div>
+                            
+				</div></li><li class="rrItem" style="height:150px;width:154px;"><div id="ctl00_cphContent_RadRotator_Current_Prop_i4">
+					
+                                <div class="community">
+                                    <a class="bigImageRef" id="bigImageRefid" href="http://crossfiremedia.realpage.com/camdenroosevelt/photos/ph1090_w591_h380.jpg">
+                                        <img id="ctl00_cphContent_RadRotator_Current_Prop_i4_imgCurrentProp" class="selectedCommunity" src="http://crossfiremedia.realpage.com/camdenroosevelt/photos/ph1090_w138_h76.jpg" style="border-width:4px;border-style:solid;" /></a>
+                                </div>
+                            
+				</div></li><li class="rrItem" style="height:150px;width:154px;"><div id="ctl00_cphContent_RadRotator_Current_Prop_i5">
+					
+                                <div class="community">
+                                    <a class="bigImageRef" id="bigImageRefid" href="http://crossfiremedia.realpage.com/camdenroosevelt/photos/ph1091_w591_h380.jpg">
+                                        <img id="ctl00_cphContent_RadRotator_Current_Prop_i5_imgCurrentProp" class="selectedCommunity" src="http://crossfiremedia.realpage.com/camdenroosevelt/photos/ph1091_w138_h76.jpg" style="border-width:4px;border-style:solid;" /></a>
+                                </div>
+                            
+				</div></li><li class="rrItem" style="height:150px;width:154px;"><div id="ctl00_cphContent_RadRotator_Current_Prop_i6">
+					
+                                <div class="community">
+                                    <a class="bigImageRef" id="bigImageRefid" href="http://crossfiremedia.realpage.com/camdenroosevelt/photos/ph1092_w591_h380.jpg">
+                                        <img id="ctl00_cphContent_RadRotator_Current_Prop_i6_imgCurrentProp" class="selectedCommunity" src="http://crossfiremedia.realpage.com/camdenroosevelt/photos/ph1092_w138_h76.jpg" style="border-width:4px;border-style:solid;" /></a>
+                                </div>
+                            
+				</div></li><li class="rrItem" style="height:150px;width:154px;"><div id="ctl00_cphContent_RadRotator_Current_Prop_i7">
+					
+                                <div class="community">
+                                    <a class="bigImageRef" id="bigImageRefid" href="http://crossfiremedia.realpage.com/camdenroosevelt/photos/ph1093_w591_h380.jpg">
+                                        <img id="ctl00_cphContent_RadRotator_Current_Prop_i7_imgCurrentProp" class="selectedCommunity" src="http://crossfiremedia.realpage.com/camdenroosevelt/photos/ph1093_w138_h76.jpg" style="border-width:4px;border-style:solid;" /></a>
+                                </div>
+                            
+				</div></li><li class="rrItem" style="height:150px;width:154px;"><div id="ctl00_cphContent_RadRotator_Current_Prop_i8">
+					
+                                <div class="community">
+                                    <a class="bigImageRef" id="bigImageRefid" href="http://crossfiremedia.realpage.com/camdenroosevelt/photos/ph1094_w591_h380.jpg">
+                                        <img id="ctl00_cphContent_RadRotator_Current_Prop_i8_imgCurrentProp" class="selectedCommunity" src="http://crossfiremedia.realpage.com/camdenroosevelt/photos/ph1094_w138_h76.jpg" style="border-width:4px;border-style:solid;" /></a>
+                                </div>
+                            
+				</div></li><li class="rrItem" style="height:150px;width:154px;"><div id="ctl00_cphContent_RadRotator_Current_Prop_i9">
+					
+                                <div class="community">
+                                    <a class="bigImageRef" id="bigImageRefid" href="http://crossfiremedia.realpage.com/camdenroosevelt/photos/ph1095_w591_h380.jpg">
+                                        <img id="ctl00_cphContent_RadRotator_Current_Prop_i9_imgCurrentProp" class="selectedCommunity" src="http://crossfiremedia.realpage.com/camdenroosevelt/photos/ph1095_w138_h76.jpg" style="border-width:4px;border-style:solid;" /></a>
+                                </div>
+                            
+				</div></li><li class="rrItem" style="height:150px;width:154px;"><div id="ctl00_cphContent_RadRotator_Current_Prop_i10">
+					
+                                <div class="community">
+                                    <a class="bigImageRef" id="bigImageRefid" href="http://crossfiremedia.realpage.com/camdenroosevelt/photos/ph1096_w591_h380.jpg">
+                                        <img id="ctl00_cphContent_RadRotator_Current_Prop_i10_imgCurrentProp" class="selectedCommunity" src="http://crossfiremedia.realpage.com/camdenroosevelt/photos/ph1096_w138_h76.jpg" style="border-width:4px;border-style:solid;" /></a>
+                                </div>
+                            
+				</div></li><li class="rrItem" style="height:150px;width:154px;"><div id="ctl00_cphContent_RadRotator_Current_Prop_i11">
+					
+                                <div class="community">
+                                    <a class="bigImageRef" id="bigImageRefid" href="http://crossfiremedia.realpage.com/camdenroosevelt/photos/ph1097_w591_h380.jpg">
+                                        <img id="ctl00_cphContent_RadRotator_Current_Prop_i11_imgCurrentProp" class="selectedCommunity" src="http://crossfiremedia.realpage.com/camdenroosevelt/photos/ph1097_w138_h76.jpg" style="border-width:4px;border-style:solid;" /></a>
+                                </div>
+                            
+				</div></li><li class="rrItem" style="height:150px;width:154px;"><div id="ctl00_cphContent_RadRotator_Current_Prop_i12">
+					
+                                <div class="community">
+                                    <a class="bigImageRef" id="bigImageRefid" href="http://crossfiremedia.realpage.com/camdenroosevelt/photos/ph1098_w591_h380.jpg">
+                                        <img id="ctl00_cphContent_RadRotator_Current_Prop_i12_imgCurrentProp" class="selectedCommunity" src="http://crossfiremedia.realpage.com/camdenroosevelt/photos/ph1098_w138_h76.jpg" style="border-width:4px;border-style:solid;" /></a>
+                                </div>
+                            
+				</div></li><li class="rrItem" style="height:150px;width:154px;"><div id="ctl00_cphContent_RadRotator_Current_Prop_i13">
+					
+                                <div class="community">
+                                    <a class="bigImageRef" id="bigImageRefid" href="http://crossfiremedia.realpage.com/camdenroosevelt/photos/ph1099_w591_h380.jpg">
+                                        <img id="ctl00_cphContent_RadRotator_Current_Prop_i13_imgCurrentProp" class="selectedCommunity" src="http://crossfiremedia.realpage.com/camdenroosevelt/photos/ph1099_w138_h76.jpg" style="border-width:4px;border-style:solid;" /></a>
+                                </div>
+                            
+				</div></li><li class="rrItem" style="height:150px;width:154px;"><div id="ctl00_cphContent_RadRotator_Current_Prop_i14">
+					
+                                <div class="community">
+                                    <a class="bigImageRef" id="bigImageRefid" href="http://crossfiremedia.realpage.com/camdenroosevelt/photos/ph1100_w591_h380.jpg">
+                                        <img id="ctl00_cphContent_RadRotator_Current_Prop_i14_imgCurrentProp" class="selectedCommunity" src="http://crossfiremedia.realpage.com/camdenroosevelt/photos/ph1100_w138_h76.jpg" style="border-width:4px;border-style:solid;" /></a>
+                                </div>
+                            
+				</div></li><li class="rrItem" style="height:150px;width:154px;"><div id="ctl00_cphContent_RadRotator_Current_Prop_i15">
+					
+                                <div class="community">
+                                    <a class="bigImageRef" id="bigImageRefid" href="http://crossfiremedia.realpage.com/camdenroosevelt/photos/ph1101_w591_h380.jpg">
+                                        <img id="ctl00_cphContent_RadRotator_Current_Prop_i15_imgCurrentProp" class="selectedCommunity" src="http://crossfiremedia.realpage.com/camdenroosevelt/photos/ph1101_w138_h76.jpg" style="border-width:4px;border-style:solid;" /></a>
+                                </div>
+                            
+				</div></li><li class="rrItem" style="height:150px;width:154px;"><div id="ctl00_cphContent_RadRotator_Current_Prop_i16">
+					
+                                <div class="community">
+                                    <a class="bigImageRef" id="bigImageRefid" href="http://crossfiremedia.realpage.com/camdenroosevelt/photos/ph1102_w591_h380.jpg">
+                                        <img id="ctl00_cphContent_RadRotator_Current_Prop_i16_imgCurrentProp" class="selectedCommunity" src="http://crossfiremedia.realpage.com/camdenroosevelt/photos/ph1102_w138_h76.jpg" style="border-width:4px;border-style:solid;" /></a>
+                                </div>
+                            
+				</div></li><li class="rrItem" style="height:150px;width:154px;"><div id="ctl00_cphContent_RadRotator_Current_Prop_i17">
+					
+                                <div class="community">
+                                    <a class="bigImageRef" id="bigImageRefid" href="http://crossfiremedia.realpage.com/camdenroosevelt/photos/ph1103_w591_h380.jpg">
+                                        <img id="ctl00_cphContent_RadRotator_Current_Prop_i17_imgCurrentProp" class="selectedCommunity" src="http://crossfiremedia.realpage.com/camdenroosevelt/photos/ph1103_w138_h76.jpg" style="border-width:4px;border-style:solid;" /></a>
+                                </div>
+                            
+				</div></li><li class="rrItem" style="height:150px;width:154px;"><div id="ctl00_cphContent_RadRotator_Current_Prop_i18">
+					
+                                <div class="community">
+                                    <a class="bigImageRef" id="bigImageRefid" href="http://crossfiremedia.realpage.com/camdenroosevelt/photos/ph1104_w591_h380.jpg">
+                                        <img id="ctl00_cphContent_RadRotator_Current_Prop_i18_imgCurrentProp" class="selectedCommunity" src="http://crossfiremedia.realpage.com/camdenroosevelt/photos/ph1104_w138_h76.jpg" style="border-width:4px;border-style:solid;" /></a>
+                                </div>
+                            
+				</div></li><li class="rrItem" style="height:150px;width:154px;"><div id="ctl00_cphContent_RadRotator_Current_Prop_i19">
+					
+                                <div class="community">
+                                    <a class="bigImageRef" id="bigImageRefid" href="http://crossfiremedia.realpage.com/camdenroosevelt/photos/ph1105_w591_h380.jpg">
+                                        <img id="ctl00_cphContent_RadRotator_Current_Prop_i19_imgCurrentProp" class="selectedCommunity" src="http://crossfiremedia.realpage.com/camdenroosevelt/photos/ph1105_w138_h76.jpg" style="border-width:4px;border-style:solid;" /></a>
+                                </div>
+                            
+				</div></li><li class="rrItem" style="height:150px;width:154px;"><div id="ctl00_cphContent_RadRotator_Current_Prop_i20">
+					
+                                <div class="community">
+                                    <a class="bigImageRef" id="bigImageRefid" href="http://crossfiremedia.realpage.com/camdenroosevelt/photos/ph1106_w591_h380.jpg">
+                                        <img id="ctl00_cphContent_RadRotator_Current_Prop_i20_imgCurrentProp" class="selectedCommunity" src="http://crossfiremedia.realpage.com/camdenroosevelt/photos/ph1106_w138_h76.jpg" style="border-width:4px;border-style:solid;" /></a>
+                                </div>
+                            
+				</div></li><li class="rrItem" style="height:150px;width:154px;"><div id="ctl00_cphContent_RadRotator_Current_Prop_i21">
+					
+                                <div class="community">
+                                    <a class="bigImageRef" id="bigImageRefid" href="http://crossfiremedia.realpage.com/camdenroosevelt/photos/ph1107_w591_h380.jpg">
+                                        <img id="ctl00_cphContent_RadRotator_Current_Prop_i21_imgCurrentProp" class="selectedCommunity" src="http://crossfiremedia.realpage.com/camdenroosevelt/photos/ph1107_w138_h76.jpg" style="border-width:4px;border-style:solid;" /></a>
+                                </div>
+                            
+				</div></li><li class="rrItem" style="height:150px;width:154px;"><div id="ctl00_cphContent_RadRotator_Current_Prop_i22">
+					
+                                <div class="community">
+                                    <a class="bigImageRef" id="bigImageRefid" href="http://crossfiremedia.realpage.com/camdenroosevelt/photos/ph1108_w591_h380.jpg">
+                                        <img id="ctl00_cphContent_RadRotator_Current_Prop_i22_imgCurrentProp" class="selectedCommunity" src="http://crossfiremedia.realpage.com/camdenroosevelt/photos/ph1108_w138_h76.jpg" style="border-width:4px;border-style:solid;" /></a>
+                                </div>
+                            
+				</div></li><li class="rrItem" style="height:150px;width:154px;"><div id="ctl00_cphContent_RadRotator_Current_Prop_i23">
+					
+                                <div class="community">
+                                    <a class="bigImageRef" id="bigImageRefid" href="http://crossfiremedia.realpage.com/camdenroosevelt/photos/ph1109_w591_h380.jpg">
+                                        <img id="ctl00_cphContent_RadRotator_Current_Prop_i23_imgCurrentProp" class="selectedCommunity" src="http://crossfiremedia.realpage.com/camdenroosevelt/photos/ph1109_w138_h76.jpg" style="border-width:4px;border-style:solid;" /></a>
+                                </div>
+                            
+				</div></li><li class="rrItem" style="height:150px;width:154px;"><div id="ctl00_cphContent_RadRotator_Current_Prop_i24">
+					
+                                <div class="community">
+                                    <a class="bigImageRef" id="bigImageRefid" href="http://crossfiremedia.realpage.com/camdenroosevelt/photos/ph1110_w591_h380.jpg">
+                                        <img id="ctl00_cphContent_RadRotator_Current_Prop_i24_imgCurrentProp" class="selectedCommunity" src="http://crossfiremedia.realpage.com/camdenroosevelt/photos/ph1110_w138_h76.jpg" style="border-width:4px;border-style:solid;" /></a>
+                                </div>
+                            
+				</div></li><li class="rrItem" style="height:150px;width:154px;"><div id="ctl00_cphContent_RadRotator_Current_Prop_i25">
+					
+                                <div class="community">
+                                    <a class="bigImageRef" id="bigImageRefid" href="http://crossfiremedia.realpage.com/camdenroosevelt/photos/ph1113_w591_h380.jpg">
+                                        <img id="ctl00_cphContent_RadRotator_Current_Prop_i25_imgCurrentProp" class="selectedCommunity" src="http://crossfiremedia.realpage.com/camdenroosevelt/photos/ph1113_w138_h76.jpg" style="border-width:4px;border-style:solid;" /></a>
+                                </div>
+                            
+				</div></li><li class="rrItem" style="height:150px;width:154px;"><div id="ctl00_cphContent_RadRotator_Current_Prop_i26">
+					
+                                <div class="community">
+                                    <a class="bigImageRef" id="bigImageRefid" href="http://crossfiremedia.realpage.com/camdenroosevelt/photos/ph1111_w591_h380.jpg">
+                                        <img id="ctl00_cphContent_RadRotator_Current_Prop_i26_imgCurrentProp" class="selectedCommunity" src="http://crossfiremedia.realpage.com/camdenroosevelt/photos/ph1111_w138_h76.jpg" style="border-width:4px;border-style:solid;" /></a>
+                                </div>
+                            
+				</div></li><li class="rrItem" style="height:150px;width:154px;"><div id="ctl00_cphContent_RadRotator_Current_Prop_i27">
+					
+                                <div class="community">
+                                    <a class="bigImageRef" id="bigImageRefid" href="http://crossfiremedia.realpage.com/camdenroosevelt/photos/ph1112_w591_h380.jpg">
+                                        <img id="ctl00_cphContent_RadRotator_Current_Prop_i27_imgCurrentProp" class="selectedCommunity" src="http://crossfiremedia.realpage.com/camdenroosevelt/photos/ph1112_w138_h76.jpg" style="border-width:4px;border-style:solid;" /></a>
+                                </div>
+                            
+				</div></li>
+			</ul>
+		</div><a class="rrButton rrButtonUp" href="javascript:void(0);">&nbsp;</a><a class="rrButton rrButtonLeft" href="javascript:void(0);">&nbsp;</a><a class="rrButton rrButtonRight" href="javascript:void(0);">&nbsp;</a><a class="rrButton rrButtonDown" href="javascript:void(0);">&nbsp;</a>
+	</div><input id="ctl00_cphContent_RadRotator_Current_Prop_ClientState" name="ctl00_cphContent_RadRotator_Current_Prop_ClientState" type="hidden" />
+</div>
+                        <div id="ctl00_cphContent_PnlRadRotator_Current_Prop">
+	
+                            <a href="#" onclick="showNextItem(this, $find('ctl00_cphContent_RadRotator_Current_Prop'), Telerik.Web.UI.RotatorScrollDirection.Right); return false;"
+                                class="left" title="Left"><span>Left</span></a> <a href="#" onclick="showNextItem(this, $find('ctl00_cphContent_RadRotator_Current_Prop'), Telerik.Web.UI.RotatorScrollDirection.Left); return false;"
+                                    class="right" title="Right"><span>Right</span></a>
+                        
+</div>
+                    </div>
+                    <a href="#" id="ViewPhotos" class="ViewPhotos_btn v_photo"></a>
+                </div>
+            </div>
+            <div id="FunTextDiv">
+                <div class="topSuff">
+                    <div class="address">
+                        2101 16th St NW<br />Washington, DC 20009<br />Resident Services: (202) 265-4540
+                    </div>
+                    <div class="mapLinks">
+                        <a class="map" href="#">Map</a>&nbsp;|&nbsp;
+                        <a class="map" href="#">Directions</a>
+                        
+                    </div>
+                    <div class="SaveToCompareList">
+                        
+                            <input type="checkbox" id="chkSaveToCompareList" value="1069364" />
+                            <label for="chkSaveToCompareList">
+                                Save To Compare List</label>
+                        
+                        <div id="ctl00_cphContent_offhrsdivid" class="offhrsdivcss" style="position: absolute;
+                            left: -40px; top: 25px; visibility: hidden;">
+                        M-W, F 10:00AM - 6:00PM<br />TH 10:00AM - 7:00PM<br />SA 10:00AM - 5:00PM<br />SU 1:00PM - 5:00PM</div>
+                    </div>
+                    <div class="infoLinks">
+                        <a id="ctl00_cphContent_lnkEmailUs" class="emailus" href="../../ContactPopup.aspx?s=1069364">Email us</a>
+                        <a class="officehours" href="#">View Office Hours</a>
+                        <a id="ctl00_cphContent_lnkBlog" class="blog" href="http://camdenblogs.wordpress.com/category/dc-metro/" target="_blank">City Blog</a>
+                    </div>
+                </div>
+                <div class="bottomStuff">
+                    <A href="http://tour.camdenliving.com/Camden-Roosevelt/" target=_blank><IMG border=0 alt="Launch 360 tour" src="http://images.camdenliving.com/CamdenLiving-BETA/360.jpg"></A><BR><BR><BR>Adams Morgan, Dupont Circle, the U Street Corridor and other Washington D.C. hot spots are just steps from your door when you live at Camden Roosevelt. As one of our residents, you will be overwhelmed by the exquisite attention to detail blended with modern amenities in each of our studio, one and two bedroom apartment homes. The renovated historic residences include features like hardwood floors, granite countertops, crown molding and include washers and dryers. Enjoy Wi-Fi access in the resident lounge, work out in our state-of-the-art fitness center or store your favorite vintage in the wine cellar. Other features include a 24-hour concierge service and valet parking garage as well as dry cleaning service. Camden Roosevelt is ideally located in Washington D.C. and the Metro is only blocks away while a Zip Car is right at your doorstep.<BR><BR><STRONG><A href="http://www.camdenliving.com/docs/brochures/Roosevelt.pdf" target=_blank>Download Community Brochure</A></STRONG> &#x0D;&#x0A;<P></P></div>
+            </div>
+        </div>
+        <!-- Neighborhood Wiki -->
+        <div id="TabStrip">
+            <div id="ctl00_cphContent_RadTabStrip1" class="RadTabStrip RadTabStrip_ RadTabStripTop_">
+	<div class="rtsLevel rtsLevel1">
+		<ul class="rtsUL"><li class="rtsLI rtsFirst"><a class="rtsLink CamTab rtsSelected CamTabSelected" href="#"><span class="rtsOut"><span class="rtsIn"><span class="rtsTxt">Find an Apartment</span></span></span></a></li><li class="rtsLI"><a class="rtsLink rtsAfter CamTab" href="#"><span class="rtsOut"><span class="rtsIn"><span class="rtsTxt">Amenities</span></span></span></a></li><li class="rtsLI"><a class="rtsLink CamTab" href="#"><span class="rtsOut"><span class="rtsIn"><span class="rtsTxt">Map / Points of Interest</span></span></span></a></li><li class="rtsLI"><a class="rtsLink CamTab" href="#"><span class="rtsOut"><span class="rtsIn"><span class="rtsTxt">What's Up</span></span></span></a></li><li class="rtsLI rtsLast"><a class="rtsLink CamTab" href="#"><span class="rtsOut"><span class="rtsIn"><span class="rtsTxt">Video</span></span></span></a></li></ul>
+	</div><input id="ctl00_cphContent_RadTabStrip1_ClientState" name="ctl00_cphContent_RadTabStrip1_ClientState" type="hidden" />
+</div>
+        </div>
+        <div id="rmp">
+            <div id="ctl00_cphContent_rmp1">
+	<div id="ctl00_cphContent_rpvSelectApartment">
+		
+                    <div id="fptestdiv">
+                    </div>
+                
+	</div><div id="ctl00_cphContent_rpvAmenities" class="rmpHiddenView">
+		
+                    <div id="divAmenities">
+                        <div class="BigArea">
+                            <div class="section">
+                                <h2>
+                                    Residence Features
+                                </h2>
+                                <ul id="ctl00_cphContent_blResidenceFeatures">
+			<li>Private patios &amp; balconies*</li><li>Oversized garden tubs*</li><li>Granite countertops*</li><li>Washer &amp; dryer included</li><li>Built-in bookshelves*</li><li>Studio floor plans available</li><li>Renovated historic apartment homes</li><li>Expanded cable TV package</li><li>Spacious closets</li><li>Crown molding</li><li>Kitchen pantries*</li><li>Linen closets*</li>
+		</ul>
+                            </div>
+                            <div class="section">
+                                <h2>
+                                    Community Features
+                                </h2>
+                                <ul id="ctl00_cphContent_blCommunityFeatures">
+			<li>Recycling program</li><li>24-hour valet parking garage</li><li>24-hour concierge services</li><li>Expansive 24-hour fitness center with free weights, cardio &amp; rock climbing wall</li><li>Steam room &amp; dry sauna</li><li>Wine cellar</li><li>Executive business center &amp; private conference room</li><li>Valet dry cleaning drop off service</li><li>Access controlled building</li><li>MyCamden.com - online rent payments, maintenance requests &amp; resident social site</li><li>Convenient to Dupont Circle, Adams Morgan &amp; U Street Corridor</li><li>Views of Meridian Hill Park, Washington Monument &amp; the Capitol</li><li>Resident social events</li><li>24-hour emergency maintenance</li><li>Billiards lounge</li><li>Package receiving</li><li>Close to Washington Central Business District</li><li>Walking distance to the Metro</li><li>Resident lounge &amp; cinema room with Wi-Fi</li>
+		</ul>
+                            </div>
+                            <div class="section">
+                                <h2>
+                                    Pet Policy
+                                    <img src="../../App_Themes/Property/Images/paw.png" alt=" " style="border-width:0px;" />
+                                </h2>
+                                <div style="margin: 0 10px 10px 10px;">
+                                    We welcome your cats, with a maximum of two pets per apartment. Sorry, no dogs! See management for pet approval and deposit and fee information.<BR><BR><STRONG><FONT size=2>MyCamden.com<BR></FONT></STRONG>Watch the video now to find out more about our resident exclusive site MyCamden.com!<BR><BR><A href="http://mycamden.com/sites/Roosevelt/" target=_blank><STRONG>Watch Video</STRONG></A>
+                                </div>
+                            </div>
+                        </div>
+                        <a style="display: none; width: 929px; margin: 0 auto;" href="http://www.camdenliving.com/about-camden/meet-camden/live-green/">
+                            <div style="position:relative;">
+                                <div style="width: 600px; position:absolute; top: 10px; left: 300px; height: 170px">
+                                    
+                                </div>
+                                
+                                <img id="ctl00_cphContent_GreenF" alt="Green Features" src="../../Resources/Images/GreenFeatures.png" style="border-width:0px;" />
+                            </div>    
+                                </a>
+                    </div>
+                
+	</div><div id="ctl00_cphContent_rpvMap" class="rmpHiddenView">
+		
+                    <div id="divMap">
+                        <div id="MapAreaChoices" class="section">
+                            <h2>
+                                What's Nearby</h2>
+                            <ul>
+                                
+                                        <li>
+                                            <input type="checkbox" id="ctl00_cphContent_rptrMapAreaChoices_chk0" value='{"search":"public or private school","pin":"schoolpin"}' />
+                                            <label for="ctl00_cphContent_rptrMapAreaChoices_chk0">
+                                                <img alt="" src="/Resources/Images/MapPointSearch/labels/school.png" /><span>Schools</span></label></li>
+                                    
+                                        <li>
+                                            <input type="checkbox" id="ctl00_cphContent_rptrMapAreaChoices_chk1" value='{"search":"university education","pin":"universitypin"}' />
+                                            <label for="ctl00_cphContent_rptrMapAreaChoices_chk1">
+                                                <img alt="" src="/Resources/Images/MapPointSearch/labels/university.png" /><span>Colleges/Universities</span></label></li>
+                                    
+                                        <li>
+                                            <input type="checkbox" id="ctl00_cphContent_rptrMapAreaChoices_chk2" value='{"search":"Grocery Stores","pin":"grocerypin"}' />
+                                            <label for="ctl00_cphContent_rptrMapAreaChoices_chk2">
+                                                <img alt="" src="/Resources/Images/MapPointSearch/labels/groceryStore.png" /><span>Grocery Stores</span></label></li>
+                                    
+                                        <li>
+                                            <input type="checkbox" id="ctl00_cphContent_rptrMapAreaChoices_chk3" value='{"search":"shopping center","pin":"shoppingpin"}' />
+                                            <label for="ctl00_cphContent_rptrMapAreaChoices_chk3">
+                                                <img alt="" src="/Resources/Images/MapPointSearch/labels/shopping.png" /><span>Shopping Centers</span></label></li>
+                                    
+                                        <li>
+                                            <input type="checkbox" id="ctl00_cphContent_rptrMapAreaChoices_chk4" value='{"search":"restaurant","pin":"restaurantpin"}' />
+                                            <label for="ctl00_cphContent_rptrMapAreaChoices_chk4">
+                                                <img alt="" src="/Resources/Images/MapPointSearch/labels/restaurant.png" /><span>Restaurants</span></label></li>
+                                    
+                            </ul>
+                        </div>
+                        <div id="MapAreaSection" class="section">
+                            <div id="MapArea">
+                            </div>
+                            <div class="GetDirectionsOuterDiv">
+                                <div class="GetDirectionsDiv">
+                                    <div class="xx">
+                                        <input type="text" class="text" /><a class="GetDirectionsInvoker" href="#">Get Directions</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+	</div><div id="ctl00_cphContent_rpvNeighborhoodWiki" class="rmpHiddenView">
+		
+                    
+                        <iframe width="100%" height="450" style="position:relative; bottom:1px; right:1px; border:none;" frameborder="0" scrolling="no" src="/PropertyPages/RentWiki.aspx?lat=38.918699&lon=-77.036494&rapropid=802"></iframe>
+                        
+
+                
+	</div><div id="ctl00_cphContent_rpvSocial" class="rmpHiddenView">
+		
+                    <div id="divWhatsUp">
+                        <div id="ctl00_cphContent_div_fb_con">
+                            <div class="infoLinks">
+                                <a id="ctl00_cphContent_lnkBlog_Whats_Up" class="blog" href="http://camdenblogs.wordpress.com/category/dc-metro/" target="_blank">City Blog</a>
+                            </div> 
+                            <iframe id="ctl00_cphContent_iframe_FB_Connect" src="http://www.facebook.com/connect/connect.php?id=200656316619942&amp;connections=10&amp;stream=1" scrolling="no" frameborder="0" style="border: none; overflow: hidden; width: 100%; height: 450px;"></iframe>
+                            
+                        </div>
+                    </div>
+                
+	</div><div id="ctl00_cphContent_rpvVideo" class="rmpHiddenView" style="height:400px;">
+		
+                    <div id="divVideo" style="padding-top: 1px; height: 400px;">
+                        <div id="ctl00_cphContent_pnlVideoInner" style="margin: 30px; float: left;">
+			
+                            <a id="ctl00_cphContent_btnPlayVideo" ImageUrl="~/App_Themes/Property/Images/CamdenTV_PlayVideo.png" AlternateText="Camden TV Play Video" href="javascript:__doPostBack('ctl00$cphContent$btnPlayVideo','')"></a>
+		</div>
+                        <div id="ctl00_cphContent_vid_div_id" style="float: left; position: absolute; left: 50px;">
+                            <div id="ctl00_cphContent_div_Playvid_btn">
+                                <a href="#" class="PlayVideo_btn"></a>
+                            </div>
+                            
+                            
+                            
+                            <div class="div_vidcss" style="visibility: hidden; display:none; z-index:200;">                                
+                                <iframe id="ctl00_cphContent_iframe_prop_vid" scrolling="no" frameborder="0" style="border: none;
+                                    visibility: hidden; overflow: hidden; width: 1px; height: 1px;" rel="http://bcove.me/qau9ozdt"></iframe>
+                            </div><!--  -->
+                            
+                            
+                        </div>
+                        <div id="div_vid_info" style="float: left; width: 537px; height: 278px; position: relative;
+                            margin-top: 30px;">
+                            <p id="ctl00_cphContent_vid_click_desc">
+                            To get a feel for our community, click on the above video link to take a quick tour
+                                of our community features, apartment amenities, and to get information on the surrounding
+                                area.</p>
+                            <p>
+                            
+                            
+                                
+                            </p>
+                            
+                            
+                        </div>
+                    </div>
+                
+	</div><input id="ctl00_cphContent_rmp1_ClientState" name="ctl00_cphContent_rmp1_ClientState" type="hidden" />
+</div>
+        </div>
+        <div id="OtherCommunities">
+            <div id="Set1">
+                <div class="top">
+                    <h2>
+                        Communities You May Also Like</h2>
+                </div>
+                <div class="currCommunitiesOfInterest">
+                    <div id="ctl00_cphContent_RadRotatorCommunitiesYouMayAlsoLike" class="RadRotator RadRotator_Default" style="height:150px;width:462px;">
+	<div class="rrRelativeWrapper">
+		<div class="rrClipRegion">
+			<ul class="rrItemsList">
+				<li class="rrItem" style="height:150px;width:154px;"><div id="ctl00_cphContent_RadRotatorCommunitiesYouMayAlsoLike_i0">
+					
+                            <div class="community">
+                                <a class="interest_community_urls" href="/dc-metro-washington-dc-apartments/camden-grand-parc/">
+                                    <img id="ctl00_cphContent_RadRotatorCommunitiesYouMayAlsoLike_i0_imgCurrentCommunity" class="selectedCommunity" src="http://crossfiremedia.realpage.com/camdengrandparc/photos/ph1110_w138_h76.png" style="border-width:4px;border-style:solid;" />
+                                </a>
+                                <span id="ctl00_cphContent_RadRotatorCommunitiesYouMayAlsoLike_i0_lblCommunityName" class="communityName">Camden Grand Parc</span>
+                                <span id="ctl00_cphContent_RadRotatorCommunitiesYouMayAlsoLike_i0_lblLocation">Washington, DC</span>
+                                <span id="ctl00_cphContent_RadRotatorCommunitiesYouMayAlsoLike_i0_lblDistance"></span>
+                                <span id="ctl00_cphContent_RadRotatorCommunitiesYouMayAlsoLike_i0_lblPriceRange">$1719 - $8069</span>
+                            </div>
+                        
+				</div></li><li class="rrItem" style="height:150px;width:154px;"><div id="ctl00_cphContent_RadRotatorCommunitiesYouMayAlsoLike_i1">
+					
+                            <div class="community">
+                                <a class="interest_community_urls" href="/dc-metro-washington-dc-apartments/camden-potomac-yard/">
+                                    <img id="ctl00_cphContent_RadRotatorCommunitiesYouMayAlsoLike_i1_imgCurrentCommunity" class="selectedCommunity" src="http://crossfiremedia.realpage.com/camdenpotomacyard/photos/ph1052_w138_h76.jpg" style="border-width:4px;border-style:solid;" />
+                                </a>
+                                <span id="ctl00_cphContent_RadRotatorCommunitiesYouMayAlsoLike_i1_lblCommunityName" class="communityName">Camden Potomac Yard</span>
+                                <span id="ctl00_cphContent_RadRotatorCommunitiesYouMayAlsoLike_i1_lblLocation">Arlington, VA</span>
+                                <span id="ctl00_cphContent_RadRotatorCommunitiesYouMayAlsoLike_i1_lblDistance"></span>
+                                <span id="ctl00_cphContent_RadRotatorCommunitiesYouMayAlsoLike_i1_lblPriceRange">$1189 - $3729</span>
+                            </div>
+                        
+				</div></li><li class="rrItem" style="height:150px;width:154px;"><div id="ctl00_cphContent_RadRotatorCommunitiesYouMayAlsoLike_i2">
+					
+                            <div class="community">
+                                <a class="interest_community_urls" href="/dc-metro-washington-dc-apartments/camden-college-park/">
+                                    <img id="ctl00_cphContent_RadRotatorCommunitiesYouMayAlsoLike_i2_imgCurrentCommunity" class="selectedCommunity" src="http://crossfiremedia.realpage.com/camdencollegepark/photos/ph1070_w138_h76.png" style="border-width:4px;border-style:solid;" />
+                                </a>
+                                <span id="ctl00_cphContent_RadRotatorCommunitiesYouMayAlsoLike_i2_lblCommunityName" class="communityName">Camden College Park</span>
+                                <span id="ctl00_cphContent_RadRotatorCommunitiesYouMayAlsoLike_i2_lblLocation">College Park, MD</span>
+                                <span id="ctl00_cphContent_RadRotatorCommunitiesYouMayAlsoLike_i2_lblDistance"></span>
+                                <span id="ctl00_cphContent_RadRotatorCommunitiesYouMayAlsoLike_i2_lblPriceRange">$1229 - $2139</span>
+                            </div>
+                        
+				</div></li><li class="rrItem" style="height:150px;width:154px;"><div id="ctl00_cphContent_RadRotatorCommunitiesYouMayAlsoLike_i3">
+					
+                            <div class="community">
+                                <a class="interest_community_urls" href="/dc-metro-washington-dc-apartments/camden-summerfield/">
+                                    <img id="ctl00_cphContent_RadRotatorCommunitiesYouMayAlsoLike_i3_imgCurrentCommunity" class="selectedCommunity" src="http://crossfiremedia.realpage.com/camdensummerfield/photos/ph1113_w138_h76.jpg" style="border-width:4px;border-style:solid;" />
+                                </a>
+                                <span id="ctl00_cphContent_RadRotatorCommunitiesYouMayAlsoLike_i3_lblCommunityName" class="communityName">Camden Summerfield</span>
+                                <span id="ctl00_cphContent_RadRotatorCommunitiesYouMayAlsoLike_i3_lblLocation">Landover, MD</span>
+                                <span id="ctl00_cphContent_RadRotatorCommunitiesYouMayAlsoLike_i3_lblDistance"></span>
+                                <span id="ctl00_cphContent_RadRotatorCommunitiesYouMayAlsoLike_i3_lblPriceRange">$1259 - $2769</span>
+                            </div>
+                        
+				</div></li><li class="rrItem" style="height:150px;width:154px;"><div id="ctl00_cphContent_RadRotatorCommunitiesYouMayAlsoLike_i4">
+					
+                            <div class="community">
+                                <a class="interest_community_urls" href="/dc-metro-washington-dc-apartments/camden-south-capitol/">
+                                    <img id="ctl00_cphContent_RadRotatorCommunitiesYouMayAlsoLike_i4_imgCurrentCommunity" class="selectedCommunity" src="http://crossfiremedia.realpage.com/camdensouthcapitol/photos/ph1136_w138_h76.png" style="border-width:4px;border-style:solid;" />
+                                </a>
+                                <span id="ctl00_cphContent_RadRotatorCommunitiesYouMayAlsoLike_i4_lblCommunityName" class="communityName">Camden South Capitol</span>
+                                <span id="ctl00_cphContent_RadRotatorCommunitiesYouMayAlsoLike_i4_lblLocation">Washington, DC</span>
+                                <span id="ctl00_cphContent_RadRotatorCommunitiesYouMayAlsoLike_i4_lblDistance"></span>
+                                <span id="ctl00_cphContent_RadRotatorCommunitiesYouMayAlsoLike_i4_lblPriceRange">$1459 - $3609</span>
+                            </div>
+                        
+				</div></li><li class="rrItem" style="height:150px;width:154px;"><div id="ctl00_cphContent_RadRotatorCommunitiesYouMayAlsoLike_i5">
+					
+                            <div class="community">
+                                <a class="interest_community_urls" href="/dc-metro-washington-dc-apartments/camden-noma/">
+                                    <img id="ctl00_cphContent_RadRotatorCommunitiesYouMayAlsoLike_i5_imgCurrentCommunity" class="selectedCommunity" src="http://crossfiremedia.realpage.com/camdennoma/photos/ph1101_w138_h76.jpg" style="border-width:4px;border-style:solid;" />
+                                </a>
+                                <span id="ctl00_cphContent_RadRotatorCommunitiesYouMayAlsoLike_i5_lblCommunityName" class="communityName">Camden NoMa</span>
+                                <span id="ctl00_cphContent_RadRotatorCommunitiesYouMayAlsoLike_i5_lblLocation">Washington, DC</span>
+                                <span id="ctl00_cphContent_RadRotatorCommunitiesYouMayAlsoLike_i5_lblDistance"></span>
+                                <span id="ctl00_cphContent_RadRotatorCommunitiesYouMayAlsoLike_i5_lblPriceRange">$1779 - $4399</span>
+                            </div>
+                        
+				</div></li>
+			</ul>
+		</div><a class="rrButton rrButtonUp" href="javascript:void(0);">&nbsp;</a><a class="rrButton rrButtonLeft" href="javascript:void(0);">&nbsp;</a><a class="rrButton rrButtonRight" href="javascript:void(0);">&nbsp;</a><a class="rrButton rrButtonDown" href="javascript:void(0);">&nbsp;</a>
+	</div><input id="ctl00_cphContent_RadRotatorCommunitiesYouMayAlsoLike_ClientState" name="ctl00_cphContent_RadRotatorCommunitiesYouMayAlsoLike_ClientState" type="hidden" />
+</div>
+                    <div id="ctl00_cphContent_pnlControlsRadRotatorCommunitiesYouMayAlsoLike">
+	
+                        <a href="#" onclick="showNextItem(this, $find('ctl00_cphContent_RadRotatorCommunitiesYouMayAlsoLike'), Telerik.Web.UI.RotatorScrollDirection.Right); return false;"
+                            class="left" title="Left"><span>Left</span></a> <a href="#" onclick="showNextItem(this, $find('ctl00_cphContent_RadRotatorCommunitiesYouMayAlsoLike'), Telerik.Web.UI.RotatorScrollDirection.Left); return false;"
+                                class="right" title="Right"><span>Right</span></a>
+                    
+</div>
+                </div>
+            </div>
+            <div id="Set2">
+                <div class="top">
+                    <h2>
+                        Communities Recently Viewed</h2>
+                </div>
+                <div class="currCommunitiesOfInterest">
+                    <div id="ctl00_cphContent_RadRotatorCommunitiesRecentlyViewed" class="RadRotator RadRotator_Default" style="height:150px;width:462px;">
+	<div class="rrRelativeWrapper">
+		<div class="rrClipRegion">
+			<ul class="rrItemsList">
+				<li class="rrItem" style="height:150px;width:154px;"><div id="ctl00_cphContent_RadRotatorCommunitiesRecentlyViewed_i0">
+					
+                            <div class="community">
+                                <a class="interest_community_urls" href="/dc-metro-washington-dc-apartments/camden-roosevelt/">
+                                    <img id="ctl00_cphContent_RadRotatorCommunitiesRecentlyViewed_i0_imgCurrentCommunity" class="selectedCommunity" src="http://crossfiremedia.realpage.com/camdenroosevelt/photos/ph1086_w138_h76.jpg" style="border-width:4px;border-style:solid;" />
+                                </a>
+                                <span id="ctl00_cphContent_RadRotatorCommunitiesRecentlyViewed_i0_lblCommunityName" class="communityName">Camden Roosevelt</span>
+                                <span id="ctl00_cphContent_RadRotatorCommunitiesRecentlyViewed_i0_lblLocation">Washington, DC</span>
+                                <span id="ctl00_cphContent_RadRotatorCommunitiesRecentlyViewed_i0_lblDistance"></span>
+                                <span id="ctl00_cphContent_RadRotatorCommunitiesRecentlyViewed_i0_lblPriceRange">$1505 - $4876</span>
+                            </div>
+                        
+				</div></li>
+			</ul>
+		</div><a class="rrButton rrButtonUp" href="javascript:void(0);">&nbsp;</a><a class="rrButton rrButtonLeft" href="javascript:void(0);">&nbsp;</a><a class="rrButton rrButtonRight" href="javascript:void(0);">&nbsp;</a><a class="rrButton rrButtonDown" href="javascript:void(0);">&nbsp;</a>
+	</div><input id="ctl00_cphContent_RadRotatorCommunitiesRecentlyViewed_ClientState" name="ctl00_cphContent_RadRotatorCommunitiesRecentlyViewed_ClientState" type="hidden" />
+</div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+            </div>
+        </div>
+        
+<script language='JavaScript' type='text/javascript' src='//libs.coremetrics.com/eluminate.js'></script>
+<script type='text/javascript'>
+cmSetClientID('90362862',false,'stats.camdenliving.com','camdenliving.com');
+cmCreatePageviewTag('apartment search:','apartment search',null,null,'');
+</script>
+<script language='JavaScript' type='text/javascript' src='/javascript/RP_CoreMetricHelpers.js?v=a-59312528'></script>
+
+<script type="text/javascript">
+//<![CDATA[
+Sys.Application.initialize();
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadAjaxManager, {"_updatePanels":"","ajaxSettings":[],"clientEvents":{OnRequestStart:"onRequestStart",OnResponseEnd:"onResponseEnd"},"defaultLoadingPanelID":"","enableAJAX":true,"enableHistory":false,"links":[],"styles":[],"uniqueID":"ctl00$RadAjaxManager1","updatePanelsRenderMode":0}, null, null, $get("ctl00_RadAjaxManager1"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadRotator, {"_itemHeight":"150px","_itemWidth":"154px","clientStateFieldID":"ctl00_cphContent_RadRotator_Current_Prop_ClientState","items":[{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{}],"rotatorType":6,"skin":"Default"}, null, null, $get("ctl00_cphContent_RadRotator_Current_Prop"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadTabStrip, {"_selectedIndex":0,"_skin":"","clientStateFieldID":"ctl00_cphContent_RadTabStrip1_ClientState","multiPageID":"ctl00_cphContent_rmp1","selectedIndexes":["0"],"tabData":[{"value":"rpvSelectApartment","selectedCssClass":"CamTabSelected","hoveredCssClass":"CamTabHovered","cssClass":"CamTab","_implPageViewID":"ctl00_cphContent_rpvSelectApartment"},{"value":"rpvAmenities","selectedCssClass":"CamTabSelected","hoveredCssClass":"CamTabHovered","cssClass":"CamTab","_implPageViewID":"ctl00_cphContent_rpvAmenities"},{"value":"rpvMap","selectedCssClass":"CamTabSelected","hoveredCssClass":"CamTabHovered","cssClass":"CamTab","_implPageViewID":"ctl00_cphContent_rpvMap"},{"value":"rpvSocial","selectedCssClass":"CamTabSelected","hoveredCssClass":"CamTabHovered","cssClass":"CamTab","_implPageViewID":"ctl00_cphContent_rpvSocial"},{"value":"rpvVideo","selectedCssClass":"CamTabSelected","hoveredCssClass":"CamTabHovered","cssClass":"CamTab","_implPageViewID":"ctl00_cphContent_rpvVideo"}]}, {"tabSelected":MyOnClientTabSelected,"tabUnSelected":vidstop}, null, $get("ctl00_cphContent_RadTabStrip1"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadMultiPage, {"clientStateFieldID":"ctl00_cphContent_rmp1_ClientState","pageViewData":[{"id":"ctl00_cphContent_rpvSelectApartment"},{"id":"ctl00_cphContent_rpvAmenities"},{"id":"ctl00_cphContent_rpvMap"},{"id":"ctl00_cphContent_rpvNeighborhoodWiki"},{"id":"ctl00_cphContent_rpvSocial"},{"id":"ctl00_cphContent_rpvVideo"}],"selectedIndex":0}, null, null, $get("ctl00_cphContent_rmp1"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadRotator, {"_itemHeight":"150px","_itemWidth":"154px","clientStateFieldID":"ctl00_cphContent_RadRotatorCommunitiesYouMayAlsoLike_ClientState","items":[{},{},{},{},{},{}],"rotatorType":6,"skin":"Default"}, null, null, $get("ctl00_cphContent_RadRotatorCommunitiesYouMayAlsoLike"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadRotator, {"_itemHeight":"150px","_itemWidth":"154px","clientStateFieldID":"ctl00_cphContent_RadRotatorCommunitiesRecentlyViewed_ClientState","items":[{}],"rotatorType":6,"skin":"Default"}, null, null, $get("ctl00_cphContent_RadRotatorCommunitiesRecentlyViewed"));
+});
+//]]>
+</script>
+</form>
+        <div id="MasterFooter">
+            
+<div class="ftrBorder">
+    &nbsp;
+</div>
+<div id="footer">
+    <img id="ctl00_MasterFooter1_eho" src="../../Resources/Images/eho.gif" alt="Equal Housing Opportunity" border="0" />
+    <img id="ctl00_MasterFooter1_handicap" src="../../Resources/Images/handicap.gif" alt="Handicap Accessibility" border="0" style="margin-right: 10px;" />
+    &copy; 2008 -
+    2014
+    All Rights Reserved - Camden Property Trust <a href="http://www.camdenliving.com/site-map/index.htm"
+        style="padding-left: 40px;">Site Map</a><a href="http://www.camdenliving.com/help/index.htm">
+            Help</a><a href="http://www.camdenliving.com/privacy-policy/index.htm">
+                Privacy Policy</a>
+    
+    
+</div>
+
+
+<script type="text/javascript">
+    $(document).ready(function() { $("#footer a+a").before("<span>&nbsp;|&nbsp;</span>"); });
+</script>
+
+<div class="CommunitiesListTop">
+    &nbsp;</div>
+
+
+<div id="CommunitiesListTop">
+</div>
+<div id="CommunitiesList">
+    <span class="CommunitiesListHeader">Camden Apartment Communities</span>
+    <div class="comlistFooter">
+        <span id="ctl00_MasterFooter1_CamdenCommunitesUC1_lblMisc" style="display: none"></span>
+        
+                <div class="section">
+                    
+                            <div class="lw">
+                                <a href="http://apartments.camdenliving.com/phoenix-az-apartments">
+                                    Arizona, Phoenix Metro</a>
+                            </div>
+                        
+                            <div class="lw">
+                                <a href="http://apartments.camdenliving.com/inland-empire-ca-apartments">
+                                    California, Inland Empire</a>
+                            </div>
+                        
+                            <div class="lw">
+                                <a href="http://apartments.camdenliving.com/los-angeles-orange-county-ca-apartments">
+                                    California, LA/Orange County</a>
+                            </div>
+                        
+                            <div class="lw">
+                                <a href="http://apartments.camdenliving.com/san-diego-ca-apartments">
+                                    California, San Diego</a>
+                            </div>
+                        
+                            <div class="lw">
+                                <a href="http://apartments.camdenliving.com/denver-co-apartments">
+                                    Colorado, Denver Metro</a>
+                            </div>
+                        
+                            <div class="lw">
+                                <a href="http://apartments.camdenliving.com/orlando-fl-apartments">
+                                    Florida, Orlando Metro</a>
+                            </div>
+                        
+                            <div class="lw">
+                                <a href="http://apartments.camdenliving.com/south-east-florida-fl-apartments">
+                                    Florida, Southeast Florida</a>
+                            </div>
+                        
+                            <div class="lw">
+                                <a href="http://apartments.camdenliving.com/tampa-fl-apartments">
+                                    Florida, Tampa Metro</a>
+                            </div>
+                        
+                            <div class="lw">
+                                <a href="http://apartments.camdenliving.com/atlanta-metro-ga-apartments">
+                                    Georgia, Atlanta Metro</a>
+                            </div>
+                        
+                            <div class="lw">
+                                <a href="http://apartments.camdenliving.com/dc-metro-washington-dc-apartments">
+                                    Maryland, DC Metro</a>
+                            </div>
+                        
+                </div>
+            
+                <div class="section">
+                    
+                            <div class="lw">
+                                <a href="http://apartments.camdenliving.com/las-vegas-nv-apartments">
+                                    Nevada, Las Vegas Metro</a>
+                            </div>
+                        
+                            <div class="lw">
+                                <a href="http://apartments.camdenliving.com/charlotte-nc-apartments">
+                                    North Carolina, Charlotte Metro</a>
+                            </div>
+                        
+                            <div class="lw">
+                                <a href="http://apartments.camdenliving.com/raleigh-nc-apartments">
+                                    North Carolina, Raleigh Metro</a>
+                            </div>
+                        
+                            <div class="lw">
+                                <a href="http://apartments.camdenliving.com/austin-tx-apartments">
+                                    Texas, Austin</a>
+                            </div>
+                        
+                            <div class="lw">
+                                <a href="http://apartments.camdenliving.com/corpus-christi-tx-apartments">
+                                    Texas, Corpus Christi</a>
+                            </div>
+                        
+                            <div class="lw">
+                                <a href="http://apartments.camdenliving.com/dallas-fort-worth-tx-apartments">
+                                    Texas, Dallas/Ft. Worth</a>
+                            </div>
+                        
+                            <div class="lw">
+                                <a href="http://apartments.camdenliving.com/houston-tx-apartments">
+                                    Texas, Houston Metro</a>
+                            </div>
+                        
+                            <div class="lw">
+                                <a href="http://apartments.camdenliving.com/dc-metro-washington-dc-apartments">
+                                    Virginia, DC Metro</a>
+                            </div>
+                        
+                            <div class="lw">
+                                <a href="http://apartments.camdenliving.com/dc-metro-washington-dc-apartments">
+                                    Washington DC, DC Metro</a>
+                            </div>
+                        
+                </div>
+            
+    </div>
+</div>
+
+
+<script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript">
+    try {
+        var pageTracker = _gat._getTracker("UA-17019789-3");
+        pageTracker._trackPageview();
+    } catch (err) { }</script>
+
+
+        </div>
+    </div>
+    
+
+    <script type="text/javascript">
+                /* <![CDATA[ */
+                var google_conversion_id = 1002693549;
+                var google_conversion_language = "en";
+                var google_conversion_format = "3";
+                var google_conversion_color = "ffffff";
+                var google_conversion_label = "NnihCNvMwAMQrceP3gM";
+                var google_conversion_value = 0;
+                /* ]]> */
+                </script>
+                <script type="text/javascript" src="http://www.googleadservices.com/pagead/conversion.js">
+                </script>
+                <noscript>
+                <div style="display:inline;">
+                <img height="1" width="1" style="border-style:none;" alt="" src="http://www.googleadservices.com/pagead/conversion/1002693549/?label=NnihCNvMwAMQrceP3gM&amp;guid=ON&amp;script=0"/>
+                </div>
+                </noscript>
+                
+
+    <script type="text/javascript">
+        function showNextItem(clickedButton, rotator, direction) {
+            rotator.showNext(direction);
+        }
+        
+    
+        $(document).ready(function() {
+            $('#fptestdiv').camden_uawidget('init', 'camdenroosevelt', '1069364', { "siteplanURLS": {}, "showChartLink": "False", "MaxNumberOfDays" : 119 });
+            $('.fpdet_ol').attr('href', 'http' + ':/' + '/property.onesite.realpage.com/ol/default.aspx?ar=1&s=' + '1069364' + '');
+                        
+           
+            $("a.bigImageRef").click(function(e) {
+                e.stopPropagation();
+                e.preventDefault();
+                $('#ctl00_cphContent_imgSelectedImage ').attr("src", $(this).attr("href"));
+                
+            });
+
+            //officehours
+            $("a.officehours").click(function(e) {
+                //offhrsdivid
+                e.preventDefault();
+                if ($("div.offhrsdivcss").css("visibility") == "visible") {
+                    $("div.offhrsdivcss").animate().css({ opacity: 1.0 }).animate({ opacity: 0.0 });
+                    $("div.offhrsdivcss").animate().delay(1000).css({ visibility: "hidden" });
+                    //{opacity: 0.0, visibility: "visible"}).animate({opacity: 1.0});
+
+                }
+                else {
+                    $("div.offhrsdivcss").animate().css({ opacity: 0.0, visibility: "visible" }).animate({ opacity: 1.0 });
+                }
+
+            });
+
+            //PlayVideo_btn
+            $("a.PlayVideo_btn").click(function(e) {
+                e.stopPropagation();
+                e.preventDefault();
+                //display:none;
+                if ($('#ctl00_cphContent_iframe_prop_vid ').css("visibility") == "visible") {
+                    $('#ctl00_cphContent_iframe_prop_vid ').removeAttr("src"); //stop video
+                    //$('#ctl00_cphContent_vid_div_id ').css({ left: "-5px" });
+
+                    //youtube_link
+                    $('#youtube_link').css({ opacity: 1.0, visibility: "hidden" }).animate({ opacity: 0.0 });
+
+                    $('#ctl00_cphContent_iframe_prop_vid ').css({ width: "1px", height: "1px" });
+                    $('#ctl00_cphContent_iframe_prop_vid ').css({ opacity: 1.0, visibility: "hidden", display: "none" }).animate({ opacity: 0.0 });
+                    $("#div_vid_info").css({ opacity: 0.0, visibility: "visible" }).animate({ opacity: 1.0 });
+
+                    $("div.div_vidcss").css({ visibility: "hidden", display: "none" });
+
+                    $("#div_vid_info").css({ left: "0px" });
+
+                }
+                else {
+                    //play video by copying from "rel" attribute to "src"
+                    $('#ctl00_cphContent_iframe_prop_vid ').attr("src", $('#ctl00_cphContent_iframe_prop_vid ').attr("rel"));
+                    $('#ctl00_cphContent_vid_div_id ').css({ height: "400px" });  //left: "0px", 
+                    $('#ctl00_cphContent_iframe_prop_vid ').css({ width: "480px", height: "270px" });
+                    $('#ctl00_cphContent_iframe_prop_vid ').css({ opacity: 0.0, visibility: "visible", display: "block" }).animate({ opacity: 1.0 });
+                    $("#div_vid_info").css({ opacity: 1.0, visibility: "hidden" }).animate({ opacity: 0.0 });
+
+                    $("#youtube_link").css({ opacity: 0.0, visibility: "visible" }).animate({ opacity: 1.0 });
+
+                    $("div.div_vidcss").css({ visibility: "visible", display: "block" });
+
+                    //$("#div_vid_info").css({ left: "400px" });
+
+                }
+
+            });
+
+
+            $("a.PlayVideo_link").click(function(e) {
+                e.stopPropagation();
+                e.preventDefault();
+                //display:none;
+                /*
+                if ($('#ctl00_cphContent_iframe_prop_vid ').css("visibility") == "visible") {
+                    $('#ctl00_cphContent_iframe_prop_vid ').removeAttr("src"); //stop video
+                    //$('#ctl00_cphContent_vid_div_id ').css({ left: "-5px" });
+
+                    //youtube_link
+                    //$('#youtube_link').css({ opacity: 1.0, visibility: "hidden" }).animate({ opacity: 0.0 });
+
+                    $('#ctl00_cphContent_iframe_prop_vid ').css({ width: "1px", height: "1px" });
+                    $('#ctl00_cphContent_iframe_prop_vid ').css({ opacity: 1.0, visibility: "hidden", display: "none" }).animate({ opacity: 0.0 });
+                    $("#div_vid_info").css({ opacity: 0.0, visibility: "visible" }).animate({ opacity: 1.0 });
+
+                    $("div.div_vidcss").css({ visibility: "hidden", display: "none" });
+
+                    $("#div_vid_info").css({ left: "0px" });
+
+                }
+                */
+                //else {
+                    //play video by copying from "a href" attribute to "src"
+                    $('#ctl00_cphContent_iframe_prop_vid ').attr("src", $(this).attr("href"));
+                    $('#ctl00_cphContent_vid_div_id ').css({ height: "400px" });  //left: "0px", 
+                    $('#ctl00_cphContent_iframe_prop_vid ').css({ width: "480px", height: "270px", float: "right", margin: "15px" });
+                    $('#ctl00_cphContent_iframe_prop_vid ').css({ opacity: 0.0, visibility: "visible", display: "block" }).animate({ opacity: 1.0 });
+                    
+                    //$("#div_vid_info").css({ opacity: 1.0, visibility: "hidden" }).animate({ opacity: 0.0 });
+
+                    //$("#youtube_link").css({ opacity: 0.0, visibility: "visible" }).animate({ opacity: 1.0 });
+                    
+                    $("div.div_vidcss").css({ visibility: "visible", display: "block", width: "900px" });
+
+                    $(".img_sel_video").css({ visibility: "hidden", display: "none" });
+                    //$("#div_vid_info").css({ left: "400px" });
+
+                //}
+
+            });
+
+
+            //#ViewPhotos  $("#curr_propview_rot").hide();
+            $("a.ViewPhotos_btn").click(function(e) {
+                e.stopPropagation();
+                e.preventDefault();
+
+                //display:none;
+
+                //alert($("#curr_propview_rot").css("display") + "z=" + $("#curr_propview_rot").css('z-index'));
+
+                if ($("#curr_propview_rot").css("display") == "none" || $("#curr_propview_rot").css('z-index') == -1) {
+                    $("#curr_propview_rot").css({ opacity: 0.0, display: "block" }).animate({ opacity: 1.0 });
+                    $("#curr_propview_rot").css('z-index', '5');
+                    
+                    if($(this).hasClass('v_photo'))
+                    {
+                        $(this).addClass('h_photo').removeClass('v_photo');
+                    }
+                    else
+                    {
+                        $(this).addClass('v_photo').removeClass('h_photo');
+                    }
+
+
+                    /*
+                    $("#curr_propview_rot").oneTime(1000, "photo_hide", function() {
+                    $("#curr_propview_rot").css({ opacity: 1.0, display: "none" }).animate({ opacity: 0.0 });
+                    });
+                    */
+                }
+                else {
+                    $("#curr_propview_rot").css({ opacity: 1.0, display: "none" }).animate({ opacity: 0.0 });
+                    //$("#div_vid_info").css({ opacity: 1.0, visibility: "hidden" }).animate({ opacity: 0.0 });
+                    $("#curr_propview_rot").css('z-index', '5');
+                    //$("#ViewPhotos")
+
+                    
+                    if($(this).hasClass('v_photo'))
+                    {
+                        $(this).addClass('h_photo').removeClass('v_photo');
+                    }
+                    else
+                    {
+                        $(this).addClass('v_photo').removeClass('h_photo');
+                    }
+                }
+
+                //$("#curr_propview_rot").css({ display: "none" });
+
+                $("#curr_propview_rot").hover(function(e) {
+                    //alert("showpics");
+                    //$("#curr_propview_rot").animate().css({ opacity: 0.0, display: "block" }).animate({ opacity: 1.0 });
+                    //$("#curr_propview_rot").show();
+                    //$("#curr_propview_rot").delay(5000).hide(300);
+
+                });
+
+                $("#ViewPhotos").focus(function(e) {
+                    //$("#curr_propview_rot").show();
+                    //$("#curr_propview_rot").stopTime("photo_hide");
+                });
+
+                $("#curr_propview_rot").blur(function(e) {
+                    //$("#curr_propview_rot").delay(3000).hide(300);
+
+                });
+
+                /*
+                $("#close-button").click(function() {
+                $(this).oneTime(1000, "hide", function() {
+                $(this).parent(".main-window").hide();
+                });
+                });
+                
+                $("#cancel-button").click(function() {
+                $("#close-button").stopTime("hide");
+
+                });
+                */
+
+            });
+
+
+
+        });
+
+    </script>
+
+
+</body>
+</html>

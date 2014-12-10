@@ -1,0 +1,1169 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="lt" lang="lt">
+<head>
+    
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+        <title>Dabar - Multikino</title>
+        <meta name="description" content=""/>
+        <meta name="keywords" content=""/>
+        <link rel="shortcut icon" href="http://media.multikino.lt/favicon.ico" type="image/x-icon" />
+        <link href="http://media.multikino.lt/css/multikino.css" rel="stylesheet" type="text/css" /><link href="http://media.multikino.lt/css/jquery.dropdown.css" rel="stylesheet" type="text/css" /><link href="http://media.multikino.lt/css/repertoire.css" rel="stylesheet" type="text/css" /><link href="http://media.multikino.lt/css/cinema_info.css" rel="stylesheet" type="text/css" /><link href="http://media.multikino.lt/css/repertoire.sidebar.css" rel="stylesheet" type="text/css" /><link href="http://media.multikino.lt/css/jquery.jscrollpane.css" rel="stylesheet" type="text/css" /><link href="http://media.multikino.lt/css/colorbox.css" rel="stylesheet" type="text/css" /><link href="http://media.multikino.lt/polls/css/polls.css" rel="stylesheet" type="text/css" /><link href="http://media.multikino.lt/newsletter/css/newsletter.css" rel="stylesheet" type="text/css" /><link href="http://media.multikino.lt/newsletter/css/jquery-ui.css" rel="stylesheet" type="text/css" /><link href="http://media.multikino.lt/css/multikino-fonts.css" rel="stylesheet" type="text/css" />
+        
+        <link href="http://media.multikino.lt/buyticket/css/buyticket.css" rel="stylesheet" type="text/css" />
+        <link href="http://media.multikino.lt/rabidratings/css/rabidratings.css" rel="stylesheet" type="text/css" />
+        <link href="http://media.multikino.lt/cms_plugin_scrollbanner/css/scrollbanner.css" rel="stylesheet" type="text/css" />
+        <!--[if lte IE 8]>
+        <link href="http://media.multikino.lt/css/ie.css" rel="stylesheet" type="text/css">
+        <![endif]-->
+<script type="text/javascript" src="http://media.multikino.lt/js/draugiem-api.js" charset="utf-8"></script><script type="text/javascript" src="http://media.multikino.lt/js/jquery.tools.min.js" charset="utf-8"></script><script type="text/javascript" src="http://media.multikino.lt/js/jquery-ui-position.min.js" charset="utf-8"></script><script type="text/javascript" src="http://media.multikino.lt/js/jquery.mousewheel.js" charset="utf-8"></script><script type="text/javascript" src="http://media.multikino.lt/js/mwheelIntent.js" charset="utf-8"></script><script type="text/javascript" src="http://media.multikino.lt/js/jquery.jscrollpane.min.js" charset="utf-8"></script><script type="text/javascript" src="http://media.multikino.lt/js/jquery.colorbox.js" charset="utf-8"></script><script type="text/javascript" src="http://media.multikino.lt/js/swfobject.js" charset="utf-8"></script><script type="text/javascript" src="http://media.multikino.lt/js/hintcomments.js" charset="utf-8"></script><script type="text/javascript" src="http://media.multikino.lt/js/jquery.cookie.js" charset="utf-8"></script><script type="text/javascript" src="http://media.multikino.lt/js/multikino.js" charset="utf-8"></script><script type="text/javascript" src="http://media.multikino.lt/js/tooltip.init.js" charset="utf-8"></script><script type="text/javascript" src="http://media.multikino.lt/js/jquery.dropdown.js" charset="utf-8"></script><script type="text/javascript" src="http://media.multikino.lt/js/addthis_config_lt.js" charset="utf-8"></script><script type="text/javascript" src="http://media.multikino.lt/cinema_database/js/repertoire.js" charset="utf-8"></script><script type="text/javascript" src="http://media.multikino.lt/cinema_database/js/repertoire.sidebar.js" charset="utf-8"></script><script type="text/javascript" src="http://media.multikino.lt/buyticket/js/buyticket.js" charset="utf-8"></script><script type="text/javascript" src="http://media.multikino.lt/js/jquery.pagination.js" charset="utf-8"></script><script type="text/javascript" src="http://media.multikino.lt/js/hintcomments.js" charset="utf-8"></script><script type="text/javascript" src="http://media.multikino.lt/cms_plugin_scrollbanner/js/jquery.scroller-1.0.js" charset="utf-8"></script><script type="text/javascript" src="http://media.multikino.lt/cms_plugin_scrollbanner/js/scrollbanner.js" charset="utf-8"></script><script type="text/javascript" src="http://media.multikino.lt/js/innershiv.js" charset="utf-8"></script><script type="text/javascript" src="http://media.multikino.lt/polls/js/polls.js" charset="utf-8"></script><script type="text/javascript" src="http://media.multikino.lt/js/jquery.scrollTo.min.js" charset="utf-8"></script><script type="text/javascript" src="http://media.multikino.lt/newsletter/js/jquery-1.7.2.min.js" charset="utf-8"></script><script type="text/javascript" src="http://media.multikino.lt/newsletter/js/jquery-ui-1.8.22.autocomplete.min.js" charset="utf-8"></script><script type="text/javascript" src="http://media.multikino.lt/newsletter/js/newsletter.js" charset="utf-8"></script><script type="text/javascript" src="http://media.multikino.lt/js/bday-picker.js" charset="utf-8"></script>
+
+
+<link rel="alternate" type="application/rss+xml" title="Multikino - premjeros" href="/lt/films/rss/" />
+<link rel="alternate" type="application/rss+xml" title="Multikino - greitai" href="/lt/films/coming-soon/rss/" />
+
+
+
+</head>
+<body id="tpl_col_two_frontpage" class="lt">
+    <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<div id="header-outerwrapper">
+
+<div id="header-wrapper" style="background-image: url(http://media.multikino.lt/website/vignettes/nwg62251v9r7h8in.jpg);">
+<div class="language-chooser">
+
+
+    
+
+
+</div>
+<div id="header">
+
+<a class="site-header" href="/lt/">Multikino</a>
+<p class="site-subheader"><a href="/lt/"><span></span></a></p>
+
+<a id="site-buyticket-star" href="https://bilietai.multikino.lt/visinternetticketing/visSelect.aspx?visSearchBy=mov&amp;visLang=1" class="buyTicket external"><span></span></a>
+
+<div id="menu">
+    <div id="navigation-left" class="menu menu-main">
+        <ul><li class=" ancestor   first home"><a class="button-home" href="/lt/dabar/"><span>Home</span></a></li><li class="     films"><a  href="/lt/films/"><span>FILMAI</span></a></li><li class="     None"><a  href="/lt/akcijos/"><span>Akcijos</span></a></li><li class="     None"><a  href="/lt/multibabykino/"><span>MULTIBABYKINO</span></a></li><li class="     None"><a  href="/lt/kainos/"><span>KAINOS</span></a></li><li class="     for_organizations"><a  href="/lt/imonems/"><span>ĮMONĖMS</span></a></li><li class="     None"><a  href="/lt/svesk-gimtadien-multikine/"><span>GIMTADIENIAI</span></a></li><li class="     None"><a  href="/lt/apie-mus/"><span>Apie mus</span></a></li><li class="     None"><a  href="/lt/dovan-kuponai/"><span>Dovanų kuponai</span></a></li></ul>
+    </div>
+
+    
+    
+</div>
+</div>
+</div>
+
+
+<div id="billboard">
+
+
+    <div class="openXZone 750x100" id="openXZone90"><!--/* Revive Adserver Javascript Tag v3.0.2 */--><!--/*
+  * The backup image section of this tag has been generated for use on a
+  * non-SSL page. If this tag is to be placed on an SSL page, change the
+  *   'http://openx.multikino.hint.pl/www/delivery/...'
+  * to
+  *   'https://openx.multikino.pl/www/delivery/...'
+  *
+  * This noscript section of this tag only shows image banners. There
+  * is no width or height in these banners, so if you want these tags to
+  * allocate space for the ad before it shows, you will need to add this
+  * information to the <img> tag.
+  *
+  * If you do not want to deal with the intricities of the noscript
+  * section, delete the tag (from <noscript>... to </noscript>). On
+  * average, the noscript tag is called from less than 1% of internet
+  * users.
+  */--><script type='text/javascript'><!--//<![CDATA[
+   var m3_u = (location.protocol=='https:'?'https://openx.multikino.pl/www/delivery/ajs.php':'http://openx.multikino.hint.pl/www/delivery/ajs.php');
+   var m3_r = Math.floor(Math.random()*99999999999);
+   if (!document.MAX_used) document.MAX_used = ',';
+   document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+   document.write ("?zoneid=90");
+   document.write ('&amp;cb=' + m3_r);
+   if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+   document.write (document.charset ? '&amp;charset='+document.charset : (document.characterSet ? '&amp;charset='+document.characterSet : ''));
+   document.write ("&amp;loc=" + escape(window.location));
+   if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+   if (document.context) document.write ("&context=" + escape(document.context));
+   if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+   document.write ("'><\/scr"+"ipt>");
+//]]>--></script><noscript><a href='http://openx.multikino.hint.pl/www/delivery/ck.php?n=a5c6f0d7&amp;cb=7929f5a8-1244-11e4-8881-525400b8f2f0' target='_blank'><img src='http://openx.multikino.hint.pl/www/delivery/avw.php?zoneid=90&amp;cb=7929f5a8-1244-11e4-8881-525400b8f2f0&amp;n=a5c6f0d7' border='0' alt='' /></a></noscript></div>
+
+
+
+    <div class="openXZone 750x200" id="openXZone77"><!--/* Revive Adserver Javascript Tag v3.0.2 */--><!--/*
+  * The backup image section of this tag has been generated for use on a
+  * non-SSL page. If this tag is to be placed on an SSL page, change the
+  *   'http://openx.multikino.hint.pl/www/delivery/...'
+  * to
+  *   'https://openx.multikino.pl/www/delivery/...'
+  *
+  * This noscript section of this tag only shows image banners. There
+  * is no width or height in these banners, so if you want these tags to
+  * allocate space for the ad before it shows, you will need to add this
+  * information to the <img> tag.
+  *
+  * If you do not want to deal with the intricities of the noscript
+  * section, delete the tag (from <noscript>... to </noscript>). On
+  * average, the noscript tag is called from less than 1% of internet
+  * users.
+  */--><script type='text/javascript'><!--//<![CDATA[
+   var m3_u = (location.protocol=='https:'?'https://openx.multikino.pl/www/delivery/ajs.php':'http://openx.multikino.hint.pl/www/delivery/ajs.php');
+   var m3_r = Math.floor(Math.random()*99999999999);
+   if (!document.MAX_used) document.MAX_used = ',';
+   document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+   document.write ("?zoneid=77");
+   document.write ('&amp;cb=' + m3_r);
+   if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+   document.write (document.charset ? '&amp;charset='+document.charset : (document.characterSet ? '&amp;charset='+document.characterSet : ''));
+   document.write ("&amp;loc=" + escape(window.location));
+   if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+   if (document.context) document.write ("&context=" + escape(document.context));
+   if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+   document.write ("'><\/scr"+"ipt>");
+//]]>--></script><noscript><a href='http://openx.multikino.hint.pl/www/delivery/ck.php?n=a10c4fa3&amp;cb=9f9c823c-0d12-11e4-a44a-525400b8f2f0' target='_blank'><img src='http://openx.multikino.hint.pl/www/delivery/avw.php?zoneid=77&amp;cb=9f9c823c-0d12-11e4-a44a-525400b8f2f0&amp;n=a10c4fa3' border='0' alt='' /></a></noscript></div>
+</div>
+
+
+    <div id="player-placeholder">
+        
+            <div id="player">
+                <div>
+                    <a href="http://get.adobe.com/flashplayer/" target="_blank" rel="nofollow"><img src="http://media.multikino.lt/img/flash_player_logo.gif" alt=""/></a>
+                    <br /><br />
+                    <a href="http://get.adobe.com/flashplayer/" target="_blank" rel="nofollow">
+                    Aby w pełni wykorzystać możliwości naszej strony, <br />
+                    <u>pobierz nowszą wersję programu Adobe Flash Player</u>.
+                    </a>
+                </div>
+            </div>
+            <div id="player-javascript">
+                <div id="scrollable"></div>
+            </div>
+            <div id="player-button" onclick="Multikino.Player.togglePlayerType(this);"></div>
+        
+    </div>
+
+</div>
+
+
+
+
+<div id="content-wrapper" class="">
+  <div id="content">
+    <div id="left-column">
+    <ul class="tabs tabs-2">
+        
+
+
+<li class="selected    first None">
+	<a  href="/lt/dabar/"><span>Dabar</span></a>
+    
+</li>
+
+<li class="  sibling   None">
+	<a  href="/lt/kalendorius/"><span>Kalendorius</span></a>
+    
+</li>
+
+
+    </ul>
+
+    
+
+<ul class="list image-list-2">
+    
+        <li class="premiere">
+            <h3 class="category">Premjera</h3>
+
+            <a href="/lt/films/amzinai-stilingos/" class="image">
+                
+                    <span class="icon-premiere"></span>
+                
+                
+                
+                    <img src="http://media.multikino.lt/cinema_database/images/movie_posters/act8byj3ghjkmzym.jpg.120x173_q90_crop_sharpen.jpg" alt="Amžinai stilingos" />
+                
+            </a>
+
+            <div class="box box-2">
+                
+                    
+                        <a class="button-buy-3 buyTicket button-buy external" href="https://bilietai.multikino.lt/visinternetticketing/visSelect.aspx?visSearchBy=mov&amp;amp;visLang=1"></a>
+                    
+                
+
+                <h4><a href="/lt/films/amzinai-stilingos/" class="title">Amžinai stilingos</a></h4>
+
+                
+                    <div class="genre">Biografinis / Dokumentinis / Komedija</div>
+                
+            </div>
+        </li>
+        
+    
+        <li class="premiere">
+            <h3 class="category">Premjera</h3>
+
+            <a href="/lt/films/robotu-zeme/" class="image">
+                
+                    <span class="icon-premiere"></span>
+                
+                
+                
+                    <img src="http://media.multikino.lt/cinema_database/images/movie_posters/qej4rz5di5j84k9v.jpg.120x173_q90_crop_sharpen.jpg" alt="Robotų žemė " />
+                
+            </a>
+
+            <div class="box box-2">
+                
+                    
+                        <a class="button-buy-3 buyTicket button-buy external" href="https://bilietai.multikino.lt/visinternetticketing/visSelect.aspx?visSearchBy=mov&amp;amp;visLang=1"></a>
+                    
+                
+
+                <h4><a href="/lt/films/robotu-zeme/" class="title">Robotų žemė </a></h4>
+
+                
+                    <div class="genre">Fantastinis / Trileris</div>
+                
+            </div>
+        </li>
+        
+    
+        <li class="premiere">
+            <h3 class="category">Premjera</h3>
+
+            <a href="/lt/films/serena/" class="image">
+                
+                    <span class="icon-premiere"></span>
+                
+                
+                
+                    <img src="http://media.multikino.lt/cinema_database/images/movie_posters/jgpvie445egv5cez.jpg.120x173_q90_crop_sharpen.jpg" alt="Serena" />
+                
+            </a>
+
+            <div class="box box-2">
+                
+                    
+                        <a class="button-buy-3 buyTicket button-buy external" href="https://bilietai.multikino.lt/visinternetticketing/visSelect.aspx?visSearchBy=mov&amp;amp;visLang=1"></a>
+                    
+                
+
+                <h4><a href="/lt/films/serena/" class="title">Serena</a></h4>
+
+                
+                    <div class="genre">Drama</div>
+                
+            </div>
+        </li>
+        
+    
+        <li class="premiere">
+            <h3 class="category">Premjera</h3>
+
+            <a href="/lt/films/uzstrigusi-paauglysteje/" class="image">
+                
+                    <span class="icon-premiere"></span>
+                
+                
+                
+                    <img src="http://media.multikino.lt/cinema_database/images/movie_posters/spaghzj1nimzsfta.png.120x173_q90_crop_sharpen.png" alt="Užstrigusi paauglystėje" />
+                
+            </a>
+
+            <div class="box box-2">
+                
+                    
+                        <a class="button-buy-3 buyTicket button-buy external" href="https://bilietai.multikino.lt/visinternetticketing/visSelect.aspx?visSearchBy=mov&amp;amp;visLang=1"></a>
+                    
+                
+
+                <h4><a href="/lt/films/uzstrigusi-paauglysteje/" class="title">Užstrigusi paauglystėje</a></h4>
+
+                
+                    <div class="genre">Romantinė / Komedija</div>
+                
+            </div>
+        </li>
+        
+            
+            </ul>
+            <div class="clear border"></div>
+            <ul class="list image-list-2">
+            
+        
+    
+        <li class="">
+            <h3 class="category">Greitai</h3>
+
+            <a href="/lt/films/arvydas-sabonis-11/" class="image">
+                
+                
+                    <span class="icon-coming-soon"></span>
+                
+                
+                    <img src="http://media.multikino.lt/cinema_database/images/movie_posters/02yfpjqi0d7owg7e.jpg.120x173_q90_crop_sharpen.jpg" alt="Arvydas Sabonis. 11" />
+                
+            </a>
+
+            <div class="box box-2">
+                
+
+                <h4><a href="/lt/films/arvydas-sabonis-11/" class="title">Arvydas Sabonis. 11</a></h4>
+
+                
+                    <div class="genre">Dokumentinis</div>
+                
+            </div>
+        </li>
+        
+    
+        <li class="">
+            <h3 class="category">Greitai</h3>
+
+            <a href="/lt/films/asteriksas-dievu-zeme-3d/" class="image">
+                
+                
+                    <span class="icon-coming-soon"></span>
+                
+                
+                    <img src="http://media.multikino.lt/cinema_database/images/movie_posters/a94a5hdddme21293.jpg.120x173_q90_crop_sharpen.jpg" alt="Asteriksas. Dievų žemė 3D" />
+                
+            </a>
+
+            <div class="box box-2">
+                
+
+                <h4><a href="/lt/films/asteriksas-dievu-zeme-3d/" class="title">Asteriksas. Dievų žemė 3D</a></h4>
+
+                
+                    <div class="genre">Animacija / Nuotykių</div>
+                
+            </div>
+        </li>
+        
+    
+        <li class="">
+            <h3 class="category">Greitai</h3>
+
+            <a href="/lt/films/hobitas-penkiu-armiju-musis-hfr-3d/" class="image">
+                
+                
+                    <span class="icon-coming-soon"></span>
+                
+                
+                    <img src="http://media.multikino.lt/cinema_database/images/movie_posters/12cgab2ff5z5lmvk.jpg.120x173_q90_crop_sharpen.jpg" alt="Hobitas: Penkių armijų mūšis HFR 3D" />
+                
+            </a>
+
+            <div class="box box-2">
+                
+                    
+                        <a class="button-buy-3 buyTicket button-buy external" href="https://bilietai.multikino.lt/visinternetticketing/visSelect.aspx?visSearchBy=mov&amp;amp;visLang=1"></a>
+                    
+                
+
+                <h4><a href="/lt/films/hobitas-penkiu-armiju-musis-hfr-3d/" class="title">Hobitas: Penkių armijų mūšis HFR 3D</a></h4>
+
+                
+                    <div class="genre">Fantastika / Nuotykių</div>
+                
+            </div>
+        </li>
+        
+    
+        <li class="">
+            <h3 class="category">Greitai</h3>
+
+            <a href="/lt/films/multikinukas-aukso-zirgas/" class="image">
+                
+                
+                    <span class="icon-coming-soon"></span>
+                
+                
+                    <img src="http://media.multikino.lt/cinema_database/images/movie_posters/1hr7dl8mt4mb1mnx.jpg.120x173_q90_crop_sharpen.jpg" alt="MultiKinukas: Aukso žirgas" />
+                
+            </a>
+
+            <div class="box box-2">
+                
+
+                <h4><a href="/lt/films/multikinukas-aukso-zirgas/" class="title">MultiKinukas: Aukso žirgas</a></h4>
+
+                
+                    <div class="genre">Animacija / Nuotykių / Šeimai</div>
+                
+            </div>
+        </li>
+        
+            
+            </ul>
+            <div class="clear border"></div>
+            <ul class="list image-list-2">
+            
+        
+    
+        <li class="">
+            <h3 class="category">Greitai</h3>
+
+            <a href="/lt/films/aukso-zirgas/" class="image">
+                
+                
+                    <span class="icon-coming-soon"></span>
+                
+                
+                    <img src="http://media.multikino.lt/cinema_database/images/movie_posters/fhjco37ok8s4qtzd.jpg.120x173_q90_crop_sharpen.jpg" alt="Aukso žirgas" />
+                
+            </a>
+
+            <div class="box box-2">
+                
+
+                <h4><a href="/lt/films/aukso-zirgas/" class="title">Aukso žirgas</a></h4>
+
+                
+                    <div class="genre">Nuotykių / Šeimai / Animacinis</div>
+                
+            </div>
+        </li>
+        
+    
+        <li class="">
+            <h3 class="category">Greitai</h3>
+
+            <a href="/lt/films/egzodas-dievai-ir-karaliai/" class="image">
+                
+                
+                    <span class="icon-coming-soon"></span>
+                
+                
+                    <img src="http://media.multikino.lt/cinema_database/images/movie_posters/3ccrpp4gm9vl5ehx.jpg.120x173_q90_crop_sharpen.jpg" alt="Egzodas. Dievai ir karaliai" />
+                
+            </a>
+
+            <div class="box box-2">
+                
+                    
+                        <a class="button-buy-3 buyTicket button-buy external" href="https://bilietai.multikino.lt/visinternetticketing/visSelect.aspx?visSearchBy=mov&amp;amp;visLang=1"></a>
+                    
+                
+
+                <h4><a href="/lt/films/egzodas-dievai-ir-karaliai/" class="title">Egzodas. Dievai ir karaliai</a></h4>
+
+                
+                    <div class="genre">Drama</div>
+                
+            </div>
+        </li>
+        
+    
+        <li class="">
+            <h3 class="category">Greitai</h3>
+
+            <a href="/lt/films/geriausia-ka-turiu/" class="image">
+                
+                
+                    <span class="icon-coming-soon"></span>
+                
+                
+                    <img src="http://media.multikino.lt/cinema_database/images/movie_posters/650j3wxfa5pta51g.jpg.120x173_q90_crop_sharpen.jpg" alt="Geriausia, ką turiu" />
+                
+            </a>
+
+            <div class="box box-2">
+                
+
+                <h4><a href="/lt/films/geriausia-ka-turiu/" class="title">Geriausia, ką turiu</a></h4>
+
+                
+                    <div class="genre">Romantinė drama</div>
+                
+            </div>
+        </li>
+        
+    
+        <li class="">
+            <h3 class="category">Greitai</h3>
+
+            <a href="/lt/films/sventa-karve/" class="image">
+                
+                
+                    <span class="icon-coming-soon"></span>
+                
+                
+                    <img src="http://media.multikino.lt/cinema_database/images/movie_posters/nsipig5bp572j6qo.jpg.120x173_q90_crop_sharpen.jpg" alt="Šventa karvė" />
+                
+            </a>
+
+            <div class="box box-2">
+                
+                    
+                        <a class="button-buy-3 buyTicket button-buy external" href="https://bilietai.multikino.lt/visinternetticketing/visSelect.aspx?visSearchBy=mov&amp;amp;visLang=1"></a>
+                    
+                
+
+                <h4><a href="/lt/films/sventa-karve/" class="title">Šventa karvė</a></h4>
+
+                
+                    <div class="genre">Komedija</div>
+                
+            </div>
+        </li>
+        
+            
+            </ul>
+            <div class="clear border"></div>
+            <ul class="list image-list-2">
+            
+        
+    
+        <li class="">
+            <h3 class="category">Dabar rodome</h3>
+
+            <a href="/lt/films/kaip-atsikratyti-boso-2/" class="image">
+                
+                
+                
+                    <img src="http://media.multikino.lt/cinema_database/images/movie_posters/7ia2u05mj2zn3qoc.jpg.120x173_q90_crop_sharpen.jpg" alt="Kaip atsikratyti boso 2" />
+                
+            </a>
+
+            <div class="box box-2">
+                
+                    
+                        <a class="button-buy-3 buyTicket button-buy external" href="https://bilietai.multikino.lt/visinternetticketing/visSelect.aspx?visSearchBy=mov&amp;amp;visLang=1"></a>
+                    
+                
+
+                <h4><a href="/lt/films/kaip-atsikratyti-boso-2/" class="title">Kaip atsikratyti boso 2</a></h4>
+
+                
+                    <div class="genre">Komedija</div>
+                
+            </div>
+        </li>
+        
+    
+        <li class="">
+            <h3 class="category">Dabar rodome</h3>
+
+            <a href="/lt/films/kol-nenuejau-miegoti/" class="image">
+                
+                
+                
+                    <img src="http://media.multikino.lt/cinema_database/images/movie_posters/9mq2q1dv2fqdda3r.jpg.120x173_q90_crop_sharpen.jpg" alt="Kol nenuėjau miegoti" />
+                
+            </a>
+
+            <div class="box box-2">
+                
+                    
+                        <a class="button-buy-3 buyTicket button-buy external" href="https://bilietai.multikino.lt/visinternetticketing/visSelect.aspx?visSearchBy=mov&amp;amp;visLang=1"></a>
+                    
+                
+
+                <h4><a href="/lt/films/kol-nenuejau-miegoti/" class="title">Kol nenuėjau miegoti</a></h4>
+
+                
+                    <div class="genre">Trileris</div>
+                
+            </div>
+        </li>
+        
+    
+        <li class="">
+            <h3 class="category">Dabar rodome</h3>
+
+            <a href="/lt/films/madagaskaro-pingvinai-2d/" class="image">
+                
+                
+                
+                    <img src="http://media.multikino.lt/cinema_database/images/movie_posters/amt1gydn7o7y90zo.jpg.120x173_q90_crop_sharpen.jpg" alt="Madagaskaro pingvinai 2D" />
+                
+            </a>
+
+            <div class="box box-2">
+                
+                    
+                        <a class="button-buy-3 buyTicket button-buy external" href="https://bilietai.multikino.lt/visinternetticketing/visSelect.aspx?visSearchBy=mov&amp;amp;visLang=1"></a>
+                    
+                
+
+                <h4><a href="/lt/films/madagaskaro-pingvinai-2d/" class="title">Madagaskaro pingvinai 2D</a></h4>
+
+                
+                    <div class="genre">Animacija / Komedija / Šeimai / Nuotykių</div>
+                
+            </div>
+        </li>
+        
+    
+        <li class="">
+            <h3 class="category">Dabar rodome</h3>
+
+            <a href="/lt/films/madagaskaro-pingvinai-3d/" class="image">
+                
+                
+                
+                    <img src="http://media.multikino.lt/cinema_database/images/movie_posters/e4susjbl6mfhgh31.jpg.120x173_q90_crop_sharpen.jpg" alt="Madagaskaro pingvinai 3D" />
+                
+            </a>
+
+            <div class="box box-2">
+                
+                    
+                        <a class="button-buy-3 buyTicket button-buy external" href="https://bilietai.multikino.lt/visinternetticketing/visSelect.aspx?visSearchBy=mov&amp;amp;visLang=1"></a>
+                    
+                
+
+                <h4><a href="/lt/films/madagaskaro-pingvinai-3d/" class="title">Madagaskaro pingvinai 3D</a></h4>
+
+                
+                    <div class="genre">Animacija / Komedija / Šeimai / Nuotykių</div>
+                
+            </div>
+        </li>
+        
+            
+            </ul>
+            <div class="clear border"></div>
+            <ul class="list image-list-2">
+            
+        
+    
+        <li class="">
+            <h3 class="category">Dabar rodome</h3>
+
+            <a href="/lt/films/bado-zaidynes-strazdas-giesmininkas-1-dalis/" class="image">
+                
+                
+                
+                    <img src="http://media.multikino.lt/cinema_database/images/movie_posters/4xpabncusbmy9ht8.jpg.120x173_q90_crop_sharpen.jpg" alt="Bado žaidynės: Strazdas giesmininkas. 1 dalis" />
+                
+            </a>
+
+            <div class="box box-2">
+                
+                    
+                        <a class="button-buy-3 buyTicket button-buy external" href="https://bilietai.multikino.lt/visinternetticketing/visSelect.aspx?visSearchBy=mov&amp;amp;visLang=1"></a>
+                    
+                
+
+                <h4><a href="/lt/films/bado-zaidynes-strazdas-giesmininkas-1-dalis/" class="title">Bado žaidynės: Strazdas giesmininkas. 1 dalis</a></h4>
+
+                
+                    <div class="genre">Mokslinė fantastika / Nuotykių / Veiksmo</div>
+                
+            </div>
+        </li>
+        
+    
+        <li class="">
+            <h3 class="category">Dabar rodome</h3>
+
+            <a href="/lt/films/pakeliui-n13/" class="image">
+                
+                
+                
+                    <img src="http://media.multikino.lt/cinema_database/images/movie_posters/v372cbxrw4tnvwcc.jpg.120x173_q90_crop_sharpen.jpg" alt="Pakeliui N13" />
+                
+            </a>
+
+            <div class="box box-2">
+                
+                    
+                        <a class="button-buy-3 buyTicket button-buy external" href="https://bilietai.multikino.lt/visinternetticketing/visSelect.aspx?visSearchBy=mov&amp;amp;visLang=1"></a>
+                    
+                
+
+                <h4><a href="/lt/films/pakeliui-n13/" class="title">Pakeliui N13</a></h4>
+
+                
+                    <div class="genre">Drama</div>
+                
+            </div>
+        </li>
+        
+    
+        <li class="">
+            <h3 class="category">Dabar rodome</h3>
+
+            <a href="/lt/films/dzesis-ir-petas-3d/" class="image">
+                
+                
+                
+                    <img src="http://media.multikino.lt/cinema_database/images/movie_posters/u0ep72isk50qmy4j.jpg.120x173_q90_crop_sharpen.jpg" alt="Džesis ir Petas 3D" />
+                
+            </a>
+
+            <div class="box box-2">
+                
+                    
+                        <a class="button-buy-3 buyTicket button-buy external" href="https://bilietai.multikino.lt/visinternetticketing/visSelect.aspx?visSearchBy=mov&amp;amp;visLang=1"></a>
+                    
+                
+
+                <h4><a href="/lt/films/dzesis-ir-petas-3d/" class="title">Džesis ir Petas 3D</a></h4>
+
+                
+                    <div class="genre">Animacinis / Komedija</div>
+                
+            </div>
+        </li>
+        
+    
+        <li class="">
+            <h3 class="category">Dabar rodome</h3>
+
+            <a href="/lt/films/tarp-zvaigzdziu/" class="image">
+                
+                
+                
+                    <img src="http://media.multikino.lt/cinema_database/images/movie_posters/v0nekhjbn3tedw3l.jpg.120x173_q90_crop_sharpen.jpg" alt="Tarp žvaigždžių" />
+                
+            </a>
+
+            <div class="box box-2">
+                
+                    
+                        <a class="button-buy-3 buyTicket button-buy external" href="https://bilietai.multikino.lt/visinternetticketing/visSelect.aspx?visSearchBy=mov&amp;amp;visLang=1"></a>
+                    
+                
+
+                <h4><a href="/lt/films/tarp-zvaigzdziu/" class="title">Tarp žvaigždžių</a></h4>
+
+                
+                    <div class="genre">Fantastinis / Mistinis</div>
+                
+            </div>
+        </li>
+        
+            
+            </ul>
+            <div class="clear border"></div>
+            <ul class="list image-list-2">
+            
+        
+    
+        <li class="">
+            <h3 class="category">Dabar rodome</h3>
+
+            <a href="/lt/films/mazylio-nikolia-atostogos/" class="image">
+                
+                
+                
+                    <img src="http://media.multikino.lt/cinema_database/images/movie_posters/v5l96x68wxpipvg2.jpg.120x173_q90_crop_sharpen.jpg" alt="Mažylio Nikolia atostogos " />
+                
+            </a>
+
+            <div class="box box-2">
+                
+                    
+                        <a class="button-buy-3 buyTicket button-buy external" href="https://bilietai.multikino.lt/visinternetticketing/visSelect.aspx?visSearchBy=mov&amp;amp;visLang=1"></a>
+                    
+                
+
+                <h4><a href="/lt/films/mazylio-nikolia-atostogos/" class="title">Mažylio Nikolia atostogos </a></h4>
+
+                
+                    <div class="genre">Komedija / Šeimai</div>
+                
+            </div>
+        </li>
+        
+    
+        <li class="">
+            <h3 class="category">Dabar rodome</h3>
+
+            <a href="/lt/films/gustavo-nuotykiai/" class="image">
+                
+                
+                
+                    <img src="http://media.multikino.lt/cinema_database/images/movie_posters/5mxw837xv90q4chl.jpg.120x173_q90_crop_sharpen.jpg" alt="Gustavo nuotykiai" />
+                
+            </a>
+
+            <div class="box box-2">
+                
+                    
+                        <a class="button-buy-3 buyTicket button-buy external" href="https://bilietai.multikino.lt/visinternetticketing/visSelect.aspx?visSearchBy=mov&amp;amp;visLang=1"></a>
+                    
+                
+
+                <h4><a href="/lt/films/gustavo-nuotykiai/" class="title">Gustavo nuotykiai</a></h4>
+
+                
+                    <div class="genre">Animuotas</div>
+                
+            </div>
+        </li>
+        
+    
+        <li class="">
+            <h3 class="category">Dabar rodome</h3>
+
+            <a href="/lt/films/visada-geros-kainos/" class="image">
+                
+                
+                
+                    <img src="http://media.multikino.lt/cinema_database/images/movie_posters/6hpiyu3ah6x7v79b.jpg.120x173_q90_crop_sharpen.jpg" alt="Visada geros kainos!" />
+                
+            </a>
+
+            <div class="box box-2">
+                
+
+                <h4><a href="/lt/films/visada-geros-kainos/" class="title">Visada geros kainos!</a></h4>
+
+                
+            </div>
+        </li>
+        
+    
+        <li class="">
+            <h3 class="category">Multibabykino</h3>
+
+            <a href="/lt/multibabykino/multibabykino-amzinai-stilingos/" class="image">
+                
+                
+                
+                    <img src="http://media.multikino.lt/cinema_database/images/movie_posters/j5e34d868wasuaex.jpg.120x173_q90_crop_sharpen.jpg" alt="MultiBabyKino: Amžinai stilingos" />
+                
+            </a>
+
+            <div class="box box-2">
+                
+                    
+                        <a class="button-buy buyTicket external" href="https://bilietai.multikino.lt/visinternetticketing/visSelect.aspx?visSearchBy=mov&amp;amp;visLang=1"></a>
+                    
+                
+
+                <h4><a href="/lt/multibabykino/multibabykino-amzinai-stilingos/" class="title">MultiBabyKino: Amžinai stilingos</a></h4>
+
+                
+                    <div class="genre">Biografinis / Dokumentinis / Komedija</div>
+                
+            </div>
+        </li>
+        
+            
+        
+    
+</ul>
+
+    
+<iframe src="http://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2FMultikinoOzas&amp;width=605&amp;height=290&amp;colorscheme=light&amp;show_faces=true&amp;stream=false&amp;header=true&amp;locale=lt_LT" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:605px; height:290px;" class="box-fb"></iframe>
+
+	<div id="leftcol-bottom-wrapper">
+        <div class="leftcol-bottom-left"></div>
+        <div class="leftcol-bottom-right"></div>
+	</div>
+</div>
+    <div id="right-column">
+    
+
+
+    <div class="simple-news-list " id="sidebar-repertoire">
+        <div class="simple-news-head">
+            <div class="col col1"><a href="/lt/repertuaras/">Repertuaras</a></div>
+            <div class="col col2">
+                <a class="more" href="/lt/repertuaras/">Pilnas repertuaras</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+
+        <input type="hidden" name="repertoire-address" value="/lt/repertuaras/"/>
+        <input type="hidden" name="ajax-repertoire-address" value="/lt/cinema_database/ajax/7a2038b8c6b5b9dce91afef8bc064823/"/>
+
+        <div class="repertoire-naivgation"><form id="repertoireForm" action="/lt/cinema_database/ajax/6d3bad00229b9969a0c62416350028cb/?lang=lt" method="post">
+    <span class="cinema" style="display:none;"><select name="cinema" id="id_cinema">
+<option value="">(Pasirinkti kino teatrą)</option>
+<option value="vilnius" selected="selected">Vilnius</option>
+</select></span> <span class="separator"><!-- --></span> <span class="dates"><select name="dates" id="id_dates">
+<option value="2014-12-09" selected="selected">An 09.12</option>
+<option value="2014-12-10">Tr 10.12</option>
+<option value="2014-12-11">Kt 11.12</option>
+<option value="2014-12-12">Pn 12.12</option>
+<option value="2014-12-13">Št 13.12</option>
+<option value="2014-12-14">Sk 14.12</option>
+<option value="2014-12-15">Pr 15.12</option>
+<option value="2014-12-16">An 16.12</option>
+<option value="2014-12-17">Tr 17.12</option>
+<option value="2014-12-18">Kt 18.12</option>
+</select></span>
+</form>
+</div>
+
+        <div class="repertoire-list">
+        </div>
+
+        
+    </div>
+
+
+    
+
+
+    <div class="openXZone 300x60" id="openXZone85"><!--/* OpenX Javascript Tag v2.8.7 */--><!--/*
+  * The backup image section of this tag has been generated for use on a
+  * non-SSL page. If this tag is to be placed on an SSL page, change the
+  *   'http://openx.multikino.hint.pl/www/delivery/...'
+  * to
+  *   'https://openx.multikino.hint.pl/www/delivery/...'
+  *
+  * This noscript section of this tag only shows image banners. There
+  * is no width or height in these banners, so if you want these tags to
+  * allocate space for the ad before it shows, you will need to add this
+  * information to the <img> tag.
+  *
+  * If you do not want to deal with the intricities of the noscript
+  * section, delete the tag (from <noscript>... to </noscript>). On
+  * average, the noscript tag is called from less than 1% of internet
+  * users.
+  */--><script type='text/javascript'><!--//<![CDATA[
+   var m3_u = (location.protocol=='https:'?'https://openx.multikino.hint.pl/www/delivery/ajs.php':'http://openx.multikino.hint.pl/www/delivery/ajs.php');
+   var m3_r = Math.floor(Math.random()*99999999999);
+   if (!document.MAX_used) document.MAX_used = ',';
+   document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+   document.write ("?zoneid=85");
+   document.write ('&amp;cb=' + m3_r);
+   if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+   document.write (document.charset ? '&amp;charset='+document.charset : (document.characterSet ? '&amp;charset='+document.characterSet : ''));
+   document.write ("&amp;loc=" + escape(window.location));
+   if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+   if (document.context) document.write ("&context=" + escape(document.context));
+   if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+   document.write ("'><\/scr"+"ipt>");
+//]]>--></script><noscript><a href='http://openx.multikino.hint.pl/www/delivery/ck.php?n=a0823cde&amp;cb=86f5aff8-4e45-11e1-b4e5-00e081b358b8' target='_blank'><img src='http://openx.multikino.hint.pl/www/delivery/avw.php?zoneid=85&amp;cb=86f5aff8-4e45-11e1-b4e5-00e081b358b8&amp;n=a0823cde' border='0' alt='' /></a></noscript></div>
+
+
+<div class="newsletter-teaser cms-plugin">
+    <a href="/lt/cexeagrar9-cannisk3-newsletternewsletter/"><span>Užsiregistruok naujienlaiškiui</span></a>
+</div>
+
+
+
+    <div class="openXZone 300x250" id="openXZone84"><!--/* OpenX Javascript Tag v2.8.7 */--><!--/*
+  * The backup image section of this tag has been generated for use on a
+  * non-SSL page. If this tag is to be placed on an SSL page, change the
+  *   'http://openx.multikino.hint.pl/www/delivery/...'
+  * to
+  *   'https://openx.multikino.hint.pl/www/delivery/...'
+  *
+  * This noscript section of this tag only shows image banners. There
+  * is no width or height in these banners, so if you want these tags to
+  * allocate space for the ad before it shows, you will need to add this
+  * information to the <img> tag.
+  *
+  * If you do not want to deal with the intricities of the noscript
+  * section, delete the tag (from <noscript>... to </noscript>). On
+  * average, the noscript tag is called from less than 1% of internet
+  * users.
+  */--><script type='text/javascript'><!--//<![CDATA[
+   var m3_u = (location.protocol=='https:'?'https://openx.multikino.hint.pl/www/delivery/ajs.php':'http://openx.multikino.hint.pl/www/delivery/ajs.php');
+   var m3_r = Math.floor(Math.random()*99999999999);
+   if (!document.MAX_used) document.MAX_used = ',';
+   document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+   document.write ("?zoneid=84");
+   document.write ('&amp;cb=' + m3_r);
+   if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+   document.write (document.charset ? '&amp;charset='+document.charset : (document.characterSet ? '&amp;charset='+document.characterSet : ''));
+   document.write ("&amp;loc=" + escape(window.location));
+   if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+   if (document.context) document.write ("&context=" + escape(document.context));
+   if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+   document.write ("'><\/scr"+"ipt>");
+//]]>--></script><noscript><a href='http://openx.multikino.hint.pl/www/delivery/ck.php?n=a77cb8fe&amp;cb=5608b404-0628-11e1-a804-001b789dc330' target='_blank'><img src='http://openx.multikino.hint.pl/www/delivery/avw.php?zoneid=84&amp;cb=5608b404-0628-11e1-a804-001b789dc330&amp;n=a77cb8fe' border='0' alt='' /></a></noscript></div>
+
+
+
+
+	
+	    <div class="simple-news-list">
+	    	<div class="simple-news-head">
+			
+	        
+				<div class="col col1"><a href="/lt/news/">Naujienos</a></div>
+				
+				    <div class="col col2">
+						<a class="more" href="/lt/news/">Daugiau naujienų</a>
+					</div>
+				
+				<div class="clear"></div>
+			
+			</div>
+			<div class="simple-news-body">
+				
+					<div class="simple-news-item">
+					
+						
+							<div class="col col1">
+								<a href="/lt/news/multikino-jusu-seimos-kino-teatras/"><img src="http://media.multikino.lt/simple_news/14yyqdq716z53xuv.jpg.50x50_q90_crop_sharpen.jpg" alt="Multikino - Jūsų šeimos kino teatras" /></a>
+							</div>
+						
+						<div class="col col2">
+							<div class="title">
+								<a href="/lt/news/multikino-jusu-seimos-kino-teatras/">Multikino - Jūsų šeimos kino teatras</a>
+							</div>
+							<p>Šeimos bilietas</p>
+						</div>
+						<div class="clear"></div>
+						
+					</div>
+				
+					<div class="simple-news-item">
+					
+						
+							<div class="col col1">
+								<a href="/lt/news/velso-aktorius-ir-muzikantas-rhysas-ifansas-dramoje-serena-virto-tyliu-ir-pavojingu-medkirciu/"><img src="http://media.multikino.lt/simple_news/ldziypuizxwgf30i.jpg.50x50_q90_crop_sharpen.jpg" alt="Velso aktorius ir muzikantas Rhysas Ifansas dramoje „Serena“ virto tyliu ir pavojingu medkirčiu " /></a>
+							</div>
+						
+						<div class="col col2">
+							<div class="title">
+								<a href="/lt/news/velso-aktorius-ir-muzikantas-rhysas-ifansas-dramoje-serena-virto-tyliu-ir-pavojingu-medkirciu/">Velso aktorius ir muzikantas Rhysas Ifansas dramoje „Serena“ virto tyliu ir pavojingu medkirčiu </a>
+							</div>
+							<p>Kino naujienos</p>
+						</div>
+						<div class="clear"></div>
+						
+					</div>
+				
+					<div class="simple-news-item">
+					
+						
+							<div class="col col1">
+								<a href="/lt/news/rscottas-filma-egzodas-dievai-ir-karaliai-skyre-savo-brolio-atminimui/"><img src="http://media.multikino.lt/simple_news/cn4noe37k0rdjyg2.jpg.50x50_q90_crop_sharpen.jpg" alt="R.Scottas filmą „Egzodas: dievai ir karaliai“ skyrė savo brolio atminimui" /></a>
+							</div>
+						
+						<div class="col col2">
+							<div class="title">
+								<a href="/lt/news/rscottas-filma-egzodas-dievai-ir-karaliai-skyre-savo-brolio-atminimui/">R.Scottas filmą „Egzodas: dievai ir karaliai“ skyrė savo brolio atminimui</a>
+							</div>
+							<p>Kino naujienos</p>
+						</div>
+						<div class="clear"></div>
+						
+					</div>
+				
+					<div class="simple-news-item">
+					
+						
+							<div class="col col1">
+								<a href="/lt/news/cate-blanchett-filme-hobitas-penkiu-armiju-musis-sviesioji-elfe-galadriele-atskleis-dar-neregeta-jos-puse/"><img src="http://media.multikino.lt/simple_news/6j8wtf2b7bcucqbg.jpg.50x50_q90_crop_sharpen.jpg" alt="Cate Blanchett: „Filme „Hobitas: Penkių armijų mūšis“ šviesioji elfė Galadrielė atskleis dar neregėtą jos pusę“" /></a>
+							</div>
+						
+						<div class="col col2">
+							<div class="title">
+								<a href="/lt/news/cate-blanchett-filme-hobitas-penkiu-armiju-musis-sviesioji-elfe-galadriele-atskleis-dar-neregeta-jos-puse/">Cate Blanchett: „Filme „Hobitas: Penkių armijų mūšis“ šviesioji elfė Galadrielė atskleis dar neregėtą jos pusę“</a>
+							</div>
+							<p>Kino naujienos</p>
+						</div>
+						<div class="clear"></div>
+						
+					</div>
+				
+					<div class="simple-news-item">
+					
+						
+							<div class="col col1">
+								<a href="/lt/news/bukas-ir-bukesnis-2-jav-sove-i-ziurimiausiu-filmu-topo-virsune/"><img src="http://media.multikino.lt/simple_news/yadd4qs29klepg3r.jpg.50x50_q90_crop_sharpen.jpg" alt="„Bukas ir bukesnis 2“ JAV šovė į žiūrimiausių filmų topo viršūnę" /></a>
+							</div>
+						
+						<div class="col col2">
+							<div class="title">
+								<a href="/lt/news/bukas-ir-bukesnis-2-jav-sove-i-ziurimiausiu-filmu-topo-virsune/">„Bukas ir bukesnis 2“ JAV šovė į žiūrimiausių filmų topo viršūnę</a>
+							</div>
+							<p>Kino naujienos</p>
+						</div>
+						<div class="clear"></div>
+						
+					</div>
+				
+			</div>
+		</div>
+	
+
+
+</div>
+    <div class="clear"></div>
+  </div>
+</div>
+
+
+
+<div id="above-footer-wrapper">
+<div id="above-footer"></div>
+</div>
+
+
+<div id="footer">
+<div class="site-logos">
+
+
+
+
+
+
+</div>
+<div >
+<ul class="menu menu-footer"><li class="  sibling  first home"><a class="button-home" href="/lt/dabar/"><span>Home</span></a></li><li class="selected     films"><a  href="/lt/films/"><span>FILMAI</span></a></li><li class="  sibling   None"><a  href="/lt/akcijos/"><span>Akcijos</span></a></li><li class="  sibling   None"><a  href="/lt/multibabykino/"><span>MULTIBABYKINO</span></a></li><li class="  sibling   None"><a  href="/lt/kainos/"><span>KAINOS</span></a></li><li class="  sibling   for_organizations"><a  href="/lt/imonems/"><span>ĮMONĖMS</span></a></li><li class="  sibling   None"><a  href="/lt/svesk-gimtadien-multikine/"><span>GIMTADIENIAI</span></a></li><li class="  sibling   None"><a  href="/lt/apie-mus/"><span>Apie mus</span></a></li><li class="  sibling   None"><a  href="/lt/dovan-kuponai/"><span>Dovanų kuponai</span></a></li></ul>
+</div>
+<div class="menu menu-footer menu-footer-basic">
+<a href="/lt/darbas/">Karjera</a><a href="/lt/svesk-gimtadien-multikine/">Gimtadieniai</a><a href="/lt/terminai-ir-salygos/">Taisyklės</a><a href="/lt/films/">Filmai</a><a href="/lt/amziaus-cenzai/">Cenzai</a>
+</div>
+<div class="clear"></div>
+<a class="button-image button-hint" href="http://hint.pl/" target="_blank" title="Hint"><span>Hint</span></a>
+<p class="site-footer">
+Visos teisės saugomos &copy; 2014 Multikino <br />
+        Notices about copying and distribution of information are contained in
+        <a href="/lt/privacy-policy/">privatumo politika</a>.
+    </p>
+    <div class="clear"></div>
+</div>
+
+<div id="showingPopup" class="multigradient">
+    <div class="close"></div>
+    <div class="wrapper"></div>
+</div>
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+
+
+  _gaq.push(['_setAccount', 'UA-18718576-1']);
+
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+var gemius_identifier = new String('.AfldDPD5eXtVMadUhP692Ym.q5B3eM2ohwfUtFuH9v.u7');
+//--><!]]>
+</script>
+<script type="text/javascript" src="http://onet.hit.gemius.pl/gemius.js"></script>
+
+
+
+</body>
+</html>

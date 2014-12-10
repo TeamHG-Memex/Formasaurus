@@ -1,0 +1,1827 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="ie6 no-js" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="ie7 no-js" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="ie8 no-js" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class='no-js' lang='en'>
+<!--<![endif]-->
+<head><script type="text/javascript">var NREUMQ=NREUMQ||[];NREUMQ.push(["mark","firstbyte",new Date().getTime()]);</script>
+<title>
+All questions - Debian Debian related questions? We can help you
+</title>
+<link href="http://shapado.com:80/assets/application-a090bdde21c63390c8694acb61675515.css" media="screen" rel="stylesheet" type="text/css" />
+
+<link href='/_files/themes/css/4b917d9519ce95468f00000b/4e6db89e97cfef2a29000001/5.css' media='screen' rel='stylesheet' type='text/css'>
+<!--[if lt IE 8]><link type="text/css" rel="stylesheet" media="screen" href="/stylesheets/ie7.css"><![endif]-->
+
+<script src="http://shapado.com:80/assets/modernizr-fb9d1f20faae92aeb31cc792c5cf5746.js" type="text/javascript"></script>
+
+<meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+<meta geo_local>
+
+<link href='/_files/groups/favicon/4b917d9519ce95468f00000b/0.png' rel='icon' type='image/png'>
+<link href='http://ask.debian.net/questions.atom?lang=en&amp;mylangs=it%2Btl%2Bru%2Bnl%2Bko%2Bde%2Bel%2Bja%2Bpt-PT%2Bpt-BR%2Bpl%2Bfr%2Bes-419%2Bes%2Ben' rel='alternate' title='Subscribe to all questions' type='application/atom+xml'>
+
+<meta content="authenticity_token" name="csrf-param" />
+<meta content="4+Z1L2gvLz61Xskb9+ZDYk/B9vb3zGsgx7Jv6UJl7r4=" name="csrf-token" />
+
+<link href='http://ask.debian.net/questions.atom?lang=en&amp;mylangs=it%2Btl%2Bru%2Bnl%2Bko%2Bde%2Bel%2Bja%2Bpt-PT%2Bpt-BR%2Bpl%2Bfr%2Bes-419%2Bes%2Ben' rel='alternate' title='Subscribe to all questions' type='application/atom+xml'>
+<script type="text/javascript">var _gaq=_gaq||[];_gaq.push(["_setAccount","UA-18875090-1"]);_gaq.push(["_setDomainName","ask.debian.net"]);_gaq.push(["_trackPageview"]);(function(){var ga=document.createElement("script");ga.type="text/javascript";ga.async=true;ga.src=("https:"==document.location.protocol?"https://ssl":"http://www")+".google-analytics.com/ga.js";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(ga,s)})();</script>
+
+
+</head>
+<body class='questions-controller index application'>
+<div id='feedback-btn'>
+<p><a href="/shapado_feedback">Feedback</a></p>
+</div>
+<span data-g="4b917d9519ce95468f00000b" id="appconfig"></span>
+<nav class='top-bar'>
+<div class='warp'>
+<ul class='menubar'>
+<li class='logo'>
+<h1 class='brand'>
+<a href="http://ask.debian.net"><img alt="Debian" class="group_logo" src="http://shapado.com:80/_files/groups/logo/4b917d9519ce95468f00000b/0.png" title="Debian" /></a>
+</h1>
+</li>
+<li class='searcher'>
+<form accept-charset="UTF-8" action="/search" id="search" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div>
+<div class='field'>
+<input id="q" name="q" type="text" />
+</div>
+</form>
+
+</li>
+</ul>
+<!-- =multiauth_menu("Sign In") -->
+<ul class='user-list menubar offline' data-signin-notice='You need to sign in first.'>
+<li>
+<a class='signin-dropdown'>
+Sign in
+</a>
+<ul class='drop-menu providers-list'>
+<li>
+<a href="/users/auth/open_id?openid_url=https://www.google.com/accounts/o8/id" class="auth-provider Google" id="google">Google</a>
+</li>
+<li>
+<a href="/users/auth/twitter" class="auth-provider Twitter" id="twitter">Twitter</a>
+</li>
+<li>
+<a href="/users/auth/facebook" class="auth-provider Facebook" id="facebook">Facebook</a>
+</li>
+<li>
+<a href="/users/auth/open_id?openid_url=https://launchpad.net/~{user_name}" class="auth-provider Launchpad" id="launchpad">Launchpad</a>
+</li>
+<li>
+<a href="/users/auth/identica" class="auth-provider Identica" id="identica">Identica</a>
+</li>
+<li>
+<a href="/users/login?open_id=1" class="auth-provider OpenID" data-toggle-dropdown="dropdown-signin-openid" id="openid">OpenID</a>
+</li>
+<li class='hidden dropdown-signin-openid dropdown-form'>
+<form accept-charset="UTF-8" action="/users/auth/open_id" class="form" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div>
+<div class='drop-down-field'>
+<label for="OpenID">Openid URL</label>
+</div>
+<div class='drop-down-field'>
+<input class="text_field drop-down-input" id="openid_url" name="openid_url" type="text" />
+</div>
+<div class='buttons'>
+<input class="save save-login-dropdown" name="commit" type="submit" value="Sign in" />
+</div>
+</form>
+</li>
+<li>
+<a href="/users/login" class="login" data-href="/users/new" data-toggle-dropdown="dropdown-signin" id="login">Sign in with your email</a>
+</li>
+<li class='hidden dropdown-signin dropdown-form'>
+<form accept-charset="UTF-8" action="/users/login" class="form" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="4+Z1L2gvLz61Xskb9+ZDYk/B9vb3zGsgx7Jv6UJl7r4=" /></div>
+<div class='drop-down-field'>
+<input class="text_field drop-down-input" id="user_email" name="user[email]" placeholder="Email" size="30" type="text" />
+</div>
+<div class='drop-down-field'>
+<input class="password drop-down-input" id="user_password" name="user[password]" placeholder="Password" size="30" type="password" />
+</div>
+<div class='checkbox checkbox-dropdown'>
+<input name="user[remember_me]" type="hidden" value="0" /><input id="user_remember_me" name="user[remember_me]" type="checkbox" value="1" />
+<label class="drop-down-checkbox-label" for="user_remember_me">Remember me</label>
+</div>
+<div class='buttons'>
+<input class="save save-login-dropdown" name="commit" type="submit" value="Sign in" />
+</div>
+</form>
+</li>
+<li class='hidden dropdown-signup dropdown-form'>
+<form accept-charset="UTF-8" action="/users" class="form" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="4+Z1L2gvLz61Xskb9+ZDYk/B9vb3zGsgx7Jv6UJl7r4=" /></div>
+<div class='drop-down-field'>
+<input class="text_field drop-down-input" id="user_login" name="user[login]" placeholder="Username" size="30" type="text" />
+</div>
+<div class='drop-down-field'>
+<input class="text_field drop-down-input" id="user_name" name="user[name]" placeholder="Real name" size="30" type="text" />
+</div>
+<div class='drop-down-field'>
+<input class="text_field drop-down-input" id="user_email" name="user[email]" placeholder="Email" size="30" type="text" />
+</div>
+<div class='drop-down-field'>
+<input class="password drop-down-input" id="user_password" name="user[password]" placeholder="Password" size="30" type="password" />
+</div>
+<div class='drop-down-field'>
+<input class="password drop-down-input" id="user_password_confirmation" name="user[password_confirmation]" placeholder="Password confirmation" size="30" type="password" />
+</div>
+<div class='buttons'>
+<input class="save save-login-dropdown" name="commit" type="submit" value="Sign up" />
+</div>
+</form>
+</li>
+<li class='dropdown-signin dropdown-form hidden'>
+<a href="/users/password/new">Forgot password?</a>
+</li>
+<li>
+<a href="/users/new" class="auth-provider login" data-href="/users/new" data-toggle-dropdown="dropdown-signup" id="login">Sign up with an email/password</a>
+</li>
+</ul>
+
+</li>
+</ul>
+
+<ul class='menubar group-list'>
+</ul>
+</div>
+</nav>
+
+<div id='container'>
+
+<div id='columns'>
+
+<header>
+<nav>
+<ul class='content-tabs'>
+<li class='questions'>
+<a href="/questions" class="pjax" data-layout="index">Questions</a>
+</li>
+<li class='badges'>
+<a href="/badges" class="pjax" data-layout="badges" rel="nofollow">Badges</a>
+</li>
+<li class='users'>
+<a href="/users">Users</a>
+</li>
+<li class='tags'>
+<a href="/questions/tags" class="pjax" data-layout="tags">Tags</a>
+</li>
+<li class='activities'>
+<a href="/activities?context=index" class="pjax" data-layout="index" rel="nofollow">Activity</a>
+</li>
+</ul>
+</nav>
+
+<div class='title clearfix'>
+<div class='quick_question clearfix'>
+<form accept-charset="UTF-8" action="http://ask.debian.net/questions/new" class="form" data-login-required="true" id="ask_question" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div>
+<input autocomplete="off" class="text_area" id="question_title" name="question[title]" placeholder="what's your question? be descriptive." size="30" type="text" value="" />
+<div class='buttons-quickq'>
+<input class="ask_question" name="commit" type="submit" value="Ask question" />
+<div class='search-feedback'>
+type to search
+</div>
+</div>
+<input id="question_language" name="question[language]" type="hidden" value="en" />
+<div class='clear'></div>
+</form>
+<div class='clear'></div>
+</div>
+
+</div>
+<nav>
+<div class='activity clearfix filters'>
+<ul class='menubar'>
+<li>
+<label>
+Sort by:
+</label>
+</li>
+<li>
+<a href="#">Active ▾</a>
+<ul class='drop-menu'>
+<li>
+<a href="/questions?sort=activity" class="pjax" data-layout="index" rel="nofollow" title="Questions that have been updated recently">Active</a>
+</li>
+<li class='newest'>
+<a href="/questions?sort=newest" class="pjax" data-layout="index" rel="nofollow" title="The most recently asked questions">Newest</a>
+</li>
+<li class='hot'>
+<a href="/questions?sort=hot" class="pjax" data-layout="index" rel="nofollow" title="Questions with the most activity over the last 5 days">Hot</a>
+</li>
+<li class='followers'>
+<a href="/questions?sort=followers" class="pjax" data-layout="index" rel="nofollow" title="Questions with the most followers">Followers</a>
+</li>
+</ul>
+</li>
+<li>
+<label>Filter:</label>
+</li>
+<li>
+<a href="/questions" rel="nofollow">All ▾</a>
+<ul class='drop-menu'>
+<li>
+<li><a href="/questions/all" class="pjax" data-layout="index">All</a></li>
+<a href="/questions?unanswered=1" rel="nofollow">Unanswered</a>
+</li>
+</ul>
+</li>
+<li>
+<label>
+View mode:
+</label>
+</li>
+<li>
+<a href="#">Questions ▾</a>
+<ul class='drop-menu'>
+<li>
+<a href="/questions" class="pjax" data-layout="index">Questions</a>
+</li>
+<li>
+<a href="/questions?answers=1" class="pjax" data-layout="index" rel="nofollow">Answers</a>
+</li>
+</ul>
+</li>
+<li>
+<label data-language='/change_language_filter' id='lang-select-toggle'>
+<li data-language='/change_language_filter' id='lang-select-toggle'>
+<label>
+Languages:
+</label>
+</li>
+<li class='current_language' rel='tipsy' title='Try with another language.'>
+<a href="#" data-language="en">English</a>
+<ul class='drop-menu'>
+<li>
+<a href="#" class="lang-option" data-language="any">Any language</a>
+</li>
+<li>
+<a href="#" class="lang-option" data-language="it">Italian</a>
+</li>
+<li>
+<a href="#" class="lang-option" data-language="tl">Tagalog</a>
+</li>
+<li>
+<a href="#" class="lang-option" data-language="ru">Russian</a>
+</li>
+<li>
+<a href="#" class="lang-option" data-language="nl">Dutch</a>
+</li>
+<li>
+<a href="#" class="lang-option" data-language="ko">Korean</a>
+</li>
+<li>
+<a href="#" class="lang-option" data-language="de">German</a>
+</li>
+<li>
+<a href="#" class="lang-option" data-language="el">Greek</a>
+</li>
+<li>
+<a href="#" class="lang-option" data-language="ja">Japanese</a>
+</li>
+<li>
+<a href="#" class="lang-option" data-language="pt-PT">Iberian portuguese</a>
+</li>
+<li>
+<a href="#" class="lang-option" data-language="pt-BR">Brazilian portuguese</a>
+</li>
+<li>
+<a href="#" class="lang-option" data-language="pl">Polish</a>
+</li>
+<li>
+<a href="#" class="lang-option" data-language="fr">French</a>
+</li>
+<li>
+<a href="#" class="lang-option" data-language="es-419">Latin american spanish</a>
+</li>
+<li>
+<a href="#" class="lang-option" data-language="es">Spanish</a>
+</li>
+<li>
+<a href="#" class="lang-option" data-language="en">English</a>
+</li>
+</ul>
+</li>
+
+</label>
+</li>
+
+
+</ul>
+</div>
+</nav>
+</header>
+
+<section class='right-panel' id='column3'>
+<div class='sidebar-widgets'>
+<div class='block clearfix module widget widget-about'>
+<h3>Welcome</h3>
+<aside>
+<div class='markdown'>
+<p>Debian related questions?  We can help.  In your language.</p>
+
+
+
+
+<p>¿Preguntas acerca de Debian? Aquí te ayudamos. En tu idioma.</p>
+
+
+
+
+<p>Fragen zu Debian? Wir können euch helfen. In eurer Sprache.</p>
+</div>
+</aside>
+<footer>
+<a href="/pages/faq">FAQ</a>
+<a href="/groups/debian">More ...</a>
+</footer>
+</div>
+
+<div class='block clearfix module widget widget-pages'>
+<h3>Wiki pages</h3>
+
+<aside>
+<ul class='list'>
+<li>
+<a href="/pages/help-debian" class="pjax" data-layout="pages">Help Debian ...</a>
+</li>
+</ul>
+</aside>
+<footer>
+</footer>
+</div>
+
+<div class='block clearfix module widget widget-top_groups'>
+<h3>Top 5 groups</h3>
+
+<aside>
+<div class='avatar'>
+<a href="http://shapado.com"><img alt="0" src="http://shapado.com:80/_files/groups/medium/4af798a119ce955bd1000001/0.png" /></a>
+</div>
+<div class='data'>
+<h3>
+<b>
+<a href="http://shapado.com">Shapado</a>
+</b>
+<small>
+7769 members
+</small>
+</h3>
+<p>
+**Discuss everything related to Shapado here.**...
+</p>
+</div>
+</aside>
+<aside>
+<div class='avatar'>
+<a href="http://diaspora.shapado.com"><img alt="0" src="http://shapado.com:80/_files/groups/medium/4c928b3419ce954370250fef/0.png" /></a>
+</div>
+<div class='data'>
+<h3>
+<b>
+<a href="http://diaspora.shapado.com">Diaspora</a>
+</b>
+<small>
+4637 members
+</small>
+</h3>
+<p>
+Ask anything about Diaspora, the privacy aware,...
+</p>
+</div>
+</aside>
+<aside>
+<div class='avatar'>
+<a href="http://rocoto.shapado.com"><img alt="0" src="http://shapado.com:80/_files/groups/medium/4b95d9b619ce9546a5000016/0.png" /></a>
+</div>
+<div class='data'>
+<h3>
+<b>
+<a href="http://rocoto.shapado.com">Rocoto</a>
+</b>
+<small>
+555 members
+</small>
+</h3>
+<p>
+Ocopas, ceviches, causas, secos, saltados, anti...
+</p>
+</div>
+</aside>
+<aside>
+<div class='avatar'>
+<a href="http://olaverde.shapado.com"><img alt="0" src="http://shapado.com:80/_files/groups/medium/4bc372d019ce957310002d74/0.png" /></a>
+</div>
+<div class='data'>
+<h3>
+<b>
+<a href="http://olaverde.shapado.com">Partido Verde Colombia</a>
+</b>
+<small>
+499 members
+</small>
+</h3>
+<p>
+Sitio NO OFICIAL de Preguntas y Respuestas sobr...
+</p>
+</div>
+</aside>
+<aside>
+<div class='avatar'>
+<a href="http://ubuntu.shapado.com"><img alt="0" src="http://shapado.com:80/_files/groups/medium/4af8853419ce957aa200000c/0.png" /></a>
+</div>
+<div class='data'>
+<h3>
+<b>
+<a href="http://ubuntu.shapado.com">Ubuntu</a>
+</b>
+<small>
+867 members
+</small>
+</h3>
+<p>
+Ubuntu Questions ? We can help. In your languag...
+</p>
+</div>
+</aside>
+<footer>
+<a href="/groups">More ...</a>
+</footer>
+</div>
+
+<div class='block clearfix module widget widget-top_users'>
+<h3>Top 5 users</h3>
+
+<aside>
+<ul>
+<li>
+<div class='avatar'>
+<img alt="helmut" src="http://www.gravatar.com/avatar/9a63a74d81c3e3abfb4a1ecb56fd3eff?rating=PG&amp;size=32&amp;d=http://shapado.com:80/assets/default-avatar-small.png" title="helmut" />
+</div>
+<div class='data'>
+<h5>
+<b>
+<a href="/users/helmut" class="pjax" data-layout="user">Helmut Grohne</a>
+</b>
+<small>
+Reputation
+858
+</small>
+</h5>
+</div>
+</li>
+<li>
+<div class='avatar'>
+<img alt="rhonda" src="http://www.gravatar.com/avatar/1a53af87dd41722e2d1399b5fc9d30a9?rating=PG&amp;size=32&amp;d=http://shapado.com:80/assets/default-avatar-small.png" title="rhonda" />
+</div>
+<div class='data'>
+<h5>
+<b>
+<a href="/users/rhonda" class="pjax" data-layout="user">Gerfried Fuchs</a>
+</b>
+<small>
+Reputation
+750
+</small>
+</h5>
+</div>
+</li>
+<li>
+<div class='avatar'>
+<img alt="amlj" src="http://www.gravatar.com/avatar/f86a8a8517f6fa1442cac8017c6fd857?rating=PG&amp;size=32&amp;d=http://shapado.com:80/assets/default-avatar-small.png" title="amlj" />
+</div>
+<div class='data'>
+<h5>
+<b>
+<a href="/users/amlj" class="pjax" data-layout="user">Adel Moin</a>
+</b>
+<small>
+Reputation
+558
+</small>
+</h5>
+</div>
+</li>
+<li>
+<div class='avatar'>
+<img alt="zack" src="http://www.gravatar.com/avatar/9c31af6c5b4daa602dacb9d90274df38?rating=PG&amp;size=32&amp;d=http://shapado.com:80/assets/default-avatar-small.png" title="zack" />
+</div>
+<div class='data'>
+<h5>
+<b>
+<a href="/users/zack" class="pjax" data-layout="user">Stefano Zacchiroli</a>
+</b>
+<small>
+Reputation
+372
+</small>
+</h5>
+</div>
+</li>
+<li>
+<div class='avatar'>
+<img alt="paulcarroty" src="http://www.gravatar.com/avatar/271242abd81f6da498bbad3de89a2be0?rating=PG&amp;size=32&amp;d=http://shapado.com:80/assets/default-avatar-small.png" title="paulcarroty" />
+</div>
+<div class='data'>
+<h5>
+<b>
+<a href="/users/paulcarroty" class="pjax" data-layout="user">PaulCarroty</a>
+</b>
+<small>
+Reputation
+325
+</small>
+</h5>
+</div>
+</li>
+</ul>
+</aside>
+<footer>
+<a href="/users">More ...</a>
+</footer>
+</div>
+
+<div class='block clearfix module widget widget-badges'>
+<h3>Recent badges</h3>
+
+<aside class='badges'>
+<ul>
+<li>
+<div class='badge_item'>
+<a href="/badges/popular_question" class="pjax badge bronze" data-layout="badges" title="Asked a question with 1,000 views">Popular question</a>
+<span class='user'>
+<a href="/users/4b861e2019ce9504e5000004" class="pjax" data-layout="user" title="Egon Willighagen">Egon Willighagen</a>
+</span>
+</div>
+
+</li>
+<li>
+<div class='badge_item'>
+<a href="/badges/popular_question" class="pjax badge bronze" data-layout="badges" title="Asked a question with 1,000 views">Popular question</a>
+<span class='user'>
+<a href="/users/darkrow" class="pjax" data-layout="user" title="Davide">Davide</a>
+</span>
+</div>
+
+</li>
+<li>
+<div class='badge_item'>
+<a href="/badges/inquirer" class="pjax badge bronze" data-layout="badges" title="Asked a question for the first time">Inquirer</a>
+<span class='user'>
+<a href="/users/mrhippo" class="pjax" data-layout="user" title="mrhippo">mrhippo</a>
+</span>
+</div>
+
+</li>
+<li>
+<div class='badge_item'>
+<a href="/badges/inquirer" class="pjax badge bronze" data-layout="badges" title="Asked a question for the first time">Inquirer</a>
+<span class='user'>
+<a href="/users/cocox2x" class="pjax" data-layout="user" title="cocox2x">cocox2x</a>
+</span>
+</div>
+
+</li>
+<li>
+<div class='badge_item'>
+<a href="/badges/inquirer" class="pjax badge bronze" data-layout="badges" title="Asked a question for the first time">Inquirer</a>
+<span class='user'>
+<a href="/users/radicaledward" class="pjax" data-layout="user" title="radicaledward">radicaledward</a>
+</span>
+</div>
+
+</li>
+</ul>
+</aside>
+<footer>
+<a href="/badges">See all badges</a>
+</footer>
+</div>
+
+</div>
+
+
+</section>
+
+<section class='content-panel' id='column2'>
+<div class='questions' id='main-content-wrap'>
+<section class='questions-index'>
+<!-- Questions -->
+<article class='Question unanswered' id='547e308d97cfef66120053af'>
+<h2>
+<a href="/questions/how-to-recover-from-boot-error-after-update" class="pjax" data-layout="question" title="I have open media vault (Debian 7) installed with 2 HDDs in RAID 1 for data and a 16GB flash drive for the actual OS. It did some updates and after rebooting I get an error about it having trouble ...">how to recover from boot error after update</a>
+</h2>
+<ul class='tag-list clearfix'>
+</ul>
+<div class='toolbar'>
+<ul class='menubar'>
+<li class='answers action'>
+<a href="/questions/how-to-recover-from-boot-error-after-update">0 answers</a>
+</li>
+<li class='action'>
+<a href="/questions/how-to-recover-from-boot-error-after-update/follow" class="follow-q toggle-action" data-text="Unfollow" data-title="Stop following this question" data-undo="/questions/how-to-recover-from-boot-error-after-update/unfollow" rel="nofollow" title="Follow this question">Follow</a>
+</li>
+<li class='action'>
+<a href="/questions/how-to-recover-from-boot-error-after-update#to_answer">Answer</a>
+</li>
+<li class='spam action'>
+<a href="/questions/how-to-recover-from-boot-error-after-update/flags/new" class="flag-link-index" rel="nofollow">Flag</a>
+</li>
+
+<li style='float: right'>
+<div class='user-data'>
+<a href="/users/waspinator" class="user-link pjax ajax-tooltip" data-layout="user">waspinator</a>
+
+<time datetime='2014-12-02T21:35:09+00:00' pubdate='pubdate'>
+<a href="/questions/how-to-recover-from-boot-error-after-update#547e308d97cfef66120053af" class="pjax" data-layout="question">3 days ago</a>
+</time>
+</div>
+</li>
+</ul>
+<div class='panel-forms'></div>
+</div>
+<div class='clear'></div>
+</article>
+
+<article class='Question unanswered' id='547dab4197cfef5a1a008b1c'>
+<h2>
+<a href="/questions/blank-screen-on-boot-up" class="pjax" data-layout="question" title="">blank screen on boot up</a>
+</h2>
+<ul class='tag-list clearfix'>
+</ul>
+<div class='toolbar'>
+<ul class='menubar'>
+<li class='answers action'>
+<a href="/questions/blank-screen-on-boot-up">0 answers</a>
+</li>
+<li class='action'>
+<a href="/questions/blank-screen-on-boot-up/follow" class="follow-q toggle-action" data-text="Unfollow" data-title="Stop following this question" data-undo="/questions/blank-screen-on-boot-up/unfollow" rel="nofollow" title="Follow this question">Follow</a>
+</li>
+<li class='action'>
+<a href="/questions/blank-screen-on-boot-up#to_answer">Answer</a>
+</li>
+<li class='spam action'>
+<a href="/questions/blank-screen-on-boot-up/flags/new" class="flag-link-index" rel="nofollow">Flag</a>
+</li>
+
+<li style='float: right'>
+<div class='user-data'>
+<a href="/users/welshie12" class="user-link pjax ajax-tooltip" data-layout="user">welshie12</a>
+
+<time datetime='2014-12-02T12:06:25+00:00' pubdate='pubdate'>
+<a href="/questions/blank-screen-on-boot-up#547dab4197cfef5a1a008b1c" class="pjax" data-layout="question">4 days ago</a>
+</time>
+</div>
+</li>
+</ul>
+<div class='panel-forms'></div>
+</div>
+<div class='clear'></div>
+</article>
+
+<article class='Question unanswered' id='5477327297cfef3f4f00004a'>
+<h2>
+<a href="/questions/translating-debian-package" class="pjax" data-layout="question" title="I’m a beginner to Debian packaging and programming in general. I have built a Debian package for my python script and want to make it available for translating into other languages. What should I a...">Wiki: Translating debian package</a>
+</h2>
+<ul class='tag-list clearfix'>
+</ul>
+<div class='toolbar'>
+<ul class='menubar'>
+<li class='answers action'>
+<a href="/questions/translating-debian-package">0 answers</a>
+</li>
+<li class='action'>
+<a href="/questions/translating-debian-package/follow" class="follow-q toggle-action" data-text="Unfollow" data-title="Stop following this question" data-undo="/questions/translating-debian-package/unfollow" rel="nofollow" title="Follow this question">Follow</a>
+</li>
+<li class='action'>
+<a href="/questions/translating-debian-package#to_answer">Answer</a>
+</li>
+<li class='spam action'>
+<a href="/questions/translating-debian-package/flags/new" class="flag-link-index" rel="nofollow">Flag</a>
+</li>
+
+<li style='float: right'>
+<div class='user-data'>
+<a href="/users/muzaffarlearner" class="user-link pjax ajax-tooltip" data-layout="user">muzaffarlearner</a>
+
+<time datetime='2014-11-27T14:17:23+00:00' pubdate='pubdate'>
+<a href="/questions/translating-debian-package#5477327297cfef3f4f00004a" class="pjax" data-layout="question">8 days ago</a>
+</time>
+</div>
+</li>
+</ul>
+<div class='panel-forms'></div>
+</div>
+<div class='clear'></div>
+</article>
+
+<article class='Question accepted' id='54749b2d97cfef3caa001525'>
+<h2>
+<a href="/questions/is-there-a-driver-for-hp-smart-array-p440ar-controller-in-debian-wheezy" class="pjax" data-layout="question" title="Trying to FAI a HP DL360 Gen9 with a HP Smart Array P440ar Controller and FAI finds no disks.Debian Testing finds the array but we don&#x27;t really want to use that version.....">Is there a driver for HP Smart Array P440ar Controller in Debian Wheezy ?</a>
+</h2>
+<ul class='tag-list clearfix'>
+<li>
+<a href="/questions/tags/drivers" class="tag ajax-tooltip" rel="tag" title="Show questions tagged drivers">drivers</a>
+</li>
+<li>
+<a href="/questions/tags/hardware" class="tag ajax-tooltip" rel="tag" title="Show questions tagged hardware">hardware</a>
+</li>
+</ul>
+<div class='toolbar'>
+<ul class='menubar'>
+<li class='solution action'>
+<a href="/questions/is-there-a-driver-for-hp-smart-array-p440ar-controller-in-debian-wheezy#answer5475e5f497cfef14d800081a" rel="nofollow">Solution</a>
+</li>
+<li class='answers action'>
+<a href="/questions/is-there-a-driver-for-hp-smart-array-p440ar-controller-in-debian-wheezy">1 answer</a>
+</li>
+<li class='action'>
+<a href="/questions/is-there-a-driver-for-hp-smart-array-p440ar-controller-in-debian-wheezy/follow" class="follow-q toggle-action" data-text="Unfollow" data-title="Stop following this question" data-undo="/questions/is-there-a-driver-for-hp-smart-array-p440ar-controller-in-debian-wheezy/unfollow" rel="nofollow" title="Follow this question">Follow</a>
+</li>
+<li class='action'>
+<a href="/questions/is-there-a-driver-for-hp-smart-array-p440ar-controller-in-debian-wheezy#to_answer">Answer</a>
+</li>
+<li class='spam action'>
+<a href="/questions/is-there-a-driver-for-hp-smart-array-p440ar-controller-in-debian-wheezy/flags/new" class="flag-link-index" rel="nofollow">Flag</a>
+</li>
+
+<li style='float: right'>
+<div class='user-data'>
+<a href="/users/catoman" class="user-link pjax ajax-tooltip" data-layout="user">Johan Andersson</a>
+
+<time datetime='2014-11-26T14:38:55+00:00' pubdate='pubdate'>
+<a href="/questions/is-there-a-driver-for-hp-smart-array-p440ar-controller-in-debian-wheezy#54749b2d97cfef3caa001525" class="pjax" data-layout="question">9 days ago</a>
+</time>
+</div>
+</li>
+</ul>
+<div class='panel-forms'></div>
+</div>
+<div class='clear'></div>
+</article>
+
+<article class='Question unanswered' id='54612b9f97cfef0ebb000728'>
+<h2>
+<a href="/questions/upgrade-wine-in-stable-from-sid-without-distro-update-i-am-really-angry" class="pjax" data-layout="question" title="What the hell?? I just want WINE not upgrade to testing hello? can anyone post me a solution??Wine 1.6.2 is running perfectly stable in playonlinux wineserver, so there is no reason to restrict win...">Upgrade Wine in STABLE from SID without distro update? I am really angry.</a>
+</h2>
+<ul class='tag-list clearfix'>
+<li>
+<a href="/questions/tags/wine" class="tag ajax-tooltip" rel="tag" title="Show questions tagged wine">wine</a>
+</li>
+</ul>
+<div class='toolbar'>
+<ul class='menubar'>
+<li class='answers action'>
+<a href="/questions/upgrade-wine-in-stable-from-sid-without-distro-update-i-am-really-angry">1 answer</a>
+</li>
+<li class='action'>
+<a href="/questions/upgrade-wine-in-stable-from-sid-without-distro-update-i-am-really-angry/follow" class="follow-q toggle-action" data-text="Unfollow" data-title="Stop following this question" data-undo="/questions/upgrade-wine-in-stable-from-sid-without-distro-update-i-am-really-angry/unfollow" rel="nofollow" title="Follow this question">Follow</a>
+</li>
+<li class='action'>
+<a href="/questions/upgrade-wine-in-stable-from-sid-without-distro-update-i-am-really-angry#to_answer">Answer</a>
+</li>
+<li class='spam action'>
+<a href="/questions/upgrade-wine-in-stable-from-sid-without-distro-update-i-am-really-angry/flags/new" class="flag-link-index" rel="nofollow">Flag</a>
+</li>
+
+<li style='float: right'>
+<div class='user-data'>
+<a href="/users/freed00m" class="user-link pjax ajax-tooltip" data-layout="user">Anthony Dach</a>
+
+<time datetime='2014-11-10T21:18:23+00:00' pubdate='pubdate'>
+<a href="/questions/upgrade-wine-in-stable-from-sid-without-distro-update-i-am-really-angry#54612b9f97cfef0ebb000728" class="pjax" data-layout="question">25 days ago</a>
+</time>
+</div>
+</li>
+</ul>
+<div class='panel-forms'></div>
+</div>
+<div class='clear'></div>
+</article>
+
+<article class='Question unanswered' id='546dda4397cfef0732006887'>
+<h2>
+<a href="/questions/is-there-a-memory-leak-in-dd" class="pjax" data-layout="question" title="I&#x27;ve been having trouble copying large (&amp;gt;16GB) VM drive files under Debian. Someone suggested turning the swap off - so to try it, I tried to create a large 16GB file to try it by using: dd if=/...">Is there a memory leak in dd? </a>
+</h2>
+<ul class='tag-list clearfix'>
+</ul>
+<div class='toolbar'>
+<ul class='menubar'>
+<li class='answers action'>
+<a href="/questions/is-there-a-memory-leak-in-dd">2 answers</a>
+</li>
+<li class='followers action'>
+<span>
+1 follower
+</span>
+</li>
+<li class='action'>
+<a href="/questions/is-there-a-memory-leak-in-dd/follow" class="follow-q toggle-action" data-text="Unfollow" data-title="Stop following this question" data-undo="/questions/is-there-a-memory-leak-in-dd/unfollow" rel="nofollow" title="Follow this question">Follow</a>
+</li>
+<li class='action'>
+<a href="/questions/is-there-a-memory-leak-in-dd#to_answer">Answer</a>
+</li>
+<li class='spam action'>
+<a href="/questions/is-there-a-memory-leak-in-dd/flags/new" class="flag-link-index" rel="nofollow">Flag</a>
+</li>
+
+<li style='float: right'>
+<div class='user-data'>
+<a href="/users/thomasrutter" class="user-link pjax ajax-tooltip" data-layout="user">thomasrutter</a>
+
+<time datetime='2014-11-26T03:33:43+00:00' pubdate='pubdate'>
+<a href="/questions/is-there-a-memory-leak-in-dd#547549ad97cfef7545003ce0" class="pjax" data-layout="question">10 days ago</a>
+</time>
+</div>
+</li>
+</ul>
+<div class='panel-forms'></div>
+</div>
+<div class='clear'></div>
+</article>
+
+<article class='Question unanswered' id='5472d00097cfef2307001732'>
+<h2>
+<a href="/questions/i-can-t-burn-dvds-on-a-pavilion-m6-laptop-which-has-debian-wheezy-os" class="pjax" data-layout="question" title="I can&#x27;t burn DVDs on a Pavilion m6 laptop which has Debian Wheezy OS. It has a &quot;power calibration area error.&quot; Is this the hardware or software&#x27;s fault?">Wiki: I can&#x27;t burn DVDs on a Pavilion m6 laptop which has Debian Wheezy OS.</a>
+</h2>
+<ul class='tag-list clearfix'>
+<li>
+<a href="/questions/tags/debian" class="tag ajax-tooltip" rel="tag" title="Show questions tagged debian">debian</a>
+</li>
+</ul>
+<div class='toolbar'>
+<ul class='menubar'>
+<li class='answers action'>
+<a href="/questions/i-can-t-burn-dvds-on-a-pavilion-m6-laptop-which-has-debian-wheezy-os">0 answers</a>
+</li>
+<li class='followers action'>
+<span>
+1 follower
+</span>
+</li>
+<li class='action'>
+<a href="/questions/i-can-t-burn-dvds-on-a-pavilion-m6-laptop-which-has-debian-wheezy-os/follow" class="follow-q toggle-action" data-text="Unfollow" data-title="Stop following this question" data-undo="/questions/i-can-t-burn-dvds-on-a-pavilion-m6-laptop-which-has-debian-wheezy-os/unfollow" rel="nofollow" title="Follow this question">Follow</a>
+</li>
+<li class='action'>
+<a href="/questions/i-can-t-burn-dvds-on-a-pavilion-m6-laptop-which-has-debian-wheezy-os#to_answer">Answer</a>
+</li>
+<li class='spam action'>
+<a href="/questions/i-can-t-burn-dvds-on-a-pavilion-m6-laptop-which-has-debian-wheezy-os/flags/new" class="flag-link-index" rel="nofollow">Flag</a>
+</li>
+
+<li style='float: right'>
+<div class='user-data'>
+<a href="/users/jalalsfs" class="user-link pjax ajax-tooltip" data-layout="user">Jalal Ahmed</a>
+
+<time datetime='2014-11-26T21:54:06+00:00' pubdate='pubdate'>
+<a href="/questions/i-can-t-burn-dvds-on-a-pavilion-m6-laptop-which-has-debian-wheezy-os#54764bfe97cfef1f130006ed" class="pjax" data-layout="question">9 days ago</a>
+</time>
+</div>
+</li>
+</ul>
+<div class='panel-forms'></div>
+</div>
+<div class='clear'></div>
+</article>
+
+<article class='Question unanswered' id='4f77444897cfef5f15014a9a'>
+<h2>
+<a href="/questions/should-i-set-the-wireless-regulatory-domain-with-crda-or-hostapd" class="pjax" data-layout="question" title="I’m running Debian as a wireless access point with hostapd. I set up country_code in /etc/hostapd/hostapd.conf. I don’t know what it actually does or if it has any effects. Now I realized that I al...">Wiki: should I set the wireless regulatory domain with crda or hostapd?</a>
+</h2>
+<ul class='tag-list clearfix'>
+</ul>
+<div class='toolbar'>
+<ul class='menubar'>
+<li class='answers action'>
+<a href="/questions/should-i-set-the-wireless-regulatory-domain-with-crda-or-hostapd">1 answer</a>
+</li>
+<li class='followers action'>
+<span>
+1 follower
+</span>
+</li>
+<li class='action'>
+<a href="/questions/should-i-set-the-wireless-regulatory-domain-with-crda-or-hostapd/follow" class="follow-q toggle-action" data-text="Unfollow" data-title="Stop following this question" data-undo="/questions/should-i-set-the-wireless-regulatory-domain-with-crda-or-hostapd/unfollow" rel="nofollow" title="Follow this question">Follow</a>
+</li>
+<li class='action'>
+<a href="/questions/should-i-set-the-wireless-regulatory-domain-with-crda-or-hostapd#to_answer">Answer</a>
+</li>
+<li class='spam action'>
+<a href="/questions/should-i-set-the-wireless-regulatory-domain-with-crda-or-hostapd/flags/new" class="flag-link-index" rel="nofollow">Flag</a>
+</li>
+
+<li style='float: right'>
+<div class='user-data'>
+<a href="/users/jozseffejes" class="user-link pjax ajax-tooltip" data-layout="user">jozseffejes</a>
+
+<time datetime='2012-03-31T17:52:10+00:00' pubdate='pubdate'>
+<a href="/questions/should-i-set-the-wireless-regulatory-domain-with-crda-or-hostapd#4f77444897cfef5f15014a9a" class="pjax" data-layout="question">over 2 years ago</a>
+</time>
+</div>
+</li>
+</ul>
+<div class='panel-forms'></div>
+</div>
+<div class='clear'></div>
+</article>
+
+<article class='Question unanswered' id='54683df297cfef097c003fb5'>
+<h2>
+<a href="/questions/solved-how-do-i-make-apt-only-install-contrib-and-non-free-packages-when-specificly-asked-for-it" class="pjax" data-layout="question" title="I want to be able to install contrib and non-free packages, but I don’t want to allow it by default.This is how I would want it to be like:If I were to type apt-get install flashplugin-nonfree, it ...">[Solved] How do I make apt only install contrib and non-free packages when specificly asked for it?</a>
+</h2>
+<ul class='tag-list clearfix'>
+<li>
+<a href="/questions/tags/apt" class="tag ajax-tooltip" rel="tag" title="Show questions tagged apt">apt</a>
+</li>
+<li>
+<a href="/questions/tags/apt-get" class="tag ajax-tooltip" rel="tag" title="Show questions tagged apt-get">apt-get</a>
+</li>
+<li>
+<a href="/questions/tags/debian" class="tag ajax-tooltip" rel="tag" title="Show questions tagged debian">debian</a>
+</li>
+<li>
+<a href="/questions/tags/gnu" class="tag ajax-tooltip" rel="tag" title="Show questions tagged gnu">gnu</a>
+</li>
+<li>
+<a href="/questions/tags/linux" class="tag ajax-tooltip" rel="tag" title="Show questions tagged linux">linux</a>
+</li>
+<li>
+<a href="/questions/tags/non-free" class="tag ajax-tooltip" rel="tag" title="Show questions tagged non-free">non-free</a>
+</li>
+<li>
+<a href="/questions/tags/sources.list" class="tag ajax-tooltip" rel="tag" title="Show questions tagged sources.list">sources.list</a>
+</li>
+</ul>
+<div class='toolbar'>
+<ul class='menubar'>
+<li class='answers action'>
+<a href="/questions/solved-how-do-i-make-apt-only-install-contrib-and-non-free-packages-when-specificly-asked-for-it">0 answers</a>
+</li>
+<li class='action'>
+<a href="/questions/solved-how-do-i-make-apt-only-install-contrib-and-non-free-packages-when-specificly-asked-for-it/follow" class="follow-q toggle-action" data-text="Unfollow" data-title="Stop following this question" data-undo="/questions/solved-how-do-i-make-apt-only-install-contrib-and-non-free-packages-when-specificly-asked-for-it/unfollow" rel="nofollow" title="Follow this question">Follow</a>
+</li>
+<li class='action'>
+<a href="/questions/solved-how-do-i-make-apt-only-install-contrib-and-non-free-packages-when-specificly-asked-for-it#to_answer">Answer</a>
+</li>
+<li class='spam action'>
+<a href="/questions/solved-how-do-i-make-apt-only-install-contrib-and-non-free-packages-when-specificly-asked-for-it/flags/new" class="flag-link-index" rel="nofollow">Flag</a>
+</li>
+
+<li style='float: right'>
+<div class='user-data'>
+<a href="/users/mirellanmal" class="user-link pjax ajax-tooltip" data-layout="user">mirella</a>
+
+<time datetime='2014-11-22T22:35:20+00:00' pubdate='pubdate'>
+<a href="/questions/solved-how-do-i-make-apt-only-install-contrib-and-non-free-packages-when-specificly-asked-for-it#54710fa897cfef45bf005022" class="pjax" data-layout="question">13 days ago</a>
+</time>
+</div>
+</li>
+</ul>
+<div class='panel-forms'></div>
+</div>
+<div class='clear'></div>
+</article>
+
+<article class='Question unanswered' id='546e95d697cfef67bf0009b7'>
+<h2>
+<a href="/questions/used-space-in-disk-is-way-larger-than-file-size-debian-7-using-an-sdd-what-can-i-do" class="pjax" data-layout="question" title="I am running debian 7 in an sdd and I found that used space in disk for files is larger than filesize in every file! for example, a pdf 700kb large uses 4mb in disk and I am running out of space fa...">Used space in disk is way larger than file size debian 7 using an sdd. What can I do?</a>
+</h2>
+<ul class='tag-list clearfix'>
+</ul>
+<div class='toolbar'>
+<ul class='menubar'>
+<li class='answers action'>
+<a href="/questions/used-space-in-disk-is-way-larger-than-file-size-debian-7-using-an-sdd-what-can-i-do">0 answers</a>
+</li>
+<li class='action'>
+<a href="/questions/used-space-in-disk-is-way-larger-than-file-size-debian-7-using-an-sdd-what-can-i-do/follow" class="follow-q toggle-action" data-text="Unfollow" data-title="Stop following this question" data-undo="/questions/used-space-in-disk-is-way-larger-than-file-size-debian-7-using-an-sdd-what-can-i-do/unfollow" rel="nofollow" title="Follow this question">Follow</a>
+</li>
+<li class='action'>
+<a href="/questions/used-space-in-disk-is-way-larger-than-file-size-debian-7-using-an-sdd-what-can-i-do#to_answer">Answer</a>
+</li>
+<li class='spam action'>
+<a href="/questions/used-space-in-disk-is-way-larger-than-file-size-debian-7-using-an-sdd-what-can-i-do/flags/new" class="flag-link-index" rel="nofollow">Flag</a>
+</li>
+
+<li style='float: right'>
+<div class='user-data'>
+<a href="/users/naesten" class="user-link pjax ajax-tooltip" data-layout="user">Samuel Bronson</a>
+
+<time datetime='2014-11-25T04:36:25+00:00' pubdate='pubdate'>
+<a href="/questions/used-space-in-disk-is-way-larger-than-file-size-debian-7-using-an-sdd-what-can-i-do#5474074997cfef209800255d" class="pjax" data-layout="question">11 days ago</a>
+</time>
+</div>
+</li>
+</ul>
+<div class='panel-forms'></div>
+</div>
+<div class='clear'></div>
+</article>
+
+<article class='Question unanswered' id='546c7d8297cfef5476004516'>
+<h2>
+<a href="/questions/configure-proftpd-for-debian" class="pjax" data-layout="question" title="HelloIam new to linux / debianIm trying to configure an ftp server in debian using proftpd.I installed the packageA user is created when it is installed I put a password to this user and it is work...">configure proftpd for debian</a>
+</h2>
+<ul class='tag-list clearfix'>
+</ul>
+<div class='toolbar'>
+<ul class='menubar'>
+<li class='answers action'>
+<a href="/questions/configure-proftpd-for-debian">0 answers</a>
+</li>
+<li class='action'>
+<a href="/questions/configure-proftpd-for-debian/follow" class="follow-q toggle-action" data-text="Unfollow" data-title="Stop following this question" data-undo="/questions/configure-proftpd-for-debian/unfollow" rel="nofollow" title="Follow this question">Follow</a>
+</li>
+<li class='action'>
+<a href="/questions/configure-proftpd-for-debian#to_answer">Answer</a>
+</li>
+<li class='spam action'>
+<a href="/questions/configure-proftpd-for-debian/flags/new" class="flag-link-index" rel="nofollow">Flag</a>
+</li>
+
+<li style='float: right'>
+<div class='user-data'>
+<a href="/users/53b06bdd97cfef6320004f66" class="user-link pjax ajax-tooltip" data-layout="user">Lev Lazinskiy</a>
+
+<time datetime='2014-11-27T21:04:06+00:00' pubdate='pubdate'>
+<a href="/questions/configure-proftpd-for-debian#547791c697cfef1e9a007983" class="pjax" data-layout="question">8 days ago</a>
+</time>
+</div>
+</li>
+</ul>
+<div class='panel-forms'></div>
+</div>
+<div class='clear'></div>
+</article>
+
+<article class='Question unanswered' id='546c7bd597cfef026b0003aa'>
+<h2>
+<a href="/questions/proftpd-config-errors-in-debian" class="pjax" data-layout="question" title="HelloIam new to linux / debianIm trying to configure an ftp server in debian using proftpd.I installed the packageA user is created when it is installed I put a password to this user and it is work...">Proftpd config errors in debian</a>
+</h2>
+<ul class='tag-list clearfix'>
+</ul>
+<div class='toolbar'>
+<ul class='menubar'>
+<li class='answers action'>
+<a href="/questions/proftpd-config-errors-in-debian">0 answers</a>
+</li>
+<li class='action'>
+<a href="/questions/proftpd-config-errors-in-debian/follow" class="follow-q toggle-action" data-text="Unfollow" data-title="Stop following this question" data-undo="/questions/proftpd-config-errors-in-debian/unfollow" rel="nofollow" title="Follow this question">Follow</a>
+</li>
+<li class='action'>
+<a href="/questions/proftpd-config-errors-in-debian#to_answer">Answer</a>
+</li>
+<li class='spam action'>
+<a href="/questions/proftpd-config-errors-in-debian/flags/new" class="flag-link-index" rel="nofollow">Flag</a>
+</li>
+
+<li style='float: right'>
+<div class='user-data'>
+<a href="/users/mnaddaf" class="user-link pjax ajax-tooltip" data-layout="user">Mohamad Naddaf</a>
+
+<time datetime='2014-11-19T11:15:33+00:00' pubdate='pubdate'>
+<a href="/questions/proftpd-config-errors-in-debian#546c7bd597cfef026b0003aa" class="pjax" data-layout="question">17 days ago</a>
+</time>
+</div>
+</li>
+</ul>
+<div class='panel-forms'></div>
+</div>
+<div class='clear'></div>
+</article>
+
+<article class='Question unanswered' id='546c7b8097cfef7c530046fc'>
+<h2>
+<a href="/questions/configure-proftpd-on-debian" class="pjax" data-layout="question" title="HelloIam new to linux / debianIm trying to configure an ftp server in debian using proftpd.I installed the packageA user is created when it is installed I put a password to this user and it is work...">configure proftpd on debian</a>
+</h2>
+<ul class='tag-list clearfix'>
+</ul>
+<div class='toolbar'>
+<ul class='menubar'>
+<li class='answers action'>
+<a href="/questions/configure-proftpd-on-debian">0 answers</a>
+</li>
+<li class='action'>
+<a href="/questions/configure-proftpd-on-debian/follow" class="follow-q toggle-action" data-text="Unfollow" data-title="Stop following this question" data-undo="/questions/configure-proftpd-on-debian/unfollow" rel="nofollow" title="Follow this question">Follow</a>
+</li>
+<li class='action'>
+<a href="/questions/configure-proftpd-on-debian#to_answer">Answer</a>
+</li>
+<li class='spam action'>
+<a href="/questions/configure-proftpd-on-debian/flags/new" class="flag-link-index" rel="nofollow">Flag</a>
+</li>
+
+<li style='float: right'>
+<div class='user-data'>
+<a href="/users/mnaddaf" class="user-link pjax ajax-tooltip" data-layout="user">Mohamad Naddaf</a>
+
+<time datetime='2014-11-19T11:14:08+00:00' pubdate='pubdate'>
+<a href="/questions/configure-proftpd-on-debian#546c7b8097cfef7c530046fc" class="pjax" data-layout="question">17 days ago</a>
+</time>
+</div>
+</li>
+</ul>
+<div class='panel-forms'></div>
+</div>
+<div class='clear'></div>
+</article>
+
+<article class='Question unanswered' id='546b0dc597cfef5dd6001e3e'>
+<h2>
+<a href="/questions/wifi-not-working-on-new-debian-machine" class="pjax" data-layout="question" title="I just bought a new computer and I intalled Debian on it. I am having a hard time with the wifi connection. It seems that Debian can not see the wlan0 network interface.To provide some details, my ...">wifi not working on new debian machine</a>
+</h2>
+<ul class='tag-list clearfix'>
+<li>
+<a href="/questions/tags/debian" class="tag ajax-tooltip" rel="tag" title="Show questions tagged debian">debian</a>
+</li>
+</ul>
+<div class='toolbar'>
+<ul class='menubar'>
+<li class='answers action'>
+<a href="/questions/wifi-not-working-on-new-debian-machine">0 answers</a>
+</li>
+<li class='action'>
+<a href="/questions/wifi-not-working-on-new-debian-machine/follow" class="follow-q toggle-action" data-text="Unfollow" data-title="Stop following this question" data-undo="/questions/wifi-not-working-on-new-debian-machine/unfollow" rel="nofollow" title="Follow this question">Follow</a>
+</li>
+<li class='action'>
+<a href="/questions/wifi-not-working-on-new-debian-machine#to_answer">Answer</a>
+</li>
+<li class='spam action'>
+<a href="/questions/wifi-not-working-on-new-debian-machine/flags/new" class="flag-link-index" rel="nofollow">Flag</a>
+</li>
+
+<li style='float: right'>
+<div class='user-data'>
+<a href="/users/pasafama" class="user-link pjax ajax-tooltip" data-layout="user">pasafama</a>
+
+<time datetime='2014-11-18T09:13:41+00:00' pubdate='pubdate'>
+<a href="/questions/wifi-not-working-on-new-debian-machine#546b0dc597cfef5dd6001e3e" class="pjax" data-layout="question">18 days ago</a>
+</time>
+</div>
+</li>
+</ul>
+<div class='panel-forms'></div>
+</div>
+<div class='clear'></div>
+</article>
+
+<article class='Question unanswered' id='5463ad1697cfef16750030ed'>
+<h2>
+<a href="/questions/advanced-file-permision-to-directory" class="pjax" data-layout="question" title="how can i set advanced file permision to directory, so everyone in group can read files make new files, byt CANT change content on files alredy there, and CANT delete them, can be done with setfacl...">advanced file permision to directory,</a>
+</h2>
+<ul class='tag-list clearfix'>
+</ul>
+<div class='toolbar'>
+<ul class='menubar'>
+<li class='answers action'>
+<a href="/questions/advanced-file-permision-to-directory">0 answers</a>
+</li>
+<li class='action'>
+<a href="/questions/advanced-file-permision-to-directory/follow" class="follow-q toggle-action" data-text="Unfollow" data-title="Stop following this question" data-undo="/questions/advanced-file-permision-to-directory/unfollow" rel="nofollow" title="Follow this question">Follow</a>
+</li>
+<li class='action'>
+<a href="/questions/advanced-file-permision-to-directory#to_answer">Answer</a>
+</li>
+<li class='spam action'>
+<a href="/questions/advanced-file-permision-to-directory/flags/new" class="flag-link-index" rel="nofollow">Flag</a>
+</li>
+
+<li style='float: right'>
+<div class='user-data'>
+<a href="/users/tomce" class="user-link pjax ajax-tooltip" data-layout="user">Tomislav</a>
+
+<time datetime='2014-11-12T18:55:18+00:00' pubdate='pubdate'>
+<a href="/questions/advanced-file-permision-to-directory#5463ad1697cfef16750030ed" class="pjax" data-layout="question">23 days ago</a>
+</time>
+</div>
+</li>
+</ul>
+<div class='panel-forms'></div>
+</div>
+<div class='clear'></div>
+</article>
+
+<article class='Question unanswered' id='545e6fb897cfef6878003314'>
+<h2>
+<a href="/questions/usbmount-is-only-mounting-2-of-my-usb-drives-can-anyone-help-explain-why" class="pjax" data-layout="question" title="Each drive is an identical type in an identical enclosure. Each is listed in etc/fstab and they all mount successfully with a mount -a command.Can anyone help?">usbmount is only mounting 2 of my USB drives. Can anyone help explain why?</a>
+</h2>
+<ul class='tag-list clearfix'>
+<li>
+<a href="/questions/tags/mount" class="tag ajax-tooltip" rel="tag" title="Show questions tagged mount">mount</a>
+</li>
+</ul>
+<div class='toolbar'>
+<ul class='menubar'>
+<li class='answers action'>
+<a href="/questions/usbmount-is-only-mounting-2-of-my-usb-drives-can-anyone-help-explain-why">0 answers</a>
+</li>
+<li class='action'>
+<a href="/questions/usbmount-is-only-mounting-2-of-my-usb-drives-can-anyone-help-explain-why/follow" class="follow-q toggle-action" data-text="Unfollow" data-title="Stop following this question" data-undo="/questions/usbmount-is-only-mounting-2-of-my-usb-drives-can-anyone-help-explain-why/unfollow" rel="nofollow" title="Follow this question">Follow</a>
+</li>
+<li class='action'>
+<a href="/questions/usbmount-is-only-mounting-2-of-my-usb-drives-can-anyone-help-explain-why#to_answer">Answer</a>
+</li>
+<li class='spam action'>
+<a href="/questions/usbmount-is-only-mounting-2-of-my-usb-drives-can-anyone-help-explain-why/flags/new" class="flag-link-index" rel="nofollow">Flag</a>
+</li>
+
+<li style='float: right'>
+<div class='user-data'>
+<a href="/users/simonbusby" class="user-link pjax ajax-tooltip" data-layout="user">simonbusby</a>
+
+<time datetime='2014-11-08T19:32:08+00:00' pubdate='pubdate'>
+<a href="/questions/usbmount-is-only-mounting-2-of-my-usb-drives-can-anyone-help-explain-why#545e6fb897cfef6878003314" class="pjax" data-layout="question">27 days ago</a>
+</time>
+</div>
+</li>
+</ul>
+<div class='panel-forms'></div>
+</div>
+<div class='clear'></div>
+</article>
+
+<article class='Question unanswered' id='545cbb7197cfef1ab00092e3'>
+<h2>
+<a href="/questions/is-this-normal-that-journald-don-t-contain-any-kernel-messages" class="pjax" data-layout="question" title="Is this normal that journald don’t contain any kernel messages? I am logging dropped packets in iptables. Rsyslog logging them, I can also see them by dmesg, but journalctl -k shows nothing :(">Is this normal that journald don&#x27;t contain any kernel messages?</a>
+</h2>
+<ul class='tag-list clearfix'>
+<li>
+<a href="/questions/tags/debian" class="tag ajax-tooltip" rel="tag" title="Show questions tagged debian">debian</a>
+</li>
+</ul>
+<div class='toolbar'>
+<ul class='menubar'>
+<li class='answers action'>
+<a href="/questions/is-this-normal-that-journald-don-t-contain-any-kernel-messages">0 answers</a>
+</li>
+<li class='action'>
+<a href="/questions/is-this-normal-that-journald-don-t-contain-any-kernel-messages/follow" class="follow-q toggle-action" data-text="Unfollow" data-title="Stop following this question" data-undo="/questions/is-this-normal-that-journald-don-t-contain-any-kernel-messages/unfollow" rel="nofollow" title="Follow this question">Follow</a>
+</li>
+<li class='action'>
+<a href="/questions/is-this-normal-that-journald-don-t-contain-any-kernel-messages#to_answer">Answer</a>
+</li>
+<li class='spam action'>
+<a href="/questions/is-this-normal-that-journald-don-t-contain-any-kernel-messages/flags/new" class="flag-link-index" rel="nofollow">Flag</a>
+</li>
+
+<li style='float: right'>
+<div class='user-data'>
+<a href="/users/alpiwkowski" class="user-link pjax ajax-tooltip" data-layout="user">alpiwkowski</a>
+
+<time datetime='2014-11-07T12:30:41+00:00' pubdate='pubdate'>
+<a href="/questions/is-this-normal-that-journald-don-t-contain-any-kernel-messages#545cbb7197cfef1ab00092e3" class="pjax" data-layout="question">29 days ago</a>
+</time>
+</div>
+</li>
+</ul>
+<div class='panel-forms'></div>
+</div>
+<div class='clear'></div>
+</article>
+
+<article class='Question unanswered' id='545aa42d97cfef4b25006e58'>
+<h2>
+<a href="/questions/oracle-jdk-7u71-as-default" class="pjax" data-layout="question" title="Hi all, im trying install Astah Community Edition (UML Tool) in my Debian Wheezy.The deb installer says that i need Oracle 7 JDK update 65 or later, so i download the JDK from Oracle web.Decompress...">Oracle JDK 7u71 as default</a>
+</h2>
+<ul class='tag-list clearfix'>
+</ul>
+<div class='toolbar'>
+<ul class='menubar'>
+<li class='answers action'>
+<a href="/questions/oracle-jdk-7u71-as-default">0 answers</a>
+</li>
+<li class='action'>
+<a href="/questions/oracle-jdk-7u71-as-default/follow" class="follow-q toggle-action" data-text="Unfollow" data-title="Stop following this question" data-undo="/questions/oracle-jdk-7u71-as-default/unfollow" rel="nofollow" title="Follow this question">Follow</a>
+</li>
+<li class='action'>
+<a href="/questions/oracle-jdk-7u71-as-default#to_answer">Answer</a>
+</li>
+<li class='spam action'>
+<a href="/questions/oracle-jdk-7u71-as-default/flags/new" class="flag-link-index" rel="nofollow">Flag</a>
+</li>
+
+<li style='float: right'>
+<div class='user-data'>
+<a href="/users/4e5388ef19ce95382400a505" class="user-link pjax ajax-tooltip" data-layout="user">Ramiro Martínez D&#x27;Elía</a>
+
+<time datetime='2014-11-05T22:26:53+00:00' pubdate='pubdate'>
+<a href="/questions/oracle-jdk-7u71-as-default#545aa42d97cfef4b25006e58" class="pjax" data-layout="question">about 1 month ago</a>
+</time>
+</div>
+</li>
+</ul>
+<div class='panel-forms'></div>
+</div>
+<div class='clear'></div>
+</article>
+
+<article class='Question unanswered' id='5459786e97cfef5866005efd'>
+<h2>
+<a href="/questions/what-is-the-default-username-password-for-debian-live-amd64bit" class="pjax" data-layout="question" title="what is the default username &amp;amp; password for debian-live amd64bit? I am somewhat inexperienced in Linux command line however I&#x27;ve seen huge numbers of users of all experience levels asking this ...">what is the default username &amp; password for debian-live amd64bit?</a>
+</h2>
+<ul class='tag-list clearfix'>
+</ul>
+<div class='toolbar'>
+<ul class='menubar'>
+<li class='answers action'>
+<a href="/questions/what-is-the-default-username-password-for-debian-live-amd64bit">1 answer</a>
+</li>
+<li class='action'>
+<a href="/questions/what-is-the-default-username-password-for-debian-live-amd64bit/follow" class="follow-q toggle-action" data-text="Unfollow" data-title="Stop following this question" data-undo="/questions/what-is-the-default-username-password-for-debian-live-amd64bit/unfollow" rel="nofollow" title="Follow this question">Follow</a>
+</li>
+<li class='action'>
+<a href="/questions/what-is-the-default-username-password-for-debian-live-amd64bit#to_answer">Answer</a>
+</li>
+<li class='spam action'>
+<a href="/questions/what-is-the-default-username-password-for-debian-live-amd64bit/flags/new" class="flag-link-index" rel="nofollow">Flag</a>
+</li>
+
+<li style='float: right'>
+<div class='user-data'>
+<a href="/users/thomasrutter" class="user-link pjax ajax-tooltip" data-layout="user">thomasrutter</a>
+
+<time datetime='2014-11-05T03:28:55+00:00' pubdate='pubdate'>
+<a href="/questions/what-is-the-default-username-password-for-debian-live-amd64bit#5459995897cfef2662006093" class="pjax" data-layout="question">about 1 month ago</a>
+</time>
+</div>
+</li>
+</ul>
+<div class='panel-forms'></div>
+</div>
+<div class='clear'></div>
+</article>
+
+<article class='Question unanswered' id='54563a4f97cfef5c82006d52'>
+<h2>
+<a href="/questions/change-default-desktop-manager" class="pjax" data-layout="question" title="Hi, I&#x27;m new to debian and kind of new in Linux world in general.&amp;nbsp;I need to change my default desktop manager to Awesome (another desktop manager) AND&amp;nbsp;&amp;nbsp;boot straight to the command li...">change default desktop manager</a>
+</h2>
+<ul class='tag-list clearfix'>
+<li>
+<a href="/questions/tags/desktop" class="tag ajax-tooltip" rel="tag" title="Show questions tagged desktop">desktop</a>
+</li>
+<li>
+<a href="/questions/tags/login" class="tag ajax-tooltip" rel="tag" title="Show questions tagged login">login</a>
+</li>
+</ul>
+<div class='toolbar'>
+<ul class='menubar'>
+<li class='answers action'>
+<a href="/questions/change-default-desktop-manager">0 answers</a>
+</li>
+<li class='action'>
+<a href="/questions/change-default-desktop-manager/follow" class="follow-q toggle-action" data-text="Unfollow" data-title="Stop following this question" data-undo="/questions/change-default-desktop-manager/unfollow" rel="nofollow" title="Follow this question">Follow</a>
+</li>
+<li class='action'>
+<a href="/questions/change-default-desktop-manager#to_answer">Answer</a>
+</li>
+<li class='spam action'>
+<a href="/questions/change-default-desktop-manager/flags/new" class="flag-link-index" rel="nofollow">Flag</a>
+</li>
+
+<li style='float: right'>
+<div class='user-data'>
+<a href="/users/x0redq" class="user-link pjax ajax-tooltip" data-layout="user">x0redq</a>
+
+<time datetime='2014-11-02T14:06:07+00:00' pubdate='pubdate'>
+<a href="/questions/change-default-desktop-manager#54563a4f97cfef5c82006d52" class="pjax" data-layout="question">about 1 month ago</a>
+</time>
+</div>
+</li>
+</ul>
+<div class='panel-forms'></div>
+</div>
+<div class='clear'></div>
+</article>
+
+<article class='Question unanswered' id='544fb09f97cfef360a000f25'>
+<h2>
+<a href="/questions/what-are-the-best-alternatives-to-email-services-like-gmail" class="pjax" data-layout="question" title="One suggestion per answer, please:The suggestions will be collected at https://wiki.debian.org/FreedomBox">What are the best alternatives to email services like Gmail?</a>
+</h2>
+<ul class='tag-list clearfix'>
+</ul>
+<div class='toolbar'>
+<ul class='menubar'>
+<li class='answers action'>
+<a href="/questions/what-are-the-best-alternatives-to-email-services-like-gmail">1 answer</a>
+</li>
+<li class='action'>
+<a href="/questions/what-are-the-best-alternatives-to-email-services-like-gmail/follow" class="follow-q toggle-action" data-text="Unfollow" data-title="Stop following this question" data-undo="/questions/what-are-the-best-alternatives-to-email-services-like-gmail/unfollow" rel="nofollow" title="Follow this question">Follow</a>
+</li>
+<li class='action'>
+<a href="/questions/what-are-the-best-alternatives-to-email-services-like-gmail#to_answer">Answer</a>
+</li>
+<li class='spam action'>
+<a href="/questions/what-are-the-best-alternatives-to-email-services-like-gmail/flags/new" class="flag-link-index" rel="nofollow">Flag</a>
+</li>
+
+<li style='float: right'>
+<div class='user-data'>
+<a href="/users/federico2" class="user-link pjax ajax-tooltip" data-layout="user">federico2</a>
+
+<time datetime='2014-10-28T15:05:03+00:00' pubdate='pubdate'>
+<a href="/questions/what-are-the-best-alternatives-to-email-services-like-gmail#544fb09f97cfef360a000f25" class="pjax" data-layout="question">about 1 month ago</a>
+</time>
+</div>
+</li>
+</ul>
+<div class='panel-forms'></div>
+</div>
+<div class='clear'></div>
+</article>
+
+<article class='Question unanswered' id='545153cf97cfef59c3007d9d'>
+<h2>
+<a href="/questions/search-causing-empty-site" class="pjax" data-layout="question" title="when searching for a topic I get only a blank page after hitting enter. that happens to me under the current debian with iceweasel (31.2) and chromium (Version 37.0.2062.120 Built on Debian 7.6, ru...">search causing empty site</a>
+</h2>
+<ul class='tag-list clearfix'>
+</ul>
+<div class='toolbar'>
+<ul class='menubar'>
+<li class='answers action'>
+<a href="/questions/search-causing-empty-site">0 answers</a>
+</li>
+<li class='action'>
+<a href="/questions/search-causing-empty-site/follow" class="follow-q toggle-action" data-text="Unfollow" data-title="Stop following this question" data-undo="/questions/search-causing-empty-site/unfollow" rel="nofollow" title="Follow this question">Follow</a>
+</li>
+<li class='action'>
+<a href="/questions/search-causing-empty-site#to_answer">Answer</a>
+</li>
+<li class='spam action'>
+<a href="/questions/search-causing-empty-site/flags/new" class="flag-link-index" rel="nofollow">Flag</a>
+</li>
+
+<li style='float: right'>
+<div class='user-data'>
+<a href="/users/burkhardpranke" class="user-link pjax ajax-tooltip" data-layout="user">burkhard alexander pranke</a>
+
+<time datetime='2014-10-29T21:05:30+00:00' pubdate='pubdate'>
+<a href="/questions/search-causing-empty-site#5451569a97cfef5d9900171b" class="pjax" data-layout="question">about 1 month ago</a>
+</time>
+</div>
+</li>
+</ul>
+<div class='panel-forms'></div>
+</div>
+<div class='clear'></div>
+</article>
+
+<article class='Question accepted' id='544811c997cfef3527006e09'>
+<h2>
+<a href="/questions/no-root-file-system-is-defined" class="pjax" data-layout="question" title="we set up debian wheezy kvm guests via pxe and preseed with an now older initrd.gz from netinstall. seems like since 7.7 release its not working anymore. we just get a &quot;no root file system is defin...">&quot;no root file system is defined&quot;</a>
+</h2>
+<ul class='tag-list clearfix'>
+<li>
+<a href="/questions/tags/initrd.gz" class="tag ajax-tooltip" rel="tag" title="Show questions tagged initrd.gz">initrd.gz</a>
+</li>
+<li>
+<a href="/questions/tags/preseed" class="tag ajax-tooltip" rel="tag" title="Show questions tagged preseed">preseed</a>
+</li>
+<li>
+<a href="/questions/tags/pxe%2Ftftp" class="tag ajax-tooltip" rel="tag" title="Show questions tagged pxe/tftp">pxe/tftp</a>
+</li>
+</ul>
+<div class='toolbar'>
+<ul class='menubar'>
+<li class='solution action'>
+<a href="/questions/no-root-file-system-is-defined#answer545094af97cfef528a002df8" rel="nofollow">Solution</a>
+</li>
+<li class='answers action'>
+<a href="/questions/no-root-file-system-is-defined">1 answer</a>
+</li>
+<li class='action'>
+<a href="/questions/no-root-file-system-is-defined/follow" class="follow-q toggle-action" data-text="Unfollow" data-title="Stop following this question" data-undo="/questions/no-root-file-system-is-defined/unfollow" rel="nofollow" title="Follow this question">Follow</a>
+</li>
+<li class='action'>
+<a href="/questions/no-root-file-system-is-defined#to_answer">Answer</a>
+</li>
+<li class='spam action'>
+<a href="/questions/no-root-file-system-is-defined/flags/new" class="flag-link-index" rel="nofollow">Flag</a>
+</li>
+
+<li style='float: right'>
+<div class='user-data'>
+<a href="/users/mistashintla" class="user-link pjax ajax-tooltip" data-layout="user">mistashintla</a>
+
+<time datetime='2014-10-29T07:18:14+00:00' pubdate='pubdate'>
+<a href="/questions/no-root-file-system-is-defined#544811c997cfef3527006e09" class="pjax" data-layout="question">about 1 month ago</a>
+</time>
+</div>
+</li>
+</ul>
+<div class='panel-forms'></div>
+</div>
+<div class='clear'></div>
+</article>
+
+<article class='Question unanswered' id='544faf1097cfef63ca001506'>
+<h2>
+<a href="/questions/what-are-the-best-alternatives-to-photo-gallery-services-flickr-imageshack" class="pjax" data-layout="question" title="">What are the best alternatives to photo gallery services (flickr/imageshack)?</a>
+</h2>
+<ul class='tag-list clearfix'>
+</ul>
+<div class='toolbar'>
+<ul class='menubar'>
+<li class='answers action'>
+<a href="/questions/what-are-the-best-alternatives-to-photo-gallery-services-flickr-imageshack">0 answers</a>
+</li>
+<li class='action'>
+<a href="/questions/what-are-the-best-alternatives-to-photo-gallery-services-flickr-imageshack/follow" class="follow-q toggle-action" data-text="Unfollow" data-title="Stop following this question" data-undo="/questions/what-are-the-best-alternatives-to-photo-gallery-services-flickr-imageshack/unfollow" rel="nofollow" title="Follow this question">Follow</a>
+</li>
+<li class='action'>
+<a href="/questions/what-are-the-best-alternatives-to-photo-gallery-services-flickr-imageshack#to_answer">Answer</a>
+</li>
+<li class='spam action'>
+<a href="/questions/what-are-the-best-alternatives-to-photo-gallery-services-flickr-imageshack/flags/new" class="flag-link-index" rel="nofollow">Flag</a>
+</li>
+
+<li style='float: right'>
+<div class='user-data'>
+<a href="/users/federico2" class="user-link pjax ajax-tooltip" data-layout="user">federico2</a>
+
+<time datetime='2014-10-28T14:58:24+00:00' pubdate='pubdate'>
+<a href="/questions/what-are-the-best-alternatives-to-photo-gallery-services-flickr-imageshack#544faf1097cfef63ca001506" class="pjax" data-layout="question">about 1 month ago</a>
+</time>
+</div>
+</li>
+</ul>
+<div class='panel-forms'></div>
+</div>
+<div class='clear'></div>
+</article>
+
+<article class='Question unanswered' id='544fb12e97cfef360a00109d'>
+<h2>
+<a href="/questions/what-are-the-best-alternatives-to-blog-publishing-services-blogger-com-wordpress-com" class="pjax" data-layout="question" title="">What are the best alternatives to blog publishing services (blogger.com/wordpress.com)?</a>
+</h2>
+<ul class='tag-list clearfix'>
+<li>
+<a href="/questions/tags/freedombox" class="tag ajax-tooltip" rel="tag" title="Show questions tagged freedombox">freedombox</a>
+</li>
+</ul>
+<div class='toolbar'>
+<ul class='menubar'>
+<li class='answers action'>
+<a href="/questions/what-are-the-best-alternatives-to-blog-publishing-services-blogger-com-wordpress-com">0 answers</a>
+</li>
+<li class='action'>
+<a href="/questions/what-are-the-best-alternatives-to-blog-publishing-services-blogger-com-wordpress-com/follow" class="follow-q toggle-action" data-text="Unfollow" data-title="Stop following this question" data-undo="/questions/what-are-the-best-alternatives-to-blog-publishing-services-blogger-com-wordpress-com/unfollow" rel="nofollow" title="Follow this question">Follow</a>
+</li>
+<li class='action'>
+<a href="/questions/what-are-the-best-alternatives-to-blog-publishing-services-blogger-com-wordpress-com#to_answer">Answer</a>
+</li>
+<li class='spam action'>
+<a href="/questions/what-are-the-best-alternatives-to-blog-publishing-services-blogger-com-wordpress-com/flags/new" class="flag-link-index" rel="nofollow">Flag</a>
+</li>
+
+<li style='float: right'>
+<div class='user-data'>
+<a href="/users/federico2" class="user-link pjax ajax-tooltip" data-layout="user">federico2</a>
+
+<time datetime='2014-10-28T15:11:37+00:00' pubdate='pubdate'>
+<a href="/questions/what-are-the-best-alternatives-to-blog-publishing-services-blogger-com-wordpress-com#544fb12e97cfef360a00109d" class="pjax" data-layout="question">about 1 month ago</a>
+</time>
+</div>
+</li>
+</ul>
+<div class='panel-forms'></div>
+</div>
+<div class='clear'></div>
+</article>
+
+  <nav class="pagination">
+    
+    
+        <span class="page current">
+  1
+</span>
+
+        <span class="page">
+  <a href="/questions?page=2" rel="next">2</a>
+</span>
+
+        <span class="page">
+  <a href="/questions?page=3">3</a>
+</span>
+
+        <span class="page">
+  <a href="/questions?page=4">4</a>
+</span>
+
+        <span class="page">
+  <a href="/questions?page=5">5</a>
+</span>
+
+        <span class="page gap">...</span>
+
+    <span class="next">
+  <a href="/questions?page=2" rel="next">Next &raquo;</a>
+</span>
+
+    <span class="last">
+  <a href="/questions?page=47">Last</a>
+</span>
+
+  </nav>
+
+
+</section>
+
+</div>
+</section>
+
+</div>
+
+<div class='top-bar' data-title='Sign in' id='login_dialog'>
+<ul class='auth-list'>
+<li>
+<ul class='drop-menu providers-list'>
+<li>
+<a href="/users/auth/open_id?openid_url=https://www.google.com/accounts/o8/id" class="auth-provider Google" id="google">Google</a>
+</li>
+<li>
+<a href="/users/auth/twitter" class="auth-provider Twitter" id="twitter">Twitter</a>
+</li>
+<li>
+<a href="/users/auth/facebook" class="auth-provider Facebook" id="facebook">Facebook</a>
+</li>
+<li>
+<a href="/users/auth/open_id?openid_url=https://launchpad.net/~{user_name}" class="auth-provider Launchpad" id="launchpad">Launchpad</a>
+</li>
+<li>
+<a href="/users/auth/identica" class="auth-provider Identica" id="identica">Identica</a>
+</li>
+<li>
+<a href="/users/login?open_id=1" class="auth-provider OpenID" data-toggle-dropdown="dropdown-signin-openid" id="openid">OpenID</a>
+</li>
+<li class='hidden dropdown-signin-openid dropdown-form'>
+<form accept-charset="UTF-8" action="/users/auth/open_id" class="form" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div>
+<div class='drop-down-field'>
+<label for="OpenID">Openid URL</label>
+</div>
+<div class='drop-down-field'>
+<input class="text_field drop-down-input" id="openid_url" name="openid_url" type="text" />
+</div>
+<div class='buttons'>
+<input class="save save-login-dropdown" name="commit" type="submit" value="Sign in" />
+</div>
+</form>
+</li>
+<li>
+<a href="/users/login" class="login" data-href="/users/new" data-toggle-dropdown="dropdown-signin" id="login">Sign in with your email</a>
+</li>
+<li class='hidden dropdown-signin dropdown-form'>
+<form accept-charset="UTF-8" action="/users/login" class="form" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="4+Z1L2gvLz61Xskb9+ZDYk/B9vb3zGsgx7Jv6UJl7r4=" /></div>
+<div class='drop-down-field'>
+<input class="text_field drop-down-input" id="user_email" name="user[email]" placeholder="Email" size="30" type="text" />
+</div>
+<div class='drop-down-field'>
+<input class="password drop-down-input" id="user_password" name="user[password]" placeholder="Password" size="30" type="password" />
+</div>
+<div class='checkbox checkbox-dropdown'>
+<input name="user[remember_me]" type="hidden" value="0" /><input id="user_remember_me" name="user[remember_me]" type="checkbox" value="1" />
+<label class="drop-down-checkbox-label" for="user_remember_me">Remember me</label>
+</div>
+<div class='buttons'>
+<input class="save save-login-dropdown" name="commit" type="submit" value="Sign in" />
+</div>
+</form>
+</li>
+<li class='hidden dropdown-signup dropdown-form'>
+<form accept-charset="UTF-8" action="/users" class="form" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="4+Z1L2gvLz61Xskb9+ZDYk/B9vb3zGsgx7Jv6UJl7r4=" /></div>
+<div class='drop-down-field'>
+<input class="text_field drop-down-input" id="user_login" name="user[login]" placeholder="Username" size="30" type="text" />
+</div>
+<div class='drop-down-field'>
+<input class="text_field drop-down-input" id="user_name" name="user[name]" placeholder="Real name" size="30" type="text" />
+</div>
+<div class='drop-down-field'>
+<input class="text_field drop-down-input" id="user_email" name="user[email]" placeholder="Email" size="30" type="text" />
+</div>
+<div class='drop-down-field'>
+<input class="password drop-down-input" id="user_password" name="user[password]" placeholder="Password" size="30" type="password" />
+</div>
+<div class='drop-down-field'>
+<input class="password drop-down-input" id="user_password_confirmation" name="user[password_confirmation]" placeholder="Password confirmation" size="30" type="password" />
+</div>
+<div class='buttons'>
+<input class="save save-login-dropdown" name="commit" type="submit" value="Sign up" />
+</div>
+</form>
+</li>
+<li class='dropdown-signin dropdown-form hidden'>
+<a href="/users/password/new">Forgot password?</a>
+</li>
+<li>
+<a href="/users/new" class="auth-provider login" data-href="/users/new" data-toggle-dropdown="dropdown-signup" id="login">Sign up with an email/password</a>
+</li>
+</ul>
+
+</li>
+</ul>
+</div>
+<div class='hide' data-title='Join Debian' id='join_dialog'>
+<a href="/groups/join" id="join_dialog_link">You need to join Debian to complete this action, click here to do so.</a>
+</div>
+<footer>
+<nav>
+<ul>
+<li>
+<a href="http://blog.ricodigo.com/blog/categories/shapado/">Blog</a>
+</li>
+<li>
+<a href="http://twitter.com/shapado">Twitter</a>
+</li>
+<li>
+<a href="http://identi.ca/shapado">Identi.ca</a>
+</li>
+<li>
+<a href="irc://irc.freenode.org/shapado">IRC</a>
+</li>
+<li>
+<a href="http://debian.net/chat">Chat</a>
+</li>
+<li>
+<a href="http://ask.debian.net/shapado_feedback" class="feedback" id="feedback">Feedback</a>
+</li>
+<li>
+<a href="/tos">TOS</a>
+</li>
+<li>
+<a href="/privacy">Privacy</a>
+</li>
+</ul>
+</nav>
+<p>
+All Shapado.com content and data are available under the <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0</a> license
+</p>
+<p>
+<!-- !!!!!!!!!!!! DO NOT REMOVE LINK TO SOURCE CODE AND LICENSE !!!!!!!!!!!!! -->
+Powered by <a href="http://gitorious.org/shapado">Shapado</a> 4.1.0
+ under the <a href="http://www.fsf.org/licensing/licenses/agpl-3.0.html">GNU Affero General Public License</a>
+</p>
+<div class='feedback' style='display:none'>
+<form accept-charset="UTF-8" action="/send_shapado_feedback" class="form" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="4+Z1L2gvLz61Xskb9+ZDYk/B9vb3zGsgx7Jv6UJl7r4=" /></div>
+<div class='field'>
+<label class="label" for="feedback_title">Title</label>
+<input class="text_field" id="feedback_title" name="feedback[title]" type="text" />
+</div>
+<div class='field'>
+<label class="label" for="feedback_description">Description</label>
+<textarea class="text_area" cols="55" id="feedback_description" name="feedback[description]" rows="15">&#x000A;</textarea>
+</div>
+<div class='field'>
+<label class="label" for="feedback_email">Email</label>
+<input class="text_field" id="feedback_email" name="feedback[email]" type="text" />
+<small>
+Please provide your email address so we can answer your message
+</small>
+</div>
+<div class='field capcha'>
+<script type="text/javascript">
+var RecaptchaOptions = {"lang":"en"};
+</script><script type="text/javascript" src="http://api.recaptcha.net/challenge?k=6LfZM70SAAAAAOvGXI_BSsKpS4qg_bVKArMoc_U3">
+</script>
+</div>
+<div class='buttons'>
+<input class="save" name="commit" type="submit" value="Send" />
+or
+<a href="/" class="cancel-feedback">Cancel</a>
+</div>
+</form>
+
+
+</div>
+<script src='//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'></script>
+<script>
+  //<![CDATA[
+    window.jQuery || document.write('<script src="http://shapado.com:80/assets/jquery-3599eebe14c2ecb9951ab11418ae219e.js" type="text/javascript"><\/script>')
+  //]]>
+</script>
+
+<meta data-theme-js='/_files/themes/javascript/4b917d9519ce95468f00000b/4e6db89e97cfef2a29000001/5.js'>
+<script src="http://shapado.com:80/assets/application-da8caee055d683bc0cb997a39233edd8.js" type="text/javascript"></script>
+<script src="http://shapado.com:80/assets/i18n/en-85e7ced09d4cc8013d0d3a10f95e97b8.js" type="text/javascript"></script>
+
+<!--[if lt IE 7 ]>
+<script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.2/CFInstall.min.js"></script>
+<script>window.attachEvent("onload",function(){CFInstall.check({mode:"overlay"})})</script>
+<![endif]-->
+
+<div data-group='4b917d9519ce95468f00000b' data-host='ask.debian.net' id='websocket'></div>
+<div data-title='Chat: Debian' id='chat_div'></div>
+
+</footer>
+
+</div>
+<script type="text/javascript">if (!NREUMQ.f) { NREUMQ.f=function() {
+NREUMQ.push(["load",new Date().getTime()]);
+var e=document.createElement("script");
+e.type="text/javascript";e.async=true;e.src="https://js-agent.newrelic.com/nr-100.js";
+document.body.appendChild(e);
+if(NREUMQ.a)NREUMQ.a();
+};
+NREUMQ.a=window.onload;window.onload=NREUMQ.f;
+};
+NREUMQ.push(["nrfj","beacon-1.newrelic.com","c483345412",557697,"cg1fQUIJVF1dF0kQRFQRRVxfCEseUQsCBEk=",0,857,new Date().getTime(),"","","","",""])</script></body>
+</html>

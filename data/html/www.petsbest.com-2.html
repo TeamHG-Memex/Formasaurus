@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=1000" />
+    <title>Customer Portal - Register Your Account</title>
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+        google.load("jquery", "1.4");
+        google.load("jqueryui", "1.8.2");
+    </script>
+    <link href="/customerportal/Content/PBCustSatContentCss?v=IGisAfBKign5VhpYw9B0WQTzXlheRHy2ODwHi8FwteA1" rel="stylesheet"/>
+
+    
+    <script src="/customerportal/Scripts/PBContentJs?v=FtyNjKHYkmL6zQPMBQSioIr8Lu8YVSuxhcVga7h5g841"></script>
+
+    <script type='text/javascript'>
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-219726-3']);
+_gaq.push(['_trackPageview']);
+(function () {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+
+</head>
+<body>
+    <div id="wrapper">
+        <div class="w1">
+            <div class="container">
+                
+<div id="header">
+    <div class="logo-box">
+        <strong class="logo"><a href="/">Pets Best Insurance. Simply the best pet insurance.</a></strong>
+        <span class="slogan">Pet Insurance for Dogs and Cats</span>
+    </div>
+    
+    <div class="block">
+        <div class="bar">
+            
+<form action="#" class="search-form">
+    <fieldset class=" ">
+        <input type="text" id="GoogleSearchTxt" class="TextMod" name="Pet Insurance Search" onblur="if(this.value=='')this.value=this.defaultValue;" onfocus="if(this.value==this.defaultValue)this.value='';" value="search" />
+        <input type="submit" id="GoogleSearchGo" value="go" onclick="DoGoogleSearch();" />
+    </fieldset>
+</form>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#GoogleSearchTxt").keyup(function (e) {
+            if (e.keyCode == 13) {
+                DoGoogleSearch();
+            }
+            return false;
+        });
+
+        $("#GoogleSearchGo").click(function () {
+            DoGoogleSearch();
+            return false;
+        });
+    });
+
+    function DoGoogleSearch() {
+        if ($("#GoogleSearchTxt").val() != "") {
+            var searchText = $("#GoogleSearchTxt").val();
+            window.location = "/SearchResults?cx=009855375231210710036%3aufh_uortyg4&q=" + searchText;
+        }
+    }
+</script>
+            <div class="add-info">
+                <span class="phone">1-877-738-7237</span>
+                <div class="box">
+                    <div class="login-box">
+                    
+                        <a href="/customerportal" class="login"></a>
+                        <span id="lhnChatButton" style="display: none;"></span>
+                        <div id="lhnContainer" style="float: left; margin-left: 10px;"></div>
+                        <a href="#" class="livechat" onclick="OpenLHNChat();return false;"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav id="nav">
+            <ul>
+				<li><a href="/pet-insurance-plans">Plan Information</a></li>
+				<li><a href="/dog-insurance">Dog Insurance</a></li>
+				<li><a href="/cat-insurance">Cat Insurance</a></li>
+				<li><a href="/customer-center">Customer Center</a></li>
+            </ul>
+        </nav>
+        <a href="/why-pets-best/underwriters-licensing" class="link">Underwriting Information</a>
+    </div>
+</div>
+
+                <div id="main" class="custsatmain">
+                   <div class="panel">
+	                    <span class="caption">Register For Your Account</span>
+	                    <div>
+		                    <div class="box" style="height: 150px;">
+		                    </div>
+                            <div class="box">
+                            </div>
+	                    </div>
+                    </div>
+                    <div class="content">
+                        <div class="content-holder">
+                            <div id="twocolumns">
+                                <article id="content" class="section-area">
+                                    
+
+
+<form action="/customerportal/Account/RegisterAccount" class="form" id="RegisterAccountForm" method="post">    <div style="width: 700px; margin: 10px auto 15px auto;">
+
+
+        <div id="RegisterAccountMsg" style="display: none; margin: 15px 10px 0 20px;" class="Success">
+            
+        </div>
+
+        <div>
+            <h2 style="margin: 15px 0;">To get started, please confirm a few details about your policy.</h2>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="Right"><label for="Email">Your Email Address</label>:</td>
+                        <td>
+                            <span class="custominput">
+                                <input data-val="true" data-val-email="Please enter a valid email address" id="RAEmail" name="Email" type="text" value="" />
+                                <span class="field-validation-valid" data-valmsg-for="Email" data-valmsg-replace="true"></span>
+                            </span>
+                        </td>
+                        <td style="padding-top: 0px;">
+                            <div class="RoundTable" style="width: 350px;">
+                                <div class="RoundTable_Hd"><div class="RoundTable_Hd_C"></div></div>
+                                <div class="RoundTable_Body" style="padding: 0px 5px 0px 5px; color: #a87a00; font-size: 11px;">
+                                    Use the Email address you entered when you signed up.
+                                </div>
+                                <div class="RoundTable_Ft"><div class="RoundTable_Ft_C"></div></div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr><td colspan="3" style="font-size: 14px; font-weight: bold;">or</td></tr>
+                    <tr>
+                        <td style="width: 150px;" class="Right"><label for="PolicyNum">Your Policy Number</label>:</td>
+                        <td>
+                            <span class="custominput">
+                                <input data-val="true" data-val-number="The field Your Policy Number must be a number." data-val-regex="Please enter a numeric Policy Number" data-val-regex-pattern="^[0-9]+$" id="RAPolicyNum" name="PolicyNum" type="text" value="" />
+                                <span class="field-validation-valid" data-valmsg-for="PolicyNum" data-valmsg-replace="true"></span>
+                            </span>
+                            
+                        </td>
+                        <td style="padding-top: 0px;">
+                            <div class="RoundTable" style="width: 350px;">
+                                <div class="RoundTable_Hd"><div class="RoundTable_Hd_C"></div></div>
+                                <div class="RoundTable_Body" style="padding: 0px 5px 0px 5px; color: #a87a00; font-size: 11px;">
+                                    Your policy number can be found at the top of the first email we sent you when you signed up.
+                                </div>
+                                <div class="RoundTable_Ft"><div class="RoundTable_Ft_C"></div></div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" align="center"><br />
+                            <input type="submit" value="Register My Account" class="button" style="float:none"/>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</form>
+<script type="text/javascript">
+    $(function () {
+        DelayHideMsg($("#RegisterAccountMsg"), 60000);
+
+        $("#RegisterAccountForm").submit(function (e) {
+            if (!IsAllValid()) {
+                return false;
+            }
+        });
+
+
+        function IsAllValid() {
+            var isValid = IsFormValid($("#RegisterAccountForm"));
+            var isOneValid = IsOneValValid();
+
+            if (isValid && isOneValid) {
+                $("#RegisterAccountMsg").hide();
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+
+        $(function () {
+            $('input[type=text]').focus(function () {
+                $(this).val('');
+            });
+        });
+
+        function IsOneValValid() {
+            var hasEmail = $("#RAEmail") && $.trim($("#RAEmail").val()) == "" ? false : true;
+            var hasPolNum = $("#RAPolicyNum") && $.trim($("#RAPolicyNum").val()) == "" ? false : true;
+
+            if (!hasEmail && !hasPolNum) {
+                $("#RegisterAccountMsg").text("Please enter either your Email Address or your Policy Number").removeClass("Success").addClass("Error").show();
+                return false;
+            }
+            return true;
+        }
+    });
+</script>
+                                </article>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+<div id="footer">
+    <div class="footer-holder">
+        <div class="footer-frame">
+            <div class="holder">
+                <nav class="add-nav">
+                    <ul class="add-nav">
+                        <li><a href="/why-pets-best/contact-us">Contact Us</a></li>
+                        <li><a href="/why-pets-best/about-us">About Pets Best</a></li>
+                        <li><a href="/careers/">Careers</a></li>
+                        <li><a href="/blog">Blog</a></li>
+                        <li><a href="/sitemap">Site Map</a></li>
+                        <li><a href="/why-pets-best/press-releases">Press</a></li>
+                        <li><a href="mailto: webmaster@petsbest.com">Webmaster</a></li>
+                        <li><a href="/terms-and-conditions">Terms &amp; Conditions</a></li>
+                        <li><a href="/terms-and-conditions/privacy-agreement">Privacy Agreement</a></li>
+                        <li><a href="/terms-and-conditions/application-agreement">Application Agreement</a></li>
+                        <li><a href="/why-pets-best/underwriters-licensing">Underwriting Info</a></li>
+                        <li><a href="/patent">Patent</a></li>
+                    </ul>
+                </nav>
+
+                <div class="block">
+                    <div class="add-box">
+                        <ul class="logo-list">
+							<li><a target="_blank" href="http://naphia.org"><img src="/customerportal/images/cssimg/logo_naphia.png" width="104" height="65" alt="North American Pet Health Insurance Association"></a></li>
+                            <li><a target="_blank" href="https://seal.qualys.com/sealserv/info/?i=93e34238-2457-43f1-9fff-cfccf304216a"><img src="//seal.qualys.com/sealserv/seal.gif?i=93e34238-2457-43f1-9fff-cfccf304216a" width="89" height="47" alt="" /></a></li>
+							<li><a target="_blank" href="http://www.bbb.org/boise/business-reviews/pet-health-plans/pets-best-insurance-in-boise-id-39001947/#bbbonlineclick"><img src="//ourbbbonline2.bbb.org/Boise/BBBOnlineSeal/39001947/H2/1/seal.png" width="200" height="65" alt="Pets Best BBB Business Review"></a></li>
+                        </ul>
+                        <div class="box">
+                            <div class="box-holder">
+                                <span class="text">Perfect for:</span>
+                                <ul class="list">
+                                    <li><a href="/veterinarians">Veterinarians</a></li>
+                                    <li><a href="/pet-insurance-partners">Affiliates</a></li>
+                                    <li><a href="/pet-insurance-partners/employers">Employers</a></li>
+                                    <li><a href="/pet-insurance-partners/agents-brokers">Brokers & Agents</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div itemscope itemtype="http://schema.org/Organization" class="foot-copywrite top">
+                        <strong>Copyright &copy; 2005-2014 <span itemprop="name">Pets Best Insurance Services, LLC</span></strong>
+                        <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                            <strong><span itemprop="streetAddress">2323 S. Vista Ave. Ste. 100</span>
+                                <span itemprop="addressLocality">Boise</span>, 
+                            <span itemprop="addressRegion">ID</span>
+                                <span itemprop="postalCode">83705</span>
+                            </strong>
+                        </span>
+                        - 
+                        <strong><span itemprop="telephone">877-738-7237</span></strong>
+                    </div>
+
+                    <p>Pet insurance coverage offered and administered by Pets Best Insurance Services, LLC is underwritten by Independence American Insurance Company, 
+                                    a Delaware insurance company. Independence American Insurance Company is a member of The IHC Group, an organization of insurance carriers and 
+                                    marketing and administrative affiliates that has been providing life, health, disability, medical stop-loss and specialty insurance solutions 
+                                    to groups and individuals for over 30 years. For information on The IHC Group, visit: www.ihcgroup.com. Additional insurance services administered 
+                                    by Pets Best Insurance Services, LLC are underwritten by Prime Insurance Company. Some existing business is underwritten by Aetna Insurance Company 
+                                    of Connecticut. Each insurer has sole financial responsibility for its own products.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    </div>
+</body>
+</html>

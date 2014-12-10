@@ -1,0 +1,1321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" xml:lang="de"><head>
+<base href="http://ddl-board.org/" />
+	<title>Startseite - DDL-Board.org  (4.0)</title>
+	
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta http-equiv="content-script-type" content="text/javascript" />
+<meta http-equiv="content-style-type" content="text/css" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<meta http-equiv="X-UA-Compatible" content="IE=8" />
+
+<script type="text/javascript" src="wcf/js/3rdParty/protoaculous.1.8.2.min.js"></script>
+<script type="text/javascript" src="wcf/js/default.js"></script>
+<script type="text/javascript" src="wcf/js/PopupMenuList.class.js"></script>
+<script type="text/javascript" src="wcf/js/AjaxRequest.class.js"></script>
+
+<!-- wbb styles -->
+<link rel="stylesheet" type="text/css" media="screen" href="http://ddl-board.org/style/burningBoard.css" />
+
+	<!-- special styles -->
+	<link href="http://ddl-board.org/wcf/style/style-achievements.css" type="text/css" rel="stylesheet"/>
+<!-- video bbcode javascript and ie styles -->
+<script type="text/javascript" src="wcf/js/VideoBBCode.class.js"></script>
+<script type="text/javascript">
+	//<![CDATA[			
+	// when the window is fully loaded, initialize the video bbcode javascript
+	Event.observe(window, 'load', function() {
+		new VideoBBCode({
+			zoomIn		: 'Video vergrößern',
+			copyright	: '<a href="http://www.forenberg.de/">BBCode: <strong>Video</strong>, entwickelt von <strong>Bergwerk</strong></a>',
+			defaultTitle	: 'Video'
+		});
+	});
+//]]>
+</script>
+
+<!--[if lte IE 7]>
+<style type="text/css">
+	.videoBBCodeContainerLeft .videoBBCodeInnerContainer, .videoBBCodeContainerRight .videoBBCodeInnerContainer, .videoBBCodeContainerSmallLeft .videoBBCodeInnerContainer, .videoBBCodeContainerSmallRight .videoBBCodeInnerContainer, .videoBBCodeContainerWideLeft .videoBBCodeInnerContainer, .videoBBCodeContainerWideRight .videoBBCodeInnerContainer { width: auto; }
+	.videoBBCodeContainerSmallLeft, .videoBBCodeContainerSmallRight { width: 254px; }
+	.videoBBCodeContainerWideLeft, .videoBBCodeContainerWideRight { width: 504px; }
+	.videoBBCodeContainerLeft, .videoBBCodeContainerRight { width: 404px; }
+</style>
+<![endif]-->
+<!--[if IE]><style type="text/css">.videoBBCodeHR { display: block !important; clear: both; }</style><![endif]--><script type="text/javascript" src="wcf/js/3rdParty/jquery.min.js"></script><script type="text/javascript">jQuery.noConflict();</script><script type="text/javascript" src="wcf/js/3rdParty/jquery-ui.min.js"></script><script type="text/javascript" src="wcf/js/Spoiler.class.js"></script><script type="text/javascript" src="wcf/js/AdvancedPageMenu.class.js"></script><!-- Miscellaneous -->
+<script type="text/javascript">
+	//<![CDATA[
+	function externalLinks() {
+		var anchors = document.getElementsByTagName('a');
+		for (var i = 0; i < anchors.length; i++ ) {
+			var anchor = anchors[i];
+			if ((anchor.className == 'externalURL')|| anchor.parentNode.className == 'columnHomepage') {
+				anchor.onclick = function() { window.open(this.href, '_blank'); return false; }
+			}
+						if (anchor.childNodes.length != 0 && anchor.childNodes[0].src && anchor.childNodes[0].src.search(/websiteS.png/) != -1 && anchor.parentNode.parentNode.parentNode.className == 'userMessenger') {
+				anchor.onclick = function() { window.open(this.href, '_blank'); return false; }
+			}		}
+	}
+		
+	onloadEvents.push(function() { new externalLinks(); })
+	//]]>
+</script><style type="text/css">
+		<!--
+			#userMenuProfileOptionsMenu li img, #userMenuManagementMenu li img {
+				margin-left: 0;
+				margin-top: 3px;
+				margin-bottom: 2px;
+			}
+			#userMenuProfileOptionsMenu li span, #userMenuManagementMenu li span {
+				padding-left: 20px !important;
+			}
+		-->
+		</style><noscript><style type="text/css">#userMenuProfileOptions, #userMenuManagement { display: none; }</style></noscript>
+	<!-- Subforums-Hack -->
+	<style type="text/css">
+		.boardlistSubboards ul li {
+			display:block !important;
+			float:none !important;
+		} 
+	</style>
+<!-- dynamic styles -->
+<link rel="stylesheet" type="text/css" media="screen" href="http://ddl-board.org/wcf/style/style-6.css" />
+
+<!-- print styles -->
+<link rel="stylesheet" type="text/css" media="print" href="http://ddl-board.org/wcf/style/extra/print.css" />
+
+<!-- opera styles -->
+<script type="text/javascript">
+	//<![CDATA[
+	if (Prototype.Browser.Opera) {
+		document.write('<style type="text/css">	* { unicode-bidi: normal; } .columnContainer { border: 0; } </style>');
+	}
+	//]]>
+</script>
+
+<script type="text/javascript">
+	//<![CDATA[
+	var SID_ARG_2ND	= '&s=df074ace1415ff2d5aab14f3642071468c613a2d';
+	var SECURITY_TOKEN = '432daa08552053d10d16966c5fb870b2a69320f8';
+	var RELATIVE_WCF_DIR = 'wcf/';
+	var RELATIVE_WBB_DIR = '';
+	var LANG_DELETE_CONFIRM = 'Möchten Sie das Element wirklich löschen?';
+	//]]>
+</script>
+
+<!-- hack styles -->
+<!--[if lt IE 7]>
+	<link rel="stylesheet" type="text/css" media="screen" href="http://ddl-board.org/wcf/style/extra/ie6-fix.css" />
+	<style type="text/css">
+								#header, #footer, #main, #mainMenu, #userPanel { /* note: non-standard style-declaration */
+							_width: expression(((document.body.clientWidth/screen.width)) < 0.7 ? "760px":"80%" );
+			}
+					</style>
+<![endif]-->
+
+<!--[if IE 7]>
+	<link rel="stylesheet" type="text/css" media="screen" href="http://ddl-board.org/wcf/style/extra/ie7-fix.css" />
+	<script type="text/javascript">
+		//<![CDATA[
+		document.observe('dom:loaded', function() {
+			if (location.hash) {
+				var columnContainer = null;
+				var columnContainerHeight = 0;
+				$$('.columnContainer > .column').each(function(column) {
+					if (columnContainer != column.up()) {
+						columnContainer = column.up();
+						columnContainerHeight = columnContainer.getHeight();
+					}
+					columnContainer.addClassName('columnContainerJS');
+					column.setStyle({ 'height': columnContainerHeight + 'px' });
+					columnContainer.up().setStyle({ 'height': columnContainerHeight + 1 + 'px' });
+					column.removeClassName('column').addClassName('columnJS');
+				});
+			}
+			$$('.layout-3 .second').each(function(column) {
+				column.insert('<div style="float: right; font-size: 0">&nbsp;</div>');
+			});
+		});
+		//]]>
+	</script>
+	<![endif]-->
+
+<!--[if IE 8]>
+	<link rel="stylesheet" type="text/css" media="screen" href="http://ddl-board.org/wcf/style/extra/ie8-fix.css" />
+<![endif]-->
+
+<link rel="shortcut icon" href="http://ddl-board.org/wcf/icon/favicon/faviconRed.ico" type="image/x-icon" />
+
+	<style type="text/css">
+	  /* <![CDATA[ */
+		#mce_editor_0_threadclosed { display: none!important; }
+	  /* ]]> */
+	</style>
+	<link rel="alternate" type="application/rss+xml" href="http://ddl-board.org/index.php?page=ThreadsFeed&amp;format=rss2" title="Themen abonnieren (RSS2)" />
+	<link rel="alternate" type="application/atom+xml" href="http://ddl-board.org/index.php?page=ThreadsFeed&amp;format=atom" title="Themen abonnieren (Atom)" />
+</head>
+<body id="tplIndex">
+	
+<div id="headerContainer">
+	<a id="top"></a>
+	<div id="userPanel" class="userPanel">
+		<div class="userPanelInner">
+			<p style="display: none;" id="userAvatar">
+				<img src="wcf/images/avatars/avatar-default.png" alt="" />			</p>
+			<p id="userNote">
+				Sie sind nicht angemeldet.			</p>
+			<div id="userMenu">
+				<ul>
+											<li id="userMenuLogin" class="options"><a href="http://ddl-board.org/index.php?form=UserLogin&amp;s=df074ace1415ff2d5aab14f3642071468c613a2d" id="loginButton"><img src="wcf/icon/loginS.png" alt="" id="loginButtonImage" /> <span>Anmelden</span></a></li>
+
+						<li id="userMenuRegistration"><a href="http://ddl-board.org/index.php?page=Register&amp;s=df074ace1415ff2d5aab14f3642071468c613a2d"><img src="wcf/icon/registerS.png" alt="" /> <span>Registrieren</span></a></li>
+						
+															</ul>
+			</div>
+		</div>
+	</div>
+
+			<script type="text/javascript">
+			//<![CDATA[
+			document.observe("dom:loaded", function() {
+				var loginFormVisible = false;
+
+				var loginBox = $('quickLoginBox');
+				var loginButton = $('loginButton');
+
+				if (loginButton && loginBox) {
+					function showLoginForm(evt) {
+						if (loginBox.hasClassName('hidden')) {
+							loginBox.setStyle('display: none');
+							loginBox.removeClassName('hidden');
+						}
+
+						var top = (loginButton.cumulativeOffset()[1] + loginButton.getHeight() + 5);
+						var left = loginButton.cumulativeOffset()[0] > $$('body')[0].getWidth()/2 ? loginButton.cumulativeOffset()[0] - loginBox.getWidth() + loginButton.getWidth() : loginButton.cumulativeOffset()[0];
+						loginBox.setStyle('left: ' + left + 'px; top: ' + top + 'px;');
+						if (loginBox.visible()) {
+							new Effect.Parallel([
+								new Effect.BlindUp(loginBox),
+								new Effect.Fade(loginBox)
+							], { duration: 0.3 });
+							loginFormVisible = false;
+						}
+						else {
+							new Effect.Parallel([
+								new Effect.BlindDown(loginBox),
+								new Effect.Appear(loginBox)
+							], { duration: 0.3 });
+							loginFormVisible = true;
+						}
+						evt.stop();
+					}
+
+					loginButton.observe('click', showLoginForm);
+					loginButton.observe('dblclick', function() { document.location.href = fixURL('index.php?form=UserLogin&s=df074ace1415ff2d5aab14f3642071468c613a2d'); });
+
+					document.getElementById('quickLoginUsername').onfocus = function() { if (this.value == 'Benutzername') this.value=''; };
+					document.getElementById('quickLoginUsername').onblur = function() { if (this.value == '') this.value = 'Benutzername'; };
+					$('loginButtonImage').src = $('loginButtonImage').src.gsub('loginS.png', 'loginOptionsS.png');
+				}
+			});
+			//]]>
+		</script>
+	
+	<div id="header">
+
+		
+
+																			
+		<div id="search">
+			<form method="post" action="index.php?form=Search">
+
+				<div class="searchContainer">
+					<input type="text" tabindex="5" id="searchInput" class="inputText" name="q" value="Suchbegriffe eingeben" />
+					<input type="image" tabindex="6" id="searchSubmit" class="searchSubmit inputImage" src="wcf/icon/searchSubmitS.png" alt="Absenden" />
+					<input type="hidden" name="s" value="df074ace1415ff2d5aab14f3642071468c613a2d" />					<input type="hidden" name="types[]" value="post" />
+					<script type="text/javascript">
+						//<![CDATA[
+						document.getElementById('searchInput').setAttribute('autocomplete', 'off');
+						document.getElementById('searchInput').onfocus = function() { if (this.value == 'Suchbegriffe eingeben') this.value=''; };
+						document.getElementById('searchInput').onblur = function() { if (this.value == '') this.value = 'Suchbegriffe eingeben'; };
+						document.getElementById('searchSubmit').ondblclick = function() { window.location = fixURL('index.php?form=Search&s=df074ace1415ff2d5aab14f3642071468c613a2d'); };
+													popupMenuList.register("searchInput");
+							document.getElementById('searchInput').className += " searchOptions";
+												//]]>
+					</script>
+											<div class="searchInputMenu">
+							<div class="hidden" id="searchInputMenu">
+								<div class="pageMenu smallFont">
+									<ul>
+														<li><a href="http://ddl-board.org/index.php?form=Search&amp;action=unread&amp;s=df074ace1415ff2d5aab14f3642071468c613a2d">Ungelesene Beiträge</a></li>
+				<li><a href="http://ddl-board.org/index.php?form=Search&amp;action=unreplied&amp;s=df074ace1415ff2d5aab14f3642071468c613a2d">Unbeantwortete Themen</a></li>
+				<li><a href="http://ddl-board.org/index.php?form=Search&amp;action=24h&amp;s=df074ace1415ff2d5aab14f3642071468c613a2d">Themen der letzten 24 Stunden</a></li>
+																	<li><a href="http://ddl-board.org/index.php?form=Search&amp;s=df074ace1415ff2d5aab14f3642071468c613a2d">Erweiterte Suche</a></li>									</ul>
+								</div>
+							</div>
+						</div>
+					
+											<noscript>
+							<p><a href="http://ddl-board.org/index.php?form=Search&amp;s=df074ace1415ff2d5aab14f3642071468c613a2d">Erweiterte Suche</a></p>
+						</noscript>
+									</div>
+			</form>
+		</div>
+		<div id="logo">
+			<div class="logoInner">
+				<h1 class="pageTitle"><a href="http://ddl-board.org/index.php?page=Index&amp;s=df074ace1415ff2d5aab14f3642071468c613a2d">DDL-Board.org  (4.0)</a></h1>
+									<a href="http://ddl-board.org/index.php?page=Index&amp;s=df074ace1415ff2d5aab14f3642071468c613a2d" class="pageLogo">
+						<img src="wcf/images/DDL-Warez-red/DDL-Board-Logo.png" title="DDL-Board.org  (4.0)" alt="" />
+					</a>
+							</div>
+		</div>
+	</div>
+
+						<div id="mainMenu" class="mainMenu advancedMainMenuPopup">
+	<div class="mainMenuInner"><ul id="mainMenuItems-0"><li id="mainMenuItem-6" class="first"><a href="http://ddl-board.org/index.php?page=Portal&amp;s=df074ace1415ff2d5aab14f3642071468c613a2d" title="Portal" id="mainMenuLink-6"><img src="icon/portalM.png" alt="" id="mainMenuIcon-6" /> <span id="mainMenuTitle-6">Portal</span></a></li><li id="mainMenuItem-3" class="active"><a href="http://ddl-board.org/index.php?page=Index&amp;s=df074ace1415ff2d5aab14f3642071468c613a2d" title="Forum" id="mainMenuLink-3"><img src="icon/indexM.png" alt="" id="mainMenuIcon-3" /> <span id="mainMenuTitle-3">Forum</span></a></li><li id="mainMenuItem-22"><a href="http://ddl-board.org/index.php?page=AdventCalendar&amp;s=df074ace1415ff2d5aab14f3642071468c613a2d" title="Adventkalender" id="mainMenuLink-22"><img src="wcf/icon/adventM.png" alt="" id="mainMenuIcon-22" /> <span id="mainMenuTitle-22">Adventkalender</span></a></li><li id="mainMenuItem-28"><a href="http://ddl-board.org/" title="DDL-Network" id="mainMenuLink-28"><img src="wcf/icon/DDLuser.png" alt="" id="mainMenuIcon-28" /> <span id="mainMenuTitle-28">DDL-Network</span></a><ul id="mainMenuItems-28" class="advancedMenu"><li id="mainMenuItem-20" class="first"><a href="http://ddl-warez.in/?action=main" title="DDL-Warez" id="mainMenuLink-20"><img src="wcf/icon/ddlwarezM.png" alt="" id="mainMenuIcon-20" /> <span id="mainMenuTitle-20">DDL-Warez</span></a></li><li id="mainMenuItem-21" class="last"><a href="http://ddl-music.org/?action=main" title="DDL-Music" id="mainMenuLink-21"><img src="wcf/icon/ddlmusicv3M.png" alt="" id="mainMenuIcon-21" /> <span id="mainMenuTitle-21">DDL-Music</span></a></li></ul></li><li id="mainMenuItem-29" class="last"><a href="http://www.woz.to/vote/ddlwarez" title="Vote" id="mainMenuLink-29"><img src="wcf/icon/wozM.png" alt="" id="mainMenuIcon-29" /> <span id="mainMenuTitle-29">Vote</span></a></li></ul></div>
+</div>
+<script type="text/javascript">
+	//<![CDATA[
+	    var AdvancedMainMenu = new AdvancedPageMenu('mainMenu', '3', 'popup', 'down', {'arrow':'wcf/icon/pageMenuArrowS.png', 'plus':'wcf/icon/plusS.png', 'minus':'wcf/icon/minusS.png'});
+		onloadEvents.push(function() { AdvancedMainMenu.init(); });
+	//]]>
+</script>
+
+</div>
+<div id="mainContainer">
+
+<div id="main">
+	
+	<div class="mainHeadline">
+		<img src="icon/indexL.png" alt="" ondblclick="document.location.href=fixURL('index.php?action=BoardMarkAllAsRead&amp;t=432daa08552053d10d16966c5fb870b2a69320f8&amp;s=df074ace1415ff2d5aab14f3642071468c613a2d')" title="Alle Foren als gelesen markieren" />
+		<div class="headlineContainer">
+			<h2>DDL-Board.org  (4.0)</h2>
+			<p>Forum von DDL-Network</p>
+		</div>
+	</div>
+	
+				<div class="info">			<p><span style="font-size: 18pt"><strong>Im Dezember gibt es bei uns wieder Türchen zu öffnen! <a href="http://ddl-board.org/index.php?page=AdventCalendar">Hier mitmachen</a></strong></span><strong></strong></p>		</div>			<noscript>
+		<div class="info">
+			<span>Hinweis:<br />Bitte aktivieren Sie bei Ihrem verwendeten Browser Javascript, damit die Seite korrekt angezeigt werden kann.</span>
+		</div>
+	</noscript>	
+		<p class="info">Lieber Besucher, herzlich willkommen bei: DDL-Board.org  (4.0). 
+Falls dies Ihr erster Besuch auf dieser Seite ist, lesen Sie sich bitte die <a href="http://ddl-board.org/index.php?page=Help&amp;s=df074ace1415ff2d5aab14f3642071468c613a2d">Hilfe</a> durch. Dort wird Ihnen die Bedienung dieser Seite näher erläutert.
+Darüber hinaus sollten Sie sich registrieren, um alle Funktionen dieser Seite nutzen zu können.
+Benutzen Sie das <a href="http://ddl-board.org/index.php?page=Register&amp;s=df074ace1415ff2d5aab14f3642071468c613a2d">Registrierungsformular</a>, um sich zu registrieren oder <a href="http://ddl-board.org/index.php?page=Help&amp;item=user.login&amp;s=df074ace1415ff2d5aab14f3642071468c613a2d">informieren Sie sich ausführlich</a> über den Registrierungsvorgang.
+Falls Sie sich bereits zu einem früheren Zeitpunkt registriert haben, können Sie sich <a href="http://ddl-board.org/index.php?form=UserLogin&amp;s=df074ace1415ff2d5aab14f3642071468c613a2d">hier anmelden</a>.</p>
+			
+	<script type="text/javascript" src="wcf/js/SubTabMenu.class.js"></script>
+
+<div class="layout-1">
+	<div class="columnContainer" style="border: 0;">
+		<div class="column">
+						<div class="contentBox recentActivityBox" style="padding: 0;">
+				<div class="border titleBarPanel">
+					<div class="containerHead">
+						<div class="boardlistTitle">
+							<div class="containerIcon">
+								<a onclick="openList('recentActivityBoxStatus', { save:true })"><img src="wcf/icon/minusS.png" id="recentActivityBoxStatusImage" alt="" title="Auf- und Zuklappen" /></a>
+							</div>
+							<div class="containerContent">
+								<h3 class="boardTitle">Neuigkeiten (6)</h3>
+							</div>
+						</div>
+					</div>
+					
+					<div id="recentActivityBoxStatus">
+						<div class="subTabMenu" style="display: none;">
+							<div class="containerHead containerHeadBar">
+								<ul>
+																														<li id="com.woltlab.wbb.threads"><a onclick="recentActivityBox.showTabMenuContent('com.woltlab.wbb.threads');"><span>Themen</span> <span>(6)</span></a></li>
+																																						</ul>
+							</div>
+						</div>
+						
+																					<div class="tabMenuContent" id="com.woltlab.wbb.threads-content">
+									<noscript>
+										<div class="subTabMenu">
+											<div class="containerHead">
+												<h4>Themen</h4>
+											</div>
+										</div>
+									</noscript>
+									<script type="text/javascript" src="js/ThreadMarkAsRead.class.js"></script>
+
+<table class="boardRecentList tableList">
+	<tbody>
+								<tr class="container-1">
+				<td class="columnIcon">
+					<img src="icon/boardM.png" alt="" />
+				</td>
+				
+				<td class="columnTopic" style="width: 25%">
+					<p><a href="http://ddl-board.org/guest-only-guest-helps-guest.html?s=df074ace1415ff2d5aab14f3642071468c613a2d">Guest only - Guest helps Guest</a></p>
+				</td>
+				
+				<td class="columnIcon">
+					<img id="threadEdit120500" src="icon/threadNewM.png" alt="" title="Thema durch Doppelklick als gelesen markieren" />
+											<script type="text/javascript">
+							//<![CDATA[
+							threadMarkAsRead.init(120500);
+							//]]>
+						</script>
+						
+				</td>
+					
+				<td class="columnTopic" style="width: 50%">
+					<div id="thread120500" class="topic new">
+													<a id="gotoFirstNewPost120500" href="http://ddl-board.org/120500-sicherheitscode-weg/first-new-post.html?s=df074ace1415ff2d5aab14f3642071468c613a2d"><img class="goToNewPost" src="icon/goToFirstNewPostS.png" alt="" title="Zum ersten neuen Beitrag springen" /></a>
+												
+						<p id="threadTitle120500">
+							<span class="prefix"><strong>[Problem]</strong></span>
+							<a href="http://ddl-board.org/120500-sicherheitscode-weg.html?s=df074ace1415ff2d5aab14f3642071468c613a2d" title="Folgendes ist für uns WICHTIG!, um unnötige Rückfragen zu vermeiden.
+- Welche Site (Warez oder Music) / - welche URL (Link hier angeben) / - welcher Hoster?
+je genauer die Informationen sind, desto eher &amp; besser kann geholfen werden.Folgendes ist für uns WICHTIG!, um unnötige Rückfragen zu vermeiden.
+- Welche Site (Warez oder Music) / - welche URL (Link hier angeben) / - welcher Hoster?
+je genauer die Informationen sind, desto eher &amp; besser kann geholfen werden.
+
+
+Hallo!
+
+Ich habe folgendes P...">Sicherheitscode weg</a>
+						</p>
+					</div>
+					<div class="statusDisplay">
+												<div class="statusDisplayIcons">
+																																																</div>
+					</div>
+					<p class="firstPost light">
+						Von
+													Chekov												(Gestern, 20:32)
+					</p>
+				</td>
+				
+				<td class="columnLastPost" style="width: 25%">
+											<div class="containerIconSmall">
+							<a href="http://ddl-board.org/120500-sicherheitscode-weg/last-post.html?s=df074ace1415ff2d5aab14f3642071468c613a2d"><img src="icon/goToLastPostS.png" alt="" title="Zum letzten Beitrag dieses Themas springen" /></a>
+						</div>
+						<div class="containerContentSmall">
+							<p>Von <a href="http://ddl-board.org/user/140517/mr-download/?s=df074ace1415ff2d5aab14f3642071468c613a2d">MR Download</a></p>
+							<p class="smallFont light">(Gestern, 23:07)</p>
+						</div>
+									</td>
+			</tr>
+								<tr class="container-2">
+				<td class="columnIcon">
+					<img src="icon/boardM.png" alt="" />
+				</td>
+				
+				<td class="columnTopic" style="width: 25%">
+					<p><a href="http://ddl-board.org/guest-only-guest-helps-guest.html?s=df074ace1415ff2d5aab14f3642071468c613a2d">Guest only - Guest helps Guest</a></p>
+				</td>
+				
+				<td class="columnIcon">
+					<img id="threadEdit120496" src="icon/threadNewM.png" alt="" title="Thema durch Doppelklick als gelesen markieren" />
+											<script type="text/javascript">
+							//<![CDATA[
+							threadMarkAsRead.init(120496);
+							//]]>
+						</script>
+						
+				</td>
+					
+				<td class="columnTopic" style="width: 50%">
+					<div id="thread120496" class="topic new">
+													<a id="gotoFirstNewPost120496" href="http://ddl-board.org/120496-lexware-kassenbuch-2014-keine-serial/first-new-post.html?s=df074ace1415ff2d5aab14f3642071468c613a2d"><img class="goToNewPost" src="icon/goToFirstNewPostS.png" alt="" title="Zum ersten neuen Beitrag springen" /></a>
+												
+						<p id="threadTitle120496">
+							<span class="prefix"><strong>[Problem]</strong></span>
+							<a href="http://ddl-board.org/120496-lexware-kassenbuch-2014-keine-serial.html?s=df074ace1415ff2d5aab14f3642071468c613a2d" title="Hallo,
+leider ist keine Serial enthalten die aber benötigt wird um die Software zu installieren.
+So bringt der beigefügte Crack leider wenig oder gibt es einen anderen Weg? ?(  :wink: 
+
+Vielen Dank im Voraus
+
+
+http://ddl-warez.in/download/283476/Lexware.Kassenbuch.2014/ - Alle Hoster">Lexware Kassenbuch 2014 keine Serial</a>
+						</p>
+					</div>
+					<div class="statusDisplay">
+												<div class="statusDisplayIcons">
+																																																</div>
+					</div>
+					<p class="firstPost light">
+						Von
+													Maskara												(Gestern, 17:06)
+					</p>
+				</td>
+				
+				<td class="columnLastPost" style="width: 25%">
+											<p class="smallFont light">keine Antwort</p>
+									</td>
+			</tr>
+								<tr class="container-1">
+				<td class="columnIcon">
+					<img src="icon/boardM.png" alt="" />
+				</td>
+				
+				<td class="columnTopic" style="width: 25%">
+					<p><a href="http://ddl-board.org/guest-only-guest-helps-guest.html?s=df074ace1415ff2d5aab14f3642071468c613a2d">Guest only - Guest helps Guest</a></p>
+				</td>
+				
+				<td class="columnIcon">
+					<img id="threadEdit120431" src="icon/threadNewM.png" alt="" title="Thema durch Doppelklick als gelesen markieren" />
+											<script type="text/javascript">
+							//<![CDATA[
+							threadMarkAsRead.init(120431);
+							//]]>
+						</script>
+						
+				</td>
+					
+				<td class="columnTopic" style="width: 50%">
+					<div id="thread120431" class="topic new">
+													<a id="gotoFirstNewPost120431" href="http://ddl-board.org/120431-microsoft-windows-8-1-pro-german-x64-integrated-november-2014-fky/first-new-post.html?s=df074ace1415ff2d5aab14f3642071468c613a2d"><img class="goToNewPost" src="icon/goToFirstNewPostS.png" alt="" title="Zum ersten neuen Beitrag springen" /></a>
+												
+						<p id="threadTitle120431">
+							<span class="prefix"><strong>[Problem]</strong></span>
+							<a href="http://ddl-board.org/120431-microsoft-windows-8-1-pro-german-x64-integrated-november-2014-fky.html?s=df074ace1415ff2d5aab14f3642071468c613a2d" title="leider kommt beim entpacken statt einer ISO eine NFO mit 5,4 GB raus....">Microsoft.Windows.8.1.Pro.German.x64.Integrated.November.2014-FKY</a>
+						</p>
+					</div>
+					<div class="statusDisplay">
+												<div class="statusDisplayIcons">
+																																																</div>
+					</div>
+					<p class="firstPost light">
+						Von
+													ed												(30. November 2014, 19:38)
+					</p>
+				</td>
+				
+				<td class="columnLastPost" style="width: 25%">
+											<div class="containerIconSmall">
+							<a href="http://ddl-board.org/120431-microsoft-windows-8-1-pro-german-x64-integrated-november-2014-fky/last-post.html?s=df074ace1415ff2d5aab14f3642071468c613a2d"><img src="icon/goToLastPostS.png" alt="" title="Zum letzten Beitrag dieses Themas springen" /></a>
+						</div>
+						<div class="containerContentSmall">
+							<p>Von <a href="http://ddl-board.org/user/143987/mcupper/?s=df074ace1415ff2d5aab14f3642071468c613a2d">MCUpper</a></p>
+							<p class="smallFont light">(7. Dezember 2014, 15:31)</p>
+						</div>
+									</td>
+			</tr>
+								<tr class="container-2">
+				<td class="columnIcon">
+					<img src="icon/boardM.png" alt="" />
+				</td>
+				
+				<td class="columnTopic" style="width: 25%">
+					<p><a href="http://ddl-board.org/guest-only-hinweise-tipps.html?s=df074ace1415ff2d5aab14f3642071468c613a2d">Guest only - Hinweise &amp; Tipps</a></p>
+				</td>
+				
+				<td class="columnIcon">
+					<img id="threadEdit120427" src="icon/threadNewAnnouncementClosedM.png" alt="" title="Thema durch Doppelklick als gelesen markieren" />
+											<script type="text/javascript">
+							//<![CDATA[
+							threadMarkAsRead.init(120427);
+							//]]>
+						</script>
+						
+				</td>
+					
+				<td class="columnTopic" style="width: 50%">
+					<div id="thread120427" class="topic new">
+													<a id="gotoFirstNewPost120427" href="http://ddl-board.org/120427-alle-jahre-wieder-ffnen-wir-die-t-ren/first-new-post.html?s=df074ace1415ff2d5aab14f3642071468c613a2d"><img class="goToNewPost" src="icon/goToFirstNewPostS.png" alt="" title="Zum ersten neuen Beitrag springen" /></a>
+												
+						<p id="threadTitle120427">
+							<span class="prefix"><strong></strong></span>
+							<a href="http://ddl-board.org/120427-alle-jahre-wieder-ffnen-wir-die-t-ren.html?s=df074ace1415ff2d5aab14f3642071468c613a2d" title="
+ :x_mas00: Ab dem 1. Dezember gibt es hier im Forum wieder unseren jährlichen Adventzkalender.  :x_mas00:  
+Täglich könnt Ihr dann ein Türchen öffnen.
+
+Viel Spass und eine schöne Adventzzeitwünscht das gesamte ddl-Team :x_mas14: 
+
+
+
+Ja, wir wissen wie man Adventz schreibt... :crazy: ">Alle Jahre wieder öffnen wir die Türen...</a>
+						</p>
+					</div>
+					<div class="statusDisplay">
+												<div class="statusDisplayIcons">
+																																																</div>
+					</div>
+					<p class="firstPost light">
+						Von
+													<a href="http://ddl-board.org/user/8447/compiopi/?s=df074ace1415ff2d5aab14f3642071468c613a2d">CompiOpi</a>
+												(7. Dezember 2014, 15:24)
+					</p>
+				</td>
+				
+				<td class="columnLastPost" style="width: 25%">
+											<p class="smallFont light">keine Antwort</p>
+									</td>
+			</tr>
+								<tr class="container-1">
+				<td class="columnIcon">
+					<img src="icon/boardM.png" alt="" />
+				</td>
+				
+				<td class="columnTopic" style="width: 25%">
+					<p><a href="http://ddl-board.org/guest-only-guest-helps-guest.html?s=df074ace1415ff2d5aab14f3642071468c613a2d">Guest only - Guest helps Guest</a></p>
+				</td>
+				
+				<td class="columnIcon">
+					<img id="threadEdit120484" src="icon/threadNewM.png" alt="" title="Thema durch Doppelklick als gelesen markieren" />
+											<script type="text/javascript">
+							//<![CDATA[
+							threadMarkAsRead.init(120484);
+							//]]>
+						</script>
+						
+				</td>
+					
+				<td class="columnTopic" style="width: 50%">
+					<div id="thread120484" class="topic new">
+													<a id="gotoFirstNewPost120484" href="http://ddl-board.org/120484-captcha-problem/first-new-post.html?s=df074ace1415ff2d5aab14f3642071468c613a2d"><img class="goToNewPost" src="icon/goToFirstNewPostS.png" alt="" title="Zum ersten neuen Beitrag springen" /></a>
+												
+						<p id="threadTitle120484">
+							<span class="prefix"><strong>[Erledigt]</strong></span>
+							<a href="http://ddl-board.org/120484-captcha-problem.html?s=df074ace1415ff2d5aab14f3642071468c613a2d" title="Moin
+
+Ich habe ein Problem mit dem Captcha. Immer wenn ich die Nummern eintippen soll, sagt er mir &quot;Sicherheitscode nicht korrekt&quot;.
+Hat da noch einer Probleme ?
+Und wofür ist dieser ellen lange code ?">Captcha Problem</a>
+						</p>
+					</div>
+					<div class="statusDisplay">
+												<div class="statusDisplayIcons">
+																																																</div>
+					</div>
+					<p class="firstPost light">
+						Von
+													The_Bad												(7. Dezember 2014, 03:59)
+					</p>
+				</td>
+				
+				<td class="columnLastPost" style="width: 25%">
+											<div class="containerIconSmall">
+							<a href="http://ddl-board.org/120484-captcha-problem/last-post.html?s=df074ace1415ff2d5aab14f3642071468c613a2d"><img src="icon/goToLastPostS.png" alt="" title="Zum letzten Beitrag dieses Themas springen" /></a>
+						</div>
+						<div class="containerContentSmall">
+							<p>Von The_Bad</p>
+							<p class="smallFont light">(7. Dezember 2014, 09:37)</p>
+						</div>
+									</td>
+			</tr>
+								<tr class="container-2">
+				<td class="columnIcon">
+					<img src="icon/boardM.png" alt="" />
+				</td>
+				
+				<td class="columnTopic" style="width: 25%">
+					<p><a href="http://ddl-board.org/guest-only-guest-helps-guest.html?s=df074ace1415ff2d5aab14f3642071468c613a2d">Guest only - Guest helps Guest</a></p>
+				</td>
+				
+				<td class="columnIcon">
+					<img id="threadEdit120481" src="icon/threadNewM.png" alt="" title="Thema durch Doppelklick als gelesen markieren" />
+											<script type="text/javascript">
+							//<![CDATA[
+							threadMarkAsRead.init(120481);
+							//]]>
+						</script>
+						
+				</td>
+					
+				<td class="columnTopic" style="width: 50%">
+					<div id="thread120481" class="topic new">
+													<a id="gotoFirstNewPost120481" href="http://ddl-board.org/120481-alben-nicht-vorhanden/first-new-post.html?s=df074ace1415ff2d5aab14f3642071468c613a2d"><img class="goToNewPost" src="icon/goToFirstNewPostS.png" alt="" title="Zum ersten neuen Beitrag springen" /></a>
+												
+						<p id="threadTitle120481">
+							<span class="prefix"><strong>[Problem]</strong></span>
+							<a href="http://ddl-board.org/120481-alben-nicht-vorhanden.html?s=df074ace1415ff2d5aab14f3642071468c613a2d" title="Einige Alben sind *nicht mehr *vorhanden wie z.B. *Genetikk - Voodoozirkus, Shindy - NWA, Shindy NWA 2.0 !!!*
+Vor geraumer Zeit waren diese oben genannten Alben vorhanden. 
+
+Danke für ihre Hilfe
+
+MfG :) ">Alben nicht vorhanden</a>
+						</p>
+					</div>
+					<div class="statusDisplay">
+												<div class="statusDisplayIcons">
+																																																</div>
+					</div>
+					<p class="firstPost light">
+						Von
+													Cannabis = beste Medizin												(6. Dezember 2014, 20:16)
+					</p>
+				</td>
+				
+				<td class="columnLastPost" style="width: 25%">
+											<p class="smallFont light">keine Antwort</p>
+									</td>
+			</tr>
+			</tbody>
+</table>
+
+<div class="simpleBar smallFont container-3" style="padding: 1px;">
+	<ul style="margin: 0;">
+		<li><a href="http://ddl-board.org/index.php?form=Search&amp;action=unread&amp;s=df074ace1415ff2d5aab14f3642071468c613a2d">Ungelesene Beiträge</a></li>
+		<li><a href="http://ddl-board.org/index.php?form=Search&amp;action=24h&amp;s=df074ace1415ff2d5aab14f3642071468c613a2d">Themen der letzten 24 Stunden</a></li>
+					</ul>
+</div>								</div>
+								<hr />
+																		</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+	//<![CDATA[
+	var recentActivityBox = new SubTabMenu();
+	recentActivityBox.showTabMenuContent('com.woltlab.wbb.threads');	initList('recentActivityBoxStatus', 1);
+	//]]>
+</script>	<div class="top5box">
+		<div class="border titleBarPanel">
+		        <div class="containerHead">
+		                <div class="containerIcon">
+		                        <a href="javascript: void(0)" onclick="openList('top5', { save:true })"><img src="wcf/icon/minusS.png" id="top5Image" alt="" /></a>
+		                </div>
+		                <div class="containerContent">
+		                        <img src="icon/postS.png" alt="" /> Die letzten 10 Beiträge
+		                </div>
+		        </div>
+	           
+			<div id="top5">
+													<table class="tableList">                			                                                        	
+						<tbody>
+																						<tr class="container-1 normalFont">				
+									<td class="columnTop5Board" style="width:30%;">
+										<img src="icon/boardS.png" alt="" />
+										<a href="http://ddl-board.org/guest-only-hinweise-tipps.html?s=df074ace1415ff2d5aab14f3642071468c613a2d">
+											<span>
+																									Guest only - Hinweise &amp; Tipps																							</span>
+										</a> &raquo;
+									</td>                        
+									<td class="columnTop5Topic" style="width:45%;">
+										<span style="float: right;">
+																																											</span>
+										<span class="columnTop5TopicTitle">
+																							<img src="wcf/icon/nextS.png" alt="" id="top5Icon120427" />
+																																	<a class="new" id="top5href120427" href="http://ddl-board.org/120427-alle-jahre-wieder-ffnen-wir-die-t-ren/first-new-post.html?s=df074ace1415ff2d5aab14f3642071468c613a2d">
+												<span>
+																											Alle Jahre wieder öffnen wir die Türen...																									</span>
+											</a>
+										</span>
+									</td>										
+									<td class="columnTop5LastPost" style="width:25%;">						
+										<div class="containerIconSmall">
+											<a href="http://ddl-board.org/120427-alle-jahre-wieder-ffnen-wir-die-t-ren/last-post.html?s=df074ace1415ff2d5aab14f3642071468c613a2d"><img src="icon/goToLastPostS.png" alt="" title="Zum letzten Beitrag dieses Themas springen" /></a>
+										</div>
+										<div class="containerContentSmall">
+											<p class="smallFont">Von <a href="http://ddl-board.org/user/8447/compiopi/?s=df074ace1415ff2d5aab14f3642071468c613a2d">CompiOpi</a> <span class="light">(7. Dezember 2014, 15:24)</span></p>								
+										</div>						
+									</td>
+								</tr>				
+															<tr class="container-2 normalFont">				
+									<td class="columnTop5Board" style="width:30%;">
+										<img src="icon/boardS.png" alt="" />
+										<a href="http://ddl-board.org/guest-only-hinweise-tipps.html?s=df074ace1415ff2d5aab14f3642071468c613a2d">
+											<span>
+																									Guest only - Hinweise &amp; Tipps																							</span>
+										</a> &raquo;
+									</td>                        
+									<td class="columnTop5Topic" style="width:45%;">
+										<span style="float: right;">
+																																											</span>
+										<span class="columnTop5TopicTitle">
+																							<img src="icon/threadS.png" alt="" />
+																																	<a  id="top5href40443" href="http://ddl-board.org/40443-wie-entpacke-ich-richtig-was-tun-bei-crc-fehlern/first-new-post.html?s=df074ace1415ff2d5aab14f3642071468c613a2d">
+												<span>
+																											Wie entpacke ich richtig  &amp;  Was tun bei CRC-Fehlern																									</span>
+											</a>
+										</span>
+									</td>										
+									<td class="columnTop5LastPost" style="width:25%;">						
+										<div class="containerIconSmall">
+											<a href="http://ddl-board.org/40443-wie-entpacke-ich-richtig-was-tun-bei-crc-fehlern/last-post.html?s=df074ace1415ff2d5aab14f3642071468c613a2d"><img src="icon/goToLastPostS.png" alt="" title="Zum letzten Beitrag dieses Themas springen" /></a>
+										</div>
+										<div class="containerContentSmall">
+											<p class="smallFont">Von <a href="http://ddl-board.org/user/5907/smith/?s=df074ace1415ff2d5aab14f3642071468c613a2d">Smith</a> <span class="light">(14. Oktober 2011, 19:10)</span></p>								
+										</div>						
+									</td>
+								</tr>				
+															<tr class="container-1 normalFont">				
+									<td class="columnTop5Board" style="width:30%;">
+										<img src="icon/boardS.png" alt="" />
+										<a href="http://ddl-board.org/guest-only-hinweise-tipps.html?s=df074ace1415ff2d5aab14f3642071468c613a2d">
+											<span>
+																									Guest only - Hinweise &amp; Tipps																							</span>
+										</a> &raquo;
+									</td>                        
+									<td class="columnTop5Topic" style="width:45%;">
+										<span style="float: right;">
+																																											</span>
+										<span class="columnTop5TopicTitle">
+																							<img src="icon/threadS.png" alt="" />
+																																	<a  id="top5href40213" href="http://ddl-board.org/40213-anbieten-von-eigenen-uploads-suchanfragen-f-r-uploads/first-new-post.html?s=df074ace1415ff2d5aab14f3642071468c613a2d">
+												<span>
+																											Anbieten von eigenen Uploads  &amp;  Suchanfragen für Uploads																									</span>
+											</a>
+										</span>
+									</td>										
+									<td class="columnTop5LastPost" style="width:25%;">						
+										<div class="containerIconSmall">
+											<a href="http://ddl-board.org/40213-anbieten-von-eigenen-uploads-suchanfragen-f-r-uploads/last-post.html?s=df074ace1415ff2d5aab14f3642071468c613a2d"><img src="icon/goToLastPostS.png" alt="" title="Zum letzten Beitrag dieses Themas springen" /></a>
+										</div>
+										<div class="containerContentSmall">
+											<p class="smallFont">Von <a href="http://ddl-board.org/user/5907/smith/?s=df074ace1415ff2d5aab14f3642071468c613a2d">Smith</a> <span class="light">(14. Oktober 2011, 19:03)</span></p>								
+										</div>						
+									</td>
+								</tr>				
+															<tr class="container-2 normalFont">				
+									<td class="columnTop5Board" style="width:30%;">
+										<img src="icon/boardS.png" alt="" />
+										<a href="http://ddl-board.org/guest-only-hinweise-tipps.html?s=df074ace1415ff2d5aab14f3642071468c613a2d">
+											<span>
+																									Guest only - Hinweise &amp; Tipps																							</span>
+										</a> &raquo;
+									</td>                        
+									<td class="columnTop5Topic" style="width:45%;">
+										<span style="float: right;">
+																																											</span>
+										<span class="columnTop5TopicTitle">
+																							<img src="icon/threadS.png" alt="" />
+																																	<a  id="top5href68429" href="http://ddl-board.org/68429-support-maske-richtig-ausf-llen/first-new-post.html?s=df074ace1415ff2d5aab14f3642071468c613a2d">
+												<span>
+																											Support Maske richtig ausfüllen																									</span>
+											</a>
+										</span>
+									</td>										
+									<td class="columnTop5LastPost" style="width:25%;">						
+										<div class="containerIconSmall">
+											<a href="http://ddl-board.org/68429-support-maske-richtig-ausf-llen/last-post.html?s=df074ace1415ff2d5aab14f3642071468c613a2d"><img src="icon/goToLastPostS.png" alt="" title="Zum letzten Beitrag dieses Themas springen" /></a>
+										</div>
+										<div class="containerContentSmall">
+											<p class="smallFont">Von <a href="http://ddl-board.org/user/5907/smith/?s=df074ace1415ff2d5aab14f3642071468c613a2d">Smith</a> <span class="light">(14. Oktober 2011, 19:01)</span></p>								
+										</div>						
+									</td>
+								</tr>				
+															<tr class="container-1 normalFont">				
+									<td class="columnTop5Board" style="width:30%;">
+										<img src="icon/boardS.png" alt="" />
+										<a href="http://ddl-board.org/guest-only-hinweise-tipps.html?s=df074ace1415ff2d5aab14f3642071468c613a2d">
+											<span>
+																									Guest only - Hinweise &amp; Tipps																							</span>
+										</a> &raquo;
+									</td>                        
+									<td class="columnTop5Topic" style="width:45%;">
+										<span style="float: right;">
+																																											</span>
+										<span class="columnTop5TopicTitle">
+																							<img src="icon/threadS.png" alt="" />
+																																	<a  id="top5href40588" href="http://ddl-board.org/40588-wo-finde-ich-antworten-auf-meine-fragen-inhaltsverzeichnis-der-regeln/first-new-post.html?s=df074ace1415ff2d5aab14f3642071468c613a2d">
+												<span>
+																											Wo finde ich Antworten auf meine Fragen?   |...																									</span>
+											</a>
+										</span>
+									</td>										
+									<td class="columnTop5LastPost" style="width:25%;">						
+										<div class="containerIconSmall">
+											<a href="http://ddl-board.org/40588-wo-finde-ich-antworten-auf-meine-fragen-inhaltsverzeichnis-der-regeln/last-post.html?s=df074ace1415ff2d5aab14f3642071468c613a2d"><img src="icon/goToLastPostS.png" alt="" title="Zum letzten Beitrag dieses Themas springen" /></a>
+										</div>
+										<div class="containerContentSmall">
+											<p class="smallFont">Von <a href="http://ddl-board.org/user/5907/smith/?s=df074ace1415ff2d5aab14f3642071468c613a2d">Smith</a> <span class="light">(14. Oktober 2011, 18:52)</span></p>								
+										</div>						
+									</td>
+								</tr>				
+															<tr class="container-2 normalFont">				
+									<td class="columnTop5Board" style="width:30%;">
+										<img src="icon/boardS.png" alt="" />
+										<a href="http://ddl-board.org/guest-only-hinweise-tipps.html?s=df074ace1415ff2d5aab14f3642071468c613a2d">
+											<span>
+																									Guest only - Hinweise &amp; Tipps																							</span>
+										</a> &raquo;
+									</td>                        
+									<td class="columnTop5Topic" style="width:45%;">
+										<span style="float: right;">
+																																											</span>
+										<span class="columnTop5TopicTitle">
+																							<img src="icon/threadS.png" alt="" />
+																																	<a  id="top5href68922" href="http://ddl-board.org/68922-n-tzliche-links/first-new-post.html?s=df074ace1415ff2d5aab14f3642071468c613a2d">
+												<span>
+																											Nützliche Links																									</span>
+											</a>
+										</span>
+									</td>										
+									<td class="columnTop5LastPost" style="width:25%;">						
+										<div class="containerIconSmall">
+											<a href="http://ddl-board.org/68922-n-tzliche-links/last-post.html?s=df074ace1415ff2d5aab14f3642071468c613a2d"><img src="icon/goToLastPostS.png" alt="" title="Zum letzten Beitrag dieses Themas springen" /></a>
+										</div>
+										<div class="containerContentSmall">
+											<p class="smallFont">Von <a href="http://ddl-board.org/user/129673/system/?s=df074ace1415ff2d5aab14f3642071468c613a2d">SYSTEM</a> <span class="light">(15. April 2010, 12:30)</span></p>								
+										</div>						
+									</td>
+								</tr>				
+															<tr class="container-1 normalFont">				
+									<td class="columnTop5Board" style="width:30%;">
+										<img src="icon/boardS.png" alt="" />
+										<a href="http://ddl-board.org/guest-only-hinweise-tipps.html?s=df074ace1415ff2d5aab14f3642071468c613a2d">
+											<span>
+																									Guest only - Hinweise &amp; Tipps																							</span>
+										</a> &raquo;
+									</td>                        
+									<td class="columnTop5Topic" style="width:45%;">
+										<span style="float: right;">
+																																											</span>
+										<span class="columnTop5TopicTitle">
+																							<img src="icon/threadS.png" alt="" />
+																																	<a  id="top5href81266" href="http://ddl-board.org/81266-wichtige-hinweise-bei-problemen-erstmal-lesen/first-new-post.html?s=df074ace1415ff2d5aab14f3642071468c613a2d">
+												<span>
+																											Wichtige Hinweise bei Problemen - erstmal lesen!!																									</span>
+											</a>
+										</span>
+									</td>										
+									<td class="columnTop5LastPost" style="width:25%;">						
+										<div class="containerIconSmall">
+											<a href="http://ddl-board.org/81266-wichtige-hinweise-bei-problemen-erstmal-lesen/last-post.html?s=df074ace1415ff2d5aab14f3642071468c613a2d"><img src="icon/goToLastPostS.png" alt="" title="Zum letzten Beitrag dieses Themas springen" /></a>
+										</div>
+										<div class="containerContentSmall">
+											<p class="smallFont">Von <a href="http://ddl-board.org/user/129673/system/?s=df074ace1415ff2d5aab14f3642071468c613a2d">SYSTEM</a> <span class="light">(6. November 2009, 17:06)</span></p>								
+										</div>						
+									</td>
+								</tr>				
+													</tbody>
+					</table>
+									<div class="top5 container-2">
+		<form method="post" action="index.php?form=UserLogin">
+			<div>
+				<div style="text-align:center; padding:6px;">
+					<span class="normalFont" style="text-align:left;">Anmelden: </span>
+					<input type="text" class="inputText" style="width:150px !important" id="TopXLoginUsername" name="loginUsername" value="" title="Benutzername" />
+					<input type="password" class="inputText" id="TopXLoginPassword" style="width:150px !important" name="loginPassword" value="" title="Kennwort" />
+					<input type="hidden" name="url" value="/index.php" />					<input type="hidden" id="TopXLoginUseCookies" name="useCookies" value="1" />
+					<input type="submit" accesskey="s" value="Absenden" />
+					<input type="hidden" name="s" value="df074ace1415ff2d5aab14f3642071468c613a2d" />				</div>
+			</div>
+		</form>
+	</div>
+			</div>
+			<script type="text/javascript">
+		                //<![CDATA[
+		                initList('top5', 1);
+				$$('.columnTop5TopicTitle').each(function (element) {
+					element.down('img').observe('dblclick', function (event) {
+						var element = Event.element(event);
+						var threadID = element.id.gsub('top5Icon', '');
+						new Ajax.Request('index.php?action=ThreadMarkAsRead&ajax=1&threadID='+threadID+'&t='+SECURITY_TOKEN, {
+							onSuccess: function () {
+								$('top5Icon'+threadID).writeAttribute({ 'src': 'icon/threadS.png' });
+								$('top5href'+threadID).removeClassName('new');
+							}
+						});
+					});
+				});
+		                //]]>
+		        </script>
+	        </div>     
+	</div>
+	
+	
+	<script type="text/javascript" src="js/BoardMarkAsRead.class.js"></script>
+	<script type="text/javascript">
+		//<![CDATA[
+		var boards = new Hash();
+		document.observe("dom:loaded", function() {
+			new BoardMarkAsRead(boards);
+		});
+	//]]>
+	</script>
+	
+		<ul id="boardlist">
+					
+																											
+							
+								<li class="category border">
+					<div class="containerHead boardlistInner board255">
+						<div class="boardlistTitle">
+							<div class="containerIcon">
+																																			<a href="http://ddl-board.org/index.php?page=Index&amp;s=df074ace1415ff2d5aab14f3642071468c613a2d&amp;closeCategory=255&amp;s=df074ace1415ff2d5aab14f3642071468c613a2d#boardLink1" onclick="return !openList('category255', { save: true, openTitle: 'Kategorie: &raquo;Unauthorized Zone&laquo; öffnen', closeTitle: 'Kategorie: &raquo;Unauthorized Zone&laquo; schließen' })"><img id="category255Image" src="wcf/icon/minusS.png" alt="" title="Kategorie: &raquo;Unauthorized Zone&laquo; schließen" /></a>
+															</div>
+							<div class="containerContent">
+								<h3 class="boardTitle">									<a id="boardLink1" href="http://ddl-board.org/unauthorized-zone.html?s=df074ace1415ff2d5aab14f3642071468c613a2d">Unauthorized Zone</a>
+								</h3>																	<p class="boardlistDescription">
+										<center><b>Gästebereich für Kommentare und Hinweise zu ddl - Beiträge werden kontrolliert und können bei Bedarf kommentarlos gelöscht werden.</b></center>									</p>
+																
+																
+															</div>
+						</div>
+					</div>
+						
+						
+			<ul id="category255">								
+																												
+
+				<li>
+					<div class="boardlistInner container-1 board193">
+						<div class="boardlistTitle boardlistCols-3">
+							<div class="containerIcon">
+								<img id="boardIcon2" src="icon/boardNewM.png" alt="" title="Forum durch Doppelklick als gelesen markieren" />
+							</div>
+							
+							<div class="containerContent">
+								<h4 class="boardTitle">									<a id="boardLink2" class="new" href="http://ddl-board.org/guest-only-hinweise-tipps.html?s=df074ace1415ff2d5aab14f3642071468c613a2d">Guest only - Hinweise &amp; Tipps<span>&nbsp;(1)</span></a>
+								</h4>																	<script type="text/javascript">
+										//<![CDATA[
+										boards.set(2, {
+											'boardNo': 2,
+											'boardID': 193,
+											'icon': 'icon/boardM.png'
+										});
+										//]]>
+									</script>
+																
+																	<p class="boardlistDescription">
+										<b><font color="#cd2525">- Hier erhält man Tipps und Hinweise -</font><br>Eigene Beiträge sind nicht möglich.</b>									</p>
+																
+																
+																
+																	<p class="moderators">
+										<img src="icon/moderatorS.png" alt="" />
+										<a href="http://ddl-board.org/user/282/severus/?s=df074ace1415ff2d5aab14f3642071468c613a2d">Severus</a>, <a href="http://ddl-board.org/user/5907/smith/?s=df074ace1415ff2d5aab14f3642071468c613a2d">Smith</a>									</p>
+																
+															</div>
+						</div>
+						
+													<div class="boardlistLastPost">								
+								<div class="containerIconSmall"><a href="http://ddl-board.org/120427-alle-jahre-wieder-ffnen-wir-die-t-ren/first-new-post.html?s=df074ace1415ff2d5aab14f3642071468c613a2d"><img src="icon/goToFirstNewPostS.png" alt="" title="Zum ersten neuen Beitrag springen" /></a></div>
+								<div class="containerContentSmall">
+									<p>
+										<span class="prefix"><strong></strong></span>
+										<a href="http://ddl-board.org/120427-alle-jahre-wieder-ffnen-wir-die-t-ren/first-new-post.html?s=df074ace1415ff2d5aab14f3642071468c613a2d">Alle Jahre wieder öffnen wir die Türen...</a>
+									</p>
+									<p>Von
+																					<a href="http://ddl-board.org/user/8447/compiopi/?s=df074ace1415ff2d5aab14f3642071468c613a2d">CompiOpi</a>
+																				<span class="light">(7. Dezember 2014, 15:24)</span>
+									</p>
+								</div>
+							</div>
+												
+													<div class="boardlistStats">
+								<dl>
+									<dt>Themen</dt>
+									<dd>7</dd>
+									<dt>Beiträge</dt>
+									<dd>9</dd>
+								</dl>
+							</div>
+												<!--[if IE 7]><span> </span><![endif]-->
+					</div>
+						
+						
+						
+			</li>								
+																												
+
+				<li>
+					<div class="boardlistInner container-2 board145">
+						<div class="boardlistTitle boardlistCols-3">
+							<div class="containerIcon">
+								<img id="boardIcon3" src="icon/boardNewM.png" alt="" title="Forum durch Doppelklick als gelesen markieren" />
+							</div>
+							
+							<div class="containerContent">
+								<h4 class="boardTitle">									<a id="boardLink3" class="new" href="http://ddl-board.org/guest-only-guest-helps-guest.html?s=df074ace1415ff2d5aab14f3642071468c613a2d">Guest only - Guest helps Guest<span>&nbsp;(6)</span></a>
+								</h4>																	<script type="text/javascript">
+										//<![CDATA[
+										boards.set(3, {
+											'boardNo': 3,
+											'boardID': 145,
+											'icon': 'icon/boardM.png'
+										});
+										//]]>
+									</script>
+																
+																	<p class="boardlistDescription">
+										<b><font color="#cd2525">- Fragen zu Main-Uploads. Anderes wird kommentarlos entfernt! - Also KEINE DOWN-Meldungen!!!</font><br>Virenmeldungen unbedingt per virustotal.com-Log belegen!</b>									</p>
+																
+																
+																
+																	<p class="moderators">
+										<img src="icon/moderatorS.png" alt="" />
+										<a href="http://ddl-board.org/user/282/severus/?s=df074ace1415ff2d5aab14f3642071468c613a2d">Severus</a>, <a href="http://ddl-board.org/user/5907/smith/?s=df074ace1415ff2d5aab14f3642071468c613a2d">Smith</a>									</p>
+																
+															</div>
+						</div>
+						
+													<div class="boardlistLastPost">								
+								<div class="containerIconSmall"><a href="http://ddl-board.org/120500-sicherheitscode-weg/first-new-post.html?s=df074ace1415ff2d5aab14f3642071468c613a2d"><img src="icon/goToFirstNewPostS.png" alt="" title="Zum ersten neuen Beitrag springen" /></a></div>
+								<div class="containerContentSmall">
+									<p>
+										<span class="prefix"><strong>[Problem]</strong></span>
+										<a href="http://ddl-board.org/120500-sicherheitscode-weg/first-new-post.html?s=df074ace1415ff2d5aab14f3642071468c613a2d">Sicherheitscode weg</a>
+									</p>
+									<p>Von
+																					<a href="http://ddl-board.org/user/140517/mr-download/?s=df074ace1415ff2d5aab14f3642071468c613a2d">MR Download</a>
+																				<span class="light">(Gestern, 23:07)</span>
+									</p>
+								</div>
+							</div>
+												
+													<div class="boardlistStats">
+								<dl>
+									<dt>Themen</dt>
+									<dd>63</dd>
+									<dt>Beiträge</dt>
+									<dd>156</dd>
+								</dl>
+							</div>
+												<!--[if IE 7]><span> </span><![endif]-->
+					</div>
+						
+						
+						
+			</li>								
+																												
+
+				<li>
+					<div class="boardlistInner container-1 board190">
+						<div class="boardlistTitle boardlistCols-3">
+							<div class="containerIcon">
+								<img id="boardIcon4" src="icon/boardM.png" alt="" />
+							</div>
+							
+							<div class="containerContent">
+								<h4 class="boardTitle">									<a id="boardLink4" href="http://ddl-board.org/guest-only-downs.html?s=df074ace1415ff2d5aab14f3642071468c613a2d">Guest only - Downs</a>
+								</h4>																
+																	<p class="boardlistDescription">
+										<b><font color="#cd2525">-NUR Downs melden! Für Hardwaredefekte sind wir nicht zuständig-</font> Die Fehlermeldung "Die Verknüpfung zum Download konnte nicht hergestellt werden." weist auf einen temporären HDD/Serverfehler hin!</b>									</p>
+																
+																
+																
+																	<p class="moderators">
+										<img src="icon/moderatorS.png" alt="" />
+										<a href="http://ddl-board.org/user/282/severus/?s=df074ace1415ff2d5aab14f3642071468c613a2d">Severus</a>, <a href="http://ddl-board.org/user/5907/smith/?s=df074ace1415ff2d5aab14f3642071468c613a2d">Smith</a>									</p>
+																
+															</div>
+						</div>
+						
+													<div class="boardlistLastPost">								
+								<div class="containerIconSmall"><a href="http://ddl-board.org/120468-das-wandelnde-schloss-2004-german-dl-720p-bluray-x264-stars-down/first-new-post.html?s=df074ace1415ff2d5aab14f3642071468c613a2d"><img src="icon/goToFirstNewPostS.png" alt="" title="Zum ersten neuen Beitrag springen" /></a></div>
+								<div class="containerContentSmall">
+									<p>
+										<span class="prefix"><strong>[DOWN-Warez]</strong></span>
+										<a href="http://ddl-board.org/120468-das-wandelnde-schloss-2004-german-dl-720p-bluray-x264-stars-down/first-new-post.html?s=df074ace1415ff2d5aab14f3642071468c613a2d">Das.Wandelnde.Schloss.2004.German.DL.720p.BluRay.x264-STARS DOWN</a>
+									</p>
+									<p>Von
+																					<a href="http://ddl-board.org/user/123964/carlos/?s=df074ace1415ff2d5aab14f3642071468c613a2d">Carlos</a>
+																				<span class="light">(5. Dezember 2014, 19:56)</span>
+									</p>
+								</div>
+							</div>
+												
+													<div class="boardlistStats">
+								<dl>
+									<dt>Themen</dt>
+									<dd>5</dd>
+									<dt>Beiträge</dt>
+									<dd>97</dd>
+								</dl>
+							</div>
+												<!--[if IE 7]><span> </span><![endif]-->
+					</div>
+						
+						
+						
+			</li>			</ul></li>			</ul>
+
+		
+					<div class="border infoBox">
+							<div class="container-1 infoBoxUsersOnline">
+					<div class="containerIcon"> <img src="wcf/icon/membersM.png" alt="" /></div>
+					<div class="containerContent">
+						<h3>Zurzeit sind 4 Benutzer online:</h3> 
+						<p class="smallFont">
+	3 Mitglieder 
+	(davon 1 unsichtbar)
+und	1 Besucher
+ - Rekord: 127 Benutzer (Sonntag,  1. August 2010, 14:45)</p>
+													<p class="smallFont">
+							<a href="http://ddl-board.org/user/140102/bieronie/?s=df074ace1415ff2d5aab14f3642071468c613a2d"><strong><span style="color: #6BC3C1">Bieronie</span></strong></a>, <a href="http://ddl-board.org/user/137419/lui666/?s=df074ace1415ff2d5aab14f3642071468c613a2d">Lui666</a>							</p>
+															<p class="smallFont">
+								Legende: <img style="padding-bottom: 6px;" src="icon/admin.png" alt="" /><strong><span style="color: #270aaa">Administratoren</span></strong>, <img style="padding-bottom: 6px;" src="icon/coadmin.png" alt="" /><strong><span style="color: #270aaa">Co-Admin</span></strong>, <img style="padding-bottom: 6px;" src="icon/smod.png" alt="" /><strong><span style="color: #8c1ea3">S-Mod</span></strong>, <img style="padding-bottom: 6px;" src="icon/mod.png" alt="" /><strong><span style="color: #239b13">Mod-DDLW</span></strong>, <img style="padding-bottom: 6px;" src="icon/orange.png" alt="" /><strong><span style="color: #ff9900">Mod-Music</span></strong> , <img style="padding-bottom: 6px;" src="icon/vim.png" alt="" /><strong><span style="color: #8c8c8c">VIM</span></strong>, <strong><span style="color: #6BC3C1">Upper-Music</span></strong>, <strong><span style="color: #6BC3C1">Upper-Warez</span></strong>, <img style="padding-bottom: 6px;" src="icon/admin.png" alt="" /><strong><span style="color: #270999">Technik</span></strong>								</p>
+																		</div>
+				</div>
+						
+							<div class="container-2 infoBoxStatistics">
+					<div class="containerIcon"><img src="icon/statisticsM.png" alt="" /></div>
+					<div class="containerContent">
+						<h3>Statistik:</h3> 
+						<p class="smallFont">7&nbsp;485 Mitglieder - 9&nbsp;257 Themen - 48&nbsp;133 Beiträge (19,69 Beiträge pro Tag)<br />
+Unser neuestes Mitglied heißt: <a href="http://ddl-board.org/user/152763/ropopow/?s=df074ace1415ff2d5aab14f3642071468c613a2d">ropopow</a>.</p>
+					</div>
+				</div>
+						
+			    <!-- WBB Lite 2.1.x / 3.1.x Icon-Legend v1.0.1 by http://www.insidepixel.com/ -->
+      <div class="container-1">
+        <div class="containerIcon"><img src="icon/legendM.png" alt="" /></div>
+          <div class="containerContent">
+            <h3>Legende:</h3> 
+            <img src="icon/boardS.png" alt="" /> Forum enthält keine neuen Beiträge<br />
+            <img src="icon/boardNewS.png" alt="" /> Forum enthält neue Beiträge<br />
+            <img src="icon/boardClosedS.png" alt="" /> Forum ist geschlossen<br />
+                        <img src="icon/boardRedirectS.png" alt="" /> Forum ist ein externer Link<br />
+                      </div>
+      </div>
+    <!-- WBB Lite 2.1.x / 3.1.x Icon-Legend v1.0.1 by http://www.insidepixel.com/ -->			
+							<div class="container-1 infoBoxTags">
+					<div class="containerIcon"><img src="wcf/icon/tagM.png" alt="" /></div>
+					<div class="containerContent">
+						<h3><a href="http://ddl-board.org/index.php?page=TaggedObjects&amp;s=df074ace1415ff2d5aab14f3642071468c613a2d">Die beliebtesten Tags</a></h3>
+						<ul class="tagCloud">
+			<li><a href="http://ddl-board.org/tag/1012-1080p.html?s=df074ace1415ff2d5aab14f3642071468c613a2d" style="font-size: 186.25%;">1080p</a></li>
+			<li><a href="http://ddl-board.org/tag/260-720p.html?s=df074ace1415ff2d5aab14f3642071468c613a2d" style="font-size: 143.75%;">720p</a></li>
+			<li><a href="http://ddl-board.org/tag/1441-adobe.html?s=df074ace1415ff2d5aab14f3642071468c613a2d" style="font-size: 101.25%;">Adobe</a></li>
+			<li><a href="http://ddl-board.org/tag/1038-anime.html?s=df074ace1415ff2d5aab14f3642071468c613a2d" style="font-size: 122.5%;">Anime</a></li>
+			<li><a href="http://ddl-board.org/tag/1133-chrome.html?s=df074ace1415ff2d5aab14f3642071468c613a2d" style="font-size: 80%;">Chrome</a></li>
+			<li><a href="http://ddl-board.org/tag/1581-cover.html?s=df074ace1415ff2d5aab14f3642071468c613a2d" style="font-size: 101.25%;">Cover</a></li>
+			<li><a href="http://ddl-board.org/tag/440-crack.html?s=df074ace1415ff2d5aab14f3642071468c613a2d" style="font-size: 165%;">Crack</a></li>
+			<li><a href="http://ddl-board.org/tag/2362-crf.html?s=df074ace1415ff2d5aab14f3642071468c613a2d" style="font-size: 80%;">crf</a></li>
+			<li><a href="http://ddl-board.org/tag/2008-down.html?s=df074ace1415ff2d5aab14f3642071468c613a2d" style="font-size: 143.75%;">DOWN</a></li>
+			<li><a href="http://ddl-board.org/tag/1452-download.html?s=df074ace1415ff2d5aab14f3642071468c613a2d" style="font-size: 101.25%;">Download</a></li>
+			<li><a href="http://ddl-board.org/tag/1300-fehler.html?s=df074ace1415ff2d5aab14f3642071468c613a2d" style="font-size: 101.25%;">Fehler</a></li>
+			<li><a href="http://ddl-board.org/tag/546-film.html?s=df074ace1415ff2d5aab14f3642071468c613a2d" style="font-size: 186.25%;">film</a></li>
+			<li><a href="http://ddl-board.org/tag/152-game.html?s=df074ace1415ff2d5aab14f3642071468c613a2d" style="font-size: 101.25%;">Game</a></li>
+			<li><a href="http://ddl-board.org/tag/270-games.html?s=df074ace1415ff2d5aab14f3642071468c613a2d" style="font-size: 101.25%;">Games</a></li>
+			<li><a href="http://ddl-board.org/tag/150-grafik.html?s=df074ace1415ff2d5aab14f3642071468c613a2d" style="font-size: 101.25%;">Grafik</a></li>
+			<li><a href="http://ddl-board.org/tag/1053-grafikkarte.html?s=df074ace1415ff2d5aab14f3642071468c613a2d" style="font-size: 80%;">grafikkarte</a></li>
+			<li><a href="http://ddl-board.org/tag/1184-hilfe.html?s=df074ace1415ff2d5aab14f3642071468c613a2d" style="font-size: 165%;">Hilfe</a></li>
+			<li><a href="http://ddl-board.org/tag/107-iphone.html?s=df074ace1415ff2d5aab14f3642071468c613a2d" style="font-size: 101.25%;">Iphone</a></li>
+			<li><a href="http://ddl-board.org/tag/451-itunes.html?s=df074ace1415ff2d5aab14f3642071468c613a2d" style="font-size: 80%;">itunes</a></li>
+			<li><a href="http://ddl-board.org/tag/1136-jdownloader.html?s=df074ace1415ff2d5aab14f3642071468c613a2d" style="font-size: 80%;">JDownloader</a></li>
+			<li><a href="http://ddl-board.org/tag/7-kino.html?s=df074ace1415ff2d5aab14f3642071468c613a2d" style="font-size: 101.25%;">Kino</a></li>
+			<li><a href="http://ddl-board.org/tag/1203-mac.html?s=df074ace1415ff2d5aab14f3642071468c613a2d" style="font-size: 101.25%;">Mac</a></li>
+			<li><a href="http://ddl-board.org/tag/597-metal.html?s=df074ace1415ff2d5aab14f3642071468c613a2d" style="font-size: 80%;">Metal</a></li>
+			<li><a href="http://ddl-board.org/tag/1648-movie.html?s=df074ace1415ff2d5aab14f3642071468c613a2d" style="font-size: 101.25%;">Movie</a></li>
+			<li><a href="http://ddl-board.org/tag/2321-mp3.html?s=df074ace1415ff2d5aab14f3642071468c613a2d" style="font-size: 80%;">mp3</a></li>
+			<li><a href="http://ddl-board.org/tag/1824-musik.html?s=df074ace1415ff2d5aab14f3642071468c613a2d" style="font-size: 101.25%;">Musik</a></li>
+			<li><a href="http://ddl-board.org/tag/1024-navi.html?s=df074ace1415ff2d5aab14f3642071468c613a2d" style="font-size: 101.25%;">Navi</a></li>
+			<li><a href="http://ddl-board.org/tag/421-neu.html?s=df074ace1415ff2d5aab14f3642071468c613a2d" style="font-size: 101.25%;">neu</a></li>
+			<li><a href="http://ddl-board.org/tag/1853-one-piece.html?s=df074ace1415ff2d5aab14f3642071468c613a2d" style="font-size: 101.25%;">One Piece</a></li>
+			<li><a href="http://ddl-board.org/tag/140-pc.html?s=df074ace1415ff2d5aab14f3642071468c613a2d" style="font-size: 143.75%;">PC</a></li>
+			<li><a href="http://ddl-board.org/tag/2314-pdf.html?s=df074ace1415ff2d5aab14f3642071468c613a2d" style="font-size: 80%;">pdf</a></li>
+			<li><a href="http://ddl-board.org/tag/244-playstation.html?s=df074ace1415ff2d5aab14f3642071468c613a2d" style="font-size: 101.25%;">Playstation</a></li>
+			<li><a href="http://ddl-board.org/tag/424-pro.html?s=df074ace1415ff2d5aab14f3642071468c613a2d" style="font-size: 101.25%;">pro</a></li>
+			<li><a href="http://ddl-board.org/tag/441-problem.html?s=df074ace1415ff2d5aab14f3642071468c613a2d" style="font-size: 165%;">Problem</a></li>
+			<li><a href="http://ddl-board.org/tag/245-ps3.html?s=df074ace1415ff2d5aab14f3642071468c613a2d" style="font-size: 101.25%;">PS3</a></li>
+			<li><a href="http://ddl-board.org/tag/246-samsung.html?s=df074ace1415ff2d5aab14f3642071468c613a2d" style="font-size: 122.5%;">Samsung</a></li>
+			<li><a href="http://ddl-board.org/tag/2365-scene.html?s=df074ace1415ff2d5aab14f3642071468c613a2d" style="font-size: 80%;">scene</a></li>
+			<li><a href="http://ddl-board.org/tag/1182-serie.html?s=df074ace1415ff2d5aab14f3642071468c613a2d" style="font-size: 250%;">Serie</a></li>
+			<li><a href="http://ddl-board.org/tag/9-share-online.html?s=df074ace1415ff2d5aab14f3642071468c613a2d" style="font-size: 228.75%;">Share-online</a></li>
+			<li><a href="http://ddl-board.org/tag/23-software.html?s=df074ace1415ff2d5aab14f3642071468c613a2d" style="font-size: 143.75%;">Software</a></li>
+			<li><a href="http://ddl-board.org/tag/278-spiele.html?s=df074ace1415ff2d5aab14f3642071468c613a2d" style="font-size: 101.25%;">Spiele</a></li>
+			<li><a href="http://ddl-board.org/tag/2054-staffel.html?s=df074ace1415ff2d5aab14f3642071468c613a2d" style="font-size: 101.25%;">Staffel</a></li>
+			<li><a href="http://ddl-board.org/tag/1047-studio.html?s=df074ace1415ff2d5aab14f3642071468c613a2d" style="font-size: 101.25%;">studio</a></li>
+			<li><a href="http://ddl-board.org/tag/2042-supernatural.html?s=df074ace1415ff2d5aab14f3642071468c613a2d" style="font-size: 101.25%;">Supernatural</a></li>
+			<li><a href="http://ddl-board.org/tag/248-tv.html?s=df074ace1415ff2d5aab14f3642071468c613a2d" style="font-size: 101.25%;">TV</a></li>
+			<li><a href="http://ddl-board.org/tag/1741-video2brain.html?s=df074ace1415ff2d5aab14f3642071468c613a2d" style="font-size: 101.25%;">video2brain</a></li>
+			<li><a href="http://ddl-board.org/tag/1252-vorschlag.html?s=df074ace1415ff2d5aab14f3642071468c613a2d" style="font-size: 101.25%;">Vorschlag</a></li>
+			<li><a href="http://ddl-board.org/tag/240-3.html?s=df074ace1415ff2d5aab14f3642071468c613a2d" style="font-size: 165%;">3</a></li>
+			<li><a href="http://ddl-board.org/tag/2235-wimmelbild.html?s=df074ace1415ff2d5aab14f3642071468c613a2d" style="font-size: 143.75%;">Wimmelbild</a></li>
+			<li><a href="http://ddl-board.org/tag/811-2012.html?s=df074ace1415ff2d5aab14f3642071468c613a2d" style="font-size: 122.5%;">2012</a></li>
+	</ul>					</div>
+				</div>
+					</div>
+		<div class="pageOptions">
+				<a href="http://ddl-board.org/index.php?action=BoardMarkAllAsRead&amp;t=432daa08552053d10d16966c5fb870b2a69320f8&amp;s=df074ace1415ff2d5aab14f3642071468c613a2d"><img src="icon/boardMarkAsReadS.png" alt="" /> <span>Alle Foren als gelesen markieren</span></a>
+	</div>
+</div>
+
+</div>
+<div id="footerContainer">
+<script src="http://js.anonym.to/anonym/anonymize.js" type="text/javascript"></script>
+
+<script type="text/javascript"><!--
+protected_links = "ddl-board.org,ddl-warez.in,ddl-music.org,ddl-beats.org,pornlounge.org,ddl-network.org";
+
+auto_anonymize();
+//--></script>	<div id="footer">
+							<div id="footerMenu" class="footerMenu advancedFooterMenuPopup">
+	<div class="footerMenuInner"><ul id="footerMenuItems-0"><li id="footerMenuItem-13" class="first"><a href="http://ddl-board.org/index.php?page=Stats&amp;s=df074ace1415ff2d5aab14f3642071468c613a2d" title="Statistik" id="footerMenuLink-13"><img src="icon/generalStatsS.png" alt="" id="footerMenuIcon-13" /> <span id="footerMenuTitle-13">Statistik</span></a></li><li id="footerMenuItem-4"><a href="http://ddl-board.org/index.php?page=LegalNotice&amp;s=df074ace1415ff2d5aab14f3642071468c613a2d" title="Impressum" id="footerMenuLink-4"><img src="wcf/icon/legalNoticeS.png" alt="" id="footerMenuIcon-4" /> <span id="footerMenuTitle-4">Impressum</span></a></li><li id="footerMenuItem-12" class="last"><a href="http://ddl-board.org/index.php?page=Partner&amp;s=df074ace1415ff2d5aab14f3642071468c613a2d" title="Partner" id="footerMenuLink-12"><img src="wcf/icon/partnerS.png" alt="" id="footerMenuIcon-12" /> <span id="footerMenuTitle-12">Partner</span></a></li></ul></div>
+</div>
+<script type="text/javascript">
+	//<![CDATA[
+	    var AdvancedFooterMenu = new AdvancedPageMenu('footerMenu', '3', 'popup', 'up', {'arrow':'wcf/icon/pageMenuArrowS.png', 'plus':'wcf/icon/plusS.png', 'minus':'wcf/icon/minusS.png'});
+		onloadEvents.push(function() { AdvancedFooterMenu.init(); });
+	//]]>
+</script>		<div id="footerOptions" class="footerOptions">
+			<div class="footerOptionsInner">
+				<ul>
+										
+											<li class="stylePicker">
+							<a id="changeStyle" class="hidden"><img src="wcf/icon/styleOptionsS.png" alt="" /> <span>Stil ändern</span></a>
+							<div class="hidden" id="changeStyleMenu">
+								<ul>
+																			<li><a rel="nofollow" href="/index.php?styleID=5&amp;s=df074ace1415ff2d5aab14f3642071468c613a2d"><span>DDL-Board v4 (BlueBox)</span></a></li>
+																			<li><a rel="nofollow" href="/index.php?styleID=4&amp;s=df074ace1415ff2d5aab14f3642071468c613a2d"><span>DDL-Warez (Blue)</span></a></li>
+																			<li class="active"><a rel="nofollow" href="/index.php?styleID=6&amp;s=df074ace1415ff2d5aab14f3642071468c613a2d"><span>DDL-Warez (xmas-Style)</span></a></li>
+																			<li><a rel="nofollow" href="/index.php?styleID=3&amp;s=df074ace1415ff2d5aab14f3642071468c613a2d"><span>Orange Experimental</span></a></li>
+																			<li><a rel="nofollow" href="/index.php?styleID=1&amp;s=df074ace1415ff2d5aab14f3642071468c613a2d"><span>WoltLab Basic</span></a></li>
+																			<li><a rel="nofollow" href="/index.php?styleID=2&amp;s=df074ace1415ff2d5aab14f3642071468c613a2d"><span>WoltLab Blue Sunrise</span></a></li>
+																	</ul>
+							</div>
+							
+							<script type="text/javascript">
+								//<![CDATA[
+								onloadEvents.push(function() { document.getElementById('changeStyle').className=''; });
+								popupMenuList.register('changeStyle');
+								//]]>
+							</script>
+							
+							<noscript>
+								<form method="get" action="index.php" class="quickJump">
+									<div>
+										<input type="hidden" name="page" value="Index" />
+										<select name="styleID" onchange="if (this.options[this.selectedIndex].value != 0) this.form.submit()">
+											<option value="0">Stil ändern</option>
+											<option value="0">-----------------------</option>
+											<option label="DDL-Board v4 (BlueBox)" value="5">DDL-Board v4 (BlueBox)</option>
+<option label="DDL-Warez (Blue)" value="4">DDL-Warez (Blue)</option>
+<option label="DDL-Warez (xmas-Style)" value="6" selected="selected">DDL-Warez (xmas-Style)</option>
+<option label="Orange Experimental" value="3">Orange Experimental</option>
+<option label="WoltLab Basic" value="1">WoltLab Basic</option>
+<option label="WoltLab Blue Sunrise" value="2">WoltLab Blue Sunrise</option>
+										</select>
+										<input type="hidden" name="s" value="df074ace1415ff2d5aab14f3642071468c613a2d" />										<input type="image" class="inputImage" src="wcf/icon/submitS.png" alt="Absenden" />
+									</div>
+								</form>
+							</noscript>
+						</li>
+																<li id="date" class="date last" title="Dienstag,  9. Dezember 2014, 18:18 UTC+1"><em><img src="wcf/icon/dateS.png" alt="" /> <span>Dienstag,  9. Dezember 2014, 18:18</span></em></li>
+										<li id="toTopLink" class="last extraButton"><a href="/#top" title="Zum Seitenanfang"><img src="wcf/icon/upS.png" alt="Zum Seitenanfang" /> <span class="hidden">Zum Seitenanfang</span></a></li>
+				</ul>
+			</div>
+		</div>
+		<p class="copyright"><a href="http://www.woltlab.com/de/">Forensoftware: <strong>Burning Board&reg;</strong>, entwickelt von <strong>WoltLab&reg; GmbH</strong></a><br />Dieses DDL-Forum existiert seit nunmehr 6 Jahren, 8 Monaten, 10 Tagen und 10 Stunden</p>
+	</div>
+</div>
+	<div class="border loginPopup hidden" id="quickLoginBox">
+		<form method="post" action="index.php?form=UserLogin" class="container-1">
+			<div>
+				<input tabindex="1" type="text" class="inputText" id="quickLoginUsername" name="loginUsername" value="Benutzername" title="Benutzername" />
+				<input tabindex="2" type="password" class="inputText" id="quickLoginPassword" name="loginPassword" value="" title="Kennwort" />
+				<input type="hidden" name="url" value="/index.php" />				<input type="hidden" name="s" value="df074ace1415ff2d5aab14f3642071468c613a2d" />				<input tabindex="4" type="image" class="inputImage" src="wcf/icon/submitS.png" alt="Absenden" />
+			</div>
+			<p><label><input tabindex="3" type="checkbox" id="useCookies" name="useCookies" value="1" /> Dauerhaft angemeldet bleiben?</label></p>
+		</form>
+	</div>
+<script type="text/javascript">
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-17284384-1']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+	</script>
+</body>
+</html>

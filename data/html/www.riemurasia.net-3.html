@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+	<title>Riemurasia | Tervetuloa Riemurasiaan!</title>
+	<meta charset="ISO-8859-1" />
+	<meta name="viewport" content="width=1066" />
+	<meta name="robots" content="noodp, noydir" />
+	<meta name="description" content="Klikkaa itsesi Riemurasian villiin maailmaan!" />
+	<link rel="index" title="Riemurasia" href="http://www.riemurasia.net/" />
+	<link rel="shortcut icon" href="/favicon.ico" />
+	<link rel="publisher" href="https://plus.google.com/+Riemurasia" />
+	<link rel="stylesheet" type="text/css" href="/css/classic.css?05122014" />
+	<link rel="stylesheet" type="text/css" href="/css/lightbox.css" />
+	<link rel="stylesheet" type="text/css" href="/css/jquery-ui-1.10.1.custom.classic.css?20112014" />
+	<script type="text/javascript" src="/js/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript" src="/js/jquery-ui-1.10.3.custom.min.js"></script>
+	<script type="text/javascript" src="/js/jquery.timeago.js"></script>
+	<script type="text/javascript" src="/js/jquery.cookie.js"></script>
+</head>
+<body class="index">
+<div id="header">
+	<div class="headerFixed">
+
+	<div class="headerSearchBackground">
+		<div id="headerSearch">
+			<div class="searchContainer">
+				<input type="text" name="searchMedia" placeholder="Hae sivustolta" id="searchMedia" />
+				<button class="searchMediaButton">HAE SIVUSTOLTA</button>
+				<div id="mediasuggestions"></div>
+			</div>
+		</div>
+	</div>
+	<div class="headerBackground">
+	<div class="headerContent noadsHeader">
+		<div class="headerBlock">
+			<a href="/"><span class="title">Etusivu</span></a>
+		</div>
+                <div class="headerBlock">
+                        <a href="/users.php"><span class="title">Käyttäjät</span></a>
+                </div>
+                <div class="headerBlock">
+                        <a href="/jylppy/" id="subMenuJylppy" class="showMenu"><span class="title">Jylppy-Galleria</span></a>
+                </div>
+                <div class="headerBlock">
+                        <a href="/rasiatube/" id="subMenuRasiatube" class="showMenu"><span class="title">Rasiatube</span></a>
+                </div>
+                <div class="headerBlock">
+                        <a href="/pelit/" id="subMenuPelit" class="showMenu"><span class="title">Pelit</span></a>
+                </div>
+                <div class="headerBlock">
+                        <a href="/linkit/" id="subMenuLinkit" class="showMenu"><span class="title">Linkit</span></a>
+                </div>
+		<div class="headerBlock">
+			<a href="/tv/browse.php"><span class="title">RasiaTV</span></a>
+                </div>
+		<div class="headerBlock">
+                        <a href="http://www.riemurasia.net/pelit/goodgame_empire.php" target="_blank" style="color: #F528DC;"><span class="title">Goodgame Empire</span></a>
+                </div>
+                <div class="headerBlock">
+                        <a href="#" id="subMenuMuut" class="showMenu"><span class="title">Lisää..</span></a>
+                </div><div class="headerBlock">
+<div class="themeSelect">
+Teema: <select id="selectTheme">
+	<option value="classic" selected>Klassinen</option>
+	<option value="newstyle">Uusi tyyli</option>
+</select>
+</div>
+</div>
+		<div class="rightBlock">
+			<div class="loginBlock">
+				<a href="https://www.riemurasia.net/login.php"><span class="loginButton">Kirjaudu</span></a>
+			</div>
+			<div class="searchBlock">
+				<a href="/jylppy/mediasearch.php" id="searchHeaderButton"></a>
+			</div>
+		</div>
+		<div class="subMenuJylppy">
+		<div class="menuItem">
+			<div class="menuContent">
+			<div class="topBlock">
+				<div class="leftBlock">
+					<p class="frontpage heading"><a href="/jylppy/">JYLPPY-GALLERIA ETUSIVU <img src="/images/menuArrow.png" alt="Jylppy-Galleria etusivu" /></a></p>
+				</div>
+
+				<div class="centerBlock">
+					<p class="heading"><a href="/jylppy/browse.php?page=1&amp;cat=1">KUVAT <img src="/images/menuArrow.png" alt="Kuvat" /></a></p>
+					<div class="innerContent">
+						<p><a href="/jylppy/browse.php?page=1&amp;cat=1" class="links">Uusimmat kuvat</a></p>
+						<p><a href="/jylppy/browse.php?page=1&amp;cat=1&amp;h=1" class="links">Katsotuimmat kuvat</a></p>
+                                                <p><a href="/jylppy/browse.php?page=1&amp;cat=1&amp;r=1" class="links">Suosituimmat kuvat</a></p>
+                                                <p><a href="/jylppy/browse.php?page=1&amp;cat=1&amp;d=1" class="links">Puhutuimmat kuvat</a></p>
+					</div>
+				</div>
+
+                               <div class="centerBlock">
+                                        <p class="heading"><a href="/jylppy/browse.php?page=1&amp;cat=2">VIDEOT <img src="/images/menuArrow.png" alt="Videot" /></a></p>
+                                        <div class="innerContent">
+                                                <p><a href="/jylppy/browse.php?page=1&amp;cat=2" class="links">Uusimmat videot</a></p>
+                                                <p><a href="/jylppy/browse.php?page=1&amp;cat=2&amp;h=1" class="links">Katsotuimmat videot</a></p>
+                                                <p><a href="/jylppy/browse.php?page=1&amp;cat=2&amp;r=1" class="links">Suosituimmat videot</a></p>
+                                                <p><a href="/jylppy/browse.php?page=1&amp;cat=2&amp;d=1" class="links">Puhutuimmat videot</a></p>
+                                        </div>
+                                </div>
+
+                               <div class="centerBlock">
+                                        <p class="heading"><a href="/jylppy/browse.php?page=1&amp;cat=3">TEKSTIT <img src="/images/menuArrow.png" alt="Tekstit" /></a></p>
+                                        <div class="innerContent">
+                                                <p><a href="/jylppy/browse.php?page=1&amp;cat=3" class="links">Uusimmat tekstit</a></p>
+                                                <p><a href="/jylppy/browse.php?page=1&amp;cat=3&amp;h=1" class="links">Katsotuimmat tekstit</a></p>
+                                                <p><a href="/jylppy/browse.php?page=1&amp;cat=3&amp;r=1" class="links">Suosituimmat tekstit</a></p>
+                                                <p><a href="/jylppy/browse.php?page=1&amp;cat=3&amp;d=1" class="links">Puhutuimmat tekstit</a></p>
+                                        </div>
+                                </div>
+
+                              <div class="centerBlock">
+                                        <p class="heading"><a href="/jylppy/browse.php?page=1&amp;cat=4">ÄÄNET <img src="/images/menuArrow.png" alt="Äänet" /></a></p>
+                                        <div class="innerContent">
+                                                <p><a href="/jylppy/browse.php?page=1&amp;cat=4" class="links">Uusimmat äänet</a></p>
+                                                <p><a href="/jylppy/browse.php?page=1&amp;cat=4&amp;h=1" class="links">Katsotuimmat äänet</a></p>
+                                                <p><a href="/jylppy/browse.php?page=1&amp;cat=4&amp;r=1" class="links">Suosituimmat äänet</a></p>
+                                                <p><a href="/jylppy/browse.php?page=1&amp;cat=4&amp;d=1" class="links">Puhutuimmat äänet</a></p>
+                                        </div>
+                                </div>
+
+				<div class="rightBlock">
+                                        <p class="heading"><a href="/jylppy/browse.php?page=1&amp;cat=5">FLASH <img src="/images/menuArrow.png" alt="Flash" /></a></p>
+                                        <div class="innerContent">
+                                                <p><a href="/jylppy/browse.php?page=1&amp;cat=5" class="links">Uusimmat flashit</a></p>
+                                                <p><a href="/jylppy/browse.php?page=1&amp;cat=5&amp;h=1" class="links">Katsotuimmat flashit</a></p>
+                                                <p><a href="/jylppy/browse.php?page=1&amp;cat=5&amp;r=1" class="links">Suosituimmat flashit</a></p>
+                                                <p><a href="/jylppy/browse.php?page=1&amp;cat=5&amp;d=1" class="links">Puhutuimmat flashit</a></p>
+                                        </div>
+                                </div>
+
+			</div>
+			<div class="bottomBlock">
+					<p class="headingLeft"><a href="/jylppy/browse.php?page=1">SELAA MEDIOITA <img src="/images/menuArrow.png" alt="Selaa medioita" /></a></p>
+					<p class="headingCenter"><a href="/jylppy/mediasearch.php">HAKUKONE <img src="/images/menuArrow.png" alt="Hakukone" /></a></p>
+                                        <p class="headingCenter"><a href="/rejected/">HYLÄTYT <img src="/images/menuArrow.png" alt="Hylätyt" /></a></p>
+					<p class="headingCenter"><a href="https://www.riemurasia.net/jylppy/upload.php">LISÄÄ MEDIA <img src="/images/menuArrow.png" alt="Lisää media" /></a></p>
+					<p class="headingCenter"><a href="/jylppy/gecheck.php">KULTAMUNA TARKASTUS <img src="/images/menuArrow.png" alt="Kultamuna tarkastus" /></a></p>
+			</div>
+
+			</div>
+		</div>
+		</div>
+
+		<div class="subMenuRasiatube">
+                <div class="menuItem">
+                        <div class="menuContent">
+				<div class="topBlock">
+                                	<div class="leftBlock">
+                                        	<p class="frontpage heading"><a href="/rasiatube/">RASIATUBE<br /> ETUSIVU <img src="/images/menuArrow.png" alt="Rasiatube etusivu" /></a></p>
+                                	</div>
+
+                                	<div class="centerBlock">
+                                        	<p class="heading"><a href="/rasiatube/browse.php">VIDEOT <img src="/images/menuArrow.png" alt="Videot" /></a></p>
+	                                        <div class="innerContent">
+        	                                        <p><a href="/rasiatube/browse.php" class="links">Uusimmat videot</a></p>
+                	                                <p><a href="/rasiatube/browse.php?h=1" class="links">Katsotuimmat videot</a></p>
+                        	                        <p><a href="/rasiatube/browse.php?r=1" class="links">Suosituimmat videot</a></p>
+                                	                <p><a href="/rasiatube/browse.php?d=1" class="links">Puhutuimmat videot</a></p>
+                                        	</div>
+        	                        </div>
+				</div>
+
+				<div class="bottomBlock">
+                                 	<p class="headingLeft"><a href="/rasiatube/browse.php">SELAA VIDEOITA <img src="/images/menuArrow.png" alt="Selaa videoita" /></a></p>
+                                        <p class="headingCenter"><a href="/rasiatube/mediasearch.php">HAKUKONE <img src="/images/menuArrow.png" alt="Hakukone" /></a></p>
+					<p class="headingCenter"><a href="/rasiatube/upload.php">LISÄÄ VIDEO <img src="/images/menuArrow.png" alt="Lisää video" /></a></p>
+					<!--<p class="headingCenter"><a href="/rasiatube/kpvote.php">KM TARKASTUS <img src="/images/menuArrow.png" alt="Km tarkastus" /></a></p>-->
+
+				</div>
+			</div>
+		</div>
+		</div>
+
+		<div class="subMenuLinkit">
+                <div class="menuItem">
+                        <div class="menuContent">
+                                <div class="topBlock">
+                                        <div class="leftBlock">
+                                                <p class="frontpage heading"><a href="/linkit/">LINKIT<br /> ETUSIVU <img src="/images/menuArrow.png" alt="Linkit etusivu" /></a></p>
+                                        </div>
+
+                                        <div class="centerBlock">
+                                                <p class="heading"><a href="/linkit/browse.php">LINKIT <img src="/images/menuArrow.png" alt="Linkit" /></a></p>
+                                                <div class="innerContent">
+                                                        <p><a href="/linkit/browse.php" class="links">Uusimmat linkit</a></p>
+                                                        <p><a href="/linkit/browse.php?h=1" class="links">Katsotuimmat linkit</a></p>
+                                                        <p><a href="/linkit/browse.php?r=1" class="links">Suosituimmat linkit</a></p>
+                                                        <p><a href="/linkit/browse.php?d=1" class="links">Puhutuimmat linkit</a></p>
+                                                </div>
+                                        </div>
+                                </div>
+
+                                <div class="bottomBlock">
+                                        <p class="headingLeft"><a href="/linkit/browse.php">SELAA LINKKEJÄ <img src="/images/menuArrow.png" alt="Selaa linkkejä" /></a></p>
+                                        <p class="headingCenter"><a href="/linkit/mediasearch.php">HAKUKONE <img src="/images/menuArrow.png" alt="Hakukone" /></a></p>
+                                        <p class="headingCenter"><a href="/linkit/upload.php">LISÄÄ LINKKI <img src="/images/menuArrow.png" alt="Lisää linkki" /></a></p>
+                                </div>
+                        </div>
+                </div>
+		</div>
+
+		<div class="subMenuPelit">
+                <div class="menuItem">
+                        <div class="menuContent">
+                                <div class="topBlock">
+                                        <div class="leftBlock">
+                                                <p class="frontpage heading"><a href="/pelit/">PELIT<br /> ETUSIVU <img src="/images/menuArrow.png" alt="Pelit etusivu" /></a></p>
+                                        </div>
+
+                                        <div class="centerBlock">
+                                                <p class="heading"><a href="/pelit/browse.php">PELIT <img src="/images/menuArrow.png" alt="Pelit" /></a></p>
+                                                <div class="innerContent">
+                                                        <p><a href="/pelit/browse.php" class="links">Uusimmat pelit</a></p>
+                                                        <p><a href="/pelit/browse.php?h=1" class="links">Pelatuimmat pelit</a></p>
+                                                        <p><a href="/pelit/browse.php?r=1" class="links">Suosituimmat pelit</a></p>
+                                                        <p><a href="/pelit/browse.php?d=1" class="links">Puhutuimmat pelit</a></p>
+                                                </div>
+                                        </div>
+                                </div>
+
+                                <div class="bottomBlock">
+                                        <p class="headingLeft"><a href="/pelit/browse.php">SELAA PELEJÄ <img src="/images/menuArrow.png" alt="Selaa pelejä" /></a></p>
+                                        <p class="headingCenter"><a href="/pelit/mediasearch.php">HAKUKONE <img src="/images/menuArrow.png" alt="Hakukone" /></a></p>
+                                        <p class="headingCenter"><a href="/pelit/upload.php">LISÄÄ PELI <img src="/images/menuArrow.png" alt="Lisää peli" /></a></p>
+                                </div>
+                        </div>
+                </div>
+		</div>
+
+		<div class="subMenuMuut">
+                <div class="menuItem">
+                        <div class="menuContent">
+                                <div class="topBlock">
+                                        <div class="leftBlock">
+						<p class="frontpage heading"><a href="/webcam">Webcam-keskustelu <img src="/images/menuArrow.png" alt="Webcam" /></a></p>
+                                        </div>
+				        <div class="centerBlock">
+						<p class="heading"><a href="/feedback.php">Palaute ylläpidolle <img src="/images/menuArrow.png" alt="Palaute" /></a></p>
+                                        </div>
+					<div class="centerBlock">
+		                       		<p class="heading"><a href="/mediakortti/" target="_blank">Mainostus <img src="/images/menuArrow.png" alt="Mainostus" /></a></p>
+			                </div>
+                                </div>
+                        </div>
+                </div>
+		</div>
+	</div>
+	</div>
+
+	<div id="headerRiemurasia">
+                <div id="release">
+                        <p>1</p>
+                </div>
+	</div>
+
+        <div id="releaseMsg" class="clearfix">
+                <div class="releaseMsgInner">
+                        <div class="closeRelease">
+                                <a href="javascript: void(0);" id="closeReleaseButton"><img src="/images/announcement-close.png" alt="Sulje" /></a>
+                        </div>
+                        <div class="releasePic">
+                                <a href="/kuka/Jylppy69"><img src="//www.riemurasia.net/images/thumb_nopic_extrasmall.jpg" alt="Jylppy69" /></a>
+                        </div>
+			<div class="releaseTitle">
+				Riemurasian kansainvälistyminen ja Flexvee yhteistyö
+			</div>
+			<div class="relTime">
+				5.12.2014: <a href="/kuka/Jylppy69">Jylppy69</a> kirjoitti
+			</div>
+
+                        <div class="releaseText">
+                                <p>Tarkoitus on julkaista Riemurasiasta englanninkielinen versio kansainvälisille markkinoille vuoden 2015 aikana, tämä ei kuitenkaan tarkoita sitä, että koko Riemurasia suomenkielisenä palveluna lopetetaan vaan rinnalle tuodaan eri nimellä toimiva ja kansainvälisille markkinoille suunnattu sivusto.
+<br /><br />
+Kaikki tutut ja turvalliset Riemurasian palvelut ja toiminnot tulevat olevaan saatavilla samalla tavalla kuin ennenkin ja kansainvälinen toiminta voi mahdollistaa uusia huikeita asioita myös Riemurasian kehittämiseen jotka eivät pelkästään suomen mittapuulla olisi olleet mahdollisia, vuodesta 2015 tulee taatusti jännittävä kaikinpuolin ja pyrimme tekemään parhaamme että viihdytte palvelumme parissa vielä pitkän ajan.
+<br /><br />
+Neonella Oy on tullut kanssamme mukaan strategiseen yhteistyöhön ja keräämme yhdessä rahoitusta.
+<br /><br />
+Tarkoitus on tehdä syventävää yhteistyötä kummankin palvelun kehittämiseksi ja tuoda myös Riemurasian käyttäjiä mukaan Flexveen palvelujen pariin.
+<br /><br />
+Tällä hetkellä Riemurasia ja Flexvee (Neonella Oy) kerää yhteisrahoitusta FundedByMe joukkorahoitusalustan kautta niin, että sijoittaja saa jomman kumman
+yrityksen osakkeita haluamansa määrän ja saa sijoittamansa rahan myöhemmin takaisin mahdollisten osinkojen kautta.
+<br /><br />
+Kommenteissa liikkuneisiin spekulointeihin vastauksena siis, että mistään pyramidihuijauksesta ei ole kyse ja yhteistyöllä ei ole mitään negatiivisia vaikutuksia Riemurasiaan tulevaisuudessa. :)
+<br /><br />
+Neonella ei myöskään puutu Riemurasian sisältöön, kommentteihin sensuroimalla tai poistamalla medioita.
+<br /><br />
+<h4>Mikä on Flexvee?</h4>
+<br />
+Flexvee on suomalaisen Neonella Oy:n kehittämä markkinointiin ja viihdesisältöön keskittynyt liiketoimintakonsepti. Sen tekninen alusta mahdollistaa vuorovaikutteisuuden sekä tv-ohjelmissa että videoissa ja palkitsee osallistumisesta. Lisäksi Flexvee mahdollistaa rahaliikenteen interaktiivisen sisällön yhteydessä. Flexvee-järjestelmää voidaan käyttää myös perinteisen online-markkinoinnin yhteydessä, kuten esimerkiksi bannereissa. Flexvee on ainutlaatuinen tapa tehdä liiketoimintaa, eikä markkinoilla ole samanlaisella konseptilla toimivaa kilpailijaa.
+<br /><br />
+FundedByMe kampanja: <a href="https://www.fundedbyme.com/fi/campaign/5117/enjoy-flexvee-and-earn-bitcoins/?type=e&language=secondary" target="_blank">https://www.fundedbyme.com/fi/campaign/5117/enjoy-flexvee-and-earn-bitcoins/?type=e&language=secondary</a><br />
+Flexvee: <a href="http://www.flexvee.fi/" target="_blank">http://www.flexvee.fi/</a></p>
+                        </div>
+                </div>
+	</div>
+
+	</div>
+</div>
+<div id="container">
+    <div id="joinRiemurasia">
+	<div class="joinBackground">
+		<div class="logoLeft"></div>
+		<div class="loginRegister">
+			<h1>LIITY <span class="color">RIEMURASIAAN</span> JA PIRISTÄ PÄIVIÄSI LAATUVIIHTEELLÄ!</h1>
+
+			<div class="joinRegisterButtons">
+				<div class="login">
+					<a href="https://www.riemurasia.net/login.php"><img src="/images/login.png" alt="Kirjaudu" /></a>
+				</div>
+				<div class="register">
+					<a href="https://www.riemurasia.net/register.php"><img src="/images/join.png" alt="Rekisteröidy" /></a>
+				</div>
+			</div>
+		</div>
+	</div>
+    </div>
+	<div class="main-div noads clearfix">
+	<!--[if lt IE 9]>
+	Käytät vanhentunutta selainta. Ole hyvä ja päivitä selain uusimpaan versioon.<br />
+	Suosittelemme käytettäväksi seuraavia selaimia Riemurasian onnistuneeseen selailuun:<br /><br />
+	&raquo; <a href="http://www.google.fi/intl/fi/chrome/browser/" target="_blank">Lataa Chrome verkkoselain - Käyttöjärjestelmät: Windows, Mac OS X, Linux</a> (Suositeltu)<br />
+	&raquo; <a href="http://www.mozilla.org/fi/firefox/new/" target="_blank">Lataa Firefox verkkoselain - Käyttöjärjestelmät: Windows, Mac OS X, Linux</a><br />
+	&raquo; <a href="http://support.apple.com/kb/DL1531?viewlocale=fi_FI" target="_blank">Lataa Safari verkkoselain - Käyttöjärjestelmät: Windows, Mac OS X</a><br />
+	&raquo; <a href="http://www.opera.com/fi/computer/windows" target="_blank">Lataa Opera verkkoselain - Käyttöjärjestelmät: Windows, Mac OS X, Linux</a><br />
+	&raquo; <a href="http://windows.microsoft.com/fi-fi/internet-explorer/download-ie" target="_blank">Lataa uusin versio Internet Explorer verkkoselaimesta - Käyttöjärjestelmät: Windows</a><br /><br />
+	<![endif]-->
+	<div class="container">
+		<div class="forgotPass">
+			<h1 class="medium">UNOHDITKO SALASANASI TAI NIMIMERKKISI?</h1>
+			<div class="forgotText">
+				<p>
+				Jos olet unohtanut salasanasi tai nimimerkkisi Riemurasiaan, syötä allaolevaan kenttään rekisteröimäsi sähköpostiosoite.</p>
+				<p> Lähetämme rekisteröimääsi sähköpostiosoitteeseen nimimerkkisi sekä lisäohjeet salasanan vaihtamiseksi.</p>
+
+				<form id="forgotForm">
+					<div class="inputs">
+						<p>Sähköpostiosoite</p>
+						<input type="email" name="email" id="email" required />
+					</div>
+
+					<input type="submit" class="submitButton" value="LÄHETÄ" />
+				</form>
+				<div id="emailMsg"></div>
+			</div>
+
+
+
+		</div>
+	</div><script type='text/javascript'>
+$(document).ready(function() {
+        /*<![CDATA[*/
+
+	$('#forgotForm').submit(function(e) {
+		e.preventDefault();
+
+		var emailData = {
+			'email': $('#email').val()
+		}
+
+		$.ajax('/checkforgotpass.php', {
+			type: 'POST',
+			data: {
+				'emailRequest': JSON.stringify(emailData)
+			},
+			success: function(jsonRequest) {
+				var emailData = JSON.parse(jsonRequest);
+				if(emailData.result=='success') {
+					$('#emailMsg').html(emailData.text);
+					$('#email').val('');
+				} else {
+					$('#emailMsg').html(emailData.error);
+				}
+			}
+		});
+
+	});
+
+        /*]]>*/
+});
+</script>
+</div>
+<div id="footer" class="noads">
+	<div class="copyright">
+		&copy; 2003 - 2014 Riemurasia
+	</div>
+	<div class="links">
+		<a href="/mediakortti">Mainostus Riemurasiassa</a> / <a href="/mediakortti/?lang=en">Advertising in Riemurasia</a> / <a href="/termsofservice.php">Käyttöehdot ja rekisteriseloste</a> / <a href="/termsofservice.php">Terms Of Service</a>
+		<br />
+		<a href="/feedback.php">Yhteydenotto</a> / <a href="/feedback.php?lang=en">Contact</a>
+	</div>
+	<div class="design">
+		Design &#8212; <a href="http://billion.fi/" target="_blank" rel="nofollow">Billion AD</a>
+	</div>
+</div>
+</div>
+<script type='text/javascript'>
+$(document).ready(function() {
+
+	var loclicked = 0;
+	$('.logoLeft').click(function() {
+		if (!loclicked) {
+			$('#joinRiemurasia').animate({left: '+=150px', height: 'toggle'}, 5000, function() {
+				$('.joinBackground').css('background','none');
+				$('#joinRiemurasia').animate({left: '+=150px', height: 'toggle'}, 5000, function() {
+					loclicked++;
+				});
+			});
+		}
+		else {
+			$('#joinRiemurasia').animate({left: '+=150px', height: 'toggle'}, 5000, function() {
+				$('.joinBackground').removeAttr('style');
+				$('#joinRiemurasia').animate({left: '+=150px', height: 'toggle'}, 5000, function() {
+					loclicked = 0;
+				});
+			});
+		}
+	});
+	
+        var cbclicked = 0;
+        var cb = $('.cbhover');
+	cb.click(function(e) {
+		e.preventDefault();
+		if (!cbclicked) {
+ 		updatecb();
+			cbclicked++;
+			$('#cbmenu').slideDown('fast');
+		}
+		else {
+			$('#cbmenu').slideUp('fast');
+			cbclicked = 0;
+		}
+	});
+
+	// Ylänurkan kirjautuneen käyttäjän profiilikuvan animointi ja menu
+	var clicked = 0;
+	var pic = $('#loggedUserpic');
+	pic.mouseenter(function() {
+		if (!clicked) {pic.css('background-position','left -47px');}
+		else {pic.css('background-position','left -141px');}
+	});
+	pic.mouseleave(function() {
+		if (!clicked) {pic.css('background-position','top');}
+		else {pic.css('background-position','left -94px');}
+	});
+	pic.click(function(e) {
+		e.preventDefault();
+		if (!clicked) {
+			clicked++;
+			pic.css('background-position','left -94px');
+			$('#header .headerContent .loggedBlock #loggedUsermenu').slideDown('fast');
+	                $('#header .headerFixed .headerContent .menuActivity').show();
+			if( $('#activityWrapper .actionRow').length === 0) {
+				var method = $('#header .headerFixed .headerContent .menuActivity .activityItem .innerActivity .activityMethods a.active').trigger('click');
+			}
+		}
+		else {
+			pic.css('background-position','top');
+			$('#header .headerContent .loggedBlock #loggedUsermenu').slideUp('fast');
+	    		$('#header .headerFixed .headerContent .menuActivity').hide();
+			clicked = 0;
+		}
+
+	});
+
+	// Flexvee korjaus
+	$('#loggedUserpic').click(function(e){
+		$('#flexvee_iframe_2_parent').toggle();
+	});
+
+	// Headerin valikot
+	$('#header .showMenu').click(function(e){
+
+		$('#flexvee_iframe_2_parent').toggle();
+
+		e.preventDefault();
+		var id = $(this).attr('id');
+		var div = $('[class^="'+id+'"]');
+		if(div.is(':visible')){
+			div.hide();
+			$('#header .headerContent .headerBlock .showMenu span.title').removeClass('open');
+		} else {
+			$('#header .headerContent div[class^="subMenu"]').hide();
+			$('#header .headerContent .headerBlock .showMenu span.title').removeClass('open');
+			if ($('#header .headerContent .loggedBlock #loggedUsermenu').is(':visible')) {
+  				$('#header .headerContent .loggedBlock #loggedUserpic').css('background-position','top');
+				$('#header .headerContent .loggedBlock #loggedUsermenu').slideUp('fast');
+	 			$('#header .headerFixed .headerContent .menuActivity').hide();
+				clicked = 0;
+			}
+			div.show();
+			$('#'+id+' span.title').addClass('open');
+		}
+	});
+
+	var headerScroll = 0;
+	if ($('.headerFixed').css('position') != 'relative') { headerScroll = 1; }
+	$(window).resize(function () {
+		if ($('.headerFixed').css('position') == 'relative') { headerScroll = 0; }
+		else { headerScroll = 1; }
+	});
+	var _mypos = $(window).scrollTop()+59;
+	var _up = 0;
+	var _newScroll;
+	$(window).scroll(function() {
+		if (headerScroll) {
+			_newScroll = $(window).scrollTop();
+			if (_newScroll >= _mypos && !_up) {
+				$('.headerFixed').css('position', 'absolute');
+				$('.headerFixed').stop().fadeOut('fast');
+				_up = !_up;
+			} else if (_newScroll < _mypos && _up) {
+				$('.headerFixed').css('position', 'fixed');
+				$('.headerFixed').stop().fadeIn('fast');
+				_up = !_up;
+			}
+			if (_newScroll > 59) { _mypos = _newScroll; }
+		}
+	});
+	////
+
+	// Headerin valikot klikkaus ulkopuolelle
+	$(document).mouseup(function (e) {
+		e.stopPropagation();
+		var container = $('#header .headerContent .menuItem');
+		if (e.target.nodeName != 'SPAN') {
+			if (container.has(e.target).length === 0) {
+				$('#header .headerContent div[class^="subMenu"]').hide();
+				$('#header .headerContent .headerBlock .showMenu span.title').removeClass('open');
+			}
+		}
+		var container2 = $('#header .searchContainer');
+		if (container2.has(e.target).length === 0) {
+			$('#mediasuggestions').hide();
+		}
+        });
+	////
+
+	$('#logoutButton, #logoutButton2').click(function() {
+		sessionStorage.clear();
+		window.location.href = '/logout.php';
+	});
+
+
+        $('#searchMedia').keydown(function(e) {
+                if(e.keyCode == 13) {
+                        e.preventDefault();
+                }
+        });
+
+        var minlength = 4;
+        $('#searchMedia').keyup(function() {
+                var that = this,
+                value = $(this).val();
+
+                if(value.length >= minlength) {
+                        $.ajax('searchmedia.php', {
+                                type: 'GET',
+                                data: {
+                                        'search': value
+                                },
+                                dataType: 'text',
+                                'success': function(msg) {
+                                        $('#mediasuggestions').show();
+                                        if(value==$(that).val()) {
+                                                $('#mediasuggestions').html(msg);
+                                        }
+                                }
+
+                        });
+                }
+                else {
+                        $('#mediasuggestions').hide();
+                }
+        });
+
+	$('#headerRiemurasia').click(function() {
+		if( $('#releaseMsg').is(':hidden')) {
+			var seen=1;
+			$.cookie('releaseMsg_322', seen, { expires: 300, path: '/', domain: '.riemurasia.net' } );
+			$('#releaseMsg').fadeIn('fast');
+		} else {
+			$('#release').fadeOut(1000);
+			$('#releaseMsg').fadeOut('fast');
+		}
+	});
+
+
+	$('#closeReleaseButton').click(function() {
+		$('#releaseMsg').fadeOut('fast');
+	});
+
+        // THEME SELECT
+
+	$('#selectTheme').change(function() {
+	   var theme = $('#selectTheme').val();
+	   $.cookie('theme', theme, { expires: 60, path: '/', domain: '.riemurasia.net' });
+	   location.reload(true);
+	});
+
+});
+</script>
+<!-- InterQuest begin v3.0 --> <script> if(1>(Math.random()*20))setTimeout(function(){ var t="script",d=document,e=d.createElement(t),f=d.getElementsByTagName(t)[0]; e.async=1;e.src="//survey.interquest.com/cgi/invite?id=f0a7a4649ef7b382&js20"; f.parentNode.insertBefore(e,f);},1); </script> <!-- InterQuest end -->
+<script type="text/javascript" src="/js/spring.js"></script>
+<script type="text/javascript">
+var sp_e0 = {
+"s":"nauru",
+"cp":"aggregate/klikklik",
+"url":document.location.href
+}
+spring.c(sp_e0);
+</script>
+<noscript><img src="https://ssl-nauru.spring-tns.net/j0=,,,;+,,cp=aggregate;;;;" alt=""></noscript>
+</body>
+</html>
