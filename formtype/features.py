@@ -1,10 +1,17 @@
 # -*- coding: utf-8 -*-
 from __future__ import absolute_import
 
+import urlparse
 import collections
 
 import lxml.html
 from sklearn.base import BaseEstimator, TransformerMixin
+
+
+def _add_scheme_if_missing(url):
+    if "//" not in url:
+        url = "http://%s" % url
+    return url
 
 
 def _get_type_counts(form):
@@ -106,10 +113,19 @@ class SubmitText(BaseFormFeatureExtractor):
 class FormUrl(BaseFormFeatureExtractor):
     """ <form action> value """
     def get_form_features(self, form):
-        url = form.get("action", "").replace('/', '').replace("_", "")
-        return url
-#         p = urlparse.urlparse(url)
-#         return "%s %s %s %s".join([p.path, p.params, p.query, p.fragment])
+        url = form.get("action", "")
+        if not url:
+            return url
+        url = _add_scheme_if_missing(url)
+        p = urlparse.urlparse(url)
+        parts = [
+            self._normalize(part)
+            for part in [p.path, p.params, p.query, p.fragment]
+        ]
+        return "%s%s%s#%s" % tuple(parts)
+
+    def _normalize(self, part):
+        return part.replace("/", "").replace("_", "").replace("-", "")
 
 
 class FormCss(BaseFormFeatureExtractor):
