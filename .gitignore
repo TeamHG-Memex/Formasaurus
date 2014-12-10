@@ -1,0 +1,7 @@
+*.pyc
+*egg-info
+.tox
+build
+dist
+.idea
+.ipynb_checkpoints

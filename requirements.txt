@@ -1,0 +1,6 @@
+lxml
+docopt
+tqdm
+tldextract
+pandas
+scikit-learn
