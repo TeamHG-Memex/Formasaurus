@@ -1,0 +1,112 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html>
+<head>
+
+	<title>БЕЛОРУССКИЕ НОВОСТИ | Беларусь | Минск | факты | комментарии 
+
+
+</title>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+	<meta name="Author" content="Red Graphic Systems">
+	<meta name="keywords" content=" ">
+	<meta name="description" content=" ">
+
+	<link rel="stylesheet" type="text/css" href="/templates/css/default.css" media="screen">
+	<link rel="stylesheet" type="text/css" href="/templates/css/popup.css" media="screen">
+	<link rel="stylesheet" type="text/css" href="/templates/css/print.css" media="print">
+
+	<script language="JavaScript" type="text/javascript" src="/templates/js/common.js"></script>
+	<script>
+		function checkForm(){
+	var pat_email=/^[a-zA-Z][a-zA-Z\_\.\-\d]*@[a-zA-Z\_\.\-\d]+.[a-zA-Z]{2,4}$/;
+	var pat_text=/^\s*$/;
+	if (pat_text.test(document.formNews.formMistakeName.value)) {alert ("Заполните поле 'Имя'");	return false;}
+	if (pat_text.test(document.formNews.formMistakeCity.value)) {alert ("Заполните поле 'Город'");	return false;}
+	if (!pat_text.test(document.formNews.formMistakeEmail.value) && !pat_email.test(document.formNews.formMistakeEmail.value)) {alert ("Заполните правильно поле 'E-Mail'");	return false;}
+	if (pat_text.test(document.formNews.formMistakeComment.value)) {alert ("Заполните поле 'Сообщение'");	return false;}
+
+
+
+
+		}
+
+	</script>
+</head>
+
+<body onload="setInit (); setAutoFocus ('formMistakeName');">
+<div id="loHeader" class="header">
+	<div class="headerTitle">
+		<h1>Пишите нам</h1>
+	</div>
+</div>
+
+<div id="loContent" class="content">
+	<div class="contentTextContent">
+		<p><strong><em>Уважаемые читатели!</em><br />Вы можете отправить нам свое сообщение.</strong></p>
+	</div>
+	<div class="contentFormContent">
+		<p><b></b></p>
+<form id="formNews" name="formNews" method="post" action="" onsubmit="return checkForm()">
+			<table cellspacing="0" class="form formStandard">
+			<col class="colFormStandardInputTitle">
+			<col class="colFormStandardInput">
+			<tr>
+				<td class="formInputTitle"><label for="formMistakeName">Имя:</label></td>
+				<td class="formInput"><input type="text" style="width: 250px" id="formMistakeName" name="formMistakeName" value="" class="textfield"></td>
+			</tr>
+			<tr>
+				<td class="formInputTitle"><label for="formMistakeCity">Город:</label></td>
+				<td class="formInput"><input type="text" style="width: 250px" id="formMistakeCity" name="formMistakeCity" value="" class="textfield"></td>
+			</tr>
+			<tr>
+				<td class="formInputTitle"><label for="formMistakeEmail">E-Mail:</label></td>
+				<td class="formInput"><input type="text" style="width: 250px" id="formMistakeEmail" name="formMistakeEmail" value="" class="textfield"></td>
+			</tr>
+			<tr class="formInputSeparator">
+				<td class="formInputTitle"><label for="formMistakeComment">Сообщение:</label></td>
+				<td class="formInput"><textarea style="width: 250px" id="formMistakeComment" name="formMistakeComment" cols="20" rows="5" class="textfield"></textarea></td>
+			</tr>
+			<tr>
+				<td class="formInputTitle">&nbsp;</td>
+				<td class="formButtonRow">
+					<input type="submit" id="formMistakeSubmit" value="Отправить" class="button">
+					<input type="button" id="formMistakeClose" value="Закрыть" class="button buttonClose" onclick="window.close();">
+				</td>
+			</tr>
+			</table>
+		</form>
+	</div>
+</div>
+<!-- searchExclude -->
+<div class="hide">
+
+<noindex>
+
+<script type="text/javascript" src="http://mg.dt00.net/js/n/a/naviny.by.i1.js"></script>
+
+<!-- (C)2009 Gemius SA - gemiusAudience / naviny.by / Home Page -->
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+var pp_gemius_identifier = new String('Aus70GNYcHJ_54Bg05U3xMbfHSEYkjrwwWB5vtycoQP.l7');
+var pp_gemius_hitcollector = 'gaby.hit.gemius.pl';
+//--><!]]>
+</script>
+<script type="text/javascript" src="/xgemius.js"></script>
+
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+var ghmxy_align = 'left';
+var ghmxy_type = 'percent';
+var ghmxy_identifier = '.K5KhnhgK8KTDEpkIQ_o5Za0LbqdiicgDf4gqUsuySb.w7';
+//--><!]]>
+</script>
+<script type="text/javascript" src="http://pro.hit.gemius.pl/hmapxy.js"></script>
+
+</noindex>
+
+</div>
+
+</body>
+</html>

@@ -121,6 +121,18 @@
             "p"
         ]
     }, 
+    "html/danishbits.org-0.html": {
+        "url": "https://danishbits.org/login.php", 
+        "types": [
+            "l"
+        ]
+    }, 
+    "html/danishbits.org-1.html": {
+        "url": "https://danishbits.org/login.php?act=recover", 
+        "types": [
+            "p"
+        ]
+    }, 
     "html/darkmoney.cc-0.html": {
         "url": "http://darkmoney.cc/", 
         "types": [
@@ -164,6 +176,27 @@
             "r"
         ]
     }, 
+    "html/dnoticias.pt-0.html": {
+        "url": "http://dnoticias.pt/", 
+        "types": [
+            "s"
+        ]
+    }, 
+    "html/dnoticias.pt-1.html": {
+        "url": "http://dnoticias.pt/user?destination=actualidade", 
+        "types": [
+            "s", 
+            "l", 
+            "p"
+        ]
+    }, 
+    "html/dnoticias.pt-2.html": {
+        "url": "http://dnoticias.pt/user/register?destination=actualidade", 
+        "types": [
+            "s", 
+            "r"
+        ]
+    }, 
     "html/duckduckgo.com-0.html": {
         "url": "https://duckduckgo.com/", 
         "types": [
@@ -181,6 +214,23 @@
         "types": [
             "o", 
             "s"
+        ]
+    }, 
+    "html/forobeta.com-0.html": {
+        "url": "http://forobeta.com/", 
+        "types": [
+            "l", 
+            "s", 
+            "o"
+        ]
+    }, 
+    "html/forobeta.com-1.html": {
+        "url": "http://forobeta.com/registro.php", 
+        "types": [
+            "l", 
+            "s", 
+            "r", 
+            "o"
         ]
     }, 
     "html/forum.escmid.org-0.html": {
@@ -402,6 +452,13 @@
             "o"
         ]
     }, 
+    "html/lokalavisen.dk-0.html": {
+        "url": "http://lokalavisen.dk/", 
+        "types": [
+            "s", 
+            "s"
+        ]
+    }, 
     "html/memebase.cheezburger.com-0.html": {
         "url": "http://memebase.cheezburger.com/verydemotivational", 
         "types": [
@@ -491,6 +548,49 @@
         "types": [
             "s", 
             "o"
+        ]
+    }, 
+    "html/naviny.by-0.html": {
+        "url": "http://naviny.by/", 
+        "types": [
+            "o", 
+            "l", 
+            "m", 
+            "s", 
+            "s", 
+            "s", 
+            "s", 
+            "s", 
+            "o", 
+            "o", 
+            "o", 
+            "o"
+        ]
+    }, 
+    "html/naviny.by-1.html": {
+        "url": "http://naviny.by/registration", 
+        "types": [
+            "o", 
+            "l", 
+            "m", 
+            "s", 
+            "s", 
+            "s", 
+            "s", 
+            "s", 
+            "r"
+        ]
+    }, 
+    "html/naviny.by-2.html": {
+        "url": "http://naviny.by/services/news/", 
+        "types": [
+            "c"
+        ]
+    }, 
+    "html/naviny.by-3.html": {
+        "url": "http://naviny.by/services/feedback/", 
+        "types": [
+            "c"
         ]
     }, 
     "html/owners.honda.com-0.html": {
@@ -681,6 +781,27 @@
             "m"
         ]
     }, 
+    "html/trendo.bg-0.html": {
+        "url": "http://trendo.bg/", 
+        "types": [
+            "s", 
+            "m"
+        ]
+    }, 
+    "html/trendo.bg-1.html": {
+        "url": "http://trendo.bg/user/signin", 
+        "types": [
+            "s", 
+            "l"
+        ]
+    }, 
+    "html/trendo.bg-2.html": {
+        "url": "http://trendo.bg/user/forgot_password", 
+        "types": [
+            "s", 
+            "p"
+        ]
+    }, 
     "html/us.pycon.org-0.html": {
         "url": "https://us.pycon.org/2015/account/signup/", 
         "types": [
@@ -823,6 +944,34 @@
             "o"
         ]
     }, 
+    "html/www.bilbasen.dk-0.html": {
+        "url": "http://www.bilbasen.dk/", 
+        "types": [
+            "s", 
+            "s"
+        ]
+    }, 
+    "html/www.bilbasen.dk-1.html": {
+        "url": "https://www.bilbasen.dk/bruger/log-ind", 
+        "types": [
+            "s", 
+            "l"
+        ]
+    }, 
+    "html/www.bilbasen.dk-2.html": {
+        "url": "https://www.bilbasen.dk/bruger/opret", 
+        "types": [
+            "s", 
+            "r"
+        ]
+    }, 
+    "html/www.bilbasen.dk-3.html": {
+        "url": "https://www.bilbasen.dk/bruger/glemt-adgangskode", 
+        "types": [
+            "s", 
+            "p"
+        ]
+    }, 
     "html/www.boston.com-0.html": {
         "url": "http://www.boston.com/community/forums", 
         "types": [
@@ -860,6 +1009,42 @@
     }, 
     "html/www.brookdalecc.edu-1.html": {
         "url": "http://www.brookdalecc.edu/about/contact-us/", 
+        "types": [
+            "s", 
+            "c"
+        ]
+    }, 
+    "html/www.bsuir.by-0.html": {
+        "url": "http://www.bsuir.by/", 
+        "types": [
+            "s"
+        ]
+    }, 
+    "html/www.bsuir.by-1.html": {
+        "url": "http://www.bsuir.by/conference/", 
+        "types": [
+            "s", 
+            "l"
+        ]
+    }, 
+    "html/www.bsuir.by-2.html": {
+        "url": "http://www.bsuir.by/conference/ucp.php?mode=register&sid=ea6cd060879d8f1b281b139b2b14b262", 
+        "types": [
+            "s", 
+            "o", 
+            "r"
+        ]
+    }, 
+    "html/www.bsuir.by-3.html": {
+        "url": "http://www.bsuir.by/conference/ucp.php?mode=register", 
+        "types": [
+            "s", 
+            "o", 
+            "r"
+        ]
+    }, 
+    "html/www.bsuir.by-4.html": {
+        "url": "http://www.bsuir.by/online/showpage.jsp?PageID=81055", 
         "types": [
             "s", 
             "c"
@@ -1009,6 +1194,28 @@
             "c"
         ]
     }, 
+    "html/www.elandroidelibre.com-0.html": {
+        "url": "http://www.elandroidelibre.com/", 
+        "types": [
+            "s"
+        ]
+    }, 
+    "html/www.elandroidelibre.com-1.html": {
+        "url": "http://www.elandroidelibre.com/preguntas/register", 
+        "types": [
+            "o", 
+            "r", 
+            "s"
+        ]
+    }, 
+    "html/www.elandroidelibre.com-2.html": {
+        "url": "http://www.elandroidelibre.com/preguntas/login", 
+        "types": [
+            "o", 
+            "l", 
+            "s"
+        ]
+    }, 
     "html/www.escmid.org-0.html": {
         "url": "https://www.escmid.org/news_discussion/", 
         "types": [
@@ -1046,6 +1253,13 @@
         "url": "http://www.f-1.lt/priminti.php", 
         "types": [
             "p"
+        ]
+    }, 
+    "html/www.farodevigo.es-0.html": {
+        "url": "http://www.farodevigo.es/", 
+        "types": [
+            "s", 
+            "o"
         ]
     }, 
     "html/www.filetransit.com-0.html": {
@@ -1180,6 +1394,25 @@
             "c"
         ]
     }, 
+    "html/www.katoni.dk-0.html": {
+        "url": "http://www.katoni.dk/", 
+        "types": [
+            "s"
+        ]
+    }, 
+    "html/www.katoni.dk-1.html": {
+        "url": "http://www.katoni.dk/sko/sejlersko/", 
+        "types": [
+            "s"
+        ]
+    }, 
+    "html/www.kaufland.bg-0.html": {
+        "url": "http://www.kaufland.bg/Nachalo/index.jsp", 
+        "types": [
+            "s", 
+            "o"
+        ]
+    }, 
     "html/www.koob.ru-0.html": {
         "url": "http://www.koob.ru/", 
         "types": [
@@ -1207,6 +1440,32 @@
             "s", 
             "l", 
             "s"
+        ]
+    }, 
+    "html/www.livelib.ru-0.html": {
+        "url": "http://www.livelib.ru/", 
+        "types": [
+            "s", 
+            "l", 
+            "r"
+        ]
+    }, 
+    "html/www.livelib.ru-1.html": {
+        "url": "http://www.livelib.ru/forgot", 
+        "types": [
+            "s", 
+            "p", 
+            "l", 
+            "r"
+        ]
+    }, 
+    "html/www.livelib.ru-2.html": {
+        "url": "http://www.livelib.ru/service/contact", 
+        "types": [
+            "s", 
+            "c", 
+            "l", 
+            "r"
         ]
     }, 
     "html/www.lot18.com-0.html": {
@@ -1660,6 +1919,42 @@
             "c"
         ]
     }, 
+    "html/www.slivki.by-0.html": {
+        "url": "http://www.slivki.by/", 
+        "types": [
+            "r", 
+            "l", 
+            "s"
+        ]
+    }, 
+    "html/www.spartoo.pt-0.html": {
+        "url": "http://www.spartoo.pt/", 
+        "types": [
+            "s"
+        ]
+    }, 
+    "html/www.spartoo.pt-1.html": {
+        "url": "http://www.spartoo.pt/novidades-semana-homem-textil.php", 
+        "types": [
+            "s", 
+            "o"
+        ]
+    }, 
+    "html/www.spartoo.pt-2.html": {
+        "url": "https://www.spartoo.pt/securelogin.php?from=compte", 
+        "types": [
+            "s", 
+            "l", 
+            "r"
+        ]
+    }, 
+    "html/www.spartoo.pt-3.html": {
+        "url": "https://www.spartoo.pt/password_forgotten.php", 
+        "types": [
+            "s", 
+            "p"
+        ]
+    }, 
     "html/www.srovnanicen.cz-0.html": {
         "url": "http://www.srovnanicen.cz/", 
         "types": [
@@ -1755,6 +2050,13 @@
             "o", 
             "o", 
             "m"
+        ]
+    }, 
+    "html/www.writecamp.org-0.html": {
+        "url": "http://www.writecamp.org/contact-us/", 
+        "types": [
+            "c", 
+            "o"
         ]
     }, 
     "html/www.zalando.de-0.html": {

@@ -1,0 +1,792 @@
+
+
+<!DOCTYPE html>
+<html class="no-js" lang="da">
+<head runat="server">
+    <meta charset="utf-8" />
+    <title>Opret ny bruger</title>
+    <meta name="title" />
+    <meta name="keywords" />
+    <meta name="description" content="" />
+    
+<meta name="apple-itunes-app" content="app-id=407218484, app-argument=http://www.bilbasen.dk">
+  
+    <meta property="og:image" content="http://www.bilbasen.dk/Public/images/logo/bilbasen-200x200.png" />
+    <link rel="Alternate" type="application/rss+xml" href="/rss/latestcars" title="BilBasen - Seneste 50 oprettede bil-annoncer" />
+    <link rel="Alternate" type="application/rss+xml" href="/rss/forum" title="BilBasen - Seneste 10 forumindlæg i kategorien &quot;Generelt&quot;" />
+    <link rel="Alternate" type="application/rss+xml" href="/rss/help" title="BilBasen - Seneste 10 forumindlæg i kategorien &quot;Hjælp til bilvalg&quot;" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/Public/images/72x72_bb_t_1.png" />
+    <link href="https://plus.google.com/117717078087658121040" rel="publisher" />
+
+    <link href="/Content/less/master.less?2014-8-12-9-5635537758027413085" rel="stylesheet" type="text/css" />
+
+    <!--[if IE]>
+        <link rel="stylesheet" type="text/css" href="/Public/css/ie.css">
+    <![endif]-->
+    
+    
+
+    <script src="/Public/Scripts/modernizr.custom.48525.js"></script>
+    <script src="/Content/scripts/lib/pingdom.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="/Public/Scripts/jquery-1.8.3.min.js">\x3C/script>')</script>
+
+        <script src="//cdn.optimizely.com/js/200880799.js"></script>
+
+    <script type="text/javascript">
+    var mpx_custom = {
+        new_mpcl: 'o;;;;;;;;;;;http%3a%2f%2fwww.bilbasen.dk%2fbruger%2fopret',
+        new_mpvl: document.referrer
+    }
+</script>
+
+    
+
+    
+</head>
+
+
+<body>
+    <!-- Criteo data layer -->  
+<script>
+    dataLayer = [
+    {
+        'page': {
+            'type': '',
+            'platform': 'MVC',
+            'viewType': '',
+        },
+        'platform': 'mvc',
+        'isLoggedIn': 'False',
+        'userId': '',
+        'justLoggedIn': 'False',
+        'user': {
+            'loggedIn': false,
+            },
+            
+        }
+    ];
+</script>
+<!-- Criteo data layer end -->
+
+    <!-- Google Tag Manager -->
+<noscript>
+    <iframe src="//www.googletagmanager.com/ns.html?id=GTM-8NN6" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<script>
+    (function (w, d, s, l, i)
+    {
+        w[l] = w[l] || [];
+        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+        var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = '//www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+    })(window,document,'script','dataLayer','GTM-8NN6');
+</script>
+<!-- End Google Tag Manager -->
+    <div id="mediaplex_tracking"></div>
+<script type="text/javascript">
+    (function() {
+        var mpxtag = document.createElement('script');
+        mpxtag.type = 'text/javascript';
+        mpxtag.async = true;
+        mpxtag.src = ('https:' == document.location.protocol ? 'https://secure.' : 'http://') + 'img-cdn.mediaplex.com/0/19171/135996/BilBasen_mp_landing_ns_2012-11-09.js';
+        var smpx = document.getElementsByTagName('script')[0];
+        smpx.parentNode.insertBefore(mpxtag, smpx);
+    })();
+</script>
+
+
+
+
+    
+
+<div class="bannerwrapper cf" id="bannerwrapper">
+    <div id="bbWrapper">
+        <div class="homepage-row">
+            
+<section id="bbHeader">
+<h2 id="bbLogo">
+    <a href="/" onclick="BilBasen.Tracking.Analytics.trackEvent('navigation', 'bilbasen logo');">
+        <img src="/Areas/TopLogo/images/bb-header-logo-jul.png" height="35" width="294" alt="Brugte biler til salg på Bilbasen" title="Gå til forsiden" />
+    </a>
+</h2>
+    <div id="bbHeaderFacebook">
+        <iframe src="//www.facebook.com/plugins/like.php?locale=en_GB&href=http%3A%2F%2Fwww.facebook.com%2Fbilbasen.dk&amp;send=false&amp;layout=button_count&amp;width=150&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21&amp;appId=263197800395179" scrolling="no" frameborder="0" style="border: none; overflow: hidden; width: 150px; height: 20px;" allowtransparency="true"></iframe>
+    </div>
+    <div id="bbHeaderLicensePlate">
+        <a href="/forsikring" onclick="BilBasen.Tracking.Analytics.trackEvent('navigation','click' ,'comparo promo banner');" title="Forsikringstjek" />
+    </div>
+    <ul id="bbHeaderLinks">
+            <li class="headerCreateUser"><a href="/bruger/opret?redirectToUserProfile=True" class="link" onclick="BilBasen.Tracking.Analytics.trackEvent('navigation', 'create user');">Opret bruger</a></li>
+            <li class="headerCreateUser"><a href="/bruger/log-ind" class="link" onclick="BilBasen.Tracking.Analytics.trackEvent('navigation', 'log in');">Log ind</a></li>
+        <li class="headerHelp"><a href="/support/faq" class="link last" onclick="BilBasen.Tracking.Analytics.trackEvent('navigation', 'help');">Hjælp</a></li>
+        <li class="headerSellCar"><a href="/saelg-din-brugte-bil" class="bb-btn bb-btn-small bb-btn-orange" onclick="BilBasen.Tracking.Analytics.trackEvent('navigation', 'sell your car');">Sælg din bil</a></li>
+    </ul>
+</section>
+<nav id="bbMainNav">
+    <div id="bbMainNavForm">
+        <div class="shaddow">
+            <input type="text" disabled="disabled" id="searchInput" name="searchInput" tabindex="1" data-freetext="Skriv f.eks. Audi A4 1,6" value="Skriv f.eks. Audi A4 1,6" class="placeholder" />
+            <button type="button" id="searchAdjust" name="searchAdjust" title="Vælg detaljer" onclick="BilBasen.Tracking.Analytics.trackEvent('navigation', 'adjust search');">
+                Søg videre 
+                <span id="adjustsearchdetails">(0)</span>
+                <span class="navArrow"></span>
+            </button>
+            <span class="orSeperator">eller</span>
+        </div>
+        <button type="button" id="searchSubmit" name="searchSubmit" tabindex="2" onclick="BilBasen.Tracking.Analytics.trackEvent('navigation', 'search button');">Søg</button>
+    </div>
+
+    <ul id="bbMainNavLinks">
+        <li id="navOverview">
+            <a href="#bbMainMenuContainer" onclick="BilBasen.Tracking.Analytics.trackEvent('navigation', 'overview');">
+                <span class="navLabel">Oversigt</span>
+                <span class="navArrow"></span>
+            </a>
+        </li>
+        <li id="navFavourites">
+            <a href="#navFavouritesContainer" onclick="BilBasen.Tracking.Analytics.trackEvent('navigation', 'favorites');">
+                <span class="navLabel">Favoritter</span>
+                <span class="favStar">0</span>
+                <span class="navArrow"></span>
+            </a>
+        </li>
+    </ul>
+    <div id="bbMainMenuContainer" class="navSubItem main-nav">
+    <dl class="seller">
+        <dt>Sælg en bil</dt>
+        <dd><a href="/saelg-din-brugte-bil"   rel="bookmark" onclick="BilBasen.Tracking.Analytics.trackEvent('navigation', 'overview - sell your car');">Sælg din bil</a></dd>
+        <dd><a href="/bilauktion"            rel="bookmark" onclick="BilBasen.Tracking.Analytics.trackEvent('navigation', 'overview - sell on auction');">Xpress Bilsalg</a></dd>
+        <dd><a href="/bilvurdering/"          rel="bookmark" onclick="BilBasen.Tracking.Analytics.trackEvent('navigation', 'overview - car evaluation');">Prisvurdering</a></dd>
+    </dl>
+    <dl class="buyer">
+        <dt>Køb en bil</dt>
+        <dd><a href="/brugt-bil"             rel="bookmark" onclick="BilBasen.Tracking.Analytics.trackEvent('navigation', 'overview - used cars');">Udvidet søgning</a></dd>
+        <dd><a href="/find-en-forhandler"    rel="bookmark" onclick="BilBasen.Tracking.Analytics.trackEvent('navigation', 'overview - dealers');">Find en forhandler</a></dd>
+        <dd><a href="/finansiering/"          rel="bookmark" onclick="BilBasen.Tracking.Analytics.trackEvent('navigation', 'overview - car finance');">Bilfinansiering</a></dd>
+        <dd><a href="/forsikring"            rel="bookmark" onclick="BilBasen.Tracking.Analytics.trackEvent('navigation', 'overview - car insurance');">Bilforsikring</a></dd>
+        <dd><a href="/nummerpladetjek"        rel="bookmark" onclick="BilBasen.Tracking.Analytics.trackEvent('navigation', 'overview - remaining debt');">Nummerpladetjek</a></dd>
+    </dl>
+    <dl class="opinions">
+        <dt>Andre mener</dt>
+        <dd><a href="/forum" onclick="BilBasen.Tracking.Analytics.trackEvent(&#39;navigation&#39;, &#39;overview - forum&#39;)" rel="bookmark">Forum</a></dd>
+        <dd><a href="/alt-om" onclick="BilBasen.Tracking.Analytics.trackEvent(&#39;navigation&#39;, &#39;overview - car owner reviews&#39;)" rel="bookmark">Brugeranmeldelser</a></dd>
+        <dd><a href="http://blog.bilbasen.dk/" target="_blank" onclick="BilBasen.Tracking.Analytics.trackEvent('navigation', 'blog');">Blog</a></dd>
+    </dl>
+    <dl class="user">
+        <dt>Min BilBase</dt>
+        <dd><a href="/mine/annoncer"  rel="bookmark" onclick="BilBasen.Tracking.Analytics.trackEvent('navigation', 'overview - your ads');">Mine annoncer</a></dd>
+        <dd><a href="/mine/favoritter" rel="bookmark" onclick="BilBasen.Tracking.Analytics.trackEvent('navigation', 'overview - your favorites');">Favoritter</a></dd>
+        <dd><a href="/gemte-soegninger/"   rel="bookmark" onclick="BilBasen.Tracking.Analytics.trackEvent('navigation', 'overview - savedsearches');">Gemte søgninger</a></dd>
+        <dd><a href="/bruger/opdater" onclick="BilBasen.Tracking.Analytics.trackEvent(&#39;navigation&#39;, &#39;overview - your profile&#39;)" rel="bookmark">Brugerprofil</a></dd>
+    </dl>
+    <dl class="about">
+        <dt>Om os</dt>
+        <dd><a href="/bilauktion"   rel="bookmark" onclick="BilBasen.Tracking.Analytics.trackEvent('navigation', 'overview - auction');">Xpress Bilsalg</a></dd>
+        <dd><a href="http://jobs.ebaycareers.com/search/advanced-search/ASCategory/-1/ASPostedDate/-1/ASCountry/Denmark/ASState/-1/ASCity/-1/ASLocation/-1/ASCompanyName/-1/ASCustom1/-1/ASCustom2/-1/ASCustom3/-1/ASCustom4/-1/ASCustom5/-1/ASIsRadius/false/ASCityStateZipcode/-1/ASDistance/-1/ASLatitude/-1/ASLongitude/-1/ASDistanceType/-1"  rel="bookmark" target="_blank" onclick="BilBasen.Tracking.Analytics.trackEvent('navigation', 'overview - jobs');">Jobs</a></dd>
+        <dd><a href="http://www.mynewsdesk.com/dk/pressroom/bilbasen" rel="bookmark" target="_blank" onclick="BilBasen.Tracking.Analytics.trackEvent('navigation', 'overview - press');">Presse</a></dd>
+        <dd><a href="/brugeraftale" rel="bookmark" onclick="BilBasen.Tracking.Analytics.trackEvent('navigation', 'overview - user terms');">Brugervilkår</a></dd>
+        <dd><a href="/brugeraftale#privacyPolicy" rel="bookmark" onclick="BilBasen.Tracking.Analytics.trackEvent('navigation', 'overview - privacy policy');">Fortrolighedspolitik</a></dd>
+        <dd><a href="/support/faq" onclick="BilBasen.Tracking.Analytics.trackEvent(&#39;navigation&#39;, &#39;overview - help, contact&#39;)" rel="bookmark">Kontakt os</a></dd>
+    </dl>
+
+        <div class="nav-footer">
+            <p>
+                <span>Log ind og få adgang til  favoritter, gemte søgninger og meget andet</span> 
+                <a href="/bruger/log-ind" class="bb-btn bb-btn-orange" onclick="BilBasen.Tracking.Analytics.trackEvent('navigation', 'overview - log in');">Log ind</a>
+                <a href="/bruger/opret" class="opret" onclick="BilBasen.Tracking.Analytics.trackEvent('navigation', 'overview - crate user');">Opret bruger?</a>
+            </p>
+        </div>
+</div>
+
+    
+
+<div id="bbMainMenuAdjust" class="navSubItem bbSearch adjustSearch">
+
+<form action="/search/searchcommit" class="bb-form cf" id="searchformhomepageadjustsearch" method="post" style="margin: 0;" target="_top">        <fieldset class="row row-inline">
+            <select class="bb-select bb-select-small" id="ddlCategoryAdjust" name="Category"><option selected="selected" value="1">Personbil</option>
+<option value="4">Varebil inkl. moms</option>
+<option value="5">Varebil ekskl. moms</option>
+<option value="0">Bus</option>
+<option value="3">Lastbil</option>
+<option value="6">Autocamper</option>
+</select>
+                   <label class="radio">
+                        <input type="radio" data-group="NewAndUsedAdjust" name="NewAndUsed" value="All" checked=&quot;checked&quot; />
+                        Alle
+                    </label>
+                   <label class="radio">
+                        <input type="radio" data-group="NewAndUsedAdjust" name="NewAndUsed"value="UsedOnly" />
+                        Brugte biler
+                    </label>
+                   <label class="radio">
+                        <input type="radio" data-group="NewAndUsedAdjust" name="NewAndUsed" value="NewOnly" />
+                        Nye biler
+                    </label>
+            <label class="bb-label-inline" style="float: right; margin: 0;">
+                <a href="#" tabindex="-1" id="resetAdjustSearch">Nulstil</a>
+            </label>
+        </fieldset>
+        <fieldset class="" style="border-right: 1px solid #ccc; margin: 0 20px 0 0; width: 288px;">
+            <div class="row">
+                <select class="bb-select" id="ddlMakeAdjust" name="Make" style="width: 268px;"><option value="0">M&#230;rke (alle)</option>
+<optgroup label="Mest populære" value="MestPopulære">
+<option value="Audi">Audi</option>
+<option value="BMW">BMW</option>
+<option value="Citroën">Citro&#235;n</option>
+<option value="Ford">Ford</option>
+<option value="Mercedes">Mercedes</option>
+<option value="Opel">Opel</option>
+<option value="Peugeot">Peugeot</option>
+<option value="Toyota">Toyota</option>
+<option value="Volvo">Volvo</option>
+<option value="VW">VW</option>
+</optgroup>
+<optgroup label="Alle mærker" value="AlleMærker">
+<option value="AMC">AMC</option>
+<option value="Abarth">Abarth</option>
+<option value="Afuture">Afuture</option>
+<option value="Alfa Romeo">Alfa Romeo</option>
+<option value="Alpina">Alpina</option>
+<option value="Aston Martin">Aston Martin</option>
+<option value="Audi">Audi</option>
+<option value="Austin">Austin</option>
+<option value="Austin Healey">Austin Healey</option>
+<option value="Autobianchi">Autobianchi</option>
+<option value="BMW">BMW</option>
+<option value="Bentley">Bentley</option>
+<option value="Buick">Buick</option>
+<option value="Cadillac">Cadillac</option>
+<option value="Charron">Charron</option>
+<option value="Chevrolet">Chevrolet</option>
+<option value="Chrysler">Chrysler</option>
+<option value="Citroën">Citro&#235;n</option>
+<option value="Corvette">Corvette</option>
+<option value="DKW">DKW</option>
+<option value="Dacia">Dacia</option>
+<option value="Daewoo">Daewoo</option>
+<option value="Daihatsu">Daihatsu</option>
+<option value="Daimler">Daimler</option>
+<option value="Datsun">Datsun</option>
+<option value="Dodge">Dodge</option>
+<option value="Excalibur">Excalibur</option>
+<option value="Ferrari">Ferrari</option>
+<option value="Fiat">Fiat</option>
+<option value="Ford">Ford</option>
+<option value="GMC">GMC</option>
+<option value="Honda">Honda</option>
+<option value="Hummer">Hummer</option>
+<option value="Hyosung">Hyosung</option>
+<option value="Hyundai">Hyundai</option>
+<option value="Infiniti">Infiniti</option>
+<option value="Isuzu">Isuzu</option>
+<option value="Jaguar">Jaguar</option>
+<option value="Jeep">Jeep</option>
+<option value="Kewet">Kewet</option>
+<option value="Kia">Kia</option>
+<option value="Kinroad">Kinroad</option>
+<option value="Lada">Lada</option>
+<option value="Lamborghini">Lamborghini</option>
+<option value="Lancia">Lancia</option>
+<option value="Land Rover">Land Rover</option>
+<option value="Lexus">Lexus</option>
+<option value="Lincoln">Lincoln</option>
+<option value="London Taxis International">London Taxis International</option>
+<option value="Lotus">Lotus</option>
+<option value="MG">MG</option>
+<option value="Maserati">Maserati</option>
+<option value="Mazda">Mazda</option>
+<option value="Mercedes">Mercedes</option>
+<option value="Mini">Mini</option>
+<option value="Mitsubishi">Mitsubishi</option>
+<option value="Morgan">Morgan</option>
+<option value="Morris">Morris</option>
+<option value="NSU">NSU</option>
+<option value="Nissan">Nissan</option>
+<option value="Opel">Opel</option>
+<option value="Peugeot">Peugeot</option>
+<option value="Plymouth">Plymouth</option>
+<option value="Pontiac">Pontiac</option>
+<option value="Porsche">Porsche</option>
+<option value="Renault">Renault</option>
+<option value="Reva">Reva</option>
+<option value="Rolls Royce">Rolls Royce</option>
+<option value="Rover">Rover</option>
+<option value="Saab">Saab</option>
+<option value="Seat">Seat</option>
+<option value="Skoda">Skoda</option>
+<option value="Smart">Smart</option>
+<option value="Ssangyong">Ssangyong</option>
+<option value="Subaru">Subaru</option>
+<option value="Sunbeam">Sunbeam</option>
+<option value="Suzuki">Suzuki</option>
+<option value="Tesla">Tesla</option>
+<option value="Think">Think</option>
+<option value="Toyota">Toyota</option>
+<option value="Triumph">Triumph</option>
+<option value="VW">VW</option>
+<option value="Vauxhall">Vauxhall</option>
+<option value="Volvo">Volvo</option>
+<option value="Willys">Willys</option>
+</optgroup>
+</select>
+            </div>
+            <div class="row">
+                <select class="bb-select" id="ddlModelAdjust" name="Model" style="width: 268px;"><option value="0">Model (alle)</option>
+</select>
+            </div>
+            <div class="row">
+                <select class="bb-select" data-val="true" data-val-number="The field FuelType must be a number." id="ddlFuelTypeAdjust" name="FuelType" style="width: 268px;"><option value="0">Br&#230;ndstoftype (alle)</option>
+<option value="1">Benzin</option>
+<option value="2">Diesel</option>
+<option value="3">El</option>
+<option value="6">Hybrid (Benzin + El)</option>
+<option value="8">Hybrid (Diesel + El)</option>
+</select>
+            </div>
+            <div class="row">
+                <select class="bb-select" data-val="true" data-val-number="The field KmLFrom must be a number." id="ddlKmlAdjust" name="KmLFrom" style="width: 268px;"><option selected="selected" value="0">Km/l (alle)</option>
+<option value="10">Min. 10 km/l</option>
+<option value="12">Min. 12 km/l</option>
+<option value="14">Min. 14 km/l</option>
+<option value="16">Min. 16 km/l</option>
+<option value="18">Min. 18 km/l</option>
+<option value="20">Min. 20 km/l</option>
+<option value="25">Min. 25 km/l</option>
+<option value="30">Min. 30 km/l</option>
+</select>
+            </div>
+        </fieldset>
+        <fieldset class="" style="margin: 0 0 10px 0; width: 269px;">
+            <div class="row">
+                <select class="bb-select" data-val="true" data-val-number="The field PriceFrom must be a number." id="ddlPriceFromAdjust" name="PriceFrom" selectedindex="0" style="margin-right: 10px; width: 129px;"><option value="0">Pris (fra)</option>
+<option value="101">1 kr</option>
+<option value="10000">10.000 kr</option>
+<option value="25000">25.000 kr</option>
+<option value="50000">50.000 kr</option>
+<option value="75000">75.000 kr</option>
+<option value="100000">100.000 kr</option>
+<option value="125000">125.000 kr</option>
+<option value="150000">150.000 kr</option>
+<option value="175000">175.000 kr</option>
+<option value="200000">200.000 kr</option>
+<option value="250000">250.000 kr</option>
+<option value="300000">300.000 kr</option>
+<option value="400000">400.000 kr</option>
+<option value="500000">500.000 kr</option>
+<option value="1000000">1.000.000 kr</option>
+</select>
+                <select class="bb-select" data-val="true" data-val-number="The field PriceTo must be a number." id="ddlPriceToAdjust" name="PriceTo" style="width: 130px;"><option value="10000000">Pris (til)</option>
+<option value="10000">10.000 kr</option>
+<option value="25000">25.000 kr</option>
+<option value="50000">50.000 kr</option>
+<option value="75000">75.000 kr</option>
+<option value="100000">100.000 kr</option>
+<option value="125000">125.000 kr</option>
+<option value="150000">150.000 kr</option>
+<option value="175000">175.000 kr</option>
+<option value="200000">200.000 kr</option>
+<option value="250000">250.000 kr</option>
+<option value="300000">300.000 kr</option>
+<option value="400000">400.000 kr</option>
+<option value="500000">500.000 kr</option>
+<option value="1000000">1.000.000 kr</option>
+<option value="11000000">&gt; 1.000.000 kr</option>
+</select>
+            </div>
+            <div class="row">
+                <select class="bb-select" data-val="true" data-val-number="The field YearFrom must be a number." id="ddlYearFromAdjust" name="YearFrom" style="width: 269px;"><option value="0">&#197;r fra</option>
+<option value="2015">2015</option>
+<option value="2014">2014</option>
+<option value="2013">2013</option>
+<option value="2012">2012</option>
+<option value="2011">2011</option>
+<option value="2010">2010</option>
+<option value="2009">2009</option>
+<option value="2008">2008</option>
+<option value="2007">2007</option>
+<option value="2006">2006</option>
+<option value="2005">2005</option>
+<option value="2004">2004</option>
+<option value="2003">2003</option>
+<option value="2002">2002</option>
+<option value="2001">2001</option>
+<option value="2000">2000</option>
+<option value="1999">1999</option>
+<option value="1998">1998</option>
+<option value="1997">1997</option>
+<option value="1996">1996</option>
+<option value="1995">1995</option>
+<option value="1994">1994</option>
+<option value="1993">1993</option>
+<option value="1992">1992</option>
+<option value="1991">1991</option>
+<option value="1990">1990</option>
+<option value="1989">1989</option>
+<option value="1988">1988</option>
+<option value="1987">1987</option>
+<option value="1986">1986</option>
+<option value="1985">1985</option>
+<option value="1984">1984</option>
+<option value="1983">1983</option>
+<option value="1982">1982</option>
+<option value="1981">1981</option>
+<option value="1980">1980</option>
+<option value="1979">1979</option>
+<option value="1978">1978</option>
+<option value="1977">1977</option>
+<option value="1976">1976</option>
+<option value="1975">1975</option>
+<option value="1974">1974</option>
+</select>
+            </div>
+            <div class="row">
+                <select class="bb-select" data-val="true" data-val-number="The field MileageTo must be a number." id="ddlMileageToAdjust" name="MileageTo" style="width: 269px;"><option selected="selected" value="0">Km til</option>
+<option value="10000">10.000 km</option>
+<option value="25000">25.000 km</option>
+<option value="50000">50.000 km</option>
+<option value="75000">75.000 km</option>
+<option value="100000">100.000 km</option>
+<option value="125000">125.000 km</option>
+<option value="150000">150.000 km</option>
+<option value="175000">175.000 km</option>
+<option value="200000">200.000 km</option>
+<option value="300000">300.000 km</option>
+<option value="10000000">&gt; 300.000 km</option>
+</select>
+            </div>
+            <div class="row">
+                <input class="bb-input bb-input-mini" data-val="true" data-val-number="The field Zipcode must be a number." id="bbusedcarsadjustzipcode" name="Zipcode" placeholder="Postnummer" type="text" value="" />
+            </div>
+        </fieldset>
+    <fieldset class="row row-inline">
+        <label class="bb-label-inline">Vis:</label>
+        <input checked="checked" class="bb-check" data-val="true" data-val-required="The IncludeEngrosCvr field is required." id="cbIncludeCvrAdjust" name="IncludeEngrosCvr" type="checkbox" value="true" /><input name="IncludeEngrosCvr" type="hidden" value="false" />
+        <label for="cbIncludeCvrAdjust" class="bb-label-inline">Engros/CVR</label>
+        <input checked="checked" class="bb-check" data-val="true" data-val-required="The IncludeSellForCustomer field is required." id="cbIncludeSellForCustomerAdjust" name="IncludeSellForCustomer" type="checkbox" value="true" /><input name="IncludeSellForCustomer" type="hidden" value="false" />
+        <label for="cbIncludeSellForCustomerAdjust" class="bb-label-inline">Sælges for kunde</label>
+        <input checked="checked" class="bb-check" data-val="true" data-val-required="The IncludeWithoutVehicleRegistrationTax field is required." id="cbIncludeWithoutTaxAdjust" name="IncludeWithoutVehicleRegistrationTax" type="checkbox" value="true" /><input name="IncludeWithoutVehicleRegistrationTax" type="hidden" value="false" />
+        <label for="cbIncludeWithoutTaxAdjust" class="bb-label-inline">Uden afgift</label>
+        <input checked="checked" class="bb-check " data-val="true" data-val-required="The IncludeLeasing field is required." id="cbIncludeLeasingAdjust" name="IncludeLeasing" type="checkbox" value="true" /><input name="IncludeLeasing" type="hidden" value="false" />
+        <label for="cbIncludeLeasingAdjust" class="bb-label-inline ">Leasing <span class="bootstrap-label-success">NYT</span></label>
+    </fieldset>
+        <fieldset class="row row-inline">
+            <div class="left">
+                <ul class="searchOptions">
+                    <li><a href="/brugt-bil" class="extendedSearch" target="_top" onclick="BilBasen.Tracking.Analytics.trackEvent('navigation', 'adjust search - enhanced search');">Udvidet søgning</a></li>
+                </ul>
+            </div>
+
+            <button type="submit" id="usedcaradjustsubmit" class="bb-btn bb-btn-search bb-btn-orange bb-btn-large" style="float: right; margin: 0;" onclick="BilBasen.Tracking.Analytics.trackEvent('frontpage', 'adjust search - search used cars');">
+                <span class="counter-wrap"></span>
+                <span class="icon"></span>
+            </button>
+        </fieldset>
+</form></div>
+
+            <script type="text/javascript" src="/Content/scripts/components/adjust-search.js?2014-8-12-9-5"></script>
+
+
+    
+<div id="bbMainMenuFavourites" class="navSubItem">
+
+        <div class="notLoggedIn">
+            <p class="row">Du skal være logget ind for at kunne gemme en annonce som favorit.</p>
+            <div class="login-create">
+                <a href="/bruger/log-ind" class="bb-btn bb-btn-small bb-btn-orange" style="margin-right: 10px;" onclick="BilBasen.Tracking.Analytics.trackEvent('navigation', 'favorites - create user');">Log ind</a>
+                <span class="link"><a href="/bruger/opret?redirectToUserProfile=True" onclick="BilBasen.Tracking.Analytics.trackEvent(&#39;navigation&#39;, &#39;favorites - log in&#39;);">Opret bruger</a></span>
+            </div>
+        </div>
+</div>
+
+
+    <script type="text/javascript" src="/Public/Scripts/BilBasen/Areas/Navigation/navigation.js?2014-8-12-9-5"></script>
+
+</nav>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#searchInput").keypress(function (e) {
+            if ((e.which && e.which == 13) || (e.keyCode && e.keyCode == 13)) {
+                BilBasen.Tracking.Analytics.trackEvent('navigation', 'search button');
+            }
+        });
+    });
+</script>
+        </div>
+
+        <div class="bbPageWrapper bbPageWrapper1col cf">
+            
+            <div class="column1">
+                
+<script src="/Public/Scripts/jquery.validate.js?2014-8-12-9-5" type="text/javascript"></script>
+<script src="/Public/Scripts/jquery.validate.unobtrusive.js?2014-8-12-9-5" type="text/javascript"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/knockout/2.3.0/knockout-min.js"></script>
+
+<h1>Opret ny bruger</h1>
+
+
+<form action="/Settings/CreateUserPost" class="bb-form margin-n" id="createuserform" method="post"><input name="__RequestVerificationToken" type="hidden" value="L94jcCtlw22efoLcTkQXEJNRuDH9_lvP5zu5F4eOcBo4eGfbSRxMvXwbtN0yhxY-rMCtr2-fLBhISlzFizF7QZ8FWGM1" />    <div class="cf">
+        <div style="float: left; margin-bottom: 20px; width: 300px;">
+            <div class="validation-summary-valid alert alert-error" data-valmsg-summary="true"><ul><li style="display:none"></li>
+</ul></div>
+            <div class="row row-inline">
+                <input autofocus="autofocus" class="bb-input bb-input-small" data-val="true" data-val-required="Du mangler at indtaste dit fornavn" id="createUserFirstName" name="FirstName" placeholder="Fornavn" type="text" value="" />
+                <input class="bb-input bb-input-small" data-val="true" data-val-required="Du mangler at indtaste dit efternavn" id="createUserLastName" name="LastName" placeholder="Efternavn" style="margin:0;" type="text" value="" />
+                <span class="field-validation-valid" data-valmsg-for="FirstName" data-valmsg-replace="true"></span>
+                <span class="field-validation-valid" data-valmsg-for="LastName" data-valmsg-replace="true"></span>
+            </div>
+            <div class="row">
+                <input class="bb-input" data-val="true" data-val-regex="Email er ikke gyldig" data-val-regex-pattern="^(([A-Za-z0-9]+_+)|([A-Za-z0-9]+\-+)|([A-Za-z0-9]+\.+)|([A-Za-z0-9]+\++))*([A-Za-z0-9]_*)+@((\w+\-+)|(\w+\.))*\w{1,63}\.[a-zA-Z]{2,6}$" data-val-required="Email mangler" id="createUserEmailAddress" name="Email" placeholder="Din e-mailadresse" type="text" value="" />
+                <span class="field-validation-valid" data-valmsg-for="Email" data-valmsg-replace="true"></span>
+            </div>
+            <div class="row">
+                <input class="bb-input" data-val="true" data-val-length="Adgangskode er ikke gyldig" data-val-length-max="300" data-val-length-min="6" data-val-required="Adgangskode mangler" id="createUserPassword" name="Password" placeholder="Adgangskode (min. 6 tegn)" type="password" value="" />
+                <span class="field-validation-valid" data-valmsg-for="Password" data-valmsg-replace="true"></span>
+            </div>
+            <div class="row row-tall">
+                <button class="bb-btn bb-btn-large bb-btn-orange" data-bind="click : checkTosAccepted" type="button">Opret bruger</button>
+            </div>
+        </div>
+
+        <span class="verticalDivider" style="height: 158px;"><span>eller</span></span>
+
+        <div style="float: left; height: 158px; position: relative; width: 270px;">
+            <div style="height: auto; position: absolute; bottom: 0;">
+                <p>Vi gemmer kun dine grundlæggende Facebookoplysninger. Vi kender og gemmer ikke din adgangskode.</p>
+                <div class="row">
+                    <button class="bb-btn bb-btn-large bb-btn-facebook" data-bind="click :facebookLogin" id="BtnCreateUserFacebook">Opret med Facebook</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mailtypes" id="tosEmbedded">
+
+        <div>
+            <input type="checkbox" class="bb-check" id="tosAcceptCheck" data-bind="value : tosAccepted" />
+            <label class="accept-terms" for="tosAcceptCheck">Jeg accepterer Bil Markedets <a href="/brugeraftale" target="_blank">brugervilk&aring;r</a> og <a href="/brugeraftale#privacyPolicy" target="_blank">fortrolighedspolitik</a> for Bilbasen.dk. </label><br />
+        </div>
+
+        <div data-bind="visible : showTosError" class="accept-conditions alert alert-error validation-summary-errors"><ul><li>Du mangler at godkende brugervilkår og fortrolighedspolitik</li></ul></div>
+        <div class="accept-conditions">
+            <p>Fortrolighedspolitikken <strong>indeholder samtykke</strong> fra dig til at modtage (a) E-mails med tilbud vedr&oslash;rende dine annoncer p&aring; BilBasen, (b) E-mails om nye eller forbedrede funktioner, muligheder for annoncering, oplysning, tilbud eller kampagner vedr&oslash;rende annoncering og/eller annoncer p&aring; BilBasen samt vedr&oslash;rende koncernforbundne selskaber, herunder dba.dk og ebay.com, (c) E-mails fra BilBasens fordelsklub med markedsf&oslash;ring fra vores s&aelig;rlige samarbejdspartnere  vedr&oslash;rende eksempelvis k&oslash;b og salg af k&oslash;ret&oslash;jer, service og vedligehold, reservedele og tilbeh&oslash;r, finansiering, forsikring, rejser, ejendomshandel og meget mere.</p>
+<p>Fortrolighedspolitikken <strong>indeholder et samtykke</strong>  fra dig til Bil Markedets behandling af personoplysninger, herunder brug til markedsf&oslash;ring i overensstemmelse med dit samtykke.</p>
+        </div>
+        <p class="accept-conditions">Du kan <strong>begrænse dit samtykke <a href="#" data-bind="click : toogleShowConcents">her</a>.</strong></p>
+
+        <div class="accept-conditions" data-bind="visible : showConcents">
+            <p>Jeg accepterer Bil Markedets Brugervilkår og Fortrolighedspolitik og ønsker at modtage:</p>
+                <p>
+                    <input type="checkbox" class="bb-check" id="acceptListingMails" checked name="acceptListingMails" value="true" /><label for="acceptListingMails">E-mails med tilbud vedrørende dine annoncer på BilBasen <em>(fx tilbud specifikt relateret til dine annoncer på BilBasen, herunder for produkter/services, der kan forbedre dine muligheder for hurtigt salg)</em> </label>
+
+                </p>
+                <p>
+                    <input type="checkbox" class="bb-check" id="acceptInformationMails" checked name="acceptInformationMails" value="true" /><label for="acceptInformationMails">E-mails om nye eller forbedrede funktioner, muligheder for annoncering, oplysning, tilbud eller kampagner vedrørende annoncering og/eller annoncer på BilBasen samt vedrørende koncernforbundne selskaber, herunder dba.dk og ebay.com <em>(fx tilbud, herunder rabatter på annoncering, nyhedsbreve, information mv. vedrørende BilBasen og koncernforbundne selskaber så som DBA og eBay)</em> </label>
+
+                </p>
+                <p>
+                    <input type="checkbox" class="bb-check" id="acceptThirdPartyAdvertisingMails" checked name="acceptThirdPartyAdvertisingMails" value="true" /><label for="acceptThirdPartyAdvertisingMails">E-mails fra BilBasens fordelsklub med markedsføring fra vores særlige <a href="/brugeraftale#marketingPurposes" target="_blank">samarbejdspartnere</a>  vedrørende eksempelvis køb og salg af køretøjer, service og vedligehold, reservedele og tilbehør, finansiering, forsikring, rejser, ejendomshandel og meget mere <em>(fx tilbud inden for forskellige kategorier af varer/services, der udsendes af BilBasen på vegne af en skiftende kreds af samarbejdsparterne)</em> </label>
+
+                </p>
+        </div>
+    </div>
+    <div class="row">
+        <p>Allerede bruger på BilBasen?     <a href="/bruger/log-ind" class="link" onclick="BilBasen.Tracking.Analytics.trackEvent('navigation', 'log in');">Log ind her</a>
+ </p>
+    </div>
+</form><script type="text/javascript">
+    $(document).ready(function () {
+        BilBasen.Areas.UserLogin.initCreateUser();
+    });
+
+    function ImageOpen(path, vars) {
+        var a = vars.title || "Billede";
+        return ShowimagePopup("", vars).document.write("<html><head><title>" + a + '</title></head><body><img src="' + path + '" /></body></html>');
+    }
+
+    function ShowimagePopup(h, g) {
+        var c = { width: 650, height: 440, toolbar: false, menubar: false, location: false, name: null, scrollbars: false, center: true, status: false };
+        g = $.extend({}, c, g);
+        var a = screen.availHeight - 40;
+        var d = screen.availWidth;
+        if (g.height > a) {
+            g.height = a;
+        }
+        if (g.width > d) {
+            g.width = d;
+        }
+        if (g.center) {
+            g.left = d / 2 - g.width / 2;
+            g.top = Math.max(0, a / 2 - g.height / 2 - 40);
+        }
+        var i = []; for (var f in g) {
+            var e = g[f];
+            if (typeof e == "boolean") {
+                e = e ? 1 : 0;
+            }
+            if (f != "name" && f != "center") {
+                i.push(f + "=" + e);
+            }
+        }
+        var b = window.open(h, g.name, i.join(","));
+        if (window.focus) {
+            b.focus();
+        }
+        return b;
+    }
+</script>
+
+            </div>
+
+        </div>
+
+        <div id="homepage-footer" class="homepage-row footer">
+                
+
+<footer id="bbFooter" class="footer">
+    <div id="bbFooterLinks">
+        <dl class="seller">
+            <dt>Sælg en bil</dt>
+            <dd><a href="/saelg-din-brugte-bil"   rel="bookmark" onclick="BilBasen.Tracking.Analytics.trackEvent('navigation', 'footer - sell your car');">Sælg din bil</a></dd>
+            <dd><a href="/bilauktion"            rel="bookmark" onclick="BilBasen.Tracking.Analytics.trackEvent('navigation', 'footer - sell on auction');">Xpress Bilsalg</a></dd>
+            <dd><a href="/bilvurdering/"          rel="bookmark" onclick="BilBasen.Tracking.Analytics.trackEvent('navigation', 'footer - car evaluation');">Prisvurdering</a></dd>
+        </dl>
+        <dl class="buyer">
+            <dt>Køb en bil</dt>
+            <dd><a href="/brugt-bil"             rel="bookmark" onclick="BilBasen.Tracking.Analytics.trackEvent('navigation', 'footer - used cars');">Udvidet søgning</a></dd>
+            <dd><a href="/find-en-forhandler"    rel="bookmark" onclick="BilBasen.Tracking.Analytics.trackEvent('navigation', 'overview - dealers');">Find en forhandler</a></dd>
+            <dd><a href="/finansiering/"          rel="bookmark" onclick="BilBasen.Tracking.Analytics.trackEvent('navigation', 'footer - car finance');">Bilfinansiering</a></dd>
+            <dd><a href="/forsikring"            rel="bookmark" onclick="BilBasen.Tracking.Analytics.trackEvent('navigation', 'footer - car insurance');">Bilforsikring</a></dd>
+            <dd><a href="/nummerpladetjek"       rel="bookmark" onclick="BilBasen.Tracking.Analytics.trackEvent('navigation', 'footer - remaining debt');">Nummerpladetjek</a></dd>
+        </dl>
+        <dl class="opinions">
+            <dt>Andre mener</dt>
+            <dd><a href="/forum" onclick="BilBasen.Tracking.Analytics.trackEvent(&#39;navigation&#39;, &#39;footer - forum&#39;)" rel="bookmark">Forum</a></dd>
+            <dd><a href="/alt-om" onclick="BilBasen.Tracking.Analytics.trackEvent(&#39;navigation&#39;, &#39;footer - car owner reviews&#39;)" rel="bookmark">Brugeranmeldelser</a></dd>
+        </dl>
+        <dl class="user">
+            <dt>Min BilBase</dt>
+            <dd><a href="/mine/annoncer"  rel="bookmark" onclick="BilBasen.Tracking.Analytics.trackEvent('navigation', 'footer - your ads');">Mine annoncer</a></dd>
+            <dd><a href="/mine/favoritter" rel="bookmark" onclick="BilBasen.Tracking.Analytics.trackEvent('navigation', 'footer - your favorites');">Favoritter</a></dd>
+            <dd><a href="/gemte-soegninger/"   rel="bookmark" onclick="BilBasen.Tracking.Analytics.trackEvent('navigation', 'footer - savedsearches');">Gemte søgninger</a></dd>
+            <dd><a href="/bruger/opdater" onclick="BilBasen.Tracking.Analytics.trackEvent(&#39;navigation&#39;, &#39;footer - your profile&#39;)" rel="bookmark">Brugerprofil</a></dd>
+        </dl>
+        <dl class="about">
+            <dt>Om os</dt>
+            <dd><a href="/bilauktion" rel="bookmark" onclick="BilBasen.Tracking.Analytics.trackEvent('navigation', 'footer - auction');">Xpress Bilsalg</a></dd>
+            <dd><a href="http://jobs.ebaycareers.com/search/advanced-search/ASCategory/-1/ASPostedDate/-1/ASCountry/Denmark/ASState/-1/ASCity/-1/ASLocation/-1/ASCompanyName/-1/ASCustom1/-1/ASCustom2/-1/ASCustom3/-1/ASCustom4/-1/ASCustom5/-1/ASIsRadius/false/ASCityStateZipcode/-1/ASDistance/-1/ASLatitude/-1/ASLongitude/-1/ASDistanceType/-1"  rel="bookmark" target="_blank" onclick="BilBasen.Tracking.Analytics.trackEvent('navigation', 'footer - jobs');">Jobs</a></dd>
+            <dd><a href="http://www.mynewsdesk.com/dk/pressroom/bilbasen" rel="bookmark" target="_blank" onclick="BilBasen.Tracking.Analytics.trackEvent('navigation', 'footer - press');">Presse</a></dd>
+            <dd><a href="/brugeraftale" rel="bookmark" onclick="BilBasen.Tracking.Analytics.trackEvent('navigation', 'footer - user terms');">Brugervilkår</a></dd>
+            <dd><a href="/brugeraftale#privacyPolicy" rel="bookmark" onclick="BilBasen.Tracking.Analytics.trackEvent('navigation', 'footer - privacy policy');">Fortrolighedspolitik</a></dd>
+         <dd><a href="/support/faq" onclick="BilBasen.Tracking.Analytics.trackEvent(&#39;navigation&#39;, &#39;footer - help, contact&#39;)" rel="bookmark">Kontakt os</a></dd>
+        </dl>
+    </div>
+</footer>
+
+        </div>
+
+
+    </div>
+    <!-- /#wrapper -->
+</div>
+
+<footer id="bb2ndFooter" class="footer">
+    <div class="copyRightFooterContainer">
+        
+        <ul class="left first">
+            <li><a href="http://blog.bilbasen.dk/" target="_blank" onclick="BilBasen.Tracking.Analytics.trackEvent('2nd footer', 'blog');">Blog</a></li>
+            <li><a href="http://www.dba.dk/" target="_blank" onclick="BilBasen.Tracking.Analytics.trackEvent('2nd footer', 'dba');">DBA</a></li>
+            <li><a href="/ebay-sites" target="_self" onclick="BilBasen.Tracking.Analytics.trackEvent('2nd footer', 'ebaySites');">eBay sites</a></li>
+            <li class="last"><a href="http://www.mobile.de/" target="_blank" onclick="BilBasen.Tracking.Analytics.trackEvent('2nd footer', 'mobile');">mobile.de</a></li>
+        </ul>
+        <ul class="socialMedia">
+            <li>
+                <a href="https://www.facebook.com/bilbasen.dk" target="_blank" onclick="BilBasen.Tracking.Analytics.trackEvent('2nd footer', 'facebook');">
+                    <img src="/Content/images/components/socialmedia/facebook.png" alt="BilBasen Facebook"/>
+                </a>
+            </li>
+            <li>
+                <a href="https://twitter.com/BilBasen" target="_blank" onclick="BilBasen.Tracking.Analytics.trackEvent('2nd footer', 'twitter');">
+                    <img src="/Content/images/components/socialmedia/twitter.png" alt="BilBasen Twitter"/>
+                </a>
+            </li>
+            <li>
+                <a href="https://plus.google.com/117717078087658121040" rel="publisher" target="_blank" style="text-decoration:none;" onclick="BilBasen.Tracking.Analytics.trackEvent('2nd footer', 'google_plus_page');">
+                    <img src="//ssl.gstatic.com/images/icons/gplus-32.png" alt="BilBasen Google+"/>
+                </a>                    
+            </li>
+            <li class="plusOne">
+                <g:plusone size="large" href="http://www.bilbasen.dk" onclick="BilBasen.Tracking.Analytics.trackEvent('2nd footer', 'google_plus_like');"></g:plusone>
+            </li>
+        </ul>
+        <ul class="right last">
+            <li>&copy; 2013 Bil Markedet ApS - en del af <a href="http://www.ebayclassifiedsgroup.com/" target="_blank" onclick="BilBasen.Tracking.Analytics.trackEvent('2nd footer', 'ecg');">eBay</a></li>
+        </ul>
+       
+    </div>
+</footer>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        // Google plus +1 badge
+        window.___gcfg = { lang: 'da' };
+
+        (function () {
+            var po = document.createElement('script');
+            po.type = 'text/javascript';
+            po.async = true;
+            po.src = 'https://apis.google.com/js/plusone.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(po, s);
+        })();
+    });
+</script>
+
+
+
+
+
+
+    <script type="text/javascript" src="/Public/js/bb_plugins_2E691B5292113E12D7F14BE34985E041.js"></script>
+    <script type="text/javascript" src="/Public/js/bb_native_56FCB6E7965018CBD8EF32752C1D64CF.js"></script>
+    <script type="text/javascript" src="/Public/js/bb_utils_1296D10D175933892534D4147D3DF78F.js"></script>
+        <script type="text/javascript" src="/Public/js/bb_page_11DBB379E277332F4171C645C40B6024.js"></script>
+
+    
+    <input data-val="true" data-val-required="The AcceptedTos field is required." id="User_AcceptedTos" name="User.AcceptedTos" type="hidden" value="" />
+            <script type="text/javascript">
+    BilBasen.Tracking.Analytics.init();
+    BilBasen.Tracking.Analytics.trackPageView();
+</script>
+
+    <script>
+
+    </script>
+
+    <script type="text/javascript">
+        $(document).trigger("bb:ready"); //Trigger a pre-banner dom ready event
+        $(document).ready(function () {
+            Sys.Mvc.ValidatorRegistry.validators["notallowed"] = function (rule) {
+                var notAllowed = rule.ValidationParameters["notallowedtext"];
+                return function (value) {
+                    if (value != notAllowed) {
+                        return true;
+                    }
+                    return rule.ErrorMessage;
+                };
+            };
+            $('input, textarea').placeholder();
+
+            ECGDK.CookiePolicyNotification.domain = 'bilbasen.dk';
+            ECGDK.CookiePolicyNotification.policyUrl = 'http://www.bilbasen.dk/brugervilkaar.htm#Cookie';
+            ECGDK.CookiePolicyNotification.show();
+        });
+    </script>
+    
+    
+    <div class="modal" id="modalContainer"></div>
+</body>
+</html>
