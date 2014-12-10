@@ -20,9 +20,26 @@ FORM_TYPES = collections.OrderedDict([
     ('contact', 'c'),
     ('join mailing list', 'm'),
     ('other', 'o'),
+    ('NOT ANNOTATED', 'X'),
 ])
 
 FORM_TYPES_INV = {v:k for k,v in FORM_TYPES.items()}
+
+
+def load_html(data, base_url):
+    """ Parse HTML data to a lxml tree """
+    return lxml.html.fromstring(data, base_url=base_url)
+
+
+def get_domain(url):
+    return tldextract.extract(url).domain
+
+
+def _get_form_hash(form):
+    # it just returns a full string as a hash, for easier debugging
+    html = lxml.html.tostring(form, pretty_print=True)
+    lines = [line.strip() for line in html.splitlines(False) if line.strip()]
+    return "\n".join(lines)
 
 
 class Storage(object):
@@ -81,7 +98,7 @@ class Storage(object):
             f.write(html)
         self.write_index(index)
 
-    def iter_annotations(self, verbose=False):
+    def iter_annotations(self, drop_duplicates=True, verbose=False, leave=False):
         """ Return an iterator over (form, type) tuples. """
 
         sorted_items = sorted(
@@ -90,21 +107,37 @@ class Storage(object):
         )
 
         if verbose:
-            sorted_items = tqdm(sorted_items, "Loading", mininterval=0, leave=True)
+            sorted_items = tqdm(sorted_items, "Loading", mininterval=0, leave=leave)
 
+        seen = set()
         for filename, info in sorted_items:
             with open(os.path.join(self.folder, filename), "rb") as f:
                 tree = load_html(f.read(), info["url"])
 
             for form, tp in zip(tree.xpath("//form"), info["types"]):
+
+                if tp == 'X':
+                    continue
+
+                if drop_duplicates:
+                    fp = self.get_fingerprint(form)
+                    if fp in seen:
+                        continue
+                    seen.add(fp)
+
                 yield form, tp
 
-        if verbose:
+        if verbose and leave:
             print("")
 
-    def get_Xy(self, verbose=False):
+
+    def get_Xy(self, drop_duplicates=True, verbose=False, leave=False):
         """ Return X,y suitable for scikit-learn training """
-        return zip(*self.iter_annotations(verbose))
+        return zip(*self.iter_annotations(
+            drop_duplicates=drop_duplicates,
+            verbose=verbose,
+            leave=leave,
+        ))
 
     def check(self):
         """
@@ -138,12 +171,28 @@ class Storage(object):
 
         return errors
 
-    def get_type_counts(self):
+    def get_fingerprints(self, verbose=True, leave=False):
+        """ Return a dict with all fingerprints of the existing forms """
+        X, y = self.get_Xy(drop_duplicates=True, verbose=verbose, leave=leave)
+        return {self.get_fingerprint(form): tp for form, tp in zip(X, y) if tp != 'X'}
+
+    def get_fingerprint(self, form):
+        """
+        Return form fingerprint (a string that can be used for deduplication).
+        XXX: it should drop CSRF and other tokens somehow.
+        """
+        return _get_form_hash(form)
+
+    def get_type_counts(self, drop_duplicates=True, verbose=True):
         """ Return a {formtype: count} collections.Counter """
-        index = self.get_index()
-        return collections.Counter(
-            chain.from_iterable(v["types"] for v in index.values())
-        )
+        if not drop_duplicates:
+            index = self.get_index()
+            return collections.Counter(
+                chain.from_iterable(v["types"] for v in index.values())
+            )
+
+        X, y = self.get_Xy(drop_duplicates=True, verbose=verbose)
+        return collections.Counter(y)
 
     def print_type_counts(self):
         """ Print the number annotations of each form types in this storage """
@@ -164,12 +213,3 @@ class Storage(object):
                 idx += 1
                 continue
             return path
-
-
-def load_html(data, base_url):
-    """ Parse HTML data to a lxml tree """
-    return lxml.html.fromstring(data, base_url=base_url)
-
-
-def get_domain(url):
-    return tldextract.extract(url).domain

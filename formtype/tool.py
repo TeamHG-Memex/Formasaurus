@@ -30,7 +30,7 @@ import docopt
 import lxml.html
 from lxml.html.clean import Cleaner
 
-from formtype.storage import Storage, FORM_TYPES, load_html
+from formtype.storage import Storage, FORM_TYPES, load_html, FORM_TYPES_INV
 
 
 def load_data(url_or_path):
@@ -69,7 +69,7 @@ def print_form_types(types):
     print("")
 
 
-def annotate_forms(doc, form_types=None):
+def annotate_forms(storage, doc, form_types=None):
     """
     For each form element ask user whether it is a login form or not.
     Return an array with True/False answers.
@@ -81,6 +81,8 @@ def annotate_forms(doc, form_types=None):
     else:
         print("Page has %d form(s)" % len(forms))
 
+    fingerprints = storage.get_fingerprints()
+
     if form_types is None:
         form_types = FORM_TYPES
 
@@ -89,8 +91,15 @@ def annotate_forms(doc, form_types=None):
 
     res = []
     for idx, form in enumerate(forms, 1):
-        # xpath = "//form[%d]" % idx
-        # print(xpath)
+
+        fp = storage.get_fingerprint(form)
+        if fp in fingerprints:
+            xpath = "//form[%d]" % idx
+            tp = FORM_TYPES_INV[fingerprints[fp]]
+            print("Skipping duplicate form %-10s %r" % (xpath, tp))
+            res.append("X")
+            continue
+
         print_form_html(form)
 
         while True:
@@ -105,6 +114,10 @@ def annotate_forms(doc, form_types=None):
             break
 
         print("="*40)
+
+    if all(r == 'X' for r in res):
+        print("Page has no new forms.")
+        return []
     return res
 
 
@@ -115,7 +128,7 @@ def main():
         storage = Storage(args['--data-folder'])
         html, url = load_data(args["<url>"])
         doc = load_html(html, url)
-        answers = annotate_forms(doc)
+        answers = annotate_forms(storage, doc)
         if answers:
             storage.store_result(html, answers, url)
 
