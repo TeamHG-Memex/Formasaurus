@@ -92,6 +92,15 @@ class FormInputNames(BaseFormFeatureExtractor):
         return names.replace("_", "").replace("[", "").replace("]", "")
 
 
+class FormInputHiddenNames(BaseFormFeatureExtractor):
+    """
+    Names of all <input type=hidden> elements, joined to a single string.
+    """
+    def get_form_features(self, form):
+        names = " ".join(form.xpath('.//input[@type="hidden"]/@name'))
+        return names.replace("_", "").replace("[", "").replace("]", "")
+
+
 class FormLinksText(BaseFormFeatureExtractor):
     """
     Text of all links inside the form.
