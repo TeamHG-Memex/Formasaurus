@@ -121,6 +121,47 @@
             "p"
         ]
     }, 
+    "html/brooklynbrewshop.com-0.html": {
+        "url": "http://brooklynbrewshop.com/beer-making-kits", 
+        "types": [
+            "m"
+        ]
+    }, 
+    "html/brooklynbrewshop.com-1.html": {
+        "url": "http://brooklynbrewshop.com/beer-making-kits/hard-cider-kit", 
+        "types": [
+            "o", 
+            "X"
+        ]
+    }, 
+    "html/brooklynbrewshop.com-2.html": {
+        "url": "http://brooklynbrewshop.com/customer/account/login/", 
+        "types": [
+            "l", 
+            "X"
+        ]
+    }, 
+    "html/brooklynbrewshop.com-3.html": {
+        "url": "http://brooklynbrewshop.com/customer/account/create/", 
+        "types": [
+            "r", 
+            "X"
+        ]
+    }, 
+    "html/brooklynbrewshop.com-4.html": {
+        "url": "http://brooklynbrewshop.com/customer/account/forgotpassword/", 
+        "types": [
+            "p", 
+            "X"
+        ]
+    }, 
+    "html/brooklynbrewshop.com-5.html": {
+        "url": "http://brooklynbrewshop.com/contacts/", 
+        "types": [
+            "c", 
+            "X"
+        ]
+    }, 
     "html/danishbits.org-0.html": {
         "url": "https://danishbits.org/login.php", 
         "types": [
@@ -138,6 +179,24 @@
         "types": [
             "l", 
             "o"
+        ]
+    }, 
+    "html/dash.scrapinghub.com-0.html": {
+        "url": "https://dash.scrapinghub.com/account/login/?next=/", 
+        "types": [
+            "l"
+        ]
+    }, 
+    "html/dash.scrapinghub.com-1.html": {
+        "url": "https://dash.scrapinghub.com/account/signup/", 
+        "types": [
+            "r"
+        ]
+    }, 
+    "html/dash.scrapinghub.com-2.html": {
+        "url": "https://dash.scrapinghub.com/account/password/reset/", 
+        "types": [
+            "p"
         ]
     }, 
     "html/ddl-board.org-0.html": {
@@ -602,6 +661,27 @@
             "s"
         ]
     }, 
+    "html/pasouoquepasou.crtvg.es-0.html": {
+        "url": "http://pasouoquepasou.crtvg.es/user/register?destination=node/671%23comment-form", 
+        "types": [
+            "s", 
+            "r"
+        ]
+    }, 
+    "html/pasouoquepasou.crtvg.es-1.html": {
+        "url": "http://pasouoquepasou.crtvg.es/user/login?destination=node/671%23comment-form", 
+        "types": [
+            "X", 
+            "l"
+        ]
+    }, 
+    "html/pasouoquepasou.crtvg.es-2.html": {
+        "url": "http://pasouoquepasou.crtvg.es/user/password", 
+        "types": [
+            "X", 
+            "p"
+        ]
+    }, 
     "html/portal.apps.upenn.edu-0.html": {
         "url": "https://portal.apps.upenn.edu/penn_portal/view.php", 
         "types": [
@@ -764,6 +844,21 @@
             "r"
         ]
     }, 
+    "html/support.mageworx.com-0.html": {
+        "url": "http://support.mageworx.com/index.php?", 
+        "types": [
+            "l", 
+            "s"
+        ]
+    }, 
+    "html/support.mageworx.com-1.html": {
+        "url": "http://support.mageworx.com/index.php?/Tickets/Submit", 
+        "types": [
+            "l", 
+            "s", 
+            "o"
+        ]
+    }, 
     "html/theb52s.shop.livenation.com-0.html": {
         "url": "http://theb52s.shop.livenation.com/", 
         "types": [
@@ -779,6 +874,12 @@
             "o", 
             "o", 
             "m"
+        ]
+    }, 
+    "html/torrentfreak.com-0.html": {
+        "url": "https://torrentfreak.com/tag/torrentspy/", 
+        "types": [
+            "s"
         ]
     }, 
     "html/trendo.bg-0.html": {
@@ -1118,6 +1219,20 @@
             "o"
         ]
     }, 
+    "html/www.citeab.com-0.html": {
+        "url": "http://www.citeab.com/", 
+        "types": [
+            "s", 
+            "m"
+        ]
+    }, 
+    "html/www.citeab.com-1.html": {
+        "url": "http://www.citeab.com/contact", 
+        "types": [
+            "s", 
+            "c"
+        ]
+    }, 
     "html/www.communitycomm.com-0.html": {
         "url": "http://www.communitycomm.com/index.php?link=contact", 
         "types": [
@@ -1129,6 +1244,37 @@
         "types": [
             "l", 
             "s"
+        ]
+    }, 
+    "html/www.crtvg.es-0.html": {
+        "url": "http://www.crtvg.es/tvg/tvg-en-directo", 
+        "types": [
+            "l", 
+            "s"
+        ]
+    }, 
+    "html/www.crtvg.es-1.html": {
+        "url": "http://www.crtvg.es/ver-despois", 
+        "types": [
+            "X", 
+            "X", 
+            "l"
+        ]
+    }, 
+    "html/www.crtvg.es-2.html": {
+        "url": "http://www.crtvg.es/rexistro", 
+        "types": [
+            "X", 
+            "X", 
+            "r"
+        ]
+    }, 
+    "html/www.crtvg.es-3.html": {
+        "url": "http://www.crtvg.es/cambiar-contrasinal", 
+        "types": [
+            "X", 
+            "X", 
+            "p"
         ]
     }, 
     "html/www.debian-administration.org-0.html": {
@@ -1606,6 +1752,60 @@
             "o", 
             "s", 
             "l"
+        ]
+    }, 
+    "html/www.mocavo.com-0.html": {
+        "url": "https://www.mocavo.com/", 
+        "types": [
+            "r", 
+            "o", 
+            "o", 
+            "o", 
+            "o", 
+            "o"
+        ]
+    }, 
+    "html/www.mocavo.com-1.html": {
+        "url": "https://www.mocavo.com/signin", 
+        "types": [
+            "p", 
+            "l", 
+            "X", 
+            "X", 
+            "X", 
+            "X"
+        ]
+    }, 
+    "html/www.mocavo.com-2.html": {
+        "url": "https://www.mocavo.com/signup", 
+        "types": [
+            "r", 
+            "X", 
+            "X", 
+            "X", 
+            "X"
+        ]
+    }, 
+    "html/www.mocavo.com-3.html": {
+        "url": "http://www.mocavo.com/contact", 
+        "types": [
+            "c", 
+            "X", 
+            "X", 
+            "X", 
+            "X"
+        ]
+    }, 
+    "html/www.mocavo.com-4.html": {
+        "url": "http://www.mocavo.com/search", 
+        "types": [
+            "o", 
+            "s", 
+            "r", 
+            "X", 
+            "X", 
+            "X", 
+            "X"
         ]
     }, 
     "html/www.nieuwsblad.be-0.html": {

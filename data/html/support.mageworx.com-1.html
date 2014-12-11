@@ -1,0 +1,79 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "https://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=UTF-8"/>
+<meta http-equiv=X-UA-Compatible content="IE=EmulateIE8"/>
+<title>Select a department</title>
+<meta name=KEYWORDS content=Home />
+<meta name=robots content="index,follow"/>
+<link rel="shortcut icon" href="/favicon.ico"/>
+<link rel=alternate type="application/rss+xml" title=RSS href="http://support.mageworx.com/rss/index.php?/News/Feed"/>
+<script language=Javascript type="text/javascript">var _themePath="http://support.mageworx.com/__swift/themes/client_default/";var _swiftPath="http://support.mageworx.com/";var _baseName="http://support.mageworx.com/index.php?";var datePickerDefaults={showOn:"both",buttonImage:"http://support.mageworx.com/__swift/themes/client_default/images/icon_calendar.gif",changeMonth:true,changeYear:true,buttonImageOnly:true,dateFormat:'mm/dd/yy'};</script>
+<link rel=stylesheet type="text/css" media=all href="http://support.mageworx.com/A.index.php,q,_Core,_Default,_Compressor,_css,_jqueryui,3Apopup,3Aclient,3Acolorpicker.pagespeed.cf.VB4Ju5xvOe.css"/>
+<script type="text/javascript" src="http://support.mageworx.com/index.php,q,_Core,_Default,_Compressor,_js,_jquery,3Ajqueryplugins,3Ajqueryui,3Acolorpicker,3Acoresc,3Apopup.pagespeed.jm.IG4wjnc67M.js"></script>
+</head>
+<body class=bodymain>
+<div id=main>
+<div id=topbanner><a href="http://support.mageworx.com/index.php?"><img border=0 style="height: 4em;" src="http://www.mageworx.com/skin/frontend/default/mageworx/images/logo.gif" alt=MageWorx.com id=logo /></a></div>
+<div id=toptoolbar>
+<span id=toptoolbarrightarea>
+<select class=swiftselect name=languageid id=languageid onchange="javascript: LanguageSwitch(false);">
+<option value=1 selected>English (U.S.)</option>
+</select>
+</span>
+<ul id=toptoolbarlinklist><li><a class=toptoolbarlink style="background-image:url(http://support.mageworx.com/__swift/themes/client_default/images/xicon_widget_home_small.png.pagespeed.ic.awawIAQ7jr.png)" href="http://support.mageworx.com/index.php?/Core/Default/Index">Home</a></li><li class=current><a class=toptoolbarlink style="background-image:url(http://support.mageworx.com/__swift/themes/client_default/images/xicon_widget_submitticket_small.png.pagespeed.ic.xdITo5hOQr.png)" href="http://support.mageworx.com/index.php?/Tickets/Submit">Submit a Ticket</a></li><li><a class=toptoolbarlink style="background-image:url(http://support.mageworx.com/__swift/themes/client_default/images/xicon_widget_knowledgebase_small.png.pagespeed.ic.KGYwV7lK9e.png)" href="http://support.mageworx.com/index.php?/Knowledgebase/List">Knowledgebase</a></li><li><a class=toptoolbarlink style="background-image:url(http://support.mageworx.com/__swift/themes/client_default/images/xicon_widget_news_small.png.pagespeed.ic.H6mRgaZiEv.png)" href="http://support.mageworx.com/index.php?/News/List">News</a></li><li><a class=toptoolbarlink style="background-image:url(http://support.mageworx.com/__swift/themes/client_default/images/xicon_widget_downloads_small.png.pagespeed.ic.TigTwz7Fhy.png)" href="http://www.mageworx.com/magento-extensions.html">Magento Extensions</a></li></ul>
+</div>
+<div id=maincore>
+<div id=maincoreleft>
+<div id=leftloginsubscribebox>
+<form method=post action="http://support.mageworx.com/index.php?/Base/User/Login" name=LoginForm>
+<div class=tabrow id=leftloginsubscribeboxtabs><a id=leftloginsubscribeboxlogintab href="#" onclick="javascript: ActivateLoginTab();" class=atab><span class=tableftgap>&nbsp;</span><span class=tabbulk><span class=tabtext>Login</span></span></a></div>
+<div id=leftloginbox class="switchingpanel active">
+<input type=hidden name=_redirectAction value="/Tickets/Submit/Index"/>
+<div class="inputframe zebraeven"><input class=loginstyledlabel value="Your email address" onfocus="javascript: ResetLabel(this, 'Your email address', 'loginstyled');" name=scemail type=text></div>
+<div class="inputframe zebraodd"><input class=loginstyled value="" name=scpassword type=password></div>
+<div class="inputframe zebraeven"><input id=leftloginboxrememberme name=rememberme value=1 type=checkbox><label for=leftloginboxrememberme><span id=leftloginboxremembermetext>Remember me</span></label></div>
+<hr class=vdivider>
+<div id=logintext><a href="http://support.mageworx.com/index.php?/Base/UserLostPassword/Index">Lost password</a></div>
+<div id=loginsubscribebuttons><input class=rebutton value=Login type=submit /></div>
+</div>
+</form>
+</div>
+</div>
+<div id=maincorecontent>
+<form method=post id=searchform action="http://support.mageworx.com/index.php?/Base/Search/Index" name=SearchForm>
+<div class=searchboxcontainer>
+<div class=searchbox>
+<span class=searchbuttoncontainer>
+<a class=searchbutton href="javascript: void(0);" onclick="$('#searchform').submit();"><span></span>SEARCH</a>
+</span>
+<span class=searchinputcontainer><input type=text name=searchquery class=searchquery onclick="javascript: if ($(this).val() == 'Please type your question here' || $(this).val() == 'Please type your search query here') { $(this).val('').addClass('searchqueryactive'); }" value="Please type your search query here"/></span>
+</div>
+</div>
+</form>
+<form method=post action="http://support.mageworx.com/index.php?/Tickets/Submit/RenderForm" name=SubmitTicketForm>
+<div class=boxcontainer>
+<div class=boxcontainerlabel>Select a department</div>
+<div class=boxcontainercontent>
+If you can't find a solution to your problem in our knowledgebase, you can submit a ticket by selecting the appropriate department below.<br/><br/>
+<table class=hlineheader><tr><th rowspan=2 nowrap>Departments</th><td>&nbsp;</td></tr><tr><td class=hlinelower>&nbsp;</td></tr></table>
+<table width="100%" border=0 cellspacing=1 cellpadding=4>
+<tr>
+<td width=16 align=left valign=middle class=zebraodd><input type=radio name=departmentid onclick="javascript: ToggleTicketSubDepartments('3');" value=3 id=department_3 /></td>
+<td><label for=department_3>Sales</label></td>
+</tr>
+<tr>
+<td width=16 align=left valign=middle class=zebraodd><input type=radio name=departmentid onclick="javascript: ToggleTicketSubDepartments('4');" value=4 id=department_4 checked /></td>
+<td><label for=department_4>Support</label></td>
+</tr>
+</table>
+<br/>
+<div class=subcontent><input class=rebuttonwide2 value="Next &raquo;" type=submit name=button /></div>
+</div>
+</div>
+</form><script type="text/javascript">$(function(){$('.dialogerror, .dialoginfo, .dialogalert').fadeIn('slow');});</script></div>
+<div id=bottomfooter class=bottomfooterpadding><a href="http://www.mageworx.com/magento-extensions.html" target=_blank class=bottomfooterlink>Magento Extensions</a> developed by <a href="http://www.mageworx.com/" target=_blank class=bottomfooterlink>MageWorx</a></div>
+</div>
+</div>
+</body>
+</html>
