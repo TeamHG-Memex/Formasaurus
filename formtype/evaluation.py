@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-This module provides functions for evaluating formtype quality.
-Most of them are not reusable.
+This module provides helper functions for evaluating formtype quality.
 """
 from __future__ import absolute_import
 

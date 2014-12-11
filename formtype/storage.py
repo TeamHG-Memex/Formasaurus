@@ -1,4 +1,7 @@
 # -*- coding: utf-8 -*-
+"""
+A module for working with annotation data storage.
+"""
 from __future__ import absolute_import
 
 import os

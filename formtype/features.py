@@ -1,4 +1,8 @@
 # -*- coding: utf-8 -*-
+"""
+This module provides scikit-learn transformers
+for extracting features from HTML forms.
+"""
 from __future__ import absolute_import
 
 import urlparse

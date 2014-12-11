@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 """
+This module defines which features and which classifier the default model uses.
 """
 from __future__ import absolute_import
 
@@ -8,8 +9,6 @@ from sklearn.feature_extraction.text import CountVectorizer, TfidfVectorizer
 from sklearn.pipeline import make_pipeline, make_union
 from sklearn.linear_model import SGDClassifier, LogisticRegression
 from sklearn.svm import LinearSVC
-from sklearn.cross_validation import cross_val_score
-from sklearn.metrics import classification_report, confusion_matrix, precision_recall_fscore_support
 
 from formtype import features
 

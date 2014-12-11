@@ -4,24 +4,11 @@
 This is a tool for annotating HTML forms, training a classifier
 based on annotated data and evaluating its quality.
 
-To annotate new pages use "add" command.
-It downloads a web page, displays all HTML forms and for each form asks
-user about form type. The result is saved on disk: web page is stored
-as a html file and the URL and the annotation results are added
-to index.json file.
-
-To check the storage for consistency and print some stats use "check" command.
-
-To train an extractor for HTML form classification use "train" command.
-
-To classify forms from an URL using a saved extractor use "run" command.
-
-
 Usage:
-    tool.py run <modelfile> <url> [--threshold <probability>]
     tool.py add <url> [--data-folder <path>]
-    tool.py check-data [--data-folder <path>]
     tool.py train <modelfile> [--data-folder <path>]
+    tool.py run <modelfile> <url> [--threshold <probability>]
+    tool.py check-data [--data-folder <path>]
     tool.py evaluate [--test-size <ratio>] [--cv <n_folds>] [--data-folder <path>]
     tool.py -h | --help
     tool.py --version
@@ -32,6 +19,20 @@ Options:
     --cv <n_folds>             use <n_folds> for cross-validation [default: 10]
     --threshold <probability>  don't display predictions with probability below this threshold [default: 0.01]
 
+To annotate new pages use "add" command.
+It downloads a web page, displays all HTML forms and for each form asks
+user about form type. The result is saved on disk: web page is stored
+as a html file and the URL and the annotation results are added
+to index.json file.
+
+To train an extractor for HTML form classification use "train" command.
+
+To classify forms from an URL using a saved extractor use "run" command.
+
+To check the storage for consistency and print some stats use "check-data" command.
+
+To check the expected quality of the default model trained on the
+training data provided use "evaluate" command.
 """
 from __future__ import absolute_import, print_function
 from collections import Counter
