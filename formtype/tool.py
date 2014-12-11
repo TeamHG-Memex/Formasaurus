@@ -63,7 +63,7 @@ def main():
     elif args['train']:
         ex = FormExtractor.trained_on(
             data_folder=args["--data-folder"],
-            train_ratio=float(args["--test-size"])
+            train_ratio=1.0,
         )
         ex.save(args["<modelfile>"])
 
