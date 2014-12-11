@@ -22,12 +22,12 @@ def print_sparsity(clf):
     print("Active features: %d out of possible %d" % (n_active, n_features*n_classes))
 
 
-def print_cv_scores(model, X, y):
+def print_cv_scores(model, X, y, cv=10):
     """ Print cross-validation scores of a classifier """
-    cv_scores = cross_val_score(model, X, y, scoring='f1', cv=10, verbose=False)
+    cv_scores = cross_val_score(model, X, y, scoring='f1', cv=cv, verbose=False)
     print(
-        u"10-fold cross-validation F1: %0.3f (±%0.3f)  min=%0.3f  max=%0.3f" % (
-        cv_scores.mean(),  cv_scores.std() * 2, cv_scores.min(), cv_scores.max())
+        u"%d-fold cross-validation F1: %0.3f (±%0.3f)  min=%0.3f  max=%0.3f" % (
+        cv, cv_scores.mean(),  cv_scores.std() * 2, cv_scores.min(), cv_scores.max())
     )
 
 
@@ -72,9 +72,8 @@ def print_confusion_matrix(y_test, y_pred, class_labels=None, ipython=False):
         print(df)
 
 
-def print_metrics(model, X, y, X_train, X_test, y_train, y_test, ipython=False):
-    print_cv_scores(model, X, y)
-
+def print_metrics(model, X, y, X_train, X_test, y_train, y_test,
+                  ipython=False, cv=10, short_matrix=False):
     clf = model.steps[-1][1]
     y_pred = fit_and_predict(model, X_train, X_test, y_train)
     class_labels = get_class_labels(clf)
@@ -82,7 +81,12 @@ def print_metrics(model, X, y, X_train, X_test, y_train, y_test, ipython=False):
     print_classification_report(y_train, y_test, y_pred, class_labels)
     print_sparsity(clf)
 
+    if short_matrix:
+        class_labels = clf.classes_
     print_confusion_matrix(y_test, y_pred, class_labels, ipython=ipython)
+
+    print("\nRunning cross validation...")
+    print_cv_scores(model, X, y, cv=cv)
 
 
 def get_informative_features(vectorizers, clf, class_labels, N):

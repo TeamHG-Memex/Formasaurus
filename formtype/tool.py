@@ -45,7 +45,9 @@ from formtype.annotation import (
     print_form_html
 )
 from formtype.extractor import FormExtractor
-from formtype.storage import load_html, FORM_TYPES_INV
+from formtype.storage import load_html, FORM_TYPES_INV, Storage
+from formtype import evaluation
+from formtype.model import get_model
 
 
 def main():
@@ -89,6 +91,21 @@ def main():
                 print("%s %0.1f%%" % (tp_full, prob*100), end='    ')
 
             print("")
+
+    elif args['evaluate']:
+        n_folds = int(args["--cv"])
+        ratio = float(args['--test-size'])
+
+        store = Storage(args["--data-folder"])
+        model = get_model()
+        X, y = store.get_Xy(drop_duplicates=True, verbose=True, leave=True)
+
+        test_size = int(len(y) * ratio)
+        train_size = len(y) - test_size
+        X_train, X_test, y_train, y_test = X[:train_size], X[train_size:], y[:train_size], y[train_size:]
+
+        evaluation.print_metrics(model, X, y, X_train, X_test, y_train, y_test,
+                                 ipython=False, cv=n_folds, short_matrix=True)
 
 
 if __name__ == '__main__':
