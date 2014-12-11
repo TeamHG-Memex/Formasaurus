@@ -37,7 +37,7 @@ class FormExtractor(object):
         X, y = X[:train_size], y[:train_size]
 
         model = get_model()
-        print("Training...")
+        print("Training on %d example(s)..." % len(y))
         model.fit(X, y)
         self.model = model
 
