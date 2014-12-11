@@ -1,0 +1,823 @@
+
+
+    
+
+
+
+    
+        
+        
+        <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+    
+
+
+
+    
+
+
+
+    
+
+        <html xmlns="http://www.w3.org/1999/xhtml">
+            
+
+
+
+    
+
+
+
+
+
+
+
+
+
+                 
+    
+        <head>
+			 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+             <meta name="ServerName" content="unitomanaged1" />
+             
+
+
+
+
+
+	
+		
+			<title>u n i t o . i t - l'Università di Torino on line - MyUniTo</title>
+		
+		
+	
+
+            
+
+<title>u n i t o . i t - l'Università di Torino on line</title><script src="/unitoWAR/framework/skeletons/unito/js/js.js" type="text/javascript"></script><script src="/unitoWAR/framework/skeletons/unito/js/ajax.js" type="text/javascript"></script><script src="/unitoWAR/framework/skeletons/unito/js/textloader.js" type="text/javascript"></script><link rel="stylesheet" type="text/css" media="screen" href="/unitoWAR/framework/skins/unito/css/css_normal.css" title="normal">
+
+    
+
+
+
+
+
+
+
+
+
+                 
+    
+            
+
+            
+		<link href="/unitoWAR/portlets/wlp/contentpresenter/resources/css/wizard.css" type="text/css" rel="stylesheet"/>
+		<link href="/unitoWAR/portlets/wlp/contentpresenter/resources/css/templates.css" type="text/css" rel="stylesheet"/>
+		
+        
+		
+
+<style type="text/css">
+#alerts_myunito.active_alerts h4 {
+background-color:#B22222;
+color:#FFFFFF;
+font-size:0.8em;
+font-weight:bold;
+margin:0px;
+padding:2px 0px 2px 25px;
+text-transform:uppercase;
+}
+
+#alerts_myunito.active_alerts a {
+color:#000000;
+font-weight: bold;
+text-decoration:none;
+}
+#alerts_myunito.active_alerts a:link, a:active {
+color:#800000;
+text-decoration:none;
+}
+#alerts_myunito.active_alerts a:hover {
+text-decoration:underline;
+}
+#alerts_myunito.active_alerts a:visited {
+color:#800000;
+text-decoration:none;
+}
+#alerts_myunito.active_alerts li {
+list-style-image:none;
+list-style-position:outside;
+list-style-type:none;
+margin-left: -28px;
+}
+</style>
+<!--[if IE]>
+<style type="text/css">
+body {behavior:url("/unitoWAR/framework/skins/unito/css/csshover.htc");}
+</style>
+<![endif]-->
+
+        </head>
+    
+
+
+
+    
+
+
+
+
+
+
+
+
+    
+    
+	
+
+	
+	
+		<body onLoad="">
+		        <div id="pagina">
+				<!-- INIZIO HEADER-->
+					<div class="hidden"><h1>UNITO.it</h1></div> 
+					<div>		
+						<span class="hidden_conpadding">[<a href="#contenuto" title="Salta direttamente al contenuto della pagina">Vai al contenuto</a>]</span>
+						<span class="hidden_conpadding">[<a href="http://www.unito.it/index.htm" title="Home Page">Vai alla Home Page</a>]</span>
+					</div>
+					<div id="aux">
+					<!-- INIZIO TESTA -->
+		            
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    
+	
+    
+
+
+
+
+	<!-- INIZIO TESTA -->
+		<div id="testa">
+		
+			<div class="logo_stampa"><img src="/unitoWAR/framework/skins/unito/images/logoperstampa.jpg" width="204" height="95" alt="Logo per la stampa del portale dell'Università di Torino" /></div>
+			<div class="testa_sn">
+		
+				
+
+				<img src="/unitoWAR/framework/skins/unito/images/logouni_alldx.jpg" width="263" height="136" alt="Logo Università degli Studi di Torino" usemap="#myunito" />
+				<a href="http://www.unito.it/index.htm" title="link alla Home Page del portale dell'Università di Torino"><img src="/unitoWAR/framework/skins/unito/images/logo_unito.jpg" class="testa_unito" width="172" height="63" alt="Logo Università degli Studi di Torino" /></a>
+				<map name="myunito" id="myunito">
+					<area id="mappa-myunito" coords="10,1,222,91" alt="Logo Università degli Studi di Torino" title="link alla Home Page del portale dell'Università di Torino" href="http://www.unito.it/index.htm" />
+				</map>
+			</div>
+			<div class="testa_dx">
+				<!-- MENU OPZIONI -->
+				<div id="opzioni">
+					<h2 class="hidden">Scegli la visualizzazione&nbsp;</h2>
+					<ul>										
+						<li id="sel_normal" class="separatore"><a id="a_sel_normal" onclick="setActiveStyleSheet('normal'); return false;" onkeypress="if (isReturn(event)) {setActiveStyleSheet('normal'); return false;}" href="#" title="visualizza il sito in modalità grafica">Grafica</a></li> 
+						<li id="sel_solotesto"><a id="a_sel_solotesto" class="separatore" onclick="setActiveStyleSheet('solotesto'); return false;" onkeypress="if (isReturn(event)) {setActiveStyleSheet('solotesto'); return false;}" href="#" title="visualizza il sito in modalità solo testo">Naviga senza grafica</a></li> 
+					</ul>
+					<script type="text/javascript">
+					  setOldStyleLink();
+					</script>
+					<span id="primo" class="data">
+						<script type="text/javascript">
+							window.setTimeout("showDate()",10);
+						</script>
+					</span> 
+				</div>
+				<!-- FINE OPZIONI -->
+			</div>
+			
+			<div class="myunito">
+				<h2 class="hidden">Strumenti di ricerca</h2>
+				<!-- inizio form ricerca -->
+				<div id="cercaMyunito_json" class="cercaMyunito">
+				    <form id="cerca_form" method="get" action="/search/search">
+				        <div id="Cerca">
+				        <input type="hidden" name="rel" value="SRC" />
+				        <input type="hidden" name="btnG" value="Cerca" />
+				        <input type="hidden" name="entqr" value="0" />
+				        <input type="hidden" name="ud" value="1" />
+				        <input type="hidden" name="sort" value="date%3AD%3AL%3Ad1" />
+				        <input type="hidden" name="output" value="xml_no_dtd" />
+				        <input type="hidden" name="oe" value="ISO-8859-1" />
+				        <input type="hidden" name="ie" value="ISO-8859-1" />
+				        <input type="hidden" name="client" value="portale_uni_to_fe_ext" />
+				        <input type="hidden" name="proxystylesheet" value="portale_uni_to_fe_ext" />
+				        <input type="hidden" name="site" value="totAteneo" />
+				        <span class="hidden"><label for="q">Chiave di ricerca:</label></span><img src="/unitoWAR/framework/skins/unito/images/go-to.gif" alt="GO-TO: il motore di ricerca di Unito.it" /><input class="text"  type="text" maxlength="100" name="q" id="q" value="" onfocus="if (this.value=='cerca informazioni o persone in unito.it') {this.value=''; this.style.color='black';}" onblur="if (this.value=='') {this.style.color='black'; this.value='cerca informazioni o persone in unito.it'};" /><script type="text/javascript">document.getElementById('q').style.color='black'; document.getElementById('q').value='cerca informazioni o persone in unito.it';</script>
+				        <input name="Submit" type="submit" class="button" value="Cerca" onclick="submitSearch();return false;" onkeypress="if (isReturn(event)) {submitSearch();return false;}" />
+				        </div>
+					</form>
+				    <span id="cercalink"><a href="http://www.unito.it/unitoWAR/portletlocator/ricercaAvanzata">Ricerca avanzata</a>&nbsp;&nbsp; 
+				                         <a href="http://www.unito.it/unitoWAR/portletlocator/rubrica">Rubrica</a> &nbsp;&nbsp;
+				                         <a href="http://www.unito.it/unitoWAR/portletlocator/rubrica">Cerca per struttura</a> &nbsp;&nbsp;
+				                         <a href="http://www.unito.it/maps/mappa_strutture.html">Mappa Strutture</a></span>
+				</div>
+				<script type="text/javascript">
+				    scopriDiv('cercaMyunito_json');
+				</script>
+			</div>
+
+			<div class="myunito_noscript">
+				<noscript>
+				<div class="cercaMyunito_noscript">
+			    <form method="get" action="http://www.unito.it/search/search" id="Cerca1">
+			        <div id="Cerca_noscript">
+			        <input type="hidden" name="rel" value="search" />
+			        <input type="hidden" name="btnG" value="Cerca" />
+			        <input type="hidden" name="entqr" value="0" />
+			        <input type="hidden" name="ud" value="1" />
+			        <input type="hidden" name="sort" value="date%3AD%3AL%3Ad1" />
+			        <input type="hidden" name="output" value="xml_no_dtd" />
+			        <input type="hidden" name="oe" value="ISO-8859-1" />
+			        <input type="hidden" name="ie" value="ISO-8859-1" />
+			        <input type="hidden" name="client" value="portale_uni_to_fe_ext" />
+			        <input type="hidden" name="proxystylesheet" value="portale_uni_to_fe_ext" />
+			        <input type="hidden" name="site" value="totAteneo" />
+			        <label for="q1"><span class="hidden">Chiave di ricerca:</span><img src="/unitoWAR/framework/skins/unito/images/go-to.gif" alt="GO-TO: il motore di ricerca di Unito.it" /></label><input class="text"  type="text" maxlength="100" name="q" id="q1" value="" />
+			        <input name="Submit2" type="submit" class="button" value="Cerca"/>
+			        </div>
+				</form>
+			    <span id="cercalink_noscript"><a href="http://www.unito.it/ricerca_avanzata.htm">Ricerca avanzata</a>&nbsp;&nbsp; <a href="http://www.unito.it/rubrica.htm">Rubrica</a> &nbsp;&nbsp;<a href="http://www.unito.it/ricerca_struttura.htm">Cerca per struttura</a> &nbsp;&nbsp;<a href="http://www.unito.it/maps/mappa_strutture.html">Mappa Strutture</a></span>
+				</div>
+				</noscript>
+			<!-- fineform ricerca -->
+			</div>
+		</div> 
+<!-- FINE TESTA -->
+	<!-- FINE HEADER-->
+		
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    
+	
+
+
+
+    
+
+
+
+
+
+                
+    
+        <div id="wrapperhome" class="menuMyPortal">
+            
+            
+                
+
+
+    
+
+
+
+
+
+               
+    
+            
+
+
+    
+
+
+
+
+    
+    
+        <!-- Note that "border", etc. are dynamic attributes and passed directly to the HTML output. -->
+			
+			
+		<!-- COLONNA 1 -->
+		<div id="c1_myunito_colonna_singola">
+			
+
+
+
+
+
+
+    
+        
+<div class="wlp-bighorn-theme wlp-bighorn-theme-theme_box_aggregatori">
+
+    
+
+
+
+
+					<div class="theme_box_aggregatori">
+						
+
+    
+
+
+
+
+
+
+
+
+
+
+<div class="titlebar">
+		<h4>Ricordami la password</h4>
+</div>
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+									
+						
+
+
+
+
+
+    <p style="color:red">
+    	<b>
+		    
+    		
+    		
+    		
+    	</b>
+   	</p>
+<p>
+Inserire la propria username e l'indirizzo e-mail personale.<br />Una volta verificata la presenza negli archivi dell'Ateneo delle credenziali e dell'indirizzo e-mail, il sistema invierà una mail all'indirizzo personale indicato che contiene le istruzioni operative successive per procedere al recupero della password di accesso al Portale e ai servizi on line.<br /><b>ATTENZIONE:</b> non utilizzare l'indirizzo e-mail istituzionale, del tipo nome.cognome@unito.it per il personale docente e tecnico amministrativo e nome.cognome@studenti.unito.it o matricola@studenti.unito.it per gli studenti, ma l'indirizzo e-mail personale - per gli studenti l'indirizzo e-mail utilizzato per la registrazione al Portale oppure quello modificato dopo l'iscrizione all'Università tramite la segreteria studenti o direttamente dal Portale di Ateneo - per il personale (docente e tecnico-amministrativo) l'indirizzo e-mail presente, se modificato, nella rubrica dei dati personali dell'Ateneo (per modificarlo, fare login sul Portale, Servizi on line, Modifica dati in rubrica).<br />
+</p>
+    
+	<form action="http://my.unito.it:80/unitoWAR/appmanager/unito/publicApps?_nfpb=true&amp;_windowLabel=T13201236191247499847650&amp;T13201236191247499847650_actionOverride=%2Fit%2Fcineca%2Fpda%2Funito%2Fresetpassword%2FsendMail&amp;_pageLabel=P4800436191247499780718" method="post">
+		<div class="form_1">
+		<table class="reset_password">
+			<tr>
+				<td class="align_right"><label for="actionForm_username">Username:</label></td>
+				
+				<td>
+				<input type="text" name="T13201236191247499847650{actionForm.username}" id="actionForm_username" />
+<script type="text/JavaScript">
+<!--
+// lookup by tagId to "real id"
+function lookupIdByTagId(id, tag)
+{
+   var idScope = lookupIdScope(tag,".");
+   return (idScope == "") ? id : idScope + id;
+}
+
+//Non-Legacy lookup method creating a fully qualified scope id
+function lookupIdScope(tag,sep)
+{
+   var val = "";
+   if (sep == null) sep = "";
+   while (tag != null && tag.getAttribute != null) {
+      try {
+         var attrVal = tag.getAttribute("netui:idScope");
+      } catch (e) { /* ignore, in IE6 calling on a table results in an exception */ }
+      if (attrVal != null)
+         val = attrVal + sep + val;
+      tag = tag.parentNode;
+   }
+   return val;
+}
+
+
+// map tagId to "real name"
+if (netui_tagIdNameMap == null)
+   var netui_tagIdNameMap = new Object();
+netui_tagIdNameMap.actionForm_username="T13201236191247499847650{actionForm.username}"
+// lookup by tagId to "real name"
+function lookupNameByTagId(id, tag)
+{
+   var idScope = lookupIdScope(tag,"_");
+   if (idScope == "")
+      return netui_tagIdNameMap[id];
+   else
+      return netui_tagIdNameMap[idScope  + "__" + id];
+}
+
+-->
+</script>
+</td>
+				<td class="error">&nbsp;</td>
+			</tr>
+			<tr>
+				<td class="align_right"><label for="actionForm_email">Email:</label></td>
+				<td><input type="text" name="T13201236191247499847650{actionForm.email}" id="actionForm_email" />
+<script type="text/JavaScript">
+<!--
+netui_tagIdNameMap.actionForm_email="T13201236191247499847650{actionForm.email}"
+-->
+</script>
+</td>
+				<td class="error">&nbsp;</td>
+			</tr>
+			<tr>
+				<td colspan="3" class="captcha">
+				<label for="actionForm_captcha">Digita i caratteri visualizzati nell&#39;immagine sottostante:</label><br /><br />
+				</td>
+			</tr>
+			<tr>
+				<td colspan="3" class="captcha">
+				<img src="/unitoWAR/captcha.jpg" />
+			</tr>
+			<tr>
+				<td class="align_center" colspan="2">
+				<input type="text" name="T13201236191247499847650{actionForm.captcha}" id="actionForm_captcha" />
+<script type="text/JavaScript">
+<!--
+netui_tagIdNameMap.actionForm_captcha="T13201236191247499847650{actionForm.captcha}"
+-->
+</script>
+
+				</td>
+				<td class="error">&nbsp;</td>
+			</tr>
+			
+			<tr>
+				<td class="button" colspan="3">
+				<input type="submit" value="Invia richiesta" />
+				</td>
+			</tr>
+		</table>
+		</div>
+	</form>
+
+
+
+
+
+
+
+
+    
+
+
+
+
+					</div>
+</div>
+
+
+
+
+
+
+    
+    
+                
+		</div><!-- c1_myunito -->
+		<!-- FINE COLONNA 1 -->
+    
+
+
+    
+
+
+
+
+    
+
+
+    
+
+
+
+
+
+               
+    
+    
+
+
+    
+
+
+
+
+
+                
+    
+        </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- FOOTER: contiene il piede della pagina con menu -->
+	
+<div id="piede">
+<!-- menu_footer: contiene il menu di fine pagina -->
+
+
+
+
+	
+	
+	
+		
+		
+	
+
+	
+		
+		
+	
+	
+
+
+	
+		
+		
+		
+	
+	
+	<ul>
+		
+		<li class="separatore_piede">
+			
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+			
+	
+
+
+
+	
+	
+	<a class="link_int" href="http://www.unito.it/riferimenti-contatti-e-pec" title="Riferimenti, contatti, PEC, reclami e segnalazioni">Riferimenti, contatti, PEC, reclami e segnalazioni</a>
+	
+	
+		</li>
+		
+		<li class="separatore_piede">
+			
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+			
+	
+
+
+
+	
+	
+	<a class="link_int" href="http://www.unito.it/note-legali" title="Note legali">Note legali</a>
+	
+	
+		</li>
+		
+		<li class="separatore_piede">
+			
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+			
+	
+
+
+
+	
+	
+	<a class="link_int" href="http://www.unito.it/privacy" title="Privacy">Privacy</a>
+	
+	
+		</li>
+		
+		<li class="separatore_piede">
+			
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+			
+	
+
+
+
+	
+	
+	<a class="link_int" href="http://www.unito.it/accessibilita" title="Accessibilità">Accessibilità</a>
+	
+	
+		</li>
+			
+
+
+	
+	
+		
+			<li><a href="http://www.cineca.it" onkeypress="if ((event.which==13)||(event.keyCode==13)) {window.open( this.href, 'a');return false}" onclick="window.open(this.href, 'a');return false" title="Link a sito esterno - La pagina si apre in una nuova finestra">In collaborazione con <img src="/unitoWAR/framework/skins/unito/images/cineca.gif"  alt="logo Cineca" /><span class="ghost">Cineca</span></a></li>
+		<!-- piede: contiene le varie informazioni di fine pagina-->			
+
+
+
+	</ul>
+</div>
+<div id="piede2">
+	Università degli Studi di Torino - Via Verdi, 8 - 10124 Torino - Centralino +39 011 6706111<br /> 		P.I. 02099550010 - C.F. 80088230018 - IBAN IT07N0306909217100000046985<br/><br />
+</div><!-- Chiude div piede2 -->
+<!-- FINE FOOTER -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+    
+		            
+		            
+			</div> <!-- CHIUDE  "AUX"-->
+		<div>
+			<span class="hidden_conpadding">[<a href="#contenuto" title="link all'inizio del contenuto della pagina" >Torna all'inizio del contenuto</a>]</span>
+			<span class="hidden_conpadding">[<a href="#sezione_menu" title="link alla sezione dei menu">Torna al menu di navigazione</a>]</span>
+		</div>
+		</div> <!--  CHIUDE ID "PAGINA"  -->
+				
+				
+
+
+
+
+
+
+
+
+
+	
+	
+	
+			
+	
+	
+	
+	
+
+
+
+
+
+
+
+ 		
+				</body>
+    
+
+
+
+    
+
+
+
+    
+        </html>
+
+    
+
+
+
+    
+
+
+
+    
+

@@ -93,6 +93,18 @@
             "l"
         ]
     }, 
+    "html/belepes.t-online.hu-0.html": {
+        "url": "https://belepes.t-online.hu/auth.html?cmd=register&skin=origo&backurl=http://postr.hu//", 
+        "types": [
+            "r"
+        ]
+    }, 
+    "html/belepes.t-online.hu-1.html": {
+        "url": "https://belepes.t-online.hu/auth.html?cmd=pwdrem&skin=origo", 
+        "types": [
+            "p"
+        ]
+    }, 
     "html/berkeley.edu-0.html": {
         "url": "http://berkeley.edu/index.html", 
         "types": [
@@ -458,6 +470,14 @@
             "l"
         ]
     }, 
+    "html/idp.unito.it-0.html": {
+        "url": "https://idp.unito.it/idp/multi-login.jsp?actionUrl=%2Fidp%2FAuthn%2FMultilogin", 
+        "types": [
+            "l", 
+            "l", 
+            "s"
+        ]
+    }, 
     "html/info.pompeiis.com-0.html": {
         "url": "http://info.pompeiis.com/contact-us/", 
         "types": [
@@ -566,6 +586,22 @@
         "url": "http://multikino.lt/lt/dabar/", 
         "types": [
             "o"
+        ]
+    }, 
+    "html/my.unito.it-0.html": {
+        "url": "http://my.unito.it/unitoWAR/page/unito/publicApps/P4800436191247499780718", 
+        "types": [
+            "s", 
+            "s", 
+            "p"
+        ]
+    }, 
+    "html/my.unito.it-1.html": {
+        "url": "http://my.unito.it/registrazione", 
+        "types": [
+            "s", 
+            "s", 
+            "r"
         ]
     }, 
     "html/nahodsa.sk-0.html": {
@@ -682,6 +718,12 @@
             "p"
         ]
     }, 
+    "html/ph.bsmarter.ph-0.html": {
+        "url": "http://ph.bsmarter.ph/", 
+        "types": [
+            "l"
+        ]
+    }, 
     "html/portal.apps.upenn.edu-0.html": {
         "url": "https://portal.apps.upenn.edu/penn_portal/view.php", 
         "types": [
@@ -722,6 +764,35 @@
         "url": "https://portal.sgi-usa.org/portal/pinreg", 
         "types": [
             "r"
+        ]
+    }, 
+    "html/postr.hu-0.html": {
+        "url": "http://postr.hu/", 
+        "types": [
+            "s", 
+            "o"
+        ]
+    }, 
+    "html/postr.hu-1.html": {
+        "url": "http://postr.hu/regisztracio/elsolepes", 
+        "types": [
+            "X", 
+            "r", 
+            "l", 
+            "l", 
+            "l", 
+            "l"
+        ]
+    }, 
+    "html/postr.hu-2.html": {
+        "url": "http://postr.hu/belepes/", 
+        "types": [
+            "X", 
+            "l", 
+            "X", 
+            "X", 
+            "X", 
+            "X"
         ]
     }, 
     "html/premium.wpmudev.org-0.html": {
@@ -1401,6 +1472,29 @@
             "p"
         ]
     }, 
+    "html/www.familjeliv.se-0.html": {
+        "url": "http://www.familjeliv.se/", 
+        "types": [
+            "l", 
+            "s"
+        ]
+    }, 
+    "html/www.familjeliv.se-1.html": {
+        "url": "http://www.familjeliv.se/register", 
+        "types": [
+            "X", 
+            "X", 
+            "r"
+        ]
+    }, 
+    "html/www.familjeliv.se-2.html": {
+        "url": "http://www.familjeliv.se/password", 
+        "types": [
+            "l", 
+            "s", 
+            "p"
+        ]
+    }, 
     "html/www.farodevigo.es-0.html": {
         "url": "http://www.farodevigo.es/", 
         "types": [
@@ -1431,6 +1525,12 @@
             "s"
         ]
     }, 
+    "html/www.forsakringskassan.se-0.html": {
+        "url": "http://www.forsakringskassan.se/privatpers/!ut/p/a1/04_Sj9CPykssy0xPLMnMz0vMAfGjzOItjAx8nZwMHQ0sHM0MDTwNPUIMA_2cgly8TYEKIoEKDHAARwNC-sP1o8BK8JhQkBthkO6oqAgATOTWZw!!/dl5/d5/L2dBISEvZ0FBIS9nQSEh/", 
+        "types": [
+            "s"
+        ]
+    }, 
     "html/www.gardenstew.com-0.html": {
         "url": "http://www.gardenstew.com/", 
         "types": [
@@ -1455,6 +1555,18 @@
         "types": [
             "s", 
             "l"
+        ]
+    }, 
+    "html/www.gratka.pl-0.html": {
+        "url": "http://www.gratka.pl/", 
+        "types": [
+            "s"
+        ]
+    }, 
+    "html/www.gratka.pl-1.html": {
+        "url": "https://www.gratka.pl/konto/rejestracja/?url_powrotu=http://www.gratka.pl/profil/logowanie", 
+        "types": [
+            "r"
         ]
     }, 
     "html/www.hautelook.com-0.html": {
@@ -1872,6 +1984,46 @@
             "p"
         ]
     }, 
+    "html/www.olcsobbat.hu-0.html": {
+        "url": "http://www.olcsobbat.hu/", 
+        "types": [
+            "s", 
+            "o", 
+            "m"
+        ]
+    }, 
+    "html/www.olcsobbat.hu-1.html": {
+        "url": "http://www.olcsobbat.hu/termek/dps_titan_8_wi_fi_4gb-534e01528e16d53c3a000322/", 
+        "types": [
+            "X", 
+            "o", 
+            "m"
+        ]
+    }, 
+    "html/www.olcsobbat.hu-2.html": {
+        "url": "http://www.olcsobbat.hu/regisztracio/", 
+        "types": [
+            "X", 
+            "r", 
+            "X"
+        ]
+    }, 
+    "html/www.olcsobbat.hu-3.html": {
+        "url": "http://www.olcsobbat.hu/belepes/", 
+        "types": [
+            "X", 
+            "l", 
+            "X"
+        ]
+    }, 
+    "html/www.olcsobbat.hu-4.html": {
+        "url": "http://www.olcsobbat.hu/jelszo_elkuldes/?url=%2Fbelepes%2F", 
+        "types": [
+            "X", 
+            "p", 
+            "X"
+        ]
+    }, 
     "html/www.orbitz.com-0.html": {
         "url": "http://www.orbitz.com/", 
         "types": [
@@ -2225,6 +2377,31 @@
             "s"
         ]
     }, 
+    "html/www.unipd.it-0.html": {
+        "url": "http://www.unipd.it/", 
+        "types": [
+            "s"
+        ]
+    }, 
+    "html/www.unito.it-0.html": {
+        "url": "http://www.unito.it/", 
+        "types": [
+            "s"
+        ]
+    }, 
+    "html/www.verajohn.com-0.html": {
+        "url": "https://www.verajohn.com/", 
+        "types": [
+            "l"
+        ]
+    }, 
+    "html/www.verajohn.com-1.html": {
+        "url": "https://www.verajohn.com/password", 
+        "types": [
+            "l", 
+            "p"
+        ]
+    }, 
     "html/www.walldecorandhomeaccents.com-0.html": {
         "url": "http://www.walldecorandhomeaccents.com/", 
         "types": [
@@ -2338,6 +2515,37 @@
         "url": "http://yellowdeli.com/guest-book-oneonta/addpost", 
         "types": [
             "c"
+        ]
+    }, 
+    "html/zadane.pl-0.html": {
+        "url": "http://zadane.pl/", 
+        "types": [
+            "s"
+        ]
+    }, 
+    "html/zadane.pl-1.html": {
+        "url": "http://zadane.pl/login?entry=2&return=%2F", 
+        "types": [
+            "l"
+        ]
+    }, 
+    "html/zadane.pl-2.html": {
+        "url": "http://zadane.pl/signup?return=%2F&entry=2", 
+        "types": [
+            "r"
+        ]
+    }, 
+    "html/zadane.pl-3.html": {
+        "url": "http://zadane.pl/user/reset_password", 
+        "types": [
+            "X", 
+            "p"
+        ]
+    }, 
+    "html/zadane.pl-4.html": {
+        "url": "http://zadane.pl/question/add?entry=1610", 
+        "types": [
+            "o"
         ]
     }
 }

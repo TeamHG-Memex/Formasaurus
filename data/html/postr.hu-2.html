@@ -1,0 +1,311 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>Postr</title><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Content-Language" content="hu-HU" /><link href="/images/favicon.ico" rel="favicon" />
+<link href="/stylesheets/openid/openid.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/fonts.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/global.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/publicglobal.css" media="screen" rel="stylesheet" type="text/css" />
+<!--[if IE 6]> <link href="/stylesheets/ie6.css" media="screen" rel="stylesheet" type="text/css" /><![endif]-->
+<!--[if IE 7]> <link href="/stylesheets/ie7.css" media="screen" rel="stylesheet" type="text/css" /><![endif]--><script type="text/javascript" src="/js/jquery.js"></script>
+<script type="text/javascript" src="/js/openid/openid-jquery.js"></script>
+<script type="text/javascript" src="/js/openid/openid-hu.js"></script>
+<script type="text/javascript" src="/js/cookie/cookie.js"></script>
+<script type="text/javascript" src="/js/popup/popup.js"></script>
+<script type="text/javascript" src="/js/webaudit/webaudit.js"></script>
+<meta name="google-site-verification" content="UjA3FHxPbHW7sHwX11crOXy9OPKbqR-Ujj7hEjB7hZ0" />
+<!-- blogmain + post + profile + tag + postr 
+
+-->
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-18947963-1']);
+    _gaq.push(['_setDomainName', '.postr.hu']);
+    _gaq.push(['_setAllowLinker', true]);
+    
+    
+    _gaq.push(['_setCustomVar', 1, 'pagetype', 'blogetc', 3]);
+    _gaq.push(['_setCustomVar', 3, 'loggedin', '0', 3]);
+    _gaq.push('_setCustomVar', 4, 'device', 'web', 3);
+        
+    _gaq.push(['_trackPageview']);
+    
+    (function() {
+        var ga = document.createElement('script');
+        ga.type = 'text/javascript';
+        ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? ' https://ssl' : ' http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+</head>
+<body>
+<!--<div>public layout</div>-->
+    <div id="wrapper">
+        <!-- Default header -->
+    <div id="header">
+        <div id="header_top">
+            <div id="logo">
+                                <a href="http://postr.hu/"><img src="/images/postr_logo.jpg" alt="Post.r"/></a>
+                            </div>
+            <div id="search">
+                <form id="frm_new_blog" name="frm_new_blog" method="get" action="http://postr.hu/">                <input type="text" name="keres" id="keres" value="" class="search_text" />                <input type="submit" value="Keresés" class="search_submit" />
+    			    			</form>
+            </div>
+        </div>
+        <div id="header_bottom">
+                            <div id="tags_feature" class="left">
+                    <ul>
+                                                                    </ul>
+                </div>
+
+                <div id="login" class="right">
+                                            <a href="http://postr.hu/regisztracio" class="button_blue"><span>Regisztráció</span></a>
+                        <a href="http://postr.hu/belepes/?ref=postr.hu%2Fbelepes%2F" class="button_gray"><span>Belépés</span></a>
+                                        <div class="clear"></div>
+                </div>
+                    </div>
+    </div>
+    <!-- Default header end -->
+    
+    <div id="container">    
+    <div id="content"><script>
+
+	function iwiwHelpOn(id) {
+		document.getElementById(id).style.display = 'block';
+	}
+	function iwiwHelpOff(id) {
+		document.getElementById(id).style.display = 'none';
+	}
+   
+    function iwiwOffAlert() {
+		alert("Kedves Felhasználónk!\nJúnius 30-án az IWIW bezárta kapuit, így ezentúl az iwiwes belépés nem működik a Postr-en. Ha ilyet használsz és eddig nem kötötted össze más belépéssel, most nem tudsz belépni hozzánk. De ne ess kétségbe, hanem írd meg nekünk a support@postr.hu címre az iwiwes belépéshez használt email címedet, és segítünk!");
+	}
+	
+	function miezAlert() {
+        showPopup();
+    }
+
+    function checkRememberMe()
+    {
+        var u = "https://belepes.t-online.hu/auth.html";
+		if ($('#rememberMe').is(':checked')) {
+			//var cookieName = Origo_Cookie::issetCookie()
+			$.cookie("cplrm", '1', { expires: 3600, path: '/' });
+		} else {
+			$.cookie("cplrm", '1', { expires: -1, path: '/' });
+		}
+		$('#login_form_u123').attr('action',u);
+        setTimeout( function(){
+            $('#login_form_u123').submit();
+        }, 100);
+    }
+    function checkRememberMeConnect(formId)
+    {
+		if ($('#rememberMe').is(':checked')) {
+			//var cookieName = Origo_Cookie::issetCookie()
+			$.cookie("cplrm", '1', { expires: 3600, path: '/' });
+		} else {
+			$.cookie("cplrm", '1', { expires: -1, path: '/' });
+		}
+        setTimeout( function(){
+            $('#'+formId).submit();
+        }, 100);
+		return false;
+    }
+
+    function checkRememberMeIwiw()
+    {
+        var u = "/belepes/iwiwconnect";
+		if ($('#rememberMe').is(':checked')) {
+			//var cookieName = Origo_Cookie::issetCookie()
+			$.cookie("cplrm", '1', { expires: 3600, path: '/' });
+		} else {
+			$.cookie("cplrm", '1', { expires: -1, path: '/' });
+		}
+		$('#loginIwiw').attr('href',u);
+        $('#login_form_u123').click();
+    }
+
+	function setFocus()
+	{
+		 document.getElementById("user").focus();
+	}
+	
+	window.onload = setFocus;
+	
+</script>
+<div class="box_border_outer">
+    <div class="box_border_inner">
+        <div class="box_content">
+    
+            <div id="login_form">
+                <div class="loginbox_tl">
+                	<div class="loginbox_tr">
+                		<div class="loginbox_title">Belépés</div>
+                		<div class="login_remember">
+		            		<input type="hidden" name="rememberMe" value="0" /><input type="checkbox" name="rememberMe" id="rememberMe" value="1" />		            		<label for="rememberMe">Emlékezz rám!</label>
+                    	</div>
+                	</div>
+                </div>
+                <div class="loginbox_l"><div class="loginbox_r">
+                    <div class="left">
+                                                <form id="login_form_u123" name="login_form_u123" method="post" action="javascript:checkRememberMe();" class="form">                            <input type="hidden" name="cmd" value="plusauth" id="cmd" />                            <input type="hidden" name=".formId" value="commands.PlusAuth" id=".formId" />                            <input type="hidden" name="backurl" value="http://postr.hu/beleptetes/" id="backurl" />                            <input type="hidden" name="remoteform" value="1" id="remoteform" />                            
+                            <div class="form_row login_form_row">
+                                <label>&nbsp;</label>
+                                <div class="form_text_element">
+									<div class="ul_text">Használd meglévő <b>postr</b>, <b>[freemail]</b> vagy <b>Videa</b> regisztrációdat!</div>
+								</div>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="form_row">
+                                <label>E-mail cím:</label>
+                                <input type="text" name="user" id="user" value="" class="text" />                                <div class="clear"></div>
+                            </div>
+                            <div class="form_row">
+                                <label>Jelszó:</label>
+                                <input type="password" name="pass" id="pass" value="" class="text" />                                <div class="clear"></div>
+                            </div>
+                            <div class="form_row login_form_row">
+                                <label>&nbsp;</label>
+                                                                <div class="login_link_element">
+									<div class="pwd-reminder"><a href="https://belepes.t-online.hu/auth.html?cmd=pwdrem&skin=origo">Elfelejtett jelszó</a></div>
+								</div>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="form_row login_form_row_submit">
+                                <label>&nbsp;</label>
+                                <a href="#" onclick="javascript:$('#submitLogin').click()" class="button_blue"><span>Belépés</span></a>
+                                <a href="#" onclick="history.go(-1)" class="button_gray"><span>Mégsem</span></a>
+                                <div class="clear"></div>
+                            </div>
+                            <input type="submit" name="submitLogin" id="submitLogin" value="Belépés" class="hidden" />                        </form>
+                    </div>
+                    <div class="clear"></div>
+                </div></div>
+                <div class="loginbox_2">
+                <div class="loginbox_title_log">Belépés más szolgáltatásokban élő regisztrációval</div>
+                <div class="form_row login_form_row">
+					<label>&nbsp;</label>
+					<div class="form_text_element">
+						<div class="ul_text">Létező regisztrációdat használhatod a belépésre! <a onClick="miezAlert()" href="#">[Mi ez?]</a></div>
+					</div>
+					<div class="clear"></div>
+                </div>
+                <div class="form_row login_form_row">
+						<div style="clear:both;"/>
+
+						<!-- Google -->
+
+						                        <form action="/belepes/openid/login/" method="get" id="openid_form_google" onClick="return checkRememberMeConnect('openid_form_google');">
+                            <input id="openid_identifier" name="openid_identifier" type="hidden" value="https://www.google.com/accounts/o8/id">
+                                                        <a class="openid_large_btn" style="background: url(/images/openid/openid-providers-hu.png) repeat scroll 0px 0px rgb(255, 255, 255);" title="Belépés" href="javascript:$('#openid_form_google').submit();"></a>
+                        </form>
+
+						<!-- Twitter -->
+
+						                        <form action="/belepes/openid/login/" method="get" id="openid_form_twitter" onClick="return checkRememberMeConnect('openid_form_twitter');">
+                            <input id="openid_identifier" name="openid_identifier" type="hidden" value="https://www.twitter.com">
+                                                        <a class="openid_large_btn" style="background: url(/images/openid/openid-providers-hu.png) repeat scroll -403px 0px rgb(255, 255, 255);" title="Belépés" href="javascript:$('#openid_form_twitter').submit();"></a>
+                        </form>
+
+						<!-- Facebook -->
+
+						                        <form action="/belepes/openid/login/" method="get" id="openid_form_facebook" onClick="return checkRememberMeConnect('openid_form_facebook');">
+                            <input id="openid_identifier" name="openid_identifier" type="hidden" value="https://www.facebook.com">
+                                                        <a class="openid_large_btn" style="background: url(/images/openid/openid-providers-hu.png) repeat scroll -303px -3px rgb(255, 255, 255);" title="Belépés" href="javascript:$('#openid_form_facebook').submit();"></a>
+                        </form>
+
+						<!-- Yahoo -->
+
+						                        <form action="/belepes/openid/login/" method="get" id="openid_form_yahoo" onClick="return checkRememberMeConnect('openid_form_yahoo');">
+                            <input id="openid_identifier" name="openid_identifier" type="hidden" value="http://me.yahoo.com/">
+                                                        <a class="openid_large_btn" style="background: url(/images/openid/openid-providers-hu.png) repeat scroll -100px 0px rgb(255, 255, 255);" title="Belépés" href="javascript:$('#openid_form_yahoo').submit();"></a>
+                        </form>
+
+						<!-- IWIW -->
+
+												<a id="loginIwiw" onclick="javascript:iwiwHelpOn('iwiwhelp');" href="javascript:void();" class="openid_large_btn" style="background: url(/images/openid/openid-providers-hu.png) repeat scroll -513px 0px rgb(255, 255, 255);" title="Belépés"></a>
+
+                        <div style="clear:both;"/></div>
+						<div id="iwiwhelp" class="iwiwhelp">
+							<div class="iwiwhelp_tab"></div>
+							<div class="iwiwhelp_body">
+								<strong>Kedves Felhasználónk!</strong><br/><br/>
+								Június 30-án az <strong>IWIW bezárta kapuit</strong>, így ezentúl az iwiwes belépés nem működik a Postr-en. Ha ilyet használsz és eddig nem kötötted össze más belépéssel, most nem tudsz belépni hozzánk. De ne ess kétségbe, hanem írd meg nekünk a <a href="mailto:support@postr.hu">support@postr.hu</a> címre az iwiwes belépéshez használt email címedet, és segítünk!
+								<br/><br/>
+								<div align="right"><a onclick="javascript:iwiwHelpOff('iwiwhelp');" href="javascript:void();">Bezár</a></div>
+							</div>
+						</div>
+						
+						
+						
+                </div>
+                </div>
+
+
+            </div>
+
+
+                <div class="loginbox_bl">
+                	<div class="loginbox_br">
+
+                	</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="popup" style="display:none;">
+	<div class="positioner">
+		<a href="javascript:void(0)" onclick="return false;" id="closePopup"><span>Bezár</span></a>
+		<p>Ha van létező regisztrációd ezekben a szolgáltatásokban, ezt használva a postrre is be tudsz lépni.<br /> A postr csak a beléptetésre használja a regisztrációdat, soha nem jeleníti meg publikus felületen, hogy ki vagy ezekben a szolgáltatásokban.</p>
+	</div>
+</div>
+
+</div>
+    
+       <div class="clear"></div>
+    <div id="footer">
+        <div class="left">
+            <div class="footer_links">
+                <a href="http://www.origo.hu/irjon/index.html?refmanid=1&msgrefpg=CIMLAP&msgsubject=origo+Cimlap">Írjon nekünk!</a>
+                | <a href="http://www.origo.hu/adhouse/index.html">Médiaajánlat</a>
+                | <a href="http://www.origo.hu/impresszum/">Impresszum</a>
+                | <a href="http://www.origo.hu/privacy/20120102-postradatkezelesszabalyzat.html">Adatvédelem</a>
+				| <a href="http://www.origo.hu/privacy/20140207-postr-felhasznalasi-feltetelek.html">Felhasználási feltételek</a>
+                | <a href="/help/microblog-vs-blog">Segítség</a>
+                            </div>
+            
+            A postr kiadója az Origo Zrt. © Minden jog fenntartva.
+        </div>
+        
+        <div class="right">
+            <a href="http://corp.origo.hu"><img src="/images/corp_origo_logo.gif" alt="corp. [origo]"/></a>
+        </div>
+    </div>
+    <div class="clear"></div>
+</div>
+    <!-- (C)2000-2010 Gemius SA - gemiusAudience / postr_hu / postr_cimlap -->
+    <script type="text/javascript">
+    <!--//--><![CDATA[//><!--
+    var pp_gemius_identifier = new String('nd.lDzsoic1burxlezFPnPUI.fOdPOMImfr4a25PM6T.h7');
+    //--><!]]>
+    </script>
+    <script type="text/javascript" src="http://www.origo.hu/images/kozos/gemius/xgemius.js"></script>
+    
+    <SCRIPT language="JavaScript">
+    <!--
+    document.write('<!-- Medi�n WebAudit origo Postr c�mlap 1/2 --><img style="position:absolute;top:-100px;left:-100px" src="http://audit.median.hu/cgi-bin/track.cgi?uc=12755508907364&dc=1&ui='+same+'" width="1" height="1">');
+    //-->
+    </SCRIPT>
+    <NOSCRIPT>
+    <!-- Medi�n WebAudit origo Postr c�mlap 1/2 -->
+    <img style="position:absolute;top:-100px;left:-100px" src="http://audit.median.hu/cgi-bin/track.cgi?uc=12755508907364&dc=1" width="1" height="1">
+    </NOSCRIPT>
+    </body>
+</html>

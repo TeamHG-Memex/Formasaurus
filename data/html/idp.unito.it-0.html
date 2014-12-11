@@ -1,0 +1,406 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- hostname: idp03 -->
+
+
+<!-- 
+	Pagina principale di autenticazione.
+	
+	Offre all'utente la possibilità di scegliere quale
+	meccanismo di autenticazione utilizzare:
+		- Username/Password
+		- Client Certificate (Smart-card)
+		
+	Una volta scelto il meccanismo, la pagina esegue il submit
+	della form corrispondente. 
+	
+	*Nel caso in cui l'utente scelga l'autenticazione via client-certificate 
+	è importante presentare	un messaggio di notifica che inviti 
+	l'utente a inserire la smart-card nel lettore prima di procedere.
+	Un eventuale errore SSL non può essere gestito.*
+	
+	La pagina esegue automaticamente il submit della forma di autenticazione
+	in presenza del Cookie "AUTH_METHOD_CLIENT_CERT". Questa situazione
+	si verifica quando l'utente, in un precedente tentativo, ha provato
+	ad auntenticarsi attraverso la sua smart-card che però non era
+	stata ancora abilitata.
+	
+	Attraverso la stessa pagina vengono presentati eventuali messaggi
+	di notifica come:
+	
+		- messaggio di errore per certificato scaduto
+		- messaggio di errore per certificato revocato
+		- messaggio di errore per username e password non validi
+	
+ -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+
+	<head>
+		<title>u n i t o . i t - light page - accedi al portale di ateneo</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+		
+		<link type="text/css" title="normal" rel="stylesheet" href="/idp/css_normal.css" media="screen" />
+		<link title="solotesto" href="/idp/css_solotesto.css" type="text/css" rel="alternate stylesheet" media="screen" />
+		<link title="print" href="/idp/css_print.css" type="text/css" rel="stylesheet" media="print" />
+		<script type="text/javascript">
+			function UserIdTrasformation(j_username) {
+				if (j_username.indexOf(".")>=0) {
+					// contiene almeno un punto
+					return j_username;
+				} else {
+					var espressione = new RegExp("[0-9]");
+					if (j_username.match(espressione)) {
+					    // contiene almeno una cifra
+					    return j_username + "@studenti.unito.it";
+					} else {
+					    // non contiene cifre
+					    return j_username;
+					}			
+				}
+			}
+		</script>
+		<script type="text/javascript">
+		
+		
+		
+			<!--
+			function redirect()
+			{
+			   var FORM_ID = "CERT_FORM";			   
+			   var e = document.getElementById(FORM_ID);			   
+			   if(! e) {
+			      throw new Error('"CERT_FORM" element id not found');
+			   }
+			   e.submit();
+			}
+
+			-->		
+		</script>
+<style type="text/css">
+* html #box_destra_2 .ricordami {
+margin-top:-15px;
+}
+*:first-child+html #box_destra_2 .ricordami {
+margin-top:-10px;
+}
+</style>
+	</head>
+
+
+	
+		<body>    
+    
+	
+
+<div id="menutop"> 
+	<ul>
+		<li>
+			<a href="http://www.unito.it/feeds-avvisi.xml"><img src="/idp/images/rss-feed_sm.gif" alt="feed rss" width="14" /></a>
+			<a href="http://www.unito.it/avvisi">Avvisi</a>
+		</li>
+		<li>
+			<a href="http://www.unito.it/feeds-eventi.xml"><img src="/idp/images/rss-feed_sm.gif" alt="feed rss"  width="14" /></a> 
+			<a href="http://www.unito.it/eventi">Eventi</a>
+		</li>
+		<li><a href="http://www.unito.it/servizi/servizi-line/tutti-i-servizi-line">Tutti i servizi online</a></li>
+		<li><a href="https://mail-edu.unito.it/" onkeypress="if (isReturn(event)) {window.open(this.href);return false;}" onclick="window.open(this.href);return false" title="Link a sito esterno - La pagina si apre in una nuova finestra">Webmail studenti</a></li>
+		<li><a href="http://www.mail.unito.it/" onkeypress="if (isReturn(event)) {window.open(this.href);return false;}" onclick="window.open(this.href);return false" title="Link a sito esterno - La pagina si apre in una nuova finestra">Webmail personale</a></li>
+		<li><a href="http://www.unito.it/intranet" >Intranet</a></li>
+		<li style="border: 0pt none ;"><a href="http://www.unito.it">Vai a www.unito.it</a></li>
+	</ul>
+</div>
+<div id="pagina">
+<!-- INIZIO HEADER-->
+	<div class="hidden">
+		<h1>UNITO.it</h1>
+	</div> 
+	<!-- inizio logo -->
+	<div id="logo">
+		<div id="top_destra">				
+			<span id="primo" class="data">
+			</span> 
+		</div>
+		<a href="http://www.unito.it"><img src="/idp/images/logounito_light4.jpg" alt="logo unito" width="368" height="79" /></a> 
+	</div>
+<!-- fine logo -->
+<!-- inizio cont box -->
+<div id="contenitorebox">
+
+	<div id="alert" style="font-size: 1.1em; display: none; background-color: #FAD163; padding: 3px 15px 3px 10px">
+	</div>
+
+<script type="text/javascript">
+var BrowserDetect = {
+	init: function () {
+		this.browser = this.searchString(this.dataBrowser) || "An unknown browser";
+		this.version = this.searchVersion(navigator.userAgent)
+			|| this.searchVersion(navigator.appVersion)
+			|| "an unknown version";
+		this.OS = this.searchString(this.dataOS) || "an unknown OS";
+	},
+	searchString: function (data) {
+		for (var i=0;i<data.length;i++)	{
+			var dataString = data[i].string;
+			var dataProp = data[i].prop;
+			this.versionSearchString = data[i].versionSearch || data[i].identity;
+			if (dataString) {
+				if (dataString.indexOf(data[i].subString) != -1)
+					return data[i].identity;
+			}
+			else if (dataProp)
+				return data[i].identity;
+		}
+	},
+	searchVersion: function (dataString) {
+		var index = dataString.indexOf(this.versionSearchString);
+		if (index == -1) return;
+		return parseFloat(dataString.substring(index+this.versionSearchString.length+1));
+	},
+	dataBrowser: [
+		{ 	string: navigator.userAgent,
+			subString: "OmniWeb",
+			versionSearch: "OmniWeb/",
+			identity: "OmniWeb"
+		},
+		{
+			string: navigator.vendor,
+			subString: "Apple",
+			identity: "Safari"
+		},
+		{
+			prop: window.opera,
+			identity: "Opera"
+		},
+		{
+			string: navigator.vendor,
+			subString: "iCab",
+			identity: "iCab"
+		},
+		{
+			string: navigator.vendor,
+			subString: "KDE",
+			identity: "Konqueror"
+		},
+		{
+			string: navigator.userAgent,
+			subString: "Firefox",
+			identity: "Firefox"
+		},
+		{
+			string: navigator.vendor,
+			subString: "Camino",
+			identity: "Camino"
+		},
+		{		// for newer Netscapes (6+)
+			string: navigator.userAgent,
+			subString: "Netscape",
+			identity: "Netscape"
+		},
+		{
+			string: navigator.userAgent,
+			subString: "MSIE",
+			identity: "Explorer",
+			versionSearch: "MSIE"
+		},
+		{
+			string: navigator.userAgent,
+			subString: "Gecko",
+			identity: "Mozilla",
+			versionSearch: "rv"
+		},
+		{ 		// for older Netscapes (4-)
+			string: navigator.userAgent,
+			subString: "Mozilla",
+			identity: "Netscape",
+			versionSearch: "Mozilla"
+		}
+	],
+	dataOS : [
+		{
+			string: navigator.platform,
+			subString: "Win",
+			identity: "Windows"
+		},
+		{
+			string: navigator.platform,
+			subString: "Mac",
+			identity: "Mac"
+		},
+		{
+			string: navigator.platform,
+			subString: "Linux",
+			identity: "Linux"
+		}
+	]
+
+};
+BrowserDetect.init();
+if (BrowserDetect.browser=="Konqueror") {
+	document.getElementById('alert').innerHTML = "Non &egrave; possibile accedere e navigare il MyPortal con Konqueror. Consultare l'help per la lista dei browsers compatibili.";	
+	document.getElementById('alert').style.display = "block"
+}
+
+function alertLogin() {
+	if (BrowserDetect.browser=="Explorer") {
+		document.getElementById('alertLog').style.display='block';
+	}
+}
+</script>
+
+	<div id="box_destra_2">
+	
+	<!-- MESSAGE BLOCK -->
+	<div class="accesso_my" style="color: #970102; font-size: 12px;text-decoration: none; text-transform: uppercase;margin-top:10px;">accedi a myunito</div>
+	
+	
+	
+	<!-- FINE - MESSAGE BLOCK -->
+	
+	
+		<!-- Form per Username Password -->
+		<div id="up">
+
+
+    <form onSubmit="this.j_username.value = this.txt_username.value;" action="/idp/Authn/Multilogin" method="post">
+
+
+
+		<div id="forr" class="box_login_2">
+				
+			<input name="_authMethod" type="hidden" value="auth_method_user_pass" />
+			<label class="allinea" for="Utente">Utente</label> 
+			<input name="txt_username" type="text" tabindex="1" class="text" />
+			<input name="j_username" class="text" type="hidden" tabindex="1" />
+			<a href="http://www.unito.it/servizi/servizi-line/istruzioni-e-supporto"> <span style="background-color:#B22222; border:1px solid #FFFFFF; color:#FFFFFF; cursor:pointer;  font-size:1.2em; margin:0px; min-width:45px; padding:1px; text-align:center; vertical-align:text-bottom;">&nbsp;?&nbsp;</span></a>
+			<br />
+			<label for="Password">Password</label>
+			<input name="j_password" type="password" tabindex="2" class="text" />
+			<input type="submit" value="Login" class="button" tabindex="3" />
+			
+		        
+			
+				<div style="display: none;color: red;font-weight:bold" id="alertLog">ATTENZIONE, accertati di aver configurato i cookie!</div>
+			</div>
+			</form>
+		</div>
+<!-- // -->
+
+			<!-- Form per Smart Card (Client Certifiacate) -->
+		<div id="cc" >
+			<form id="CERT_FORM" name="CERT_FORM" action="/idp/Authn/MultiloginClientCert" method="post" >
+				<input name="_authMethod" type="hidden" value="auth_method_client_cert" />
+			</form>
+
+
+		</div>
+		
+		<div class="ricordami">
+					<a href="#" onclick="alert('Assicurati che la Smart Card sia inserita prima di procedere'); document.getElementById('CERT_FORM').submit()">Accedi con Smart-Card</a>
+					<br /><br />
+					<div style="border-top: 1px #deadae solid;width:267px"><br />
+		<a href="http://my.unito.it/accessorapido/resetpassword" title="Ricordami la password">Ricordami la password</a>
+		&nbsp;|&nbsp;
+		<a href="http://registrazione.unito.it" title="Registrati al portale">Registrati al portale</a>
+	</div>
+	<div style="margin-top:10px;"><a href="http://www.unito.it/servizi/servizi-line/istruzioni-e-supporto" title="Istruzioni e supporto">Istruzioni e supporto</a></div>
+		</div>
+		<!-- // -->
+		
+		
+
+		
+		
+		
+</div>
+		
+	
+	<div id="box_sinistra_2">
+		<div id="accesso">
+			<ul>
+			  <li><a href="http://www.unito.it/ateneo/strutture-e-sedi/scuole">scuole</a></li>
+			  <li><a href="http://www.unito.it/ateneo/strutture-e-sedi/dipartimenti">dipartimenti</a></li>
+			  <li><a href="http://www.unito.it/ateneo/strutture-e-sedi/biblioteche">biblioteche</a></li>
+			</ul>
+		</div>
+		<!-- inizio form ricerca -->
+		<div id="cercaMyunito_json" class="cercaMyunito">
+			<form id="cerca_form" method="get" action="www.unito.it/gsa/search/search">
+				<div id="Cerca">
+				<input type="hidden" name="rel" value="SRC" />
+				<input type="hidden" name="btnG" value="Cerca" />
+				<input type="hidden" name="entqr" value="0" />
+				<input type="hidden" name="ud" value="1" />
+				<input type="hidden" name="sort" value="date%3AD%3AL%3Ad1" />
+				<input type="hidden" name="output" value="xml_no_dtd" />
+				<input type="hidden" name="oe" value="ISO-8859-1" />
+				<input type="hidden" name="ie" value="ISO-8859-1" />
+				<input type="hidden" name="client" value="portale_uni_to_fe_ext" />
+				<input type="hidden" name="proxystylesheet" value="portale_uni_to_fe_ext" />
+				<input type="hidden" name="site" value="totAteneo" />
+				<input type="hidden" name="numgm" value="5">
+		
+				<span class="hidden"><label for="q">Chiave di ricerca:</label></span><img src="/idp/images/go-to.gif" alt="GO-TO: il motore di ricerca di Unito.it" /><input class="text"  type="text" maxlength="120" name="q" id="q" value="" onfocus="if (this.value=='cognome o altro argomento di interesse') {this.value=''; this.style.color='black';}" onblur="if (this.value=='') {this.style.color='black'; this.value='cognome o altro argomento di interesse'};" /><script type="text/javascript">document.getElementById('q').style.color='black'; document.getElementById('q').value='cognome o altro argomento di interesse';</script>
+		
+				<input name="Submit" type="submit" class="button" value="Cerca" onclick="submitSearch();return false;" onkeypress="if (isReturn(event)) {submitSearch();return false;}" /></div>
+		<div><input type="hidden" name="BSD_FORM_REFERER" value="index" /></div>
+		</form>
+				<span id="cercalink"><a href="http://www.unito.it/ricerca_avanzata">Ricerca Avanzata</a>&nbsp;&nbsp; 
+				<a href="https://www.serviziweb.unito.it/rubrica/rubricaRicerca.php">Cerca per Struttura</a> &nbsp;&nbsp;
+				<a href="http://www.unito.it/maps/mappa_strutture.html">Mappa Strutture</a></span>
+		</div>
+		</div>
+	
+	
+</div>
+<!-- fine cont box -->
+
+<!--inizio menu footer -->
+
+<!--fine menu footer -->
+
+
+
+</div> <!--  CHIUDE ID "PAGINA"  -->
+<div id="piede"> 
+   
+	  <h2 class="hidden">Fine pagina&nbsp;</h2>
+			<div>
+				<ul>
+				        <li class="separatore_footer"><a href="http://www.unito.it/riferimenti-contatti-e-pec" title="">Riferimenti, contatti, PEC, reclami e segnalazioni</a></li>
+				        <li class="separatore_footer"><a href="http://www.unito.it/note-legali" title="Note Legali">Note legali</a></li>
+ 		                <li class="separatore_footer"><a class="link_int" href="http://www.unito.it/privacy" title="Privacy">Privacy</a></li>
+				        <li class="separatore_footer"><a href="http://www.unito.it/accessibilita" title="">Accessibilit&agrave;</a></li>
+				       <li class="cineca"><a href="http://www.cineca.it"  onclick="window.open(this.href);return false" onkeypress="if (isReturn(event)) {window.open(this.href);return false;}" title="Link esterno - La pagina si apre in una nuova finestra">In 
+            collaborazione con <img src="/idp/images/cineca.gif" width="67" height="17" alt="Cineca" /> 
+            <span class="hidden">Cineca</span></a></li>
+				</ul>
+			</div>
+		</div>
+<div id="piede2">Universit&agrave; degli Studi di Torino - Via Verdi, 8 - 10124 Torino 
+  - Centralino +39 011 6706111<br />
+  P.I. 02099550010 - C.F. 80088230018 - IBAN IT07N0306909217100000046985<br/>
+  <br /></div> 
+	</div> <!-- CHIUDE  "AUX"-->
+  <div> <span class="hidden_conpadding">[<a href="#contenuto" title="link all'inizio del contenuto della pagina" >Torna 
+    all'inizio del contenuto</a>]</span> <span class="hidden_conpadding">[<a href="#sezione_menu" title="link alla sezione dei menu">Torna 
+    al menu di navigazione</a>]</span> </div>
+
+</body>
+</html>
+
+
+
+
