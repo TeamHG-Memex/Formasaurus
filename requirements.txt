@@ -2,5 +2,12 @@ lxml
 docopt
 tqdm
 tldextract
+
+# 0.15 is need for make_pipeline and make_union functions;
+# it is easy enough to support earlier scikit-learn versions
+# by using just Pipeline and FeatureUnion.
+scikit-learn >= 0.15
+
+# "formtype/tool.py evaluate" command uses pandas for pretty printing;
+# if you don't plan to contribute to formtype library pandas is not needed.
 pandas
-scikit-learn
