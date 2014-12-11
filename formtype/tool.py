@@ -28,7 +28,7 @@ Usage:
 
 Options:
     --data-folder <path>       path to the data folder [default: data]
-    --test-size <ratio>        ratio of data to use for evaluation, from 0 to 1.0 [default: 0.3]
+    --test-size <ratio>        ratio of data to use for evaluation, from 0 to 1.0 [default: 0.25]
     --cv <n_folds>             use <n_folds> for cross-validation [default: 10]
     --threshold <probability>  don't display predictions with probability below this threshold [default: 0.01]
 
