@@ -129,11 +129,33 @@ class FormUrl(BaseFormFeatureExtractor):
 
 
 class FormCss(BaseFormFeatureExtractor):
-    """ For CSS classes and ID """
+    """ Form CSS classes and ID """
     def get_form_features(self, form):
         return " ".join([
             form.get("class", ""),
             form.get("id", ""),
+        ])
+
+
+class FormInputTitle(BaseFormFeatureExtractor):
+    """ <input title=...> values """
+    def get_form_features(self, form):
+        return " ".join(form.xpath('.//input[not(@type="hidden")]/@title'))
+
+
+class FormLabelText(BaseFormFeatureExtractor):
+    """ <label> values """
+    def get_form_features(self, form):
+        return " ".join(form.xpath('.//label//text()'))
+
+
+class FormInputCss(BaseFormFeatureExtractor):
+    """ CSS classes and IDs of <input> elemnts """
+    def get_form_features(self, form):
+        inputs = form.xpath('.//input[not(@type="hidden")]')
+        return " ".join([
+            "%s %s" % (inp.get("class", ""), inp.get("id", ""))
+            for inp in inputs
         ])
 
 
