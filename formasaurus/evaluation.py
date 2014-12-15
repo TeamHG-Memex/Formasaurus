@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-This module provides helper functions for evaluating formtype quality.
+This module provides helper functions for evaluating formasaurus quality.
 """
 from __future__ import absolute_import
 

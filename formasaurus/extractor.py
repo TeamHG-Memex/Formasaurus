@@ -2,8 +2,8 @@
 from __future__ import absolute_import
 
 from sklearn.externals import joblib
-from formtype.storage import Storage
-from formtype.model import get_model
+from formasaurus.storage import Storage
+from formasaurus.model import get_model
 
 
 class FormExtractor(object):

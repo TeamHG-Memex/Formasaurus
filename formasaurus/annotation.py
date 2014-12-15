@@ -10,7 +10,7 @@ import urllib2
 import lxml.html
 from lxml.html.clean import Cleaner
 
-from formtype.storage import Storage, FORM_TYPES, load_html, FORM_TYPES_INV
+from formasaurus.storage import Storage, FORM_TYPES, load_html, FORM_TYPES_INV
 
 
 def annotate_forms(data_folder, url_argument):

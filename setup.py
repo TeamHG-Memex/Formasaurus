@@ -5,22 +5,22 @@ import os
 
 
 def get_version():
-    fn = os.path.join(os.path.dirname(__file__), "formtype", "__init__.py")
+    fn = os.path.join(os.path.dirname(__file__), "formasaurus", "__init__.py")
     with open(fn) as f:
         return re.findall("__version__ = '([\d\.]+)'", f.read())[0]
 
 
 setup(
-    name='formtype',
+    name='formasaurus',
     version=get_version(),
     author='Mikhail Korobov',
     author_email='kmike84@gmail.com',
     license='MIT license',
     long_description=open('README.rst').read(),
     description="HTML form type detector",
-    url='https://github.com/TeamHG-Memex/formtype',
+    url='https://github.com/TeamHG-Memex/Formasaurus',
     zip_safe=False,
-    packages=['formtype'],
+    packages=['formasaurus'],
     install_requires=["tqdm", "tldextract"],
     requires=["tqdm", "tldextract", "sklearn", "lxml"],
 

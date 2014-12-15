@@ -1,8 +1,8 @@
-========
-formtype
-========
+===========
+Formasaurus
+===========
 
-formtype is a Python package that tells you the type of an HTML form:
+Formasaurus is a Python package that tells you the type of an HTML form:
 is it a login, search, registration, password recovery, "join mailing list",
 contact form or something else. Under the hood it uses machine learning.
 
@@ -11,16 +11,16 @@ Getting Started
 
 1. Clone the repo and install all dependencies (see requirements.txt).
 
-2. Use ``formtype/tool.py`` command-line utility to train the extractor::
+2. Use ``formasaurus/tool.py`` command-line utility to train the extractor::
 
-       $ ./formtype/tool.py train ./myextractor.joblib
+       $ ./formasaurus/tool.py train ./myextractor.joblib
 
    The command above will create a ``myextractor.joblib`` file with
    extractor parameters.
 
-3. To quickly check how it works use ``formtype/tools.py run`` command::
+3. To quickly check how it works use ``formasaurus/tools.py run`` command::
 
-       $ ./formtype/tool.py run model.joblib 'http://google.com'
+       $ ./formasaurus/tool.py run model.joblib 'http://google.com'
 
    This command will download a webpage, display a cleaned up source code
    of its HTML forms and shows form types.
@@ -28,15 +28,15 @@ Getting Started
 Library Usage
 =============
 
-To use ``formtype`` as a library, first install it::
+To use Formasaurus as a library, first install it::
 
     $ python setup.py install
 
-Most features are provided by ``formtype.FormExtractor`` class.
+Most features are provided by ``formasaurus.FormExtractor`` class.
 To load the extractor, use ``FormExtractor.load`` method; pass a path
-to a file created by ``./formtype/tool.py train`` command:
+to a file created by ``./formasaurus/tool.py train`` command:
 
-    >>> from formtype import FormExtractor
+    >>> from formasaurus import FormExtractor
     >>> ex = FormExtractor.load("./myextractor.joblib")
 
 FormExtractor expects HTML files parsed by lxml as an input.
@@ -106,18 +106,18 @@ Contributing
 ============
 
 Source code and bug tracker are on github:
-https://github.com/TeamHG-Memex/formtype
+https://github.com/TeamHG-Memex/Formasaurus
 
 License is MIT.
 
 The easiest way to improve classification quality is to add more training
-examples. Use ``formtype/tool.py add`` command for that.
+examples. Use ``formasaurus/tool.py add`` command for that.
 
 For more info about the classification model check "notebooks/Model.ipynb"
 IPython notebook; some experience with machine learning is helpful
 if you want to improve the model.
 
-Currently ``formtype`` uses a linear classifier (Logistic Regression) and
+Currently Formasaurus uses a linear classifier (Logistic Regression) and
 features like counts of form elements of different types, whether a form is
 POST or GET, text on submit buttons, names of CSS classes and IDs,
 input labels, presence of certain substrings in URLs, etc.
@@ -125,7 +125,7 @@ input labels, presence of certain substrings in URLs, etc.
 To make the extractor understand a new type of form (e.g. "order" form
 or "forum navigation" form) it is necessary to check all forms that
 are marked as "other" in the existing dataset and change their type
-when needed, then check the extraction quality (``formtype/tool.py evaluate``
+when needed, then check the extraction quality (``formasaurus/tool.py evaluate``
 command or an IPython notebook could help) and improve the model if
 the quality is not satisfactory.
 

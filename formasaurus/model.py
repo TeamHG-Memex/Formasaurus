@@ -10,7 +10,7 @@ from sklearn.pipeline import make_pipeline, make_union
 from sklearn.linear_model import SGDClassifier, LogisticRegression
 from sklearn.svm import LinearSVC
 
-from formtype import features
+from formasaurus import features
 
 # a list of 3-tuples with default features: (feature_name, form_transformer, vectorizer)
 FEATURES = [

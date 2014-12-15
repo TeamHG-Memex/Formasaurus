@@ -39,16 +39,16 @@ from collections import Counter
 
 import docopt
 
-from formtype.annotation import (
+from formasaurus.annotation import (
     annotate_forms,
     check_annotated_data,
     load_data,
     print_form_html
 )
-from formtype.extractor import FormExtractor
-from formtype.storage import load_html, FORM_TYPES_INV, Storage
-from formtype import evaluation
-from formtype.model import get_model
+from formasaurus.extractor import FormExtractor
+from formasaurus.storage import load_html, FORM_TYPES_INV, Storage
+from formasaurus import evaluation
+from formasaurus.model import get_model
 
 
 def main():
