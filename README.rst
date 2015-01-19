@@ -20,7 +20,7 @@ Getting Started
 
 3. To quickly check how it works use ``formasaurus/tools.py run`` command::
 
-       $ ./formasaurus/tool.py run model.joblib 'http://google.com'
+       $ ./formasaurus/tool.py run myextractor.joblib 'http://google.com'
 
    This command will download a webpage, display a cleaned up source code
    of its HTML forms and shows form types.
@@ -113,9 +113,11 @@ License is MIT.
 The easiest way to improve classification quality is to add more training
 examples. Use ``formasaurus/tool.py add`` command for that.
 
-For more info about the classification model check "notebooks/Model.ipynb"
-IPython notebook; some experience with machine learning is helpful
-if you want to improve the model.
+For more info about the classification model check
+"notebooks/Model.ipynb" IPython notebook (see
+http://nbviewer.ipython.org/github/TeamHG-Memex/Formasaurus/blob/master/notebooks/Model.ipynb );
+some experience with machine learning is helpful if you want to improve
+the model.
 
 Currently Formasaurus uses a linear classifier (Logistic Regression) and
 features like counts of form elements of different types, whether a form is
