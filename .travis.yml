@@ -9,7 +9,9 @@ addons:
     packages:
     - python-numpy
     - python-scipy
-
+    - libatlas-base-dev
+    - liblapack-dev
+    - gfortran
 
 install:
 - pip install -U tox
