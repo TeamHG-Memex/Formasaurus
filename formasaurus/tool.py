@@ -14,7 +14,7 @@ Usage:
     tool.py --version
 
 Options:
-    --data-folder <path>       path to the data folder [default: data]
+    --data-folder <path>       path to the data folder
     --test-size <ratio>        ratio of data to use for evaluation, from 0 to 1.0 [default: 0.25]
     --cv <n_folds>             use <n_folds> for cross-validation [default: 10]
     --threshold <probability>  don't display predictions with probability below this threshold [default: 0.01]
@@ -35,6 +35,7 @@ To check the expected quality of the default model trained on the
 training data provided use "evaluate" command.
 """
 from __future__ import absolute_import, print_function
+import os
 from collections import Counter
 
 import docopt
@@ -53,6 +54,10 @@ from formasaurus.model import get_model
 
 def main():
     args = docopt.docopt(__doc__)
+
+    if args['--data-folder'] is None:
+        # by default, use 'data' folder relative to this tool.py file
+        args['--data-folder'] = os.path.join(os.path.dirname(__file__), 'data')
 
     if args['add']:
         annotate_forms(
