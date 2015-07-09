@@ -115,7 +115,7 @@ examples. Use ``formasaurus/tool.py add`` command for that.
 
 For more info about the classification model check
 "notebooks/Model.ipynb" IPython notebook (see
-http://nbviewer.ipython.org/github/TeamHG-Memex/Formasaurus/blob/master/notebooks/Model.ipynb );
+https://github.com/TeamHG-Memex/Formasaurus/blob/master/notebooks/Model.ipynb );
 some experience with machine learning is helpful if you want to improve
 the model.
 
