@@ -3,12 +3,17 @@
 This module provides helper functions for evaluating formasaurus quality.
 """
 from __future__ import absolute_import
+from distutils.version import LooseVersion
 
 import numpy as np
+import sklearn
 from sklearn.cross_validation import cross_val_score
 from sklearn.metrics import classification_report, confusion_matrix
 
 from .storage import FORM_TYPES_INV
+
+
+SKLEARN_VERSION = LooseVersion(sklearn.__version__)
 
 
 def print_sparsity(clf):
@@ -23,7 +28,8 @@ def print_sparsity(clf):
 
 def print_cv_scores(model, X, y, cv=10):
     """ Print cross-validation scores of a classifier """
-    cv_scores = cross_val_score(model, X, y, scoring='f1', cv=cv, verbose=False)
+    scoring = 'f1' if SKLEARN_VERSION < '0.16' else 'f1_weighted'
+    cv_scores = cross_val_score(model, X, y, scoring=scoring, cv=cv, verbose=False)
     print(
         u"%d-fold cross-validation F1: %0.3f (±%0.3f)  min=%0.3f  max=%0.3f" % (
         cv, cv_scores.mean(),  cv_scores.std() * 2, cv_scores.min(), cv_scores.max())
