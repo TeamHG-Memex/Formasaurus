@@ -6,38 +6,31 @@ Formasaurus is a Python package that tells you the type of an HTML form:
 is it a login, search, registration, password recovery, "join mailing list",
 contact form or something else. Under the hood it uses machine learning.
 
-Getting Started
-===============
+Installation
+============
 
-1. Clone the repo and install all dependencies (see requirements.txt).
+Formasaurus requires scipy, numpy, scikit-learn and lxml to work.
+To install Formasaurus with all these dependencies run
 
-2. Use ``formasaurus/tool.py`` command-line utility to train the extractor::
+::
 
-       $ ./formasaurus/tool.py train ./myextractor.joblib
+    pip install formasaurus[with-deps]
 
-   The command above will create a ``myextractor.joblib`` file with
-   extractor parameters.
+These packages may require extra steps to install, so the command above
+may fail. In this case install dependencies manually, on by one, and
+then run::
 
-3. To quickly check how it works use ``formasaurus/tools.py run`` command::
+    pip install formasaurus
 
-       $ ./formasaurus/tool.py run myextractor.joblib 'http://google.com'
+Usage
+=====
 
-   This command will download a webpage, display a cleaned up source code
-   of its HTML forms and shows form types.
-
-Library Usage
-=============
-
-To use Formasaurus as a library, first install it::
-
-    $ python setup.py install
-
-Most features are provided by ``formasaurus.FormExtractor`` class.
-To load the extractor, use ``FormExtractor.load`` method; pass a path
-to a file created by ``./formasaurus/tool.py train`` command:
+Load the form extractor:
 
     >>> from formasaurus import FormExtractor
-    >>> ex = FormExtractor.load("./myextractor.joblib")
+    >>> ex = FormExtractor.load()
+
+Most library features are provided by ``formasaurus.FormExtractor`` class.
 
 FormExtractor expects HTML files parsed by lxml as an input.
 Load an HTML file using lxml:
@@ -45,7 +38,7 @@ Load an HTML file using lxml:
     >>> import lxml.html
     >>> tree = lxml.html.parse("http://google.com")
 
-For this example we'll load data from an URL; of course, data may be
+In this example the data is loaded from an URL; of course, data may be
 loaded from a local file or from an in-memory object, or you may already
 have the tree loaded (e.g. with Scrapy).
 
@@ -80,7 +73,7 @@ classes. Use ``extract_forms_proba`` method for that:
          u'r': 0.0019866565416929898,
          u's': 0.98356971647855373})]
 
-This method again returns a list of tuples, but now the second element is
+This method also returns a list of tuples, but now the second element is
 not just the class itself, but a dictionary with probabilities.
 
 There is a shortcut for dropping all classes with low probabilities. Let's
@@ -102,6 +95,31 @@ They work on individual <form> elements (lxml Element instances):
     >>> ex.classify_proba(form, 0.004)  # threshold is also supported here
     {u'o': 0.0048140061900189797, u's': 0.98356971647855373}
 
+
+Creating Custom Models
+======================
+
+Formasaurus uses a ML-based classifier to classify HTML forms.
+Default training data is distributed alongside with Formasaurus; default
+model is trained on this data the first time ``FormExtractor.load()``
+is called, and model file is cached.
+
+To use a custom model file pass its name to ``FormExtractor.load`` method:
+
+    >>> from formasaurus import FormExtractor
+    >>> ex = FormExtractor.load("./myextractor.joblib")
+
+If the file doesn't exist it will be created from the default training data.
+
+To train custom models using your own training data use
+``formasaurus`` command-line tool::
+
+    $ formasaurus train ./myextractor.joblib --data-path ./my-training-data
+
+Run ``formasaurus --help`` for more information. There are utilities for
+annotating HTML pages (adding more training examples), evaluating models,
+checking how they work, etc.
+
 Contributing
 ============
 
@@ -111,7 +129,7 @@ https://github.com/TeamHG-Memex/Formasaurus
 License is MIT.
 
 The easiest way to improve classification quality is to add more training
-examples. Use ``formasaurus/tool.py add`` command for that.
+examples. Use ``formasaurus add`` command for that.
 
 For more info about the classification model check
 "notebooks/Model.ipynb" IPython notebook (see
@@ -127,7 +145,7 @@ input labels, presence of certain substrings in URLs, etc.
 To make the extractor understand a new type of form (e.g. "order" form
 or "forum navigation" form) it is necessary to check all forms that
 are marked as "other" in the existing dataset and change their type
-when needed, then check the extraction quality (``formasaurus/tool.py evaluate``
+when needed, then check the extraction quality (``formasaurus evaluate``
 command or an IPython notebook could help) and improve the model if
 the quality is not satisfactory.
 

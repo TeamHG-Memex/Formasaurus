@@ -23,6 +23,15 @@ setup(
     packages=['formasaurus'],
     install_requires=["tqdm", "tldextract"],
     requires=["tqdm", "tldextract", "sklearn", "lxml"],
+    package_data={
+        'formasaurus': ['data/index.json', 'data/html/*.html'],
+    },
+    extras_require={
+        'with-deps': ['scikit-learn >= 0.15', 'scipy', 'numpy', 'pandas']
+    },
+    entry_points={
+        'console_scripts': ['formasaurus = formasaurus.__main__:main']
+    },
 
     classifiers=[
         'Development Status :: 3 - Alpha',

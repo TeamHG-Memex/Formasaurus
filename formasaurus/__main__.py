@@ -1,17 +1,17 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
-This is a tool for annotating HTML forms, training a classifier
-based on annotated data and evaluating its quality.
+This is a Formasaurus command-line utility for annotating HTML forms,
+training a classifier based on annotated data and evaluating its quality.
 
 Usage:
-    tool.py add <url> [--data-folder <path>]
-    tool.py train <modelfile> [--data-folder <path>]
-    tool.py run <modelfile> <url> [--threshold <probability>]
-    tool.py check-data [--data-folder <path>]
-    tool.py evaluate [--test-size <ratio>] [--cv <n_folds>] [--data-folder <path>]
-    tool.py -h | --help
-    tool.py --version
+    formasaurus add <url> [--data-folder <path>]
+    formasaurus train <modelfile> [--data-folder <path>]
+    formasaurus run <modelfile> <url> [--threshold <probability>]
+    formasaurus check-data [--data-folder <path>]
+    formasaurus evaluate [--test-size <ratio>] [--cv <n_folds>] [--data-folder <path>]
+    formasaurus -h | --help
+    formasaurus --version
 
 Options:
     --data-folder <path>       path to the data folder
@@ -56,7 +56,7 @@ def main():
     args = docopt.docopt(__doc__)
 
     if args['--data-folder'] is None:
-        # by default, use 'data' folder relative to this tool.py file
+        # by default, use 'data' folder relative to this file
         args['--data-folder'] = os.path.join(os.path.dirname(__file__), 'data')
 
     if args['add']:

@@ -1,9 +1,18 @@
 # -*- coding: utf-8 -*-
 from __future__ import absolute_import
+import os
 
 from sklearn.externals import joblib
 from formasaurus.storage import Storage
 from formasaurus.model import get_model
+
+
+at_root = lambda *args: os.path.join(os.path.dirname(__file__), *args)
+
+CACHED_MODEL_PATH = os.environ.get("FORMASAURUS_MODEL", at_root('model.joblib'))
+CACHED_MODEL_PATH = os.path.expanduser(CACHED_MODEL_PATH)
+
+DEFAULT_DATA_PATH = at_root('data')
 
 
 class FormExtractor(object):
@@ -14,7 +23,26 @@ class FormExtractor(object):
         self.model = model
 
     @classmethod
-    def load(cls, filename):
+    def load(cls, filename=None, create=True):
+        """
+        Load model from disk file ``filename``.
+
+        If the file is missing and ``create`` option is True (default), the model is created.
+        If ``filename`` is None default model file name is used.
+
+        Example - load the default extractor::
+
+            ex = FormExtractor.load()
+
+        """
+        if filename is None:
+            filename = CACHED_MODEL_PATH
+
+        if create and not os.path.exists(filename):
+            ex = cls.trained_on(DEFAULT_DATA_PATH)
+            ex.save(CACHED_MODEL_PATH)
+            return ex
+
         return joblib.load(filename)
 
     @classmethod
