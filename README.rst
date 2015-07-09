@@ -2,6 +2,14 @@
 Formasaurus
 ===========
 
+.. image:: https://img.shields.io/pypi/v/Formasaurus.svg
+   :target: https://pypi.python.org/pypi/Formasaurus
+   :alt: PyPI Version
+
+.. image:: https://img.shields.io/travis/TeamHG-Memex/Formasaurus/master.svg
+   :target: http://travis-ci.org/TeamHG-Memex/Formasaurus
+   :alt: Build Status
+
 Formasaurus is a Python package that tells you the type of an HTML form:
 is it a login, search, registration, password recovery, "join mailing list",
 contact form or something else. Under the hood it uses machine learning.

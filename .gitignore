@@ -1,4 +1,5 @@
 *.pyc
+*.joblib
 *egg-info
 .tox
 build

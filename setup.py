@@ -27,7 +27,7 @@ setup(
         'formasaurus': ['data/index.json', 'data/html/*.html'],
     },
     extras_require={
-        'with-deps': ['scikit-learn >= 0.15', 'scipy', 'numpy', 'pandas']
+        'with-deps': ['scikit-learn >= 0.15', 'scipy', 'numpy', 'pandas', 'lxml']
     },
     entry_points={
         'console_scripts': ['formasaurus = formasaurus.__main__:main']
