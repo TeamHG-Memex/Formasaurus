@@ -18,7 +18,9 @@ Installation
 ============
 
 Formasaurus requires scipy, numpy, scikit-learn and lxml to work.
-To install Formasaurus with all these dependencies run
+
+First, make sure numpy is installed. Then, to install Formasaurus with all
+its other dependencies run
 
 ::
 
