@@ -16,7 +16,7 @@ setup(
     author='Mikhail Korobov',
     author_email='kmike84@gmail.com',
     license='MIT license',
-    long_description=open('README.rst').read(),
+    long_description=open('README.rst').read() + "\n\n" + open('CHANGES.rst').read(),
     description="HTML form type detector",
     url='https://github.com/TeamHG-Memex/Formasaurus',
     zip_safe=False,
