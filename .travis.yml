@@ -4,6 +4,13 @@ sudo: false
 env:
 - TOXENV=py27
 
+addons:
+  apt:
+    packages:
+    - python-numpy
+    - python-scipy
+
+
 install:
 - pip install -U tox
 
