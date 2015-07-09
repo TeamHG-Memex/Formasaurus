@@ -22,7 +22,6 @@ setup(
     zip_safe=False,
     packages=['formasaurus'],
     install_requires=["tqdm", "tldextract", "docopt"],
-    requires=["tqdm", "tldextract", "sklearn", "lxml"],
     package_data={
         'formasaurus': ['data/index.json', 'data/html/*.html'],
     },
