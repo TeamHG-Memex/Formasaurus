@@ -21,7 +21,7 @@ setup(
     url='https://github.com/TeamHG-Memex/Formasaurus',
     zip_safe=False,
     packages=['formasaurus'],
-    install_requires=["tqdm", "tldextract"],
+    install_requires=["tqdm", "tldextract", "docopt"],
     requires=["tqdm", "tldextract", "sklearn", "lxml"],
     package_data={
         'formasaurus': ['data/index.json', 'data/html/*.html'],
