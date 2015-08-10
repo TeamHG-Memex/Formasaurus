@@ -15,9 +15,9 @@ addons:
     - gfortran
 
 install:
-- pip install -U tox
+- pip install -U pip tox
 
-script: tox
+script: travis_wait tox
 
 cache:
   directories:
