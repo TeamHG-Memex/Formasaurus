@@ -17,7 +17,8 @@ contact form or something else. Under the hood it uses machine learning.
 Installation
 ============
 
-Formasaurus requires scipy, numpy, scikit-learn and lxml to work.
+Formasaurus requires Python 2.7+ or 3.3+,
+scipy, numpy, scikit-learn and lxml to work.
 
 First, make sure numpy is installed. Then, to install Formasaurus with all
 its other dependencies run
