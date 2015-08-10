@@ -12,7 +12,8 @@ from sklearn.svm import LinearSVC
 
 from formasaurus import features
 
-# a list of 3-tuples with default features: (feature_name, form_transformer, vectorizer)
+# a list of 3-tuples with default features:
+# (feature_name, form_transformer, vectorizer)
 FEATURES = [
     (
         "bias",
@@ -32,44 +33,52 @@ FEATURES = [
     # (
     #     "<form> TEXT </form>",
     #     features.FormText(),
-    #     TfidfVectorizer(ngram_range=(1,2), min_df=5, stop_words='english', binary=True)
+    #     TfidfVectorizer(ngram_range=(1,2), min_df=5, stop_words='english',
+    #                     binary=True)
     # ),
 
     (
         "<a> TEXT </a>",
         features.FormLinksText(),
-        TfidfVectorizer(ngram_range=(1,2), min_df=4, stop_words={'and', 'or', 'of'}, binary=True)
+        TfidfVectorizer(ngram_range=(1,2), min_df=4, binary=True,
+                        stop_words={'and', 'or', 'of'})
     ),
     (
         "<label> TEXT </label>",
         features.FormLabelText(),
-        TfidfVectorizer(ngram_range=(1,2), min_df=3, stop_words="english", binary=True)
+        TfidfVectorizer(ngram_range=(1,2), min_df=3, binary=True,
+                        stop_words="english")
     ),
 
     (
         "<form action=...>",
         features.FormUrl(),
-        TfidfVectorizer(ngram_range=(5,6), min_df=4, analyzer="char_wb", binary=True)
+        TfidfVectorizer(ngram_range=(5,6), min_df=4, binary=True,
+                        analyzer="char_wb")
     ),
     (
         "<form class=... id=...>",
         features.FormCss(),
-        TfidfVectorizer(ngram_range=(4,5), min_df=3, analyzer="char_wb", binary=True)
+        TfidfVectorizer(ngram_range=(4,5), min_df=3, binary=True,
+                        analyzer="char_wb")
     ),
     (
         "<input class=... id=...>",
         features.FormInputCss(),
-        TfidfVectorizer(ngram_range=(4,5), min_df=5, analyzer="char_wb", binary=True)
+        TfidfVectorizer(ngram_range=(4,5), min_df=5, binary=True,
+                        analyzer="char_wb")
     ),
     (
         "<input name=...>",
         features.FormInputNames(),
-        TfidfVectorizer(ngram_range=(5,6), min_df=3, analyzer="char_wb", binary=True)
+        TfidfVectorizer(ngram_range=(5,6), min_df=3, binary=True,
+                        analyzer="char_wb")
     ),
     (
         "<input title=...>",
         features.FormInputTitle(),
-        TfidfVectorizer(ngram_range=(5,6), min_df=3, analyzer="char_wb", binary=True)
+        TfidfVectorizer(ngram_range=(5,6), min_df=3, binary=True,
+                        analyzer="char_wb")
     ),
 ]
 

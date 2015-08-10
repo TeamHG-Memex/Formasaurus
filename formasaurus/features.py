@@ -5,8 +5,8 @@ for extracting features from HTML forms.
 """
 from __future__ import absolute_import
 
-import urlparse
 import collections
+from six.moves.urllib import parse as urlparse
 
 import lxml.html
 from sklearn.base import BaseEstimator, TransformerMixin

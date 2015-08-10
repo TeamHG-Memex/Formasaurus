@@ -6,9 +6,9 @@ from __future__ import absolute_import
 
 import os
 import json
-import urlparse
 import collections
 from itertools import chain
+from six.moves.urllib import parse as urlparse
 
 import tldextract
 import lxml.html
@@ -26,7 +26,7 @@ FORM_TYPES = collections.OrderedDict([
     ('NOT ANNOTATED', 'X'),
 ])
 
-FORM_TYPES_INV = {v:k for k,v in FORM_TYPES.items()}
+FORM_TYPES_INV = {v: k for k, v in FORM_TYPES.items()}
 
 
 def load_html(data, base_url):
@@ -40,7 +40,7 @@ def get_domain(url):
 
 def _get_form_hash(form):
     # it just returns a full string as a hash, for easier debugging
-    html = lxml.html.tostring(form, pretty_print=True)
+    html = lxml.html.tostring(form, pretty_print=True, encoding="unicode")
     lines = [line.strip() for line in html.splitlines(False) if line.strip()]
     return "\n".join(lines)
 
@@ -133,14 +133,13 @@ class Storage(object):
         if verbose and leave:
             print("")
 
-
     def get_Xy(self, drop_duplicates=True, verbose=False, leave=False):
         """ Return X,y suitable for scikit-learn training """
-        return zip(*self.iter_annotations(
+        return list(zip(*self.iter_annotations(
             drop_duplicates=drop_duplicates,
             verbose=verbose,
             leave=leave,
-        ))
+        )))
 
     def check(self):
         """
@@ -148,11 +147,12 @@ class Storage(object):
         Return the number of errors found.
         """
         index = self.get_index()
+        items = list(index.items())
         errors = 0
-        for fn, info in tqdm(index.items(), "Checking", leave=True, mininterval=0):
+        for fn, info in tqdm(items, "Checking", leave=True, mininterval=0):
             fn_full = os.path.join(self.folder, fn)
             if not os.path.exists(fn_full):
-                print("\nFile not found: %r" % (fn_full))
+                print("\nFile not found: %r" % fn_full)
                 errors += 1
                 continue
 
@@ -177,7 +177,8 @@ class Storage(object):
     def get_fingerprints(self, verbose=True, leave=False):
         """ Return a dict with all fingerprints of the existing forms """
         X, y = self.get_Xy(drop_duplicates=True, verbose=verbose, leave=leave)
-        return {self.get_fingerprint(form): tp for form, tp in zip(X, y) if tp != 'X'}
+        return {self.get_fingerprint(form): tp
+                for form, tp in zip(X, y) if tp != 'X'}
 
     def get_fingerprint(self, form):
         """
@@ -202,7 +203,8 @@ class Storage(object):
         print("Annotated HTML forms:\n")
         type_counts = self.get_type_counts()
         for shortcut, count in type_counts.most_common():
-            print("%-5d %-25s (%s)" % (count, FORM_TYPES_INV[shortcut], shortcut))
+            type_name = FORM_TYPES_INV[shortcut]
+            print("%-5d %-25s (%s)" % (count, type_name, shortcut))
         print("\nTotal form count: %d" % (sum(type_counts.values())))
 
     def _generate_filename(self, url):

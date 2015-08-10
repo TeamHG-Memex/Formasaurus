@@ -5,7 +5,8 @@ HTML forms interactive annotation utilities.
 from __future__ import absolute_import
 import sys
 import os
-import urllib2
+from six.moves.urllib.request import urlopen
+from six.moves import input
 
 import lxml.html
 from lxml.html.clean import Cleaner
@@ -51,7 +52,7 @@ def load_data(url_or_path):
         # with open(url_or_path, 'rb') as f:
         #     return f.read(), None
     else:
-        return urllib2.urlopen(url_or_path).read(), url_or_path
+        return urlopen(url_or_path).read(), url_or_path
 
 
 def print_form_html(form):
@@ -61,11 +62,12 @@ def print_form_html(form):
         javascript=True,
         scripts=True,
         style=True,
-        allow_tags={'form', 'input', 'textarea', 'label', 'option', 'select', 'submit', 'a'},
-
+        allow_tags={'form', 'input', 'textarea', 'label', 'option',
+                    'select', 'submit', 'a'},
         remove_unknown_tags=False,
     )
-    html = cleaner.clean_html(lxml.html.tostring(form, pretty_print=True))
+    raw_html = lxml.html.tostring(form, pretty_print=True, encoding="unicode")
+    html = cleaner.clean_html(raw_html)
     lines = [line.strip() for line in html.splitlines(False) if line.strip()]
     print("\n".join(lines))
 
@@ -111,12 +113,14 @@ def _annotate_forms(storage, doc, form_types=None):
         print_form_html(form)
 
         while True:
-            tp = raw_input("\nPlease enter the form type (%s) or ? for help: " % shortcuts).strip()
+            tp = input("\nPlease enter the form type (%s) "
+                       "or ? for help: " % shortcuts).strip()
             if tp == '?':
                 print_form_types(form_types)
                 continue
             if tp not in set(shortcuts):
-                print("Please enter one of the following letters: %s. You entered %r" % (shortcuts, tp))
+                print("Please enter one of the following "
+                      "letters: %s. You entered %r" % (shortcuts, tp))
                 continue
             res.append(tp)
             break

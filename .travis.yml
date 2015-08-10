@@ -3,6 +3,7 @@ python: 2.7
 sudo: false
 env:
 - TOXENV=py27
+- TOXENV=py34
 
 addons:
   apt:
@@ -20,4 +21,4 @@ script: tox
 
 cache:
   directories:
-    - .tox
+    - $HOME/.cache/pip
