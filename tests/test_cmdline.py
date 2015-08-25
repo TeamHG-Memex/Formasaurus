@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from __future__ import absolute_import
-import io
+import re
 import subprocess
 
 import formasaurus
@@ -24,3 +24,7 @@ def test_check_data():
 
 def test_evaluate():
     out = subprocess.check_output('formasaurus evaluate --cv 3', shell=True)
+    m = re.search(b"cross-validation F1: (\d.\d+)", out)
+    assert m
+    assert float(m.group(1)) > 0.8
+
