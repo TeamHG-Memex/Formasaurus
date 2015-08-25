@@ -10,6 +10,10 @@ Formasaurus
    :target: http://travis-ci.org/TeamHG-Memex/Formasaurus
    :alt: Build Status
 
+.. image:: http://codecov.io/github/TeamHG-Memex/Formasaurus/coverage.svg?branch=master
+   :target: http://codecov.io/github/TeamHG-Memex/Formasaurus?branch=master
+   :alt: Code Coverage
+
 Formasaurus is a Python package that tells you the type of an HTML form:
 is it a login, search, registration, password recovery, "join mailing list",
 contact form or something else. Under the hood it uses machine learning.

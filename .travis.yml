@@ -15,9 +15,12 @@ addons:
     - gfortran
 
 install:
-- pip install -U pip tox
+- pip install -U pip tox codecov
 
 script: travis_wait tox
+
+after_success:
+  - codecov
 
 cache:
   directories:
