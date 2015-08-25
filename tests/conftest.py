@@ -6,6 +6,8 @@ import lxml.html
 import pytest
 
 import formasaurus
+from formasaurus.extractor import DEFAULT_DATA_PATH
+from formasaurus.storage import Storage
 
 
 LOGIN_PAGE = b'''
@@ -30,3 +32,7 @@ def ex():
 def tree():
     return lxml.html.parse(io.BytesIO(LOGIN_PAGE))
 
+
+@pytest.fixture
+def storage():
+    return Storage(DEFAULT_DATA_PATH)

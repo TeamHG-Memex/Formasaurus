@@ -2,7 +2,7 @@
 """
 HTML forms interactive annotation utilities.
 """
-from __future__ import absolute_import
+from __future__ import absolute_import, print_function
 import sys
 import os
 from six.moves.urllib.request import urlopen
@@ -36,9 +36,10 @@ def check_annotated_data(data_folder):
     Check that annotated data is correct; exit with code 1 if it is not.
     """
     storage = Storage(data_folder)
-    ok = storage.check()
+    errors = storage.check()
     storage.print_type_counts()
-    if not ok:
+    print("Errors:", errors)
+    if errors:
         sys.exit(1)
 
 

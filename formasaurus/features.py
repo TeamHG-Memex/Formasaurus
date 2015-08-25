@@ -11,11 +11,7 @@ from six.moves.urllib import parse as urlparse
 import lxml.html
 from sklearn.base import BaseEstimator, TransformerMixin
 
-
-def _add_scheme_if_missing(url):
-    if "//" not in url:
-        url = "http://%s" % url
-    return url
+from .utils import add_scheme_if_missing
 
 
 def _get_type_counts(form):
@@ -129,7 +125,7 @@ class FormUrl(BaseFormFeatureExtractor):
         url = form.get("action", "")
         if not url:
             return url
-        url = _add_scheme_if_missing(url)
+        url = add_scheme_if_missing(url)
         p = urlparse.urlparse(url)
         parts = [
             self._normalize(part)

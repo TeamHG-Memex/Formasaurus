@@ -3,16 +3,16 @@
 A module for working with annotation data storage.
 """
 from __future__ import absolute_import
-
 import os
 import json
 import collections
 from itertools import chain
 from six.moves.urllib import parse as urlparse
 
-import tldextract
 import lxml.html
 from tqdm import tqdm
+
+from formasaurus.utils import get_domain
 
 
 FORM_TYPES = collections.OrderedDict([
@@ -32,10 +32,6 @@ FORM_TYPES_INV = {v: k for k, v in FORM_TYPES.items()}
 def load_html(data, base_url):
     """ Parse HTML data to a lxml tree """
     return lxml.html.fromstring(data, base_url=base_url)
-
-
-def get_domain(url):
-    return tldextract.extract(url).domain
 
 
 def _get_form_hash(form):
@@ -106,7 +102,7 @@ class Storage(object):
 
         sorted_items = sorted(
             self.get_index().items(),
-            key = lambda it: get_domain(it[1]["url"])
+            key=lambda it: get_domain(it[1]["url"])
         )
 
         if verbose:

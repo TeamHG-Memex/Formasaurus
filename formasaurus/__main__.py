@@ -40,6 +40,7 @@ from collections import Counter
 
 import docopt
 
+import formasaurus
 from formasaurus.annotation import (
     annotate_forms,
     check_annotated_data,
@@ -53,7 +54,7 @@ from formasaurus.model import get_model
 
 
 def main():
-    args = docopt.docopt(__doc__)
+    args = docopt.docopt(__doc__, version=formasaurus.__version__)
 
     if args['--data-folder'] is None:
         # by default, use 'data' folder relative to this file

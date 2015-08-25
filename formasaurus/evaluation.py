@@ -4,7 +4,9 @@ This module provides helper functions for evaluating formasaurus quality.
 """
 from __future__ import absolute_import, print_function
 from distutils.version import LooseVersion
+import sys
 
+import six
 import numpy as np
 import sklearn
 from sklearn.cross_validation import cross_val_score
@@ -32,11 +34,18 @@ def print_cv_scores(model, X, y, cv=10):
     scoring = 'f1' if SKLEARN_VERSION < '0.16' else 'f1_weighted'
     cv_scores = cross_val_score(model, X, y, scoring=scoring, cv=cv,
                                 verbose=False)
-    print(
-        u"%d-fold cross-validation F1: %0.3f (±%0.3f)  min=%0.3f  max=%0.3f" % (
-        cv, cv_scores.mean(),  cv_scores.std() * 2,
-        cv_scores.min(), cv_scores.max())
+    msg = (
+        u"%d-fold cross-validation F1: %0.3f (±%0.3f)  "
+        u"min=%0.3f  max=%0.3f" % (
+            cv, cv_scores.mean(),  cv_scores.std() * 2,
+            cv_scores.min(), cv_scores.max()
+        )
     )
+    if six.PY2:
+        encoding = getattr(sys.stdout, 'encoding', 'utf8') or 'ascii'
+        print(msg.encode(encoding, 'replace'))
+    else:
+        print(msg)
 
 
 def fit_and_predict(model, X_train, X_test, y_train):

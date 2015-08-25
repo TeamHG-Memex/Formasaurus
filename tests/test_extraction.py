@@ -1,9 +1,5 @@
 # -*- coding: utf-8 -*-
 from __future__ import absolute_import
-import io
-import lxml.html
-import pytest
-import formasaurus
 
 
 def test_extract_forms(ex, tree):
