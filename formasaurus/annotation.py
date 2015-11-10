@@ -37,7 +37,7 @@ def check_annotated_data(data_folder):
     """
     storage = Storage(data_folder)
     errors = storage.check()
-    storage.print_type_counts()
+    storage.print_form_type_counts()
     print("Errors:", errors)
     if errors:
         sys.exit(1)

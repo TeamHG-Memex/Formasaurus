@@ -1,2550 +1,2550 @@
 {
     "html/account.oneplus.net-0.html": {
-        "url": "https://account.oneplus.net/sign-up", 
-        "types": [
+        "url": "https://account.oneplus.net/sign-up",
+        "forms": [
             "r"
         ]
-    }, 
+    },
     "html/account.swtor.com-0.html": {
-        "url": "https://account.swtor.com/user/login", 
-        "types": [
+        "url": "https://account.swtor.com/user/login",
+        "forms": [
             "l"
         ]
-    }, 
+    },
     "html/account.swtor.com-1.html": {
-        "url": "https://account.swtor.com/play-free", 
-        "types": [
+        "url": "https://account.swtor.com/play-free",
+        "forms": [
             "r"
         ]
-    }, 
+    },
     "html/allnokia.ru-0.html": {
-        "url": "http://allnokia.ru/", 
-        "types": [
-            "l", 
-            "s", 
+        "url": "http://allnokia.ru/",
+        "forms": [
+            "l",
+            "s",
             "m"
         ]
-    }, 
+    },
     "html/apartments.camdenliving.com-0.html": {
-        "url": "http://apartments.camdenliving.com/dc-metro-washington-dc-apartments/camden-roosevelt/default.aspx", 
-        "types": [
-            "s", 
+        "url": "http://apartments.camdenliving.com/dc-metro-washington-dc-apartments/camden-roosevelt/default.aspx",
+        "forms": [
+            "s",
             "o"
         ]
-    }, 
+    },
     "html/app.cheezburger.com-0.html": {
-        "url": "http://app.cheezburger.com/Account/ForgotPassword?returnTo=http%3A%2F%2Fmemebase.cheezburger.com%2Fverydemotivational", 
-        "types": [
-            "s", 
-            "p", 
+        "url": "http://app.cheezburger.com/Account/ForgotPassword?returnTo=http%3A%2F%2Fmemebase.cheezburger.com%2Fverydemotivational",
+        "forms": [
+            "s",
+            "p",
             "o"
         ]
-    }, 
+    },
     "html/arstechnica.com-0.html": {
-        "url": "http://arstechnica.com/", 
-        "types": [
-            "s", 
-            "s", 
+        "url": "http://arstechnica.com/",
+        "forms": [
+            "s",
+            "s",
             "o"
         ]
-    }, 
+    },
     "html/ask.debian.net-0.html": {
-        "url": "http://ask.debian.net/", 
-        "types": [
-            "s", 
-            "l", 
-            "l", 
-            "r", 
-            "o", 
-            "l", 
-            "l", 
-            "r", 
+        "url": "http://ask.debian.net/",
+        "forms": [
+            "s",
+            "l",
+            "l",
+            "r",
+            "o",
+            "l",
+            "l",
+            "r",
             "c"
         ]
-    }, 
+    },
     "html/auth.getpebble.com-0.html": {
-        "url": "https://auth.getpebble.com/users/sign_up", 
-        "types": [
+        "url": "https://auth.getpebble.com/users/sign_up",
+        "forms": [
             "r"
         ]
-    }, 
+    },
     "html/auth.getpebble.com-1.html": {
-        "url": "https://auth.getpebble.com/users/sign_in", 
-        "types": [
+        "url": "https://auth.getpebble.com/users/sign_in",
+        "forms": [
             "l"
         ]
-    }, 
+    },
     "html/auth.getpebble.com-2.html": {
-        "url": "https://auth.getpebble.com/users/password/new", 
-        "types": [
+        "url": "https://auth.getpebble.com/users/password/new",
+        "forms": [
             "p"
         ]
-    }, 
+    },
     "html/auth.independent.ie-0.html": {
-        "url": "https://auth.independent.ie/evolok-ui-web/register.htm?serviceName=independent_register&redirectTo=http%3A%2F%2Fwww.independent.ie%2Fevolok%2Flogin-redirect%3Fredirect%3Dhttp%253A%252F%252Fwww.independent.ie%252Fsport%252Fsoccer%252F&redirectLabel=www.independent.ie", 
-        "types": [
-            "o", 
+        "url": "https://auth.independent.ie/evolok-ui-web/register.htm?serviceName=independent_register&redirectTo=http%3A%2F%2Fwww.independent.ie%2Fevolok%2Flogin-redirect%3Fredirect%3Dhttp%253A%252F%252Fwww.independent.ie%252Fsport%252Fsoccer%252F&redirectLabel=www.independent.ie",
+        "forms": [
+            "o",
             "r"
         ]
-    }, 
+    },
     "html/auth.independent.ie-1.html": {
-        "url": "https://auth.independent.ie/evolok-ui-web/login.htm?serviceName=independent&viewType=fullPage&redirectLabel=www.independent.ie&redirectTo=http%3A%2F%2Fwww.independent.ie%2Fevolok%2Flogin-redirect%3Fredirect%3Dhttp%253A%252F%252Fwww.independent.ie%252Fsport%252Fsoccer%252F", 
-        "types": [
+        "url": "https://auth.independent.ie/evolok-ui-web/login.htm?serviceName=independent&viewType=fullPage&redirectLabel=www.independent.ie&redirectTo=http%3A%2F%2Fwww.independent.ie%2Fevolok%2Flogin-redirect%3Fredirect%3Dhttp%253A%252F%252Fwww.independent.ie%252Fsport%252Fsoccer%252F",
+        "forms": [
             "l"
         ]
-    }, 
+    },
     "html/belepes.t-online.hu-0.html": {
-        "url": "https://belepes.t-online.hu/auth.html?cmd=register&skin=origo&backurl=http://postr.hu//", 
-        "types": [
+        "url": "https://belepes.t-online.hu/auth.html?cmd=register&skin=origo&backurl=http://postr.hu//",
+        "forms": [
             "r"
         ]
-    }, 
+    },
     "html/belepes.t-online.hu-1.html": {
-        "url": "https://belepes.t-online.hu/auth.html?cmd=pwdrem&skin=origo", 
-        "types": [
+        "url": "https://belepes.t-online.hu/auth.html?cmd=pwdrem&skin=origo",
+        "forms": [
             "p"
         ]
-    }, 
+    },
     "html/berkeley.edu-0.html": {
-        "url": "http://berkeley.edu/index.html", 
-        "types": [
+        "url": "http://berkeley.edu/index.html",
+        "forms": [
             "s"
         ]
-    }, 
+    },
     "html/berkeley.edu-1.html": {
-        "url": "http://berkeley.edu/misc/mainsite_feedback.shtml", 
-        "types": [
-            "s", 
+        "url": "http://berkeley.edu/misc/mainsite_feedback.shtml",
+        "forms": [
+            "s",
             "c"
         ]
-    }, 
+    },
     "html/boston.custhelp.com-0.html": {
-        "url": "http://boston.custhelp.com/app/ask", 
-        "types": [
-            "o", 
-            "c", 
+        "url": "http://boston.custhelp.com/app/ask",
+        "forms": [
+            "o",
+            "c",
             "s"
         ]
-    }, 
+    },
     "html/brookdalecc.instructure.com-0.html": {
-        "url": "https://brookdalecc.instructure.com/login", 
-        "types": [
-            "l", 
+        "url": "https://brookdalecc.instructure.com/login",
+        "forms": [
+            "l",
             "p"
         ]
-    }, 
+    },
     "html/brooklynbrewshop.com-0.html": {
-        "url": "http://brooklynbrewshop.com/beer-making-kits", 
-        "types": [
+        "url": "http://brooklynbrewshop.com/beer-making-kits",
+        "forms": [
             "m"
         ]
-    }, 
+    },
     "html/brooklynbrewshop.com-1.html": {
-        "url": "http://brooklynbrewshop.com/beer-making-kits/hard-cider-kit", 
-        "types": [
-            "o", 
+        "url": "http://brooklynbrewshop.com/beer-making-kits/hard-cider-kit",
+        "forms": [
+            "o",
             "X"
         ]
-    }, 
+    },
     "html/brooklynbrewshop.com-2.html": {
-        "url": "http://brooklynbrewshop.com/customer/account/login/", 
-        "types": [
-            "l", 
+        "url": "http://brooklynbrewshop.com/customer/account/login/",
+        "forms": [
+            "l",
             "X"
         ]
-    }, 
+    },
     "html/brooklynbrewshop.com-3.html": {
-        "url": "http://brooklynbrewshop.com/customer/account/create/", 
-        "types": [
-            "r", 
+        "url": "http://brooklynbrewshop.com/customer/account/create/",
+        "forms": [
+            "r",
             "X"
         ]
-    }, 
+    },
     "html/brooklynbrewshop.com-4.html": {
-        "url": "http://brooklynbrewshop.com/customer/account/forgotpassword/", 
-        "types": [
-            "p", 
+        "url": "http://brooklynbrewshop.com/customer/account/forgotpassword/",
+        "forms": [
+            "p",
             "X"
         ]
-    }, 
+    },
     "html/brooklynbrewshop.com-5.html": {
-        "url": "http://brooklynbrewshop.com/contacts/", 
-        "types": [
-            "c", 
+        "url": "http://brooklynbrewshop.com/contacts/",
+        "forms": [
+            "c",
             "X"
         ]
-    }, 
+    },
     "html/danishbits.org-0.html": {
-        "url": "https://danishbits.org/login.php", 
-        "types": [
+        "url": "https://danishbits.org/login.php",
+        "forms": [
             "l"
         ]
-    }, 
+    },
     "html/danishbits.org-1.html": {
-        "url": "https://danishbits.org/login.php?act=recover", 
-        "types": [
+        "url": "https://danishbits.org/login.php?act=recover",
+        "forms": [
             "p"
         ]
-    }, 
+    },
     "html/darkmoney.cc-0.html": {
-        "url": "http://darkmoney.cc/", 
-        "types": [
-            "l", 
+        "url": "http://darkmoney.cc/",
+        "forms": [
+            "l",
             "o"
         ]
-    }, 
+    },
     "html/dash.scrapinghub.com-0.html": {
-        "url": "https://dash.scrapinghub.com/account/login/?next=/", 
-        "types": [
+        "url": "https://dash.scrapinghub.com/account/login/?next=/",
+        "forms": [
             "l"
         ]
-    }, 
+    },
     "html/dash.scrapinghub.com-1.html": {
-        "url": "https://dash.scrapinghub.com/account/signup/", 
-        "types": [
+        "url": "https://dash.scrapinghub.com/account/signup/",
+        "forms": [
             "r"
         ]
-    }, 
+    },
     "html/dash.scrapinghub.com-2.html": {
-        "url": "https://dash.scrapinghub.com/account/password/reset/", 
-        "types": [
+        "url": "https://dash.scrapinghub.com/account/password/reset/",
+        "forms": [
             "p"
         ]
-    }, 
+    },
     "html/ddl-board.org-0.html": {
-        "url": "http://ddl-board.org/", 
-        "types": [
-            "s", 
-            "l", 
-            "o", 
+        "url": "http://ddl-board.org/",
+        "forms": [
+            "s",
+            "l",
+            "o",
             "l"
         ]
-    }, 
+    },
     "html/ddl-board.org-1.html": {
-        "url": "http://ddl-board.org/index.php?page=Register&action=register", 
-        "types": [
-            "s", 
-            "r", 
-            "o", 
+        "url": "http://ddl-board.org/index.php?page=Register&action=register",
+        "forms": [
+            "s",
+            "r",
+            "o",
             "l"
         ]
-    }, 
+    },
     "html/ddl-warez.in-0.html": {
-        "url": "http://ddl-warez.in/", 
-        "types": [
+        "url": "http://ddl-warez.in/",
+        "forms": [
             "s"
         ]
-    }, 
+    },
     "html/destinet.eu-0.html": {
-        "url": "http://destinet.eu/login_html", 
-        "types": [
+        "url": "http://destinet.eu/login_html",
+        "forms": [
             "l"
         ]
-    }, 
+    },
     "html/destinet.eu-1.html": {
-        "url": "http://destinet.eu/create_destinet_account_html", 
-        "types": [
+        "url": "http://destinet.eu/create_destinet_account_html",
+        "forms": [
             "r"
         ]
-    }, 
+    },
     "html/dnoticias.pt-0.html": {
-        "url": "http://dnoticias.pt/", 
-        "types": [
+        "url": "http://dnoticias.pt/",
+        "forms": [
             "s"
         ]
-    }, 
+    },
     "html/dnoticias.pt-1.html": {
-        "url": "http://dnoticias.pt/user?destination=actualidade", 
-        "types": [
-            "s", 
-            "l", 
+        "url": "http://dnoticias.pt/user?destination=actualidade",
+        "forms": [
+            "s",
+            "l",
             "p"
         ]
-    }, 
+    },
     "html/dnoticias.pt-2.html": {
-        "url": "http://dnoticias.pt/user/register?destination=actualidade", 
-        "types": [
-            "s", 
+        "url": "http://dnoticias.pt/user/register?destination=actualidade",
+        "forms": [
+            "s",
             "r"
         ]
-    }, 
+    },
     "html/duckduckgo.com-0.html": {
-        "url": "https://duckduckgo.com/", 
-        "types": [
+        "url": "https://duckduckgo.com/",
+        "forms": [
             "s"
         ]
-    }, 
+    },
     "html/en.wikipedia.org-0.html": {
-        "url": "http://en.wikipedia.org/wiki/Main_Page", 
-        "types": [
+        "url": "http://en.wikipedia.org/wiki/Main_Page",
+        "forms": [
             "s"
         ]
-    }, 
+    },
     "html/faq.orbitz.com-0.html": {
-        "url": "https://faq.orbitz.com/", 
-        "types": [
-            "o", 
+        "url": "https://faq.orbitz.com/",
+        "forms": [
+            "o",
             "s"
         ]
-    }, 
+    },
     "html/forobeta.com-0.html": {
-        "url": "http://forobeta.com/", 
-        "types": [
-            "l", 
-            "s", 
+        "url": "http://forobeta.com/",
+        "forms": [
+            "l",
+            "s",
             "o"
         ]
-    }, 
+    },
     "html/forobeta.com-1.html": {
-        "url": "http://forobeta.com/registro.php", 
-        "types": [
-            "l", 
-            "s", 
-            "r", 
+        "url": "http://forobeta.com/registro.php",
+        "forms": [
+            "l",
+            "s",
+            "r",
             "o"
         ]
-    }, 
+    },
     "html/forum.escmid.org-0.html": {
-        "url": "http://forum.escmid.org/forum.php", 
-        "types": [
-            "s", 
-            "o", 
+        "url": "http://forum.escmid.org/forum.php",
+        "forms": [
+            "s",
+            "o",
             "o"
         ]
-    }, 
+    },
     "html/forum.escmid.org-1.html": {
-        "url": "http://forum.escmid.org/sendmessage.php", 
-        "types": [
-            "s", 
-            "o", 
-            "c", 
+        "url": "http://forum.escmid.org/sendmessage.php",
+        "forms": [
+            "s",
+            "o",
+            "c",
             "o"
         ]
-    }, 
+    },
     "html/forum.flyordie.com-0.html": {
-        "url": "http://forum.flyordie.com/auth.jsp", 
-        "types": [
+        "url": "http://forum.flyordie.com/auth.jsp",
+        "forms": [
             "l"
         ]
-    }, 
+    },
     "html/forum.mindfactory.de-0.html": {
-        "url": "https://forum.mindfactory.de/forum.php", 
-        "types": [
-            "l", 
-            "s", 
-            "o", 
+        "url": "https://forum.mindfactory.de/forum.php",
+        "forms": [
+            "l",
+            "s",
+            "o",
             "o"
         ]
-    }, 
+    },
     "html/forum.mindfactory.de-1.html": {
-        "url": "https://forum.mindfactory.de/register.php", 
-        "types": [
-            "l", 
-            "s", 
-            "r", 
+        "url": "https://forum.mindfactory.de/register.php",
+        "forms": [
+            "l",
+            "s",
+            "r",
             "o"
         ]
-    }, 
+    },
     "html/forum.mindfactory.de-2.html": {
-        "url": "https://forum.mindfactory.de/sendmessage.php", 
-        "types": [
-            "l", 
-            "s", 
-            "o", 
-            "c", 
+        "url": "https://forum.mindfactory.de/sendmessage.php",
+        "forms": [
+            "l",
+            "s",
+            "o",
+            "c",
             "o"
         ]
-    }, 
+    },
     "html/forums.debian.net-0.html": {
-        "url": "http://forums.debian.net/", 
-        "types": [
-            "s", 
+        "url": "http://forums.debian.net/",
+        "forms": [
+            "s",
             "l"
         ]
-    }, 
+    },
     "html/forums.macrumors.com-0.html": {
-        "url": "http://forums.macrumors.com/", 
-        "types": [
-            "s", 
-            "s", 
-            "l", 
+        "url": "http://forums.macrumors.com/",
+        "forms": [
+            "s",
+            "s",
+            "l",
             "c"
         ]
-    }, 
+    },
     "html/forums.macrumors.com-1.html": {
-        "url": "http://forums.macrumors.com/newreply.php?do=newreply&noquote=1&p=20445164", 
-        "types": [
-            "s", 
-            "s", 
-            "l", 
-            "l", 
-            "s", 
+        "url": "http://forums.macrumors.com/newreply.php?do=newreply&noquote=1&p=20445164",
+        "forms": [
+            "s",
+            "s",
+            "l",
+            "l",
+            "s",
             "c"
         ]
-    }, 
+    },
     "html/forums.mtbr.com-0.html": {
-        "url": "http://forums.mtbr.com/forum.php?s=e6d9ba2bd516b15a8b8f7a3cae338bf8", 
-        "types": [
-            "s", 
-            "l", 
-            "s", 
-            "o", 
-            "o", 
+        "url": "http://forums.mtbr.com/forum.php?s=e6d9ba2bd516b15a8b8f7a3cae338bf8",
+        "forms": [
+            "s",
+            "l",
+            "s",
+            "o",
+            "o",
             "s"
         ]
-    }, 
+    },
     "html/forums.mtbr.com-1.html": {
-        "url": "http://forums.mtbr.com/register.php", 
-        "types": [
-            "s", 
-            "l", 
-            "s", 
-            "r", 
-            "o", 
+        "url": "http://forums.mtbr.com/register.php",
+        "forms": [
+            "s",
+            "l",
+            "s",
+            "r",
+            "o",
             "s"
         ]
-    }, 
+    },
     "html/forums.oneplus.net-0.html": {
-        "url": "https://forums.oneplus.net/threads/name-a-city-with-the-next-letter-of-the-alphabet-game.160418/", 
-        "types": [
-            "s", 
-            "l", 
-            "o", 
+        "url": "https://forums.oneplus.net/threads/name-a-city-with-the-next-letter-of-the-alphabet-game.160418/",
+        "forms": [
+            "s",
+            "l",
+            "o",
             "l"
         ]
-    }, 
+    },
     "html/funzu.com-0.html": {
-        "url": "http://funzu.com/", 
-        "types": [
-            "s", 
+        "url": "http://funzu.com/",
+        "forms": [
+            "s",
             "m"
         ]
-    }, 
+    },
     "html/games.flyordie.com-0.html": {
-        "url": "http://games.flyordie.com/registration/registerSite.html?portal=flyordie_com&lang=en_US&game=Forum&done=http%3A//forum.flyordie.com/auth.jsp", 
-        "types": [
+        "url": "http://games.flyordie.com/registration/registerSite.html?portal=flyordie_com&lang=en_US&game=Forum&done=http%3A//forum.flyordie.com/auth.jsp",
+        "forms": [
             "r"
         ]
-    }, 
+    },
     "html/github.com-0.html": {
-        "url": "https://github.com", 
-        "types": [
-            "s", 
+        "url": "https://github.com",
+        "forms": [
+            "s",
             "r"
         ]
-    }, 
+    },
     "html/github.com-1.html": {
-        "url": "https://github.com/login", 
-        "types": [
-            "s", 
+        "url": "https://github.com/login",
+        "forms": [
+            "s",
             "l"
         ]
-    }, 
+    },
     "html/go.telstra.com.au-0.html": {
-        "url": "http://go.telstra.com.au/helpandsupport/?ref=Net-Header2-Corp-contactus", 
-        "types": [
-            "s", 
-            "s", 
-            "s", 
+        "url": "http://go.telstra.com.au/helpandsupport/?ref=Net-Header2-Corp-contactus",
+        "forms": [
+            "s",
+            "s",
+            "s",
             "o"
         ]
-    }, 
+    },
     "html/grantland.com-0.html": {
-        "url": "http://grantland.com/", 
-        "types": [
-            "s", 
+        "url": "http://grantland.com/",
+        "forms": [
+            "s",
             "m"
         ]
-    }, 
+    },
     "html/guerrillagardening.org-0.html": {
-        "url": "http://guerrillagardening.org/community/index.php", 
-        "types": [
-            "l", 
+        "url": "http://guerrillagardening.org/community/index.php",
+        "forms": [
+            "l",
             "l"
         ]
-    }, 
+    },
     "html/guerrillagardening.org-1.html": {
-        "url": "http://guerrillagardening.org/community/index.php?action=register", 
-        "types": [
-            "r", 
+        "url": "http://guerrillagardening.org/community/index.php?action=register",
+        "forms": [
+            "r",
             "l"
         ]
-    }, 
+    },
     "html/idp.unito.it-0.html": {
-        "url": "https://idp.unito.it/idp/multi-login.jsp?actionUrl=%2Fidp%2FAuthn%2FMultilogin", 
-        "types": [
-            "l", 
-            "l", 
+        "url": "https://idp.unito.it/idp/multi-login.jsp?actionUrl=%2Fidp%2FAuthn%2FMultilogin",
+        "forms": [
+            "l",
+            "l",
             "s"
         ]
-    }, 
+    },
     "html/info.pompeiis.com-0.html": {
-        "url": "http://info.pompeiis.com/contact-us/", 
-        "types": [
+        "url": "http://info.pompeiis.com/contact-us/",
+        "forms": [
             "c"
         ]
-    }, 
+    },
     "html/instrumentclinicusa.com-0.html": {
-        "url": "http://instrumentclinicusa.com/index.php?main_page=product_info&cPath=385_388&products_id=2626", 
-        "types": [
-            "s", 
-            "s", 
+        "url": "http://instrumentclinicusa.com/index.php?main_page=product_info&cPath=385_388&products_id=2626",
+        "forms": [
+            "s",
+            "s",
             "o"
         ]
-    }, 
+    },
     "html/instrumentclinicusa.com-1.html": {
-        "url": "http://instrumentclinicusa.com/index.php?main_page=contact_us", 
-        "types": [
-            "s", 
-            "s", 
+        "url": "http://instrumentclinicusa.com/index.php?main_page=contact_us",
+        "forms": [
+            "s",
+            "s",
             "c"
         ]
-    }, 
+    },
     "html/java.com-0.html": {
-        "url": "http://java.com/en/", 
-        "types": [
+        "url": "http://java.com/en/",
+        "forms": [
             "s"
         ]
-    }, 
+    },
     "html/letstalkbitcoin.com-0.html": {
-        "url": "http://letstalkbitcoin.com/forum/board/all", 
-        "types": [
+        "url": "http://letstalkbitcoin.com/forum/board/all",
+        "forms": [
             "o"
         ]
-    }, 
+    },
     "html/letstalkbitcoin.com-1.html": {
-        "url": "http://letstalkbitcoin.com/account", 
-        "types": [
-            "l", 
+        "url": "http://letstalkbitcoin.com/account",
+        "forms": [
+            "l",
             "r"
         ]
-    }, 
+    },
     "html/letstalkbitcoin.com-2.html": {
-        "url": "http://letstalkbitcoin.com/contact-us", 
-        "types": [
+        "url": "http://letstalkbitcoin.com/contact-us",
+        "forms": [
             "c"
         ]
-    }, 
+    },
     "html/listofrandomwords.com-0.html": {
-        "url": "http://listofrandomwords.com/index.cfm?blist", 
-        "types": [
+        "url": "http://listofrandomwords.com/index.cfm?blist",
+        "forms": [
             "o"
         ]
-    }, 
+    },
     "html/lokalavisen.dk-0.html": {
-        "url": "http://lokalavisen.dk/", 
-        "types": [
-            "s", 
+        "url": "http://lokalavisen.dk/",
+        "forms": [
+            "s",
             "s"
         ]
-    }, 
+    },
     "html/memebase.cheezburger.com-0.html": {
-        "url": "http://memebase.cheezburger.com/verydemotivational", 
-        "types": [
-            "s", 
-            "s", 
+        "url": "http://memebase.cheezburger.com/verydemotivational",
+        "forms": [
+            "s",
+            "s",
             "o"
         ]
-    }, 
+    },
     "html/mingle2.com-0.html": {
-        "url": "http://mingle2.com/online-dating/florida", 
-        "types": [
+        "url": "http://mingle2.com/online-dating/florida",
+        "forms": [
             "r"
         ]
-    }, 
+    },
     "html/mingle2.com-1.html": {
-        "url": "http://mingle2.com/user/login", 
-        "types": [
+        "url": "http://mingle2.com/user/login",
+        "forms": [
             "l"
         ]
-    }, 
+    },
     "html/motoride.sk-0.html": {
-        "url": "http://motoride.sk/", 
-        "types": [
-            "l", 
+        "url": "http://motoride.sk/",
+        "forms": [
+            "l",
             "s"
         ]
-    }, 
+    },
     "html/motoride.sk-1.html": {
-        "url": "http://motoride.sk/?P=register", 
-        "types": [
-            "l", 
-            "s", 
+        "url": "http://motoride.sk/?P=register",
+        "forms": [
+            "l",
+            "s",
             "r"
         ]
-    }, 
+    },
     "html/motoride.sk-2.html": {
-        "url": "http://motoride.sk/?P=klub", 
-        "types": [
-            "l", 
-            "s", 
-            "l", 
+        "url": "http://motoride.sk/?P=klub",
+        "forms": [
+            "l",
+            "s",
+            "l",
             "p"
         ]
-    }, 
+    },
     "html/multikino.lt-0.html": {
-        "url": "http://multikino.lt/lt/dabar/", 
-        "types": [
+        "url": "http://multikino.lt/lt/dabar/",
+        "forms": [
             "o"
         ]
-    }, 
+    },
     "html/my.unito.it-0.html": {
-        "url": "http://my.unito.it/unitoWAR/page/unito/publicApps/P4800436191247499780718", 
-        "types": [
-            "s", 
-            "s", 
+        "url": "http://my.unito.it/unitoWAR/page/unito/publicApps/P4800436191247499780718",
+        "forms": [
+            "s",
+            "s",
             "p"
         ]
-    }, 
+    },
     "html/my.unito.it-1.html": {
-        "url": "http://my.unito.it/registrazione", 
-        "types": [
-            "s", 
-            "s", 
+        "url": "http://my.unito.it/registrazione",
+        "forms": [
+            "s",
+            "s",
             "r"
         ]
-    }, 
+    },
     "html/nahodsa.sk-0.html": {
-        "url": "http://nahodsa.sk/", 
-        "types": [
+        "url": "http://nahodsa.sk/",
+        "forms": [
             "s"
         ]
-    }, 
+    },
     "html/nahodsa.sk-1.html": {
-        "url": "http://nahodsa.sk/ako-nakupovat/zakaznicky-servis.html/", 
-        "types": [
-            "s", 
+        "url": "http://nahodsa.sk/ako-nakupovat/zakaznicky-servis.html/",
+        "forms": [
+            "s",
             "m"
         ]
-    }, 
+    },
     "html/nahodsa.sk-2.html": {
-        "url": "http://nahodsa.sk/customer/account/create/", 
-        "types": [
-            "s", 
+        "url": "http://nahodsa.sk/customer/account/create/",
+        "forms": [
+            "s",
             "r"
         ]
-    }, 
+    },
     "html/nahodsa.sk-3.html": {
-        "url": "http://nahodsa.sk/customer/account/login/", 
-        "types": [
-            "s", 
+        "url": "http://nahodsa.sk/customer/account/login/",
+        "forms": [
+            "s",
             "l"
         ]
-    }, 
+    },
     "html/nahodsa.sk-4.html": {
-        "url": "http://nahodsa.sk/customer/account/forgotpassword/", 
-        "types": [
-            "s", 
+        "url": "http://nahodsa.sk/customer/account/forgotpassword/",
+        "forms": [
+            "s",
             "p"
         ]
-    }, 
+    },
     "html/nahodsa.sk-5.html": {
-        "url": "http://nahodsa.sk/children-boys-westway-trainers-1.html", 
-        "types": [
-            "s", 
+        "url": "http://nahodsa.sk/children-boys-westway-trainers-1.html",
+        "forms": [
+            "s",
             "o"
         ]
-    }, 
+    },
     "html/naviny.by-0.html": {
-        "url": "http://naviny.by/", 
-        "types": [
-            "o", 
-            "l", 
-            "m", 
-            "s", 
-            "s", 
-            "s", 
-            "s", 
-            "s", 
-            "o", 
-            "o", 
-            "o", 
+        "url": "http://naviny.by/",
+        "forms": [
+            "o",
+            "l",
+            "m",
+            "s",
+            "s",
+            "s",
+            "s",
+            "s",
+            "o",
+            "o",
+            "o",
             "o"
         ]
-    }, 
+    },
     "html/naviny.by-1.html": {
-        "url": "http://naviny.by/registration", 
-        "types": [
-            "o", 
-            "l", 
-            "m", 
-            "s", 
-            "s", 
-            "s", 
-            "s", 
-            "s", 
+        "url": "http://naviny.by/registration",
+        "forms": [
+            "o",
+            "l",
+            "m",
+            "s",
+            "s",
+            "s",
+            "s",
+            "s",
             "r"
         ]
-    }, 
+    },
     "html/naviny.by-2.html": {
-        "url": "http://naviny.by/services/news/", 
-        "types": [
+        "url": "http://naviny.by/services/news/",
+        "forms": [
             "c"
         ]
-    }, 
+    },
     "html/naviny.by-3.html": {
-        "url": "http://naviny.by/services/feedback/", 
-        "types": [
+        "url": "http://naviny.by/services/feedback/",
+        "forms": [
             "c"
         ]
-    }, 
+    },
     "html/owners.honda.com-0.html": {
-        "url": "https://owners.honda.com/login", 
-        "types": [
-            "s", 
-            "l", 
-            "r", 
+        "url": "https://owners.honda.com/login",
+        "forms": [
+            "s",
+            "l",
+            "r",
             "s"
         ]
-    }, 
+    },
     "html/pasouoquepasou.crtvg.es-0.html": {
-        "url": "http://pasouoquepasou.crtvg.es/user/register?destination=node/671%23comment-form", 
-        "types": [
-            "s", 
+        "url": "http://pasouoquepasou.crtvg.es/user/register?destination=node/671%23comment-form",
+        "forms": [
+            "s",
             "r"
         ]
-    }, 
+    },
     "html/pasouoquepasou.crtvg.es-1.html": {
-        "url": "http://pasouoquepasou.crtvg.es/user/login?destination=node/671%23comment-form", 
-        "types": [
-            "X", 
+        "url": "http://pasouoquepasou.crtvg.es/user/login?destination=node/671%23comment-form",
+        "forms": [
+            "X",
             "l"
         ]
-    }, 
+    },
     "html/pasouoquepasou.crtvg.es-2.html": {
-        "url": "http://pasouoquepasou.crtvg.es/user/password", 
-        "types": [
-            "X", 
+        "url": "http://pasouoquepasou.crtvg.es/user/password",
+        "forms": [
+            "X",
             "p"
         ]
-    }, 
+    },
     "html/ph.bsmarter.ph-0.html": {
-        "url": "http://ph.bsmarter.ph/", 
-        "types": [
+        "url": "http://ph.bsmarter.ph/",
+        "forms": [
             "l"
         ]
-    }, 
+    },
     "html/portal.apps.upenn.edu-0.html": {
-        "url": "https://portal.apps.upenn.edu/penn_portal/view.php", 
-        "types": [
+        "url": "https://portal.apps.upenn.edu/penn_portal/view.php",
+        "forms": [
             "s"
         ]
-    }, 
+    },
     "html/portal.cleanscapes.com-0.html": {
-        "url": "https://portal.cleanscapes.com/cos_etower/", 
-        "types": [
+        "url": "https://portal.cleanscapes.com/cos_etower/",
+        "forms": [
             "l"
         ]
-    }, 
+    },
     "html/portal.cleanscapes.com-1.html": {
-        "url": "https://portal.cleanscapes.com/cos_etower/RegisterNewUser.aspx", 
-        "types": [
+        "url": "https://portal.cleanscapes.com/cos_etower/RegisterNewUser.aspx",
+        "forms": [
             "r"
         ]
-    }, 
+    },
     "html/portal.cleanscapes.com-2.html": {
-        "url": "https://portal.cleanscapes.com/cos_etower/ForgotPassword.aspx", 
-        "types": [
+        "url": "https://portal.cleanscapes.com/cos_etower/ForgotPassword.aspx",
+        "forms": [
             "p"
         ]
-    }, 
+    },
     "html/portal.sgi-usa.org-0.html": {
-        "url": "https://portal.sgi-usa.org/portal/login", 
-        "types": [
+        "url": "https://portal.sgi-usa.org/portal/login",
+        "forms": [
             "l"
         ]
-    }, 
+    },
     "html/portal.sgi-usa.org-1.html": {
-        "url": "https://portal.sgi-usa.org/portal/login", 
-        "types": [
+        "url": "https://portal.sgi-usa.org/portal/login",
+        "forms": [
             "r"
         ]
-    }, 
+    },
     "html/portal.sgi-usa.org-2.html": {
-        "url": "https://portal.sgi-usa.org/portal/pinreg", 
-        "types": [
+        "url": "https://portal.sgi-usa.org/portal/pinreg",
+        "forms": [
             "r"
         ]
-    }, 
+    },
     "html/postr.hu-0.html": {
-        "url": "http://postr.hu/", 
-        "types": [
-            "s", 
+        "url": "http://postr.hu/",
+        "forms": [
+            "s",
             "o"
         ]
-    }, 
+    },
     "html/postr.hu-1.html": {
-        "url": "http://postr.hu/regisztracio/elsolepes", 
-        "types": [
-            "X", 
-            "r", 
-            "l", 
-            "l", 
-            "l", 
+        "url": "http://postr.hu/regisztracio/elsolepes",
+        "forms": [
+            "X",
+            "r",
+            "l",
+            "l",
+            "l",
             "l"
         ]
-    }, 
+    },
     "html/postr.hu-2.html": {
-        "url": "http://postr.hu/belepes/", 
-        "types": [
-            "X", 
-            "l", 
-            "X", 
-            "X", 
-            "X", 
+        "url": "http://postr.hu/belepes/",
+        "forms": [
+            "X",
+            "l",
+            "X",
+            "X",
+            "X",
             "X"
         ]
-    }, 
+    },
     "html/premium.wpmudev.org-0.html": {
-        "url": "http://premium.wpmudev.org/", 
-        "types": [
-            "l", 
-            "l", 
+        "url": "http://premium.wpmudev.org/",
+        "forms": [
+            "l",
+            "l",
             "m"
         ]
-    }, 
+    },
     "html/pypi.python.org-0.html": {
-        "url": "https://pypi.python.org/pypi", 
-        "types": [
+        "url": "https://pypi.python.org/pypi",
+        "forms": [
             "s"
         ]
-    }, 
+    },
     "html/pypi.python.org-1.html": {
-        "url": "https://pypi.python.org/pypi?%3Aaction=register_form", 
-        "types": [
-            "s", 
+        "url": "https://pypi.python.org/pypi?%3Aaction=register_form",
+        "forms": [
+            "s",
             "r"
         ]
-    }, 
+    },
     "html/pypi.python.org-2.html": {
-        "url": "https://pypi.python.org/pypi?%3Aaction=forgotten_password_form", 
-        "types": [
-            "s", 
+        "url": "https://pypi.python.org/pypi?%3Aaction=forgotten_password_form",
+        "forms": [
+            "s",
             "p"
         ]
-    }, 
+    },
     "html/quotes.automotive.com-0.html": {
-        "url": "http://quotes.automotive.com/?fp=1,2&reset=1&dis=C12DBF5B-355B-4E86-91EB-D04F4BE31C26&", 
-        "types": [
+        "url": "http://quotes.automotive.com/?fp=1,2&reset=1&dis=C12DBF5B-355B-4E86-91EB-D04F4BE31C26&",
+        "forms": [
             "o"
         ]
-    }, 
+    },
     "html/rentals.petswelcome.com-0.html": {
-        "url": "http://rentals.petswelcome.com/new-rental.php", 
-        "types": [
+        "url": "http://rentals.petswelcome.com/new-rental.php",
+        "forms": [
             "o"
         ]
-    }, 
+    },
     "html/secure.businessweek.com-0.html": {
-        "url": "https://secure.businessweek.com/register", 
-        "types": [
+        "url": "https://secure.businessweek.com/register",
+        "forms": [
             "r"
         ]
-    }, 
+    },
     "html/secure.dhd24.com-0.html": {
-        "url": "https://secure.dhd24.com/login.php?url=", 
-        "types": [
+        "url": "https://secure.dhd24.com/login.php?url=",
+        "forms": [
             "l"
         ]
-    }, 
+    },
     "html/secure.dhd24.com-1.html": {
-        "url": "https://secure.dhd24.com/register.php?_odc=0&url=http%3A%2F%2Fwww.dhd24.com%2Fazv%2F", 
-        "types": [
+        "url": "https://secure.dhd24.com/register.php?_odc=0&url=http%3A%2F%2Fwww.dhd24.com%2Fazv%2F",
+        "forms": [
             "r"
         ]
-    }, 
+    },
     "html/selfservice.dstv.com-0.html": {
-        "url": "http://selfservice.dstv.com/", 
-        "types": [
-            "l", 
-            "p", 
+        "url": "http://selfservice.dstv.com/",
+        "forms": [
+            "l",
+            "p",
             "r"
         ]
-    }, 
+    },
     "html/signon.bigpond.com-0.html": {
-        "url": "https://signon.bigpond.com/login?goto=https://my.bigpond.com/mybigpond/default.do?ref=Net-Header2-MyBigPond", 
-        "types": [
-            "s", 
+        "url": "https://signon.bigpond.com/login?goto=https://my.bigpond.com/mybigpond/default.do?ref=Net-Header2-MyBigPond",
+        "forms": [
+            "s",
             "l"
         ]
-    }, 
+    },
     "html/signup.mlive.com-0.html": {
-        "url": "https://signup.mlive.com/register/?return_to=http%3A%2F%2Fwww.mlive.com%2Fredwings%2Findex.ssf%2F2014%2F12%2Flive_updates_detroit_red_wings_22.html", 
-        "types": [
-            "s", 
+        "url": "https://signup.mlive.com/register/?return_to=http%3A%2F%2Fwww.mlive.com%2Fredwings%2Findex.ssf%2F2014%2F12%2Flive_updates_detroit_red_wings_22.html",
+        "forms": [
+            "s",
             "r"
         ]
-    }, 
+    },
     "html/signup.na.leagueoflegends.com-0.html": {
-        "url": "https://signup.na.leagueoflegends.com/en/signup/index?realm_key=na", 
-        "types": [
+        "url": "https://signup.na.leagueoflegends.com/en/signup/index?realm_key=na",
+        "forms": [
             "r"
         ]
-    }, 
+    },
     "html/sourceforge.net-0.html": {
-        "url": "https://sourceforge.net/user/registration", 
-        "types": [
-            "s", 
+        "url": "https://sourceforge.net/user/registration",
+        "forms": [
+            "s",
             "r"
         ]
-    }, 
+    },
     "html/sourceforge.net-1.html": {
-        "url": "https://sourceforge.net/auth/?return_to=/", 
-        "types": [
-            "s", 
+        "url": "https://sourceforge.net/auth/?return_to=/",
+        "forms": [
+            "s",
             "l"
         ]
-    }, 
+    },
     "html/sourceforge.net-2.html": {
-        "url": "https://sourceforge.net/auth/forgotten_password", 
-        "types": [
-            "s", 
+        "url": "https://sourceforge.net/auth/forgotten_password",
+        "forms": [
+            "s",
             "p"
         ]
-    }, 
+    },
     "html/spike.wharton.upenn.edu-0.html": {
-        "url": "https://spike.wharton.upenn.edu/myaccount/index.cfm", 
-        "types": [
-            "s", 
+        "url": "https://spike.wharton.upenn.edu/myaccount/index.cfm",
+        "forms": [
+            "s",
             "l"
         ]
-    }, 
+    },
     "html/star-res.cc.swin.edu.au-0.html": {
-        "url": "https://star-res.cc.swin.edu.au/ULStarRezPortal/GeneratedSection.aspx?Params=L9ezxPcQnQtLA1zKnkFfGY5TDyFpM5Y8", 
-        "types": [
+        "url": "https://star-res.cc.swin.edu.au/ULStarRezPortal/GeneratedSection.aspx?Params=L9ezxPcQnQtLA1zKnkFfGY5TDyFpM5Y8",
+        "forms": [
             "r"
         ]
-    }, 
+    },
     "html/support.mageworx.com-0.html": {
-        "url": "http://support.mageworx.com/index.php?", 
-        "types": [
-            "l", 
+        "url": "http://support.mageworx.com/index.php?",
+        "forms": [
+            "l",
             "s"
         ]
-    }, 
+    },
     "html/support.mageworx.com-1.html": {
-        "url": "http://support.mageworx.com/index.php?/Tickets/Submit", 
-        "types": [
-            "l", 
-            "s", 
+        "url": "http://support.mageworx.com/index.php?/Tickets/Submit",
+        "forms": [
+            "l",
+            "s",
             "o"
         ]
-    }, 
+    },
     "html/theb52s.shop.livenation.com-0.html": {
-        "url": "http://theb52s.shop.livenation.com/", 
-        "types": [
-            "o", 
-            "o", 
-            "o", 
-            "o", 
-            "o", 
-            "o", 
-            "o", 
-            "o", 
-            "o", 
-            "o", 
-            "o", 
+        "url": "http://theb52s.shop.livenation.com/",
+        "forms": [
+            "o",
+            "o",
+            "o",
+            "o",
+            "o",
+            "o",
+            "o",
+            "o",
+            "o",
+            "o",
+            "o",
             "m"
         ]
-    }, 
+    },
     "html/torrentfreak.com-0.html": {
-        "url": "https://torrentfreak.com/tag/torrentspy/", 
-        "types": [
+        "url": "https://torrentfreak.com/tag/torrentspy/",
+        "forms": [
             "s"
         ]
-    }, 
+    },
     "html/trendo.bg-0.html": {
-        "url": "http://trendo.bg/", 
-        "types": [
-            "s", 
+        "url": "http://trendo.bg/",
+        "forms": [
+            "s",
             "m"
         ]
-    }, 
+    },
     "html/trendo.bg-1.html": {
-        "url": "http://trendo.bg/user/signin", 
-        "types": [
-            "s", 
+        "url": "http://trendo.bg/user/signin",
+        "forms": [
+            "s",
             "l"
         ]
-    }, 
+    },
     "html/trendo.bg-2.html": {
-        "url": "http://trendo.bg/user/forgot_password", 
-        "types": [
-            "s", 
+        "url": "http://trendo.bg/user/forgot_password",
+        "forms": [
+            "s",
             "p"
         ]
-    }, 
+    },
     "html/us.pycon.org-0.html": {
-        "url": "https://us.pycon.org/2015/account/signup/", 
-        "types": [
+        "url": "https://us.pycon.org/2015/account/signup/",
+        "forms": [
             "r"
         ]
-    }, 
+    },
     "html/us.pycon.org-1.html": {
-        "url": "https://us.pycon.org/2015/account/login/", 
-        "types": [
-            "l", 
+        "url": "https://us.pycon.org/2015/account/login/",
+        "forms": [
+            "l",
             "l"
         ]
-    }, 
+    },
     "html/us.pycon.org-2.html": {
-        "url": "https://us.pycon.org/2015/account/password/reset/", 
-        "types": [
+        "url": "https://us.pycon.org/2015/account/password/reset/",
+        "forms": [
             "p"
         ]
-    }, 
+    },
     "html/watchseries.ag-0.html": {
-        "url": "http://watchseries.ag/", 
-        "types": [
+        "url": "http://watchseries.ag/",
+        "forms": [
             "s"
         ]
-    }, 
+    },
     "html/watchseries.ag-1.html": {
-        "url": "http://watchseries.ag/contact", 
-        "types": [
-            "s", 
+        "url": "http://watchseries.ag/contact",
+        "forms": [
+            "s",
             "c"
         ]
-    }, 
+    },
     "html/watchseries.ag-2.html": {
-        "url": "http://watchseries.ag/login", 
-        "types": [
-            "s", 
-            "r", 
+        "url": "http://watchseries.ag/login",
+        "forms": [
+            "s",
+            "r",
             "l"
         ]
-    }, 
+    },
     "html/weblogin.pennkey.upenn.edu-0.html": {
-        "url": "https://weblogin.pennkey.upenn.edu/login?factors=UPENN.EDU,UPENN.EDU-PORTAL&cosign-isc-seo-portal_apps_prod-0&https://portal.apps.upenn.edu/penn_portal/portalli.php", 
-        "types": [
+        "url": "https://weblogin.pennkey.upenn.edu/login?factors=UPENN.EDU,UPENN.EDU-PORTAL&cosign-isc-seo-portal_apps_prod-0&https://portal.apps.upenn.edu/penn_portal/portalli.php",
+        "forms": [
             "l"
         ]
-    }, 
+    },
     "html/webstore.northfieldlines.com-0.html": {
-        "url": "https://webstore.northfieldlines.com/ticketing/create-account.asp?p=%2Fticketing%2Fterms-conditions.asp&curr=buXWrZfWsJrWs53stqDf4Lqk8eS-qOf288Ot-vv4yLLxAcy28gXQugf6CtW_DPwP2sQACRMG4MoGDxkJ5tAMFR8gE-3XExwmJxf03ij34ST6", 
-        "types": [
-            "l", 
+        "url": "https://webstore.northfieldlines.com/ticketing/create-account.asp?p=%2Fticketing%2Fterms-conditions.asp&curr=buXWrZfWsJrWs53stqDf4Lqk8eS-qOf288Ot-vv4yLLxAcy28gXQugf6CtW_DPwP2sQACRMG4MoGDxkJ5tAMFR8gE-3XExwmJxf03ij34ST6",
+        "forms": [
+            "l",
             "r"
         ]
-    }, 
+    },
     "html/webstore.northfieldlines.com-1.html": {
-        "url": "https://webstore.northfieldlines.com/ticketing/forgot-password.asp?p=/ticketing/terms-conditions.asp&curr=dezdtJ7dt6HduqTzvafm58Gr-OvFr-79-sq0AQL_z7n4CNO9-QzXwQ4BEdzGEwMW4csHEBoN59ENFiAQ7dcTHCYnGvTeGiMtLh775S_-6CsB", 
-        "types": [
-            "l", 
+        "url": "https://webstore.northfieldlines.com/ticketing/forgot-password.asp?p=/ticketing/terms-conditions.asp&curr=dezdtJ7dt6HduqTzvafm58Gr-OvFr-79-sq0AQL_z7n4CNO9-QzXwQ4BEdzGEwMW4csHEBoN59ENFiAQ7dcTHCYnGvTeGiMtLh775S_-6CsB",
+        "forms": [
+            "l",
             "p"
         ]
-    }, 
+    },
     "html/webstore.northfieldlines.com-2.html": {
-        "url": "https://webstore.northfieldlines.com/ticketing/", 
-        "types": [
-            "l", 
+        "url": "https://webstore.northfieldlines.com/ticketing/",
+        "forms": [
+            "l",
             "o"
         ]
-    }, 
+    },
     "html/www.agentcenter.windstarcruises.com-0.html": {
-        "url": "http://www.agentcenter.windstarcruises.com/create-account.aspx", 
-        "types": [
+        "url": "http://www.agentcenter.windstarcruises.com/create-account.aspx",
+        "forms": [
             "r"
         ]
-    }, 
+    },
     "html/www.agentcenter.windstarcruises.com-1.html": {
-        "url": "http://www.agentcenter.windstarcruises.com/default.aspx", 
-        "types": [
+        "url": "http://www.agentcenter.windstarcruises.com/default.aspx",
+        "forms": [
             "l"
         ]
-    }, 
+    },
     "html/www.anglaisfacile.com-0.html": {
-        "url": "http://www.anglaisfacile.com/", 
-        "types": [
-            "s", 
-            "l", 
-            "o", 
+        "url": "http://www.anglaisfacile.com/",
+        "forms": [
+            "s",
+            "l",
+            "o",
             "o"
         ]
-    }, 
+    },
     "html/www.bankrate.com-0.html": {
-        "url": "http://www.bankrate.com/", 
-        "types": [
+        "url": "http://www.bankrate.com/",
+        "forms": [
             "o"
         ]
-    }, 
+    },
     "html/www.betexplorer.com-0.html": {
-        "url": "http://www.betexplorer.com/soccer/", 
-        "types": [
+        "url": "http://www.betexplorer.com/soccer/",
+        "forms": [
             "s"
         ]
-    }, 
+    },
     "html/www.betexplorer.com-1.html": {
-        "url": "http://www.betexplorer.com/user/registration/", 
-        "types": [
-            "r", 
+        "url": "http://www.betexplorer.com/user/registration/",
+        "forms": [
+            "r",
             "s"
         ]
-    }, 
+    },
     "html/www.beyondtherack.com-0.html": {
-        "url": "http://www.beyondtherack.com/event/calendar", 
-        "types": [
-            "r", 
-            "l", 
+        "url": "http://www.beyondtherack.com/event/calendar",
+        "forms": [
+            "r",
+            "l",
             "p"
         ]
-    }, 
+    },
     "html/www.bikeforums.net-0.html": {
-        "url": "http://www.bikeforums.net/forum.php", 
-        "types": [
-            "l", 
-            "s", 
-            "o", 
+        "url": "http://www.bikeforums.net/forum.php",
+        "forms": [
+            "l",
+            "s",
+            "o",
             "o"
         ]
-    }, 
+    },
     "html/www.bikeforums.net-1.html": {
-        "url": "http://www.bikeforums.net/register.php", 
-        "types": [
-            "l", 
-            "s", 
-            "r", 
+        "url": "http://www.bikeforums.net/register.php",
+        "forms": [
+            "l",
+            "s",
+            "r",
             "o"
         ]
-    }, 
+    },
     "html/www.bikeradar.com-0.html": {
-        "url": "http://www.bikeradar.com/forums/viewforum.php?f=40058", 
-        "types": [
-            "s", 
-            "s", 
-            "o", 
+        "url": "http://www.bikeradar.com/forums/viewforum.php?f=40058",
+        "forms": [
+            "s",
+            "s",
+            "o",
             "o"
         ]
-    }, 
+    },
     "html/www.bilbasen.dk-0.html": {
-        "url": "http://www.bilbasen.dk/", 
-        "types": [
-            "s", 
+        "url": "http://www.bilbasen.dk/",
+        "forms": [
+            "s",
             "s"
         ]
-    }, 
+    },
     "html/www.bilbasen.dk-1.html": {
-        "url": "https://www.bilbasen.dk/bruger/log-ind", 
-        "types": [
-            "s", 
+        "url": "https://www.bilbasen.dk/bruger/log-ind",
+        "forms": [
+            "s",
             "l"
         ]
-    }, 
+    },
     "html/www.bilbasen.dk-2.html": {
-        "url": "https://www.bilbasen.dk/bruger/opret", 
-        "types": [
-            "s", 
+        "url": "https://www.bilbasen.dk/bruger/opret",
+        "forms": [
+            "s",
             "r"
         ]
-    }, 
+    },
     "html/www.bilbasen.dk-3.html": {
-        "url": "https://www.bilbasen.dk/bruger/glemt-adgangskode", 
-        "types": [
-            "s", 
+        "url": "https://www.bilbasen.dk/bruger/glemt-adgangskode",
+        "forms": [
+            "s",
             "p"
         ]
-    }, 
+    },
     "html/www.boston.com-0.html": {
-        "url": "http://www.boston.com/community/forums", 
-        "types": [
-            "s", 
-            "s", 
-            "s", 
-            "o", 
+        "url": "http://www.boston.com/community/forums",
+        "forms": [
+            "s",
+            "s",
+            "s",
+            "o",
             "o"
         ]
-    }, 
+    },
     "html/www.boston.com-1.html": {
-        "url": "https://www.boston.com/login", 
-        "types": [
+        "url": "https://www.boston.com/login",
+        "forms": [
             "l"
         ]
-    }, 
+    },
     "html/www.boston.com-2.html": {
-        "url": "https://www.boston.com/eom/SysConfig/WebPortal/BDC/Framework/regi/forgot-password-step1.jsp", 
-        "types": [
+        "url": "https://www.boston.com/eom/SysConfig/WebPortal/BDC/Framework/regi/forgot-password-step1.jsp",
+        "forms": [
             "p"
         ]
-    }, 
+    },
     "html/www.boston.com-3.html": {
-        "url": "https://www.boston.com/eom/SysConfig/WebPortal/BDC/Framework/regi/regi-login-register.jsp", 
-        "types": [
-            "r", 
+        "url": "https://www.boston.com/eom/SysConfig/WebPortal/BDC/Framework/regi/regi-login-register.jsp",
+        "forms": [
+            "r",
             "l"
         ]
-    }, 
+    },
     "html/www.brookdalecc.edu-0.html": {
-        "url": "http://www.brookdalecc.edu/", 
-        "types": [
+        "url": "http://www.brookdalecc.edu/",
+        "forms": [
             "s"
         ]
-    }, 
+    },
     "html/www.brookdalecc.edu-1.html": {
-        "url": "http://www.brookdalecc.edu/about/contact-us/", 
-        "types": [
-            "s", 
+        "url": "http://www.brookdalecc.edu/about/contact-us/",
+        "forms": [
+            "s",
             "c"
         ]
-    }, 
+    },
     "html/www.bsuir.by-0.html": {
-        "url": "http://www.bsuir.by/", 
-        "types": [
+        "url": "http://www.bsuir.by/",
+        "forms": [
             "s"
         ]
-    }, 
+    },
     "html/www.bsuir.by-1.html": {
-        "url": "http://www.bsuir.by/conference/", 
-        "types": [
-            "s", 
+        "url": "http://www.bsuir.by/conference/",
+        "forms": [
+            "s",
             "l"
         ]
-    }, 
+    },
     "html/www.bsuir.by-2.html": {
-        "url": "http://www.bsuir.by/conference/ucp.php?mode=register&sid=ea6cd060879d8f1b281b139b2b14b262", 
-        "types": [
-            "s", 
-            "o", 
+        "url": "http://www.bsuir.by/conference/ucp.php?mode=register&sid=ea6cd060879d8f1b281b139b2b14b262",
+        "forms": [
+            "s",
+            "o",
             "r"
         ]
-    }, 
+    },
     "html/www.bsuir.by-3.html": {
-        "url": "http://www.bsuir.by/conference/ucp.php?mode=register", 
-        "types": [
-            "s", 
-            "o", 
+        "url": "http://www.bsuir.by/conference/ucp.php?mode=register",
+        "forms": [
+            "s",
+            "o",
             "r"
         ]
-    }, 
+    },
     "html/www.bsuir.by-4.html": {
-        "url": "http://www.bsuir.by/online/showpage.jsp?PageID=81055", 
-        "types": [
-            "s", 
+        "url": "http://www.bsuir.by/online/showpage.jsp?PageID=81055",
+        "forms": [
+            "s",
             "c"
         ]
-    }, 
+    },
     "html/www.businessweek.com-0.html": {
-        "url": "http://www.businessweek.com/", 
-        "types": [
-            "l", 
-            "s", 
-            "s", 
+        "url": "http://www.businessweek.com/",
+        "forms": [
+            "l",
+            "s",
+            "s",
             "m"
         ]
-    }, 
+    },
     "html/www.caltronind.com-0.html": {
-        "url": "http://www.caltronind.com/contact", 
-        "types": [
-            "c", 
+        "url": "http://www.caltronind.com/contact",
+        "forms": [
+            "c",
             "s"
         ]
-    }, 
+    },
     "html/www.capitalbikeshare.com-0.html": {
-        "url": "https://www.capitalbikeshare.com/", 
-        "types": [
+        "url": "https://www.capitalbikeshare.com/",
+        "forms": [
             "m"
         ]
-    }, 
+    },
     "html/www.capitalbikeshare.com-1.html": {
-        "url": "https://www.capitalbikeshare.com/signup", 
-        "types": [
+        "url": "https://www.capitalbikeshare.com/signup",
+        "forms": [
             "r"
         ]
-    }, 
+    },
     "html/www.capitalbikeshare.com-2.html": {
-        "url": "https://www.capitalbikeshare.com/login", 
-        "types": [
-            "l", 
+        "url": "https://www.capitalbikeshare.com/login",
+        "forms": [
+            "l",
             "p"
         ]
-    }, 
+    },
     "html/www.cardekho.com-0.html": {
-        "url": "http://www.cardekho.com/", 
-        "types": [
+        "url": "http://www.cardekho.com/",
+        "forms": [
             "s"
         ]
-    }, 
+    },
     "html/www.cardekho.com-1.html": {
-        "url": "http://www.cardekho.com/userlogin.htm", 
-        "types": [
-            "s", 
-            "l", 
+        "url": "http://www.cardekho.com/userlogin.htm",
+        "forms": [
+            "s",
+            "l",
             "p"
         ]
-    }, 
+    },
     "html/www.cardekho.com-2.html": {
-        "url": "http://www.cardekho.com/userregister.htm", 
-        "types": [
-            "s", 
+        "url": "http://www.cardekho.com/userregister.htm",
+        "forms": [
+            "s",
             "r"
         ]
-    }, 
+    },
     "html/www.cardekho.com-3.html": {
-        "url": "http://www.cardekho.com/feedback", 
-        "types": [
+        "url": "http://www.cardekho.com/feedback",
+        "forms": [
             "c"
         ]
-    }, 
+    },
     "html/www.cccco.edu-0.html": {
-        "url": "http://www.cccco.edu/", 
-        "types": [
+        "url": "http://www.cccco.edu/",
+        "forms": [
             "o"
         ]
-    }, 
+    },
     "html/www.citeab.com-0.html": {
-        "url": "http://www.citeab.com/", 
-        "types": [
-            "s", 
+        "url": "http://www.citeab.com/",
+        "forms": [
+            "s",
             "m"
         ]
-    }, 
+    },
     "html/www.citeab.com-1.html": {
-        "url": "http://www.citeab.com/contact", 
-        "types": [
-            "s", 
+        "url": "http://www.citeab.com/contact",
+        "forms": [
+            "s",
             "c"
         ]
-    }, 
+    },
     "html/www.communitycomm.com-0.html": {
-        "url": "http://www.communitycomm.com/index.php?link=contact", 
-        "types": [
+        "url": "http://www.communitycomm.com/index.php?link=contact",
+        "forms": [
             "c"
         ]
-    }, 
+    },
     "html/www.consumerreports.org-0.html": {
-        "url": "http://www.consumerreports.org/cro/index.htm", 
-        "types": [
-            "l", 
+        "url": "http://www.consumerreports.org/cro/index.htm",
+        "forms": [
+            "l",
             "s"
         ]
-    }, 
+    },
     "html/www.crtvg.es-0.html": {
-        "url": "http://www.crtvg.es/tvg/tvg-en-directo", 
-        "types": [
-            "l", 
+        "url": "http://www.crtvg.es/tvg/tvg-en-directo",
+        "forms": [
+            "l",
             "s"
         ]
-    }, 
+    },
     "html/www.crtvg.es-1.html": {
-        "url": "http://www.crtvg.es/ver-despois", 
-        "types": [
-            "X", 
-            "X", 
+        "url": "http://www.crtvg.es/ver-despois",
+        "forms": [
+            "X",
+            "X",
             "l"
         ]
-    }, 
+    },
     "html/www.crtvg.es-2.html": {
-        "url": "http://www.crtvg.es/rexistro", 
-        "types": [
-            "X", 
-            "X", 
+        "url": "http://www.crtvg.es/rexistro",
+        "forms": [
+            "X",
+            "X",
             "r"
         ]
-    }, 
+    },
     "html/www.crtvg.es-3.html": {
-        "url": "http://www.crtvg.es/cambiar-contrasinal", 
-        "types": [
-            "X", 
-            "X", 
+        "url": "http://www.crtvg.es/cambiar-contrasinal",
+        "forms": [
+            "X",
+            "X",
             "p"
         ]
-    }, 
+    },
     "html/www.debian-administration.org-0.html": {
-        "url": "http://www.debian-administration.org/", 
-        "types": [
-            "l", 
+        "url": "http://www.debian-administration.org/",
+        "forms": [
+            "l",
             "o"
         ]
-    }, 
+    },
     "html/www.debian-administration.org-1.html": {
-        "url": "http://www.debian-administration.org/create/user/", 
-        "types": [
-            "r", 
-            "l", 
+        "url": "http://www.debian-administration.org/create/user/",
+        "forms": [
+            "r",
+            "l",
             "o"
         ]
-    }, 
+    },
     "html/www.debian-administration.org-2.html": {
-        "url": "http://www.debian-administration.org/login", 
-        "types": [
-            "l", 
-            "l", 
+        "url": "http://www.debian-administration.org/login",
+        "forms": [
+            "l",
+            "l",
             "o"
         ]
-    }, 
+    },
     "html/www.debianhelp.org-0.html": {
-        "url": "http://www.debianhelp.org/", 
-        "types": [
-            "s", 
-            "l", 
+        "url": "http://www.debianhelp.org/",
+        "forms": [
+            "s",
+            "l",
             "o"
         ]
-    }, 
+    },
     "html/www.debianhelp.org-1.html": {
-        "url": "http://www.debianhelp.org/user/register", 
-        "types": [
-            "s", 
+        "url": "http://www.debianhelp.org/user/register",
+        "forms": [
+            "s",
             "r"
         ]
-    }, 
+    },
     "html/www.debianhelp.org-2.html": {
-        "url": "http://www.debianhelp.org/user/password", 
-        "types": [
-            "s", 
+        "url": "http://www.debianhelp.org/user/password",
+        "forms": [
+            "s",
             "p"
         ]
-    }, 
+    },
     "html/www.dhd24.com-0.html": {
-        "url": "http://www.dhd24.com/", 
-        "types": [
+        "url": "http://www.dhd24.com/",
+        "forms": [
             "s"
         ]
-    }, 
+    },
     "html/www.digitaltrends.com-0.html": {
-        "url": "http://www.digitaltrends.com/", 
-        "types": [
+        "url": "http://www.digitaltrends.com/",
+        "forms": [
             "s"
         ]
-    }, 
+    },
     "html/www.disasterkleen.com-0.html": {
-        "url": "http://www.disasterkleen.com/", 
-        "types": [
+        "url": "http://www.disasterkleen.com/",
+        "forms": [
             "c"
         ]
-    }, 
+    },
     "html/www.elandroidelibre.com-0.html": {
-        "url": "http://www.elandroidelibre.com/", 
-        "types": [
+        "url": "http://www.elandroidelibre.com/",
+        "forms": [
             "s"
         ]
-    }, 
+    },
     "html/www.elandroidelibre.com-1.html": {
-        "url": "http://www.elandroidelibre.com/preguntas/register", 
-        "types": [
-            "o", 
-            "r", 
+        "url": "http://www.elandroidelibre.com/preguntas/register",
+        "forms": [
+            "o",
+            "r",
             "s"
         ]
-    }, 
+    },
     "html/www.elandroidelibre.com-2.html": {
-        "url": "http://www.elandroidelibre.com/preguntas/login", 
-        "types": [
-            "o", 
-            "l", 
+        "url": "http://www.elandroidelibre.com/preguntas/login",
+        "forms": [
+            "o",
+            "l",
             "s"
         ]
-    }, 
+    },
     "html/www.escmid.org-0.html": {
-        "url": "https://www.escmid.org/news_discussion/", 
-        "types": [
-            "l", 
-            "s", 
+        "url": "https://www.escmid.org/news_discussion/",
+        "forms": [
+            "l",
+            "s",
             "m"
         ]
-    }, 
+    },
     "html/www.escmid.org-1.html": {
-        "url": "https://www.escmid.org/membership_organization/membership/online_registration_form/personal_data/", 
-        "types": [
-            "r", 
-            "l", 
-            "s", 
+        "url": "https://www.escmid.org/membership_organization/membership/online_registration_form/personal_data/",
+        "forms": [
+            "r",
+            "l",
+            "s",
             "m"
         ]
-    }, 
+    },
     "html/www.f-1.lt-0.html": {
-        "url": "http://www.f-1.lt/", 
-        "types": [
-            "l", 
-            "s", 
+        "url": "http://www.f-1.lt/",
+        "forms": [
+            "l",
+            "s",
             "l"
         ]
-    }, 
+    },
     "html/www.f-1.lt-1.html": {
-        "url": "http://www.f-1.lt/registracija.php", 
-        "types": [
-            "l", 
-            "r", 
+        "url": "http://www.f-1.lt/registracija.php",
+        "forms": [
+            "l",
+            "r",
             "l"
         ]
-    }, 
+    },
     "html/www.f-1.lt-2.html": {
-        "url": "http://www.f-1.lt/priminti.php", 
-        "types": [
+        "url": "http://www.f-1.lt/priminti.php",
+        "forms": [
             "p"
         ]
-    }, 
+    },
     "html/www.familjeliv.se-0.html": {
-        "url": "http://www.familjeliv.se/", 
-        "types": [
-            "l", 
+        "url": "http://www.familjeliv.se/",
+        "forms": [
+            "l",
             "s"
         ]
-    }, 
+    },
     "html/www.familjeliv.se-1.html": {
-        "url": "http://www.familjeliv.se/register", 
-        "types": [
-            "X", 
-            "X", 
+        "url": "http://www.familjeliv.se/register",
+        "forms": [
+            "X",
+            "X",
             "r"
         ]
-    }, 
+    },
     "html/www.familjeliv.se-2.html": {
-        "url": "http://www.familjeliv.se/password", 
-        "types": [
-            "l", 
-            "s", 
+        "url": "http://www.familjeliv.se/password",
+        "forms": [
+            "l",
+            "s",
             "p"
         ]
-    }, 
+    },
     "html/www.farodevigo.es-0.html": {
-        "url": "http://www.farodevigo.es/", 
-        "types": [
-            "s", 
+        "url": "http://www.farodevigo.es/",
+        "forms": [
+            "s",
             "o"
         ]
-    }, 
+    },
     "html/www.filetransit.com-0.html": {
-        "url": "http://www.filetransit.com/", 
-        "types": [
+        "url": "http://www.filetransit.com/",
+        "forms": [
             "s"
         ]
-    }, 
+    },
     "html/www.filetransit.com-1.html": {
-        "url": "http://www.filetransit.com/index.php?action=contact", 
-        "types": [
-            "s", 
+        "url": "http://www.filetransit.com/index.php?action=contact",
+        "forms": [
+            "s",
             "c"
         ]
-    }, 
+    },
     "html/www.food.com-0.html": {
-        "url": "http://www.food.com/", 
-        "types": [
-            "s", 
-            "s", 
-            "s", 
-            "m", 
+        "url": "http://www.food.com/",
+        "forms": [
+            "s",
+            "s",
+            "s",
+            "m",
             "s"
         ]
-    }, 
+    },
     "html/www.forsakringskassan.se-0.html": {
-        "url": "http://www.forsakringskassan.se/privatpers/!ut/p/a1/04_Sj9CPykssy0xPLMnMz0vMAfGjzOItjAx8nZwMHQ0sHM0MDTwNPUIMA_2cgly8TYEKIoEKDHAARwNC-sP1o8BK8JhQkBthkO6oqAgATOTWZw!!/dl5/d5/L2dBISEvZ0FBIS9nQSEh/", 
-        "types": [
+        "url": "http://www.forsakringskassan.se/privatpers/!ut/p/a1/04_Sj9CPykssy0xPLMnMz0vMAfGjzOItjAx8nZwMHQ0sHM0MDTwNPUIMA_2cgly8TYEKIoEKDHAARwNC-sP1o8BK8JhQkBthkO6oqAgATOTWZw!!/dl5/d5/L2dBISEvZ0FBIS9nQSEh/",
+        "forms": [
             "s"
         ]
-    }, 
+    },
     "html/www.gardenstew.com-0.html": {
-        "url": "http://www.gardenstew.com/", 
-        "types": [
+        "url": "http://www.gardenstew.com/",
+        "forms": [
             "s"
         ]
-    }, 
+    },
     "html/www.gardenstew.com-1.html": {
-        "url": "http://www.gardenstew.com/profile.php?mode=register", 
-        "types": [
+        "url": "http://www.gardenstew.com/profile.php?mode=register",
+        "forms": [
             "s"
         ]
-    }, 
+    },
     "html/www.gardenstew.com-2.html": {
-        "url": "http://www.gardenstew.com/profile.php?mode=register&agreed=true", 
-        "types": [
-            "s", 
+        "url": "http://www.gardenstew.com/profile.php?mode=register&agreed=true",
+        "forms": [
+            "s",
             "r"
         ]
-    }, 
+    },
     "html/www.gardenstew.com-3.html": {
-        "url": "http://www.gardenstew.com/login.php", 
-        "types": [
-            "s", 
+        "url": "http://www.gardenstew.com/login.php",
+        "forms": [
+            "s",
             "l"
         ]
-    }, 
+    },
     "html/www.gratka.pl-0.html": {
-        "url": "http://www.gratka.pl/", 
-        "types": [
+        "url": "http://www.gratka.pl/",
+        "forms": [
             "s"
         ]
-    }, 
+    },
     "html/www.gratka.pl-1.html": {
-        "url": "https://www.gratka.pl/konto/rejestracja/?url_powrotu=http://www.gratka.pl/profil/logowanie", 
-        "types": [
+        "url": "https://www.gratka.pl/konto/rejestracja/?url_powrotu=http://www.gratka.pl/profil/logowanie",
+        "forms": [
             "r"
         ]
-    }, 
+    },
     "html/www.hautelook.com-0.html": {
-        "url": "https://www.hautelook.com/", 
-        "types": [
+        "url": "https://www.hautelook.com/",
+        "forms": [
             "r"
         ]
-    }, 
+    },
     "html/www.hautelook.com-1.html": {
-        "url": "https://www.hautelook.com/login", 
-        "types": [
+        "url": "https://www.hautelook.com/login",
+        "forms": [
             "l"
         ]
-    }, 
+    },
     "html/www.hautelook.com-2.html": {
-        "url": "https://www.hautelook.com/forgot-password", 
-        "types": [
+        "url": "https://www.hautelook.com/forgot-password",
+        "forms": [
             "p"
         ]
-    }, 
+    },
     "html/www.ia.ucsb.edu-0.html": {
-        "url": "http://www.ia.ucsb.edu/util/contact.aspx", 
-        "types": [
-            "s", 
+        "url": "http://www.ia.ucsb.edu/util/contact.aspx",
+        "forms": [
+            "s",
             "c"
         ]
-    }, 
+    },
     "html/www.independent.ie-0.html": {
-        "url": "http://www.independent.ie/sport/soccer/", 
-        "types": [
-            "s", 
-            "s", 
+        "url": "http://www.independent.ie/sport/soccer/",
+        "forms": [
+            "s",
+            "s",
             "s"
         ]
-    }, 
+    },
     "html/www.innux.com-0.html": {
-        "url": "http://www.innux.com/en/login.html", 
-        "types": [
-            "s", 
+        "url": "http://www.innux.com/en/login.html",
+        "forms": [
+            "s",
             "l"
         ]
-    }, 
+    },
     "html/www.innux.com-1.html": {
-        "url": "http://www.innux.com/en/login/reset.html", 
-        "types": [
-            "s", 
+        "url": "http://www.innux.com/en/login/reset.html",
+        "forms": [
+            "s",
             "p"
         ]
-    }, 
+    },
     "html/www.innux.com-2.html": {
-        "url": "http://www.innux.com/en/login/remind.html", 
-        "types": [
-            "s", 
+        "url": "http://www.innux.com/en/login/remind.html",
+        "forms": [
+            "s",
             "p"
         ]
-    }, 
+    },
     "html/www.innux.com-3.html": {
-        "url": "http://www.innux.com/en/register.html", 
-        "types": [
-            "s", 
+        "url": "http://www.innux.com/en/register.html",
+        "forms": [
+            "s",
             "r"
         ]
-    }, 
+    },
     "html/www.jofogas.hu-0.html": {
-        "url": "http://www.jofogas.hu/", 
-        "types": [
+        "url": "http://www.jofogas.hu/",
+        "forms": [
             "s"
         ]
-    }, 
+    },
     "html/www.jofogas.hu-1.html": {
-        "url": "http://www.jofogas.hu/heves", 
-        "types": [
-            "s", 
-            "s", 
+        "url": "http://www.jofogas.hu/heves",
+        "forms": [
+            "s",
+            "s",
             "o"
         ]
-    }, 
+    },
     "html/www.jofogas.hu-2.html": {
-        "url": "http://www.jofogas.hu/bekes/Hat_polusu_vizallo_stekker_aron_alul_19574450.htm", 
-        "types": [
-            "s", 
-            "c", 
+        "url": "http://www.jofogas.hu/bekes/Hat_polusu_vizallo_stekker_aron_alul_19574450.htm",
+        "forms": [
+            "s",
+            "c",
             "c"
         ]
-    }, 
+    },
     "html/www.katoni.dk-0.html": {
-        "url": "http://www.katoni.dk/", 
-        "types": [
+        "url": "http://www.katoni.dk/",
+        "forms": [
             "s"
         ]
-    }, 
+    },
     "html/www.katoni.dk-1.html": {
-        "url": "http://www.katoni.dk/sko/sejlersko/", 
-        "types": [
+        "url": "http://www.katoni.dk/sko/sejlersko/",
+        "forms": [
             "s"
         ]
-    }, 
+    },
     "html/www.kaufland.bg-0.html": {
-        "url": "http://www.kaufland.bg/Nachalo/index.jsp", 
-        "types": [
-            "s", 
+        "url": "http://www.kaufland.bg/Nachalo/index.jsp",
+        "forms": [
+            "s",
             "o"
         ]
-    }, 
+    },
     "html/www.koob.ru-0.html": {
-        "url": "http://www.koob.ru/", 
-        "types": [
-            "s", 
+        "url": "http://www.koob.ru/",
+        "forms": [
+            "s",
             "o"
         ]
-    }, 
+    },
     "html/www.krstarica.com-0.html": {
-        "url": "http://www.krstarica.com/", 
-        "types": [
-            "s", 
+        "url": "http://www.krstarica.com/",
+        "forms": [
+            "s",
             "s"
         ]
-    }, 
+    },
     "html/www.landsend.com-0.html": {
-        "url": "http://www.landsend.com/", 
-        "types": [
-            "s", 
+        "url": "http://www.landsend.com/",
+        "forms": [
+            "s",
             "r"
         ]
-    }, 
+    },
     "html/www.laneros.com-0.html": {
-        "url": "http://www.laneros.com/", 
-        "types": [
-            "s", 
-            "l", 
+        "url": "http://www.laneros.com/",
+        "forms": [
+            "s",
+            "l",
             "s"
         ]
-    }, 
+    },
     "html/www.livelib.ru-0.html": {
-        "url": "http://www.livelib.ru/", 
-        "types": [
-            "s", 
-            "l", 
+        "url": "http://www.livelib.ru/",
+        "forms": [
+            "s",
+            "l",
             "r"
         ]
-    }, 
+    },
     "html/www.livelib.ru-1.html": {
-        "url": "http://www.livelib.ru/forgot", 
-        "types": [
-            "s", 
-            "p", 
-            "l", 
+        "url": "http://www.livelib.ru/forgot",
+        "forms": [
+            "s",
+            "p",
+            "l",
             "r"
         ]
-    }, 
+    },
     "html/www.livelib.ru-2.html": {
-        "url": "http://www.livelib.ru/service/contact", 
-        "types": [
-            "s", 
-            "c", 
-            "l", 
+        "url": "http://www.livelib.ru/service/contact",
+        "forms": [
+            "s",
+            "c",
+            "l",
             "r"
         ]
-    }, 
+    },
     "html/www.lot18.com-0.html": {
-        "url": "http://www.lot18.com/login/ref/Lw==", 
-        "types": [
-            "s", 
-            "l", 
-            "p", 
+        "url": "http://www.lot18.com/login/ref/Lw==",
+        "forms": [
+            "s",
+            "l",
+            "p",
             "r"
         ]
-    }, 
+    },
     "html/www.lot18.com-1.html": {
-        "url": "http://www.lot18.com/", 
-        "types": [
+        "url": "http://www.lot18.com/",
+        "forms": [
             "s"
         ]
-    }, 
+    },
     "html/www.ma-reduc.com-0.html": {
-        "url": "http://www.ma-reduc.com/", 
-        "types": [
-            "s", 
-            "s", 
-            "s", 
-            "m", 
-            "m", 
+        "url": "http://www.ma-reduc.com/",
+        "forms": [
+            "s",
+            "s",
+            "s",
+            "m",
+            "m",
             "l"
         ]
-    }, 
+    },
     "html/www.ma-reduc.com-1.html": {
-        "url": "http://www.ma-reduc.com/nouveau-membre.php", 
-        "types": [
-            "s", 
-            "s", 
-            "r", 
-            "m", 
+        "url": "http://www.ma-reduc.com/nouveau-membre.php",
+        "forms": [
+            "s",
+            "s",
+            "r",
+            "m",
             "l"
         ]
-    }, 
+    },
     "html/www.micromania.fr-0.html": {
-        "url": "http://www.micromania.fr/", 
-        "types": [
-            "s", 
+        "url": "http://www.micromania.fr/",
+        "forms": [
+            "s",
             "m"
         ]
-    }, 
+    },
     "html/www.micromania.fr-1.html": {
-        "url": "https://www.micromania.fr/customer/account/login/", 
-        "types": [
-            "s", 
-            "l", 
+        "url": "https://www.micromania.fr/customer/account/login/",
+        "forms": [
+            "s",
+            "l",
             "m"
         ]
-    }, 
+    },
     "html/www.micromania.fr-2.html": {
-        "url": "https://www.micromania.fr/customer/account/create/", 
-        "types": [
-            "s", 
-            "r", 
+        "url": "https://www.micromania.fr/customer/account/create/",
+        "forms": [
+            "s",
+            "r",
             "m"
         ]
-    }, 
+    },
     "html/www.micromania.fr-3.html": {
-        "url": "https://www.micromania.fr/customer/account/forgotpassword/", 
-        "types": [
-            "s", 
-            "p", 
+        "url": "https://www.micromania.fr/customer/account/forgotpassword/",
+        "forms": [
+            "s",
+            "p",
             "m"
         ]
-    }, 
+    },
     "html/www.micromania.fr-4.html": {
-        "url": "http://www.micromania.fr/pack-ps4-500-go-gta-v-58763.html", 
-        "types": [
-            "s", 
-            "o", 
-            "o", 
-            "o", 
+        "url": "http://www.micromania.fr/pack-ps4-500-go-gta-v-58763.html",
+        "forms": [
+            "s",
+            "o",
+            "o",
+            "o",
             "m"
         ]
-    }, 
+    },
     "html/www.mindfactory.de-0.html": {
-        "url": "http://www.mindfactory.de/", 
-        "types": [
-            "s", 
-            "l", 
-            "o", 
-            "o", 
+        "url": "http://www.mindfactory.de/",
+        "forms": [
+            "s",
+            "l",
+            "o",
+            "o",
             "m"
         ]
-    }, 
+    },
     "html/www.mindfactory.de-1.html": {
-        "url": "http://www.mindfactory.de/callback", 
-        "types": [
-            "s", 
+        "url": "http://www.mindfactory.de/callback",
+        "forms": [
+            "s",
             "c"
         ]
-    }, 
+    },
     "html/www.mindfactory.de-2.html": {
-        "url": "https://www.mindfactory.de/login.php", 
-        "types": [
-            "s", 
-            "l", 
-            "o", 
-            "o", 
-            "m", 
-            "l", 
+        "url": "https://www.mindfactory.de/login.php",
+        "forms": [
+            "s",
+            "l",
+            "o",
+            "o",
+            "m",
+            "l",
             "r"
         ]
-    }, 
+    },
     "html/www.mindfactory.de-3.html": {
-        "url": "https://www.mindfactory.de/password_reset.php", 
-        "types": [
-            "s", 
-            "l", 
-            "o", 
-            "o", 
-            "m", 
+        "url": "https://www.mindfactory.de/password_reset.php",
+        "forms": [
+            "s",
+            "l",
+            "o",
+            "o",
+            "m",
             "p"
         ]
-    }, 
+    },
     "html/www.mindfactory.de-4.html": {
-        "url": "http://www.mindfactory.de/product_info.php/Lenovo-ThinkPad-14Zoll-Fitted-Reversible_943001.html", 
-        "types": [
-            "s", 
-            "o", 
-            "o", 
+        "url": "http://www.mindfactory.de/product_info.php/Lenovo-ThinkPad-14Zoll-Fitted-Reversible_943001.html",
+        "forms": [
+            "s",
+            "o",
+            "o",
             "o"
         ]
-    }, 
+    },
     "html/www.mistersofteect.com-0.html": {
-        "url": "http://www.mistersofteect.com/contact.html", 
-        "types": [
+        "url": "http://www.mistersofteect.com/contact.html",
+        "forms": [
             "c"
         ]
-    }, 
+    },
     "html/www.mlive.com-0.html": {
-        "url": "http://www.mlive.com/redwings/index.ssf/2014/12/live_updates_detroit_red_wings_22.html", 
-        "types": [
-            "o", 
-            "s", 
+        "url": "http://www.mlive.com/redwings/index.ssf/2014/12/live_updates_detroit_red_wings_22.html",
+        "forms": [
+            "o",
+            "s",
             "l"
         ]
-    }, 
+    },
     "html/www.mocavo.com-0.html": {
-        "url": "https://www.mocavo.com/", 
-        "types": [
-            "r", 
-            "o", 
-            "o", 
-            "o", 
-            "o", 
+        "url": "https://www.mocavo.com/",
+        "forms": [
+            "r",
+            "o",
+            "o",
+            "o",
+            "o",
             "o"
         ]
-    }, 
+    },
     "html/www.mocavo.com-1.html": {
-        "url": "https://www.mocavo.com/signin", 
-        "types": [
-            "p", 
-            "l", 
-            "X", 
-            "X", 
-            "X", 
+        "url": "https://www.mocavo.com/signin",
+        "forms": [
+            "p",
+            "l",
+            "X",
+            "X",
+            "X",
             "X"
         ]
-    }, 
+    },
     "html/www.mocavo.com-2.html": {
-        "url": "https://www.mocavo.com/signup", 
-        "types": [
-            "r", 
-            "X", 
-            "X", 
-            "X", 
+        "url": "https://www.mocavo.com/signup",
+        "forms": [
+            "r",
+            "X",
+            "X",
+            "X",
             "X"
         ]
-    }, 
+    },
     "html/www.mocavo.com-3.html": {
-        "url": "http://www.mocavo.com/contact", 
-        "types": [
-            "c", 
-            "X", 
-            "X", 
-            "X", 
+        "url": "http://www.mocavo.com/contact",
+        "forms": [
+            "c",
+            "X",
+            "X",
+            "X",
             "X"
         ]
-    }, 
+    },
     "html/www.mocavo.com-4.html": {
-        "url": "http://www.mocavo.com/search", 
-        "types": [
-            "o", 
-            "s", 
-            "r", 
-            "X", 
-            "X", 
-            "X", 
+        "url": "http://www.mocavo.com/search",
+        "forms": [
+            "o",
+            "s",
+            "r",
+            "X",
+            "X",
+            "X",
             "X"
         ]
-    }, 
+    },
     "html/www.nieuwsblad.be-0.html": {
-        "url": "http://www.nieuwsblad.be/", 
-        "types": [
+        "url": "http://www.nieuwsblad.be/",
+        "forms": [
             "s"
         ]
-    }, 
+    },
     "html/www.nieuwsblad.be-1.html": {
-        "url": "http://www.nieuwsblad.be/account/logon", 
-        "types": [
-            "s", 
+        "url": "http://www.nieuwsblad.be/account/logon",
+        "forms": [
+            "s",
             "l"
         ]
-    }, 
+    },
     "html/www.nieuwsblad.be-2.html": {
-        "url": "http://www.nieuwsblad.be/account/register", 
-        "types": [
+        "url": "http://www.nieuwsblad.be/account/register",
+        "forms": [
             "s"
         ]
-    }, 
+    },
     "html/www.notebooksbilliger.de-0.html": {
-        "url": "http://www.notebooksbilliger.de/", 
-        "types": [
-            "s", 
+        "url": "http://www.notebooksbilliger.de/",
+        "forms": [
+            "s",
             "o"
         ]
-    }, 
+    },
     "html/www.notebooksbilliger.de-1.html": {
-        "url": "http://www.notebooksbilliger.de/forum", 
-        "types": [
-            "s", 
-            "s", 
+        "url": "http://www.notebooksbilliger.de/forum",
+        "forms": [
+            "s",
+            "s",
             "l"
         ]
-    }, 
+    },
     "html/www.notebooksbilliger.de-2.html": {
-        "url": "http://www.notebooksbilliger.de/kundenkonto/anmelden/regis/register/create/forum_account", 
-        "types": [
-            "s", 
+        "url": "http://www.notebooksbilliger.de/kundenkonto/anmelden/regis/register/create/forum_account",
+        "forms": [
+            "s",
             "r"
         ]
-    }, 
+    },
     "html/www.notebooksbilliger.de-3.html": {
-        "url": "http://www.notebooksbilliger.de/kundenkonto/anmelden/regis/register", 
-        "types": [
-            "s", 
-            "o", 
-            "r", 
+        "url": "http://www.notebooksbilliger.de/kundenkonto/anmelden/regis/register",
+        "forms": [
+            "s",
+            "o",
+            "r",
             "r"
         ]
-    }, 
+    },
     "html/www.notebooksbilliger.de-4.html": {
-        "url": "https://www.notebooksbilliger.de/index.php/action/login/regis/register", 
-        "types": [
-            "s", 
+        "url": "https://www.notebooksbilliger.de/index.php/action/login/regis/register",
+        "forms": [
+            "s",
             "o"
         ]
-    }, 
+    },
     "html/www.notebooksbilliger.de-5.html": {
-        "url": "https://www.notebooksbilliger.de/kundenkonto/passwort+vergessen", 
-        "types": [
-            "s", 
+        "url": "https://www.notebooksbilliger.de/kundenkonto/passwort+vergessen",
+        "forms": [
+            "s",
             "p"
         ]
-    }, 
+    },
     "html/www.olcsobbat.hu-0.html": {
-        "url": "http://www.olcsobbat.hu/", 
-        "types": [
-            "s", 
-            "o", 
+        "url": "http://www.olcsobbat.hu/",
+        "forms": [
+            "s",
+            "o",
             "m"
         ]
-    }, 
+    },
     "html/www.olcsobbat.hu-1.html": {
-        "url": "http://www.olcsobbat.hu/termek/dps_titan_8_wi_fi_4gb-534e01528e16d53c3a000322/", 
-        "types": [
-            "X", 
-            "o", 
+        "url": "http://www.olcsobbat.hu/termek/dps_titan_8_wi_fi_4gb-534e01528e16d53c3a000322/",
+        "forms": [
+            "X",
+            "o",
             "m"
         ]
-    }, 
+    },
     "html/www.olcsobbat.hu-2.html": {
-        "url": "http://www.olcsobbat.hu/regisztracio/", 
-        "types": [
-            "X", 
-            "r", 
+        "url": "http://www.olcsobbat.hu/regisztracio/",
+        "forms": [
+            "X",
+            "r",
             "X"
         ]
-    }, 
+    },
     "html/www.olcsobbat.hu-3.html": {
-        "url": "http://www.olcsobbat.hu/belepes/", 
-        "types": [
-            "X", 
-            "l", 
+        "url": "http://www.olcsobbat.hu/belepes/",
+        "forms": [
+            "X",
+            "l",
             "X"
         ]
-    }, 
+    },
     "html/www.olcsobbat.hu-4.html": {
-        "url": "http://www.olcsobbat.hu/jelszo_elkuldes/?url=%2Fbelepes%2F", 
-        "types": [
-            "X", 
-            "p", 
+        "url": "http://www.olcsobbat.hu/jelszo_elkuldes/?url=%2Fbelepes%2F",
+        "forms": [
+            "X",
+            "p",
             "X"
         ]
-    }, 
+    },
     "html/www.orbitz.com-0.html": {
-        "url": "http://www.orbitz.com/", 
-        "types": [
+        "url": "http://www.orbitz.com/",
+        "forms": [
             "s"
         ]
-    }, 
+    },
     "html/www.osibatteries.com-0.html": {
-        "url": "https://www.osibatteries.com/", 
-        "types": [
+        "url": "https://www.osibatteries.com/",
+        "forms": [
             "o"
         ]
-    }, 
+    },
     "html/www.osibatteries.com-1.html": {
-        "url": "https://www.osibatteries.com/signin.aspx", 
-        "types": [
+        "url": "https://www.osibatteries.com/signin.aspx",
+        "forms": [
             "l"
         ]
-    }, 
+    },
     "html/www.pcgames.de-0.html": {
-        "url": "http://www.pcgames.de/", 
-        "types": [
-            "l", 
-            "o", 
-            "o", 
+        "url": "http://www.pcgames.de/",
+        "forms": [
+            "l",
+            "o",
+            "o",
             "l"
         ]
-    }, 
+    },
     "html/www.petsbest.com-0.html": {
-        "url": "http://www.petsbest.com/", 
-        "types": [
+        "url": "http://www.petsbest.com/",
+        "forms": [
             "o"
         ]
-    }, 
+    },
     "html/www.petsbest.com-1.html": {
-        "url": "https://www.petsbest.com/customerportal/account/login?ReturnUrl=%2Fcustomerportal", 
-        "types": [
-            "s", 
+        "url": "https://www.petsbest.com/customerportal/account/login?ReturnUrl=%2Fcustomerportal",
+        "forms": [
+            "s",
             "l"
         ]
-    }, 
+    },
     "html/www.petsbest.com-2.html": {
-        "url": "https://www.petsbest.com/customerportal/account/registeraccount", 
-        "types": [
-            "s", 
+        "url": "https://www.petsbest.com/customerportal/account/registeraccount",
+        "forms": [
+            "s",
             "r"
         ]
-    }, 
+    },
     "html/www.petswelcome.com-0.html": {
-        "url": "http://www.petswelcome.com/", 
-        "types": [
-            "s", 
-            "s", 
-            "s", 
-            "m", 
-            "l", 
-            "r", 
-            "r", 
-            "l", 
-            "l", 
+        "url": "http://www.petswelcome.com/",
+        "forms": [
+            "s",
+            "s",
+            "s",
+            "m",
+            "l",
+            "r",
+            "r",
+            "l",
+            "l",
             "p"
         ]
-    }, 
+    },
     "html/www.pirk.lt-0.html": {
-        "url": "http://www.pirk.lt/", 
-        "types": [
-            "m", 
+        "url": "http://www.pirk.lt/",
+        "forms": [
+            "m",
             "o"
         ]
-    }, 
+    },
     "html/www.pirk.lt-1.html": {
-        "url": "https://www.pirk.lt/prisijunkite/", 
-        "types": [
-            "l", 
-            "r", 
-            "m", 
+        "url": "https://www.pirk.lt/prisijunkite/",
+        "forms": [
+            "l",
+            "r",
+            "m",
             "o"
         ]
-    }, 
+    },
     "html/www.pirk.lt-2.html": {
-        "url": "https://www.pirk.lt/slaptazodzio-priminimas/", 
-        "types": [
-            "p", 
-            "m", 
+        "url": "https://www.pirk.lt/slaptazodzio-priminimas/",
+        "forms": [
+            "p",
+            "m",
             "o"
         ]
-    }, 
+    },
     "html/www.plumdistrict.com-0.html": {
-        "url": "http://www.plumdistrict.com/", 
-        "types": [
-            "m", 
+        "url": "http://www.plumdistrict.com/",
+        "forms": [
+            "m",
             "s"
         ]
-    }, 
+    },
     "html/www.purdue.edu-0.html": {
-        "url": "http://www.purdue.edu/", 
-        "types": [
+        "url": "http://www.purdue.edu/",
+        "forms": [
             "o"
         ]
-    }, 
+    },
     "html/www.python.org-0.html": {
-        "url": "https://www.python.org/", 
-        "types": [
+        "url": "https://www.python.org/",
+        "forms": [
             "s"
         ]
-    }, 
+    },
     "html/www.python.org-1.html": {
-        "url": "https://www.python.org/accounts/signup/", 
-        "types": [
-            "s", 
+        "url": "https://www.python.org/accounts/signup/",
+        "forms": [
+            "s",
             "r"
         ]
-    }, 
+    },
     "html/www.python.org-2.html": {
-        "url": "https://www.python.org/accounts/login/", 
-        "types": [
-            "s", 
+        "url": "https://www.python.org/accounts/login/",
+        "forms": [
+            "s",
             "l"
         ]
-    }, 
+    },
     "html/www.python.org-3.html": {
-        "url": "https://www.python.org/accounts/password/reset/", 
-        "types": [
-            "s", 
+        "url": "https://www.python.org/accounts/password/reset/",
+        "forms": [
+            "s",
             "p"
         ]
-    }, 
+    },
     "html/www.rakuten.de-0.html": {
-        "url": "http://www.rakuten.de/", 
-        "types": [
-            "s", 
-            "m", 
-            "m", 
+        "url": "http://www.rakuten.de/",
+        "forms": [
+            "s",
+            "m",
+            "m",
             "m"
         ]
-    }, 
+    },
     "html/www.rakuten.de-1.html": {
-        "url": "https://www.rakuten.de/kundenkonto?adtm_target=register", 
-        "types": [
-            "s", 
-            "l", 
-            "r", 
+        "url": "https://www.rakuten.de/kundenkonto?adtm_target=register",
+        "forms": [
+            "s",
+            "l",
+            "r",
             "m"
         ]
-    }, 
+    },
     "html/www.riemurasia.net-0.html": {
-        "url": "http://www.riemurasia.net/index.php", 
-        "types": [
-            "o", 
+        "url": "http://www.riemurasia.net/index.php",
+        "forms": [
+            "o",
             "o"
         ]
-    }, 
+    },
     "html/www.riemurasia.net-1.html": {
-        "url": "https://www.riemurasia.net/login.php", 
-        "types": [
+        "url": "https://www.riemurasia.net/login.php",
+        "forms": [
             "l"
         ]
-    }, 
+    },
     "html/www.riemurasia.net-2.html": {
-        "url": "https://www.riemurasia.net/register.php", 
-        "types": [
+        "url": "https://www.riemurasia.net/register.php",
+        "forms": [
             "r"
         ]
-    }, 
+    },
     "html/www.riemurasia.net-3.html": {
-        "url": "https://www.riemurasia.net/forgotpassword.php", 
-        "types": [
+        "url": "https://www.riemurasia.net/forgotpassword.php",
+        "forms": [
             "p"
         ]
-    }, 
+    },
     "html/www.riemurasia.net-4.html": {
-        "url": "https://www.riemurasia.net/feedback.php?lang=en", 
-        "types": [
+        "url": "https://www.riemurasia.net/feedback.php?lang=en",
+        "forms": [
             "c"
         ]
-    }, 
+    },
     "html/www.roller.de-0.html": {
-        "url": "https://www.roller.de/", 
-        "types": [
-            "s", 
+        "url": "https://www.roller.de/",
+        "forms": [
+            "s",
             "o"
         ]
-    }, 
+    },
     "html/www.roller.de-1.html": {
-        "url": "https://www.roller.de/mhs-order-status", 
-        "types": [
-            "s", 
-            "o", 
+        "url": "https://www.roller.de/mhs-order-status",
+        "forms": [
+            "s",
+            "o",
             "o"
         ]
-    }, 
+    },
     "html/www.roller.de-2.html": {
-        "url": "https://www.roller.de/M%C3%B6bel/Nachttische/Nachtkommode-JULIETTA/p/1023029000", 
-        "types": [
-            "s", 
-            "o", 
-            "o", 
-            "o", 
-            "o", 
+        "url": "https://www.roller.de/M%C3%B6bel/Nachttische/Nachtkommode-JULIETTA/p/1023029000",
+        "forms": [
+            "s",
+            "o",
+            "o",
+            "o",
+            "o",
             "o"
         ]
-    }, 
+    },
     "html/www.routard.com-0.html": {
-        "url": "http://www.routard.com/", 
-        "types": [
-            "m", 
-            "s", 
+        "url": "http://www.routard.com/",
+        "forms": [
+            "m",
+            "s",
             "l"
         ]
-    }, 
+    },
     "html/www.routard.com-1.html": {
-        "url": "http://www.routard.com/membre_connexion.asp?action=passoublie", 
-        "types": [
-            "m", 
-            "s", 
-            "l", 
+        "url": "http://www.routard.com/membre_connexion.asp?action=passoublie",
+        "forms": [
+            "m",
+            "s",
+            "l",
             "p"
         ]
-    }, 
+    },
     "html/www.routard.com-2.html": {
-        "url": "http://www.routard.com/membre_connexion.asp", 
-        "types": [
-            "m", 
-            "s", 
-            "l", 
-            "l", 
+        "url": "http://www.routard.com/membre_connexion.asp",
+        "forms": [
+            "m",
+            "s",
+            "l",
+            "l",
             "r"
         ]
-    }, 
+    },
     "html/www.seocafe.info-0.html": {
-        "url": "http://www.seocafe.info/", 
-        "types": [
-            "s", 
-            "l", 
-            "o", 
-            "o", 
+        "url": "http://www.seocafe.info/",
+        "forms": [
+            "s",
+            "l",
+            "o",
+            "o",
             "o"
         ]
-    }, 
+    },
     "html/www.sgi-usa.org-0.html": {
-        "url": "http://www.sgi-usa.org/find-us/", 
-        "types": [
-            "s", 
-            "s", 
-            "s", 
+        "url": "http://www.sgi-usa.org/find-us/",
+        "forms": [
+            "s",
+            "s",
+            "s",
             "c"
         ]
-    }, 
+    },
     "html/www.slivki.by-0.html": {
-        "url": "http://www.slivki.by/", 
-        "types": [
-            "r", 
-            "l", 
+        "url": "http://www.slivki.by/",
+        "forms": [
+            "r",
+            "l",
             "s"
         ]
-    }, 
+    },
     "html/www.spartoo.pt-0.html": {
-        "url": "http://www.spartoo.pt/", 
-        "types": [
+        "url": "http://www.spartoo.pt/",
+        "forms": [
             "s"
         ]
-    }, 
+    },
     "html/www.spartoo.pt-1.html": {
-        "url": "http://www.spartoo.pt/novidades-semana-homem-textil.php", 
-        "types": [
-            "s", 
+        "url": "http://www.spartoo.pt/novidades-semana-homem-textil.php",
+        "forms": [
+            "s",
             "o"
         ]
-    }, 
+    },
     "html/www.spartoo.pt-2.html": {
-        "url": "https://www.spartoo.pt/securelogin.php?from=compte", 
-        "types": [
-            "s", 
-            "l", 
+        "url": "https://www.spartoo.pt/securelogin.php?from=compte",
+        "forms": [
+            "s",
+            "l",
             "r"
         ]
-    }, 
+    },
     "html/www.spartoo.pt-3.html": {
-        "url": "https://www.spartoo.pt/password_forgotten.php", 
-        "types": [
-            "s", 
+        "url": "https://www.spartoo.pt/password_forgotten.php",
+        "forms": [
+            "s",
             "p"
         ]
-    }, 
+    },
     "html/www.srovnanicen.cz-0.html": {
-        "url": "http://www.srovnanicen.cz/", 
-        "types": [
+        "url": "http://www.srovnanicen.cz/",
+        "forms": [
             "s"
         ]
-    }, 
+    },
     "html/www.stearnsdesignbuild.com-0.html": {
-        "url": "http://www.stearnsdesignbuild.com/contact/", 
-        "types": [
-            "m", 
-            "s", 
-            "s", 
+        "url": "http://www.stearnsdesignbuild.com/contact/",
+        "forms": [
+            "m",
+            "s",
+            "s",
             "c"
         ]
-    }, 
+    },
     "html/www.terraforums.com-0.html": {
-        "url": "http://www.terraforums.com/forums/index.php", 
-        "types": [
-            "l", 
-            "s", 
-            "o", 
+        "url": "http://www.terraforums.com/forums/index.php",
+        "forms": [
+            "l",
+            "s",
+            "o",
             "o"
         ]
-    }, 
+    },
     "html/www.terraforums.com-1.html": {
-        "url": "http://www.terraforums.com/forums/search.php?s=4ba87bf8274e9cf624d1c0dcc9b239fd", 
-        "types": [
-            "l", 
-            "s", 
-            "o", 
-            "s", 
+        "url": "http://www.terraforums.com/forums/search.php?s=4ba87bf8274e9cf624d1c0dcc9b239fd",
+        "forms": [
+            "l",
+            "s",
+            "o",
+            "s",
             "o"
         ]
-    }, 
+    },
     "html/www.terraforums.com-2.html": {
-        "url": "http://www.terraforums.com/forums/sendmessage.php", 
-        "types": [
-            "l", 
-            "s", 
-            "o", 
-            "c", 
+        "url": "http://www.terraforums.com/forums/sendmessage.php",
+        "forms": [
+            "l",
+            "s",
+            "o",
+            "c",
             "o"
         ]
-    }, 
+    },
     "html/www.thefoundry.co.uk-0.html": {
-        "url": "http://www.thefoundry.co.uk/", 
-        "types": [
+        "url": "http://www.thefoundry.co.uk/",
+        "forms": [
             "s"
         ]
-    }, 
+    },
     "html/www.tradepub.com-0.html": {
-        "url": "http://www.tradepub.com/", 
-        "types": [
+        "url": "http://www.tradepub.com/",
+        "forms": [
             "s"
         ]
-    }, 
+    },
     "html/www.tradingpost.com.au-0.html": {
-        "url": "http://www.tradingpost.com.au/", 
-        "types": [
-            "s", 
-            "s", 
+        "url": "http://www.tradingpost.com.au/",
+        "forms": [
+            "s",
+            "s",
             "s"
         ]
-    }, 
+    },
     "html/www.ucsb.edu-0.html": {
-        "url": "http://www.ucsb.edu/", 
-        "types": [
+        "url": "http://www.ucsb.edu/",
+        "forms": [
             "s"
         ]
-    }, 
+    },
     "html/www.unipd.it-0.html": {
-        "url": "http://www.unipd.it/", 
-        "types": [
+        "url": "http://www.unipd.it/",
+        "forms": [
             "s"
         ]
-    }, 
+    },
     "html/www.unito.it-0.html": {
-        "url": "http://www.unito.it/", 
-        "types": [
+        "url": "http://www.unito.it/",
+        "forms": [
             "s"
         ]
-    }, 
+    },
     "html/www.verajohn.com-0.html": {
-        "url": "https://www.verajohn.com/", 
-        "types": [
+        "url": "https://www.verajohn.com/",
+        "forms": [
             "l"
         ]
-    }, 
+    },
     "html/www.verajohn.com-1.html": {
-        "url": "https://www.verajohn.com/password", 
-        "types": [
-            "l", 
+        "url": "https://www.verajohn.com/password",
+        "forms": [
+            "l",
             "p"
         ]
-    }, 
+    },
     "html/www.walldecorandhomeaccents.com-0.html": {
-        "url": "http://www.walldecorandhomeaccents.com/", 
-        "types": [
-            "s", 
+        "url": "http://www.walldecorandhomeaccents.com/",
+        "forms": [
+            "s",
             "r"
         ]
-    }, 
+    },
     "html/www.woolworths.co.uk-0.html": {
-        "url": "http://www.woolworths.co.uk/", 
-        "types": [
-            "s", 
-            "o", 
-            "o", 
+        "url": "http://www.woolworths.co.uk/",
+        "forms": [
+            "s",
+            "o",
+            "o",
             "m"
         ]
-    }, 
+    },
     "html/www.woolworths.co.uk-1.html": {
-        "url": "https://www.woolworths.co.uk/account/login.page", 
-        "types": [
-            "s", 
-            "l", 
-            "r", 
-            "o", 
-            "o", 
+        "url": "https://www.woolworths.co.uk/account/login.page",
+        "forms": [
+            "s",
+            "l",
+            "r",
+            "o",
+            "o",
             "m"
         ]
-    }, 
+    },
     "html/www.writecamp.org-0.html": {
-        "url": "http://www.writecamp.org/contact-us/", 
-        "types": [
-            "c", 
+        "url": "http://www.writecamp.org/contact-us/",
+        "forms": [
+            "c",
             "o"
         ]
-    }, 
+    },
     "html/www.zalando.de-0.html": {
-        "url": "http://www.zalando.de/", 
-        "types": [
-            "s", 
-            "m", 
-            "l", 
+        "url": "http://www.zalando.de/",
+        "forms": [
+            "s",
+            "m",
+            "l",
             "p"
         ]
-    }, 
+    },
     "html/www.zalando.de-1.html": {
-        "url": "https://www.zalando.de/kontakt/", 
-        "types": [
-            "s", 
-            "c", 
-            "m", 
-            "l", 
+        "url": "https://www.zalando.de/kontakt/",
+        "forms": [
+            "s",
+            "c",
+            "m",
+            "l",
             "p"
         ]
-    }, 
+    },
     "html/www.zalando.de-2.html": {
-        "url": "https://www.zalando.de/login/", 
-        "types": [
-            "s", 
-            "l", 
-            "p", 
-            "r", 
+        "url": "https://www.zalando.de/login/",
+        "forms": [
+            "s",
+            "l",
+            "p",
+            "r",
             "m"
         ]
-    }, 
+    },
     "html/www.zazzle.com-0.html": {
-        "url": "http://www.zazzle.com/", 
-        "types": [
-            "s", 
-            "m", 
+        "url": "http://www.zazzle.com/",
+        "forms": [
+            "s",
+            "m",
             "m"
         ]
-    }, 
+    },
     "html/www.zazzle.com-1.html": {
-        "url": "https://www.zazzle.com/lgn/signin", 
-        "types": [
-            "s", 
-            "l", 
-            "m", 
+        "url": "https://www.zazzle.com/lgn/signin",
+        "forms": [
+            "s",
+            "l",
+            "m",
             "m"
         ]
-    }, 
+    },
     "html/www.zulily.com-0.html": {
-        "url": "http://www.zulily.com/", 
-        "types": [
-            "s", 
-            "r", 
+        "url": "http://www.zulily.com/",
+        "forms": [
+            "s",
+            "r",
             "l"
         ]
-    }, 
+    },
     "html/www2.jofogas.hu-0.html": {
-        "url": "http://www2.jofogas.hu/fiok/belepes", 
-        "types": [
-            "s", 
+        "url": "http://www2.jofogas.hu/fiok/belepes",
+        "forms": [
+            "s",
             "l"
         ]
-    }, 
+    },
     "html/www2.jofogas.hu-1.html": {
-        "url": "http://www2.jofogas.hu/fiok/regisztralas", 
-        "types": [
-            "s", 
+        "url": "http://www2.jofogas.hu/fiok/regisztralas",
+        "forms": [
+            "s",
             "r"
         ]
-    }, 
+    },
     "html/www2.jofogas.hu-2.html": {
-        "url": "http://www2.jofogas.hu/fiok/elfelejtett_jelszo", 
-        "types": [
-            "s", 
+        "url": "http://www2.jofogas.hu/fiok/elfelejtett_jelszo",
+        "forms": [
+            "s",
             "p"
         ]
-    }, 
+    },
     "html/yellowdeli.com-0.html": {
-        "url": "http://yellowdeli.com/guest-book-oneonta/addpost", 
-        "types": [
+        "url": "http://yellowdeli.com/guest-book-oneonta/addpost",
+        "forms": [
             "c"
         ]
-    }, 
+    },
     "html/zadane.pl-0.html": {
-        "url": "http://zadane.pl/", 
-        "types": [
+        "url": "http://zadane.pl/",
+        "forms": [
             "s"
         ]
-    }, 
+    },
     "html/zadane.pl-1.html": {
-        "url": "http://zadane.pl/login?entry=2&return=%2F", 
-        "types": [
+        "url": "http://zadane.pl/login?entry=2&return=%2F",
+        "forms": [
             "l"
         ]
-    }, 
+    },
     "html/zadane.pl-2.html": {
-        "url": "http://zadane.pl/signup?return=%2F&entry=2", 
-        "types": [
+        "url": "http://zadane.pl/signup?return=%2F&entry=2",
+        "forms": [
             "r"
         ]
-    }, 
+    },
     "html/zadane.pl-3.html": {
-        "url": "http://zadane.pl/user/reset_password", 
-        "types": [
-            "X", 
+        "url": "http://zadane.pl/user/reset_password",
+        "forms": [
+            "X",
             "p"
         ]
-    }, 
+    },
     "html/zadane.pl-4.html": {
-        "url": "http://zadane.pl/question/add?entry=1610", 
-        "types": [
+        "url": "http://zadane.pl/question/add?entry=1610",
+        "forms": [
             "o"
         ]
     }

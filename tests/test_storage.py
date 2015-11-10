@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from __future__ import absolute_import  
+from __future__ import absolute_import
 
 
 def test_data_ok(storage, capsys):
@@ -11,7 +11,7 @@ def test_data_ok(storage, capsys):
 
 
 def test_type_counts(storage, capsys):
-    storage.print_type_counts()
+    storage.print_form_type_counts()
     out, err = capsys.readouterr()
     assert not err
     assert 'search' in out

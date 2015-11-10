@@ -53,12 +53,12 @@ class Storage(object):
 
         "RELATIVE-PATH-TO-HTML-FILE": {
             "url": "URL",
-            "types": [...]
+            "forms": [...]
         }
 
     Key is the relative path to a file with page contents
     (e.g. "html/example.org-1.html"); ``URL`` is an URL the webpage is
-    downloaded from; "types" contains an array of form type identifiers.
+    downloaded from; "forms" contains an array of form type identifiers.
     There must be an identifier per each ``<form>`` element on a web page.
 
     Possible form types are listed in a ``storage.FORM_TYPES`` constant.
@@ -85,7 +85,7 @@ class Storage(object):
         rel_filename =  os.path.relpath(filename, self.folder)
         index[rel_filename] = {
             "url": url,
-            "types": answers,
+            "forms": answers,
         }
         with open(filename, 'wb') as f:
             f.write(html)
@@ -108,7 +108,7 @@ class Storage(object):
             with open(os.path.join(self.folder, filename), "rb") as f:
                 tree = load_html(f.read(), info["url"])
 
-            for form, tp in zip(tree.xpath("//form"), info["types"]):
+            for form, tp in zip(tree.xpath("//form"), info["forms"]):
 
                 if tp == 'X':
                     continue
@@ -152,10 +152,10 @@ class Storage(object):
                 data = f.read()
 
             doc = load_html(data, info['url'])
-            if len(doc.xpath("//form")) != len(info["types"]):
+            if len(doc.xpath("//form")) != len(info["forms"]):
                 errors += 1
                 msg = "\nInvalid form count for entry %r: expected %d, got %d" % (
-                         fn, len(doc.xpath("//form")), len(info["types"])
+                         fn, len(doc.xpath("//form")), len(info["forms"])
                       )
                 print(msg)
 
@@ -178,21 +178,21 @@ class Storage(object):
         """
         return get_form_hash(form, only_visible=True)
 
-    def get_type_counts(self, drop_duplicates=True, verbose=True):
+    def get_form_type_counts(self, drop_duplicates=True, verbose=True):
         """ Return a {formtype: count} collections.Counter """
         if not drop_duplicates:
             index = self.get_index()
             return collections.Counter(
-                chain.from_iterable(v["types"] for v in index.values())
+                chain.from_iterable(v["forms"] for v in index.values())
             )
 
         X, y = self.get_Xy(drop_duplicates=True, verbose=verbose)
         return collections.Counter(y)
 
-    def print_type_counts(self):
+    def print_form_type_counts(self):
         """ Print the number annotations of each form types in this storage """
         print("Annotated HTML forms:\n")
-        type_counts = self.get_type_counts()
+        type_counts = self.get_form_type_counts()
         for shortcut, count in type_counts.most_common():
             type_name = FORM_TYPES_INV[shortcut]
             print("%-5d %-25s (%s)" % (count, type_name, shortcut))
