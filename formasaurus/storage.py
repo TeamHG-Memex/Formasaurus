@@ -12,6 +12,7 @@ from six.moves.urllib import parse as urlparse
 import lxml.html
 from tqdm import tqdm
 
+from formasaurus.formhash import get_form_hash
 from formasaurus.utils import get_domain
 
 
@@ -32,13 +33,6 @@ FORM_TYPES_INV = {v: k for k, v in FORM_TYPES.items()}
 def load_html(data, base_url):
     """ Parse HTML data to a lxml tree """
     return lxml.html.fromstring(data, base_url=base_url)
-
-
-def _get_form_hash(form):
-    # it just returns a full string as a hash, for easier debugging
-    html = lxml.html.tostring(form, pretty_print=True, encoding="unicode")
-    lines = [line.strip() for line in html.splitlines(False) if line.strip()]
-    return "\n".join(lines)
 
 
 class Storage(object):
@@ -179,9 +173,8 @@ class Storage(object):
     def get_fingerprint(self, form):
         """
         Return form fingerprint (a string that can be used for deduplication).
-        XXX: it should drop CSRF and other tokens somehow.
         """
-        return _get_form_hash(form)
+        return get_form_hash(form, only_visible=True)
 
     def get_type_counts(self, drop_duplicates=True, verbose=True):
         """ Return a {formtype: count} collections.Counter """
