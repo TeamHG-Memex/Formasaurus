@@ -1,6 +1,6 @@
 lxml
 docopt
-tqdm
+tqdm >= 2.0
 tldextract
 
 # 0.15 is need for make_pipeline and make_union functions;

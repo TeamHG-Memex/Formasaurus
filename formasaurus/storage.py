@@ -100,7 +100,8 @@ class Storage(object):
         )
 
         if verbose:
-            sorted_items = tqdm(sorted_items, "Loading", mininterval=0, leave=leave)
+            sorted_items = tqdm(sorted_items, "Loading", mininterval=0,
+                                leave=leave, ascii=True, ncols=80)
 
         seen = set()
         for filename, info in sorted_items:
@@ -139,7 +140,8 @@ class Storage(object):
         index = self.get_index()
         items = list(index.items())
         errors = 0
-        for fn, info in tqdm(items, "Checking", leave=True, mininterval=0):
+        for fn, info in tqdm(items, "Checking", leave=True, mininterval=0,
+                             ascii=True, ncols=80):
             fn_full = os.path.join(self.folder, fn)
             if not os.path.exists(fn_full):
                 print("\nFile not found: %r" % fn_full)
@@ -158,9 +160,9 @@ class Storage(object):
                 print(msg)
 
         if not errors:
-            print(" OK")
+            print("Status: OK")
         else:
-            print(" %d error(s) found" % errors)
+            print("Status: %d error(s) found" % errors)
 
         return errors
 
