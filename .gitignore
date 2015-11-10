@@ -9,3 +9,5 @@ dist
 htmlcov
 .coverage
 .joblib
+.cache
+
