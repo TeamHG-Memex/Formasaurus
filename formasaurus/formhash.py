@@ -3,12 +3,8 @@ from copy import deepcopy
 
 import six
 import lxml.html
-import lxml.html.clean
 
-
-def remove_by_xpath(tree, xpath):
-    for bad in tree.xpath(xpath):
-        bad.getparent().remove(bad)
+from formasaurus.utils import remove_by_xpath
 
 
 def get_form_hash(form, only_visible=True):

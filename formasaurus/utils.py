@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from __future__ import absolute_import  
+from __future__ import absolute_import
 import sys
 import tldextract
 
@@ -42,4 +42,13 @@ def get_domain(url):
     'example'
     """
     return tldextract.extract(url).domain
+
+
+def remove_by_xpath(tree, xpath):
+    """
+    Remove all HTML elements which match a given XPath expression.
+    """
+    for bad in tree.xpath(xpath):
+        bad.getparent().remove(bad)
+
 
