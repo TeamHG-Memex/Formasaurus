@@ -2,6 +2,7 @@
 from __future__ import absolute_import
 import os
 
+from formasaurus.html import get_forms
 from sklearn.externals import joblib
 
 from formasaurus.storage import Storage
@@ -19,8 +20,12 @@ class FormExtractor(object):
     """
     FormExtractor detects HTML form types.
     """
-    def __init__(self, model=None):
+    def __init__(self, model=None,
+                 form_types=None, form_types_inv=None, na_value=None):
         self.model = model
+        self.form_types = form_types
+        self.form_types_inv = form_types_inv
+        self.na_value = na_value
 
     @classmethod
     def load(cls, filename=None, create=True):
@@ -61,6 +66,11 @@ class FormExtractor(object):
     def train(self, data_folder, train_ratio=1.0):
         """ Train the model using data from ``data_folder``. """
         store = Storage(data_folder)
+        form_types, form_types_inv, na_value = store.get_form_types()
+        self.form_types = form_types
+        self.form_types_inv = form_types_inv
+        self.na_value = na_value
+
         X, y = store.get_Xy(drop_duplicates=True, verbose=True, leave=True)
         train_size = int(len(y) * train_ratio)
         X, y = X[:train_size], y[:train_size]
@@ -90,7 +100,7 @@ class FormExtractor(object):
         """
         Given a lxml tree, return a list of (form_elem, form_type) tuples.
         """
-        forms = tree.xpath("//form")
+        forms = get_forms(tree)
         if not forms:
             return []
         return list(zip(forms, self.model.predict(forms)))
@@ -101,7 +111,7 @@ class FormExtractor(object):
         ``form_elem`` is a lxml <form> element and ``probs`` is a dictionary
         ``{type: probability}``.
         """
-        forms = tree.xpath("//form")
+        forms = get_forms(tree)
         if not forms:
             return []
         probs = self.model.predict_proba(forms)

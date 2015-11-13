@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 """
-This module defines which features and which classifier the default model uses.
+This module defines which features and which classifier the default
+form type detection model uses.
 """
 from __future__ import absolute_import
 

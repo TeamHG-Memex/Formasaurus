@@ -48,7 +48,7 @@ from formasaurus.annotation import (
     print_form_html
 )
 from formasaurus.extractor import FormExtractor
-from formasaurus.storage import FORM_TYPES_INV, Storage
+from formasaurus.storage import Storage
 from formasaurus.html import load_html
 from formasaurus import evaluation
 from formasaurus.model import get_model
@@ -95,8 +95,8 @@ def main():
             print_form_html(form)
             print("")
             for tp, prob in Counter(probs).most_common():
-                tp_full = FORM_TYPES_INV[tp]
-                print("%s %0.1f%%" % (tp_full, prob*100), end='    ')
+                tp_full = ex.form_types_inv[tp]
+                print("%s %0.1f%%" % (tp_full, prob * 100), end='    ')
 
             print("")
 
@@ -105,6 +105,7 @@ def main():
         ratio = float(args['--test-size'])
 
         store = Storage(args["--data-folder"])
+        form_types, form_types_inv, na_name = store.get_form_types()
         model = get_model()
         X, y = store.get_Xy(drop_duplicates=True, verbose=True, leave=True)
 
@@ -113,7 +114,8 @@ def main():
         X_train, X_test, y_train, y_test = X[:train_size], X[train_size:], y[:train_size], y[train_size:]
 
         evaluation.print_metrics(model, X, y, X_train, X_test, y_train, y_test,
-                                 ipython=False, cv=n_folds, short_matrix=True)
+                                 ipython=False, cv=n_folds, short_matrix=True,
+                                 class_map=form_types_inv)
 
 
 if __name__ == '__main__':

@@ -10,11 +10,12 @@ from formasaurus.html import (
     escaped_with_field_highlighted,
     highlight_fields
 )
+from formasaurus.utils import inverse_mapping
 
 
 def FormTypeSelect(ann, form_types):
     """ Form type edit widget """
-    form_types_inv = {v:k for k,v in form_types.items()}
+    form_types_inv = inverse_mapping(form_types)
     tp = ann.info['forms'][ann.index]
     type_select = widgets.ToggleButtons(
         options=list(form_types.keys()),

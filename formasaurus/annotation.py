@@ -9,7 +9,7 @@ from six.moves.urllib.request import urlopen
 from six.moves import input
 
 from formasaurus.html import get_cleaned_form_html, load_html, get_forms
-from formasaurus.storage import Storage, FORM_TYPES, FORM_TYPES_INV
+from formasaurus.storage import Storage
 
 
 def annotate_forms(data_folder, url_argument):
@@ -67,7 +67,7 @@ def print_form_types(form_types):
     print("")
 
 
-def _annotate_forms(storage, tree, form_types=None):
+def _annotate_forms(storage, tree):
     """
     For each form element ask user whether it is a login form or not.
     Return an array with True/False answers.
@@ -79,11 +79,7 @@ def _annotate_forms(storage, tree, form_types=None):
     else:
         print("Page has %d form(s)" % len(forms))
 
-    if form_types is None:
-        form_types = FORM_TYPES
-        form_types_inv = FORM_TYPES_INV
-    else:
-        form_types_inv = {v: k for k, v in form_types.items()}
+    form_types, form_types_inv, na = storage.get_form_types()
 
     print_form_types(form_types)
     shortcuts = "/".join(form_types.values())

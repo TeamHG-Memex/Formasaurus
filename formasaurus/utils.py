@@ -43,3 +43,12 @@ def get_domain(url):
     """
     return tldextract.extract(url).domain
 
+
+def inverse_mapping(dct):
+    """
+    Return reverse mapping:
+
+    >>> inverse_mapping({'x': 5})
+    {5: 'x'}
+    """
+    return {v:k for k,v in dct.items()}

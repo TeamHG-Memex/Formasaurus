@@ -12,22 +12,9 @@ from six.moves.urllib import parse as urlparse
 from tqdm import tqdm
 
 from formasaurus.formhash import get_form_hash
-from formasaurus.utils import get_domain
-from formasaurus.html import load_html
+from formasaurus.utils import get_domain, inverse_mapping
+from formasaurus.html import load_html, get_forms
 
-
-FORM_TYPES = collections.OrderedDict([
-    ('search', 's'),
-    ('login', 'l'),
-    ('registration', 'r'),
-    ('password/login recovery', 'p'),
-    ('contact', 'c'),
-    ('join mailing list', 'm'),
-    ('other', 'o'),
-    ('NOT ANNOTATED', 'X'),
-])
-
-FORM_TYPES_INV = {v: k for k, v in FORM_TYPES.items()}
 
 FormAnnotation = collections.namedtuple('FormAnnotation', 'form type index info key')
 
@@ -38,6 +25,7 @@ class Storage(object):
     The goal is to store the type of each <form> element from a web page.
     The data is stored in a folder with the following structure::
 
+        config.json
         index.json
         html/
             example.org-0.html
@@ -46,7 +34,7 @@ class Storage(object):
             ...
 
     ``html`` folders contains raw contents of the webpages.
-    ``index.json`` file contains a JSON dict with the following records::
+    :file:`index.json` file contains a JSON dict with the following records::
 
         "RELATIVE-PATH-TO-HTML-FILE": {
             "url": "URL",
@@ -67,7 +55,8 @@ class Storage(object):
       ``<form>`` element; each object is a mapping from field name to
       field type identifier.
 
-    Possible form types are listed in a ``storage.FORM_TYPES`` constant.
+    Possible form and field types are stored in :file:`config.json` file;
+    you can read them using :meth:`get_form_types` and :meth:`get_field_types`.
     """
 
     def __init__(self, folder):
@@ -99,8 +88,38 @@ class Storage(object):
         with open(os.path.join(self.folder, "config.json"), "r") as f:
             return json.load(f)
 
+    def get_field_types(self):
+        """
+        Return (types, types_inv, na_value) tuple. `types` is an
+        OrderedDict with field type names {full_name: short_name};
+        `types_inv` is a {short_name: full_name} dict;
+        `na_value` is a short name of type name used for unannotated fields.
+        """
+        return self._get_types('field_types')
+
+    def get_form_types(self):
+        """
+        Return (types, types_inv, na_value) tuple. `types` is an
+        OrderedDict with form type names {full_name: short_name};
+        `types_inv` is a {short_name: full_name} dict;
+        `na_value` is a short name of type name used for unannotated forms.
+        """
+        return self._get_types('form_types')
+
+    def _get_types(self, key):
+        config = self.get_config()
+        na_value = config[key]['NA_value']
+        types = collections.OrderedDict([
+            (f['full'], f['short']) for f in config[key]['types']
+        ])
+        types_inv = inverse_mapping(types)
+        return types, types_inv, na_value
+
     def store_result(self, html, url, form_answers):
-        """ Save the downloaded HTML file and its <form> types. """
+        """
+        Save the downloaded HTML file and its <form> types.
+        FIXME: it doesn't handle field type annotations
+        """
         index = self.get_index()
         filename = self._generate_filename(url)
         rel_filename =  os.path.relpath(filename, self.folder)
@@ -117,6 +136,7 @@ class Storage(object):
         """
         Return an iterator over (form, type, index, info, path) tuples.
         """
+        form_types, form_types_inv, na_value = self.get_form_types()
         trees = self.iter_trees(index=index)
 
         if verbose:
@@ -125,8 +145,8 @@ class Storage(object):
 
         seen = set()
         for path, tree, info in trees:
-            for idx, (form, tp) in enumerate(zip(tree.xpath("//form"), info["forms"])):
-                if drop_na and tp == 'X':
+            for idx, (form, tp) in enumerate(zip(get_forms(tree), info["forms"])):
+                if drop_na and tp == na_value:
                     continue
 
                 if drop_duplicates:
@@ -202,9 +222,10 @@ class Storage(object):
 
     def get_fingerprints(self, verbose=True, leave=False):
         """ Return a dict with all fingerprints of the existing forms """
+        form_types, form_types_inv, na_value = self.get_form_types()
         X, y = self.get_Xy(drop_duplicates=True, verbose=verbose, leave=leave)
         return {self.get_fingerprint(form): tp
-                for form, tp in zip(X, y) if tp != 'X'}
+                for form, tp in zip(X, y) if tp != na_value}
 
     def get_fingerprint(self, form):
         """
@@ -226,9 +247,10 @@ class Storage(object):
     def print_form_type_counts(self):
         """ Print the number annotations of each form types in this storage """
         print("Annotated HTML forms:\n")
+        form_types, form_types_inv, na_value = self.get_form_types()
         type_counts = self.get_form_type_counts()
         for shortcut, count in type_counts.most_common():
-            type_name = FORM_TYPES_INV[shortcut]
+            type_name = form_types_inv[shortcut]
             print("%-5d %-25s (%s)" % (count, type_name, shortcut))
         print("\nTotal form count: %d" % (sum(type_counts.values())))
 
