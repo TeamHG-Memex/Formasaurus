@@ -48,7 +48,8 @@ from formasaurus.annotation import (
     print_form_html
 )
 from formasaurus.extractor import FormExtractor
-from formasaurus.storage import load_html, FORM_TYPES_INV, Storage
+from formasaurus.storage import FORM_TYPES_INV, Storage
+from formasaurus.html import load_html
 from formasaurus import evaluation
 from formasaurus.model import get_model
 

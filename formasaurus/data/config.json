@@ -1,0 +1,108 @@
+{
+    "form_types": {
+        "types": [
+            {"short": "s", "full": "search"},
+            {"short": "l", "full": "login"},
+            {"short": "r", "full": "registration"},
+            {"short": "p", "full": "password/login recovery"},
+            {"short": "c", "full": "contact"},
+            {"short": "m", "full": "join mailing list"},
+            {"short": "o", "full": "other"},
+            {"short": "X", "full": "NOT ANNOTATED"}
+        ],
+        "NA_value": "X"
+    },
+
+    "field_types": {
+        "types": [
+            {"short": "us", "full": "username"},
+            {"short": "p1", "full": "password"},
+            {"short": "p2", "full": "password confirmation"},
+            {"short": "e1", "full": "email"},
+            {"short": "e2", "full": "email confirmation"},
+            {"short": "ue", "full": "username or email"},
+            {"short": "in", "full": "ref code / invitation code / coupon"},
+
+            {"short": "ca", "full": "captcha"},
+            {"short": "ab", "full": "anti-bot field (e.g. 'leave blank')"},
+            {"short": "pi", "full": "pin code received by sms/..."},
+
+            {"short": "tC", "full": "TOS confirmation"},
+            {"short": "18", "full": "18+ confirmation"},
+            {"short": "oC", "full": "other confirmation"},
+            {"short": "eC", "full": "receive emails confirmation"},
+            {"short": "rC", "full": "remember me checkbox"},
+            {"short": "aC", "full": "autofill fields checkbox"},
+
+            {"short": "Bs", "full": "submit button"},
+            {"short": "Bc", "full": "cancel button"},
+            {"short": "Br", "full": "reset/clear button"},
+            {"short": "Bl", "full": "social login button"},
+            {"short": "Bo", "full": "other button"},
+
+            {"short": "n1", "full": "first name"},
+            {"short": "n3", "full": "last name"},
+            {"short": "n2", "full": "middle name"},
+            {"short": "nf", "full": "full name"},
+            {"short": "ns", "full": "screen name (another nick which is not username)"},
+            {"short": "ge", "full": "gender"},
+
+            {"short": "by", "full": "year of birth"},
+            {"short": "bm", "full": "month of birth"},
+            {"short": "bd", "full": "day of birth"},
+            {"short": "bD", "full": "full birth date"},
+
+            {"short": "tz", "full": "time zone"},
+            {"short": "ds", "full": "DST"},
+
+            {"short": "Co", "full": "country"},
+            {"short": "Ci", "full": "city"},
+            {"short": "St", "full": "state"},
+            {"short": "Ad", "full": "address"},
+            {"short": "Sa", "full": "full street address"},
+            {"short": "Sn", "full": "street name"},
+            {"short": "S#", "full": "street number"},
+            {"short": "A#", "full": "apartment number"},
+            {"short": "Zi", "full": "zip/postal code"},
+
+            {"short": "ph", "full": "phone"},
+            {"short": "pP", "full": "phone part"},
+            {"short": "fa", "full": "fax"},
+            {"short": "ws", "full": "website/url"},
+            {"short": "oi", "full": "OpenID"},
+
+
+            {"short": "am", "full": "about me text"},
+            {"short": "av", "full": "picture/avatar upload"},
+            {"short": "CC", "full": "comment text"},
+            {"short": "CT", "full": "comment title/subject"},
+
+            {"short": "c#", "full": "credit card number"},
+            {"short": "cs", "full": "credit card security code"},
+            {"short": "ch", "full": "credit card holder name"},
+            {"short": "cA", "full": "credit card address"},
+            {"short": "cm", "full": "credit card expiration month"},
+            {"short": "cy", "full": "credit card expiration year"},
+
+            {"short": "sq", "full": "security question"},
+            {"short": "sa", "full": "answer to security question"},
+
+            {"short": "SS", "full": "narrow site-specific question"},
+
+            {"short": "qq", "full": "search query"},
+            {"short": "qc", "full": "search category / refinement"},
+
+            {"short": "nv", "full": "navigation"},
+
+            {"short": "ON", "full": "other number"},
+            {"short": "OT", "full": "other text"},
+            {"short": "OC", "full": "other code"},
+            {"short": "OD", "full": "other date"},
+            {"short": "OS", "full": "other choice"},
+            {"short": "OM", "full": "other multi choice"},
+
+            {"short": "XX", "full": "NOT ANNOTATED"}
+        ],
+        "NA_value": "XX"
+    }
+}

@@ -43,12 +43,3 @@ def get_domain(url):
     """
     return tldextract.extract(url).domain
 
-
-def remove_by_xpath(tree, xpath):
-    """
-    Remove all HTML elements which match a given XPath expression.
-    """
-    for bad in tree.xpath(xpath):
-        bad.getparent().remove(bad)
-
-

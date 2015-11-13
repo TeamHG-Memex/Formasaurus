@@ -9,11 +9,11 @@ import collections
 from itertools import chain
 from six.moves.urllib import parse as urlparse
 
-import lxml.html
 from tqdm import tqdm
 
 from formasaurus.formhash import get_form_hash
 from formasaurus.utils import get_domain
+from formasaurus.html import load_html
 
 
 FORM_TYPES = collections.OrderedDict([
@@ -29,10 +29,7 @@ FORM_TYPES = collections.OrderedDict([
 
 FORM_TYPES_INV = {v: k for k, v in FORM_TYPES.items()}
 
-
-def load_html(data, base_url):
-    """ Parse HTML data to a lxml tree """
-    return lxml.html.fromstring(data, base_url=base_url)
+FormAnnotation = collections.namedtuple('FormAnnotation', 'form type index info key')
 
 
 class Storage(object):
@@ -53,13 +50,22 @@ class Storage(object):
 
         "RELATIVE-PATH-TO-HTML-FILE": {
             "url": "URL",
-            "forms": [...]
+            "forms": ["type1", "type2", ...],
+            "visible_html_fields": [
+                {"name1": "type1", "name2": "type2", ...},
+                ...
+            ],
         }
 
     Key is the relative path to a file with page contents
-    (e.g. "html/example.org-1.html"); ``URL`` is an URL the webpage is
-    downloaded from; "forms" contains an array of form type identifiers.
-    There must be an identifier per each ``<form>`` element on a web page.
+    (e.g. "html/example.org-1.html"). Values:
+
+    * "url" is an URL the webpage is downloaded from.
+    * "forms" contains an array of form type identifiers.
+      There must be an identifier per each ``<form>`` element on a web page.
+    * "visible_html_fields" contains an array of objects, one object per
+      ``<form>`` element; each object is a mapping from field name to
+      field type identifier.
 
     Possible form types are listed in a ``storage.FORM_TYPES`` constant.
     """
@@ -75,42 +81,52 @@ class Storage(object):
     def write_index(self, index):
         """ Save an index """
         index = collections.OrderedDict(sorted(index.items()))
+        for k, info in index.items():
+            index[k] = collections.OrderedDict()
+            index[k]['url'] = info['url']
+            index[k]['forms'] = info['forms']
+            if 'visible_html_fields' in info:
+                index[k]['visible_html_fields'] = [
+                    collections.OrderedDict(sorted(row.items()))
+                    for row in info['visible_html_fields']
+                ]
+
         with open(os.path.join(self.folder, "index.json"), "w") as f:
             json.dump(index, f, ensure_ascii=False, indent=4)
 
-    def store_result(self, html, answers, url):
+    def get_config(self):
+        """ Read meta information, including form and field types """
+        with open(os.path.join(self.folder, "config.json"), "r") as f:
+            return json.load(f)
+
+    def store_result(self, html, url, form_answers):
         """ Save the downloaded HTML file and its <form> types. """
         index = self.get_index()
         filename = self._generate_filename(url)
         rel_filename =  os.path.relpath(filename, self.folder)
         index[rel_filename] = {
             "url": url,
-            "forms": answers,
+            "forms": form_answers,
         }
         with open(filename, 'wb') as f:
             f.write(html)
         self.write_index(index)
 
-    def iter_annotations(self, drop_duplicates=True, verbose=False, leave=False):
-        """ Return an iterator over (form, type) tuples. """
-
-        sorted_items = sorted(
-            self.get_index().items(),
-            key=lambda it: get_domain(it[1]["url"])
-        )
+    def iter_annotations(self, index=None, drop_duplicates=True, drop_na=True,
+                         verbose=False, leave=False):
+        """
+        Return an iterator over (form, type, index, info, path) tuples.
+        """
+        trees = self.iter_trees(index=index)
 
         if verbose:
-            sorted_items = tqdm(sorted_items, "Loading", mininterval=0,
-                                leave=leave, ascii=True, ncols=80)
+            trees = tqdm(trees, "Loading", mininterval=0,
+                         leave=leave, ascii=True, ncols=80, unit=' files')
 
         seen = set()
-        for filename, info in sorted_items:
-            with open(os.path.join(self.folder, filename), "rb") as f:
-                tree = load_html(f.read(), info["url"])
-
-            for form, tp in zip(tree.xpath("//form"), info["forms"]):
-
-                if tp == 'X':
+        for path, tree, info in trees:
+            for idx, (form, tp) in enumerate(zip(tree.xpath("//form"), info["forms"])):
+                if drop_na and tp == 'X':
                     continue
 
                 if drop_duplicates:
@@ -119,18 +135,36 @@ class Storage(object):
                         continue
                     seen.add(fp)
 
-                yield form, tp
+                yield FormAnnotation(form, tp, idx, info, path)
 
         if verbose and leave:
             print("")
 
+    def iter_trees(self, index=None):
+        """ Return an iterator over (filename, tree, info) tuples """
+        if index is None:
+            index = self.get_index()
+        sorted_items = sorted(
+            index.items(),
+            key=lambda it: get_domain(it[1]["url"])
+        )
+        for path, info in sorted_items:
+            tree = self.get_tree(path, info)
+            yield path, tree, info
+
+    def get_tree(self, path, info):
+        """ Load a single tree """
+        with open(os.path.join(self.folder, path), "rb") as f:
+            return load_html(f.read(), info["url"])
+
     def get_Xy(self, drop_duplicates=True, verbose=False, leave=False):
         """ Return X,y suitable for scikit-learn training """
-        return list(zip(*self.iter_annotations(
+        X, y, indices, info_records, info_keys = zip(*self.iter_annotations(
             drop_duplicates=drop_duplicates,
             verbose=verbose,
             leave=leave,
-        )))
+        ))
+        return X, y
 
     def check(self):
         """
@@ -141,7 +175,7 @@ class Storage(object):
         items = list(index.items())
         errors = 0
         for fn, info in tqdm(items, "Checking", leave=True, mininterval=0,
-                             ascii=True, ncols=80):
+                             ascii=True, ncols=80, unit=' files'):
             fn_full = os.path.join(self.folder, fn)
             if not os.path.exists(fn_full):
                 print("\nFile not found: %r" % fn_full)

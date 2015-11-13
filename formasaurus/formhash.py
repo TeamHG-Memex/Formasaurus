@@ -4,7 +4,7 @@ from copy import deepcopy
 import six
 import lxml.html
 
-from formasaurus.utils import remove_by_xpath
+from formasaurus.html import remove_by_xpath
 
 
 def get_form_hash(form, only_visible=True):

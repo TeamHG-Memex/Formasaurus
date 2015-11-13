@@ -8,10 +8,8 @@ import os
 from six.moves.urllib.request import urlopen
 from six.moves import input
 
-import lxml.html
-from lxml.html.clean import Cleaner
-
-from formasaurus.storage import Storage, FORM_TYPES, load_html, FORM_TYPES_INV
+from formasaurus.html import get_cleaned_form_html, load_html, get_forms
+from formasaurus.storage import Storage, FORM_TYPES, FORM_TYPES_INV
 
 
 def annotate_forms(data_folder, url_argument):
@@ -26,9 +24,9 @@ def annotate_forms(data_folder, url_argument):
     storage = Storage(data_folder)
     html, url = load_data(url_argument)
     doc = load_html(html, url)
-    answers = _annotate_forms(storage, doc)
-    if answers:
-        storage.store_result(html, answers, url)
+    form_answers = _annotate_forms(storage, doc)
+    if form_answers:
+        storage.store_result(html, url, form_answers)
 
 
 def check_annotated_data(data_folder):
@@ -58,55 +56,46 @@ def load_data(url_or_path):
 
 def print_form_html(form):
     """ Print a cleaned up version of <form> HTML contents """
-    cleaner = Cleaner(
-        forms=False,
-        javascript=True,
-        scripts=True,
-        style=True,
-        allow_tags={'form', 'input', 'textarea', 'label', 'option',
-                    'select', 'submit', 'a'},
-        remove_unknown_tags=False,
-    )
-    raw_html = lxml.html.tostring(form, pretty_print=True, encoding="unicode")
-    html = cleaner.clean_html(raw_html)
-    lines = [line.strip() for line in html.splitlines(False) if line.strip()]
-    print("\n".join(lines))
+    print(get_cleaned_form_html(form))
 
 
-def print_form_types(types):
+
+def print_form_types(form_types):
     print("\nAllowed form types and their shortcuts:")
-    for full_name, shortcuts in types.items():
+    for full_name, shortcuts in form_types.items():
         print("  %s %s" % (shortcuts, full_name))
     print("")
 
 
-def _annotate_forms(storage, doc, form_types=None):
+def _annotate_forms(storage, tree, form_types=None):
     """
     For each form element ask user whether it is a login form or not.
     Return an array with True/False answers.
     """
-    forms = doc.xpath("//form")
+    forms = get_forms(tree)
     if not forms:
         print("Page has no forms.")
         return []
     else:
         print("Page has %d form(s)" % len(forms))
 
-    fingerprints = storage.get_fingerprints()
-
     if form_types is None:
         form_types = FORM_TYPES
+        form_types_inv = FORM_TYPES_INV
+    else:
+        form_types_inv = {v: k for k, v in form_types.items()}
 
     print_form_types(form_types)
     shortcuts = "/".join(form_types.values())
+    fingerprints = storage.get_fingerprints()
 
     res = []
     for idx, form in enumerate(forms, 1):
 
         fp = storage.get_fingerprint(form)
         if fp in fingerprints:
-            xpath = "//form[%d]" % idx
-            tp = FORM_TYPES_INV[fingerprints[fp]]
+            xpath = "(//form)[%d]" % idx
+            tp = form_types_inv[fingerprints[fp]]
             print("Skipping duplicate form %-10s %r" % (xpath, tp))
             res.append("X")
             continue
