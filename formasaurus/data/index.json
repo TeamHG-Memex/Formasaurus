@@ -3,18 +3,48 @@
         "url": "https://account.oneplus.net/sign-up",
         "forms": [
             "r"
+        ],
+        "visible_html_fields": [
+            {
+                "email": "XX",
+                "password": "XX",
+                "password_confirmation": "XX",
+                "username": "XX"
+            }
         ]
     },
     "html/account.swtor.com-0.html": {
         "url": "https://account.swtor.com/user/login",
         "forms": [
             "l"
+        ],
+        "visible_html_fields": [
+            {
+                "name": "XX",
+                "pass": "XX",
+                "security_key": "XX",
+                "submit": "XX"
+            }
         ]
     },
     "html/account.swtor.com-1.html": {
         "url": "https://account.swtor.com/play-free",
         "forms": [
             "r"
+        ],
+        "visible_html_fields": [
+            {
+                "birthdate[day]": "XX",
+                "birthdate[month]": "XX",
+                "birthdate[year]": "XX",
+                "country": "XX",
+                "op": "XX",
+                "password": "XX",
+                "password_verify": "XX",
+                "persona": "XX",
+                "terms": "XX",
+                "terms_origin": "XX"
+            }
         ]
     },
     "html/allnokia.ru-0.html": {
@@ -23,6 +53,24 @@
             "l",
             "s",
             "m"
+        ],
+        "visible_html_fields": [
+            {
+                "autologin": "rC",
+                "password": "p1",
+                "username": "us"
+            },
+            {
+                "part": "qc",
+                "request": "qq"
+            },
+            {
+                "ch[1]": "XX",
+                "ch[2]": "XX",
+                "ch[3]": "XX",
+                "ch[4]": "XX",
+                "email": "e1"
+            }
         ]
     },
     "html/apartments.camdenliving.com-0.html": {
@@ -30,6 +78,12 @@
         "forms": [
             "s",
             "o"
+        ],
+        "visible_html_fields": [
+            {
+                "q": "qq"
+            },
+            {}
         ]
     },
     "html/app.cheezburger.com-0.html": {
@@ -38,6 +92,22 @@
             "s",
             "p",
             "o"
+        ],
+        "visible_html_fields": [
+            {
+                "q": "qq"
+            },
+            {
+                "Email": "e1"
+            },
+            {
+                "Description": "XX",
+                "PhotoUrl": "XX",
+                "SourceUrl": "XX",
+                "Title": "XX",
+                "UploadedPhoto": "XX",
+                "VideoUrl": "XX"
+            }
         ]
     },
     "html/arstechnica.com-0.html": {
@@ -46,6 +116,17 @@
             "s",
             "s",
             "o"
+        ],
+        "visible_html_fields": [
+            {
+                "q": "qq"
+            },
+            {
+                "mag_list": "nv"
+            },
+            {
+                "sub_list": "XX"
+            }
         ]
     },
     "html/ask.debian.net-0.html": {
@@ -60,24 +141,99 @@
             "l",
             "r",
             "c"
+        ],
+        "visible_html_fields": [
+            {
+                "q": "qq"
+            },
+            {
+                "commit": "XX",
+                "openid_url": "oi"
+            },
+            {
+                "commit": "Bs",
+                "user[email]": "e1",
+                "user[password]": "p1",
+                "user[remember_me]": "rC"
+            },
+            {
+                "commit": "Bs",
+                "user[email]": "e1",
+                "user[login]": "us",
+                "user[name]": "nf",
+                "user[password]": "p1",
+                "user[password_confirmation]": "p2"
+            },
+            {
+                "commit": "XX",
+                "question[title]": "XX"
+            },
+            {
+                "commit": "XX",
+                "openid_url": "XX"
+            },
+            {
+                "commit": "XX",
+                "user[email]": "XX",
+                "user[password]": "XX",
+                "user[remember_me]": "XX"
+            },
+            {
+                "commit": "XX",
+                "user[email]": "XX",
+                "user[login]": "XX",
+                "user[name]": "XX",
+                "user[password]": "XX",
+                "user[password_confirmation]": "XX"
+            },
+            {
+                "commit": "XX",
+                "feedback[description]": "XX",
+                "feedback[email]": "XX",
+                "feedback[title]": "XX"
+            }
         ]
     },
     "html/auth.getpebble.com-0.html": {
         "url": "https://auth.getpebble.com/users/sign_up",
         "forms": [
             "r"
+        ],
+        "visible_html_fields": [
+            {
+                "commit": "Bs",
+                "user[email]": "e1",
+                "user[email_confirmation]": "e2",
+                "user[name]": "nf",
+                "user[password]": "p1",
+                "user[password_confirmation]": "p2"
+            }
         ]
     },
     "html/auth.getpebble.com-1.html": {
         "url": "https://auth.getpebble.com/users/sign_in",
         "forms": [
             "l"
+        ],
+        "visible_html_fields": [
+            {
+                "commit": "Bs",
+                "user[email]": "e1",
+                "user[password]": "p1",
+                "user[remember_me]": "rC"
+            }
         ]
     },
     "html/auth.getpebble.com-2.html": {
         "url": "https://auth.getpebble.com/users/password/new",
         "forms": [
             "p"
+        ],
+        "visible_html_fields": [
+            {
+                "commit": "Bs",
+                "user[email]": "e1"
+            }
         ]
     },
     "html/auth.independent.ie-0.html": {
@@ -85,30 +241,79 @@
         "forms": [
             "o",
             "r"
+        ],
+        "visible_html_fields": [
+            {},
+            {
+                "attributes[confirm_login_password]": "p2",
+                "attributes[login_emailAddress]": "e1",
+                "attributes[login_password]": "p1",
+                "attributes[terms_condition]": "tC",
+                "attributes[updates_opt]": "eC"
+            }
         ]
     },
     "html/auth.independent.ie-1.html": {
         "url": "https://auth.independent.ie/evolok-ui-web/login.htm?serviceName=independent&viewType=fullPage&redirectLabel=www.independent.ie&redirectTo=http%3A%2F%2Fwww.independent.ie%2Fevolok%2Flogin-redirect%3Fredirect%3Dhttp%253A%252F%252Fwww.independent.ie%252Fsport%252Fsoccer%252F",
         "forms": [
             "l"
+        ],
+        "visible_html_fields": [
+            {
+                "identifiers[login_emailAddress]": "e1",
+                "login": "Bs",
+                "rememberMe": "rC",
+                "validators[login_password]": "p1"
+            }
         ]
     },
     "html/belepes.t-online.hu-0.html": {
         "url": "https://belepes.t-online.hu/auth.html?cmd=register&skin=origo&backurl=http://postr.hu//",
         "forms": [
             "r"
+        ],
+        "visible_html_fields": [
+            {
+                "captcharesp": "XX",
+                "country": "XX",
+                "dateofbirth_day": "XX",
+                "dateofbirth_month": "XX",
+                "dateofbirth_year": "XX",
+                "disclaimer": "XX",
+                "email": "XX",
+                "firstname": "XX",
+                "lastname": "XX",
+                "pass_rem_ans": "XX",
+                "pass_rem_qst": "XX",
+                "passwd": "XX",
+                "passwd2": "XX",
+                "sex": "XX",
+                "zipcode": "XX"
+            }
         ]
     },
     "html/belepes.t-online.hu-1.html": {
         "url": "https://belepes.t-online.hu/auth.html?cmd=pwdrem&skin=origo",
         "forms": [
             "p"
+        ],
+        "visible_html_fields": [
+            {
+                "email": "XX"
+            }
         ]
     },
     "html/berkeley.edu-0.html": {
         "url": "http://berkeley.edu/index.html",
         "forms": [
             "s"
+        ],
+        "visible_html_fields": [
+            {
+                "Submit": "Bs",
+                "search_text": "qq",
+                "typeofsearch": "qc"
+            }
         ]
     },
     "html/berkeley.edu-1.html": {
@@ -116,6 +321,18 @@
         "forms": [
             "s",
             "c"
+        ],
+        "visible_html_fields": [
+            {
+                "Submit": "Bs",
+                "search_text": "qq",
+                "typeofsearch": "qc"
+            },
+            {
+                "required-comments": "XX",
+                "required-email": "XX",
+                "required-name": "XX"
+            }
         ]
     },
     "html/boston.custhelp.com-0.html": {
@@ -124,6 +341,19 @@
             "o",
             "c",
             "s"
+        ],
+        "visible_html_fields": [
+            {},
+            {
+                "file": "XX",
+                "rn_SelectionInputHidden_15_Radio": "XX",
+                "rn_TextInput_12_problem_url": "XX",
+                "rn_TextInput_14_user_screen_resolution": "XX",
+                "rn_TextInput_5_email": "XX"
+            },
+            {
+                "rn_SimpleSearch_18_SearchField": "qq"
+            }
         ]
     },
     "html/brookdalecc.instructure.com-0.html": {
@@ -131,12 +361,27 @@
         "forms": [
             "l",
             "p"
+        ],
+        "visible_html_fields": [
+            {
+                "pseudonym_session[password]": "p1",
+                "pseudonym_session[remember_me]": "rC",
+                "pseudonym_session[unique_id]": "us"
+            },
+            {
+                "pseudonym_session[unique_id_forgot]": "XX"
+            }
         ]
     },
     "html/brooklynbrewshop.com-0.html": {
         "url": "http://brooklynbrewshop.com/beer-making-kits",
         "forms": [
             "m"
+        ],
+        "visible_html_fields": [
+            {
+                "email": "e1"
+            }
         ]
     },
     "html/brooklynbrewshop.com-1.html": {
@@ -144,6 +389,14 @@
         "forms": [
             "o",
             "X"
+        ],
+        "visible_html_fields": [
+            {
+                "qty": "XX"
+            },
+            {
+                "email": "XX"
+            }
         ]
     },
     "html/brooklynbrewshop.com-2.html": {
@@ -151,6 +404,16 @@
         "forms": [
             "l",
             "X"
+        ],
+        "visible_html_fields": [
+            {
+                "login[password]": "p1",
+                "login[username]": "e1",
+                "send": "Bs"
+            },
+            {
+                "email": "XX"
+            }
         ]
     },
     "html/brooklynbrewshop.com-3.html": {
@@ -158,6 +421,19 @@
         "forms": [
             "r",
             "X"
+        ],
+        "visible_html_fields": [
+            {
+                "confirmation": "p2",
+                "email": "e1",
+                "firstname": "n1",
+                "is_subscribed": "eC",
+                "lastname": "n3",
+                "password": "p1"
+            },
+            {
+                "email": "XX"
+            }
         ]
     },
     "html/brooklynbrewshop.com-4.html": {
@@ -165,6 +441,14 @@
         "forms": [
             "p",
             "X"
+        ],
+        "visible_html_fields": [
+            {
+                "email": "e1"
+            },
+            {
+                "email": "XX"
+            }
         ]
     },
     "html/brooklynbrewshop.com-5.html": {
@@ -172,18 +456,50 @@
         "forms": [
             "c",
             "X"
+        ],
+        "visible_html_fields": [
+            {
+                "city": "XX",
+                "comment": "XX",
+                "company": "XX",
+                "country": "XX",
+                "email": "XX",
+                "name": "XX",
+                "order": "XX",
+                "state": "XX",
+                "subject": "XX",
+                "telephone": "XX",
+                "website": "XX"
+            },
+            {
+                "email": "XX"
+            }
         ]
     },
     "html/danishbits.org-0.html": {
         "url": "https://danishbits.org/login.php",
         "forms": [
             "l"
+        ],
+        "visible_html_fields": [
+            {
+                "keeplogged": "rC",
+                "login": "Bs",
+                "password": "p1",
+                "username": "us"
+            }
         ]
     },
     "html/danishbits.org-1.html": {
         "url": "https://danishbits.org/login.php?act=recover",
         "forms": [
             "p"
+        ],
+        "visible_html_fields": [
+            {
+                "email": "e1",
+                "reset": "Bs"
+            }
         ]
     },
     "html/darkmoney.cc-0.html": {
@@ -191,24 +507,53 @@
         "forms": [
             "l",
             "o"
+        ],
+        "visible_html_fields": [
+            {
+                "cookieuser": "rC",
+                "vb_login_password": "p1",
+                "vb_login_username": "us"
+            },
+            {
+                "langid": "XX",
+                "styleid": "XX"
+            }
         ]
     },
     "html/dash.scrapinghub.com-0.html": {
         "url": "https://dash.scrapinghub.com/account/login/?next=/",
         "forms": [
             "l"
+        ],
+        "visible_html_fields": [
+            {
+                "password": "XX",
+                "username": "XX"
+            }
         ]
     },
     "html/dash.scrapinghub.com-1.html": {
         "url": "https://dash.scrapinghub.com/account/signup/",
         "forms": [
             "r"
+        ],
+        "visible_html_fields": [
+            {
+                "email": "XX",
+                "password1": "XX",
+                "username": "XX"
+            }
         ]
     },
     "html/dash.scrapinghub.com-2.html": {
         "url": "https://dash.scrapinghub.com/account/password/reset/",
         "forms": [
             "p"
+        ],
+        "visible_html_fields": [
+            {
+                "email": "XX"
+            }
         ]
     },
     "html/ddl-board.org-0.html": {
@@ -218,6 +563,23 @@
             "l",
             "o",
             "l"
+        ],
+        "visible_html_fields": [
+            {
+                "q": "qq"
+            },
+            {
+                "loginPassword": "p1",
+                "loginUsername": "us"
+            },
+            {
+                "styleID": "XX"
+            },
+            {
+                "loginPassword": "p1",
+                "loginUsername": "us",
+                "useCookies": "rC"
+            }
         ]
     },
     "html/ddl-board.org-1.html": {
@@ -227,30 +589,101 @@
             "r",
             "o",
             "l"
+        ],
+        "visible_html_fields": [
+            {
+                "q": "qq"
+            },
+            {
+                "captchaString": "ca",
+                "confirmEmail": "e2",
+                "confirmPassword": "p2",
+                "email": "e1",
+                "password": "p1",
+                "username": "us",
+                "values[gender]": "ge",
+                "values[userOption134]": "SS",
+                "values[userOption137]": "SS",
+                "values[userOption138]": "SS",
+                "values[userOption139]": "SS"
+            },
+            {
+                "styleID": "XX"
+            },
+            {
+                "loginPassword": "p1",
+                "loginUsername": "us",
+                "useCookies": "rC"
+            }
         ]
     },
     "html/ddl-warez.in-0.html": {
         "url": "http://ddl-warez.in/",
         "forms": [
             "s"
+        ],
+        "visible_html_fields": [
+            {
+                "kat": "qc",
+                "search": "qq"
+            }
         ]
     },
     "html/destinet.eu-0.html": {
         "url": "http://destinet.eu/login_html",
         "forms": [
             "l"
+        ],
+        "visible_html_fields": [
+            {
+                "__ac_name": "us",
+                "__ac_password": "p1",
+                "submit": "Bs"
+            }
         ]
     },
     "html/destinet.eu-1.html": {
         "url": "http://destinet.eu/create_destinet_account_html",
         "forms": [
             "r"
+        ],
+        "visible_html_fields": [
+            {
+                "address_button": "XX",
+                "administrative_level:utf8:ustring": "SS",
+                "category-marketplace:utf8:ustring": "SS",
+                "category-organization:utf8:ustring": "SS",
+                "category-supporting-solutions:utf8:ustring": "SS",
+                "comments:utf8:ustring": "am",
+                "confirm:utf8:ustring": "p2",
+                "coverage:utf8:ustring": "Co",
+                "email:utf8:ustring": "e1",
+                "firstname:utf8:ustring": "n1",
+                "geo_location.address:utf8:ustring": "Ad",
+                "geo_location.lat:utf8:ustring": "SS",
+                "geo_location.lon:utf8:ustring": "SS",
+                "groups:utf8:ustring:list": "SS",
+                "landscape_type:utf8:ustring:list": "SS",
+                "lastname:utf8:ustring": "n3",
+                "organisation:utf8:ustring": "SS",
+                "password:utf8:ustring": "p1",
+                "postaladdress:utf8:ustring": "Ad",
+                "recaptcha_challenge_field": "ca",
+                "topics:utf8:ustring:list": "SS",
+                "username:utf8:ustring": "us"
+            }
         ]
     },
     "html/dnoticias.pt-0.html": {
         "url": "http://dnoticias.pt/",
         "forms": [
             "s"
+        ],
+        "visible_html_fields": [
+            {
+                "op": "Bs",
+                "search_theme_form": "qq"
+            }
         ]
     },
     "html/dnoticias.pt-1.html": {
@@ -259,6 +692,22 @@
             "s",
             "l",
             "p"
+        ],
+        "visible_html_fields": [
+            {
+                "op": "Bs",
+                "search_theme_form": "qq"
+            },
+            {
+                "name": "e1",
+                "op": "Bs",
+                "pass": "p1",
+                "remember_me": "rC"
+            },
+            {
+                "name": "e1",
+                "op": "Bs"
+            }
         ]
     },
     "html/dnoticias.pt-2.html": {
@@ -266,18 +715,52 @@
         "forms": [
             "s",
             "r"
+        ],
+        "visible_html_fields": [
+            {
+                "op": "Bs",
+                "search_theme_form": "qq"
+            },
+            {
+                "captcha_response": "ca",
+                "files[picture_upload_register]": "av",
+                "legal_accept": "tC",
+                "mail": "e1",
+                "op": "Bs",
+                "pass[pass1]": "p1",
+                "pass[pass2]": "p2",
+                "profile_apelido": "ns",
+                "profile_nascimento[day]": "bd",
+                "profile_nascimento[month]": "bm",
+                "profile_nascimento[year]": "by",
+                "profile_nome": "nf",
+                "profile_residencia": "Co",
+                "profile_telefone": "ph"
+            }
         ]
     },
     "html/duckduckgo.com-0.html": {
         "url": "https://duckduckgo.com/",
         "forms": [
             "s"
+        ],
+        "visible_html_fields": [
+            {
+                "q": "qq"
+            }
         ]
     },
     "html/en.wikipedia.org-0.html": {
         "url": "http://en.wikipedia.org/wiki/Main_Page",
         "forms": [
             "s"
+        ],
+        "visible_html_fields": [
+            {
+                "fulltext": "XX",
+                "go": "XX",
+                "search": "XX"
+            }
         ]
     },
     "html/faq.orbitz.com-0.html": {
@@ -285,6 +768,12 @@
         "forms": [
             "o",
             "s"
+        ],
+        "visible_html_fields": [
+            {},
+            {
+                "rn_MobileSimpleSearch_1_SearchField": "XX"
+            }
         ]
     },
     "html/forobeta.com-0.html": {
@@ -293,6 +782,21 @@
             "l",
             "s",
             "o"
+        ],
+        "visible_html_fields": [
+            {
+                "cookieuser": "XX",
+                "vb_login_password": "XX",
+                "vb_login_password_hint": "XX",
+                "vb_login_username": "XX"
+            },
+            {
+                "q": "XX",
+                "submit": "XX"
+            },
+            {
+                "styleid": "XX"
+            }
         ]
     },
     "html/forobeta.com-1.html": {
@@ -302,6 +806,37 @@
             "s",
             "r",
             "o"
+        ],
+        "visible_html_fields": [
+            {
+                "cookieuser": "rC",
+                "vb_login_password": "p1",
+                "vb_login_password_hint": "XX",
+                "vb_login_username": "us"
+            },
+            {
+                "q": "qq",
+                "submit": "Bs"
+            },
+            {
+                "Reset": "Br",
+                "agree": "tC",
+                "day": "bd",
+                "email": "e1",
+                "emailconfirm": "e2",
+                "month": "bm",
+                "password": "p1",
+                "passwordconfirm": "p2",
+                "recaptcha_challenge_field": "ca",
+                "referrername": "in",
+                "showbirthday": "SS",
+                "styleid": "SS",
+                "username": "us",
+                "year": "by"
+            },
+            {
+                "styleid": "XX"
+            }
         ]
     },
     "html/forum.escmid.org-0.html": {
@@ -310,6 +845,14 @@
             "s",
             "o",
             "o"
+        ],
+        "visible_html_fields": [
+            {
+                "query": "qq",
+                "submit": "Bs"
+            },
+            {},
+            {}
         ]
     },
     "html/forum.escmid.org-1.html": {
@@ -319,12 +862,35 @@
             "o",
             "c",
             "o"
+        ],
+        "visible_html_fields": [
+            {
+                "query": "XX",
+                "submit": "XX"
+            },
+            {},
+            {
+                "email": "XX",
+                "message": "XX",
+                "name": "XX",
+                "other_subject": "XX",
+                "subject": "XX"
+            },
+            {}
         ]
     },
     "html/forum.flyordie.com-0.html": {
         "url": "http://forum.flyordie.com/auth.jsp",
         "forms": [
             "l"
+        ],
+        "visible_html_fields": [
+            {
+                "autoLogin": "rC",
+                "cancel": "Br",
+                "password": "p1",
+                "username": "us"
+            }
         ]
     },
     "html/forum.mindfactory.de-0.html": {
@@ -334,6 +900,22 @@
             "s",
             "o",
             "o"
+        ],
+        "visible_html_fields": [
+            {
+                "cookieuser": "rC",
+                "vb_login_password": "p1",
+                "vb_login_password_hint": "XX",
+                "vb_login_username": "us"
+            },
+            {
+                "query": "XX",
+                "submit": "XX"
+            },
+            {},
+            {
+                "styleid": "XX"
+            }
         ]
     },
     "html/forum.mindfactory.de-1.html": {
@@ -343,6 +925,37 @@
             "s",
             "r",
             "o"
+        ],
+        "visible_html_fields": [
+            {
+                "cookieuser": "XX",
+                "vb_login_password": "XX",
+                "vb_login_password_hint": "XX",
+                "vb_login_username": "XX"
+            },
+            {
+                "query": "XX",
+                "submit": "XX"
+            },
+            {
+                "Reset": "Br",
+                "agree": "tC",
+                "dst": "ds",
+                "email": "e1",
+                "emailconfirm": "e2",
+                "humanverify[input]": "ca",
+                "options[adminemail]": "eC",
+                "options[showemail]": "oC",
+                "password": "p1",
+                "passwordconfirm": "p2",
+                "referrername": "in",
+                "timezoneoffset": "tz",
+                "userfield[field5]": "ab",
+                "username": "us"
+            },
+            {
+                "styleid": "XX"
+            }
         ]
     },
     "html/forum.mindfactory.de-2.html": {
@@ -353,6 +966,30 @@
             "o",
             "c",
             "o"
+        ],
+        "visible_html_fields": [
+            {
+                "cookieuser": "XX",
+                "vb_login_password": "XX",
+                "vb_login_password_hint": "XX",
+                "vb_login_username": "XX"
+            },
+            {
+                "query": "XX",
+                "submit": "XX"
+            },
+            {},
+            {
+                "email": "XX",
+                "humanverify[input]": "XX",
+                "message": "XX",
+                "name": "XX",
+                "other_subject": "XX",
+                "subject": "XX"
+            },
+            {
+                "styleid": "XX"
+            }
         ]
     },
     "html/forums.debian.net-0.html": {
@@ -360,6 +997,17 @@
         "forms": [
             "s",
             "l"
+        ],
+        "visible_html_fields": [
+            {
+                "keywords": "qq"
+            },
+            {
+                "autologin": "rC",
+                "login": "Bs",
+                "password": "p1",
+                "username": "us"
+            }
         ]
     },
     "html/forums.macrumors.com-0.html": {
@@ -369,6 +1017,21 @@
             "s",
             "l",
             "c"
+        ],
+        "visible_html_fields": [
+            {
+                "query": "XX"
+            },
+            {
+                "query": "XX",
+                "showposts": "XX"
+            },
+            {
+                "cookieuser": "rC",
+                "vb_login_password": "p1",
+                "vb_login_username": "us"
+            },
+            {}
         ]
     },
     "html/forums.macrumors.com-1.html": {
@@ -380,6 +1043,29 @@
             "l",
             "s",
             "c"
+        ],
+        "visible_html_fields": [
+            {
+                "query": "qq"
+            },
+            {
+                "query": "qq",
+                "showposts": "qc"
+            },
+            {
+                "cookieuser": "XX",
+                "vb_login_password": "XX",
+                "vb_login_username": "XX"
+            },
+            {
+                "cookieuser": "rC",
+                "vb_login_password": "p1",
+                "vb_login_username": "us"
+            },
+            {
+                "f": "nv"
+            },
+            {}
         ]
     },
     "html/forums.mtbr.com-0.html": {
@@ -391,6 +1077,28 @@
             "o",
             "o",
             "s"
+        ],
+        "visible_html_fields": [
+            {
+                "q": "XX"
+            },
+            {
+                "cookieuser": "rC",
+                "vb_login_password": "p1",
+                "vb_login_password_hint": "XX",
+                "vb_login_username": "us"
+            },
+            {
+                "query": "XX",
+                "submit": "XX"
+            },
+            {},
+            {
+                "styleid": "XX"
+            },
+            {
+                "q": "XX"
+            }
         ]
     },
     "html/forums.mtbr.com-1.html": {
@@ -402,6 +1110,45 @@
             "r",
             "o",
             "s"
+        ],
+        "visible_html_fields": [
+            {
+                "q": "XX"
+            },
+            {
+                "cookieuser": "XX",
+                "vb_login_password": "XX",
+                "vb_login_password_hint": "XX",
+                "vb_login_username": "XX"
+            },
+            {
+                "query": "XX",
+                "submit": "XX"
+            },
+            {
+                "Reset": "Br",
+                "agree": "tC",
+                "dst": "ds",
+                "email": "e1",
+                "emailconfirm": "e2",
+                "options[adminemail]": "eC",
+                "options[showemail]": "oC",
+                "password": "p1",
+                "passwordconfirm": "p2",
+                "timezoneoffset": "tz",
+                "userfield[field10]": "Ad",
+                "userfield[field11]": "n1",
+                "userfield[field12]": "n3",
+                "userfield[field7][]": "SS",
+                "userfield[field9]": "am",
+                "username": "us"
+            },
+            {
+                "styleid": "XX"
+            },
+            {
+                "q": "XX"
+            }
         ]
     },
     "html/forums.oneplus.net-0.html": {
@@ -411,6 +1158,25 @@
             "l",
             "o",
             "l"
+        ],
+        "visible_html_fields": [
+            {
+                "date": "XX",
+                "keywords": "XX",
+                "nodes[]": "XX",
+                "title_only": "XX",
+                "type[post][group_discussion]": "XX",
+                "type[post][thread_id]": "XX",
+                "users": "XX"
+            },
+            {},
+            {},
+            {
+                "login": "XX",
+                "password": "XX",
+                "register": "XX",
+                "remember": "XX"
+            }
         ]
     },
     "html/funzu.com-0.html": {
@@ -418,12 +1184,28 @@
         "forms": [
             "s",
             "m"
+        ],
+        "visible_html_fields": [
+            {
+                "searchword": "qq"
+            },
+            {
+                "email": "e1"
+            }
         ]
     },
     "html/games.flyordie.com-0.html": {
         "url": "http://games.flyordie.com/registration/registerSite.html?portal=flyordie_com&lang=en_US&game=Forum&done=http%3A//forum.flyordie.com/auth.jsp",
         "forms": [
             "r"
+        ],
+        "visible_html_fields": [
+            {
+                "email": "e1",
+                "loginName": "us",
+                "password": "p1",
+                "passwordRetyped": "p2"
+            }
         ]
     },
     "html/github.com-0.html": {
@@ -431,6 +1213,16 @@
         "forms": [
             "s",
             "r"
+        ],
+        "visible_html_fields": [
+            {
+                "q": "qq"
+            },
+            {
+                "user[email]": "e1",
+                "user[login]": "us",
+                "user[password]": "p1"
+            }
         ]
     },
     "html/github.com-1.html": {
@@ -438,6 +1230,16 @@
         "forms": [
             "s",
             "l"
+        ],
+        "visible_html_fields": [
+            {
+                "q": "XX"
+            },
+            {
+                "commit": "Bs",
+                "login": "ue",
+                "password": "p1"
+            }
         ]
     },
     "html/go.telstra.com.au-0.html": {
@@ -447,6 +1249,18 @@
             "s",
             "s",
             "o"
+        ],
+        "visible_html_fields": [
+            {
+                "inpSearch": "XX"
+            },
+            {
+                "query": "XX"
+            },
+            {
+                "postcode": "XX"
+            },
+            {}
         ]
     },
     "html/grantland.com-0.html": {
@@ -454,6 +1268,15 @@
         "forms": [
             "s",
             "m"
+        ],
+        "visible_html_fields": [
+            {
+                "s": "qq"
+            },
+            {
+                "Submit": "Bs",
+                "email": "e1"
+            }
         ]
     },
     "html/guerrillagardening.org-0.html": {
@@ -461,6 +1284,19 @@
         "forms": [
             "l",
             "l"
+        ],
+        "visible_html_fields": [
+            {
+                "cookielength": "ON",
+                "cookieneverexp": "rC",
+                "passwrd": "p1",
+                "user": "us"
+            },
+            {
+                "cookielength": "rC",
+                "passwrd": "p1",
+                "user": "us"
+            }
         ]
     },
     "html/guerrillagardening.org-1.html": {
@@ -468,6 +1304,22 @@
         "forms": [
             "r",
             "l"
+        ],
+        "visible_html_fields": [
+            {
+                "email": "e1",
+                "hideEmail": "SS",
+                "passwrd1": "p1",
+                "passwrd2": "p2",
+                "regSubmit": "Bs",
+                "regagree": "tC",
+                "user": "us"
+            },
+            {
+                "cookielength": "rC",
+                "passwrd": "p1",
+                "user": "us"
+            }
         ]
     },
     "html/idp.unito.it-0.html": {
@@ -476,12 +1328,35 @@
             "l",
             "l",
             "s"
+        ],
+        "visible_html_fields": [
+            {
+                "j_password": "XX",
+                "txt_username": "XX"
+            },
+            {},
+            {
+                "Submit": "XX",
+                "q": "XX"
+            }
         ]
     },
     "html/info.pompeiis.com-0.html": {
         "url": "http://info.pompeiis.com/contact-us/",
         "forms": [
             "c"
+        ],
+        "visible_html_fields": [
+            {
+                "address": "XX",
+                "city": "XX",
+                "email": "XX",
+                "first_name": "XX",
+                "how_may_we_help_you": "XX",
+                "last_name": "XX",
+                "phone": "XX",
+                "ubafs-u4ISyfqZliGxqzAYYCmbyocmU5BWrUgE": "XX"
+            }
         ]
     },
     "html/instrumentclinicusa.com-0.html": {
@@ -490,6 +1365,17 @@
             "s",
             "s",
             "o"
+        ],
+        "visible_html_fields": [
+            {
+                "keyword": "qq"
+            },
+            {
+                "keyword": "qq"
+            },
+            {
+                "cart_quantity": "XX"
+            }
         ]
     },
     "html/instrumentclinicusa.com-1.html": {
@@ -498,18 +1384,43 @@
             "s",
             "s",
             "c"
+        ],
+        "visible_html_fields": [
+            {
+                "keyword": "XX"
+            },
+            {
+                "keyword": "XX"
+            },
+            {
+                "contactname": "XX",
+                "email": "XX",
+                "enquiry": "XX",
+                "send_to": "XX"
+            }
         ]
     },
     "html/java.com-0.html": {
         "url": "http://java.com/en/",
         "forms": [
             "s"
+        ],
+        "visible_html_fields": [
+            {
+                "q": "qq",
+                "submit": "Bs"
+            }
         ]
     },
     "html/letstalkbitcoin.com-0.html": {
         "url": "http://letstalkbitcoin.com/forum/board/all",
         "forms": [
             "o"
+        ],
+        "visible_html_fields": [
+            {
+                "boardFilters[]": "XX"
+            }
         ]
     },
     "html/letstalkbitcoin.com-1.html": {
@@ -517,18 +1428,54 @@
         "forms": [
             "l",
             "r"
+        ],
+        "visible_html_fields": [
+            {
+                "password": "p1",
+                "rememberMe": "rC",
+                "submit": "Bs",
+                "username": "us"
+            },
+            {
+                "email": "e1",
+                "password": "p1",
+                "recaptcha_challenge_field": "ca",
+                "username": "us"
+            }
         ]
     },
     "html/letstalkbitcoin.com-2.html": {
         "url": "http://letstalkbitcoin.com/contact-us",
         "forms": [
             "c"
+        ],
+        "visible_html_fields": [
+            {
+                "email": "XX",
+                "message": "XX",
+                "name": "XX",
+                "recaptcha_challenge_field": "XX",
+                "submit": "XX"
+            }
         ]
     },
     "html/listofrandomwords.com-0.html": {
         "url": "http://listofrandomwords.com/index.cfm?blist",
         "forms": [
             "o"
+        ],
+        "visible_html_fields": [
+            {
+                "lst_fLetter": "XX",
+                "lst_howmany": "XX",
+                "lst_wLen": "XX",
+                "par_numPara": "XX",
+                "par_numSent": "XX",
+                "par_numWordsSent": "XX",
+                "tbl_numCols": "XX",
+                "tbl_numRows": "XX",
+                "tbl_tblHead": "XX"
+            }
         ]
     },
     "html/lokalavisen.dk-0.html": {
@@ -536,6 +1483,14 @@
         "forms": [
             "s",
             "s"
+        ],
+        "visible_html_fields": [
+            {
+                "crit": "qq"
+            },
+            {
+                "crit": "XX"
+            }
         ]
     },
     "html/memebase.cheezburger.com-0.html": {
@@ -544,18 +1499,55 @@
             "s",
             "s",
             "o"
+        ],
+        "visible_html_fields": [
+            {
+                "q": "XX"
+            },
+            {
+                "q": "qq"
+            },
+            {
+                "Description": "XX",
+                "PhotoUrl": "XX",
+                "SourceUrl": "XX",
+                "Title": "XX",
+                "UploadedPhoto": "XX",
+                "VideoUrl": "XX"
+            }
         ]
     },
     "html/mingle2.com-0.html": {
         "url": "http://mingle2.com/online-dating/florida",
         "forms": [
             "r"
+        ],
+        "visible_html_fields": [
+            {
+                "commit": "Bs",
+                "country": "Co",
+                "dob[day]": "bd",
+                "dob[month]": "bm",
+                "dob[year]": "by",
+                "email": "e1",
+                "gender": "ge",
+                "postal_code": "Zi",
+                "seeking_a": "ge"
+            }
         ]
     },
     "html/mingle2.com-1.html": {
         "url": "http://mingle2.com/user/login",
         "forms": [
             "l"
+        ],
+        "visible_html_fields": [
+            {
+                "commit": "Bs",
+                "login": "ue",
+                "password": "p1",
+                "remember_me": "rC"
+            }
         ]
     },
     "html/motoride.sk-0.html": {
@@ -563,6 +1555,17 @@
         "forms": [
             "l",
             "s"
+        ],
+        "visible_html_fields": [
+            {
+                "login": "XX",
+                "passwd": "XX",
+                "remeberme": "XX"
+            },
+            {
+                "S": "XX",
+                "what": "XX"
+            }
         ]
     },
     "html/motoride.sk-1.html": {
@@ -571,6 +1574,31 @@
             "l",
             "s",
             "r"
+        ],
+        "visible_html_fields": [
+            {
+                "login": "us",
+                "passwd": "p1",
+                "remeberme": "rC"
+            },
+            {
+                "S": "XX",
+                "what": "XX"
+            },
+            {
+                "krajina": "Co",
+                "login": "us",
+                "magicword": "ca",
+                "mail": "e1",
+                "meno": "n1",
+                "mesto": "Ci",
+                "motorka": "SS",
+                "motostyle": "SS",
+                "popis": "am",
+                "priezvisko": "n3",
+                "psc": "Zi",
+                "sex": "ge"
+            }
         ]
     },
     "html/motoride.sk-2.html": {
@@ -580,12 +1608,37 @@
             "s",
             "l",
             "p"
+        ],
+        "visible_html_fields": [
+            {
+                "login": "XX",
+                "passwd": "XX",
+                "remeberme": "XX"
+            },
+            {
+                "S": "XX",
+                "what": "XX"
+            },
+            {
+                "login": "us",
+                "passwd": "p1",
+                "remeberme": "rC"
+            },
+            {
+                "login": "XX"
+            }
         ]
     },
     "html/multikino.lt-0.html": {
         "url": "http://multikino.lt/lt/dabar/",
         "forms": [
             "o"
+        ],
+        "visible_html_fields": [
+            {
+                "cinema": "XX",
+                "dates": "XX"
+            }
         ]
     },
     "html/my.unito.it-0.html": {
@@ -594,6 +1647,21 @@
             "s",
             "s",
             "p"
+        ],
+        "visible_html_fields": [
+            {
+                "Submit": "XX",
+                "q": "XX"
+            },
+            {
+                "Submit2": "XX",
+                "q": "XX"
+            },
+            {
+                "T13201236191247499847650{actionForm.captcha}": "XX",
+                "T13201236191247499847650{actionForm.email}": "XX",
+                "T13201236191247499847650{actionForm.username}": "XX"
+            }
         ]
     },
     "html/my.unito.it-1.html": {
@@ -602,12 +1670,52 @@
             "s",
             "s",
             "r"
+        ],
+        "visible_html_fields": [
+            {
+                "Submit": "XX",
+                "q": "XX"
+            },
+            {
+                "Submit2": "XX",
+                "q": "XX"
+            },
+            {
+                "RegistrationFormController_2actionOverride:annulla": "XX",
+                "RegistrationFormController_2wlw-checkbox_key:{actionForm.consensoCellulare}": "XX",
+                "RegistrationFormController_2wlw-checkbox_key:{actionForm.consensoTra}": "XX",
+                "RegistrationFormController_2wlw-radio_button_group_key:{actionForm.sex}": "ge",
+                "RegistrationFormController_2wlw-select_key:{actionForm.birthplaceNationCatastoCode}": "Co",
+                "RegistrationFormController_2wlw-select_key:{actionForm.internationalPrefix}": "XX",
+                "RegistrationFormController_2wlw-select_key:{actionForm.nationality}": "Co",
+                "RegistrationFormController_2wlw-select_key:{actionForm.profile}": "XX",
+                "RegistrationFormController_2wlw-select_key:{actionForm.provincia}": "St",
+                "RegistrationFormController_2{actionForm.birthdate}": "bD",
+                "RegistrationFormController_2{actionForm.birthplaceComune}": "St",
+                "RegistrationFormController_2{actionForm.captcha}": "XX",
+                "RegistrationFormController_2{actionForm.codiceFiscale}": "XX",
+                "RegistrationFormController_2{actionForm.confirmPwd}": "p2",
+                "RegistrationFormController_2{actionForm.email}": "e1",
+                "RegistrationFormController_2{actionForm.name}": "n1",
+                "RegistrationFormController_2{actionForm.nationalPrefix}": "XX",
+                "RegistrationFormController_2{actionForm.passport}": "XX",
+                "RegistrationFormController_2{actionForm.password}": "p1",
+                "RegistrationFormController_2{actionForm.phoneNumber}": "ph",
+                "RegistrationFormController_2{actionForm.surname}": "n3",
+                "consensoTrattamento": "XX",
+                "consensoTrattamentoCellulare": "XX"
+            }
         ]
     },
     "html/nahodsa.sk-0.html": {
         "url": "http://nahodsa.sk/",
         "forms": [
             "s"
+        ],
+        "visible_html_fields": [
+            {
+                "q": "XX"
+            }
         ]
     },
     "html/nahodsa.sk-1.html": {
@@ -615,6 +1723,14 @@
         "forms": [
             "s",
             "m"
+        ],
+        "visible_html_fields": [
+            {
+                "q": "XX"
+            },
+            {
+                "email": "e1"
+            }
         ]
     },
     "html/nahodsa.sk-2.html": {
@@ -622,6 +1738,19 @@
         "forms": [
             "s",
             "r"
+        ],
+        "visible_html_fields": [
+            {
+                "q": "XX"
+            },
+            {
+                "confirmation": "p2",
+                "email": "e1",
+                "firstname": "n1",
+                "is_subscribed": "eC",
+                "lastname": "n3",
+                "password": "p1"
+            }
         ]
     },
     "html/nahodsa.sk-3.html": {
@@ -629,6 +1758,15 @@
         "forms": [
             "s",
             "l"
+        ],
+        "visible_html_fields": [
+            {
+                "q": "XX"
+            },
+            {
+                "login[password]": "p1",
+                "login[username]": "e1"
+            }
         ]
     },
     "html/nahodsa.sk-4.html": {
@@ -636,6 +1774,14 @@
         "forms": [
             "s",
             "p"
+        ],
+        "visible_html_fields": [
+            {
+                "q": "XX"
+            },
+            {
+                "email": "XX"
+            }
         ]
     },
     "html/nahodsa.sk-5.html": {
@@ -643,6 +1789,15 @@
         "forms": [
             "s",
             "o"
+        ],
+        "visible_html_fields": [
+            {
+                "q": "XX"
+            },
+            {
+                "qty": "XX",
+                "super_attribute[126]": "XX"
+            }
         ]
     },
     "html/naviny.by-0.html": {
@@ -660,6 +1815,40 @@
             "o",
             "o",
             "o"
+        ],
+        "visible_html_fields": [
+            {
+                "archiveDate": "XX",
+                "formArchive": "XX"
+            },
+            {
+                "login": "us",
+                "password": "p1"
+            },
+            {
+                "email": "e1"
+            },
+            {
+                "keywords": "XX"
+            },
+            {
+                "q": "XX"
+            },
+            {
+                "q": "XX"
+            },
+            {
+                "search": "XX"
+            },
+            {
+                "search": "XX"
+            },
+            {
+                "survey_variant": "XX"
+            },
+            {},
+            {},
+            {}
         ]
     },
     "html/naviny.by-1.html": {
@@ -674,18 +1863,75 @@
             "s",
             "s",
             "r"
+        ],
+        "visible_html_fields": [
+            {
+                "archiveDate": "XX",
+                "formArchive": "XX"
+            },
+            {
+                "login": "XX",
+                "password": "XX"
+            },
+            {
+                "email": "XX"
+            },
+            {
+                "keywords": "XX"
+            },
+            {
+                "q": "XX"
+            },
+            {
+                "q": "XX"
+            },
+            {
+                "search": "XX"
+            },
+            {
+                "search": "XX"
+            },
+            {
+                "age": "XX",
+                "answer": "sa",
+                "captcha_phrase": "ca",
+                "firstname": "n1",
+                "form_reg_email2": "e1",
+                "lastname": "n3",
+                "middlename": "n2",
+                "question": "sq",
+                "sex": "ge",
+                "userlogin": "us",
+                "userpassword": "p1",
+                "userpassword2": "p2"
+            }
         ]
     },
     "html/naviny.by-2.html": {
         "url": "http://naviny.by/services/news/",
         "forms": [
             "c"
+        ],
+        "visible_html_fields": [
+            {
+                "email": "XX",
+                "message": "XX",
+                "name": "XX"
+            }
         ]
     },
     "html/naviny.by-3.html": {
         "url": "http://naviny.by/services/feedback/",
         "forms": [
             "c"
+        ],
+        "visible_html_fields": [
+            {
+                "formMistakeCity": "XX",
+                "formMistakeComment": "XX",
+                "formMistakeEmail": "XX",
+                "formMistakeName": "XX"
+            }
         ]
     },
     "html/owners.honda.com-0.html": {
@@ -695,6 +1941,27 @@
             "l",
             "r",
             "s"
+        ],
+        "visible_html_fields": [
+            {
+                "q": "qq"
+            },
+            {
+                "LoginViewModel.Email": "e1",
+                "LoginViewModel.Password": "p1",
+                "LoginViewModel.Username": "us",
+                "UserLogin.RememberMe.IsRemeberMeSet": "rC"
+            },
+            {
+                "FirstName": "n1",
+                "LastName": "n3",
+                "RegistrationEmail": "e1"
+            },
+            {
+                "model": "qc",
+                "q": "qq",
+                "year": "qc"
+            }
         ]
     },
     "html/pasouoquepasou.crtvg.es-0.html": {
@@ -702,6 +1969,19 @@
         "forms": [
             "s",
             "r"
+        ],
+        "visible_html_fields": [
+            {
+                "combine": "qq",
+                "op": "Bs"
+            },
+            {
+                "legal_accept": "tC",
+                "mail": "e1",
+                "name": "us",
+                "op": "Bs",
+                "recaptcha_challenge_field": "ca"
+            }
         ]
     },
     "html/pasouoquepasou.crtvg.es-1.html": {
@@ -709,6 +1989,17 @@
         "forms": [
             "X",
             "l"
+        ],
+        "visible_html_fields": [
+            {
+                "combine": "XX",
+                "op": "XX"
+            },
+            {
+                "name": "us",
+                "op": "Bs",
+                "pass": "p1"
+            }
         ]
     },
     "html/pasouoquepasou.crtvg.es-2.html": {
@@ -716,54 +2007,132 @@
         "forms": [
             "X",
             "p"
+        ],
+        "visible_html_fields": [
+            {
+                "combine": "XX",
+                "op": "XX"
+            },
+            {
+                "name": "us",
+                "op": "Bs",
+                "recaptcha_challenge_field": "ca"
+            }
         ]
     },
     "html/ph.bsmarter.ph-0.html": {
         "url": "http://ph.bsmarter.ph/",
         "forms": [
             "l"
+        ],
+        "visible_html_fields": [
+            {
+                "password": "p1",
+                "username": "us"
+            }
         ]
     },
     "html/portal.apps.upenn.edu-0.html": {
         "url": "https://portal.apps.upenn.edu/penn_portal/view.php",
         "forms": [
             "s"
+        ],
+        "visible_html_fields": [
+            {
+                "ppquery": "XX"
+            }
         ]
     },
     "html/portal.cleanscapes.com-0.html": {
         "url": "https://portal.cleanscapes.com/cos_etower/",
         "forms": [
             "l"
+        ],
+        "visible_html_fields": [
+            {
+                "ctl00$MainContent$cmdSignIn": "Bs",
+                "ctl00$MainContent$txtPassword": "p1",
+                "ctl00$MainContent$txtUserID": "us"
+            }
         ]
     },
     "html/portal.cleanscapes.com-1.html": {
         "url": "https://portal.cleanscapes.com/cos_etower/RegisterNewUser.aspx",
         "forms": [
             "r"
+        ],
+        "visible_html_fields": [
+            {
+                "ctl00$MainContent$cClear": "Br",
+                "ctl00$MainContent$cConfirmEmail": "e2",
+                "ctl00$MainContent$cConfirmPassword": "p2",
+                "ctl00$MainContent$cCustomerAccountNumber": "SS",
+                "ctl00$MainContent$cDesiredPassword": "p1",
+                "ctl00$MainContent$cEmail": "e1",
+                "ctl00$MainContent$cFirstName": "n1",
+                "ctl00$MainContent$cLastInvoiceNumber": "SS",
+                "ctl00$MainContent$cLastName": "n3",
+                "ctl00$MainContent$cPhoneNumber": "ph",
+                "ctl00$MainContent$cSecurityQuestion": "sq",
+                "ctl00$MainContent$cSecurityQuestionAnswer": "sa",
+                "ctl00$MainContent$cServicingCompany": "SS",
+                "ctl00$MainContent$cSubmit": "Bs",
+                "ctl00$MainContent$cUserName": "us",
+                "ctl00$MainContent$cmdReturnToLogin": "Bc"
+            }
         ]
     },
     "html/portal.cleanscapes.com-2.html": {
         "url": "https://portal.cleanscapes.com/cos_etower/ForgotPassword.aspx",
         "forms": [
             "p"
+        ],
+        "visible_html_fields": [
+            {
+                "ctl00$MainContent$cEmail": "e1",
+                "ctl00$MainContent$cmdFinish": "Bs",
+                "ctl00$MainContent$cmdReturn": "Bc"
+            }
         ]
     },
     "html/portal.sgi-usa.org-0.html": {
         "url": "https://portal.sgi-usa.org/portal/login",
         "forms": [
             "l"
+        ],
+        "visible_html_fields": [
+            {
+                "chkRememberMe": "XX",
+                "rdoChooseType": "XX",
+                "txtEmail": "XX",
+                "txtPassword": "XX"
+            }
         ]
     },
     "html/portal.sgi-usa.org-1.html": {
         "url": "https://portal.sgi-usa.org/portal/login",
         "forms": [
             "r"
+        ],
+        "visible_html_fields": [
+            {
+                "chkRememberMe": "XX",
+                "rdoChooseType": "XX",
+                "txtEmail": "XX",
+                "txtPassword": "XX"
+            }
         ]
     },
     "html/portal.sgi-usa.org-2.html": {
         "url": "https://portal.sgi-usa.org/portal/pinreg",
         "forms": [
             "r"
+        ],
+        "visible_html_fields": [
+            {
+                "txtMembershipId": "XX",
+                "txtPinCode": "XX"
+            }
         ]
     },
     "html/postr.hu-0.html": {
@@ -771,6 +2140,16 @@
         "forms": [
             "s",
             "o"
+        ],
+        "visible_html_fields": [
+            {
+                "keres": "XX"
+            },
+            {
+                "pbContent": "XX",
+                "pbTitle": "XX",
+                "submitPreBlog": "XX"
+            }
         ]
     },
     "html/postr.hu-1.html": {
@@ -782,6 +2161,20 @@
             "l",
             "l",
             "l"
+        ],
+        "visible_html_fields": [
+            {
+                "keres": "XX"
+            },
+            {
+                "pass": "XX",
+                "regfirststep": "XX",
+                "user": "XX"
+            },
+            {},
+            {},
+            {},
+            {}
         ]
     },
     "html/postr.hu-2.html": {
@@ -793,6 +2186,20 @@
             "X",
             "X",
             "X"
+        ],
+        "visible_html_fields": [
+            {
+                "keres": "XX"
+            },
+            {
+                "pass": "XX",
+                "submitLogin": "XX",
+                "user": "XX"
+            },
+            {},
+            {},
+            {},
+            {}
         ]
     },
     "html/premium.wpmudev.org-0.html": {
@@ -801,12 +2208,31 @@
             "l",
             "l",
             "m"
+        ],
+        "visible_html_fields": [
+            {
+                "log": "us",
+                "pwd": "p1"
+            },
+            {
+                "log": "us",
+                "pwd": "p1"
+            },
+            {
+                "EMAIL": "e1"
+            }
         ]
     },
     "html/pypi.python.org-0.html": {
         "url": "https://pypi.python.org/pypi",
         "forms": [
             "s"
+        ],
+        "visible_html_fields": [
+            {
+                "submit": "XX",
+                "term": "XX"
+            }
         ]
     },
     "html/pypi.python.org-1.html": {
@@ -814,6 +2240,19 @@
         "forms": [
             "s",
             "r"
+        ],
+        "visible_html_fields": [
+            {
+                "submit": "XX",
+                "term": "XX"
+            },
+            {
+                "confirm": "p2",
+                "email": "e1",
+                "gpg_keyid": "XX",
+                "name": "us",
+                "password": "p1"
+            }
         ]
     },
     "html/pypi.python.org-2.html": {
@@ -821,36 +2260,126 @@
         "forms": [
             "s",
             "p"
+        ],
+        "visible_html_fields": [
+            {
+                "submit": "XX",
+                "term": "XX"
+            },
+            {
+                "name": "XX"
+            }
         ]
     },
     "html/quotes.automotive.com-0.html": {
         "url": "http://quotes.automotive.com/?fp=1,2&reset=1&dis=C12DBF5B-355B-4E86-91EB-D04F4BE31C26&",
         "forms": [
             "o"
+        ],
+        "visible_html_fields": [
+            {
+                "customer_address_zip": "XX",
+                "ddlMake": "XX",
+                "ddlModel": "XX",
+                "next": "XX"
+            }
         ]
     },
     "html/rentals.petswelcome.com-0.html": {
         "url": "http://rentals.petswelcome.com/new-rental.php",
         "forms": [
             "o"
+        ],
+        "visible_html_fields": [
+            {
+                "Address": "XX",
+                "Bathrooms": "XX",
+                "Bedrooms": "XX",
+                "Cable": "XX",
+                "Category": "XX",
+                "Chef": "XX",
+                "City": "XX",
+                "CompanyID": "XX",
+                "CustID": "XX",
+                "Deck": "XX",
+                "Description": "XX",
+                "Dishwasher": "XX",
+                "Email": "XX",
+                "Game": "XX",
+                "Garage": "XX",
+                "HotTub": "XX",
+                "Internet": "XX",
+                "Linens": "XX",
+                "Maid": "XX",
+                "Manager[ContactEmail]": "XX",
+                "Manager[ContactName]": "XX",
+                "Manager[ContactPhone]": "XX",
+                "Manager[Name]": "XX",
+                "Manager[Type]": "XX",
+                "MinStay": "XX",
+                "Name": "XX",
+                "PetPolicy": "XX",
+                "Phone": "XX",
+                "Pool": "XX",
+                "Rates": "XX",
+                "RatesURL": "XX",
+                "Sleeps": "XX",
+                "State": "XX",
+                "URL": "XX",
+                "Washer": "XX",
+                "Zip": "XX",
+                "newCityName": "XX",
+                "recaptcha_challenge_field": "XX",
+                "reset": "XX",
+                "submit": "XX"
+            }
         ]
     },
     "html/secure.businessweek.com-0.html": {
         "url": "https://secure.businessweek.com/register",
         "forms": [
             "r"
+        ],
+        "visible_html_fields": [
+            {
+                "commit": "Bs",
+                "user_form[confirm_password]": "p2",
+                "user_form[country_of_residence]": "Co",
+                "user_form[email]": "e1",
+                "user_form[external_marketing_flag]": "eC",
+                "user_form[first_name]": "n1",
+                "user_form[job_title]": "SS",
+                "user_form[last_name]": "n3",
+                "user_form[password]": "p1",
+                "user_form[promotional_offers_flag]": "eC",
+                "user_form[username]": "ns"
+            }
         ]
     },
     "html/secure.dhd24.com-0.html": {
         "url": "https://secure.dhd24.com/login.php?url=",
         "forms": [
             "l"
+        ],
+        "visible_html_fields": [
+            {
+                "benutzername": "ue",
+                "passwort": "p1",
+                "usecookies": "rC"
+            }
         ]
     },
     "html/secure.dhd24.com-1.html": {
         "url": "https://secure.dhd24.com/register.php?_odc=0&url=http%3A%2F%2Fwww.dhd24.com%2Fazv%2F",
         "forms": [
             "r"
+        ],
+        "visible_html_fields": [
+            {
+                "country": "Co",
+                "email": "e1",
+                "password": "p1"
+            }
         ]
     },
     "html/selfservice.dstv.com-0.html": {
@@ -859,6 +2388,20 @@
             "l",
             "p",
             "r"
+        ],
+        "visible_html_fields": [
+            {
+                "login_email": "ue",
+                "login_password": "p1"
+            },
+            {
+                "email_forgotPassword": "e1"
+            },
+            {
+                "reg_email": "e1",
+                "reg_password": "p1",
+                "reg_toc": "tC"
+            }
         ]
     },
     "html/signon.bigpond.com-0.html": {
@@ -866,6 +2409,16 @@
         "forms": [
             "s",
             "l"
+        ],
+        "visible_html_fields": [
+            {
+                "find": "qq"
+            },
+            {
+                "password": "p1",
+                "rememberMe": "rC",
+                "username": "us"
+            }
         ]
     },
     "html/signup.mlive.com-0.html": {
@@ -873,12 +2426,43 @@
         "forms": [
             "s",
             "r"
+        ],
+        "visible_html_fields": [
+            {
+                "keywords": "XX"
+            },
+            {
+                "customfield_agreement": "tC",
+                "customfield_gender": "ge",
+                "customfield_year_of_birth": "by",
+                "email": "e1",
+                "hint": "sq",
+                "newsletter_opt_out": "eC",
+                "nickname": "ns",
+                "pass_verify": "p2",
+                "password": "p1",
+                "username": "us"
+            }
         ]
     },
     "html/signup.na.leagueoflegends.com-0.html": {
         "url": "https://signup.na.leagueoflegends.com/en/signup/index?realm_key=na",
         "forms": [
             "r"
+        ],
+        "visible_html_fields": [
+            {
+                "data[PvpnetAccount][confirm_password]": "p2",
+                "data[PvpnetAccount][date_of_birth_day]": "bd",
+                "data[PvpnetAccount][date_of_birth_month]": "bm",
+                "data[PvpnetAccount][date_of_birth_year]": "by",
+                "data[PvpnetAccount][email_address]": "e1",
+                "data[PvpnetAccount][name]": "us",
+                "data[PvpnetAccount][newsletter]": "eC",
+                "data[PvpnetAccount][password]": "p1",
+                "data[PvpnetAccount][realm]": "Ad",
+                "data[PvpnetAccount][tou_agree]": "tC"
+            }
         ]
     },
     "html/sourceforge.net-0.html": {
@@ -886,6 +2470,24 @@
         "forms": [
             "s",
             "r"
+        ],
+        "visible_html_fields": [
+            {
+                "q": "XX"
+            },
+            {
+                "XrI94vr0bQ24QT9Lg1p5PlVUjd9A": "XX",
+                "XtI94vr0bQ24QUTtdP42HEGYE:v0": "XX",
+                "XtIpqqLwCTXERUTtdP42HEGYE:v0": "XX",
+                "XtZp0vaIDVXkRY_AFan9TRs88mwU": "XX",
+                "Xu5x2uKAYXmU1mmMIzVnRuV5lAm8": "XX",
+                "XuJF4oKstps7zZRB45p4hGFXt9W8": "XX",
+                "XuZBpuacCbZaml8QuT6ZA4McPcgo": "XX",
+                "XuZp0rKcAbZaml8QuT6ZA4McPcgo": "XX",
+                "Xupd2o6sVHF3:wjb6GQ94gT:dkI0": "XX",
+                "Xupd2o6sVHV3:wjb6GQ94gT:dkI0": "XX",
+                "Xv5V2r4_m_psBsUbR3v_ZirdqkCE": "XX"
+            }
         ]
     },
     "html/sourceforge.net-1.html": {
@@ -893,6 +2495,16 @@
         "forms": [
             "s",
             "l"
+        ],
+        "visible_html_fields": [
+            {
+                "q": "XX"
+            },
+            {
+                "password": "XX",
+                "rememberme": "XX",
+                "username": "XX"
+            }
         ]
     },
     "html/sourceforge.net-2.html": {
@@ -900,6 +2512,14 @@
         "forms": [
             "s",
             "p"
+        ],
+        "visible_html_fields": [
+            {
+                "q": "XX"
+            },
+            {
+                "email": "XX"
+            }
         ]
     },
     "html/spike.wharton.upenn.edu-0.html": {
@@ -907,12 +2527,39 @@
         "forms": [
             "s",
             "l"
+        ],
+        "visible_html_fields": [
+            {
+                "btnG": "XX",
+                "q": "XX"
+            },
+            {
+                "RememberMe": "XX",
+                "password": "XX",
+                "submit": "XX",
+                "username": "XX"
+            }
         ]
     },
     "html/star-res.cc.swin.edu.au-0.html": {
         "url": "https://star-res.cc.swin.edu.au/ULStarRezPortal/GeneratedSection.aspx?Params=L9ezxPcQnQtLA1zKnkFfGY5TDyFpM5Y8",
         "forms": [
             "r"
+        ],
+        "visible_html_fields": [
+            {
+                "ctl00$Banner1$ModuleList$ctl00$btnModule": "XX",
+                "ctl00$Banner1$ModuleList$ctl01$btnModule": "XX",
+                "ctl00$Content$entryBlock$rel__34__EntryAddress__Email__0": "XX",
+                "ctl00$Content$entryBlock$rel__34__Unbound__EmailConfirm__0": "XX",
+                "ctl00$Content$entryBlock$single__35__Entry__Password": "XX",
+                "ctl00$Content$entryBlock$single__35__Unbound__PasswordConfirm": "XX",
+                "ctl00$Content$entryBlock$single__36__Entry__DOB": "XX",
+                "ctl00$Content$entryBlock$single__36__Entry__GenderEnum": "XX",
+                "ctl00$Content$entryBlock$single__36__Entry__NameFirst": "XX",
+                "ctl00$Content$entryBlock$single__36__Entry__NameLast": "XX",
+                "ctl00$btnContinue": "XX"
+            }
         ]
     },
     "html/support.mageworx.com-0.html": {
@@ -920,6 +2567,16 @@
         "forms": [
             "l",
             "s"
+        ],
+        "visible_html_fields": [
+            {
+                "rememberme": "rC",
+                "scemail": "e1",
+                "scpassword": "p1"
+            },
+            {
+                "searchquery": "qq"
+            }
         ]
     },
     "html/support.mageworx.com-1.html": {
@@ -928,6 +2585,20 @@
             "l",
             "s",
             "o"
+        ],
+        "visible_html_fields": [
+            {
+                "rememberme": "rC",
+                "scemail": "e1",
+                "scpassword": "p1"
+            },
+            {
+                "searchquery": "qq"
+            },
+            {
+                "button": "XX",
+                "departmentid": "XX"
+            }
         ]
     },
     "html/theb52s.shop.livenation.com-0.html": {
@@ -945,12 +2616,65 @@
             "o",
             "o",
             "m"
+        ],
+        "visible_html_fields": [
+            {
+                "selProductSort": "XX"
+            },
+            {
+                "qty": "XX",
+                "sku": "XX"
+            },
+            {
+                "qty": "XX",
+                "sku": "XX"
+            },
+            {
+                "qty": "XX",
+                "sku": "XX"
+            },
+            {
+                "qty": "XX",
+                "sku": "XX"
+            },
+            {
+                "qty": "XX",
+                "sku": "XX"
+            },
+            {
+                "qty": "XX",
+                "sku": "XX"
+            },
+            {
+                "qty": "XX",
+                "sku": "XX"
+            },
+            {
+                "qty": "XX",
+                "sku": "XX"
+            },
+            {
+                "qty": "XX"
+            },
+            {
+                "qty": "XX",
+                "sku": "XX"
+            },
+            {
+                "inpEmailOptIn": "e1",
+                "submitMailingList": "Bs"
+            }
         ]
     },
     "html/torrentfreak.com-0.html": {
         "url": "https://torrentfreak.com/tag/torrentspy/",
         "forms": [
             "s"
+        ],
+        "visible_html_fields": [
+            {
+                "s": "XX"
+            }
         ]
     },
     "html/trendo.bg-0.html": {
@@ -958,6 +2682,14 @@
         "forms": [
             "s",
             "m"
+        ],
+        "visible_html_fields": [
+            {
+                "keyword": "XX"
+            },
+            {
+                "signup[email]": "e1"
+            }
         ]
     },
     "html/trendo.bg-1.html": {
@@ -965,6 +2697,15 @@
         "forms": [
             "s",
             "l"
+        ],
+        "visible_html_fields": [
+            {
+                "keyword": "XX"
+            },
+            {
+                "signin[email]": "XX",
+                "signin[password]": "XX"
+            }
         ]
     },
     "html/trendo.bg-2.html": {
@@ -972,12 +2713,30 @@
         "forms": [
             "s",
             "p"
+        ],
+        "visible_html_fields": [
+            {
+                "keyword": "XX"
+            },
+            {
+                "email": "XX"
+            }
         ]
     },
     "html/us.pycon.org-0.html": {
         "url": "https://us.pycon.org/2015/account/signup/",
         "forms": [
             "r"
+        ],
+        "visible_html_fields": [
+            {
+                "email": "XX",
+                "email_confirm": "XX",
+                "first_name": "XX",
+                "last_name": "XX",
+                "password": "XX",
+                "password_confirm": "XX"
+            }
         ]
     },
     "html/us.pycon.org-1.html": {
@@ -985,18 +2744,39 @@
         "forms": [
             "l",
             "l"
+        ],
+        "visible_html_fields": [
+            {
+                "email": "XX",
+                "password": "XX",
+                "remember": "XX"
+            },
+            {
+                "openid_identifier": "XX"
+            }
         ]
     },
     "html/us.pycon.org-2.html": {
         "url": "https://us.pycon.org/2015/account/password/reset/",
         "forms": [
             "p"
+        ],
+        "visible_html_fields": [
+            {
+                "email": "XX"
+            }
         ]
     },
     "html/watchseries.ag-0.html": {
         "url": "http://watchseries.ag/",
         "forms": [
             "s"
+        ],
+        "visible_html_fields": [
+            {
+                "commit": "XX",
+                "s": "XX"
+            }
         ]
     },
     "html/watchseries.ag-1.html": {
@@ -1004,6 +2784,18 @@
         "forms": [
             "s",
             "c"
+        ],
+        "visible_html_fields": [
+            {
+                "commit": "XX",
+                "s": "XX"
+            },
+            {
+                "category": "XX",
+                "email": "XX",
+                "message": "XX",
+                "nume": "XX"
+            }
         ]
     },
     "html/watchseries.ag-2.html": {
@@ -1012,12 +2804,36 @@
             "s",
             "r",
             "l"
+        ],
+        "visible_html_fields": [
+            {
+                "commit": "XX",
+                "s": "XX"
+            },
+            {
+                "email": "e1",
+                "pass": "p1",
+                "pass2": "p2",
+                "register": "Bs",
+                "user": "us"
+            },
+            {
+                "login": "XX",
+                "pass": "XX",
+                "user": "XX"
+            }
         ]
     },
     "html/weblogin.pennkey.upenn.edu-0.html": {
         "url": "https://weblogin.pennkey.upenn.edu/login?factors=UPENN.EDU,UPENN.EDU-PORTAL&cosign-isc-seo-portal_apps_prod-0&https://portal.apps.upenn.edu/penn_portal/portalli.php",
         "forms": [
             "l"
+        ],
+        "visible_html_fields": [
+            {
+                "login": "XX",
+                "password": "XX"
+            }
         ]
     },
     "html/webstore.northfieldlines.com-0.html": {
@@ -1025,6 +2841,31 @@
         "forms": [
             "l",
             "r"
+        ],
+        "visible_html_fields": [
+            {
+                "loginemail": "XX",
+                "loginpass": "XX"
+            },
+            {
+                "addr1": "XX",
+                "addr2": "XX",
+                "city": "XX",
+                "country": "XX",
+                "email": "XX",
+                "fname": "XX",
+                "lname": "XX",
+                "mbac": "XX",
+                "mbex": "XX",
+                "mbno": "XX",
+                "pass1": "XX",
+                "pass2": "XX",
+                "phac": "XX",
+                "phex": "XX",
+                "phno": "XX",
+                "state": "XX",
+                "zip": "XX"
+            }
         ]
     },
     "html/webstore.northfieldlines.com-1.html": {
@@ -1032,6 +2873,15 @@
         "forms": [
             "l",
             "p"
+        ],
+        "visible_html_fields": [
+            {
+                "loginemail": "e1",
+                "loginpass": "p1"
+            },
+            {
+                "loginemail": "XX"
+            }
         ]
     },
     "html/webstore.northfieldlines.com-2.html": {
@@ -1039,18 +2889,60 @@
         "forms": [
             "l",
             "o"
+        ],
+        "visible_html_fields": [
+            {
+                "loginemail": "XX",
+                "loginpass": "XX"
+            },
+            {
+                "as": "XX",
+                "dd": "XX",
+                "ds": "XX",
+                "rd": "XX",
+                "t": "XX"
+            }
         ]
     },
     "html/www.agentcenter.windstarcruises.com-0.html": {
         "url": "http://www.agentcenter.windstarcruises.com/create-account.aspx",
         "forms": [
             "r"
+        ],
+        "visible_html_fields": [
+            {
+                "ctl00$Body$ctl00$btnSubmit": "XX",
+                "ctl00$Body$ctl00$cbTerms": "XX",
+                "ctl00$Body$ctl00$ddlAgentType": "XX",
+                "ctl00$Body$ctl00$ddlCountry": "XX",
+                "ctl00$Body$ctl00$ddlState": "XX",
+                "ctl00$Body$ctl00$tbAgencyID": "XX",
+                "ctl00$Body$ctl00$tbAgencyName": "XX",
+                "ctl00$Body$ctl00$tbCity": "XX",
+                "ctl00$Body$ctl00$tbCompanyAddress": "XX",
+                "ctl00$Body$ctl00$tbCompanyURL": "XX",
+                "ctl00$Body$ctl00$tbEmail": "XX",
+                "ctl00$Body$ctl00$tbFax": "XX",
+                "ctl00$Body$ctl00$tbFirstName": "XX",
+                "ctl00$Body$ctl00$tbLastName": "XX",
+                "ctl00$Body$ctl00$tbPassword": "XX",
+                "ctl00$Body$ctl00$tbPasswordRepeat": "XX",
+                "ctl00$Body$ctl00$tbPhone": "XX",
+                "ctl00$Body$ctl00$tbZip": "XX"
+            }
         ]
     },
     "html/www.agentcenter.windstarcruises.com-1.html": {
         "url": "http://www.agentcenter.windstarcruises.com/default.aspx",
         "forms": [
             "l"
+        ],
+        "visible_html_fields": [
+            {
+                "ctl00$Login$ctl00$LoginView1$LoginControl$LoginButton": "XX",
+                "ctl00$Login$ctl00$LoginView1$LoginControl$Password": "XX",
+                "ctl00$Login$ctl00$LoginView1$LoginControl$UserName": "XX"
+            }
         ]
     },
     "html/www.anglaisfacile.com-0.html": {
@@ -1060,18 +2952,50 @@
             "l",
             "o",
             "o"
+        ],
+        "visible_html_fields": [
+            {
+                "q": "qq"
+            },
+            {
+                "Submit": "Bs",
+                "name": "us",
+                "pass": "p1",
+                "reco": "rC"
+            },
+            {
+                "menu1": "XX"
+            },
+            {}
         ]
     },
     "html/www.bankrate.com-0.html": {
         "url": "http://www.bankrate.com/",
         "forms": [
             "o"
+        ],
+        "visible_html_fields": [
+            {
+                "InsuranceType": "XX",
+                "ccprods": "XX",
+                "local": "XX",
+                "lookFor": "XX",
+                "prods": "XX",
+                "selCreditCard": "XX",
+                "zip": "XX"
+            }
         ]
     },
     "html/www.betexplorer.com-0.html": {
         "url": "http://www.betexplorer.com/soccer/",
         "forms": [
             "s"
+        ],
+        "visible_html_fields": [
+            {
+                "search": "XX",
+                "searchText": "XX"
+            }
         ]
     },
     "html/www.betexplorer.com-1.html": {
@@ -1079,6 +3003,20 @@
         "forms": [
             "r",
             "s"
+        ],
+        "visible_html_fields": [
+            {
+                "agree": "tC",
+                "email": "e1",
+                "nick": "us",
+                "pass1": "p1",
+                "pass2": "p2",
+                "submit": "Bs"
+            },
+            {
+                "search": "Bs",
+                "searchText": "qq"
+            }
         ]
     },
     "html/www.beyondtherack.com-0.html": {
@@ -1087,6 +3025,23 @@
             "r",
             "l",
             "p"
+        ],
+        "visible_html_fields": [
+            {
+                "country": "Co",
+                "email": "e1",
+                "gender": "ge",
+                "invite": "in",
+                "passwd": "p1"
+            },
+            {
+                "email": "e1",
+                "keepalive": "rC",
+                "passwd": "p1"
+            },
+            {
+                "email": "e1"
+            }
         ]
     },
     "html/www.bikeforums.net-0.html": {
@@ -1096,6 +3051,22 @@
             "s",
             "o",
             "o"
+        ],
+        "visible_html_fields": [
+            {
+                "cookieuser": "rC",
+                "vb_login_password": "p1",
+                "vb_login_password_hint": "XX",
+                "vb_login_username": "us"
+            },
+            {
+                "query": "qq",
+                "submit": "Bs"
+            },
+            {},
+            {
+                "styleid": "XX"
+            }
         ]
     },
     "html/www.bikeforums.net-1.html": {
@@ -1105,6 +3076,35 @@
             "s",
             "r",
             "o"
+        ],
+        "visible_html_fields": [
+            {
+                "cookieuser": "rC",
+                "vb_login_password": "p1",
+                "vb_login_password_hint": "XX",
+                "vb_login_username": "us"
+            },
+            {
+                "query": "qq",
+                "submit": "Bs"
+            },
+            {
+                "Reset": "XX",
+                "agree": "tC",
+                "dst": "ds",
+                "email": "e1",
+                "emailconfirm": "e2",
+                "options[adminemail]": "eC",
+                "options[showemail]": "eC",
+                "password": "p1",
+                "passwordconfirm": "p2",
+                "recaptcha_challenge_field": "ca",
+                "timezoneoffset": "tz",
+                "username": "us"
+            },
+            {
+                "styleid": "XX"
+            }
         ]
     },
     "html/www.bikeradar.com-0.html": {
@@ -1114,6 +3114,23 @@
             "s",
             "o",
             "o"
+        ],
+        "visible_html_fields": [
+            {
+                "searchTerm": "qq"
+            },
+            {
+                "keywords": "qq"
+            },
+            {
+                "sd": "XX",
+                "sk": "XX",
+                "sort": "XX",
+                "st": "XX"
+            },
+            {
+                "f": "XX"
+            }
         ]
     },
     "html/www.bilbasen.dk-0.html": {
@@ -1121,6 +3138,42 @@
         "forms": [
             "s",
             "s"
+        ],
+        "visible_html_fields": [
+            {
+                "Category": "qc",
+                "FuelType": "qc",
+                "IncludeEngrosCvr": "qc",
+                "IncludeLeasing": "qc",
+                "IncludeSellForCustomer": "qc",
+                "IncludeWithoutVehicleRegistrationTax": "qc",
+                "KmLFrom": "qc",
+                "Make": "qc",
+                "MileageTo": "qc",
+                "Model": "qc",
+                "NewAndUsed": "qc",
+                "PriceFrom": "qc",
+                "PriceTo": "qc",
+                "YearFrom": "qc",
+                "Zipcode": "Zi"
+            },
+            {
+                "Category": "XX",
+                "FuelType": "XX",
+                "IncludeEngrosCvr": "XX",
+                "IncludeLeasing": "XX",
+                "IncludeSellForCustomer": "XX",
+                "IncludeWithoutVehicleRegistrationTax": "XX",
+                "KmLFrom": "XX",
+                "Make": "XX",
+                "MileageTo": "XX",
+                "Model": "XX",
+                "NewAndUsed": "XX",
+                "PriceFrom": "XX",
+                "PriceTo": "XX",
+                "YearFrom": "XX",
+                "Zipcode": "XX"
+            }
         ]
     },
     "html/www.bilbasen.dk-1.html": {
@@ -1128,6 +3181,30 @@
         "forms": [
             "s",
             "l"
+        ],
+        "visible_html_fields": [
+            {
+                "Category": "XX",
+                "FuelType": "XX",
+                "IncludeEngrosCvr": "XX",
+                "IncludeLeasing": "XX",
+                "IncludeSellForCustomer": "XX",
+                "IncludeWithoutVehicleRegistrationTax": "XX",
+                "KmLFrom": "XX",
+                "Make": "XX",
+                "MileageTo": "XX",
+                "Model": "XX",
+                "NewAndUsed": "XX",
+                "PriceFrom": "XX",
+                "PriceTo": "XX",
+                "YearFrom": "XX",
+                "Zipcode": "XX"
+            },
+            {
+                "Email": "e1",
+                "Password": "p1",
+                "RememberMe": "rC"
+            }
         ]
     },
     "html/www.bilbasen.dk-2.html": {
@@ -1135,6 +3212,34 @@
         "forms": [
             "s",
             "r"
+        ],
+        "visible_html_fields": [
+            {
+                "Category": "XX",
+                "FuelType": "XX",
+                "IncludeEngrosCvr": "XX",
+                "IncludeLeasing": "XX",
+                "IncludeSellForCustomer": "XX",
+                "IncludeWithoutVehicleRegistrationTax": "XX",
+                "KmLFrom": "XX",
+                "Make": "XX",
+                "MileageTo": "XX",
+                "Model": "XX",
+                "NewAndUsed": "XX",
+                "PriceFrom": "XX",
+                "PriceTo": "XX",
+                "YearFrom": "XX",
+                "Zipcode": "XX"
+            },
+            {
+                "Email": "e1",
+                "FirstName": "n1",
+                "LastName": "n3",
+                "Password": "p1",
+                "acceptInformationMails": "eC",
+                "acceptListingMails": "eC",
+                "acceptThirdPartyAdvertisingMails": "eC"
+            }
         ]
     },
     "html/www.bilbasen.dk-3.html": {
@@ -1142,6 +3247,28 @@
         "forms": [
             "s",
             "p"
+        ],
+        "visible_html_fields": [
+            {
+                "Category": "XX",
+                "FuelType": "XX",
+                "IncludeEngrosCvr": "XX",
+                "IncludeLeasing": "XX",
+                "IncludeSellForCustomer": "XX",
+                "IncludeWithoutVehicleRegistrationTax": "XX",
+                "KmLFrom": "XX",
+                "Make": "XX",
+                "MileageTo": "XX",
+                "Model": "XX",
+                "NewAndUsed": "XX",
+                "PriceFrom": "XX",
+                "PriceTo": "XX",
+                "YearFrom": "XX",
+                "Zipcode": "XX"
+            },
+            {
+                "Email": "e1"
+            }
         ]
     },
     "html/www.boston.com-0.html": {
@@ -1152,18 +3279,52 @@
             "s",
             "o",
             "o"
+        ],
+        "visible_html_fields": [
+            {
+                "q": "qq"
+            },
+            {
+                "q": "qq"
+            },
+            {
+                "q": "XX"
+            },
+            {
+                "recipient_email": "XX",
+                "share_message": "XX",
+                "your_email": "XX"
+            },
+            {
+                "recipient_email": "XX",
+                "sender_email": "XX",
+                "share_message": "XX"
+            }
         ]
     },
     "html/www.boston.com-1.html": {
         "url": "https://www.boston.com/login",
         "forms": [
             "l"
+        ],
+        "visible_html_fields": [
+            {
+                "dispatch": "Bs",
+                "password": "p1",
+                "remember": "rC",
+                "username": "e1"
+            }
         ]
     },
     "html/www.boston.com-2.html": {
         "url": "https://www.boston.com/eom/SysConfig/WebPortal/BDC/Framework/regi/forgot-password-step1.jsp",
         "forms": [
             "p"
+        ],
+        "visible_html_fields": [
+            {
+                "regi_email": "e1"
+            }
         ]
     },
     "html/www.boston.com-3.html": {
@@ -1171,12 +3332,38 @@
         "forms": [
             "r",
             "l"
+        ],
+        "visible_html_fields": [
+            {
+                "dispatch": "Bs",
+                "regi_birthyear": "by",
+                "regi_email": "e1",
+                "regi_firstname": "n1",
+                "regi_gender": "ge",
+                "regi_lastname": "n3",
+                "regi_outside_us": "oC",
+                "regi_password": "p1",
+                "regi_password2": "p2",
+                "regi_subscriber_id": "SS",
+                "regi_zip": "Zi"
+            },
+            {
+                "dispatch": "Bs",
+                "password": "p1",
+                "remember": "rC",
+                "username": "e1"
+            }
         ]
     },
     "html/www.brookdalecc.edu-0.html": {
         "url": "http://www.brookdalecc.edu/",
         "forms": [
             "s"
+        ],
+        "visible_html_fields": [
+            {
+                "s": "XX"
+            }
         ]
     },
     "html/www.brookdalecc.edu-1.html": {
@@ -1184,12 +3371,40 @@
         "forms": [
             "s",
             "c"
+        ],
+        "visible_html_fields": [
+            {
+                "s": "qq"
+            },
+            {
+                "input_1": "XX",
+                "input_2": "XX",
+                "input_3": "XX",
+                "input_4": "XX",
+                "input_5": "XX",
+                "input_6.1": "XX",
+                "input_6.2": "XX",
+                "input_6.3": "XX",
+                "input_7.1": "XX",
+                "input_7.2": "XX",
+                "input_7.3": "XX",
+                "input_7.4": "XX",
+                "input_7.5": "XX",
+                "input_7.6": "XX",
+                "input_7.7": "XX"
+            }
         ]
     },
     "html/www.bsuir.by-0.html": {
         "url": "http://www.bsuir.by/",
         "forms": [
             "s"
+        ],
+        "visible_html_fields": [
+            {
+                "img": "Bs",
+                "what_find": "qq"
+            }
         ]
     },
     "html/www.bsuir.by-1.html": {
@@ -1197,6 +3412,17 @@
         "forms": [
             "s",
             "l"
+        ],
+        "visible_html_fields": [
+            {
+                "keywords": "qq"
+            },
+            {
+                "autologin": "rC",
+                "login": "Bs",
+                "password": "p1",
+                "username": "us"
+            }
         ]
     },
     "html/www.bsuir.by-2.html": {
@@ -1205,6 +3431,18 @@
             "s",
             "o",
             "r"
+        ],
+        "visible_html_fields": [
+            {
+                "keywords": "qq"
+            },
+            {
+                "lang": "XX"
+            },
+            {
+                "agreed": "tC",
+                "not_agreed": "Bc"
+            }
         ]
     },
     "html/www.bsuir.by-3.html": {
@@ -1213,6 +3451,18 @@
             "s",
             "o",
             "r"
+        ],
+        "visible_html_fields": [
+            {
+                "keywords": "qq"
+            },
+            {
+                "lang": "XX"
+            },
+            {
+                "agreed": "tC",
+                "not_agreed": "Bc"
+            }
         ]
     },
     "html/www.bsuir.by-4.html": {
@@ -1220,6 +3470,22 @@
         "forms": [
             "s",
             "c"
+        ],
+        "visible_html_fields": [
+            {
+                "img": "XX",
+                "what_find": "XX"
+            },
+            {
+                "_isFeedbackSubmit": "XX",
+                "lang": "XX",
+                "listPageParams": "XX",
+                "newprop_14537_1": "XX",
+                "newprop_14538_1": "XX",
+                "newprop_14539_1": "XX",
+                "parentPage": "XX",
+                "save": "XX"
+            }
         ]
     },
     "html/www.businessweek.com-0.html": {
@@ -1229,6 +3495,26 @@
             "s",
             "s",
             "m"
+        ],
+        "visible_html_fields": [
+            {
+                "commit": "Bs",
+                "user_form[email]": "e1",
+                "user_form[password]": "p1",
+                "user_form[remember_me]": "rC"
+            },
+            {
+                "q": "qq"
+            },
+            {
+                "symbol": "qq"
+            },
+            {
+                "[bb_promotions]": "eC",
+                "[bw_promotions]": "eC",
+                "[email]": "e1",
+                "commit": "Bs"
+            }
         ]
     },
     "html/www.caltronind.com-0.html": {
@@ -1236,18 +3522,87 @@
         "forms": [
             "c",
             "s"
+        ],
+        "visible_html_fields": [
+            {
+                "_686d26afedd01f8173923643a792374b": "XX",
+                "_74371170f19fbb553d63b8f9836f3b08": "XX",
+                "_7ebbb644a54ee8100117275b42adc1cc": "XX",
+                "_8fa54dc5e56a9931c6133d06f5561493": "XX",
+                "_ba133235bacd2da087ef6f44c410594d": "XX",
+                "_d6c236a47ab5c990fe75ee0287829628": "XX",
+                "_f6fe26a3da3b712445e0be9fa5451651": "XX",
+                "_fd6d4171167f2af0cf3160fa57f095dd": "XX",
+                "fcaptcha": "XX"
+            },
+            {
+                "q": "qq"
+            }
         ]
     },
     "html/www.capitalbikeshare.com-0.html": {
         "url": "https://www.capitalbikeshare.com/",
         "forms": [
             "m"
+        ],
+        "visible_html_fields": [
+            {
+                "EMAIL": "e1"
+            }
         ]
     },
     "html/www.capitalbikeshare.com-1.html": {
         "url": "https://www.capitalbikeshare.com/signup",
         "forms": [
             "r"
+        ],
+        "visible_html_fields": [
+            {
+                "age": "18",
+                "apartment": "A#",
+                "areaCode": "XX",
+                "areaCode2": "XX",
+                "auto_renew_subscription_type": "SS",
+                "birthDay": "bd",
+                "birthMonth": "bm",
+                "birthYear": "by",
+                "city": "Ci",
+                "civicNumber": "S#",
+                "corporate_partner": "SS",
+                "corporate_password": "p1",
+                "country": "Co",
+                "credit_card_address_same": "oC",
+                "credit_card_apartment": "A#",
+                "credit_card_city": "Ci",
+                "credit_card_holder": "ch",
+                "credit_card_number": "c#",
+                "credit_card_state": "St",
+                "credit_card_street_name": "Sn",
+                "credit_card_street_number": "S#",
+                "credit_card_vcode": "cs",
+                "credit_card_zip": "Zi",
+                "email": "e1",
+                "expiration_month": "cm",
+                "expiration_year": "cy",
+                "firstName": "n1",
+                "gender": "ge",
+                "gift_certificate_number": "in",
+                "helmet": "oC",
+                "lastName": "n3",
+                "membership_type": "SS",
+                "password": "p1",
+                "password_confirm": "p2",
+                "phonePrefix": "XX",
+                "phonePrefix2": "XX",
+                "phoneSuffix": "XX",
+                "phoneSuffix2": "XX",
+                "postalCode": "Zi",
+                "province": "St",
+                "read_safety_page": "tC",
+                "street": "Sn",
+                "subscription_type": "SS",
+                "username": "us"
+            }
         ]
     },
     "html/www.capitalbikeshare.com-2.html": {
@@ -1255,12 +3610,24 @@
         "forms": [
             "l",
             "p"
+        ],
+        "visible_html_fields": [
+            {
+                "password": "p1",
+                "username": "us"
+            },
+            {
+                "username": "us"
+            }
         ]
     },
     "html/www.cardekho.com-0.html": {
         "url": "http://www.cardekho.com/",
         "forms": [
             "s"
+        ],
+        "visible_html_fields": [
+            {}
         ]
     },
     "html/www.cardekho.com-1.html": {
@@ -1269,6 +3636,18 @@
             "s",
             "l",
             "p"
+        ],
+        "visible_html_fields": [
+            {},
+            {
+                "Login": "Bs",
+                "emailid": "e1",
+                "password": "p1"
+            },
+            {
+                "EmailID": "e1",
+                "Submit": "Bs"
+            }
         ]
     },
     "html/www.cardekho.com-2.html": {
@@ -1276,18 +3655,52 @@
         "forms": [
             "s",
             "r"
+        ],
+        "visible_html_fields": [
+            {},
+            {
+                "answer": "ca",
+                "city": "Ci",
+                "emailId": "e1",
+                "firstName": "n1",
+                "lastName": "n3",
+                "mobileNo": "ph",
+                "otherCity": "Ci",
+                "password": "p1",
+                "pinCode": "XX",
+                "register": "Bs",
+                "state": "St",
+                "subscribeNewsLetter": "eC",
+                "termsConditions": "tC"
+            }
         ]
     },
     "html/www.cardekho.com-3.html": {
         "url": "http://www.cardekho.com/feedback",
         "forms": [
             "c"
+        ],
+        "visible_html_fields": [
+            {
+                "cityName": "XX",
+                "comment": "XX",
+                "emailId": "XX",
+                "feedback": "XX",
+                "mobileNo": "XX",
+                "termsConditionsField": "XX",
+                "userName": "XX"
+            }
         ]
     },
     "html/www.cccco.edu-0.html": {
         "url": "http://www.cccco.edu/",
         "forms": [
             "o"
+        ],
+        "visible_html_fields": [
+            {
+                "dnn$dnnSEARCH$txtSearch": "XX"
+            }
         ]
     },
     "html/www.citeab.com-0.html": {
@@ -1295,6 +3708,15 @@
         "forms": [
             "s",
             "m"
+        ],
+        "visible_html_fields": [
+            {
+                "q": "qq"
+            },
+            {
+                "EMAIL": "e1",
+                "subscribe": "Bs"
+            }
         ]
     },
     "html/www.citeab.com-1.html": {
@@ -1302,12 +3724,38 @@
         "forms": [
             "s",
             "c"
+        ],
+        "visible_html_fields": [
+            {
+                "q": "qq"
+            },
+            {
+                "commit": "XX",
+                "contact_message[add_to_list]": "XX",
+                "contact_message[email]": "XX",
+                "contact_message[first_name]": "XX",
+                "contact_message[last_name]": "XX",
+                "contact_message[message]": "XX",
+                "contact_message[phone]": "XX"
+            }
         ]
     },
     "html/www.communitycomm.com-0.html": {
         "url": "http://www.communitycomm.com/index.php?link=contact",
         "forms": [
             "c"
+        ],
+        "visible_html_fields": [
+            {
+                "button": "XX",
+                "company": "XX",
+                "content": "XX",
+                "email": "XX",
+                "field_hp": "XX",
+                "name": "XX",
+                "phone": "XX",
+                "website": "XX"
+            }
         ]
     },
     "html/www.consumerreports.org-0.html": {
@@ -1315,6 +3763,16 @@
         "forms": [
             "l",
             "s"
+        ],
+        "visible_html_fields": [
+            {
+                "password": "p1",
+                "setAutoLogin": "rC",
+                "userName": "us"
+            },
+            {
+                "query": "qq"
+            }
         ]
     },
     "html/www.crtvg.es-0.html": {
@@ -1322,6 +3780,16 @@
         "forms": [
             "l",
             "s"
+        ],
+        "visible_html_fields": [
+            {
+                "data[LoginExtra][recordar]": "rC",
+                "data[Login][clave]": "p1",
+                "data[Login][usuario]": "us"
+            },
+            {
+                "q": "qq"
+            }
         ]
     },
     "html/www.crtvg.es-1.html": {
@@ -1330,6 +3798,21 @@
             "X",
             "X",
             "l"
+        ],
+        "visible_html_fields": [
+            {
+                "data[LoginExtra][recordar]": "XX",
+                "data[Login][clave]": "XX",
+                "data[Login][usuario]": "XX"
+            },
+            {
+                "q": "XX"
+            },
+            {
+                "data[LoginExtra][recordar]": "rC",
+                "data[Login][clave]": "p1",
+                "data[Login][usuario]": "us"
+            }
         ]
     },
     "html/www.crtvg.es-2.html": {
@@ -1338,6 +3821,26 @@
             "X",
             "X",
             "r"
+        ],
+        "visible_html_fields": [
+            {
+                "data[LoginExtra][recordar]": "XX",
+                "data[Login][clave]": "XX",
+                "data[Login][usuario]": "XX"
+            },
+            {
+                "q": "XX"
+            },
+            {
+                "data[Usuario][acepto]": "tC",
+                "data[Usuario][apellidos]": "n3",
+                "data[Usuario][clave]": "p1",
+                "data[Usuario][correo_electronico]": "e1",
+                "data[Usuario][fecha_nacimiento]": "bD",
+                "data[Usuario][nombre]": "n1",
+                "data[Usuario][usuario]": "us",
+                "data[Usuario][verificarclave]": "p2"
+            }
         ]
     },
     "html/www.crtvg.es-3.html": {
@@ -1346,6 +3849,19 @@
             "X",
             "X",
             "p"
+        ],
+        "visible_html_fields": [
+            {
+                "data[LoginExtra][recordar]": "XX",
+                "data[Login][clave]": "XX",
+                "data[Login][usuario]": "XX"
+            },
+            {
+                "q": "XX"
+            },
+            {
+                "data[Usuario][correo_electronico]": "e1"
+            }
         ]
     },
     "html/www.debian-administration.org-0.html": {
@@ -1353,6 +3869,16 @@
         "forms": [
             "l",
             "o"
+        ],
+        "visible_html_fields": [
+            {
+                "lname": "XX",
+                "lpass": "XX",
+                "submit": "XX"
+            },
+            {
+                "pollanswer": "XX"
+            }
         ]
     },
     "html/www.debian-administration.org-1.html": {
@@ -1361,6 +3887,21 @@
             "r",
             "l",
             "o"
+        ],
+        "visible_html_fields": [
+            {
+                "new_user_email": "e1",
+                "new_user_name": "us",
+                "submit": "Bs"
+            },
+            {
+                "lname": "XX",
+                "lpass": "XX",
+                "submit": "XX"
+            },
+            {
+                "pollanswer": "XX"
+            }
         ]
     },
     "html/www.debian-administration.org-2.html": {
@@ -1369,6 +3910,23 @@
             "l",
             "l",
             "o"
+        ],
+        "visible_html_fields": [
+            {
+                "lname": "us",
+                "lpass": "p1",
+                "secure": "rC",
+                "ssl": "oC",
+                "submit": "Bs"
+            },
+            {
+                "lname": "us",
+                "lpass": "p1",
+                "submit": "Bs"
+            },
+            {
+                "pollanswer": "XX"
+            }
         ]
     },
     "html/www.debianhelp.org-0.html": {
@@ -1377,6 +3935,18 @@
             "s",
             "l",
             "o"
+        ],
+        "visible_html_fields": [
+            {
+                "op": "Bs",
+                "search_block_form": "qq"
+            },
+            {
+                "name": "us",
+                "op": "Bs",
+                "pass": "p1"
+            },
+            {}
         ]
     },
     "html/www.debianhelp.org-1.html": {
@@ -1384,6 +3954,21 @@
         "forms": [
             "s",
             "r"
+        ],
+        "visible_html_fields": [
+            {
+                "op": "Bs",
+                "search_block_form": "qq"
+            },
+            {
+                "conditions": "XX",
+                "extras-1": "oC",
+                "legal_accept": "tC",
+                "mail": "e1",
+                "name": "us",
+                "op": "Bs",
+                "url": "ab"
+            }
         ]
     },
     "html/www.debianhelp.org-2.html": {
@@ -1391,30 +3976,68 @@
         "forms": [
             "s",
             "p"
+        ],
+        "visible_html_fields": [
+            {
+                "op": "Bs",
+                "search_block_form": "qq"
+            },
+            {
+                "name": "e1",
+                "op": "Bs"
+            }
         ]
     },
     "html/www.dhd24.com-0.html": {
         "url": "http://www.dhd24.com/",
         "forms": [
             "s"
+        ],
+        "visible_html_fields": [
+            {
+                "plz": "Ad",
+                "suchstring": "qq"
+            }
         ]
     },
     "html/www.digitaltrends.com-0.html": {
         "url": "http://www.digitaltrends.com/",
         "forms": [
             "s"
+        ],
+        "visible_html_fields": [
+            {
+                "s": "qq"
+            }
         ]
     },
     "html/www.disasterkleen.com-0.html": {
         "url": "http://www.disasterkleen.com/",
         "forms": [
             "c"
+        ],
+        "visible_html_fields": [
+            {
+                "input_1": "XX",
+                "input_2": "XX",
+                "input_3": "XX",
+                "input_4": "XX",
+                "input_5": "XX",
+                "input_6": "XX",
+                "input_8": "XX",
+                "input_9": "XX"
+            }
         ]
     },
     "html/www.elandroidelibre.com-0.html": {
         "url": "http://www.elandroidelibre.com/",
         "forms": [
             "s"
+        ],
+        "visible_html_fields": [
+            {
+                "q": "qq"
+            }
         ]
     },
     "html/www.elandroidelibre.com-1.html": {
@@ -1423,6 +4046,24 @@
             "o",
             "r",
             "s"
+        ],
+        "visible_html_fields": [
+            {},
+            {
+                "avatar": "av",
+                "description": "am",
+                "mail": "e1",
+                "name": "n1",
+                "nick": "us",
+                "pass1": "p1",
+                "pass2": "p2",
+                "submit": "Bs",
+                "surname": "n3",
+                "uri": "ws"
+            },
+            {
+                "search": "qq"
+            }
         ]
     },
     "html/www.elandroidelibre.com-2.html": {
@@ -1431,6 +4072,17 @@
             "o",
             "l",
             "s"
+        ],
+        "visible_html_fields": [
+            {},
+            {
+                "loginPassword": "p1",
+                "loginUser": "us",
+                "submit": "Bs"
+            },
+            {
+                "search": "XX"
+            }
         ]
     },
     "html/www.escmid.org-0.html": {
@@ -1439,6 +4091,19 @@
             "l",
             "s",
             "m"
+        ],
+        "visible_html_fields": [
+            {
+                "input_login": "Bs",
+                "pass": "p1",
+                "user": "us"
+            },
+            {
+                "tx_indexedsearch[sword]": "qq"
+            },
+            {
+                "newsletter_sign_up[email]": "e1"
+            }
         ]
     },
     "html/www.escmid.org-1.html": {
@@ -1448,6 +4113,44 @@
             "l",
             "s",
             "m"
+        ],
+        "visible_html_fields": [
+            {
+                "tx_escmidusermgm_profile[address]": "XX",
+                "tx_escmidusermgm_profile[city]": "XX",
+                "tx_escmidusermgm_profile[company]": "SS",
+                "tx_escmidusermgm_profile[country]": "XX",
+                "tx_escmidusermgm_profile[date_of_birth_d]": "XX",
+                "tx_escmidusermgm_profile[date_of_birth_m]": "XX",
+                "tx_escmidusermgm_profile[date_of_birth_y]": "XX",
+                "tx_escmidusermgm_profile[email]": "XX",
+                "tx_escmidusermgm_profile[escmid_ch]": "XX",
+                "tx_escmidusermgm_profile[fax]": "XX",
+                "tx_escmidusermgm_profile[nationality]": "XX",
+                "tx_escmidusermgm_profile[privacy]": "XX",
+                "tx_escmidusermgm_profile[telephone]": "XX",
+                "tx_escmidusermgm_profile[tx_escmidusermgm_box]": "XX",
+                "tx_escmidusermgm_profile[tx_escmidusermgm_department]": "SS",
+                "tx_escmidusermgm_profile[tx_escmidusermgm_firstname]": "n1",
+                "tx_escmidusermgm_profile[tx_escmidusermgm_gender]": "ge",
+                "tx_escmidusermgm_profile[tx_escmidusermgm_givenname]": "n3",
+                "tx_escmidusermgm_profile[tx_escmidusermgm_news_online]": "XX",
+                "tx_escmidusermgm_profile[tx_escmidusermgm_news_print]": "XX",
+                "tx_escmidusermgm_profile[tx_escmidusermgm_title_dr]": "XX",
+                "tx_escmidusermgm_profile[tx_escmidusermgm_title_prof]": "XX",
+                "tx_escmidusermgm_profile[zip]": "XX"
+            },
+            {
+                "input_login": "Bs",
+                "pass": "p1",
+                "user": "us"
+            },
+            {
+                "tx_indexedsearch[sword]": "qq"
+            },
+            {
+                "newsletter_sign_up[email]": "e1"
+            }
         ]
     },
     "html/www.f-1.lt-0.html": {
@@ -1456,6 +4159,21 @@
             "l",
             "s",
             "l"
+        ],
+        "visible_html_fields": [
+            {
+                "prisijungimas_slaptazodis": "p1",
+                "prisijungimas_vardas": "us",
+                "prisiminti": "rC"
+            },
+            {
+                "saltinis": "qc",
+                "uzklausa": "qq"
+            },
+            {
+                "loginName": "us",
+                "user_pwd": "p1"
+            }
         ]
     },
     "html/www.f-1.lt-1.html": {
@@ -1464,12 +4182,37 @@
             "l",
             "r",
             "l"
+        ],
+        "visible_html_fields": [
+            {
+                "prisijungimas_slaptazodis": "p1",
+                "prisijungimas_vardas": "us",
+                "prisiminti": "rC"
+            },
+            {
+                "email": "e1",
+                "naujienos": "eC",
+                "slaptazodis": "p1",
+                "vartotojo_vardas": "us"
+            },
+            {
+                "login": "Bs",
+                "loginName": "us",
+                "user_pwd": "p1"
+            }
         ]
     },
     "html/www.f-1.lt-2.html": {
         "url": "http://www.f-1.lt/priminti.php",
         "forms": [
             "p"
+        ],
+        "visible_html_fields": [
+            {
+                "Submit": "Bs",
+                "email": "e1",
+                "name": "us"
+            }
         ]
     },
     "html/www.familjeliv.se-0.html": {
@@ -1477,6 +4220,16 @@
         "forms": [
             "l",
             "s"
+        ],
+        "visible_html_fields": [
+            {
+                "_password": "p1",
+                "_remember_me": "rC",
+                "_username": "us"
+            },
+            {
+                "q": "qq"
+            }
         ]
     },
     "html/www.familjeliv.se-1.html": {
@@ -1485,6 +4238,29 @@
             "X",
             "X",
             "r"
+        ],
+        "visible_html_fields": [
+            {
+                "_password": "XX",
+                "_remember_me": "XX",
+                "_username": "XX"
+            },
+            {
+                "q": "XX"
+            },
+            {
+                "register": "Bs",
+                "user_register_flow[acceptAds]": "eC",
+                "user_register_flow[acceptLicense]": "tC",
+                "user_register_flow[acceptNewsletter]": "eC",
+                "user_register_flow[email]": "e1",
+                "user_register_flow[nick]": "us",
+                "user_register_flow[sex]": "ge",
+                "user_register_flow[userPregnancy][birthdate][day]": "bd",
+                "user_register_flow[userPregnancy][birthdate][month]": "bm",
+                "user_register_flow[userPregnancy][birthdate][year]": "by",
+                "user_register_flow[userRole]": "SS"
+            }
         ]
     },
     "html/www.familjeliv.se-2.html": {
@@ -1493,6 +4269,20 @@
             "l",
             "s",
             "p"
+        ],
+        "visible_html_fields": [
+            {
+                "_password": "p1",
+                "_remember_me": "rC",
+                "_username": "us"
+            },
+            {
+                "q": "qq"
+            },
+            {
+                "reset": "Bs",
+                "security_reset_password[email]": "e1"
+            }
         ]
     },
     "html/www.farodevigo.es-0.html": {
@@ -1500,12 +4290,28 @@
         "forms": [
             "s",
             "o"
+        ],
+        "visible_html_fields": [
+            {
+                "q1": "qq",
+                "sa": "Bs"
+            },
+            {
+                "BuscarEmpleos": "XX",
+                "select": "XX"
+            }
         ]
     },
     "html/www.filetransit.com-0.html": {
         "url": "http://www.filetransit.com/",
         "forms": [
             "s"
+        ],
+        "visible_html_fields": [
+            {
+                "Submit": "Bs",
+                "edt_search_keyword": "qq"
+            }
         ]
     },
     "html/www.filetransit.com-1.html": {
@@ -1513,6 +4319,19 @@
         "forms": [
             "s",
             "c"
+        ],
+        "visible_html_fields": [
+            {
+                "Submit": "XX",
+                "edt_search_keyword": "XX"
+            },
+            {
+                "edt_language_captcha_code": "XX",
+                "edt_user_email": "XX",
+                "edt_user_name": "XX",
+                "edt_user_topic": "XX",
+                "memo_message": "XX"
+            }
         ]
     },
     "html/www.food.com-0.html": {
@@ -1523,24 +4342,57 @@
             "s",
             "m",
             "s"
+        ],
+        "visible_html_fields": [
+            {
+                "q": "qq"
+            },
+            {
+                "contextsearch": "qq"
+            },
+            {},
+            {
+                "emailaddress": "e1"
+            },
+            {
+                "search_term": "qq"
+            }
         ]
     },
     "html/www.forsakringskassan.se-0.html": {
         "url": "http://www.forsakringskassan.se/privatpers/!ut/p/a1/04_Sj9CPykssy0xPLMnMz0vMAfGjzOItjAx8nZwMHQ0sHM0MDTwNPUIMA_2cgly8TYEKIoEKDHAARwNC-sP1o8BK8JhQkBthkO6oqAgATOTWZw!!/dl5/d5/L2dBISEvZ0FBIS9nQSEh/",
         "forms": [
             "s"
+        ],
+        "visible_html_fields": [
+            {
+                "Z7_720MBB1A0GV170IRKD13ME00E1_:searchForm:searchText": "qq",
+                "findButton": "Bs"
+            }
         ]
     },
     "html/www.gardenstew.com-0.html": {
         "url": "http://www.gardenstew.com/",
         "forms": [
             "s"
+        ],
+        "visible_html_fields": [
+            {
+                "q": "XX",
+                "sa": "XX"
+            }
         ]
     },
     "html/www.gardenstew.com-1.html": {
         "url": "http://www.gardenstew.com/profile.php?mode=register",
         "forms": [
             "s"
+        ],
+        "visible_html_fields": [
+            {
+                "q": "XX",
+                "sa": "XX"
+            }
         ]
     },
     "html/www.gardenstew.com-2.html": {
@@ -1548,6 +4400,28 @@
         "forms": [
             "s",
             "r"
+        ],
+        "visible_html_fields": [
+            {
+                "q": "XX",
+                "sa": "XX"
+            },
+            {
+                "attachsig": "SS",
+                "confirm_code": "ca",
+                "email": "e1",
+                "hideonline": "SS",
+                "interests": "SS",
+                "location": "Ad",
+                "new_password": "p1",
+                "notifypm": "eC",
+                "notifyreply": "eC",
+                "occupation": "SS",
+                "password_confirm": "p2",
+                "submit": "Bs",
+                "timezone": "tz",
+                "username": "us"
+            }
         ]
     },
     "html/www.gardenstew.com-3.html": {
@@ -1555,36 +4429,93 @@
         "forms": [
             "s",
             "l"
+        ],
+        "visible_html_fields": [
+            {
+                "q": "qq",
+                "sa": "Bs"
+            },
+            {
+                "autologin": "rC",
+                "login": "Bs",
+                "password": "p1",
+                "username": "us"
+            }
         ]
     },
     "html/www.gratka.pl-0.html": {
         "url": "http://www.gratka.pl/",
         "forms": [
             "s"
+        ],
+        "visible_html_fields": [
+            {
+                "fraza": "qq",
+                "typ": "qc"
+            }
         ]
     },
     "html/www.gratka.pl-1.html": {
         "url": "https://www.gratka.pl/konto/rejestracja/?url_powrotu=http://www.gratka.pl/profil/logowanie",
         "forms": [
             "r"
+        ],
+        "visible_html_fields": [
+            {
+                "drugi_krok": "Bs",
+                "dzial": "SS",
+                "email": "e1",
+                "haslo": "p1",
+                "haslo_powtorz": "p2",
+                "nieruchomosci_rynek": "SS",
+                "typ_firmy": "SS",
+                "wyslane": "Bo",
+                "zgoda_101": "tC",
+                "zgoda_102": "eC",
+                "zgoda_103": "tC",
+                "zgoda_104": "tC",
+                "zgoda_glowna": "tC"
+            }
         ]
     },
     "html/www.hautelook.com-0.html": {
         "url": "https://www.hautelook.com/",
         "forms": [
             "r"
+        ],
+        "visible_html_fields": [
+            {
+                "member_data[country_iso]": "Co",
+                "member_data[email]": "e1",
+                "member_data[firstname]": "n1",
+                "member_data[gender]": "ge",
+                "member_data[lastname]": "n3",
+                "member_data[password]": "p1",
+                "member_data[zip_code]": "Zi"
+            }
         ]
     },
     "html/www.hautelook.com-1.html": {
         "url": "https://www.hautelook.com/login",
         "forms": [
             "l"
+        ],
+        "visible_html_fields": [
+            {
+                "email": "e1",
+                "password": "p1"
+            }
         ]
     },
     "html/www.hautelook.com-2.html": {
         "url": "https://www.hautelook.com/forgot-password",
         "forms": [
             "p"
+        ],
+        "visible_html_fields": [
+            {
+                "fp_email": "XX"
+            }
         ]
     },
     "html/www.ia.ucsb.edu-0.html": {
@@ -1592,6 +4523,19 @@
         "forms": [
             "s",
             "c"
+        ],
+        "visible_html_fields": [
+            {
+                "q": "XX"
+            },
+            {
+                "Comment": "XX",
+                "FromEmail": "XX",
+                "Subject": "XX",
+                "YourName": "XX",
+                "btnCancel": "XX",
+                "btnSubmit": "XX"
+            }
         ]
     },
     "html/www.independent.ie-0.html": {
@@ -1600,6 +4544,17 @@
             "s",
             "s",
             "s"
+        ],
+        "visible_html_fields": [
+            {
+                "search": "qq"
+            },
+            {
+                "search": "qq"
+            },
+            {
+                "search": "qq"
+            }
         ]
     },
     "html/www.innux.com-0.html": {
@@ -1607,6 +4562,17 @@
         "forms": [
             "s",
             "l"
+        ],
+        "visible_html_fields": [
+            {
+                "searchword": "XX"
+            },
+            {
+                "Submit": "Bs",
+                "passwd": "p1",
+                "remember": "rC",
+                "username": "us"
+            }
         ]
     },
     "html/www.innux.com-1.html": {
@@ -1614,6 +4580,14 @@
         "forms": [
             "s",
             "p"
+        ],
+        "visible_html_fields": [
+            {
+                "searchword": "XX"
+            },
+            {
+                "email": "XX"
+            }
         ]
     },
     "html/www.innux.com-2.html": {
@@ -1621,6 +4595,14 @@
         "forms": [
             "s",
             "p"
+        ],
+        "visible_html_fields": [
+            {
+                "searchword": "XX"
+            },
+            {
+                "email": "XX"
+            }
         ]
     },
     "html/www.innux.com-3.html": {
@@ -1628,12 +4610,35 @@
         "forms": [
             "s",
             "r"
+        ],
+        "visible_html_fields": [
+            {
+                "searchword": "qq"
+            },
+            {
+                "departamento": "XX",
+                "email": "XX",
+                "empresa": "XX",
+                "mercado": "XX",
+                "name": "XX",
+                "pais": "XX",
+                "password": "XX",
+                "password2": "XX",
+                "publicacao": "XX",
+                "telefone": "XX",
+                "username": "XX"
+            }
         ]
     },
     "html/www.jofogas.hu-0.html": {
         "url": "http://www.jofogas.hu/",
         "forms": [
             "s"
+        ],
+        "visible_html_fields": [
+            {
+                "q": "XX"
+            }
         ]
     },
     "html/www.jofogas.hu-1.html": {
@@ -1642,6 +4647,55 @@
             "s",
             "s",
             "o"
+        ],
+        "visible_html_fields": [
+            {
+                "q": "XX"
+            },
+            {
+                "blm0": "XX",
+                "blm1": "XX",
+                "bt": "XX",
+                "c": "XX",
+                "cb_carparts": "XX",
+                "cb_cars": "XX",
+                "cb_commercialcarparts": "XX",
+                "cb_commercialcars": "XX",
+                "cb_motorcycleparts": "XX",
+                "cb_motorcycles": "XX",
+                "cg": "qc",
+                "cl": "XX",
+                "fu": "XX",
+                "ib": "XX",
+                "jp": "XX",
+                "jt": "XX",
+                "mahs": "XX",
+                "mas": "XX",
+                "me": "XX",
+                "mihs": "XX",
+                "mis": "XX",
+                "mo_cars": "XX",
+                "mo_motorcycles": "XX",
+                "mre": "XX",
+                "ms": "XX",
+                "nb": "XX",
+                "pe": "XX",
+                "pf": "XX",
+                "ps": "XX",
+                "q": "qq",
+                "re": "XX",
+                "roe": "XX",
+                "ros": "XX",
+                "rs": "XX",
+                "se": "XX",
+                "ss": "XX",
+                "st": "XX",
+                "w": "qc"
+            },
+            {
+                "email": "XX",
+                "mail": "XX"
+            }
         ]
     },
     "html/www.jofogas.hu-2.html": {
@@ -1650,18 +4704,46 @@
             "s",
             "c",
             "c"
+        ],
+        "visible_html_fields": [
+            {
+                "q": "XX"
+            },
+            {
+                "adreply_body": "XX",
+                "email": "XX",
+                "name": "XX",
+                "phone": "XX",
+                "subscribe": "XX"
+            },
+            {
+                "send": "XX",
+                "tip_email": "XX",
+                "tip_msg": "XX",
+                "tip_name": "XX"
+            }
         ]
     },
     "html/www.katoni.dk-0.html": {
         "url": "http://www.katoni.dk/",
         "forms": [
             "s"
+        ],
+        "visible_html_fields": [
+            {
+                "search": "qq"
+            }
         ]
     },
     "html/www.katoni.dk-1.html": {
         "url": "http://www.katoni.dk/sko/sejlersko/",
         "forms": [
             "s"
+        ],
+        "visible_html_fields": [
+            {
+                "search": "XX"
+            }
         ]
     },
     "html/www.kaufland.bg-0.html": {
@@ -1669,6 +4751,14 @@
         "forms": [
             "s",
             "o"
+        ],
+        "visible_html_fields": [
+            {
+                "queryStr": "qq"
+            },
+            {
+                "SP": "XX"
+            }
         ]
     },
     "html/www.koob.ru-0.html": {
@@ -1676,6 +4766,16 @@
         "forms": [
             "s",
             "o"
+        ],
+        "visible_html_fields": [
+            {
+                "Ok": "Bs",
+                "q": "qq"
+            },
+            {
+                "Submit": "XX",
+                "kolday": "XX"
+            }
         ]
     },
     "html/www.krstarica.com-0.html": {
@@ -1683,13 +4783,29 @@
         "forms": [
             "s",
             "s"
+        ],
+        "visible_html_fields": [
+            {
+                "q": "qq"
+            },
+            {
+                "q": "qq"
+            }
         ]
     },
     "html/www.landsend.com-0.html": {
         "url": "http://www.landsend.com/",
         "forms": [
             "s",
-            "r"
+            "m"
+        ],
+        "visible_html_fields": [
+            {
+                "Ntt": "qq"
+            },
+            {
+                "email": "e1"
+            }
         ]
     },
     "html/www.laneros.com-0.html": {
@@ -1698,6 +4814,23 @@
             "s",
             "l",
             "s"
+        ],
+        "visible_html_fields": [
+            {
+                "date": "qc",
+                "keywords": "qq",
+                "title_only": "qc",
+                "users": "qc"
+            },
+            {
+                "login": "ue",
+                "password": "XX",
+                "register": "XX",
+                "remember": "XX"
+            },
+            {
+                "keywords": "qq"
+            }
         ]
     },
     "html/www.livelib.ru-0.html": {
@@ -1706,6 +4839,23 @@
             "s",
             "l",
             "r"
+        ],
+        "visible_html_fields": [
+            {
+                "search[text]": "XX"
+            },
+            {
+                "user[login]": "XX",
+                "user[password]": "XX",
+                "user[remember]": "XX",
+                "user[submit]": "XX"
+            },
+            {
+                "register[agreement]": "XX",
+                "register[email]": "XX",
+                "register[password]": "XX",
+                "register[submit]": "XX"
+            }
         ]
     },
     "html/www.livelib.ru-1.html": {
@@ -1715,6 +4865,26 @@
             "p",
             "l",
             "r"
+        ],
+        "visible_html_fields": [
+            {
+                "search[text]": "XX"
+            },
+            {
+                "email": "XX"
+            },
+            {
+                "user[login]": "us",
+                "user[password]": "p1",
+                "user[remember]": "rC",
+                "user[submit]": "Bs"
+            },
+            {
+                "register[agreement]": "XX",
+                "register[email]": "XX",
+                "register[password]": "XX",
+                "register[submit]": "XX"
+            }
         ]
     },
     "html/www.livelib.ru-2.html": {
@@ -1724,6 +4894,30 @@
             "c",
             "l",
             "r"
+        ],
+        "visible_html_fields": [
+            {
+                "search[text]": "qq"
+            },
+            {
+                "btnSend": "XX",
+                "form[email]": "XX",
+                "form[message]": "XX",
+                "form[name]": "XX",
+                "form[type]": "XX"
+            },
+            {
+                "user[login]": "XX",
+                "user[password]": "XX",
+                "user[remember]": "XX",
+                "user[submit]": "XX"
+            },
+            {
+                "register[agreement]": "tC",
+                "register[email]": "e1",
+                "register[password]": "p1",
+                "register[submit]": "Bs"
+            }
         ]
     },
     "html/www.lot18.com-0.html": {
@@ -1733,12 +4927,37 @@
             "l",
             "p",
             "r"
+        ],
+        "visible_html_fields": [
+            {
+                "q": "qq"
+            },
+            {
+                "email": "e1",
+                "password": "p1",
+                "submitLogin": "Bs"
+            },
+            {
+                "email": "XX"
+            },
+            {
+                "email": "e1",
+                "first_name": "n1",
+                "last_name": "n3",
+                "password": "p1",
+                "submitRegister": "Bs"
+            }
         ]
     },
     "html/www.lot18.com-1.html": {
         "url": "http://www.lot18.com/",
         "forms": [
             "s"
+        ],
+        "visible_html_fields": [
+            {
+                "q": "XX"
+            }
         ]
     },
     "html/www.ma-reduc.com-0.html": {
@@ -1750,6 +4969,23 @@
             "m",
             "m",
             "l"
+        ],
+        "visible_html_fields": [
+            {
+                "search": "XX"
+            },
+            {
+                "search": "XX"
+            },
+            {
+                "search": "qq"
+            },
+            {},
+            {},
+            {
+                "email": "XX",
+                "password": "XX"
+            }
         ]
     },
     "html/www.ma-reduc.com-1.html": {
@@ -1760,6 +4996,25 @@
             "r",
             "m",
             "l"
+        ],
+        "visible_html_fields": [
+            {
+                "search": "qq"
+            },
+            {
+                "search": "qq"
+            },
+            {
+                "email": "e1",
+                "gender": "ge",
+                "login": "us",
+                "password": "p1"
+            },
+            {},
+            {
+                "email": "e1",
+                "password": "p1"
+            }
         ]
     },
     "html/www.micromania.fr-0.html": {
@@ -1767,6 +5022,14 @@
         "forms": [
             "s",
             "m"
+        ],
+        "visible_html_fields": [
+            {
+                "q": "XX"
+            },
+            {
+                "email": "e1"
+            }
         ]
     },
     "html/www.micromania.fr-1.html": {
@@ -1775,6 +5038,18 @@
             "s",
             "l",
             "m"
+        ],
+        "visible_html_fields": [
+            {
+                "q": "qq"
+            },
+            {
+                "login[password]": "p1",
+                "login[username]": "e1"
+            },
+            {
+                "email": "e1"
+            }
         ]
     },
     "html/www.micromania.fr-2.html": {
@@ -1783,6 +5058,30 @@
             "s",
             "r",
             "m"
+        ],
+        "visible_html_fields": [
+            {
+                "q": "XX"
+            },
+            {
+                "confirmation": "p2",
+                "email": "e1",
+                "email_confirm": "e2",
+                "firstname": "n1",
+                "gender": "ge",
+                "lastname": "n3",
+                "megacard[match]": "XX",
+                "megacard[name]": "n3",
+                "megacard[nday]": "XX",
+                "megacard[nmon]": "XX",
+                "megacard[number]": "XX",
+                "megacard[nyear]": "XX",
+                "megacard[postcode]": "Zi",
+                "password": "p1"
+            },
+            {
+                "email": "XX"
+            }
         ]
     },
     "html/www.micromania.fr-3.html": {
@@ -1791,6 +5090,17 @@
             "s",
             "p",
             "m"
+        ],
+        "visible_html_fields": [
+            {
+                "q": "XX"
+            },
+            {
+                "email": "XX"
+            },
+            {
+                "email": "XX"
+            }
         ]
     },
     "html/www.micromania.fr-4.html": {
@@ -1801,6 +5111,21 @@
             "o",
             "o",
             "m"
+        ],
+        "visible_html_fields": [
+            {
+                "q": "XX"
+            },
+            {},
+            {
+                "zip-code": "XX"
+            },
+            {
+                "zip-code": "XX"
+            },
+            {
+                "email": "XX"
+            }
         ]
     },
     "html/www.mindfactory.de-0.html": {
@@ -1811,6 +5136,25 @@
             "o",
             "o",
             "m"
+        ],
+        "visible_html_fields": [
+            {
+                "search_query": "XX"
+            },
+            {
+                "login_email_address": "e1",
+                "login_password": "p1",
+                "perm_login": "rC"
+            },
+            {
+                "service_infos_action": "XX"
+            },
+            {
+                "service_infos_action": "XX"
+            },
+            {
+                "email_address": "XX"
+            }
         ]
     },
     "html/www.mindfactory.de-1.html": {
@@ -1818,6 +5162,21 @@
         "forms": [
             "s",
             "c"
+        ],
+        "visible_html_fields": [
+            {
+                "search_query": "XX"
+            },
+            {
+                "callback_area": "XX",
+                "callback_day": "XX",
+                "callback_text": "XX",
+                "callback_time_from": "XX",
+                "callback_time_to": "XX",
+                "kundnr": "XX",
+                "telnr": "XX",
+                "vvcode": "XX"
+            }
         ]
     },
     "html/www.mindfactory.de-2.html": {
@@ -1830,6 +5189,33 @@
             "m",
             "l",
             "r"
+        ],
+        "visible_html_fields": [
+            {
+                "search_query": "XX"
+            },
+            {
+                "login_email_address": "XX",
+                "login_password": "XX",
+                "perm_login": "XX"
+            },
+            {
+                "service_infos_action": "XX"
+            },
+            {
+                "service_infos_action": "XX"
+            },
+            {
+                "email_address": "e1"
+            },
+            {
+                "login_email_address": "e1",
+                "login_password": "p1",
+                "perm_login": "rC"
+            },
+            {
+                "email_address": "e1"
+            }
         ]
     },
     "html/www.mindfactory.de-3.html": {
@@ -1841,6 +5227,29 @@
             "o",
             "m",
             "p"
+        ],
+        "visible_html_fields": [
+            {
+                "search_query": "XX"
+            },
+            {
+                "login_email_address": "XX",
+                "login_password": "XX",
+                "perm_login": "XX"
+            },
+            {
+                "service_infos_action": "XX"
+            },
+            {
+                "service_infos_action": "XX"
+            },
+            {
+                "email_address": "XX"
+            },
+            {
+                "email_address": "XX",
+                "vvcode": "XX"
+            }
         ]
     },
     "html/www.mindfactory.de-4.html": {
@@ -1850,12 +5259,43 @@
             "o",
             "o",
             "o"
+        ],
+        "visible_html_fields": [
+            {
+                "search_query": "XX"
+            },
+            {
+                "service_infos_action": "XX"
+            },
+            {
+                "service_infos_action": "XX"
+            },
+            {
+                "attributes[4]": "XX",
+                "products_qty": "XX"
+            }
         ]
     },
     "html/www.mistersofteect.com-0.html": {
         "url": "http://www.mistersofteect.com/contact.html",
         "forms": [
             "c"
+        ],
+        "visible_html_fields": [
+            {
+                "q1_name": "XX",
+                "q3_email": "XX",
+                "q4_message4": "XX",
+                "q8_address8[addr_line1]": "XX",
+                "q8_address8[addr_line2]": "XX",
+                "q8_address8[city]": "XX",
+                "q8_address8[country]": "XX",
+                "q8_address8[postal]": "XX",
+                "q8_address8[state]": "XX",
+                "q9_phoneNumber9[area]": "XX",
+                "q9_phoneNumber9[phone]": "XX",
+                "website": "XX"
+            }
         ]
     },
     "html/www.mlive.com-0.html": {
@@ -1864,6 +5304,19 @@
             "o",
             "s",
             "l"
+        ],
+        "visible_html_fields": [
+            {
+                "adv_wlocation_input": "XX"
+            },
+            {
+                "keywords": "XX"
+            },
+            {
+                "password": "p1",
+                "remember": "rC",
+                "username": "us"
+            }
         ]
     },
     "html/www.mocavo.com-0.html": {
@@ -1875,6 +5328,36 @@
             "o",
             "o",
             "o"
+        ],
+        "visible_html_fields": [
+            {
+                "email": "e1",
+                "fname": "n1",
+                "gender": "ge",
+                "lname": "n3",
+                "password": "p1"
+            },
+            {
+                "groups[]": "XX"
+            },
+            {
+                "file_upload": "XX",
+                "title": "XX"
+            },
+            {
+                "file_upload": "XX"
+            },
+            {
+                "desc": "XX",
+                "email": "XX",
+                "url": "XX"
+            },
+            {
+                "category": "XX",
+                "description": "XX",
+                "email": "XX",
+                "name": "XX"
+            }
         ]
     },
     "html/www.mocavo.com-1.html": {
@@ -1886,6 +5369,33 @@
             "X",
             "X",
             "X"
+        ],
+        "visible_html_fields": [
+            {
+                "email": "XX"
+            },
+            {
+                "email": "e1",
+                "password": "p1"
+            },
+            {
+                "file_upload": "XX",
+                "title": "XX"
+            },
+            {
+                "file_upload": "XX"
+            },
+            {
+                "desc": "XX",
+                "email": "XX",
+                "url": "XX"
+            },
+            {
+                "category": "XX",
+                "description": "XX",
+                "email": "XX",
+                "name": "XX"
+            }
         ]
     },
     "html/www.mocavo.com-2.html": {
@@ -1896,6 +5406,31 @@
             "X",
             "X",
             "X"
+        ],
+        "visible_html_fields": [
+            {
+                "email": "e1",
+                "name": "us",
+                "password": "p1"
+            },
+            {
+                "file_upload": "XX",
+                "title": "XX"
+            },
+            {
+                "file_upload": "XX"
+            },
+            {
+                "desc": "XX",
+                "email": "XX",
+                "url": "XX"
+            },
+            {
+                "category": "XX",
+                "description": "XX",
+                "email": "XX",
+                "name": "XX"
+            }
         ]
     },
     "html/www.mocavo.com-3.html": {
@@ -1906,6 +5441,33 @@
             "X",
             "X",
             "X"
+        ],
+        "visible_html_fields": [
+            {
+                "email": "XX",
+                "message": "XX",
+                "name": "XX",
+                "reason": "XX",
+                "recaptcha_challenge_field": "XX"
+            },
+            {
+                "file_upload": "XX",
+                "title": "XX"
+            },
+            {
+                "file_upload": "XX"
+            },
+            {
+                "desc": "XX",
+                "email": "XX",
+                "url": "XX"
+            },
+            {
+                "category": "XX",
+                "description": "XX",
+                "email": "XX",
+                "name": "XX"
+            }
         ]
     },
     "html/www.mocavo.com-4.html": {
@@ -1918,12 +5480,56 @@
             "X",
             "X",
             "X"
+        ],
+        "visible_html_fields": [
+            {
+                "filter_name": "XX"
+            },
+            {
+                "plus_event[]": "XX",
+                "plus_event_day[]": "XX",
+                "plus_event_location[]": "XX",
+                "plus_event_month[]": "XX",
+                "plus_event_prox[]": "XX",
+                "plus_event_year[]": "XX",
+                "plus_exclusions[]": "XX",
+                "plus_fname": "XX",
+                "plus_lname": "XX",
+                "plus_wholeCounty": "XX",
+                "q": "XX"
+            },
+            {
+                "email": "e1"
+            },
+            {
+                "file_upload": "XX",
+                "title": "XX"
+            },
+            {
+                "file_upload": "XX"
+            },
+            {
+                "desc": "XX",
+                "email": "XX",
+                "url": "XX"
+            },
+            {
+                "category": "XX",
+                "description": "XX",
+                "email": "XX",
+                "name": "XX"
+            }
         ]
     },
     "html/www.nieuwsblad.be-0.html": {
         "url": "http://www.nieuwsblad.be/",
         "forms": [
             "s"
+        ],
+        "visible_html_fields": [
+            {
+                "keyword": "XX"
+            }
         ]
     },
     "html/www.nieuwsblad.be-1.html": {
@@ -1931,12 +5537,27 @@
         "forms": [
             "s",
             "l"
+        ],
+        "visible_html_fields": [
+            {
+                "keyword": "XX"
+            },
+            {
+                "EmailOrUsername": "e1",
+                "Password": "p1",
+                "RememberMyPassword": "rC"
+            }
         ]
     },
     "html/www.nieuwsblad.be-2.html": {
         "url": "http://www.nieuwsblad.be/account/register",
         "forms": [
             "s"
+        ],
+        "visible_html_fields": [
+            {
+                "keyword": "XX"
+            }
         ]
     },
     "html/www.notebooksbilliger.de-0.html": {
@@ -1944,6 +5565,12 @@
         "forms": [
             "s",
             "o"
+        ],
+        "visible_html_fields": [
+            {
+                "searchbox": "XX"
+            },
+            {}
         ]
     },
     "html/www.notebooksbilliger.de-1.html": {
@@ -1952,6 +5579,20 @@
             "s",
             "s",
             "l"
+        ],
+        "visible_html_fields": [
+            {
+                "searchbox": "XX"
+            },
+            {
+                "forum_search": "XX",
+                "search": "XX"
+            },
+            {
+                "email_address": "e1",
+                "login": "Bs",
+                "password": "p1"
+            }
         ]
     },
     "html/www.notebooksbilliger.de-2.html": {
@@ -1959,6 +5600,22 @@
         "forms": [
             "s",
             "r"
+        ],
+        "visible_html_fields": [
+            {
+                "searchbox": "XX"
+            },
+            {
+                "account_email_address": "XX",
+                "account_firstname": "XX",
+                "account_gender": "XX",
+                "account_lastname": "XX",
+                "account_nickname": "XX",
+                "account_password": "XX",
+                "account_password_confirm": "XX",
+                "newsletter_abo": "XX",
+                "register": "XX"
+            }
         ]
     },
     "html/www.notebooksbilliger.de-3.html": {
@@ -1968,6 +5625,55 @@
             "o",
             "r",
             "r"
+        ],
+        "visible_html_fields": [
+            {
+                "searchbox": "XX"
+            },
+            {
+                "customer_type": "XX",
+                "register": "XX"
+            },
+            {
+                "account_city": "XX",
+                "account_country": "XX",
+                "account_email_address": "XX",
+                "account_fax": "XX",
+                "account_firstname": "XX",
+                "account_gender": "XX",
+                "account_lastname": "XX",
+                "account_password": "XX",
+                "account_password_confirm": "XX",
+                "account_postcode": "XX",
+                "account_street_address": "XX",
+                "account_street_address_number": "XX",
+                "account_telephone": "XX",
+                "newsletter_abo": "XX",
+                "register": "XX"
+            },
+            {
+                "account_business_form": "XX",
+                "account_business_owner_first_name": "XX",
+                "account_business_owner_last_name": "XX",
+                "account_business_special_form": "XX",
+                "account_city": "XX",
+                "account_company": "XX",
+                "account_country": "XX",
+                "account_email_address": "XX",
+                "account_fax": "XX",
+                "account_firstname": "XX",
+                "account_gender": "XX",
+                "account_lastname": "XX",
+                "account_password": "XX",
+                "account_password_confirm": "XX",
+                "account_postcode": "XX",
+                "account_street_address": "XX",
+                "account_street_address_number": "XX",
+                "account_telephone": "XX",
+                "account_ustid": "XX",
+                "newsletter_abo": "XX",
+                "register": "XX"
+            }
         ]
     },
     "html/www.notebooksbilliger.de-4.html": {
@@ -1975,6 +5681,12 @@
         "forms": [
             "s",
             "o"
+        ],
+        "visible_html_fields": [
+            {
+                "searchbox": "XX"
+            },
+            {}
         ]
     },
     "html/www.notebooksbilliger.de-5.html": {
@@ -1982,6 +5694,14 @@
         "forms": [
             "s",
             "p"
+        ],
+        "visible_html_fields": [
+            {
+                "searchbox": "XX"
+            },
+            {
+                "email_address": "XX"
+            }
         ]
     },
     "html/www.olcsobbat.hu-0.html": {
@@ -1990,6 +5710,19 @@
             "s",
             "o",
             "m"
+        ],
+        "visible_html_fields": [
+            {
+                "search": "XX"
+            },
+            {
+                "yt0": "XX"
+            },
+            {
+                "RegistrationForm[email]": "e1",
+                "RegistrationForm[username]": "us",
+                "yt1": "Bs"
+            }
         ]
     },
     "html/www.olcsobbat.hu-1.html": {
@@ -1998,6 +5731,25 @@
             "X",
             "o",
             "m"
+        ],
+        "visible_html_fields": [
+            {
+                "search": "XX"
+            },
+            {
+                "fizetesiMod": "XX",
+                "hely": "XX",
+                "ingyenesSzallitas": "XX",
+                "megbizhatoBolt": "XX",
+                "rendezes": "XX",
+                "szallitasiMod": "XX",
+                "webshopId": "XX"
+            },
+            {
+                "RegistrationForm[email]": "e1",
+                "RegistrationForm[username]": "us",
+                "yt0": "Bs"
+            }
         ]
     },
     "html/www.olcsobbat.hu-2.html": {
@@ -2006,6 +5758,27 @@
             "X",
             "r",
             "X"
+        ],
+        "visible_html_fields": [
+            {
+                "search": "XX"
+            },
+            {
+                "RegistrationForm[accept_condition]": "XX",
+                "RegistrationForm[captcha]": "XX",
+                "RegistrationForm[emailAgain]": "XX",
+                "RegistrationForm[email]": "XX",
+                "RegistrationForm[firstName]": "XX",
+                "RegistrationForm[lastName]": "XX",
+                "RegistrationForm[newsletter]": "XX",
+                "RegistrationForm[passwordAgain]": "XX",
+                "RegistrationForm[password]": "XX"
+            },
+            {
+                "RegistrationForm[email]": "XX",
+                "RegistrationForm[username]": "XX",
+                "yt0": "XX"
+            }
         ]
     },
     "html/www.olcsobbat.hu-3.html": {
@@ -2014,6 +5787,20 @@
             "X",
             "l",
             "X"
+        ],
+        "visible_html_fields": [
+            {
+                "search": "XX"
+            },
+            {
+                "LoginForm[password]": "p1",
+                "LoginForm[username]": "e1"
+            },
+            {
+                "RegistrationForm[email]": "XX",
+                "RegistrationForm[username]": "XX",
+                "yt0": "XX"
+            }
         ]
     },
     "html/www.olcsobbat.hu-4.html": {
@@ -2022,24 +5809,69 @@
             "X",
             "p",
             "X"
+        ],
+        "visible_html_fields": [
+            {
+                "search": "XX"
+            },
+            {
+                "RegistrationForm[email]": "XX"
+            },
+            {
+                "RegistrationForm[email]": "XX",
+                "RegistrationForm[username]": "XX",
+                "yt0": "XX"
+            }
         ]
     },
     "html/www.orbitz.com-0.html": {
         "url": "http://www.orbitz.com/",
         "forms": [
             "s"
+        ],
+        "visible_html_fields": [
+            {
+                "hotel.addRoom": "XX",
+                "hotel.chkin": "XX",
+                "hotel.chkout": "XX",
+                "hotel.couponCode": "XX",
+                "hotel.hname": "XX",
+                "hotel.keyword.key": "XX",
+                "hotel.rating": "XX",
+                "hotel.rooms[0].adlts": "XX",
+                "hotel.rooms[0].chldAge[0]": "XX",
+                "hotel.rooms[0].chldAge[1]": "XX",
+                "hotel.rooms[0].chldAge[2]": "XX",
+                "hotel.rooms[0].chldAge[3]": "XX",
+                "hotel.rooms[0].chldAge[4]": "XX",
+                "hotel.rooms[0].chlds": "XX",
+                "search": "XX"
+            }
         ]
     },
     "html/www.osibatteries.com-0.html": {
         "url": "https://www.osibatteries.com/",
         "forms": [
             "o"
+        ],
+        "visible_html_fields": [
+            {}
         ]
     },
     "html/www.osibatteries.com-1.html": {
         "url": "https://www.osibatteries.com/signin.aspx",
         "forms": [
             "l"
+        ],
+        "visible_html_fields": [
+            {
+                "ctl00$PageContent$ctl00$ctrlLogin$LoginButton": "XX",
+                "ctl00$PageContent$ctl00$ctrlLogin$Password": "XX",
+                "ctl00$PageContent$ctl00$ctrlLogin$RememberMe": "XX",
+                "ctl00$PageContent$ctl00$ctrlLogin$UserName": "XX",
+                "ctl00$PageContent$ctl00$ctrlRecoverPassword$UserNameContainerID$UserName": "XX",
+                "ctl00$PageContent$ctl00$ctrlRecoverPassword$UserNameContainerID$btnRequestNewPassword": "XX"
+            }
         ]
     },
     "html/www.pcgames.de-0.html": {
@@ -2049,12 +5881,30 @@
             "o",
             "o",
             "l"
+        ],
+        "visible_html_fields": [
+            {
+                "Login": "XX",
+                "Password": "XX"
+            },
+            {},
+            {},
+            {
+                "Login": "XX",
+                "Password": "XX"
+            }
         ]
     },
     "html/www.petsbest.com-0.html": {
         "url": "http://www.petsbest.com/",
         "forms": [
             "o"
+        ],
+        "visible_html_fields": [
+            {
+                "ctl00$SearchBox$gcsSearch2$ctl01": "XX",
+                "ctl00$SearchBox$gcsSearch2$q": "XX"
+            }
         ]
     },
     "html/www.petsbest.com-1.html": {
@@ -2062,6 +5912,16 @@
         "forms": [
             "s",
             "l"
+        ],
+        "visible_html_fields": [
+            {
+                "Pet Insurance Search": "XX"
+            },
+            {
+                "Password": "XX",
+                "RememberMe": "XX",
+                "Username": "XX"
+            }
         ]
     },
     "html/www.petsbest.com-2.html": {
@@ -2069,6 +5929,15 @@
         "forms": [
             "s",
             "r"
+        ],
+        "visible_html_fields": [
+            {
+                "Pet Insurance Search": "XX"
+            },
+            {
+                "Email": "XX",
+                "PolicyNum": "XX"
+            }
         ]
     },
     "html/www.petswelcome.com-0.html": {
@@ -2084,6 +5953,58 @@
             "l",
             "l",
             "p"
+        ],
+        "visible_html_fields": [
+            {
+                "hotelSearchSubmit": "XX",
+                "location": "XX"
+            },
+            {
+                "dest_address": "XX",
+                "getDirections": "XX",
+                "origin_address": "XX"
+            },
+            {
+                "state": "XX",
+                "submit": "XX",
+                "town": "XX"
+            },
+            {
+                "EMAIL": "e1",
+                "FNAME": "n1",
+                "subscribe": "Bs"
+            },
+            {
+                "email": "XX",
+                "password": "XX",
+                "submit": "XX"
+            },
+            {
+                "email": "XX",
+                "password": "XX",
+                "password2": "XX",
+                "submit": "XX"
+            },
+            {
+                "email": "XX",
+                "password": "XX",
+                "password2": "XX",
+                "submit": "XX"
+            },
+            {
+                "email": "XX",
+                "password": "XX",
+                "submit": "XX"
+            },
+            {
+                "email": "XX",
+                "password": "XX",
+                "submit": "XX"
+            },
+            {
+                "email": "XX",
+                "submit": "XX"
+            }
         ]
     },
     "html/www.pirk.lt-0.html": {
@@ -2091,6 +6012,13 @@
         "forms": [
             "m",
             "o"
+        ],
+        "visible_html_fields": [
+            {
+                "submit": "Bs",
+                "subscriber": "e1"
+            },
+            {}
         ]
     },
     "html/www.pirk.lt-1.html": {
@@ -2100,6 +6028,25 @@
             "r",
             "m",
             "o"
+        ],
+        "visible_html_fields": [
+            {
+                "login": "XX",
+                "login_email": "XX",
+                "login_password": "XX",
+                "remember": "XX"
+            },
+            {
+                "email": "XX",
+                "password1": "XX",
+                "password2": "XX",
+                "rules": "XX"
+            },
+            {
+                "submit": "XX",
+                "subscriber": "XX"
+            },
+            {}
         ]
     },
     "html/www.pirk.lt-2.html": {
@@ -2108,6 +6055,17 @@
             "p",
             "m",
             "o"
+        ],
+        "visible_html_fields": [
+            {
+                "email": "XX",
+                "login": "XX"
+            },
+            {
+                "submit": "XX",
+                "subscriber": "XX"
+            },
+            {}
         ]
     },
     "html/www.plumdistrict.com-0.html": {
@@ -2115,18 +6073,35 @@
         "forms": [
             "m",
             "s"
+        ],
+        "visible_html_fields": [
+            {
+                "city_id": "Ci",
+                "email": "e1"
+            },
+            {
+                "search": "XX"
+            }
         ]
     },
     "html/www.purdue.edu-0.html": {
         "url": "http://www.purdue.edu/",
         "forms": [
             "o"
+        ],
+        "visible_html_fields": [
+            {}
         ]
     },
     "html/www.python.org-0.html": {
         "url": "https://www.python.org/",
         "forms": [
             "s"
+        ],
+        "visible_html_fields": [
+            {
+                "q": "XX"
+            }
         ]
     },
     "html/www.python.org-1.html": {
@@ -2134,6 +6109,17 @@
         "forms": [
             "s",
             "r"
+        ],
+        "visible_html_fields": [
+            {
+                "q": "XX"
+            },
+            {
+                "email": "e1",
+                "password1": "p1",
+                "password2": "p2",
+                "username": "us"
+            }
         ]
     },
     "html/www.python.org-2.html": {
@@ -2141,6 +6127,16 @@
         "forms": [
             "s",
             "l"
+        ],
+        "visible_html_fields": [
+            {
+                "q": "XX"
+            },
+            {
+                "login": "XX",
+                "password": "XX",
+                "remember": "XX"
+            }
         ]
     },
     "html/www.python.org-3.html": {
@@ -2148,6 +6144,14 @@
         "forms": [
             "s",
             "p"
+        ],
+        "visible_html_fields": [
+            {
+                "q": "XX"
+            },
+            {
+                "email": "XX"
+            }
         ]
     },
     "html/www.rakuten.de-0.html": {
@@ -2157,6 +6161,21 @@
             "m",
             "m",
             "m"
+        ],
+        "visible_html_fields": [
+            {
+                "category_hierarchy": "XX",
+                "q": "XX"
+            },
+            {
+                "susa_newsletter": "e1"
+            },
+            {
+                "susa_newsletter": "e1"
+            },
+            {
+                "newsletter": "XX"
+            }
         ]
     },
     "html/www.rakuten.de-1.html": {
@@ -2166,6 +6185,30 @@
             "l",
             "r",
             "m"
+        ],
+        "visible_html_fields": [
+            {
+                "category_hierarchy": "XX",
+                "q": "XX"
+            },
+            {
+                "btn_login": "XX",
+                "email_login": "XX",
+                "password_login": "XX"
+            },
+            {
+                "chk_newsletter": "eC",
+                "email_confirm": "e2",
+                "email_register": "e1",
+                "first_name": "n1",
+                "gender": "ge",
+                "last_name": "n3",
+                "password_confirm": "p2",
+                "password_register": "p1"
+            },
+            {
+                "newsletter": "e1"
+            }
         ]
     },
     "html/www.riemurasia.net-0.html": {
@@ -2173,30 +6216,86 @@
         "forms": [
             "o",
             "o"
+        ],
+        "visible_html_fields": [
+            {
+                "gallup": "XX"
+            },
+            {
+                "gallup": "XX",
+                "v1": "XX",
+                "v10": "XX",
+                "v2": "XX",
+                "v3": "XX",
+                "v4": "XX",
+                "v5": "XX",
+                "v6": "XX",
+                "v7": "XX",
+                "v8": "XX",
+                "v9": "XX"
+            }
         ]
     },
     "html/www.riemurasia.net-1.html": {
         "url": "https://www.riemurasia.net/login.php",
         "forms": [
             "l"
+        ],
+        "visible_html_fields": [
+            {
+                "nickname": "XX",
+                "password": "XX",
+                "remember": "XX"
+            }
         ]
     },
     "html/www.riemurasia.net-2.html": {
         "url": "https://www.riemurasia.net/register.php",
         "forms": [
             "r"
+        ],
+        "visible_html_fields": [
+            {
+                "day": "bd",
+                "email": "e1",
+                "gender": "ge",
+                "location": "Ci",
+                "mobile": "ph",
+                "month": "bm",
+                "partners": "eC",
+                "password1": "p1",
+                "password2": "p2",
+                "riemuinfo": "eC",
+                "username": "us",
+                "verification": "ab",
+                "year": "by"
+            }
         ]
     },
     "html/www.riemurasia.net-3.html": {
         "url": "https://www.riemurasia.net/forgotpassword.php",
         "forms": [
             "p"
+        ],
+        "visible_html_fields": [
+            {
+                "email": "XX"
+            }
         ]
     },
     "html/www.riemurasia.net-4.html": {
         "url": "https://www.riemurasia.net/feedback.php?lang=en",
         "forms": [
             "c"
+        ],
+        "visible_html_fields": [
+            {
+                "message": "XX",
+                "rremail": "XX",
+                "rrname": "XX",
+                "rrsubject": "XX",
+                "type": "XX"
+            }
         ]
     },
     "html/www.roller.de-0.html": {
@@ -2204,6 +6303,12 @@
         "forms": [
             "s",
             "o"
+        ],
+        "visible_html_fields": [
+            {
+                "text": "XX"
+            },
+            {}
         ]
     },
     "html/www.roller.de-1.html": {
@@ -2212,6 +6317,16 @@
             "s",
             "o",
             "o"
+        ],
+        "visible_html_fields": [
+            {
+                "text": "XX"
+            },
+            {
+                "orderNumber": "XX",
+                "orderPin": "XX"
+            },
+            {}
         ]
     },
     "html/www.roller.de-2.html": {
@@ -2223,6 +6338,18 @@
             "o",
             "o",
             "o"
+        ],
+        "visible_html_fields": [
+            {
+                "text": "XX"
+            },
+            {},
+            {
+                "qty": "XX"
+            },
+            {},
+            {},
+            {}
         ]
     },
     "html/www.routard.com-0.html": {
@@ -2231,6 +6358,19 @@
             "m",
             "s",
             "l"
+        ],
+        "visible_html_fields": [
+            {
+                "email_news": "XX"
+            },
+            {
+                "edt_cleRech": "XX"
+            },
+            {
+                "header_email": "XX",
+                "header_mdp": "XX",
+                "header_save_login": "XX"
+            }
         ]
     },
     "html/www.routard.com-1.html": {
@@ -2240,6 +6380,22 @@
             "s",
             "l",
             "p"
+        ],
+        "visible_html_fields": [
+            {
+                "email_news": "XX"
+            },
+            {
+                "edt_cleRech": "XX"
+            },
+            {
+                "header_email": "XX",
+                "header_mdp": "XX",
+                "header_save_login": "XX"
+            },
+            {
+                "email": "XX"
+            }
         ]
     },
     "html/www.routard.com-2.html": {
@@ -2250,6 +6406,42 @@
             "l",
             "l",
             "r"
+        ],
+        "visible_html_fields": [
+            {
+                "email_news": "e1"
+            },
+            {
+                "edt_cleRech": "XX"
+            },
+            {
+                "header_email": "XX",
+                "header_mdp": "XX",
+                "header_save_login": "XX"
+            },
+            {
+                "login": "XX",
+                "password": "XX",
+                "save_login": "XX"
+            },
+            {
+                "annee_naissance": "XX",
+                "categorie": "XX",
+                "civilite": "XX",
+                "code_postal": "XX",
+                "confirm_new_password": "XX",
+                "email": "XX",
+                "jour_naissance": "XX",
+                "menucategory": "XX",
+                "mois_naissance": "XX",
+                "new_password": "XX",
+                "nom": "XX",
+                "prenom": "XX",
+                "pseudo": "XX",
+                "raison": "XX",
+                "select_destination": "XX",
+                "submit_inscription": "XX"
+            }
         ]
     },
     "html/www.seocafe.info-0.html": {
@@ -2260,6 +6452,22 @@
             "o",
             "o",
             "o"
+        ],
+        "visible_html_fields": [
+            {
+                "q": "XX",
+                "sa": "XX"
+            },
+            {
+                "cookieuser": "XX",
+                "vb_login_password": "XX",
+                "vb_login_username": "XX"
+            },
+            {},
+            {},
+            {
+                "styleid": "XX"
+            }
         ]
     },
     "html/www.sgi-usa.org-0.html": {
@@ -2269,6 +6477,36 @@
             "s",
             "s",
             "c"
+        ],
+        "visible_html_fields": [
+            {
+                "s": "XX"
+            },
+            {
+                "s": "XX"
+            },
+            {
+                "location_search_address": "XX",
+                "location_search_city": "XX",
+                "location_search_distance": "XX",
+                "location_search_sm_category_24field": "XX",
+                "location_search_sm_category_25field": "XX",
+                "location_search_sm_category_26field": "XX",
+                "location_search_state": "XX",
+                "location_search_zip": "XX"
+            },
+            {
+                "chapter": "XX",
+                "city": "XX",
+                "comments": "XX",
+                "district": "XX",
+                "email": "XX",
+                "honey": "XX",
+                "name": "XX",
+                "phone": "XX",
+                "state": "XX",
+                "subject": "XX"
+            }
         ]
     },
     "html/www.slivki.by-0.html": {
@@ -2277,12 +6515,31 @@
             "r",
             "l",
             "s"
+        ],
+        "visible_html_fields": [
+            {
+                "confirmPassword": "XX",
+                "email": "XX",
+                "password": "XX"
+            },
+            {
+                "email": "XX",
+                "password": "XX"
+            },
+            {
+                "text": "XX"
+            }
         ]
     },
     "html/www.spartoo.pt-0.html": {
         "url": "http://www.spartoo.pt/",
         "forms": [
             "s"
+        ],
+        "visible_html_fields": [
+            {
+                "keywords": "XX"
+            }
         ]
     },
     "html/www.spartoo.pt-1.html": {
@@ -2290,6 +6547,14 @@
         "forms": [
             "s",
             "o"
+        ],
+        "visible_html_fields": [
+            {
+                "keywords": "XX"
+            },
+            {
+                "productsPerPage": "XX"
+            }
         ]
     },
     "html/www.spartoo.pt-2.html": {
@@ -2298,6 +6563,34 @@
             "s",
             "l",
             "r"
+        ],
+        "visible_html_fields": [
+            {
+                "keywords": "XX"
+            },
+            {
+                "email_address": "XX",
+                "password": "XX"
+            },
+            {
+                "city": "XX",
+                "confirmation": "XX",
+                "country": "XX",
+                "day": "XX",
+                "email_address_create_account": "XX",
+                "email_parrain": "XX",
+                "firstname": "XX",
+                "gender": "XX",
+                "lastname": "XX",
+                "month": "XX",
+                "optin": "XX",
+                "password_create_account": "XX",
+                "postcode": "XX",
+                "street_address": "XX",
+                "suburb": "XX",
+                "telephone": "XX",
+                "year": "XX"
+            }
         ]
     },
     "html/www.spartoo.pt-3.html": {
@@ -2305,12 +6598,25 @@
         "forms": [
             "s",
             "p"
+        ],
+        "visible_html_fields": [
+            {
+                "keywords": "XX"
+            },
+            {
+                "email_address": "XX"
+            }
         ]
     },
     "html/www.srovnanicen.cz-0.html": {
         "url": "http://www.srovnanicen.cz/",
         "forms": [
             "s"
+        ],
+        "visible_html_fields": [
+            {
+                "q": "XX"
+            }
         ]
     },
     "html/www.stearnsdesignbuild.com-0.html": {
@@ -2320,6 +6626,25 @@
             "s",
             "s",
             "c"
+        ],
+        "visible_html_fields": [
+            {
+                "ea": "e1",
+                "go": "Bs"
+            },
+            {
+                "s": "XX"
+            },
+            {
+                "s": "XX"
+            },
+            {
+                "contact_name": "XX",
+                "email": "XX",
+                "msg": "XX",
+                "submit": "XX",
+                "url": "XX"
+            }
         ]
     },
     "html/www.terraforums.com-0.html": {
@@ -2329,6 +6654,22 @@
             "s",
             "o",
             "o"
+        ],
+        "visible_html_fields": [
+            {
+                "cookieuser": "XX",
+                "vb_login_password": "XX",
+                "vb_login_password_hint": "XX",
+                "vb_login_username": "XX"
+            },
+            {
+                "query": "XX",
+                "submit": "XX"
+            },
+            {},
+            {
+                "styleid": "XX"
+            }
         ]
     },
     "html/www.terraforums.com-1.html": {
@@ -2339,6 +6680,36 @@
             "o",
             "s",
             "o"
+        ],
+        "visible_html_fields": [
+            {
+                "cookieuser": "XX",
+                "vb_login_password": "XX",
+                "vb_login_password_hint": "XX",
+                "vb_login_username": "XX"
+            },
+            {
+                "query": "XX",
+                "submit": "XX"
+            },
+            {},
+            {
+                "beforeafter": "XX",
+                "dosearch": "XX",
+                "exactname": "XX",
+                "order": "XX",
+                "query": "XX",
+                "recaptcha_challenge_field": "XX",
+                "searchdate": "XX",
+                "searchuser": "XX",
+                "sortby": "XX",
+                "tag": "XX",
+                "titleonly": "XX",
+                "type[]": "XX"
+            },
+            {
+                "styleid": "XX"
+            }
         ]
     },
     "html/www.terraforums.com-2.html": {
@@ -2349,18 +6720,52 @@
             "o",
             "c",
             "o"
+        ],
+        "visible_html_fields": [
+            {
+                "cookieuser": "XX",
+                "vb_login_password": "XX",
+                "vb_login_password_hint": "XX",
+                "vb_login_username": "XX"
+            },
+            {
+                "query": "XX",
+                "submit": "XX"
+            },
+            {},
+            {
+                "email": "XX",
+                "message": "XX",
+                "name": "XX",
+                "other_subject": "XX",
+                "recaptcha_challenge_field": "XX",
+                "subject": "XX"
+            },
+            {
+                "styleid": "XX"
+            }
         ]
     },
     "html/www.thefoundry.co.uk-0.html": {
         "url": "http://www.thefoundry.co.uk/",
         "forms": [
             "s"
+        ],
+        "visible_html_fields": [
+            {
+                "query": "XX"
+            }
         ]
     },
     "html/www.tradepub.com-0.html": {
         "url": "http://www.tradepub.com/",
         "forms": [
             "s"
+        ],
+        "visible_html_fields": [
+            {
+                "keyword": "XX"
+            }
         ]
     },
     "html/www.tradingpost.com.au-0.html": {
@@ -2369,30 +6774,67 @@
             "s",
             "s",
             "s"
+        ],
+        "visible_html_fields": [
+            {
+                "find": "XX"
+            },
+            {
+                "cat": "XX",
+                "q": "XX",
+                "state": "XX"
+            },
+            {
+                "cat": "XX",
+                "q": "XX",
+                "state": "XX"
+            }
         ]
     },
     "html/www.ucsb.edu-0.html": {
         "url": "http://www.ucsb.edu/",
         "forms": [
             "s"
+        ],
+        "visible_html_fields": [
+            {
+                "q": "XX"
+            }
         ]
     },
     "html/www.unipd.it-0.html": {
         "url": "http://www.unipd.it/",
         "forms": [
             "s"
+        ],
+        "visible_html_fields": [
+            {
+                "search_block_form": "XX"
+            }
         ]
     },
     "html/www.unito.it-0.html": {
         "url": "http://www.unito.it/",
         "forms": [
             "s"
+        ],
+        "visible_html_fields": [
+            {
+                "keys": "XX",
+                "op": "XX"
+            }
         ]
     },
     "html/www.verajohn.com-0.html": {
         "url": "https://www.verajohn.com/",
         "forms": [
             "l"
+        ],
+        "visible_html_fields": [
+            {
+                "mail": "XX",
+                "pass": "XX"
+            }
         ]
     },
     "html/www.verajohn.com-1.html": {
@@ -2400,6 +6842,15 @@
         "forms": [
             "l",
             "p"
+        ],
+        "visible_html_fields": [
+            {
+                "mail": "XX",
+                "pass": "XX"
+            },
+            {
+                "mail": "XX"
+            }
         ]
     },
     "html/www.walldecorandhomeaccents.com-0.html": {
@@ -2407,6 +6858,15 @@
         "forms": [
             "s",
             "r"
+        ],
+        "visible_html_fields": [
+            {
+                "keywords": "XX"
+            },
+            {
+                "emailAddress": "e1",
+                "profile.Full Name": "nf"
+            }
         ]
     },
     "html/www.woolworths.co.uk-0.html": {
@@ -2416,6 +6876,19 @@
             "o",
             "o",
             "m"
+        ],
+        "visible_html_fields": [
+            {
+                "search": "qq"
+            },
+            {},
+            {
+                "/sdg/content/SwitchUserAgentFormHandler.switchUserAgent": "XX"
+            },
+            {
+                "btnFooterSignUp": "XX",
+                "emailsignup": "XX"
+            }
         ]
     },
     "html/www.woolworths.co.uk-1.html": {
@@ -2427,6 +6900,27 @@
             "o",
             "o",
             "m"
+        ],
+        "visible_html_fields": [
+            {
+                "search": "XX"
+            },
+            {
+                "/atg/userprofiling/ProfileFormHandler.sdgLogin": "XX",
+                "formRememberEmail": "XX",
+                "loginID": "XX",
+                "loginPassword": "XX",
+                "loginPostcode": "XX"
+            },
+            {},
+            {},
+            {
+                "/sdg/content/SwitchUserAgentFormHandler.switchUserAgent": "XX"
+            },
+            {
+                "btnFooterSignUp": "Bs",
+                "emailsignup": "e1"
+            }
         ]
     },
     "html/www.writecamp.org-0.html": {
@@ -2434,6 +6928,16 @@
         "forms": [
             "c",
             "o"
+        ],
+        "visible_html_fields": [
+            {
+                "input_1": "XX",
+                "input_2": "XX",
+                "input_4": "XX",
+                "input_6": "XX",
+                "input_8": "XX"
+            },
+            {}
         ]
     },
     "html/www.zalando.de-0.html": {
@@ -2443,6 +6947,22 @@
             "m",
             "l",
             "p"
+        ],
+        "visible_html_fields": [
+            {
+                "q": "XX"
+            },
+            {
+                "email": "XX"
+            },
+            {
+                "email": "XX",
+                "password": "XX",
+                "softLogin": "XX"
+            },
+            {
+                "emailForPasswordRemind": "XX"
+            }
         ]
     },
     "html/www.zalando.de-1.html": {
@@ -2453,6 +6973,23 @@
             "m",
             "l",
             "p"
+        ],
+        "visible_html_fields": [
+            {
+                "q": "XX"
+            },
+            {},
+            {
+                "email": "e1"
+            },
+            {
+                "email": "XX",
+                "password": "XX",
+                "softLogin": "XX"
+            },
+            {
+                "emailForPasswordRemind": "XX"
+            }
         ]
     },
     "html/www.zalando.de-2.html": {
@@ -2463,6 +7000,32 @@
             "p",
             "r",
             "m"
+        ],
+        "visible_html_fields": [
+            {
+                "q": "qq"
+            },
+            {
+                "email": "XX",
+                "password": "XX",
+                "softLogin": "XX"
+            },
+            {
+                "emailForPasswordRemind": "XX"
+            },
+            {
+                "agb": "XX",
+                "customer.email": "XX",
+                "customer.firstname": "XX",
+                "customer.lastname": "XX",
+                "customer.sex": "XX",
+                "newsletter": "XX",
+                "password1": "XX",
+                "password2": "XX"
+            },
+            {
+                "email": "XX"
+            }
         ]
     },
     "html/www.zazzle.com-0.html": {
@@ -2471,6 +7034,17 @@
             "s",
             "m",
             "m"
+        ],
+        "visible_html_fields": [
+            {
+                "qs": "XX"
+            },
+            {
+                "em": "e1"
+            },
+            {
+                "em": "e1"
+            }
         ]
     },
     "html/www.zazzle.com-1.html": {
@@ -2480,6 +7054,21 @@
             "l",
             "m",
             "m"
+        ],
+        "visible_html_fields": [
+            {
+                "qs": "XX"
+            },
+            {
+                "login_password": "XX",
+                "login_username": "XX"
+            },
+            {
+                "em": "e1"
+            },
+            {
+                "em": "e1"
+            }
         ]
     },
     "html/www.zulily.com-0.html": {
@@ -2488,6 +7077,21 @@
             "s",
             "r",
             "l"
+        ],
+        "visible_html_fields": [
+            {
+                "q": "XX"
+            },
+            {
+                "email": "XX",
+                "firstname": "XX",
+                "lastname": "XX",
+                "password": "XX"
+            },
+            {
+                "login[password]": "XX",
+                "login[username]": "XX"
+            }
         ]
     },
     "html/www2.jofogas.hu-0.html": {
@@ -2495,6 +7099,16 @@
         "forms": [
             "s",
             "l"
+        ],
+        "visible_html_fields": [
+            {
+                "q": "XX"
+            },
+            {
+                "email": "e1",
+                "password": "p1",
+                "submit": "Bs"
+            }
         ]
     },
     "html/www2.jofogas.hu-1.html": {
@@ -2502,6 +7116,18 @@
         "forms": [
             "s",
             "r"
+        ],
+        "visible_html_fields": [
+            {
+                "q": "qq"
+            },
+            {
+                "accept_account_terms": "tC",
+                "email": "e1",
+                "password": "p1",
+                "password_confirm": "p2",
+                "submit": "Bs"
+            }
         ]
     },
     "html/www2.jofogas.hu-2.html": {
@@ -2509,30 +7135,70 @@
         "forms": [
             "s",
             "p"
+        ],
+        "visible_html_fields": [
+            {
+                "q": "XX"
+            },
+            {
+                "email": "XX",
+                "submit": "XX"
+            }
         ]
     },
     "html/yellowdeli.com-0.html": {
         "url": "http://yellowdeli.com/guest-book-oneonta/addpost",
         "forms": [
             "c"
+        ],
+        "visible_html_fields": [
+            {
+                "image": "XX",
+                "post_desc": "XX",
+                "post_email": "XX",
+                "post_url": "XX",
+                "postedby": "XX"
+            }
         ]
     },
     "html/zadane.pl-0.html": {
         "url": "http://zadane.pl/",
         "forms": [
             "s"
+        ],
+        "visible_html_fields": [
+            {
+                "q": "qq"
+            }
         ]
     },
     "html/zadane.pl-1.html": {
         "url": "http://zadane.pl/login?entry=2&return=%2F",
         "forms": [
             "l"
+        ],
+        "visible_html_fields": [
+            {
+                "autologin": "rC",
+                "password": "p1",
+                "username": "us"
+            }
         ]
     },
     "html/zadane.pl-2.html": {
         "url": "http://zadane.pl/signup?return=%2F&entry=2",
         "forms": [
             "r"
+        ],
+        "visible_html_fields": [
+            {
+                "birth_date": "XX",
+                "gender": "XX",
+                "grade_id": "XX",
+                "nick": "XX",
+                "password": "XX",
+                "username": "XX"
+            }
         ]
     },
     "html/zadane.pl-3.html": {
@@ -2540,12 +7206,26 @@
         "forms": [
             "X",
             "p"
+        ],
+        "visible_html_fields": [
+            {
+                "q": "XX"
+            },
+            {
+                "username": "e1"
+            }
         ]
     },
     "html/zadane.pl-4.html": {
         "url": "http://zadane.pl/question/add?entry=1610",
         "forms": [
             "o"
+        ],
+        "visible_html_fields": [
+            {
+                "subject_id": "XX",
+                "task_content": "XX"
+            }
         ]
     }
 }
