@@ -66,7 +66,6 @@ def get_cleaned_form_html(form, for_source=True):
     return html
 
 
-
 def get_field_names(elems):
     """ Return unique name attributes """
     res = []
@@ -90,6 +89,20 @@ def get_visible_fields(form):
         '|descendant::button'
         '|(descendant::input[(@type!="hidden" and @type!="HIDDEN") or not(@type)])'
     )
+
+
+def get_fields_to_annotate(form):
+    """
+    Return fields which should be annotated:
+
+    1. they should be visible to user, and
+    2. they should have name (i.e. affect form submission result).
+
+    """
+    return [
+        f for f in get_visible_fields(form)
+        if getattr(f, 'name', None) is not None
+    ]
 
 
 def escaped_with_field_highlighted(form_html, field_name):

@@ -10,7 +10,7 @@ from formasaurus.html import (
     get_forms,
     get_cleaned_form_html,
     get_field_names,
-    get_visible_fields,
+    get_fields_to_annotate,
     escaped_with_field_highlighted,
     highlight_fields,
     add_text_after,
@@ -55,12 +55,14 @@ def test_get_forms():
     assert forms[1].method == "POST"
 
 
-def test_get_visible_fields():
+def test_get_fields_to_annotate():
     tree = load_html(FORM1)
     form = get_forms(tree)[0]
-    elems = get_visible_fields(form)
+    elems = get_fields_to_annotate(form)
+    assert all(getattr(el, 'name', None) is not None for el in elems)
     names = get_field_names(elems)
     assert names == ['foo', 'bar', 'ch', 'baz', 'go', 'cancel']
+    assert set(names) == {el.name for el in elems}
 
 
 def test_add_text_after():
