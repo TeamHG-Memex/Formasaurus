@@ -29,7 +29,6 @@
 
             {"short": "tC", "full": "TOS confirmation"},
             {"short": "18", "full": "18+ confirmation"},
-            {"short": "oC", "full": "other confirmation"},
             {"short": "eC", "full": "receive emails confirmation"},
             {"short": "rC", "full": "remember me checkbox"},
             {"short": "aC", "full": "autofill fields checkbox"},
@@ -38,13 +37,13 @@
             {"short": "Bc", "full": "cancel button"},
             {"short": "Br", "full": "reset/clear button"},
             {"short": "Bl", "full": "social login button"},
-            {"short": "Bo", "full": "other button"},
 
             {"short": "n1", "full": "first name"},
             {"short": "n3", "full": "last name"},
             {"short": "n2", "full": "middle name"},
             {"short": "nf", "full": "full name"},
             {"short": "ns", "full": "screen name (another nick which is not username)"},
+            {"short": "no", "full": "organization name"},
             {"short": "ge", "full": "gender"},
 
             {"short": "by", "full": "year of birth"},
@@ -64,13 +63,18 @@
             {"short": "S#", "full": "street number"},
             {"short": "A#", "full": "apartment number"},
             {"short": "Zi", "full": "zip/postal code"},
+            {"short": "A1", "full": "address line 1"},
+            {"short": "A2", "full": "address line 2"},
+            {"short": "PO", "full": "PO box"},
 
             {"short": "ph", "full": "phone"},
-            {"short": "pP", "full": "phone part"},
+            {"short": "P0", "full": "phone country code"},
+            {"short": "P1", "full": "phone part 1"},
+            {"short": "P2", "full": "phone part 2"},
+            {"short": "P3", "full": "phone part 3"},
             {"short": "fa", "full": "fax"},
             {"short": "ws", "full": "website/url"},
             {"short": "oi", "full": "OpenID"},
-
 
             {"short": "am", "full": "about me text"},
             {"short": "av", "full": "picture/avatar upload"},
@@ -87,8 +91,6 @@
             {"short": "sq", "full": "security question"},
             {"short": "sa", "full": "answer to security question"},
 
-            {"short": "SS", "full": "narrow site-specific question"},
-
             {"short": "qq", "full": "search query"},
             {"short": "qc", "full": "search category / refinement"},
 
@@ -98,8 +100,10 @@
             {"short": "OT", "full": "other text"},
             {"short": "OC", "full": "other code"},
             {"short": "OD", "full": "other date"},
+            {"short": "oC", "full": "other confirmation"},
             {"short": "OS", "full": "other choice"},
             {"short": "OM", "full": "other multi choice"},
+            {"short": "Bo", "full": "other button"},
 
             {"short": "XX", "full": "NOT ANNOTATED"}
         ],
