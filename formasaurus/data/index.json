@@ -65,10 +65,10 @@
                 "request": "qq"
             },
             {
-                "ch[1]": "XX",
-                "ch[2]": "XX",
-                "ch[3]": "XX",
-                "ch[4]": "XX",
+                "ch[1]": "OS",
+                "ch[2]": "OS",
+                "ch[3]": "OS",
+                "ch[4]": "OS",
                 "email": "e1"
             }
         ]
@@ -147,7 +147,7 @@
                 "q": "qq"
             },
             {
-                "commit": "XX",
+                "commit": "Bs",
                 "openid_url": "oi"
             },
             {
@@ -811,7 +811,7 @@
             {
                 "cookieuser": "rC",
                 "vb_login_password": "p1",
-                "vb_login_password_hint": "XX",
+                "vb_login_password_hint": "OR",
                 "vb_login_username": "us"
             },
             {
@@ -905,7 +905,7 @@
             {
                 "cookieuser": "rC",
                 "vb_login_password": "p1",
-                "vb_login_password_hint": "XX",
+                "vb_login_password_hint": "OR",
                 "vb_login_username": "us"
             },
             {
@@ -1085,7 +1085,7 @@
             {
                 "cookieuser": "rC",
                 "vb_login_password": "p1",
-                "vb_login_password_hint": "XX",
+                "vb_login_password_hint": "OR",
                 "vb_login_username": "us"
             },
             {
@@ -1681,29 +1681,29 @@
                 "q": "XX"
             },
             {
-                "RegistrationFormController_2actionOverride:annulla": "XX",
-                "RegistrationFormController_2wlw-checkbox_key:{actionForm.consensoCellulare}": "XX",
-                "RegistrationFormController_2wlw-checkbox_key:{actionForm.consensoTra}": "XX",
+                "RegistrationFormController_2actionOverride:annulla": "Bc",
+                "RegistrationFormController_2wlw-checkbox_key:{actionForm.consensoCellulare}": "oC",
+                "RegistrationFormController_2wlw-checkbox_key:{actionForm.consensoTra}": "oC",
                 "RegistrationFormController_2wlw-radio_button_group_key:{actionForm.sex}": "ge",
                 "RegistrationFormController_2wlw-select_key:{actionForm.birthplaceNationCatastoCode}": "Co",
-                "RegistrationFormController_2wlw-select_key:{actionForm.internationalPrefix}": "XX",
+                "RegistrationFormController_2wlw-select_key:{actionForm.internationalPrefix}": "P0",
                 "RegistrationFormController_2wlw-select_key:{actionForm.nationality}": "Co",
-                "RegistrationFormController_2wlw-select_key:{actionForm.profile}": "XX",
+                "RegistrationFormController_2wlw-select_key:{actionForm.profile}": "OS",
                 "RegistrationFormController_2wlw-select_key:{actionForm.provincia}": "St",
                 "RegistrationFormController_2{actionForm.birthdate}": "bD",
                 "RegistrationFormController_2{actionForm.birthplaceComune}": "St",
-                "RegistrationFormController_2{actionForm.captcha}": "XX",
-                "RegistrationFormController_2{actionForm.codiceFiscale}": "XX",
+                "RegistrationFormController_2{actionForm.captcha}": "ca",
+                "RegistrationFormController_2{actionForm.codiceFiscale}": "OT",
                 "RegistrationFormController_2{actionForm.confirmPwd}": "p2",
                 "RegistrationFormController_2{actionForm.email}": "e1",
                 "RegistrationFormController_2{actionForm.name}": "n1",
-                "RegistrationFormController_2{actionForm.nationalPrefix}": "XX",
-                "RegistrationFormController_2{actionForm.passport}": "XX",
+                "RegistrationFormController_2{actionForm.nationalPrefix}": "P1",
+                "RegistrationFormController_2{actionForm.passport}": "OT",
                 "RegistrationFormController_2{actionForm.password}": "p1",
                 "RegistrationFormController_2{actionForm.phoneNumber}": "ph",
                 "RegistrationFormController_2{actionForm.surname}": "n3",
-                "consensoTrattamento": "XX",
-                "consensoTrattamentoCellulare": "XX"
+                "consensoTrattamento": "OR",
+                "consensoTrattamentoCellulare": "OR"
             }
         ]
     },
@@ -1892,7 +1892,7 @@
                 "search": "XX"
             },
             {
-                "age": "XX",
+                "age": "ON",
                 "answer": "sa",
                 "captcha_phrase": "ca",
                 "firstname": "n1",
@@ -2249,7 +2249,7 @@
             {
                 "confirm": "p2",
                 "email": "e1",
-                "gpg_keyid": "XX",
+                "gpg_keyid": "OT",
                 "name": "us",
                 "password": "p1"
             }
@@ -3056,7 +3056,7 @@
             {
                 "cookieuser": "rC",
                 "vb_login_password": "p1",
-                "vb_login_password_hint": "XX",
+                "vb_login_password_hint": "OR",
                 "vb_login_username": "us"
             },
             {
@@ -3081,7 +3081,7 @@
             {
                 "cookieuser": "rC",
                 "vb_login_password": "p1",
-                "vb_login_password_hint": "XX",
+                "vb_login_password_hint": "OR",
                 "vb_login_username": "us"
             },
             {
@@ -3089,7 +3089,7 @@
                 "submit": "Bs"
             },
             {
-                "Reset": "XX",
+                "Reset": "Br",
                 "agree": "tC",
                 "dst": "ds",
                 "email": "e1",
@@ -3667,7 +3667,7 @@
                 "mobileNo": "ph",
                 "otherCity": "Ci",
                 "password": "p1",
-                "pinCode": "XX",
+                "pinCode": "OT",
                 "register": "Bs",
                 "state": "St",
                 "subscribeNewsLetter": "eC",
@@ -3961,7 +3961,7 @@
                 "search_block_form": "qq"
             },
             {
-                "conditions": "XX",
+                "conditions": "OR",
                 "extras-1": "oC",
                 "legal_accept": "tC",
                 "mail": "e1",
@@ -4117,28 +4117,28 @@
         "visible_html_fields": [
             {
                 "tx_escmidusermgm_profile[address]": "A1",
-                "tx_escmidusermgm_profile[city]": "XX",
+                "tx_escmidusermgm_profile[city]": "Ci",
                 "tx_escmidusermgm_profile[company]": "no",
-                "tx_escmidusermgm_profile[country]": "XX",
-                "tx_escmidusermgm_profile[date_of_birth_d]": "XX",
-                "tx_escmidusermgm_profile[date_of_birth_m]": "XX",
-                "tx_escmidusermgm_profile[date_of_birth_y]": "XX",
-                "tx_escmidusermgm_profile[email]": "XX",
-                "tx_escmidusermgm_profile[escmid_ch]": "XX",
-                "tx_escmidusermgm_profile[fax]": "XX",
-                "tx_escmidusermgm_profile[nationality]": "XX",
-                "tx_escmidusermgm_profile[privacy]": "XX",
-                "tx_escmidusermgm_profile[telephone]": "XX",
-                "tx_escmidusermgm_profile[tx_escmidusermgm_box]": "XX",
+                "tx_escmidusermgm_profile[country]": "Co",
+                "tx_escmidusermgm_profile[date_of_birth_d]": "bd",
+                "tx_escmidusermgm_profile[date_of_birth_m]": "bm",
+                "tx_escmidusermgm_profile[date_of_birth_y]": "by",
+                "tx_escmidusermgm_profile[email]": "e1",
+                "tx_escmidusermgm_profile[escmid_ch]": "tC",
+                "tx_escmidusermgm_profile[fax]": "fa",
+                "tx_escmidusermgm_profile[nationality]": "Co",
+                "tx_escmidusermgm_profile[privacy]": "tC",
+                "tx_escmidusermgm_profile[telephone]": "ph",
+                "tx_escmidusermgm_profile[tx_escmidusermgm_box]": "PO",
                 "tx_escmidusermgm_profile[tx_escmidusermgm_department]": "no",
                 "tx_escmidusermgm_profile[tx_escmidusermgm_firstname]": "n1",
                 "tx_escmidusermgm_profile[tx_escmidusermgm_gender]": "ge",
                 "tx_escmidusermgm_profile[tx_escmidusermgm_givenname]": "n3",
-                "tx_escmidusermgm_profile[tx_escmidusermgm_news_online]": "XX",
-                "tx_escmidusermgm_profile[tx_escmidusermgm_news_print]": "XX",
+                "tx_escmidusermgm_profile[tx_escmidusermgm_news_online]": "eC",
+                "tx_escmidusermgm_profile[tx_escmidusermgm_news_print]": "oC",
                 "tx_escmidusermgm_profile[tx_escmidusermgm_title_dr]": "oC",
                 "tx_escmidusermgm_profile[tx_escmidusermgm_title_prof]": "oC",
-                "tx_escmidusermgm_profile[zip]": "XX"
+                "tx_escmidusermgm_profile[zip]": "Zi"
             },
             {
                 "input_login": "Bs",
@@ -4653,43 +4653,43 @@
                 "q": "XX"
             },
             {
-                "blm0": "XX",
-                "blm1": "XX",
-                "bt": "XX",
-                "c": "XX",
-                "cb_carparts": "XX",
-                "cb_cars": "XX",
-                "cb_commercialcarparts": "XX",
-                "cb_commercialcars": "XX",
-                "cb_motorcycleparts": "XX",
-                "cb_motorcycles": "XX",
+                "blm0": "qc",
+                "blm1": "qc",
+                "bt": "qc",
+                "c": "qc",
+                "cb_carparts": "qc",
+                "cb_cars": "qc",
+                "cb_commercialcarparts": "qc",
+                "cb_commercialcars": "qc",
+                "cb_motorcycleparts": "qc",
+                "cb_motorcycles": "qc",
                 "cg": "qc",
-                "cl": "XX",
-                "fu": "XX",
-                "ib": "XX",
-                "jp": "XX",
-                "jt": "XX",
-                "mahs": "XX",
-                "mas": "XX",
-                "me": "XX",
-                "mihs": "XX",
-                "mis": "XX",
-                "mo_cars": "XX",
-                "mo_motorcycles": "XX",
-                "mre": "XX",
-                "ms": "XX",
-                "nb": "XX",
-                "pe": "XX",
-                "pf": "XX",
-                "ps": "XX",
+                "cl": "qc",
+                "fu": "qc",
+                "ib": "qc",
+                "jp": "qc",
+                "jt": "qc",
+                "mahs": "qc",
+                "mas": "qc",
+                "me": "qc",
+                "mihs": "qc",
+                "mis": "qc",
+                "mo_cars": "qc",
+                "mo_motorcycles": "qc",
+                "mre": "qc",
+                "ms": "qc",
+                "nb": "qc",
+                "pe": "qc",
+                "pf": "qc",
+                "ps": "qc",
                 "q": "qq",
-                "re": "XX",
-                "roe": "XX",
-                "ros": "XX",
-                "rs": "XX",
-                "se": "XX",
-                "ss": "XX",
-                "st": "XX",
+                "re": "qc",
+                "roe": "qc",
+                "ros": "qc",
+                "rs": "qc",
+                "se": "qc",
+                "ss": "qc",
+                "st": "qc",
                 "w": "qc"
             },
             {
@@ -4824,9 +4824,9 @@
             },
             {
                 "login": "ue",
-                "password": "XX",
-                "register": "XX",
-                "remember": "XX"
+                "password": "p1",
+                "register": "OS",
+                "remember": "rC"
             },
             {
                 "keywords": "qq"
@@ -5070,12 +5070,12 @@
                 "firstname": "n1",
                 "gender": "ge",
                 "lastname": "n3",
-                "megacard[match]": "XX",
+                "megacard[match]": "oC",
                 "megacard[name]": "n3",
-                "megacard[nday]": "XX",
-                "megacard[nmon]": "XX",
-                "megacard[number]": "XX",
-                "megacard[nyear]": "XX",
+                "megacard[nday]": "Od",
+                "megacard[nmon]": "Om",
+                "megacard[number]": "ON",
+                "megacard[nyear]": "Oy",
                 "megacard[postcode]": "Zi",
                 "password": "p1"
             },

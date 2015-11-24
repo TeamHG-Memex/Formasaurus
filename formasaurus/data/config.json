@@ -46,9 +46,9 @@
             {"short": "no", "full": "organization name"},
             {"short": "ge", "full": "gender"},
 
-            {"short": "by", "full": "year of birth"},
-            {"short": "bm", "full": "month of birth"},
             {"short": "bd", "full": "day of birth"},
+            {"short": "bm", "full": "month of birth"},
+            {"short": "by", "full": "year of birth"},
             {"short": "bD", "full": "full birth date"},
 
             {"short": "tz", "full": "time zone"},
@@ -98,12 +98,16 @@
 
             {"short": "ON", "full": "other number"},
             {"short": "OT", "full": "other text"},
-            {"short": "OC", "full": "other code"},
-            {"short": "OD", "full": "other date"},
+            {"short": "OD", "full": "other full date"},
+            {"short": "Od", "full": "day"},
+            {"short": "Om", "full": "month"},
+            {"short": "Oy", "full": "year"},
             {"short": "oC", "full": "other confirmation"},
             {"short": "OS", "full": "other choice"},
             {"short": "OM", "full": "other multi choice"},
             {"short": "Bo", "full": "other button"},
+
+            {"short": "OR", "full": "other read-only"},
 
             {"short": "XX", "full": "NOT ANNOTATED"}
         ],
