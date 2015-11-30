@@ -166,7 +166,7 @@ class Storage(object):
             index = self.get_index()
         sorted_items = sorted(
             index.items(),
-            key=lambda it: get_domain(it[1]["url"])
+            key=lambda it: (get_domain(it[1]["url"]), it[0])
         )
         for path, info in sorted_items:
             tree = self.get_tree(path, info)
