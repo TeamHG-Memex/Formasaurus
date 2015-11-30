@@ -96,13 +96,10 @@ def get_fields_to_annotate(form):
     Return fields which should be annotated:
 
     1. they should be visible to user, and
-    2. they should have name (i.e. affect form submission result).
+    2. they should have non-empty name (i.e. affect form submission result).
 
     """
-    return [
-        f for f in get_visible_fields(form)
-        if getattr(f, 'name', None) is not None
-    ]
+    return [f for f in get_visible_fields(form) if getattr(f, 'name', None)]
 
 
 def escaped_with_field_highlighted(form_html, field_name):

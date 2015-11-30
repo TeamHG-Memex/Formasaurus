@@ -21,6 +21,7 @@ FORM1 = """
 <form>
     <input name='foo'/>
     <input type='text' value='hello'>
+    <input type='text' value='spam' name=''>
     <select name='bar'>
         <option value='hi'>hi</option>
     </select>
@@ -59,7 +60,7 @@ def test_get_fields_to_annotate():
     tree = load_html(FORM1)
     form = get_forms(tree)[0]
     elems = get_fields_to_annotate(form)
-    assert all(getattr(el, 'name', None) is not None for el in elems)
+    assert all(getattr(el, 'name', None) for el in elems)
     names = get_field_names(elems)
     assert names == ['foo', 'bar', 'ch', 'baz', 'go', 'cancel']
     assert set(names) == {el.name for el in elems}
