@@ -75,7 +75,7 @@ def HtmlCode(form_html, field_name=None, max_height=None, **kwargs):
     kw.update(kwargs)
     style = '; '.join([
         'white-space:pre-wrap',
-        'max-width:850px',
+        'max-width:800px',
         'word-wrap:break-word',
         'font-family:monospace',
         'overflow:scroll',
