@@ -87,7 +87,7 @@ def get_visible_fields(form):
         'descendant::textarea'
         '|descendant::select'
         '|descendant::button'
-        '|(descendant::input[(@type!="hidden" and @type!="HIDDEN") or not(@type)])'
+        '|(descendant::input[(@type!="hidden" and @type!="HIDDEN" and @type!="Hidden") or not(@type)])'
     )
 
 
