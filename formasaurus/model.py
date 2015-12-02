@@ -11,7 +11,7 @@ from sklearn.pipeline import make_pipeline, make_union
 from sklearn.linear_model import SGDClassifier, LogisticRegression
 from sklearn.svm import LinearSVC
 
-from formasaurus import features
+from formasaurus import formtype_features as features
 
 # a list of 3-tuples with default features:
 # (feature_name, form_transformer, vectorizer)
