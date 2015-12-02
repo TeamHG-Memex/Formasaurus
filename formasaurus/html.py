@@ -2,7 +2,7 @@
 """
 HTML processing utilities
 """
-from doctest import Example
+# from doctest import Example
 try:
     from html import escape as html_escape  # Python 3
 except ImportError:
@@ -10,7 +10,9 @@ except ImportError:
 
 import lxml.html
 from lxml.html.clean import Cleaner
-from lxml.doctestcompare import LXMLOutputChecker, PARSE_HTML
+# from lxml.doctestcompare import LXMLOutputChecker, PARSE_HTML
+
+from formasaurus.text import normalize_whitespaces
 
 
 def remove_by_xpath(tree, xpath):
@@ -146,9 +148,46 @@ def add_text_before(elem, text):
         parent.text = (parent.text or '') + text
 
 
-def assert_html_equal(want, got):
-    """ Assert that 2 HTML documents are equal """
-    checker = LXMLOutputChecker()
-    if not checker.check_output(want, got, PARSE_HTML):
-        message = checker.output_difference(Example("", want), got, 0)
-        raise AssertionError(message)
+# def assert_html_equal(want, got):
+#     """ Assert that 2 HTML documents are equal """
+#     checker = LXMLOutputChecker()
+#     if not checker.check_output(want, got, PARSE_HTML):
+#         message = checker.output_difference(Example("", want), got, 0)
+#         raise AssertionError(message)
+
+
+def get_text_around_elems(tree, elems):
+    """
+    Return (before, after) tuple with {elem: text} dicts containing
+    text before a specified lxml DOM Element and after it.
+    """
+    buf = []
+    before = {elem: '' for elem in elems}
+    after = {elem: '' for elem in elems}
+
+    def flush_buf():
+        res = '  '.join([
+            normalize_whitespaces(b.strip())
+            for b in buf
+            if b and b.strip()
+        ])
+        buf[:] = []
+        return res
+
+    def visit(elem):
+        if elem in before:
+            before[elem] = flush_buf()
+            buf.append(elem.tail)
+            return
+        buf.append(elem.text)
+        for child in elem:
+            visit(child)
+        buf.append(elem.tail)
+
+    visit(tree)
+
+    for prev, next in zip(elems[:-1], elems[1:]):
+        after[prev] = before[next]
+
+    after[elems[-1]] = flush_buf()
+    return before, after

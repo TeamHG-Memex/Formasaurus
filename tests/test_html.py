@@ -15,7 +15,9 @@ from formasaurus.html import (
     highlight_fields,
     add_text_after,
     add_text_before,
+    get_text_around_elems,
 )
+
 
 FORM1 = """
 <form>
@@ -86,3 +88,28 @@ def test_add_text_before_root():
     tree = load_html("<p>hello<br/>world</p>")
     add_text_before(tree.xpath('//p')[0], "!")
     assert html_tostring(tree).strip() == "!<p>hello<br>world</p>"
+
+
+def test_get_text_around_elems():
+    tree = load_html("""
+        <form>
+            <h1>Login</h1>
+            Please <b>enter</b> your details
+            <p>
+                Username: <input name='username'/> required
+                <div>Email:</div> <input type='text' name='email'> *
+            </p>
+            Thanks!
+        </form>
+    """)
+    elems = get_fields_to_annotate(tree)
+    user, email = elems
+    before, after = get_text_around_elems(tree, elems)
+    assert len(before) == 2
+    assert before[user] == 'Login  Please  enter  your details  Username:'
+    assert before[email] == 'required  Email:'
+
+    assert len(after) == 2
+    assert after[user] == 'required  Email:'
+    assert after[email] == '* Thanks!'
+
