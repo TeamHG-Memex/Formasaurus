@@ -17,3 +17,27 @@ def test_type_counts(storage, capsys):
     assert 'search' in out
     assert 'login' in out
     assert 'Total' in out
+
+
+def test_storage_add_result(empty_storage):
+    st = empty_storage
+    assert list(st.iter_trees()) == []
+
+    html = b"""
+    <html>
+        <body>
+            <form>
+                <input type='text' name='q'/>
+                <input type='submit' value='Search'>
+            </form>
+        </body>
+    </html>
+    """
+    st.add_result(html=html, url="http://example.com")
+
+    assert len(list(st.iter_trees())) == 1
+    assert list(st.iter_annotations()) == []
+    assert len(list(st.iter_annotations(drop_na=False))) == 1
+
+    errors = st.check()
+    assert errors == 0

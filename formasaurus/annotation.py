@@ -26,7 +26,7 @@ def annotate_forms(data_folder, url_argument):
     doc = load_html(html, url)
     form_answers = _annotate_forms(storage, doc)
     if form_answers:
-        storage.store_result(html, url, form_answers)
+        storage.add_result(html, url, form_answers)
 
 
 def check_annotated_data(data_folder):

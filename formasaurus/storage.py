@@ -13,8 +13,12 @@ from tqdm import tqdm
 
 from formasaurus.formhash import get_form_hash
 from formasaurus.utils import get_domain, inverse_mapping
-from formasaurus.html import load_html, get_forms
-
+from formasaurus.html import (
+    load_html,
+    get_forms,
+    get_fields_to_annotate,
+    get_field_names,
+)
 
 FormAnnotation = collections.namedtuple('FormAnnotation', 'form type index info key')
 
@@ -61,6 +65,13 @@ class Storage(object):
 
     def __init__(self, folder):
         self.folder = folder
+
+    def initialize(self, config, index=None):
+        """ Create folders and files for a new storage """
+        with open(os.path.join(self.folder, 'config.json'), 'wb') as f:
+            f.write(json.dumps(config).encode('utf8'))
+        self.write_index(index or {})
+        os.mkdir(os.path.join(self.folder, 'html'))
 
     def get_index(self):
         """ Read an index """
@@ -115,17 +126,33 @@ class Storage(object):
         types_inv = inverse_mapping(types)
         return types, types_inv, na_value
 
-    def store_result(self, html, url, form_answers):
+    def add_result(self, html, url, form_answers=None,
+                   visible_html_fields=None):
         """
-        Save the downloaded HTML file and its <form> types.
-        FIXME: it doesn't handle field type annotations
+        Save HTML source and its <form> and form field types.
         """
+        forms = get_forms(load_html(html))
+
+        if form_answers is None:
+            _, _, form_na_value = self.get_form_types()
+            form_answers = [form_na_value for _ in forms]
+        else:
+            assert len(form_answers) == len(forms)
+
+        if visible_html_fields is None:
+            _, _, field_na_value = self.get_form_types()
+            visible_html_fields = [{
+                name: field_na_value
+                for name in get_field_names(get_fields_to_annotate(form))
+            } for form in forms]
+
+        filename = self.generate_filename(url)
+        rel_filename = os.path.relpath(filename, self.folder)
         index = self.get_index()
-        filename = self._generate_filename(url)
-        rel_filename =  os.path.relpath(filename, self.folder)
         index[rel_filename] = {
             "url": url,
             "forms": form_answers,
+            "visible_html_fields": visible_html_fields,
         }
         with open(filename, 'wb') as f:
             f.write(html)
@@ -262,7 +289,7 @@ class Storage(object):
             print("%-5d %-25s (%s)" % (count, type_name, shortcut))
         print("\nTotal form count: %d" % (sum(type_counts.values())))
 
-    def _generate_filename(self, url):
+    def generate_filename(self, url):
         """ Return a name for a new file """
         p = urlparse.urlparse(url)
         idx = 0
