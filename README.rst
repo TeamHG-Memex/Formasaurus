@@ -147,8 +147,8 @@ The easiest way to improve classification quality is to add more training
 examples. Use ``formasaurus add`` command for that.
 
 For more info about the classification model check
-"notebooks/Model.ipynb" IPython notebook (see
-https://github.com/TeamHG-Memex/Formasaurus/blob/master/notebooks/Model.ipynb );
+"notebooks/Form Type Detection.ipynb" IPython notebook (see
+https://github.com/TeamHG-Memex/Formasaurus/blob/master/notebooks/Form%20Type%20Detection.ipynb );
 some experience with machine learning is helpful if you want to improve
 the model.
 
