@@ -245,6 +245,25 @@ class Storage(object):
                       )
                 print(msg)
 
+            if 'visible_html_fields' not in info:
+                errors += 1
+                print("No fields data for entry {!r}".format(fn))
+            else:
+                fields = info['visible_html_fields']
+                if len(fields) != len(doc.xpath('//form')):
+                    errors += 1
+                    print("Invalid number of form field annotations for entry {!r}".format(fn))
+                else:
+                    for idx, (form, fields_info) in enumerate(zip(doc.xpath('//form'), fields)):
+                        elems = get_fields_to_annotate(form)
+                        names = {elem.name for elem in elems}
+                        if names != set(fields_info.keys()):
+                            errors += 1
+                            print("Invalid field names for form #{}, "
+                                  "entry {!r}. Expected: {}, found: {}".format(
+                                idx, fn, names, set(fields_info.keys())
+                            ))
+
         if not errors:
             print("Status: OK")
         else:
