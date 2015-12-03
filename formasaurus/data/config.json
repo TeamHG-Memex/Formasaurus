@@ -36,7 +36,6 @@
             {"short": "Bs", "full": "submit button"},
             {"short": "Bc", "full": "cancel button"},
             {"short": "Br", "full": "reset/clear button"},
-            {"short": "Bl", "full": "social login button"},
 
             {"short": "n1", "full": "first name"},
             {"short": "n3", "full": "last name"},
@@ -106,7 +105,7 @@
             {"short": "OS", "full": "other choice"},
             {"short": "OM", "full": "other multi choice"},
             {"short": "Bo", "full": "other button"},
-
+            {"short": "OU", "full": "other file upload"},
             {"short": "OR", "full": "other read-only"},
 
             {"short": "XX", "full": "NOT ANNOTATED"}
