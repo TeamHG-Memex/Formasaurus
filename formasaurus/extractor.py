@@ -6,7 +6,7 @@ from formasaurus.html import get_forms
 from sklearn.externals import joblib
 
 from formasaurus.storage import Storage
-from formasaurus.model import get_model
+from formasaurus import formtype_model
 from formasaurus.utils import dependencies_string
 
 
@@ -75,7 +75,7 @@ class FormExtractor(object):
         train_size = int(len(y) * train_ratio)
         X, y = X[:train_size], y[:train_size]
 
-        model = get_model()
+        model = formtype_model.get_model()
         print("Training on %d example(s)..." % len(y))
         model.fit(X, y)
         self.model = model

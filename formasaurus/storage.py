@@ -178,12 +178,17 @@ class Storage(object):
             return load_html(f.read(), info["url"])
 
     def get_Xy(self, drop_duplicates=True, verbose=False, leave=False):
-        """ Return X,y suitable for scikit-learn training """
-        X, y, indices, info_records, info_keys = zip(*self.iter_annotations(
+        """
+        Return X, y with formtype training data.
+        """
+        return self.annotations_to_Xy(self.iter_annotations(
             drop_duplicates=drop_duplicates,
             verbose=verbose,
             leave=leave,
         ))
+
+    def annotations_to_Xy(self, annotations):
+        X, y, indices, info_records, info_keys = zip(*annotations)
         return X, y
 
     def check(self):
@@ -223,9 +228,12 @@ class Storage(object):
     def get_fingerprints(self, verbose=True, leave=False):
         """ Return a dict with all fingerprints of the existing forms """
         form_types, form_types_inv, na_value = self.get_form_types()
-        X, y = self.get_Xy(drop_duplicates=True, verbose=verbose, leave=leave)
-        return {self.get_fingerprint(form): tp
-                for form, tp in zip(X, y) if tp != na_value}
+        annotations = self.iter_annotations(verbose=verbose, leave=leave)
+        return {
+            self.get_fingerprint(ann.form): ann.type
+            for ann in annotations
+            if ann.type != na_value
+        }
 
     def get_fingerprint(self, form):
         """
@@ -241,8 +249,8 @@ class Storage(object):
                 chain.from_iterable(v["forms"] for v in index.values())
             )
 
-        X, y = self.get_Xy(drop_duplicates=True, verbose=verbose)
-        return collections.Counter(y)
+        annotations = self.iter_annotations(verbose=verbose)
+        return collections.Counter(ann.type for ann in annotations)
 
     def print_form_type_counts(self):
         """ Print the number annotations of each form types in this storage """

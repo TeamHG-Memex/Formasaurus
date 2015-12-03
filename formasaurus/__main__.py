@@ -50,8 +50,7 @@ from formasaurus.annotation import (
 from formasaurus.extractor import FormExtractor
 from formasaurus.storage import Storage
 from formasaurus.html import load_html
-from formasaurus import evaluation
-from formasaurus.model import get_model
+from formasaurus import evaluation, formtype_model
 
 
 def main():
@@ -106,12 +105,15 @@ def main():
 
         store = Storage(args["--data-folder"])
         form_types, form_types_inv, na_name = store.get_form_types()
-        model = get_model()
-        X, y = store.get_Xy(drop_duplicates=True, verbose=True, leave=True)
+        model = formtype_model.get_model()
+
+        annotations = store.iter_annotations(verbose=True, leave=True)
+        X, y = zip(*((a.form, a.type) for a in annotations))
 
         test_size = int(len(y) * ratio)
         train_size = len(y) - test_size
-        X_train, X_test, y_train, y_test = X[:train_size], X[train_size:], y[:train_size], y[train_size:]
+        X_train, X_test = X[:train_size], X[train_size:]
+        y_train, y_test = y[:train_size], y[train_size:]
 
         evaluation.print_metrics(model, X, y, X_train, X_test, y_train, y_test,
                                  ipython=False, cv=n_folds, short_matrix=True,
