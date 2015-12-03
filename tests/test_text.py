@@ -7,6 +7,7 @@ from formasaurus.text import (
     ngrams,
     token_ngrams,
     tokenize,
+    number_pattern,
 )
 
 
@@ -45,3 +46,13 @@ def test_normalize_whitespaces(text, result):
 
 def test_normalize():
     assert normalize("Hello,\n  world!") == "hello, world!"
+
+
+@pytest.mark.parametrize(["text", "ratio", "result"], [
+    ["foo", 0.3, ""],
+    ["123-234re2", 0.3, "XXX-XXXCCX"],
+    ["123-234re2", 0.9, ""],
+    ["", 0.3, ""],
+])
+def test_number_pattern(text, ratio, result):
+    assert number_pattern(text, ratio) == result

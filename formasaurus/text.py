@@ -36,3 +36,21 @@ def normalize_whitespaces(text):
 def normalize(text):
     """ Default text normalization function """
     return normalize_whitespaces(text.lower())
+
+
+def number_pattern(text, ratio=0.3):
+    """
+    Replace digits with X and letters with C if text contains > ratio
+    of digits; return empty string otherwise.
+    """
+    if not text:
+        return ''
+    digit_ratio = sum(1 for ch in text if ch.isdigit()) / len(text)
+
+    if digit_ratio >= ratio:
+        num_pattern = re.sub('\d', 'X', text)
+        return re.sub('[^X\W]', 'C', num_pattern)
+    else:
+        return ''
+
+
