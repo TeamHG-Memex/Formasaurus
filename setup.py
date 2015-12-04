@@ -21,7 +21,14 @@ setup(
     url='https://github.com/TeamHG-Memex/Formasaurus',
     zip_safe=False,
     packages=['formasaurus'],
-    install_requires=["tqdm >= 2.0", "tldextract", "docopt", "six"],
+    install_requires=[
+        "tqdm >= 2.0",
+        "tldextract",
+        "docopt",
+        "six",
+        "sklearn-crfsuite",
+        "requests",
+    ],
     package_data={
         'formasaurus': ['data/index.json', 'data/html/*.html'],
     },
@@ -44,5 +51,6 @@ setup(
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.3',
         'Programming Language :: Python :: 3.4',
+        'Programming Language :: Python :: 3.5',
     ],
 )
