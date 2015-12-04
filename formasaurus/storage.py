@@ -93,7 +93,7 @@ class Storage(object):
                 ]
 
         with open(os.path.join(self.folder, "index.json"), "wb") as f:
-            data = json.dumps(index, ensure_ascii=False, indent=4)
+            data = json.dumps(index, ensure_ascii=True, indent=4)
             f.write(data.encode('utf8'))
 
     def get_config(self):
