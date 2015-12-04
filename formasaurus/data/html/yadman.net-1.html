@@ -1,0 +1,268 @@
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" >
+<head><title>
+
+</title><meta charset="utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta charset="utf-8" /><meta http-equiv="content-language" content="en-US" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="Robots" content="index, follow, archive" /><meta name="description" content="Reservation Software یادمان ، Pay Online." /><meta name="keywords" content="Ravis Flight Reservation,Hotel Reservation,Tour Reservation یادمان" /><link href="Content/themes/en/bootstrap.min.css" rel="stylesheet" /><link href="Content/LoginDefault.css" rel="stylesheet" /></head>
+<body>
+    <form method="post" action="DefaultEn.aspx" id="form1">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="sA8XQukyONRDbmo2Wa85ZP8J5py3NV7utu/5nPyP3nrFqygZZ+yJLNe6fU31g5LfknKrwxV0uZvucb6a2TemesyfQ7sAHvcrc9sX2FRA8L0CbAHw24IHVqMNC/QmVJv1wYchrvQtVdVpg9fmJAoM5N6Y12Uj1byK4AUaoNudMxrFdEhTpoP8niP+wADFG6lyGBtkr30SCzE8YM4Ts+ntMrEDo9V0qQVpizcSASZ2QQ5JdAVQqOUxNdG5T1Jd9Mu6Tbbz3Xhn8CPDvWzLxpnKtYxMOt1axUZj1PWqbJEb4NP9TiU9OLoBRaTCXypt4wPQ8g6ITmpl4psUp9pzaOaJBLCXqCyS/QbyTi+y60XZJkylSwHjlqcVjGM4JaCQPfbdX9xOwj3PJwxgvHJQIZ49OwXVX4tAp7lZgRS/osbmuI2k9ruvKg9ulr5X02l1w4qI2MumIYziXlBsgCmUwJzWF58knab4k7C5Ysz9y01s/rtFwIYjSG6QvRkWZeDKuRta2WygJVbLRu6xdUeylS86aFFMpYKIssmrwVEYFWBaHuQGQg4+b9jaOFWJMM5zml/3NMXZVGMA11X8NZV5Hgo47gbN1kJSHEwBr6Zvtc4i3KqI2gUzjl5YYcfrVNV4FIV5" />
+
+
+<script src="/ScriptResource.axd?d=NJmAwtEo3Ipnlaxl6CMhvmiwY_4mQaeGV6ULEQYkKhx9F1D-8LRkxmJO0lJP8WXlRu9d1YDU81lTxQ5MX0BPTxM6RtZCgzjiyw86pG7Yo7FM6taD-wUpEYFB637MFfULcRFG0Regyl97bUfp54-SazWcsYXCCroAszV5bLOaHw81&amp;t=7b689585" type="text/javascript"></script>
+<script src="Scripts/Packages/jquery-2.1.0.min.js" type="text/javascript"></script>
+<script src="Scripts/Packages/bootstrap.min.js" type="text/javascript"></script>
+<script src="/bundles/Login?v=nEiAdQawmA1wjdZW3zl-Ae8-1X0lhs1UFFGY_hKKviQ1" type="text/javascript"></script>
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="A589D5C9" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="foiyawIaNNq00AUyOrFp4+RKQkgb6Z+54mGHqkyKx9tysZyu1A7DKft0MKgg+ZAnqskbWgUAQJRS01+f8pndghEXbVzoGTUSM2Yy0bzRBhidGokvRgsKYlbQ8KzIiUFHEEIBMheYauA4yKWaelRObkX78do7qO318/S1xBC4iH+gfaPJOzZpDf2oBOzb70mYMhyIqnkaA9OHkEWrWtIGxnMCi3kajeoRB2nmGe0Y0OmhbqIUOlp+JN7iI6X8Igfgkdre7BTU+ZDbRDe7/0yBq7utKeHg82Yh0wV5pngL7nqKFigXtKPuMnR6pv7tQBLq2tIjCfxksa+B44nhD/8zusaqP+N7NsIW388oQVSsS8owpziHFgkwTcVAciu2EILD1Dtfp7coFxXr/wug6/P3WZyfxS1U0nlUvsxoj8VakVI=" />
+        
+        <div class="container">
+            <header class="hidden-xs">
+                <div class="well well-sm col-md-12 col-sm-12">
+                    <img src="Images/logo.jpg" class="img-thumbnail img-responsive" style="width: 1200px;" />
+                </div>
+            </header>
+            <article class="row">
+                <div id="login" class="col-md-5 col-sm-12">
+                    <div class="panel-group">
+                        <div id="panel-login" class="panel panel-primary">
+                            <div class="panel-heading">
+                                <span class="glyphicon glyphicon-plane"></span>
+                                <span class="glyphicon glyphicon-home"></span>&nbsp&nbsp
+                                <a>Login</a>
+                            </div>
+                            <div class="panel-body" style="padding-top: 40px; padding-bottom: 1px;">
+                                <div class="form-group row">
+                                    <label for="cboVorod" id="lbltype" class="control-label col-lg-3 col-md-3 col-sm-2"></label>
+                                    <div class="col-lg-9 col-md-9 col-sm-10">
+                                        <select name="cboVorod" id="cboVorod" class="form-control">
+	<option value="2">LOGIN</option>
+
+</select>
+                                    </div>
+                                </div>
+                                <div class="form-group row azhans-row" style="display: none;">
+                                    <label for="txtUserName" id="lblusername" class="control-label col-lg-3 col-md-3 col-sm-2">User  ID</label>
+                                    <div class="col-lg-9 col-md-9 col-sm-10">
+                                        <span class="glyphicon glyphicon-user input-feedback"></span>
+                                        <input name="txtUserName" type="text" maxlength="50" id="txtUserName" tabindex="1" class="form-control text-primary" autocomplete="off" />
+                                        &nbsp;
+                                    </div>
+                                </div>
+                                <div class="form-group row azhans-row" style="display: none;">
+                                    <label for="txtPassword" id="lblpassword" class="control-label col-lg-3 col-md-3 col-sm-2">Password</label>
+                                    <div class="col-lg-9 col-md-9 col-sm-10">
+                                        <span class="glyphicon glyphicon-lock input-feedback"></span>
+                                        <input name="txtPassword" type="password" maxlength="50" id="txtPassword" tabindex="2" class="form-control text-primary" autocomplete="off" />
+                                        &nbsp;
+                                    </div>
+                                </div>
+                                <div class="form-group row" style="margin-top: 30px;">
+                                    <div class="col-lg-10 col-lg-push-2 col-md-11 col-md-push-1 col-sm-12 col-sm-push-2">
+                                        <div class="col-lg-1 col-md-1 col-sm-1">
+                                            <input type="image" name="imgChange" id="imgChange" src="Images/Refresh.bmp" />
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-4" style="padding: 0;">
+                                            <img id="imgCaptcha" class="img-thumbnail img-responsive" src="CImage.aspx" height="50" />
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-5" style="padding-top: 10px; padding-left: 0px;">
+                                            <input name="txtCaptcha" type="text" maxlength="5" id="txtCaptcha" tabindex="3" class="form-control input-sm" placeholder="security code" autocomplete="off" style="display: none;" />
+                                            <input name="txtcPublic" type="text" maxlength="5" id="txtcPublic" tabindex="3" class="form-control input-sm" placeholder="security code" autocomplete="off" />
+                                            &nbsp;
+                                            &nbsp;
+                                        </div>
+                                    </div>
+                                </div>
+                                <br />
+                                <div class="checkbox" style="display: none;">
+                                    <label>
+                                        <input id="chkRemember" type="checkbox" name="chkRemember" /><label for="chkRemember">Remember me</label>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="panel-footer">
+                                <div class="row">
+                                    <div class="col-md-12 text-center">
+                                        <span id="lblMessage1" class="text-danger"></span>
+                                        <input type="submit" name="cmdAzhansLogin" value="Login" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;cmdAzhansLogin&quot;, &quot;&quot;, true, &quot;Azhans&quot;, &quot;&quot;, false, false))" id="cmdAzhansLogin" tabindex="4" class="btn btn-primary" style="display: none;" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="tabs" class="col-md-7 col-sm-12 hidden-xs">
+                    <div id="m-tabs" class="panel panel-primary">
+                        <div class="panel-heading">
+                            <ul class="nav nav-tabs">
+                                <li><a href="#about" data-toggle="tab">Contact us</a></li>
+                            </ul>
+                        </div>
+                        <div class="panel-body">
+                            <div class="tab-content">
+                                
+                                <div class="tab-pane fade in active" id="about">
+                                    <address>
+                                        <div class="list-group">
+                                            <span class="list-group-item text-primary"></span>
+                                            <span class="list-group-item"></span>
+                                            <span class="list-group-item"></span>
+                                            <span class="list-group-item"></span>
+                                            <span class="list-group-item"></span>
+                                            <span class="list-group-item"></span>
+                                            <span class="list-group-item"></span>
+                                        </div>
+                                    </address>
+                                </div>
+                                <div class="tab-pane fade" id="packages">
+                                    <div class="row">
+                                        <div class="col-md-4 col-sm-4">
+                                            <input type="image" name="mgPackage1" id="mgPackage1" class="img-thumbnail img-circle" src="Images/package1.jpg" />
+                                            <a id="hpPackage1"></a>
+                                        </div>
+                                        <div class="col-md-4 col-sm-4">
+                                            <input type="image" name="mgPackage2" id="mgPackage2" class="img-thumbnail img-circle" src="Images/package1.jpg" />
+                                            <a id="hpPackage2"></a>
+                                        </div>
+                                        <div class="col-md-4 col-sm-4">
+                                            <input type="image" name="mgPackage3" id="mgPackage3" class="img-thumbnail img-circle" src="Images/package1.jpg" />
+                                            <a id="hpPackage3"></a>
+                                        </div>
+                                    </div>
+                                    <hr />
+                                    <div class="row">
+                                        <div class="col-md-4 col-sm-4">
+                                            <input type="image" name="mgPackage4" id="mgPackage4" class="img-thumbnail img-circle" src="Images/package1.jpg" />
+                                            <a id="hpPackage4"></a>
+                                        </div>
+                                        <div class="col-md-4 col-sm-4">
+                                            <input type="image" name="mgPackage5" id="mgPackage5" class="img-thumbnail img-circle" src="Images/package1.jpg" />
+                                            <a id="hpPackage5"></a>
+                                        </div>
+                                        <div class="col-md-4 col-sm-4">
+                                            <input type="image" name="mgPackage6" id="mgPackage6" class="img-thumbnail img-circle" src="Images/package1.jpg" />
+                                            <a id="hpPackage6"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="download">
+                                    <div class="row">
+                                        <div class="col-md-4 col-sm-4">
+                                            <a href="http://www.teamviewer.com/link/?url=505374&id=684280550" style="text-decoration: none;">
+                                                <img class="img-thumbnail" src="Images/teamviewer.png" alt="دانلود TeamViewer" title="دانلود TeamViewer" />
+                                                <span style="position: absolute; top: 30.5px; left: 60px; display: block; cursor: pointer; color: White; font-family: Arial; font-size: 12px; line-height: 1.2em; font-weight: bold; text-align: center;">Ravis Quick Support
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-4 col-sm-4">
+                                            <a href="http://flashplayer.ir/AdobeDownloadedFiles/AcrobatReader/Reader_11.0.06_English_for_Windows.exe">
+                                                <img class="img-thumbnail" src="Images/get-adobe-reader.gif" alt="دانلود AdbeRdr" title="دانلود AdbeRdr" /></a>
+                                        </div>
+                                    </div>
+                                    <hr />
+                                    <div class="row">
+                                        <div class="col-md-4 col-sm-4">
+                                            <a href="https://download.mozilla.org/?product=firefox-28.0-SSL&os=win&lang=en-US">
+                                                <img class="img-thumbnail" src="Images/firefox.png" alt="دانلود Mozilla" title="دانلود Mozilla" /></a>
+                                        </div>
+                                        <div class="col-md-4 col-sm-4">
+                                            <a href="http://www.google.com/chrome/eula.html?system=true&standalone=1">
+                                                <img class="img-thumbnail" src="Images/get-google-chrome.png" alt="دانلود Chrome" title="دانلود Chrome" /></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="gharardar">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <a id="hpGharardad1" class="btn btn-sm btn-info"></a>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <a id="hpGharardad2" class="btn btn-sm btn-info"></a>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <a id="hpGharardad3" class="btn btn-sm btn-info"></a>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <a id="hpGharardad4" class="btn btn-sm btn-info"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <footer class="row">
+                <div class="col-md-12 col-sm-12">
+                    <div class="pull-right" style="margin-top: -10px;">
+                        <table class="table-condensed">
+                            <tr>
+                                <td>
+                                    <a href="http://www.ravis24.ir" class="btn btn-link">
+                                        <img src="Images/RAVIS.gif" class="img-thumbnail" alt="Ravis" /></a>
+                                </td>
+                                <td>
+                                    <a href="http://www.ravis24.ir" class="btn btn-link">
+                                        <span id="lblFooter" class="text-muted">Develop & Design by RAVIS </span></a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="pull-left">
+                        <span id="lblVersion" class="alert-link text-danger"></span>
+                    </div>
+                </div>
+            </footer>
+            <input type="hidden" id="flag" value="1" />
+            <div class="modal fade" id="BoxMessage" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="alert alert-info" role="alert">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <span id="lblAlert"><b></b></span>
+                        <input type="hidden" name="hdxMessage" id="hdxMessage" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <style type="text/css">
+            #login select {
+                background-color: #ffff99;
+            }
+
+            #login input[type=text],
+            #login input[type=password] {
+                padding-right: 30px;
+            }
+
+            #login .control-label {
+                margin-top: 5px;
+            }
+
+            .input-feedback {
+                position: absolute;
+                right: 25px;
+                top: 10px;
+            }
+
+            .captcha-feedback {
+                position: absolute;
+                right: 25px;
+                top: 19px;
+            }
+        </style>
+        <!--[if lt IE 9]>
+            <script src="Scripts/Packages/html5shiv.js"></script>
+            <script src="Scripts/Packages/respond.min.js"></script>
+            <script src="Scripts/Packages/warning.js"></script>
+        <![endif]-->
+    </form>
+</body>
+</html>
+
+
+
+
+

@@ -1,0 +1,423 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr-FR" lang="fr-FR">
+
+<head>
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+<title>Déposer une petite annonce.</title>
+
+<meta name="Description" content="" />
+<meta name="Keywords" lang="fr" content="" />
+<meta name="Robots" content="all" />
+
+<link href="style/structure.css" type="text/css" rel="stylesheet" />
+<link href="style/style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery.cycle.all.min.js"></script>
+<script type="text/javascript" src="js/scripts.js"></script>
+
+
+<script type="text/javascript">
+function autoCompOff(){
+     var nodeList = document.getElementsByTagName("input");
+     for(item in nodeList) {
+  nodeList[item].setAttribute("autocomplete","off");
+     };
+}
+window.onload = function(){
+if((navigator.userAgent.toLowerCase().match('safari')) || 
+(navigator.userAgent.toLowerCase().match('chrome'))){
+         autoCompOff();
+     }
+};
+</script>
+
+</head>
+
+<body>
+
+<div id="top_header">
+
+	<div id="menu_top_header">
+	
+		<ul id="left_top_header">
+					</ul>
+		
+		<div id="right_top_header">
+			<p id="p_top_header"><span class="vert_1">68310</span> <span class="vert_1">annonces</span> sur tout le site !</p>
+		</div>
+	
+	</div>
+
+</div>
+
+
+<div id="fond_site_1">
+<div id="fond_site_2">
+
+
+<div id="haut_site">
+
+	<div id="haut_site_logo">
+		<p><a href="index.php"><img src="images/logo.png" alt="Déposer une petite annonce." /></a></p>
+	</div>
+	
+	<div id="haut_site_pub">
+			<div id="slideshow">
+		<ul id="slides">
+				
+			<li><a href="http://www.custom-qamis.com/fr/" target="_blank"><img src="http://entremuslims.fr/pub/custom-qamis-entremuslims.png" alt="" /></a></li>
+				<li><a href="http://www.omrapaschere.com/" target="_blank"><img src="http://entremuslims.fr/pub/omra-pas-chere-entremuslims" alt="" /></a></li>
+				<li><a href="http://www.maktaba-tawhid.fr" target="_blank"><img src="http://entremuslims.fr/pub/maktaba-tawhid-2015.png" alt="" /></a></li>			
+		</ul>
+	</div>
+
+	</div>
+	
+</div>
+
+<div id="barre_liens_fond">
+
+	<div id="barre_liens">
+		<ul class="ul_barre">
+			<li class="li_barre2"><a href="index.php"><img src="images/accueil.png" alt="accueil"/></a></li>
+			<li class="li_barre"><strong><a href="ann_search.php">Toutes les annonces</a></strong></li>
+			
+			<li class="li_barre"><a href="ann_type.php?type=2">Toutes les recherches</a></li>
+						<li class="li_barre"><a href="ann_type.php?type=4">Tous les dons</a></li>			<li class="li_barre"><strong><a href="Page-4-Emploi.htm">Emploi</a></strong></li>
+			
+			<li class="li_barre"><strong><a href="ann_search.php?keywords=Tapez+votre+recherche&zip_code=Code+postal+%28ex%3A35000%29&cat=95&x=25&y=11">Restaurants halal</a></strong></li>
+			<li class="li_barre"><strong><a href="http://salafislam.fr" title="Islam" alt="Islam">Islam </a></strong></li>
+		</ul>
+	</div>
+	
+	<div id="barre_liens_depot">
+		<a href="deposer-une-annonce.htm"><img src="images/bouton_depot.png" alt="" /></a>
+	</div>
+	
+</div>
+
+<div id="corps_recherche">
+
+<form method="get" action="ann_search.php">
+	
+	<div id="middle_menu_recherche">
+	<div style="float: left;">
+		
+		<input type="text" class="input_recherche" name="keywords" onfocus="InputCon(this, 'Tapez votre recherche')" onblur="InputCon(this, 'Tapez votre recherche')" value="Tapez votre recherche" />
+		
+				<input type="text" class="input_recherche" name="zip_code" onfocus="InputCon(this, 'Code postal (ex:35000)')" onblur="InputCon(this, 'Code postal (ex:35000)')" value="Code postal (ex:35000)" />
+			  
+	  
+		<select id="dep" name="reg" class="select_recherche" onchange="GetDepartements()"><option value="0">Toutes régions</option><option value="1">Alsace</option><option value="2">Aquitaine</option><option value="3">Auvergne</option><option value="4">Basse-Normandie</option><option value="5">Bourgogne</option><option value="6">Bretagne</option><option value="7">Centre</option><option value="8">Champagne-Ardenne</option><option value="9">Corse</option><option value="10">Franche-Comté</option><option value="11">Haute-Normandie</option><option value="12">Ile-de-France</option><option value="13">Languedoc-Roussillon</option><option value="14">Limousin</option><option value="15">Lorraine</option><option value="16">Midi-Pyrénées</option><option value="17">Nord-Pas-de-Calais</option><option value="18">Pays de la Loire</option><option value="19">Picardie</option><option value="20">Poitou-Charentes</option><option value="21">Provence-Alpes-Côte-d&#039;Azur</option><option value="22">Rhône-Alpes</option><option value="23">Guadeloupe</option><option value="24">Martinique</option><option value="25">Guyane</option><option value="26">Réunion</option><option value="27">- La Belgique</option><option value="28">- Étranger </option></select><span id="get_departements"></span><select id="opt" name="cat" class="select_recherche" onchange="GetOptions()"><option value="0">Toutes catégories</option><option value="&gt;&gt;&gt; Muslim &lt;&lt;&lt;" class="fond_select_categories uppercase">&gt;&gt;&gt; Muslim &lt;&lt;&lt;</option><option value="57">Commerce / Boutique en ligne</option><option value="55">Dattes / Zamzam / nutrition</option><option value="56">Hijama / santé / roqya (exorcisme)</option><option value="53">Livres / Cd.Dvd / Multimédia</option><option value="54">Cosmétique / siwak / parfums</option><option value="92">♥ Iftar Ramadhan ♥</option><option value="95">Restaurants Halal</option><option value="Emploi &amp; aides" class="fond_select_categories uppercase">Emploi &amp; aides</option><option value="61">Cours particulier</option><option value="60">Prestation / Services</option><option value="59">Emploi / stages </option><option value="90">Question / Réponse facebook</option><option value="91">Aide FissabiLah</option><option value="Habillement " class="fond_select_categories uppercase">Habillement </option><option value="46">Vêtement femme</option><option value="47">Vêtement homme</option><option value="48">Vêtement enfant / bébé</option><option value="49">Accessoire montre bijoux</option><option value="Se loger" class="fond_select_categories uppercase">Se loger</option><option value="94">Colocations</option><option value="75">Locaux / bureau / commerce</option><option value="74">Garages</option><option value="73">Terrains</option><option value="72">Location maison / appart</option><option value="71">Vente maison / appart</option><option value="Véhicules" class="fond_select_categories uppercase">Véhicules</option><option value="69">Nautisme</option><option value="67">Accessoires / pièces détachés</option><option value="66">Utilitaires</option><option value="65">Caravaning</option><option value="64">Motos / Scooters / Vélo</option><option value="63">Voitures</option><option value="Loisirs &amp; divertissement" class="fond_select_categories uppercase">Loisirs &amp; divertissement</option><option value="87">Jeux / jouet</option><option value="88">Sport / forme / détente</option><option value="High-Tech" class="fond_select_categories uppercase">High-Tech</option><option value="79">Téléphonie</option><option value="78">Informatiques</option><option value="77">Images &amp; sons</option><option value="Maison" class="fond_select_categories uppercase">Maison</option><option value="83">Mobilier / décoration</option><option value="84">Électromenager </option><option value="85">Brico / jardin</option></select>			
+			</div>
+			
+			<div style="clear: both; float: left;"><p class="p_recherche_unique"><img src="images/fleche_u.png" alt="" />Uniquement dans</p></div>
+			
+			<div id="left_checkbox_recherche">
+			
+				<p class="p_checkbox_recherche">
+					<input type="checkbox" class="input_checkbox" id="titre" name="titre" value="1" onclick="turnImgCheck(this);"  />
+					<img src="images/check1.png" id="img_check_titre" alt="" /> 
+					&nbsp;<label for="titre">Titre</label>
+				
+					<input type="checkbox" class="input_checkbox" id="offres" name="offres" value="1" onclick="turnImgCheck(this);"  />
+					<img src="images/check1.png" id="img_check_offres" alt="" /> 
+					&nbsp;<label for="offres">Offres</label>
+				
+								
+					<input type="checkbox" class="input_checkbox" id="photo" name="photo" value="1" onclick="turnImgCheck(this);"  />
+					<img src="images/check1.png" id="img_check_photo" alt="" /> 
+					&nbsp;<label for="photo">Avec photo</label>
+			
+					<input type="checkbox" class="input_checkbox" id="urgentes" name="urgentes" value="1" onclick="turnImgCheck(this);"  />
+					<img src="images/check1.png" id="img_check_urgentes" alt="" /> 
+					&nbsp;<label for="urgentes">Urgentes</label>
+				
+					<input type="checkbox" class="input_checkbox" id="recherches" name="recherches" value="1" onclick="turnImgCheck(this);"  />
+					<img src="images/check1.png" id="img_check_recherches" alt="" /> 
+					&nbsp;<label for="recherches">Recherches</label>
+				
+										<input type="checkbox" class="input_checkbox" id="dons" name="dons" value="1" onclick="turnImgCheck(this);"  />
+						<img src="images/check1.png" id="img_check_dons" alt="" /> 
+						&nbsp;<label for="dons">Dons</label>
+								
+					<input type="checkbox" class="input_checkbox" id="video" name="video" value="1" onclick="turnImgCheck(this);"  />
+					<img src="images/check1.png" id="img_check_video" alt="" /> 
+					&nbsp;<label for="video">Avec vidéo</label>
+				</p>
+			
+			</div>
+			
+			<input id="submit_recherche" type="image" src="images/bouton_search.png" value="" />
+			
+			<div id="get_options" class="options_cat"></div>			
+	</div>
+	
+</form>
+</div>
+
+<div id="barre_info">
+
+	<div class="bt_info_left"></div>
+	<div class="bt_info_center">
+		<p class="p_barre_info_left">
+			Déposer une petite annonce		</p>
+	</div>
+	<div class="bt_info_right"></div>
+	
+	<div id="bloc_info_right">
+		<p><a class="bt_alert" href="alerte.php">Alerte email</a></p>
+		<p class="p_barre_info_right">
+			<a href="selection.php">Mes annonces sélectionnées (0)</a> 
+		</p>
+	</div>
+
+</div>
+
+<div id="bloc_center">
+<div id="middle_bloc_center_x">
+
+
+<form id="uploadForm" enctype="multipart/form-data" target="uploadFrame" name="upload" method="post" action="upload.php">
+
+	<div id="corps_upload">
+	
+				
+		<div class="form_left">
+			<label for="pho">Photo(s) :</label>
+	    </div>
+		
+		<div class="form_right_small">
+			<input type="file" class="input_file" name="photo" onchange="javascript: document.getElementById('file_name').value = this.value; upload.submit(); AffImg(2);" />
+			<input type="text" id="file_name" class="input_photos" />
+		</div>
+		
+		<div class="f_left"><img src="images/bouton_parcourir.png" alt="" /></div>
+		<div class="f_left_2 info_form">(optionnel) &nbsp; GIF, JPG, JPEG ou PNG</div>
+
+		<div class="form_left"></div>
+		<div class="form_right_info">
+			<strong>Vous pouvez télécharger 7 photo(s) GRATUITEMENT<br />En fonction de la taille de votre image, le téléchargement peut prendre plusieurs minutes.</strong>		</div>
+		
+		<div id="aff_img"></div>
+		
+		<div class="form_left"></div>
+		
+		<iframe id="uploadFrame" width="690" height="1" name="uploadFrame" scrolling="no" onload="calcHeight(); AffImg(1)" frameborder="0" src="upload.php"></iframe>
+	
+	</div>
+
+</form>
+
+	
+<form method="post" action="">
+
+	<div id="corps_form">
+	
+				
+		<input type="hidden" name="ip" value="217.114.230.27" />		
+		<div class="form_left">
+			<label for="form_dep">Région :</label>		</div>
+		
+		<div class="form_right_select"><select id="form_dep" name="reg" class="select_recherche_form" onchange="DisplayDepartements()"><option value="0">Choisissez la région</option><option value="1">Alsace</option><option value="2">Aquitaine</option><option value="3">Auvergne</option><option value="4">Basse-Normandie</option><option value="5">Bourgogne</option><option value="6">Bretagne</option><option value="7">Centre</option><option value="8">Champagne-Ardenne</option><option value="9">Corse</option><option value="10">Franche-Comté</option><option value="11">Haute-Normandie</option><option value="12">Ile-de-France</option><option value="13">Languedoc-Roussillon</option><option value="14">Limousin</option><option value="15">Lorraine</option><option value="16">Midi-Pyrénées</option><option value="17">Nord-Pas-de-Calais</option><option value="18">Pays de la Loire</option><option value="19">Picardie</option><option value="20">Poitou-Charentes</option><option value="21">Provence-Alpes-Côte-d&#039;Azur</option><option value="22">Rhône-Alpes</option><option value="23">Guadeloupe</option><option value="24">Martinique</option><option value="25">Guyane</option><option value="26">Réunion</option><option value="27">- La Belgique</option><option value="28">- Étranger </option></select></div>
+		
+		<div id="display_departements">
+					</div>
+	  
+		<p class="form_left">
+			<label for="options">Catégorie :</label>	    </p>
+		
+		<p class="form_right_select"><select id="options" name="cat" class="select_recherche_form" onchange="DisplayOptions(); DisplayComment(); DisplayPrix()"><option value="0">Choisissez la catégorie</option><option value="0" class="fond_select_categories uppercase">&gt;&gt;&gt; Muslim &lt;&lt;&lt;</option><option value="57">Commerce / Boutique en ligne</option><option value="55">Dattes / Zamzam / nutrition</option><option value="56">Hijama / santé / roqya (exorcisme)</option><option value="53">Livres / Cd.Dvd / Multimédia</option><option value="54">Cosmétique / siwak / parfums</option><option value="92">♥ Iftar Ramadhan ♥</option><option value="95">Restaurants Halal</option><option value="0" class="fond_select_categories uppercase">Emploi &amp; aides</option><option value="61">Cours particulier</option><option value="60">Prestation / Services</option><option value="59">Emploi / stages </option><option value="90">Question / Réponse facebook</option><option value="91">Aide FissabiLah</option><option value="0" class="fond_select_categories uppercase">Habillement </option><option value="46">Vêtement femme</option><option value="47">Vêtement homme</option><option value="48">Vêtement enfant / bébé</option><option value="49">Accessoire montre bijoux</option><option value="0" class="fond_select_categories uppercase">Se loger</option><option value="94">Colocations</option><option value="75">Locaux / bureau / commerce</option><option value="74">Garages</option><option value="73">Terrains</option><option value="72">Location maison / appart</option><option value="71">Vente maison / appart</option><option value="0" class="fond_select_categories uppercase">Véhicules</option><option value="69">Nautisme</option><option value="67">Accessoires / pièces détachés</option><option value="66">Utilitaires</option><option value="65">Caravaning</option><option value="64">Motos / Scooters / Vélo</option><option value="63">Voitures</option><option value="0" class="fond_select_categories uppercase">Loisirs &amp; divertissement</option><option value="87">Jeux / jouet</option><option value="88">Sport / forme / détente</option><option value="0" class="fond_select_categories uppercase">High-Tech</option><option value="79">Téléphonie</option><option value="78">Informatiques</option><option value="77">Images &amp; sons</option><option value="0" class="fond_select_categories uppercase">Maison</option><option value="83">Mobilier / décoration</option><option value="84">Électromenager </option><option value="85">Brico / jardin</option></select></p>
+		
+						
+		<div id="options_form">
+					</div>
+		
+				
+				<p class="form_left">Vous êtes :</p>
+		
+		<div class="conteneurRadio" id="conteneurRadio1">
+			<p class="form_right">
+				<input type="radio" id="sta1" name="sta" checked="checked" onclick="turnImgRadio(this, 1); GetPro(1, '', '', '0');" value="1" />
+				<img src="images/radio2.png" id="img_radio_sta1" alt="" />
+				<label for="sta1">Particulier</label>&nbsp;
+				
+									<input type="radio" id="sta2" name="sta"  onclick="turnImgRadio(this, 1);  GetPro(2, 'Nom de votre entreprise', 'N° Entreprise', '1');" value="2" />
+					<img src="images/radio1.png" id="img_radio_sta2" alt="" />
+					<label for="sta2">Professionnel</label>
+							</p>
+		</div>
+				
+				<div id="get_pro">
+					</div>
+		
+				
+					<p class="form_left">
+				<label for="cod">Votre code postal :</label>			</p>
+			<p class="form_right_select">
+				<input type="text" id="cod" class="small_input" name="cod" value="" /> &nbsp;<span class="info_form">(ex : 75000)</span>
+			</p>
+				
+					<p class="form_left">
+				<label for="vil">Votre ville :</label>			</p>
+			
+			<p class="form_right_select">
+				<input type="text" id="vil" class="av_input" name="vil" value="" />
+			</p>
+				
+		<p class="form_left">Type d'annonce :</p>
+		
+		<div class="conteneurRadio" id="conteneurRadio2">
+		
+			<p class="form_right">
+				<input name="typ" id="typ1" onclick="turnImgRadio(this, 2);" value="1" type="radio" checked /><label for="typ1">
+				<img src="images/radio2.png" id="img_radio_typ1" alt="" />
+				Offre</label>&nbsp;
+				
+				<input name="typ" id="typ2" onclick="turnImgRadio(this, 2);" value="2" type="radio"  />
+				<img src="images/radio1.png" id="img_radio_typ2" alt="" />
+				<label for="typ2">Recherche</label>&nbsp;
+				
+									<input name="typ" id="typ4" onclick="turnImgRadio(this, 2);" value="4" type="radio"  />
+					<img src="images/radio1.png" id="img_radio_typ4" alt="" />
+					<label for="typ4">Don</label>&nbsp;
+							</p>
+		
+		</div>
+		
+		<p class="form_left">
+			<label for="nom">Votre nom :</label>	    </p>
+		
+		<p class="form_right_select">
+			<input type="text" id="nom" class="av_input" name="nom" value="" />
+		</p>
+		
+					<p class="form_left">
+				<label for="ema">Votre email :</label>			</p>
+			<p class="form_right_select">
+				<input type="text" id="ema" class="av_input" name="ema" value="" />
+			</p>
+			
+			<p class="form_left">
+				<label for="ema2">Confirmer votre email :</label>			</p>
+			<p class="form_right_select">
+				<input type="text" id="ema2" class="av_input" name="ema2" value="" />
+			</p>
+				
+		<p class="form_left_info"></p>
+		
+		<p class="form_right_info">Votre email ne sera pas visible par les utilisateurs du site.<br />
+									Ils pourront vous contacter en utilisant un formulaire prévu à cet effet.</p>
+		
+		
+				
+		<p class="form_left">
+			<label for="tit">Titre de votre annonce :</label>	    </p>
+		
+		<p class="form_right_select">
+			<input type="text" id="tit" class="long_input" name="tit" value="" />
+		</p>
+		
+		<div id="commentaire">
+				</div>
+		
+		<p class="form_left">
+			<label for="ann">Votre annonce :</label>	    </p>
+		
+		<p class="form_right_textarea">
+			<textarea id="ann" class="textarea" cols="60" rows="10" name="ann"></textarea>
+		</p>
+		
+						<p class="form_left">
+					<label for="youtube">Vidéo Youtube :</label>				</p>
+				<p class="form_right_select">
+					<input type="text" id="youtube" class="long_input" name="youtube" value="" /> &nbsp;<span class="info_form">(facultatif)</span>
+				</p>
+				
+				<p class="form_left">
+					<label for="dailymotion">Ou vidéo Dailymotion :</label>				</p>
+				<p class="form_right_select">
+					<input type="text" id="dailymotion" class="long_input" name="dailymotion" value="" /> &nbsp;<span class="info_form">(facultatif)</span>
+				</p>
+					
+					<p class="form_left">
+				<label for="pri">Prix :</label>			</p>
+			
+			<p class="form_right_select">
+				<input type="text" id="pri" class="small_input" name="pri" value="" /> &nbsp;<span class="info_form">€ &nbsp;(optionnel)</span>
+			</p>
+				
+					<p class="form_left">
+				<label for="pas">Mot de passe :</label>			</p>
+			
+			<p class="form_right_select">
+				<input type="password" id="pas" class="small_input" name="pas" value="" />
+			</p>
+			
+			<p class="form_left">
+				<label for="pas2">Confirmation du mot de passe :</label>			</p>
+			
+			<p class="form_right_select">
+				<input type="password" id="pas2" class="small_input" name="pas2" value="" />
+			</p>
+				
+				
+				
+		<p class="form_left"></p>
+		
+		<p class="form_right_select">
+			<input type="checkbox" class="input_checkbox" id="cgu" name="cgu" value="1" onclick="turnImgCheck(this)"  />
+			<img src="images/check1.png" id="img_check_cgu" alt="" />
+			&nbsp;<span class="info_form"><label for="cgu">J'ai lu et j'accepte les <a href="Page-3-Infos-legales-et-CGU.htm" class="vert bold" onclick="window.open(this.href); return false;">Conditions Générales d'Utilisation</a> ainsi que de recevoir la newsletter.</label></span> 
+		</p>
+		
+		<p class="form_left"></p>
+		<p class="form_right_option"><input type="image" src="images/bouton_sent_annonce.png" value="" /></p>
+</div>
+
+</form>
+
+</div>
+</div>
+
+<div id="bloc_footer_1">
+<div id="bloc_footer_2">
+
+	<div id="left_footer">
+		<p id="p_footer_left">
+			Copyright © <a href="http://entremuslims.fr" title="Petites annonces musulmane entre musulman muslims emploi ">EntreMuslims.fr </a>
+		</p>
+	</div>
+	
+	<div id="right_footer">
+		<p id="p_footer_right">
+			
+		
+			
+			<a href="Page-1-faq.htm">Faq</a> - <a href="Page-3-cgu.htm">Mention légale - CGU </a> - <a href="contact.htm">Contact</a> 
+		</p>
+	</div>
+	
+</div>
+</div>
+
+</div>
+</div>
+
+<script type="text/javascript" src="js/functions_js.js"></script>
+
+<script type="text/javascript">
+  window.___gcfg = {lang: 'fr'};
+
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/platform.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+
+</body>
+</html>
+

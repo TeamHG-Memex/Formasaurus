@@ -1,0 +1,772 @@
+
+<!DOCTYPE html>
+
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+
+    <head>
+
+
+        <link rel="stylesheet" href="/assets/css/map.css" type="text/css">
+        <meta charset="utf-8">
+        <title>Start Romagna</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+            <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        
+        <meta http-equiv="imagetoolbar" content="no">
+        <meta name="author" content="">
+
+        <!-- SEO -->
+        <meta name="description" content="Start, la nuova grande realtà del trasporto pubblico in Romagna.">
+        <meta name="robots" content="index,follow">
+        <meta name="google-site-verification" content="utmUlLoc8cubJR7Z3ttggNpYtt2IAT3PuJzI4CppsUE">
+        <meta name="msvalidate.01" content="7AEBBDF3D4A936E485791C7A643414AD">
+        <meta name="sitemap" content="http://www.startromagna.it/sitemap.xml">
+
+        <!-- iOS -->
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <!-- fav and touch icons -->
+        <link rel="shortcut icon" href="/assets/img/favicon.ico">
+        <link rel="apple-touch-icon-precomposed" href="/assets/img/touch-icon-iphone-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/assets/img/touch-icon-ipad-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/assets/img/touch-icon-iphone4-precomposed.png">
+        <link rel="apple-touch-startup-image" href="/assets/imgassets/img/splash.png">
+
+        <!-- Animation Library, animate.css -->
+        <link rel="stylesheet" href="/assets/css/animate.css" type="text/css">
+
+        <!-- CSS for plugins: fancybox, reveal, tiptip, flexslider -->
+        <link rel="stylesheet" href="/assets/js/fancybox/jquery.fancybox.css" type="text/css">
+        <link rel="stylesheet" href="/assets/js/fancybox/helpers/jquery.fancybox-thumbs.css" type="text/css">
+        <link rel="stylesheet" href="/assets/js/tiptip/tipTip.custom.css" type="text/css">
+        <link rel="stylesheet" href="/assets/js/flexslider/flexslider.css" type="text/css">
+        <link rel="stylesheet" href="/assets/js/chosen/chosen.css" type="text/css">
+
+
+        <!-- style -->
+        <link href="/assets/css/style.css" rel="stylesheet" />
+
+        <!-- modernizr -->
+        <script src="/assets/js/modernizr-2.5.3-custom.js"></script>
+
+        <!-- jQuery  -->
+        <!-- script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script -->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        <script src="/assets/js/jquery.easing-1.3.min.js"></script>
+        <script type="text/javascript">
+            jQuery(document).ready(function(){
+                
+                var accessibility = (function(){
+                    jQuery('a.accessibilita').bind('click',function(e){
+                        e.preventDefault();
+                        var mode = jQuery(this).prop('id');
+                        jQuery.ajax({
+                            url: '/',
+                            data: { accessibility : {mode:mode}},
+                            type: 'POST',
+                            dataType: 'json',
+                            success: function(data){
+
+                                window.location.reload();
+                            }
+                        });
+                    });
+
+                    
+                });
+                
+                accessibility();
+                
+                
+            });
+            // Global variables
+            var DOM_BASE_URL = '/';
+            
+            var win = $(window),
+                    winWidth = win.width(),
+                    homeUrl = '';
+
+/**
+ * plugin per richiamare la traduzione dei messaggi via ajax
+ * @param {jQuery} $
+ * @param {string} action_url
+ * @returns {undefined}
+ */
+(function($,action_url){
+    var Dictionary = function () {
+       return{
+           "translate": function(placeholder, callback) {
+               var ph = [].concat(placeholder);
+               $.ajax({
+                   url: action_url, 
+                   type: "GET",
+                   dataType: 'json',
+                   data :{ g: 'dictionary', p: ph, }
+               }).done(function (res) {
+                       if(typeof res.dictionary != 'undefined') callback(res.dictionary);
+               });
+           }
+       }
+   };
+   $.Dictionary = new Dictionary();
+})(jQuery,DOM_BASE_URL+"ajax.php" );
+  
+</script>
+
+        <!-- Conditional loading Scripts -->
+
+        <!-- ie fixes -->
+        <!--[if lte IE 9]>
+            <style type="text/css">
+            html{font-size: 75%;}
+            </style>
+        <![endif]-->
+        <!--[if (gte IE 6)&(lte IE 8)]>
+            <script type="text/javascript" src="/assets/js/assets/js/selectivizr-min.js"></script>
+            <style type="text/css">
+            .home [data-icon]:before{font-size:2em; margin-top:-0.1em;}
+            [data-icon]:before{font-size:1.2em; margin-top:0}
+            article.main.card.ten.columns.pull-two{float:right !important;}
+                    
+            </style>
+        <![endif]-->
+
+
+
+
+        <script type="text/javascript">
+            function SimulaLink()
+            {
+                document.getElementById("MyDIV").innerHTML = "pagina.html";
+            }
+        </script>
+
+
+        <style>a.accessibilita{ display:inline-block !important; text-transform: none !important}</style>
+
+
+    </head>
+
+    <body class="contatti red">
+        <nav class="secondary" role="navigation">
+
+            <ul class="left">
+
+                <li class="lang-select">
+                    <a href="#" class="flag it">
+                        <span class="chosen">
+Italiano 
+                        </span>
+                    </a>
+                    <ul style="width:120px">
+                        <li class="active"><a href="?lang=it" class="flag it">Italiano</a></li>
+                        <li><a href="?lang=en" class="flag en">English</a></li>
+                      <!--  <li><a href="?lang=ru" class="flag ru">русский</a></li>-->
+                    </ul>
+                </li>
+
+                <li class="area-fornitori-link">
+                    <a class="nav-mobile" href="/fornitori/" data-icon="t">
+                        Area Fornitori
+                    </a>
+                    <ul style="width:280px">
+<li><a href="/fornitori/regolamenti/" data-icon="l">Regolamenti</a></li><li><a href="/fornitori/modulistica/" data-icon="&">Modulistica</a></li><li><a href="/fornitori/bandi-di-gara/" data-icon="?">Bandi di Gara</a></li><li><a href="/fornitori/albo-fornitori/" data-icon="ó">Albo Fornitori</a></li><li><a href="/fornitori/pubblicazioni-legge-1902012/" data-icon="7">Pubblicazioni legge 190/2012</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <ul class="right">
+                
+                <li style="width:auto">
+                    <h6 style="display:inline-block">Accessibilità</h6>
+                    <strong href="#normale" class="accessibilita" id="normal" title="normale">normale</strong> <a href="#alto contrasto" class="accessibilita" id="bw" title="alto contrasto">alto contrasto</a> <a href="#solo testo in b/n" class="accessibilita" id="plain" title="solo testo in b/n">solo testo in b/n</a> <a href="#solo testo n/b" class="accessibilita" id="bwplain" title="solo testo n/b">solo testo n/b</a> 
+                </li>
+                <li class="searchform" data-mobile-name="cerca">
+                    <form class="searchform notext" role="search" data-icon="ô" action="/search.php">
+                        <label for="search" class="text">Cerca nel sito</label>
+                        <input id="search" class="radius-s" type="text" name="s" placeholder="Cerca nel sito" value="" />
+                    </form>
+                </li>
+                <li class="visita-la-romagna-link">
+
+				<a class="nav-mobile" href="/visita-la-romagna/" data-icon="$">Visita la Romagna</a><ul><li><a href="/visita-la-romagna/ravenna/">Ravenna</a></li><li><a href="/visita-la-romagna/forli-cesena/">Forlì-Cesena</a></li><li><a href="/visita-la-romagna/rimini/">Rimini</a></li>
+            </ul>
+        </li>
+
+        <li class="loginform">
+            <!-- <a id="loginform-button" href="#" data-icon="+" data-reveal-cst-id="loginform" data-reveal-cst-animation="fade"> -->
+                <a href="#loginform" data-icon="+" data-toggle="fancybox">
+                    <span>Start&amp;You</span>
+                </a>
+                    </li>
+
+        <li>
+            <a href="http://www.facebook.com/pages/Start-Romagna-pagina-ufficiale/278624132189546" class="facebook" target="_blank">
+                <img src="/assets/img/facebook-icon.png" alt="Pagina Facebook" />
+            </a>
+        </li>
+
+    </ul>
+
+</nav> <!-- /nav.secondary -->
+
+<header id="header" class="container" role="banner">
+    <div class="row">
+
+        <div id="logo">
+            <a href="/"><h1>Start Romagna</h1></a>
+        </div>
+
+        <nav class="primary">
+            <ul id="main-nav" role="navigation">
+
+<li id="sez_1"  class="blue"><a href="/chi-siamo/il-gruppo-start/">Chi siamo</a><ul class="thick"><li><a href="/chi-siamo/il-gruppo-start/" data-icon="J">Il Gruppo Start</a></li><li><a href="/chi-siamo/comunicazione/" data-icon="M">Comunicazione</a></li><li><a href="/chi-siamo/i-mezzi/" data-icon="E">I Mezzi</a></li><li><a href="/chi-siamo/progetto-mhybus/" data-icon="L">Progetto MHyBus</a></li><li><a href="/chi-siamo/la-societa-mete-spa/" data-icon=";">La Società Mete SpA</a></li><li><a href="/chi-siamo/il-consorzio-atg/" data-icon="W">Il Consorzio ATG</a></li><li><a href="/chi-siamo/il-consorzio-team/" data-icon="W">Il Consorzio TEAM</a></li><li><a href="/chi-siamo/start-away/" data-icon="à">Start Away®</a></li></ul></li><li id="sez_2"  class="orange"><a href="/servizi/orari-e-percorsi/">Servizi</a><ul class="thick"><li><a href="/servizi/orari-e-percorsi/" data-icon="N">Orari e Percorsi</a></li><li><a href="/servizi/mappe-citta/" data-icon="1">Mappe città</a></li><li><a href="/servizi/google-transit/" data-icon="3">Google Transit</a></li><li><a href="/servizi/servizi-speciali/" data-icon="8">Servizi Speciali</a></li><li><a href="/servizi/servizi-scuolabus/" data-icon="L">Servizi Scuolabus</a></li><li><a href="/servizi/traghetto/" data-icon="Ü">Traghetto</a></li><li><a href="/servizi/parcheggi/" data-icon="ì">Parcheggi</a></li><li><a href="/servizi/noleggio-pullman/" data-icon="à">Noleggio Pullman</a></li><li><a href="/servizi/info-bus-e-news/" data-icon="e">Info Bus e News</a></li><li><a href="/servizi/area-riservata/" data-icon="U">Area Riservata</a></li></ul></li><li id="sez_3"  class="green"><a href="/titoli-e-tariffe/promozioni/">Titoli e tariffe</a><ul class="thick"><li><a href="/titoli-e-tariffe/promozioni/" data-icon="7">Promozioni</a></li><li><a href="/titoli-e-tariffe/la-tariffazione-a-zone/" data-icon="n">La tariffazione a zone</a></li><li><a href="/titoli-e-tariffe/biglietti/" data-icon="p">Biglietti</a></li><li><a href="/titoli-e-tariffe/biglietti-elettronici/" data-icon="z">Biglietti elettronici</a></li><li><a href="/titoli-e-tariffe/abbonamenti/" data-icon=".">Abbonamenti</a></li><li><a href="/titoli-e-tariffe/scuolacard/" data-icon="F">Scuolacard</a></li><li><a href="/titoli-e-tariffe/abbonamenti-agevolati/" data-icon="6">Abbonamenti agevolati</a></li><li><a href="/titoli-e-tariffe/acquisto-e-rinnovi/" data-icon="h">Acquisto e Rinnovi</a></li><li><a href="/titoli-e-tariffe/trova-zona/" data-icon="4">Trova Zona</a></li><li><a href="/titoli-e-tariffe/punti-vendita/" data-icon="0">Punti Vendita</a></li><li><a href="/titoli-e-tariffe/regole-di-viaggio/" data-icon="x">Regole di viaggio</a></li></ul></li><li id="sez_4"  class="red"><a href="/contatti/dove-siamo/">Contatti</a><ul class="thick"><li><a href="/contatti/dove-siamo/" data-icon="3">Dove siamo</a></li><li><a href="/contatti/richiedi-informazioni/" data-icon="_">Richiedi Informazioni</a></li><li><a href="/contatti/fai-una-segnalazione/" data-icon="#">Fai una Segnalazione</a></li><li><a href="/contatti/oggetti-smarriti/" data-icon="™">Oggetti smarriti</a></li><li><a href="/contatti/ricorso-a-sanzioni/" data-icon="ò">Ricorso a Sanzioni</a></li><li><a href="/contatti/lavora-con-noi/" data-icon="-">Lavora con Noi</a></li><li><a href="/contatti/privacy/" data-icon="A">Privacy</a></li></ul></li><li id="sez_51"  class="blue"><a href="/pagina.php?id=52">Società Trasparente</a><ul class="thick"><li><a href="/pagina.php?id=52" data-icon="W">Disposizioni generali</a></li><li><a href="/pagina.php?id=64" data-icon="W">Responsabilità d&#8217;Impresa</a></li><li><a href="/pagina.php?id=54" data-icon="W">C.d.A.</a></li><li><a href="/pagina.php?id=53" data-icon="W">Organizzazione</a></li><li><a href="/pagina.php?id=55" data-icon="W">Consulenti Collaboratori</a></li><li><a href="/pagina.php?id=56" data-icon="W">Personale</a></li><li><a href="/pagina.php?id=57" data-icon="W">Bandi di concorso</a></li><li><a href="/pagina.php?id=65" data-icon="W">Qualità e Certificazioni</a></li><li><a href="/pagina.php?id=59" data-icon="W">Enti soci e partecipate</a></li><li><a href="/pagina.php?id=60" data-icon="W">Bandi di gara e contratti</a></li><li><a href="/pagina.php?id=61" data-icon="W">Bilanci</a></li><li><a href="/pagina.php?id=62" data-icon="W">Beni immobili</a></li><li><a href="/pagina.php?id=63" data-icon="W">Servizi erogati</a></li></ul></li>
+            </ul>
+        </nav>
+
+    </div>
+</header> <!-- /header -->
+<div id="banner">
+    <div class="container">
+        <div class="row">
+            <h1>Fai una Segnalazione</h1>
+            <span class="page-icon" data-icon="#"></span>
+        </div>
+    </div>					
+</div> <!-- /banner -->
+
+
+<section id="content" role="main" class="fai-una-segnalazione">
+    <div class="container">
+        <div class="row">
+
+<nav class="three columns push-nine side-menu" role="navigation">
+
+    <ul>
+<li ><a href="/contatti/dove-siamo/" data-icon="3">Dove siamo</a></li><li ><a href="/contatti/richiedi-informazioni/" data-icon="_">Richiedi Informazioni</a></li><li class="current"><a href="/contatti/fai-una-segnalazione/" data-icon="#">Fai una Segnalazione</a></li><li ><a href="/contatti/oggetti-smarriti/" data-icon="™">Oggetti smarriti</a></li><li ><a href="/contatti/ricorso-a-sanzioni/" data-icon="ò">Ricorso a Sanzioni</a></li><li ><a href="/contatti/lavora-con-noi/" data-icon="-">Lavora con Noi</a></li><li ><a href="/contatti/privacy/" data-icon="A">Privacy</a></li>    </ul>
+
+</nav>
+
+<article class="main card nine columns pull-three">
+
+    <div class="breadcrumbs">
+        <ul>
+            <li class="home"><a href="/index.php" data-icon="ï"></a><span class="divider">/</span></li>
+            <li>Contatti<span class="divider">/</span></li>
+            <li class="current">Fai una Segnalazione</li>
+        </ul>
+    </div>
+
+
+    <h1 class="kicker">Per noi, i reclami e i suggerimenti rappresentano uno strumento importante per conoscere meglio i nostri clienti e la percezione che hanno dei servizi erogati.</h1>
+
+    <p>I reclami e i suggerimenti esprimono infatti le motivazioni di insoddisfazione dei clienti e permettono di <strong>contribuire a migliorare il servizio</strong> partendo dalla soluzione delle problematiche segnalate o dai suggerimenti degli utenti.</p>
+
+    <p>Ad ogni reclamo viene attivata una procedura di verifica delle criticità indicate. A questo fine, è necessario compilare il modulo sottostante con le proprie generalità complete di recapito e con ogni particolare utile ad identificare con precisione i termini e le circostanze dell’accaduto (data dell’evento, ora, luogo, linea, ecc.).</p>
+
+    <p>Start Romagna si impegna a fornire al cliente una risposta scritta (lettera, SMS, e-mail) o telefonica nei tempi previsti dalla <a href="/titoli-e-tariffe/regole-di-viaggio/#regole-di-viaggio" target="_blank">Carta della Mobilità</a> del bacino di competenza. Per fare una segnalazione scritta o telefonica, è possibile rivolgersi alla <a href="#contatti-segnalazioni">sede ufficiale del proprio bacino</a>.</p>
+
+    <p><small class="txt-red">I campi contrassegnati con * sono obbligatori.</small></p>
+
+    <p><strong>Nel caso non si volesse procedere alla compilazione del modulo online, è possibile scaricare il modulo dedicato al reclamo o al suggerimento <a href="/downloads/start_modulo_reclamo.pdf" target="_blank">qui</a>.</strong></p>
+
+    <div class="form-wrap inner">
+
+        <form action="" id="form-contatti" name="richiedi-informazioni" method="post" enctype="multipart/form-data">
+
+            <fieldset id="report-type">
+
+                <div class="row">
+                    <div class="twelve columns">
+                        <label class="floatleft">Vorrei</label>
+                        <div class="radio-row">
+                            <input id="tab-1" name="report-type" type="radio" value="reclamo" checked="checked">
+                            <label for="tab-1">Fare un reclamo</label>
+                            <input id="tab-2" name="report-type" type="radio" value="suggerimento">
+                            <label for="tab-2">Dare un suggerimento</label>
+                        </div>
+                    </div>
+                </div>
+
+            </fieldset>
+
+            <fieldset id="user-data">
+
+                <h4 class="chapter marginbottom-half"><span class="title">I tuoi dati</span></h4>
+
+                <div class="row">
+                    <div class="six columns">
+                        <label for="firstname">Nome<span class="req">*</span></label>
+                        <div>
+                            <input id="firstname" name="firstname" type="text" value="" maxlength="255" tabindex="1" validation="required">
+                        </div>
+                    </div>
+                    <div class="six columns">
+                        <label for="lastname">
+                            Cognome
+                            <span class="req">*</span>
+                        </label>
+                        <div>
+                            <input id="lastname" name="lastname" type="text" value="" maxlength="255" tabindex="2" validation="required">									
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <label for="email">Email<span class="req">*</span></label>
+                    <div>
+                        <input id="email" name="email" type="email" value="" maxlength="255" tabindex="3" validation="email required">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="ten columns">
+                        <label for="city">Residente a<span class="req">*</span></label>
+                        <div>
+                            <input id="city" name="city" type="text" value="" maxlength="255" tabindex="4" validation="required">
+                        </div>
+                    </div>
+                    <div class="two columns">
+                        <label for="province">Provincia<span class="req">*</span></label>
+                        <div>
+                            <input id="province" name="province" type="text" value="" maxlength="255" tabindex="5" validation="required">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="eight columns">
+                        <label for="phone">Telefono / Cellulare</label>
+                        <div>
+                            <input id="phone" name="phone" tabindex="6" validation="phone" type="tel" maxlength="255" value="" >
+                        </div>
+                    </div>
+                    <div class="four columns">
+                        <div>
+                            <input id="phone-sms" name="phone-sms" type="checkbox" class="checkbox">
+                            <span class="accept">Acconsento a essere contattato tramite SMS</span>
+                        </div>
+                    </div>
+                </div>
+
+            </fieldset>
+
+            <fieldset id="reclamo">
+
+                <h4 class="chapter marginbottom-half"><span class="title">Dati Relativi al disservizio</span></h4>
+
+                <div class="row">
+                    <div class="four columns">
+                        <label for="date">Data<span class="req">*</span></label>
+                        <div>
+                            <input id="date" name="date" type="date" value="" tabindex="7">
+                        </div>
+                    </div>
+                    <div class="three columns">
+                        <label for="time">Ora<span class="req">*</span></label>
+                        <div>
+                            <input id="time" name="time" type="time" value="" tabindex="8">
+                        </div>
+                    </div>
+                    <div class="five columns">
+                        <label for="locality">Località<span class="req">*</span></label>
+                        <div>
+                            <input id="locality" name="locality" type="text" value="" tabindex="9">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="three columns">
+                        <label for="stop-number">Fermata n°<span class="req">*</span></label>
+                        <div>
+                            <input id="stop-number" name="stop-number" type="text" value="" tabindex="10">
+                        </div>
+                    </div>
+                    <div class="three columns">
+                        <label for="line-number">Linea n°<span class="req">*</span></label>
+                        <div>
+                            <input id="line-number" name="line-number" type="text" value="" tabindex="11">
+                        </div>
+                    </div>
+                    <div class="six columns">
+                        <label for="direction">Direzione<span class="req">*</span></label>
+                        <div>
+                            <input id="direction" name="direction" type="text" value="" tabindex="12">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="five columns">
+                        <label for="plate">Targa / Matricola Bus</label>
+                        <div>
+                            <input id="plate" name="plate" type="text" value="" tabindex="13">
+                        </div>
+                    </div>
+                    <div class="seven columns">
+                        <label for="driver">Autista</label>
+                        <div>
+                            <input id="driver" name="driver" type="text" value="" tabindex="14">
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <label for="complaintID">Tipologia del disservizio<span class="req">*</span></label>
+                    <div>
+                        <select id="complaintID" name="complaintID" class="chzn-select" data-placeholder="- scegli la tipologia">
+                            <option value=""></option>
+                            <option value="1">Ritardo di linea (specificare il numero di minuti nella descrizione)</option><option value="
+2">Anticipo di linea (specificare il numero di minuti nella descrizione)</option><option value="
+3">Corsa non effettuata</option><option value="
+4">Corsa non completata</option><option value="
+5">Fermata non effettuata</option><option value="
+6">Percorso errato</option><option value="
+7">Mancata coincidenza</option><option value="
+8">Affollamento - passeggero a terra</option><option value="
+9">Affollamento - passeggero a bordo</option><option value="
+10">Disagio durante il viaggio</option><option value="
+11">Comportamento del personale</option><option value="
+12">Servizi per disabili</option><option value="
+13">Informazioni alla clientela</option><option value="
+14">Sicurezza a bordo</option><option value="
+15">Tariffe - Titoli di viaggio</option><option value="
+16">Malfunzionamento attrezzatura di bordo</option><option value="
+17">Fermata - Pensilina</option><option value="
+18">Difettosità autobus</option><option value="
+19">Pulizia dei mezzi</option><option value="
+20">Inquinamento acustico e/o atmosferico</option><option value="
+21">Altro (specificare nella descrizione)</option>                        </select>
+                    </div>
+                </div>
+
+            </fieldset>
+
+            <fieldset id="user-message">
+
+                <div>
+                    <label for="message">Descrizione del disservizio<span class="req">*</span></label>
+                    <div>
+                        <textarea placeholder="Descrizione del disservizio..." id="message" name="message" rows="4" cols="50" tabindex="15" validation="required"></textarea>
+                    </div>
+                </div>
+
+            </fieldset>
+
+            <fieldset id="attachments">
+                <h4 class="chapter marginbottom-half"><span class="title">Allega documentazione</span></h4>
+
+                <div class="row">
+
+                    <div class="six columns">
+                        <div>
+                            <input id="allegato_1" name="allegato_1" type="file" value="" />
+                        </div>
+                        <small>Formato DOC, PDF, JPG o PNG, max. 2MB</small>
+                    </div>
+
+                    <div class="six columns">
+                        <div>
+                            <input id="allegato_2" name="allegato_2" type="file" value="" />
+                        </div>
+                        <small>Formato DOC, PDF, JPG o PNG, max. 2MB</small>
+                    </div>
+
+                </div>
+            </fieldset>
+
+            <fieldset id="privacy-accept">
+
+                <h4 class="chapter"><span class="title">Informativa e consenso al trattamento dei dati personali</span></h4>
+
+                <div>
+                    <p><strong>Start Romagna</strong>, in qualità di titolare dei suoi dati personali, la informa     che  ai sensi dell’art. 13 del D. Lgs. 196 del 30/06/2003 i suoi dati saranno trattati nel     rispetto della normativa citata. Lei gode dei diritti previsti dal citato decreto e le vengono     riconosciuti i diritti di cui all’art. 7 che potranno essere esercitati rivolgendosi al Titolare o al Responsabile del trattamento dei dati di Start Romagna.</p>
+                    <input id="privacy" name="privacy-accept" type="checkbox" validation="checkrequired" class="checkbox" val="accepted">
+                    <label for="privacy" class="accept">Acconsento al trattamento dei miei dati<span class="req">*</span></label>
+                </div>
+
+            </fieldset>
+
+            <div class="buttons">
+                <div>
+                    <input id="submit" name="submit" class="huge red btn" type="submit" value="Inoltra Reclamo">
+                </div>
+            </div>
+
+            <div class="hidden">
+                <input type="text" id="honeycomb" name="honeycomb" value="">
+            </div>
+
+        </form>
+
+    </div> <!-- /from-wrap -->
+
+    <span class="hr"></span>
+
+    <section id="contatti-segnalazioni" class="inner">
+        <h2>Recapiti per segnalazioni scritte o telefoniche</h2>
+        <ul class="list bordered">
+            <li>
+                <h4 class="title">Sede Operativa di Ravenna</h4>
+                Piazza Farini (interno Stazione FS) - 48121 Ravenna<br>
+                <strong data-icon="!" class="notext"><span>Tel </span></strong> <strong>199 11 55 77</strong><br>
+                <strong data-icon="<" class="notext"><span>Fax </span></strong> 0544 451508
+            </li>
+            <li>
+                <h4 class="title">Sede Operativa di Forlì-Cesena</h4>
+                Via A. Volta n. 9 - 47122 Forlì<br>
+                <strong data-icon="!" class="notext"><span>Tel </span></strong> <strong>199 11 55 77</strong><br>
+                <strong data-icon="<" class="notext"><span>Fax </span></strong> 0543 787280
+            </li>
+            <li>
+                <h4 class="title">Sede Operativa di Rimini</h4>
+                Via Carlo Alberto Dalla Chiesa, 38 - 47923 Rimini<br>
+                <strong data-icon="!" class="notext"><span>Tel </span></strong> <strong>199 11 55 77</strong><br>
+                <strong data-icon="<" class="notext"><span>Fax </span></strong> 0541 300821
+            </li>
+<li>
+<h4 class="title">Posta elettronica (tutti i Bacini)</h4>
+<a href="mailto:servizioclienti@startromagna.it"><span style="color: #999999">servizioclienti@startromagna.it</span></a>
+</li>
+        </ul>
+    </section>
+
+</article> <!-- /main -->
+        </div>
+    </div>
+</section> <!-- /content -->
+
+		<aside class="spotlights horizontal">
+			<div class="container">
+				<div class="row">
+			
+<div class="spotlight-wrap three columns"><a href="http://www.startromagna.it/content/dropticket/" target="_blank" class="spotlight thick radius-s" rel="tooltip" title="<span>DropTicket®</span>Ora il biglietto del bus si acquista con lo smartphone, senza registrazione o carta di credito."><img class="radius-s" src="/public/img/big/img_1_1423577412.png" alt="DropTicket®" /></a></div><div class="spotlight-wrap three columns"><a href="http://www.startromagna.it/content/abbonamenti-su-card/" target="_blank" class="spotlight thick radius-s" rel="tooltip" title="<span>Abbonamento mensile ricaricabile</span>Adesso è ancora più facile e veloce ricaricare l&#8217;abbonamento: da Bancomat, online da casa o con la App Start Romagna. E senza fare code al Punto Bus!"><img class="radius-s" src="/public/img/big/img_1_1436177338.png" alt="Abbonamento mensile ricaricabile" /></a></div><div class="spotlight-wrap three columns"><a href="http://www.startromagna.it/content/start-romagna-e-moovit/" target="_blank" class="spotlight thick radius-s" rel="tooltip" title="<span>Start Romagna e Moovit</span>Orari, direzioni, percorsi e mappe del trasporto pubblico locale. L&#8217;applicazione per smartphone scelta da oltre 1 milione di italiani!"><img class="radius-s" src="/public/img/big/img_1_1436958080.png" alt="Start Romagna e Moovit" /></a></div><div class="spotlight-wrap three columns"><a href="http://www.startromagna.it/titoli-e-tariffe/scuolacard/" target="_blank" class="spotlight thick radius-s" rel="tooltip" title="<span>Abbonamenti scolastici 2015-2016</span>Scopri le offerte tariffarie e tutte le opportunità di acquisto."><img class="radius-s" src="/public/img/big/img_1_1439981951.gif" alt="Abbonamenti scolastici 2015-2016" /></a></div>				</div>
+			</div>
+		</aside> <!-- /spotlights -->
+<footer id="footer" role="contentinfo">
+
+    <section class="address container">
+
+        <div class="row hq">
+
+            <section class="three columns">
+                <h4>Ufficio Segreteria</h4>
+                <address>
+                    Via C. A. Dalla Chiesa, 38<br>
+                    47923 Rimini (RN)<br>
+                    <strong>segreteria@startromagna.it</strong><br>
+                    <strong>startromagna@legalmail.it</strong>
+                </address>
+            </section>
+
+            <section class="three columns">
+                <h4>Sede Legale</h4>
+                <address>
+                    Via A. Spinelli, 140 | Cesena (FC)<br>
+                    REA n. FO 321015 <br>
+                    P.IVA e Cod. Fisc. 03836450407<br>
+                    Capitale Sociale Sottoscritto<br> e Versato € 29.000.000,00
+                </address>
+            </section>
+
+            <section class="four columns">
+                <h4>Recapiti Sedi di Bacino</h4>
+                <address>
+                    <strong>Forlì - Cesena</strong> T. 0543 413911 | F. 0543 787280<br>
+                    <strong>Ravenna</strong> T. 0544 689911 | F. 0544 451508<br>
+                    <strong>Rimini</strong> T. 0541 300811 | F. 0541 300821
+                </address>
+            </section>
+
+            <section class="two column">
+                <a href="http://www.startromagna.it/chi-siamo/qualita-e-certificazioni/"><img src="http://www.startromagna.it/assets/img/logo_tuv.png" alt="TUV"></a>
+            </section>
+
+        </div>
+
+    </section> <!-- /address -->
+
+    <section class="contacts container">
+        <span class="stripe"></span>
+
+        <div class="row">
+
+            <div class="infotel six columns">
+                <h3 class="uppercase">Info Start 199.11.55.77<sup class="txt-green">[*]</sup></h3>
+                <p class="nomargin">Il numero telefonico unico per informazioni su servizi e orari del trasporto pubblico locale nei bacini di Forlì-Cesena, Ravenna e Rimini</p> 
+                <small>
+                    <span class="txt-green">[*]</span> Tariffa massima 0,1188 Euro al min. + IVA da ogni telefono fisso
+                </small>
+                <br>
+                <h3>WhatsApp Start Romagna 331.65.66.555</h3> 
+                <p>Il canale social per informazioni su linee, orari, percorsi del bus in Romagna</p>
+
+            </div>
+
+            <div class="signup six columns">
+                <h3 class="uppercase">Vorresti ancora di più?</h3>
+                <p class="nomargin">Gli utenti registrati start hanno accesso a servizi speciali, e possono usufruire del servizio <strong>Start Alert</strong>, che permette di ricevere aggiornamenti istantanei su eventuali interruzioni delle linee o variazioni temporanee dei percorsi dovute ad imprevisti. Che stai aspettando?</p>
+                <a class="orange tall btn btn-cta margintop-half" href="/signup.php" data-icon="-">
+                    <div class="btn-content">
+                        <span class="btn-title">Registrati</span>
+                        <span class="btn-subtitle">ed entra nel mondo Start</span>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+
+        <span class="stripe"></span>
+    </section> <!-- /contacts -->
+
+    <section class="sitemap container">
+
+        <nav class="row">
+
+            <dl class="two columns blue"><dt>Chi siamo</dt><dd><a href="/chi-siamo/il-gruppo-start/">Il Gruppo Start</a></dd><dd><a href="/chi-siamo/comunicazione/">Comunicazione</a></dd><dd><a href="/chi-siamo/i-mezzi/">I Mezzi</a></dd><dd><a href="/chi-siamo/progetto-mhybus/">Progetto MHyBus</a></dd><dd><a href="/chi-siamo/la-societa-mete-spa/">La Società Mete SpA</a></dd><dd><a href="/chi-siamo/il-consorzio-atg/">Il Consorzio ATG</a></dd><dd><a href="/chi-siamo/il-consorzio-team/">Il Consorzio TEAM</a></dd><dd><a href="/chi-siamo/start-away/">Start Away®</a></dd></dl><dl class="two columns orange"><dt>Servizi</dt><dd><a href="/servizi/orari-e-percorsi/">Orari e Percorsi</a></dd><dd><a href="/servizi/mappe-citta/">Mappe città</a></dd><dd><a href="/servizi/google-transit/">Google Transit</a></dd><dd><a href="/servizi/servizi-speciali/">Servizi Speciali</a></dd><dd><a href="/servizi/servizi-scuolabus/">Servizi Scuolabus</a></dd><dd><a href="/servizi/traghetto/">Traghetto</a></dd><dd><a href="/servizi/parcheggi/">Parcheggi</a></dd><dd><a href="/servizi/noleggio-pullman/">Noleggio Pullman</a></dd><dd><a href="/servizi/info-bus-e-news/">Info Bus e News</a></dd><dd><a href="/servizi/area-riservata/">Area Riservata</a></dd></dl><dl class="two columns green"><dt>Titoli e tariffe</dt><dd><a href="/titoli-e-tariffe/promozioni/">Promozioni</a></dd><dd><a href="/titoli-e-tariffe/la-tariffazione-a-zone/">La tariffazione a zone</a></dd><dd><a href="/titoli-e-tariffe/biglietti/">Biglietti</a></dd><dd><a href="/titoli-e-tariffe/biglietti-elettronici/">Biglietti elettronici</a></dd><dd><a href="/titoli-e-tariffe/abbonamenti/">Abbonamenti</a></dd><dd><a href="/titoli-e-tariffe/scuolacard/">Scuolacard</a></dd><dd><a href="/titoli-e-tariffe/abbonamenti-agevolati/">Abbonamenti agevolati</a></dd><dd><a href="/titoli-e-tariffe/acquisto-e-rinnovi/">Acquisto e Rinnovi</a></dd><dd><a href="/titoli-e-tariffe/trova-zona/">Trova Zona</a></dd><dd><a href="/titoli-e-tariffe/punti-vendita/">Punti Vendita</a></dd><dd><a href="/titoli-e-tariffe/regole-di-viaggio/">Regole di viaggio</a></dd></dl><dl class="two columns red"><dt>Contatti</dt><dd><a href="/contatti/dove-siamo/">Dove siamo</a></dd><dd><a href="/contatti/richiedi-informazioni/">Richiedi Informazioni</a></dd><dd><a href="/contatti/fai-una-segnalazione/">Fai una Segnalazione</a></dd><dd><a href="/contatti/oggetti-smarriti/">Oggetti smarriti</a></dd><dd><a href="/contatti/ricorso-a-sanzioni/">Ricorso a Sanzioni</a></dd><dd><a href="/contatti/lavora-con-noi/">Lavora con Noi</a></dd><dd><a href="/contatti/privacy/">Privacy</a></dd></dl><dl class="two columns blue"><dt>Società Trasparente</dt><dd><a href="/pagina.php?id=52">Disposizioni generali</a></dd><dd><a href="/pagina.php?id=64">Responsabilità d&#8217;Impresa</a></dd><dd><a href="/pagina.php?id=54">C.d.A.</a></dd><dd><a href="/pagina.php?id=53">Organizzazione</a></dd><dd><a href="/pagina.php?id=55">Consulenti Collaboratori</a></dd><dd><a href="/pagina.php?id=56">Personale</a></dd><dd><a href="/pagina.php?id=57">Bandi di concorso</a></dd><dd><a href="/pagina.php?id=65">Qualità e Certificazioni</a></dd><dd><a href="/pagina.php?id=59">Enti soci e partecipate</a></dd><dd><a href="/pagina.php?id=60">Bandi di gara e contratti</a></dd><dd><a href="/pagina.php?id=61">Bilanci</a></dd><dd><a href="/pagina.php?id=62">Beni immobili</a></dd><dd><a href="/pagina.php?id=63">Servizi erogati</a></dd></dl><dl class="two columns purple"><dt>La Romagna</dt><dd><a href="/visita-la-romagna">Visita la Romagna</a></dd><dd><a href="/visita-la-romagna.php?id=">Ravenna</a></dd><dd><a href="/visita-la-romagna.php?id=">Forlì-Cesena</a></dd><dd><a href="/visita-la-romagna.php?id=">Rimini</a></dd></dl><dl class="two columns kaki"><dt>Fornitori</dt><dd><a href="/fornitori/regolamenti/">Regolamenti</a></dd><dd><a href="/fornitori/modulistica/">Modulistica</a></dd><dd><a href="/fornitori/bandi-di-gara/">Bandi di Gara</a></dd><dd><a href="/fornitori/albo-fornitori/">Albo Fornitori</a></dd><dd><a href="/fornitori/pubblicazioni-legge-1902012/">Pubblicazioni legge 190/2012</a></dd></dl>
+        </nav>
+
+    </section> <!-- /sitemap -->
+
+    <section class="copyright container">
+        <div class="row">
+
+            <p class="twelve columns">
+                <strong>&copy; 2015 Start Romagna S.p.A.</strong> &middot; Tutti i diritti riservati. 
+                <!-- <a href="#">Credits</a> -->
+                <a href="/privacy.php" style="color:#FFF;">Privacy Policy</a>
+            </p>
+
+            <div class="privatelogin">
+                <a href="#" onclick="return false;"  rel="tooltip" title="<strong>Fotografie:</strong> Stefano Muccini<br><strong>Web Design:</strong> PubliOne S.r.l.">Credits</a>
+                <a href="http://www.startromagna.it/servizi/area-riservata/" rel="nofollow">Area Riservata</a>
+            </div>
+
+        </div>
+    </section> <!-- /copyright -->
+
+</footer> <!-- /footer -->
+
+<!-- Login Form -->
+<section id="loginform" class="modal">
+    <div class="modal-header">
+        <h2>Area Riservata Start&You</h2>
+    </div>
+    <div class="modal-body">
+        <form id="login" class="login" role="login" data-form-animation="shake" data-form-container-class="fancybox-wrap" method="post" action="/login.php?action=login">
+            <div class="username">
+                <label data-icon="+">Username o Email</label>
+                <input id="username "class="radius-m" type="text" name="username" value="" validation="required" />
+            </div>
+            <div class="password">
+                <label data-icon="U">Password</label>
+                <input id="password" class="radius-m" type="password" name="password" value="" validation="required" />
+            </div>
+            <div class="submit row">
+                <div class="six columns">
+                    <input class="huge blue btn tall full margintop-half" type="submit" name="submit" value="Accedi" />
+                </div>
+                <div class="submit-options six columns margintop">
+                    <input id="remember-me" name="remember-me" type="checkbox" /><span>Ricordami</span>
+                    <a href="/recover-password.php">Password dimenticata?</a>
+                </div>
+            </div>
+        </form>
+        <div class="signup well radius-m clear">
+            <span class="well-icon well-icon-left" data-icon="-"></span>
+            <div class="row">
+                <p class="six columns push-two">
+                    <strong>Non hai ancora un account?</strong><br/>
+                    Scopri i vantaggi del mondo Start
+                </p>
+                <span class="four columns">
+                    <a class="btn white tall full" href="/signup.php" >Registrati<br />
+Adesso</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Bootstrap Plugins -->
+<script src="/assets/js/bootstrap/collapse.min.js"></script>
+<script src="/assets/js/bootstrap/alert.min.js"></script>
+<script src="/assets/js/bootstrap/tab.min.js"></script>
+
+<script src="/assets/js/chosen/chosen.jquery.js"></script>
+<script src="/assets/js/jquery.validation.js"></script>
+<script src="/assets/js/jquery.scrollTo-1.4.2-min.js"></script>
+<script src="/assets/js/jquery.localscroll-1.2.7-min.js"></script>
+<script src="/assets/js/fancybox/jquery.fancybox.pack.js"></script>
+<script src="/assets/js/fancybox/helpers/jquery.fancybox-thumbs.js"></script>
+<script src="/assets/js/tiptip/jquery.tipTip.minified.js"></script>
+<script src="/assets/js/flexslider/jquery.flexslider-min.js"></script>
+
+<script src="/assets/js/script.js"></script>
+
+<!-- Conditional loading Scripts -->
+<script>
+    Modernizr.load([
+        // Placeholder Polyfill
+        {
+            test: Modernizr.input.placeholder,
+            nope: '/assets/js/polyfills/jquery.placeholder.js'
+        },
+        // Mobile Menu
+        {
+            test: Modernizr.mq('only screen and (max-width: 767px)'),
+            yep: '/assets/js/menu-mobile.min.js'
+        },
+        // Campi date e time
+        {
+            test: Modernizr.inputtypes.date,
+            nope: ['/admin/css/jquery-ui.css', '/admin/css/ui.timepicker.css', '/admin/script/jquery-ui.1.8.24.min.js', '/admin/script/jquery.ui.timepicker.0.3.3.js', '/admin/script/jquery.ui.datepicker-it.js'],
+            complete: function () {
+                
+                $.datepicker.setDefaults($.datepicker.regional[ "it" ]);
+                
+                $('input[type=date]').datepicker({
+                    dateFormat: "dd/mm/yy"
+                });
+                
+                $('input[type=time]').timepicker({hourText: 'Ore', minuteText: 'Minuti'});
+                
+            }
+        }
+
+    ]);
+</script>
+
+    
+
+
+
+    <script src="/assets/js/jquery.appendr.js"></script>
+    <script src="/assets/js/formsController.js"></script>
+
+<script type="text/javascript">
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-34436670-1']);
+            _gaq.push(['_trackPageview']);
+            (function() {
+                var ga = document.createElement('script');
+                ga.type = 'text/javascript';
+                ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(ga, s);
+            })();
+</script>
+<script src="/assets/js/cookiePolicy.js"></script>
+    <!--<script type="text/javascript" src="http://nc.admin.abc.sm/scripts/library/js/1_5063_trk_ref_domain.js"></script>
+    <script type="text/javascript" src="http://nc.admin.abc.sm/scripts/cookies_policy/5063-it-cookies-policy.js"></script>-->
+</body>
+</html>
+

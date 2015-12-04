@@ -1,0 +1,1701 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://doc-jukebox.info/xmlrpc?rsd" />
+<script type="text/javascript" src="http://static.mihanblog.com//public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('جمعه 13 آذر 1394');
+		/*1737900*/	}
+
+</script>			<div style="border:1px solid #888;position:fixed;left:0px;top:0px;width:120;z-index:9999;background:#FFF;cursor:pointer"  id="mihan_page_advert">
+			<div style="direction:rtl;text-align:right;padding-right:5px;line-height:18px;font-size:11px;color:#555" onclick="document.getElementById('mihan_page_advert').style.display='none'">
+				<img src="http://static.mihanblog.com//public/images/publish/advert_close.gif"  /> تبلیغات			</div>
+			<div style="width:120px;height:240px">
+				<iframe frameborder="0" width="120px" height="240px" src="http://mihan.ads.sabavision.com/showads.php?posid=42" scrolling="no"></iframe>			</div>
+			<div style="margin-top:0px;border-top:5px solid #888;">
+				<iframe frameborder="0" width="120px" height="40px" src="http://mihan.ads.sabavision.com/showads.php?posid=229" scrolling="no"></iframe>
+			</div>
+		</div>
+
+		<script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[1]='0';commentCnt[2]='0';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','2');
+	setStatVar('total_author','0');
+	setStatVar('modify_date','یکشنبه 26 مهر 1394');
+	
+	setStatVar('today_view','55');
+	setStatVar('yesterday_view','630');
+	
+	setStatVar('this_month_view','7106');
+	setStatVar('last_month_view','22041');
+
+	setStatVar('total_view','31186');
+	setStatVar('last_view_date','جمعه 13 آذر 1394 (04:32)');
+
+
+
+    
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+var MihanblogShopAdsArray = new Array();
+
+function GetMihanBlogShowAds(){
+	if(MihanblogShopAdsArray.length){
+		var adsTarget = 'MihanblogShopAds';
+		var containerWidth = document.getElementById(adsTarget).offsetWidth;
+		if(containerWidth>=200){
+			var adsCnt = parseInt(containerWidth / 200) ;
+			if(adsCnt>MihanblogShopAdsArray.length){
+				adsCnt = MihanblogShopAdsArray.length ; 
+			}
+//			var OneAdsWidth = parseInt(containerWidth / adsCnt) ;
+			var OneAdsWidth = containerWidth / adsCnt ;
+			if(OneAdsWidth>400){
+				OneAdsWidth = 400 ;
+			}
+			var OutHtml = '';
+			var img = '';
+			var link = '';
+			var title = '';
+			var description = '';
+			var imgWidth = 70;
+			if(OneAdsWidth>230){
+				imgWidth = 80;
+			}
+			if(OneAdsWidth>300){
+				imgWidth = 90;
+			}
+			for(adsOne=0;adsOne<adsCnt;adsOne++){
+				
+				img = MihanblogShopAdsArray[adsOne]['img'];
+				link = MihanblogShopAdsArray[adsOne]['link'];
+				title = MihanblogShopAdsArray[adsOne]['title'];
+				description = MihanblogShopAdsArray[adsOne]['description'];
+				
+				OutHtml += '<td style="background-color:#FFF;width: '+OneAdsWidth+'px;border:1px solid #f00;margin:0px 0px;font-size:11px;font-family:tahoma;padding:2px;margin:0px 0px;font-size:11px;border: 1px solid BurlyWood; padding: 1px; height: '+(imgWidth+25)+'px;">';
+
+				OutHtml += '	<a href="'+link+'" target="_blank" style="text-decoration:none">';
+
+				OutHtml += '			<div style="width: '+(OneAdsWidth-16)+'px;cursor:pointer;font-size:12px;padding: 4px 1px 4px 7px; white-space: nowrap; text-align: center; font-weight: bold; color: blue;white-space:nowrap;overflow:hidden">';
+				OutHtml += 					title;
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="cursor:pointer;padding: 1px; display: block; float: right; width: '+imgWidth+'px;">';
+				OutHtml += '				<img src="'+img+'" style="border:0px;padding:0px;margin:0px;width:'+imgWidth+'px;height:'+imgWidth+'px;">';
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="padding: 1px; display: block; float: right; width: '+(OneAdsWidth-13-imgWidth)+'px; text-align: right;overflow:hidden">';
+				OutHtml += '				<div style="overflow:hidden;cursor:pointer;padding: 2px 3px; line-height: 17px; height: '+(imgWidth-3)+'px; text-align: justify;color:#000;direction:rtl">';
+				OutHtml += 						description;
+				OutHtml += '				</div>';
+				OutHtml += '			</div>';
+
+				OutHtml += '	</a>';
+
+				OutHtml += '</td>';
+			}
+			
+			var Out = '<table align="center" cellpadding="0" cellspacing="2" style="width:'+(OneAdsWidth*adsCnt)+'px;"><tr>'+OutHtml+'</tr></table>'; 
+			
+			Out = '<div style="text-align:center;padding:0px;margin:3px auto;">'+Out+'</div>'; 
+			
+			document.getElementById(adsTarget).style.height = (imgWidth+35)+'px' ;
+			document.getElementById(adsTarget).innerHTML = Out ;
+		}
+	}
+}
+</script>
+<style>
+    @font-face {
+        font-family: 'Mihan-Iransans';
+        src: url('/public/public/fonts/Iransans.eot');
+        src: url('/public/public/fonts/Iransans.eot?#iefix') format('embedded-opentype'),
+        url('/public/public/fonts/Iransans.woff2') format('woff2'),
+        url('/public/public/fonts/Iransans.woff') format('woff'),
+        url('/public/public/fonts/Iransans.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'Mihan-IransansBold';
+        src: url('/public/public/fonts/Iransans-Black.eot');
+        src: url('/public/public/fonts/Iransans-Black.eot?#iefix') format('embedded-opentype'),
+        url('/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+        url('/public/public/fonts/Iransans-Black.woff') format('woff'),
+        url('/public/public/fonts/Iransans-Black.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'Mihan-IransansLight';
+        src: url('/public/public/fonts/Iransans-UltraLight.eot');
+        src: url('/public/public/fonts/Iransans-UltraLight.eot?#iefix') format('embedded-opentype'),
+        url('/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+        url('/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+        url('/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'Mihan-Nassim';
+        src: url('/public/public/fonts/Nassim.eot');
+        src: url('/public/public/fonts/Nassim.eot?#iefix') format('embedded-opentype'),
+        url('/public/public/fonts/Nassim.woff2') format('woff2'),
+        url('/public/public/fonts/Nassim.woff') format('woff'),
+        url('/public/public/fonts/Nassim.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'Mihan-Koodak';
+        src: url('/public/public/fonts/Koodak.eot');
+        src: url('/public/public/fonts/Koodak.eot?#iefix') format('embedded-opentype'),
+        url('/public/public/fonts/Koodak.woff2') format('woff2'),
+        url('/public/public/fonts/Koodak.woff') format('woff'),
+        url('/public/public/fonts/Koodak.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'Mihan-Yekan';
+        src: url('/public/public/fonts/Yekan.eot');
+        src: url('/public/public/fonts/Yekan.eot?#iefix') format('embedded-opentype'),
+        url('/public/public/fonts/Yekan.woff2') format('woff2'),
+        url('/public/public/fonts/Yekan.woff') format('woff'),
+        url('/public/public/fonts/Yekan.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
+</style>
+	
+	
+	
+	
+<html>
+
+<head>
+<style>
+    /*
+    Theme Name: Smashing Theme - Widget Ready V
+    Theme URI: http://smashingmagazine.com/
+    Description: Designed by <a href="http://www.designdisease.com">Elena G. - DesignDisease</a>.
+    Version: 1.01
+    Author: Design Disease
+    Author URI: http://wp-themes.designdisease.com/
+    */
+
+
+@font-face {
+  font-family: 'IRANSans-web';
+  src: url('/public/public/fonts/Iransans-Bold.eot?#') format('eot'),  /* IE6–8 */
+  url('/public/public/fonts/Iransans-Bold.woff2') format('woff2'),  /* Chrome36+, Opera24+*/
+  url('/public/public/fonts/Iransans-Bold.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'IRANSans-web';
+  src: url('/public/public/fonts/Iransans-Black.eot?#') format('eot'),  /* IE6–8 */
+  url('/public/public/fonts/Iransans-Black.woff2') format('woff2'),  /* Chrome36+, Opera24+*/
+  url('/public/public/fonts/Iransans-Black.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+  font-weight: 900;
+}
+
+
+@font-face {
+  font-family: 'IRANSans-web';
+  src: url('/public/public/fonts/Iransans-UltraLight.eot?#') format('eot'),  /* IE6–8 */
+  url('/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),  /* Chrome36+, Opera24+*/
+  url('/public/public/fonts/Iransans-UltraLight.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: 'IRANSans-web';
+  src: url('/public/public/fonts/Iransans-LightExpanded.eot?#') format('eot'),  /* IE6–8 */
+  url('/public/public/fonts/Iransans-LightExpanded.woff2') format('woff2'),  /* Chrome36+, Opera24+*/
+  url('/public/public/fonts/Iransans-LightExpanded.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+  font-weight: 300;
+}
+
+
+@font-face {
+  font-family: 'IRANSans-web';
+  src: url('/public/public/fonts/Iransans-Expanded.eot?#') format('eot'),  /* IE6–8 */
+  url('/public/public/fonts/Iransans-Expanded.woff2') format('woff2'),  /* Chrome36+, Opera24+*/
+  url('/public/public/fonts/Iransans-Expanded.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+  font-weight: normal;
+}
+
+.IRANSansUltraLight {
+  font-family: IRANSans-web;
+  color: #000;
+  margin-right: 50px;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #FFF;
+  font-weight: 200;
+}
+
+.IRANSansLight {
+  font-family: IRANSans-web;
+  color: #000;
+  margin-right: 50px;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #FFF;
+  font-weight: 300;
+}
+
+.IRANSans {
+  font-family: IRANSans-web;
+  color: #000;
+  margin-right: 50px;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #FFF;
+  font-weight: normal;
+}
+
+.IRANSansBold {
+  font-family: IRANSans-web;
+  color: #000;
+  margin-right: 50px;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #FFF;
+  font-weight: bold;
+}
+
+.IRANSansBlack {
+  font-family: IRANSans-web;
+  color: #000;
+  margin-right: 50px;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #FFF;
+  font-weight: 900;
+}
+
+body { 
+  background: #fff url(/public/public/user_data/template/23/images/BkgBody.gif) repeat center;
+  overflow-x:hidden;
+  font-family:IRANSans-web,tahoma, Arial, Helvetica, sans-serif;
+  font-size: 12px; 
+  margin: 0px; 
+  color:#35383d;  
+  padding:30px 0px 0px 0px;
+}
+.container{
+  padding:0px;
+}
+html{font-family:IRANSans-web,tahoma !important;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}
+
+
+a:link { text-decoration: none; color : #218dd1; border: 0px; -moz-outline-style: none;}
+a:active { text-decoration: underline; color : #218dd1; border: 0px; -moz-outline-style: none;}
+a:visited { text-decoration: none; color : #218dd1; border: 0px; -moz-outline-style: none;}
+a:hover { text-decoration: underline; color : #cc0000; border: 0px; -moz-outline-style: none;}
+a:focus { outline: none;-moz-outline-style: none;}
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+img{
+    max-width : 505px;
+}
+h1, h2, h3, h4 { font-family:IRANSans-web, Arial, Helvetica, sans-serif;}
+
+img { padding: 0px; margin: 0px; border: none; text-align: center;}
+hr { border-left:0px solid #abb0b5; border-right:0px solid #abb0b5; border-top:1px dotted #abb0b5; border-bottom:0px solid #abb0b5; height : 1px;  }
+
+
+input { font-family: 'Verdana'; color: #282b31; font-size: 11px;}
+textarea { font-family: 'Verdana'; color: #282b31; font-size: 11px;}
+select { font-family: 'Verdana'; color: #282b31; font-size: 11px;}
+
+.container{margin-right:auto;margin-left:auto;padding-left:15px;padding-right:15px}.container:before,.container:after{content:" ";display:table}.container:after{clear:both}@media (min-width: 768px){.container{width:750px}}@media (min-width: 992px){.container{width:970px}}@media (min-width: 1200px){.container{width:1170px}}.container-fluid{margin-right:auto;margin-left:auto;}.container-fluid:before,.container-fluid:after{content:" ";display:table}.container-fluid:after{clear:both}.row{margin-left:-15px;margin-right:-15px}.row:before,.row:after{content:" ";display:table}.row:after{clear:both}.col-xs-1,.col-sm-1,.col-md-1,.col-lg-1,.col-xs-2,.col-sm-2,.col-md-2,.col-lg-2,.col-xs-3,.col-sm-3,.col-md-3,.col-lg-3,.col-xs-4,.col-sm-4,.col-md-4,.col-lg-4,.col-xs-5,.col-sm-5,.col-md-5,.col-lg-5,.col-xs-6,.col-sm-6,.col-md-6,.col-lg-6,.col-xs-7,.col-sm-7,.col-md-7,.col-lg-7,.col-xs-8,.col-sm-8,.col-md-8,.col-lg-8,.col-xs-9,.col-sm-9,.col-md-9,.col-lg-9,.col-xs-10,.col-sm-10,.col-md-10,.col-lg-10,.col-xs-11,.col-sm-11,.col-md-11,.col-lg-11,.col-xs-12,.col-sm-12,.col-md-12,.col-lg-12{position:relative;min-height:1px;}.col-xs-1,.col-xs-2,.col-xs-3,.col-xs-4,.col-xs-5,.col-xs-6,.col-xs-7,.col-xs-8,.col-xs-9,.col-xs-10,.col-xs-11,.col-xs-12{float:left}.col-xs-1{width:8.33333%}.col-xs-2{width:16.66667%}.col-xs-3{width:25%}.col-xs-4{width:33.33333%}.col-xs-5{width:41.66667%}.col-xs-6{width:50%}.col-xs-7{width:58.33333%}.col-xs-8{width:66.66667%}.col-xs-9{width:75%}.col-xs-10{width:83.33333%}.col-xs-11{width:91.66667%}.col-xs-12{width:100%}.col-xs-pull-0{right:auto}.col-xs-pull-1{right:8.33333%}.col-xs-pull-2{right:16.66667%}.col-xs-pull-3{right:25%}.col-xs-pull-4{right:33.33333%}.col-xs-pull-5{right:41.66667%}.col-xs-pull-6{right:50%}.col-xs-pull-7{right:58.33333%}.col-xs-pull-8{right:66.66667%}.col-xs-pull-9{right:75%}.col-xs-pull-10{right:83.33333%}.col-xs-pull-11{right:91.66667%}.col-xs-pull-12{right:100%}.col-xs-push-0{left:auto}.col-xs-push-1{left:8.33333%}.col-xs-push-2{left:16.66667%}.col-xs-push-3{left:25%}.col-xs-push-4{left:33.33333%}.col-xs-push-5{left:41.66667%}.col-xs-push-6{left:50%}.col-xs-push-7{left:58.33333%}.col-xs-push-8{left:66.66667%}.col-xs-push-9{left:75%}.col-xs-push-10{left:83.33333%}.col-xs-push-11{left:91.66667%}.col-xs-push-12{left:100%}.col-xs-offset-0{margin-left:0%}.col-xs-offset-1{margin-left:8.33333%}.col-xs-offset-2{margin-left:16.66667%}.col-xs-offset-3{margin-left:25%}.col-xs-offset-4{margin-left:33.33333%}.col-xs-offset-5{margin-left:41.66667%}.col-xs-offset-6{margin-left:50%}.col-xs-offset-7{margin-left:58.33333%}.col-xs-offset-8{margin-left:66.66667%}.col-xs-offset-9{margin-left:75%}.col-xs-offset-10{margin-left:83.33333%}.col-xs-offset-11{margin-left:91.66667%}.col-xs-offset-12{margin-left:100%}@media (min-width: 768px){.col-sm-1,.col-sm-2,.col-sm-3,.col-sm-4,.col-sm-5,.col-sm-6,.col-sm-7,.col-sm-8,.col-sm-9,.col-sm-10,.col-sm-11,.col-sm-12{float:left}.col-sm-1{width:8.33333%}.col-sm-2{width:16.66667%}.col-sm-3{width:25%}.col-sm-4{width:33.33333%}.col-sm-5{width:41.66667%}.col-sm-6{width:50%}.col-sm-7{width:58.33333%}.col-sm-8{width:66.66667%}.col-sm-9{width:75%}.col-sm-10{width:83.33333%}.col-sm-11{width:91.66667%}.col-sm-12{width:100%}.col-sm-pull-0{right:auto}.col-sm-pull-1{right:8.33333%}.col-sm-pull-2{right:16.66667%}.col-sm-pull-3{right:25%}.col-sm-pull-4{right:33.33333%}.col-sm-pull-5{right:41.66667%}.col-sm-pull-6{right:50%}.col-sm-pull-7{right:58.33333%}.col-sm-pull-8{right:66.66667%}.col-sm-pull-9{right:75%}.col-sm-pull-10{right:83.33333%}.col-sm-pull-11{right:91.66667%}.col-sm-pull-12{right:100%}.col-sm-push-0{left:auto}.col-sm-push-1{left:8.33333%}.col-sm-push-2{left:16.66667%}.col-sm-push-3{left:25%}.col-sm-push-4{left:33.33333%}.col-sm-push-5{left:41.66667%}.col-sm-push-6{left:50%}.col-sm-push-7{left:58.33333%}.col-sm-push-8{left:66.66667%}.col-sm-push-9{left:75%}.col-sm-push-10{left:83.33333%}.col-sm-push-11{left:91.66667%}.col-sm-push-12{left:100%}.col-sm-offset-0{margin-left:0%}.col-sm-offset-1{margin-left:8.33333%}.col-sm-offset-2{margin-left:16.66667%}.col-sm-offset-3{margin-left:25%}.col-sm-offset-4{margin-left:33.33333%}.col-sm-offset-5{margin-left:41.66667%}.col-sm-offset-6{margin-left:50%}.col-sm-offset-7{margin-left:58.33333%}.col-sm-offset-8{margin-left:66.66667%}.col-sm-offset-9{margin-left:75%}.col-sm-offset-10{margin-left:83.33333%}.col-sm-offset-11{margin-left:91.66667%}.col-sm-offset-12{margin-left:100%}}@media (min-width: 992px){.col-md-1,.col-md-2,.col-md-3,.col-md-4,.col-md-5,.col-md-6,.col-md-7,.col-md-8,.col-md-9,.col-md-10,.col-md-11,.col-md-12{float:left}.col-md-1{width:8.33333%}.col-md-2{width:16.66667%}.col-md-3{width:25%}.col-md-4{width:33.33333%}.col-md-5{width:41.66667%}.col-md-6{width:50%}.col-md-7{width:58.33333%}.col-md-8{width:66.66667%}.col-md-9{width:75%}.col-md-10{width:83.33333%}.col-md-11{width:91.66667%}.col-md-12{width:100%}.col-md-pull-0{right:auto}.col-md-pull-1{right:8.33333%}.col-md-pull-2{right:16.66667%}.col-md-pull-3{right:25%}.col-md-pull-4{right:33.33333%}.col-md-pull-5{right:41.66667%}.col-md-pull-6{right:50%}.col-md-pull-7{right:58.33333%}.col-md-pull-8{right:66.66667%}.col-md-pull-9{right:75%}.col-md-pull-10{right:83.33333%}.col-md-pull-11{right:91.66667%}.col-md-pull-12{right:100%}.col-md-push-0{left:auto}.col-md-push-1{left:8.33333%}.col-md-push-2{left:16.66667%}.col-md-push-3{left:25%}.col-md-push-4{left:33.33333%}.col-md-push-5{left:41.66667%}.col-md-push-6{left:50%}.col-md-push-7{left:58.33333%}.col-md-push-8{left:66.66667%}.col-md-push-9{left:75%}.col-md-push-10{left:83.33333%}.col-md-push-11{left:91.66667%}.col-md-push-12{left:100%}.col-md-offset-0{margin-left:0%}.col-md-offset-1{margin-left:8.33333%}.col-md-offset-2{margin-left:16.66667%}.col-md-offset-3{margin-left:25%}.col-md-offset-4{margin-left:33.33333%}.col-md-offset-5{margin-left:41.66667%}.col-md-offset-6{margin-left:50%}.col-md-offset-7{margin-left:58.33333%}.col-md-offset-8{margin-left:66.66667%}.col-md-offset-9{margin-left:75%}.col-md-offset-10{margin-left:83.33333%}.col-md-offset-11{margin-left:91.66667%}.col-md-offset-12{margin-left:100%}}@media (min-width: 1200px){.col-lg-1,.col-lg-2,.col-lg-3,.col-lg-4,.col-lg-5,.col-lg-6,.col-lg-7,.col-lg-8,.col-lg-9,.col-lg-10,.col-lg-11,.col-lg-12{float:left}.col-lg-1{width:8.33333%}.col-lg-2{width:16.66667%}.col-lg-3{width:25%}.col-lg-4{width:33.33333%}.col-lg-5{width:41.66667%}.col-lg-6{width:50%}.col-lg-7{width:58.33333%}.col-lg-8{width:66.66667%}.col-lg-9{width:75%}.col-lg-10{width:83.33333%}.col-lg-11{width:91.66667%}.col-lg-12{width:100%}.col-lg-pull-0{right:auto}.col-lg-pull-1{right:8.33333%}.col-lg-pull-2{right:16.66667%}.col-lg-pull-3{right:25%}.col-lg-pull-4{right:33.33333%}.col-lg-pull-5{right:41.66667%}.col-lg-pull-6{right:50%}.col-lg-pull-7{right:58.33333%}.col-lg-pull-8{right:66.66667%}.col-lg-pull-9{right:75%}.col-lg-pull-10{right:83.33333%}.col-lg-pull-11{right:91.66667%}.col-lg-pull-12{right:100%}.col-lg-push-0{left:auto}.col-lg-push-1{left:8.33333%}.col-lg-push-2{left:16.66667%}.col-lg-push-3{left:25%}.col-lg-push-4{left:33.33333%}.col-lg-push-5{left:41.66667%}.col-lg-push-6{left:50%}.col-lg-push-7{left:58.33333%}.col-lg-push-8{left:66.66667%}.col-lg-push-9{left:75%}.col-lg-push-10{left:83.33333%}.col-lg-push-11{left:91.66667%}.col-lg-push-12{left:100%}.col-lg-offset-0{margin-left:0%}.col-lg-offset-1{margin-left:8.33333%}.col-lg-offset-2{margin-left:16.66667%}.col-lg-offset-3{margin-left:25%}.col-lg-offset-4{margin-left:33.33333%}.col-lg-offset-5{margin-left:41.66667%}.col-lg-offset-6{margin-left:50%}.col-lg-offset-7{margin-left:58.33333%}.col-lg-offset-8{margin-left:66.66667%}.col-lg-offset-9{margin-left:75%}.col-lg-offset-10{margin-left:83.33333%}.col-lg-offset-11{margin-left:91.66667%}.col-lg-offset-12{margin-left:100%}}.clearfix:before,.clearfix:after{content:" ";display:table}.clearfix:after{clear:both}.center-block{display:block;margin-left:auto;margin-right:auto}.pull-right{float:right !important}.pull-left{float:left !important}.hide{display:none !important}.show{display:block !important}.invisible{visibility:hidden}.text-hide{font:0/0 a;color:transparent;text-shadow:none;background-color:transparent;border:0}.hidden{display:none !important}.affix{position:fixed}@-ms-viewport{width:device-width}.visible-xs{display:none !important}.visible-sm{display:none !important}.visible-md{display:none !important}.visible-lg{display:none !important}.visible-xs-block,.visible-xs-inline,.visible-xs-inline-block,.visible-sm-block,.visible-sm-inline,.visible-sm-inline-block,.visible-md-block,.visible-md-inline,.visible-md-inline-block,.visible-lg-block,.visible-lg-inline,.visible-lg-inline-block{display:none !important}@media (max-width: 767px){.visible-xs{display:block !important}table.visible-xs{display:table}tr.visible-xs{display:table-row !important}th.visible-xs,td.visible-xs{display:table-cell !important}}@media (max-width: 767px){.visible-xs-block{display:block !important}}@media (max-width: 767px){.visible-xs-inline{display:inline !important}}@media (max-width: 767px){.visible-xs-inline-block{display:inline-block !important}}@media (min-width: 768px) and (max-width: 991px){.visible-sm{display:block !important}table.visible-sm{display:table}tr.visible-sm{display:table-row !important}th.visible-sm,td.visible-sm{display:table-cell !important}}@media (min-width: 768px) and (max-width: 991px){.visible-sm-block{display:block !important}}@media (min-width: 768px) and (max-width: 991px){.visible-sm-inline{display:inline !important}}@media (min-width: 768px) and (max-width: 991px){.visible-sm-inline-block{display:inline-block !important}}@media (min-width: 992px) and (max-width: 1199px){.visible-md{display:block !important}table.visible-md{display:table}tr.visible-md{display:table-row !important}th.visible-md,td.visible-md{display:table-cell !important}}@media (min-width: 992px) and (max-width: 1199px){.visible-md-block{display:block !important}}@media (min-width: 992px) and (max-width: 1199px){.visible-md-inline{display:inline !important}}@media (min-width: 992px) and (max-width: 1199px){.visible-md-inline-block{display:inline-block !important}}@media (min-width: 1200px){.visible-lg{display:block !important}table.visible-lg{display:table}tr.visible-lg{display:table-row !important}th.visible-lg,td.visible-lg{display:table-cell !important}}@media (min-width: 1200px){.visible-lg-block{display:block !important}}@media (min-width: 1200px){.visible-lg-inline{display:inline !important}}@media (min-width: 1200px){.visible-lg-inline-block{display:inline-block !important}}@media (max-width: 767px){.hidden-xs{display:none !important}}@media (min-width: 768px) and (max-width: 991px){.hidden-sm{display:none !important}}@media (min-width: 992px) and (max-width: 1199px){.hidden-md{display:none !important}}@media (min-width: 1200px){.hidden-lg{display:none !important}}.visible-print{display:none !important}@media print{.visible-print{display:block !important}table.visible-print{display:table}tr.visible-print{display:table-row !important}th.visible-print,td.visible-print{display:table-cell !important}}.visible-print-block{display:none !important}@media print{.visible-print-block{display:block !important}}.visible-print-inline{display:none !important}@media print{.visible-print-inline{display:inline !important}}.visible-print-inline-block{display:none !important}@media print{.visible-print-inline-block{display:inline-block !important}}@media print{.hidden-print{display:none !important}}
+/*# sourceMappingURL=responsive.css.map */
+
+    /* Header +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+    /**/ * html .Header {text-align:right;height: 80px;} /* */
+.Header {}
+
+.Header .HL {
+     text-align: right;
+  direction: rtl;
+  padding: 29px 20px 0px 0px;
+  background: url('http://static.mihanblog.com//public/user_data/user_files/543/1627803//HeaderBkg.png') repeat-x;
+  position: relative;
+  min-height: 80px;
+  background-color: #fff;
+  border-radius: 6px 6px 0px 0px;
+  display: flex;
+}
+
+.HL p.Desc{   color: #808080;
+  font-size: 11px;
+  padding: 0px 8px;
+  margin: 0;
+  line-height: 24px;
+  font-weight: 500;
+  letter-spacing: 0px;
+  font-family: IRANSans-web,'Arial';
+}
+.Header h1 { margin: 0px;
+  font-weight: 500;
+  color: #EF6021;
+  margin-bottom: 0px;
+  text-align: right;
+  font-size: 16px;
+  margin-top: 10px;}
+.Header h1 a { }
+.Header h1 a:visited { color:#ff3300; text-decoration: none; }
+.Header h1 a:hover { color:#ff3300; text-decoration: none; }
+    /* Search ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.Search {background: url(http://mihanblog.com/public/public/user_data/template/23/images/Search.gif) no-repeat left top; width: 220px; height: 63px;}
+.Search  div { padding: 28px 10px 10px 10px; margin: 0px;}
+.Search  input { border: none; color: #fff; font-size: 11px;}
+.Search  input.search {width: 21px; height: 21px; background: url(http://mihanblog.com/public/public/user_data/template/23/images/SearchButton.gif) no-repeat;}
+.Search  input.keyword { background:transparent none repeat scroll 0 0;border:medium none;direction:rtl;padding:5px 5px 5px 15px;width:180px; }
+#buttonsearch { padding: 0px; margin: -21px 175px 0px 0px; top: 0px; background: none; }
+
+    /* Syndicate ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+.Syn { width: 60px;padding-left: 13px;}
+.Syn ul { text-align:left;margin: 0px; padding: 0px;}
+.Syn li { background: url(http://mihanblog.com/public/public/user_data/template/23/images/SynIco.gif) no-repeat left center; margin: 0px; padding: 0px 0px 1px 15px; list-style-type: none; font-size: 10px; color:#25252b;}
+.Syn li a { color:#25252b; font-size: 10px; text-decoration: underline; }
+.Syn li a:visited { color:#25252b; font-size: 10px; text-decoration: underline; }
+.Syn li a:hover { color:#25252b; font-size: 10px; text-decoration: underline; }
+
+    /* Container +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.CON {margin:0px;text-align:right;background: #fff;position: relative; padding: 0px; overflow: hidden;}
+
+    /* Side Central Single +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.SCS { background: url(http://mihanblog.com/public/public/user_data/template/23/images/SC.gif) no-repeat left top; }
+.SCS h1 { font-size: 20px; font-weight: normal; background: url(http://mihanblog.com/public/public/user_data/template/23/images/Dotted.gif) repeat-x bottom; padding-bottom: 10px; letter-spacing: -1px; }
+.SCS h2 { font-size: 18px; font-weight: normal; }
+.SCS h3 { font-size: 14px; font-weight: bold; }
+
+.SCS p { font-size: 12px; line-height: 17px;}
+.SCS p strong {}
+.SCS img {}
+.SCS ul { padding: 10px 0px; margin: 0px; }
+.SCS li { padding: 2px 0px 2px 15px; list-style-type: none; background: url(http://mihanblog.com/public/public/user_data/template/23/images/PostContentLiIco.png) no-repeat left top; font-size: 11px; line-height: 15px; color:#4c4c4c; }
+.SCS blockquote { padding: 2px 10px; background: #e9f8ff; margin: 0px; color:#336699; }
+.SCS blockquote p { font-size: 11px; padding: 5px 0px; margin: 5px 0px; line-height: 15px;}
+.SCS blockquote li { padding: 2px 0px 2px 15px; list-style-type: none; background: url(http://mihanblog.com/public/public/user_data/template/23/images/PostContentBlockLiIco.png) no-repeat left top; font-size: 11px; line-height: 15px; color:#336699; }
+.SCS blockquote a { color:#0080ca; }
+.SCS blockquote a:visited { color:#0080ca; }
+.SCS blockquote a:hover { color:#003399; }
+
+    /* Side Central +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+.SC h2 { font-weight: normal;}
+.pagetitle { font-size: 24px; font-weight: normal; letter-spacing: -1px; border-bottom: solid 1px #787878; padding: 0px 0px 15px 0px; margin: 0px 0px 15px 0px; color:#787878;}
+.SC{background:#fff;  padding:8px 14px;   min-height: 1012px; text-align:right;}
+    /* Menu +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+.Menu { 
+  background: url(/public/public/user_data/template/23/images/Dotted.gif) repeat-x top;
+  height: 20px;
+  padding: 24px 0px 17px 25px;
+  clear: both;
+}
+.Menu em { display: none}
+.Menu ul { list-style: none; margin: 0px; padding: 0px;}
+.Menu ul li ul { display: none;}
+.Menu li { padding: 0px; margin: 0px; display: inline; font-size: 10px; line-height: 11px; font-weight: bold;}
+.Menu a { padding: 0px 0px 0px 3px; margin-right: 2px; background: url(http://mihanblog.com/public/public/user_data/template/23/images/MLeft.png) no-repeat left top; float: left;}
+.Menu a span { padding: 4px 9px 5px 6px; display: block; background: url(http://mihanblog.com/public/public/user_data/template/23/images/MRight.png) no-repeat right top; float: right; }
+.Menu a span { float: none; color: #3b98d2;}
+.Menu a:hover span { color: #3b98d2;}
+.Menu a:hover { background-position: 0% -20px; color:#ffffff; text-decoration: none;}
+.Menu a:hover span { background-position: 100% -20px;  color:#ffffff;}
+.Menu .on { background: url(http://mihanblog.com/public/public/user_data/template/23/images/MLeft.png) no-repeat left bottom; color:#ffffff; }
+.Menu .on span { background: url(http://mihanblog.com/public/public/user_data/template/23/images/MRight.png) no-repeat right bottom; color:#ffffff; }
+
+    /* Post +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.Post { overflow:hidden;padding:5px; position: relative; clear: left;}
+.PostHead { direction:rtl;position: relative; clear: left;}
+.PostHead h1 { text-align:right;font-size: 15px; line-height: 19px; letter-spacing: -1px; font-weight: normal; padding: 0px 2px 1px 0px; margin: 0px; color:#cc0000;}
+.PostHead h1 a { color: #218dd1; text-decoration: none;}
+.PostHead h1 a:visited { color: #218dd1; text-decoration: none;}
+.PostHead h1 a:hover { color:#cc0000; text-decoration: none;}
+.PostHead ul { text-align:right;padding: 0px; margin: 0px;}
+.PostHead li { list-style-type: none; display:block}
+.PostHead li a { color:#8a98a2; text-decoration: underline;}
+.PostHead li a:visited { color:#8a98a2; text-decoration: underline;}
+.PostHead li a:hover { color:#8a98a2; text-decoration: underline;}
+
+.PostAuthor {background: url(http://mihanblog.com/public/public/user_data/template/23/images/PostAuthor.png) no-repeat right center; padding: 1px 12px 1px 5px; margin: 0px; font-size: 10px; color:#8a98a2; font-weight: bold;display:block;}
+.PostCateg { float:right;background: url(http://mihanblog.com/public/public/user_data/template/23/images/PostCategr.png) no-repeat right center; padding: 1px 12px 1px 5px; margin: 0px; font-size: 10px; color:#8a98a2; font-weight: bold;display:block;}
+
+    /**/ * html .PostTime { right: 30px;} /**/
+.PostTime { position: absolute; top: 20px; color:#8a98a2;}
+
+.PostContent {  
+font-family:IRANSans-web, Arial, Helvetica, sans-serif !important;
+direction: rtl;
+  text-align:right;
+  background: url(/public/public/user_data/template/23/images/Dotted.gif) repeat-x bottom;
+  color: #666;
+  padding: 14px 0;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 32px;
+  text-shadow: 0 1px 0 #FFF; }
+.PostContent p { color:#444640; font-size: 12px; line-height: 17px;}
+.PostContent p strong {}
+.PostContent img {}
+.PostContent ul { padding: 10px 0px; margin: 0px; }
+.PostContent li { padding: 2px 15px 2px 0px; list-style-type: none; background: url(http://mihanblog.com/public/public/user_data/template/23/images/PostContentLiIco.png) no-repeat right top; font-size: 11px; line-height: 15px; color:#4c4c4c; }
+.PostContent blockquote { padding: 2px 10px; background: #e9f8ff; margin: 0px; color:#336699; }
+.PostContent blockquote p { font-size: 11px; padding: 5px 0px; margin: 5px 0px; line-height: 15px;}
+.PostContent blockquote li { padding: 2px 0px 2px 15px; list-style-type: none; background: url(http://mihanblog.com/public/public/user_data/template/23/images/PostContentBlockLiIco.png) no-repeat left top; font-size: 11px; line-height: 15px; color:#336699; }
+.PostContent blockquote a { color:#0080ca; }
+.PostContent blockquote a:visited { color:#0080ca; }
+.PostContent blockquote a:hover { color:#003399; }
+.PostContent a { text-decoration: underline;}
+
+.PostDet { text-align:left;direction:rtl;padding-top: 10px;}
+.PostDet ul { padding: 0px; margin: 0px;}
+.PostDet li { padding: 2px 0px 5px 15px; margin: 0px 10px 0px 0px; list-style-type: none; display: inline; color:#336699; font-size: 10px; font-weight: bold; }
+.PostDet li a {color:#ff3300;}
+.PostDet li a:visited { text-decoration: underline; color:#ff3300;}
+.PostDet li a:hover { text-decoration: underline; color:#990000;}
+
+.PostCom { background: url(http://mihanblog.com/public/public/user_data/template/23/images/PostCom.png) no-repeat left center; }
+
+
+    /* Side Right +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.SR {display:flex;text-align:right;background: url('http://static.mihanblog.com//public/user_data/user_files/543/1627803/BGCR.png') repeat right top;border-radius: 0px 6px 6px 0px; }
+.SR .poll #poll_question {color:#660000; }
+.SR h2 { font-size: 12px; letter-spacing: normal; font-weight: bold;}
+.SR h3 { font-size: 12px; letter-spacing: normal; font-weight: bold;}
+
+    /* Side Right Left +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.SRL { color:#fff;  background: #666;border-radius: 0px 6px 6px 0px;  align-items: stretch;}
+.SRL h3 { color:#ffffcc; padding: 5px 0px 5px 0px; margin: 0px; text-transform: uppercase; font-size: 12px; color:#666; letter-spacing: 0px;}
+.SRL p { color:#fff; font-size: 11px;}
+
+    /* Panel SRL +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.PT { height: 5px; width: 5px; position: absolute; top: 0px; right: 0px;}
+    /**/ *html .PT  { right: 5px;} /**/
+.Panel { position: relative; margin: 5px 5px 5px 0px; padding: 10px 10px 10px 10px;  color:#333; font-size: 11px;}
+.Panel ul { margin: 0px; padding: 0px;}
+.Panel ul li {direction:rtl;margin: 0px; padding: 0px; list-style-type: none; font-size: 11px; }
+.Panel ul li a { background: url(http://mihanblog.com/public/public/user_data/template/23/images/CategLi.png) no-repeat right top; display: block; padding: 1px 10px 2px 0px; font-size: 10px; }
+.Panel ul li a:visited { background: url(http://mihanblog.com/public/public/user_data/template/23/images/CategLi.png) no-repeat right top; display: block; }
+.Panel ul li a:hover { background: #ffffff url(http://mihanblog.com/public/public/user_data/template/23/images/CategLi.png) no-repeat right top; display: block; text-decoration: none;}
+
+.Panel ul ul li { margin: 0px; padding: 0px 0px 0px 10px; list-style-type: none; font-size: 10px; border-bottom: solid 1px #e1f3fa;}
+.Panel ul ul li a { margin: 0px; padding: 0px; list-style-type: none; font-size: 10px; background: none;}
+.Panel ul ul li a:visited { margin: 0px; padding: 0px; list-style-type: none; font-size: 10px; background: none;}
+.Panel ul ul li a:hover { margin: 0px; padding: 0px; list-style-type: none; font-size: 10px; background: none;}
+
+.Panel p { color:#333; font-size: 11px;}
+
+
+    /* Panel Blue +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+.PBlue .PT { }
+.PBlue { background: #e1f3fa; border-left: solid 10px #c7e5f1;}
+.PBlue ul { border-top: solid 1px #c7e5f1;}
+.PBlue ul li { border-bottom: solid 1px #c7e5f1;}
+.PBlue ul li a {color:#336699;}
+.PBlue ul li a:visited { color:#336699; }
+.PBlue ul li a:hover { color:#003366;}
+.PBlue ul ul li { border-bottom: solid 1px #e1f3fa;}
+
+    /* Panel Yellow +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+.PYellow .PT { }
+.PYellow { background: #faf4e1; border-left: solid 10px #ebe3c8;}
+.PYellow ul { border-top: solid 1px #ebe3c8;}
+.PYellow ul li { border-bottom: solid 1px #ebe3c8;}
+.PYellow ul li a { color:#cc6600;}
+.PYellow ul li a:visited { color:#cc6600; }
+.PYellow ul li a:hover { color:#993300;}
+.PYellow ul ul li { border-bottom: solid 1px #faf4e1;}
+
+    /* Panel Pink +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+.PPink .PT { }
+.PPink { background: #f2e2d5; border-left: solid 10px #e4cab5;}
+.PPink ul { border-top: solid 1px #e4cab5;}
+.PPink ul li { border-bottom: solid 1px #e4cab5;}
+.PPink ul li a { color:#993333;}
+.PPink ul li a:visited { color:#993333; }
+.PPink ul li a:hover { color:#660000;}
+.PPink ul ul li { border-bottom: solid 1px #f2e2d5;}
+
+
+    /* Panel Green +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+.PGreen .PT {}
+.PGreen { background: #95E088; border-left: solid 10px #70B764;}
+.PGreen ul { border-top: solid 1px #70B764;}
+.PGreen ul li { border-bottom: solid 1px #70B764;}
+.PGreen ul li a { color:#993333;}
+.PGreen ul li a:visited { color:#993333; }
+.PGreen ul li a:hover { color:#660000;}
+.PGreen ul ul li { border-bottom: solid 1px #70B764;}
+
+    /* Panel Marron +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+.PMaroon .PT {}
+.PMaroon { background: #FAE4E3; border-left: solid 10px #F39199;}
+.PMaroon ul { border-top: solid 1px #F39199;}
+.PMaroon ul li { border-bottom: solid 1px #F39199;}
+.PMaroon ul li a { color:#993333;}
+.PMaroon ul li a:visited { color:#993333; }
+.PMaroon ul li a:hover { color:#660000;}
+.PMaroon ul ul li { border-bottom: solid 1px #7F39199;}
+
+
+    /* Panel Marron +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+.PGray .PT { }
+.PGray { background: #D4D4D4; border-left: solid 10px #A1A1A1;}
+.PGray ul { border-top: solid 1px #A1A1A1;}
+.PGray ul li { border-bottom: solid 1px #A1A1A1;}
+.PGray ul li a { color:#993333;}
+.PGray ul li a:visited { color:#993333; }
+.PGray ul li a:hover { color:#660000;}
+.PGray ul ul li { border-bottom: solid 1px #A1A1A1;}
+
+    /* Side Right Right +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.SRR { direction:rtl;position: relative; color:#fff; font-size: 11px;padding:10px; }
+.SRR h3 { background: url(http://mihanblog.com/public/public/user_data/template/23/images/SRRH3.gif) repeat-x left bottom; color:#333; padding: 0px 0px 5px 0px; margin: 0px 0px 5px 0px; letter-spacing: 0px; }
+.SRR h2 { background: url(http://mihanblog.com/public/public/user_data/template/23/images/SRRH3.gif) repeat-x left bottom; color:#fff; padding: 0px 0px 5px 0px; margin: 0px 0px 5px 0px; letter-spacing: 0px; }
+.SRR ul { padding: 0px; margin: 0px;}
+.SRR li { line-height:16px;padding: 0px 8px 0px 0px; margin: 0px; list-style-type: none; background: url(http://mihanblog.com/public/public/user_data/template/23/images/SRRIco.png) no-repeat right top; color:#999;  line-height: 16px;
+  padding: 0px 8px 0px 0px;
+  margin: 0px;
+  list-style-type: none;
+  background: url(/public/public/user_data/template/23/images/SRRIco.png) no-repeat right top;
+  color: #E6E6E6;
+  font-size: 10px;}
+.SRR li a { color:#fff;}
+.SRR li a:visited { color:#fff; }
+.SRR li a:hover { color:#fff;}
+.SRR p { color:#fff; font-size: 11px;}
+
+.SRR #user_logo img{width:100%;height:100%;margin-bottom:5px;}
+.SRR #user_logo p{padding:0px;margin:0px}
+.SRR #user_logo a{color:#fff;font-size:13px;padding:2px 0;}
+
+
+    /* Footer ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.Footer { text-align:left;background: #fff url(http://mihanblog.com/public/public/user_data/template/23/images/Footer.gif) no-repeat left bottom; position: relative; clear: left; padding: 15px 30px 15px 30px; }
+
+.FL { position: absolute; top: -8px; left: -15px; height: 8px; width: 8px; background: url(http://mihanblog.com/public/public/user_data/template/23/images/FL.gif) no-repeat left top; }
+.FR { position: absolute; top: -8px; right: -400px; background: url(http://mihanblog.com/public/public/user_data/template/23/images/FR.gif) no-repeat left top; height: 8px; width: 188px; }
+.Footer p { font-size: 10px; color:#8a8a93; padding: 0px; margin: 0px; }
+.Footer a { color:#8a8a93; text-decoration: underline;}
+.Footer a:visited { color:#8a8a93; text-decoration: underline;}
+.Footer a:hover { color:#8a8a93; text-decoration: underline;}
+
+
+.owner_photo{
+    color:#fff;
+    float:right;
+    margin:5px 0px 5px 5px;
+}
+
+
+.clearfix {display: inline-block;}
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+* html .clearfix {height: 1%;}
+.clearfix {display: block;}
+
+.poll{
+    direction:rtl;
+}
+.poll li{
+    list-style:none;
+    background:none;
+    padding:0px;
+}
+.cloud li{
+    list-style:none;
+    background:none;
+    padding:0px 2px;
+    float:right;
+}
+
+
+
+input.btn {  padding: 4px 14px;
+font-size:10px;
+  font-family: IRANSans-web,tahoma;
+  border: medium none;
+  color: #DEDEDE;
+  margin-top: 10px;
+  background-color: #595959;
+  border-radius: 7px;}
+input.btn:hover {color:#595959; background-color:#DEDEDE;cursor:pointer;border:medium none; margin-top: 10px;}
+input.btnIE { margin-top: 10px; }
+
+
+.mihan_logo{
+    background: url(http://mihanblog.com/public/public/images/logo/poweredby.gif) no-repeat top center;
+    text-align:center;
+    height:131px;
+    margin-top:10px;
+}
+
+.stat li{background:none;}
+.stat span{color:#660000;}
+
+#parentheses p{
+    float:right;
+    padding:0px 1px;
+    margin:0px;
+    direction:rtl;
+    text-align:right;
+
+}
+.PBlue ul #parentheses p{color:#336699;}
+
+.page_box ul{
+    direction:rtl;
+    height:17px;
+    text-align:right;
+    list-style:none;
+}
+.page_box ul{
+    height:17px;
+}
+.page_box li{
+    float:right;
+    margin-right:5px;
+    list-style:none;
+    background:none;
+    height:17px;
+   padding-bottom: 7px;
+}
+.page_box a{
+    border:1px solid #CCCCCC;
+    display:block;
+    line-height:17px;
+    text-align:center;
+    width:17px;
+    color:#A21096;
+}
+.page_box a:hover{
+    text-decoration:none;
+}
+.page_box a b{
+    color:#fff;
+    background:#EFD5EF none repeat scroll 0 0;
+    display:block;
+    line-height:17px;
+    text-align:center;
+    width:17px;
+}
+.cb_general{
+    line-height:18px;
+}
+
+.cb_share{
+    text-align:right;
+    padding: 10px 0;
+}
+.cb_share a{
+    font-size:11px;
+    text-decoration:none;
+}
+.cb_share a img{
+  padding: 7px 4px;
+  position: absolute;
+}
+
+
+
+.cblike{
+    margin:4px 0px;
+}
+.cblike a {
+    float:left;
+    padding:3px;
+    text-align:center;
+    font-size:12px;
+    color:#FFF;
+    display:block;
+    line-height:15px;
+    text-decoration: none;
+}
+
+
+
+
+.cblike a.clike_plus {
+    background-color:#009900 ; /*green #039B03*/
+
+    border-radius: 5px ;
+
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+
+    /*border:1px solid green;
+             border-right:0px;*/
+}
+.cblike a.clike_minus {
+    background-color:#CC0000;
+    border-radius: 5px ;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+
+    /*border:1px solid red;
+             border-left:0px;*/
+}
+.cblike a.clike_minus:hover {
+    background-color:red;
+    text-decoration: none;
+}
+.cblike a.clike_plus:hover {
+    background-color:green;
+    text-decoration: none;
+}
+.cblike a span{
+    font-weight:bold;
+    font-size:13px;
+
+    color:#fff;
+}
+/* start nav */
+.Nav{
+  top: 0;
+  right:-200px;
+  width: 200px;
+  height: 100%;
+  text-align:right;
+  background-color: #333;
+  z-index:1000;
+  overflow-y:scroll;
+  direction:ltr;
+    position: fixed;
+   -moz-transition: all ease 0.25s;
+  -o-transition: all ease 0.25s;
+  transition: all ease 0.25s;
+  -webkit-transition: all ease 0.25s;
+}
+ .Nav::-webkit-scrollbar {
+  width:7px;
+  }
+  .Nav::-webkit-scrollbar-track {
+  background-color: #333;
+  border-left: 1px solid #333;
+  border-right: 1px solid #333;
+  }
+  .Nav::-webkit-scrollbar-thumb {
+  background-color: #222;
+  }
+ .Nav::-webkit-scrollbar-thumb:hover {
+  background-color:#717171;
+  }
+
+.Nav .SubNav{
+  color:#eee;
+}
+.Nav .HomeLink{
+  text-align:right;
+}
+.Nav .HomeLink a:hover{
+    color:#FF3200;
+  text-decoration: none;
+}
+.Nav .HomeLink a{
+color:#eee;
+ font-weight: normal;
+  font-size: 11px;
+  padding: 6px 13px;
+  margin: 0 0 0 0;
+  }
+.Nav .SubNav h3{
+  font-weight: normal;
+  font-size: 11px;
+  padding: 6px 13px;
+  background-color: rgba(67, 66, 66, 0.8);
+  margin: 0 0 0 0;
+  border-right: 3px solid #FF3200;
+    border-bottom: 1px solid #414141;
+}
+.SubNav ul{
+  padding:0px;
+  margin:0px;
+}
+.SubNav ul li{
+   list-style-type: none;
+  border-bottom: 1px solid #414141;
+  font-weight: normal;
+  font-size: 10px;
+  padding: 4px 22px;
+}
+.SubNav ul li a{
+  color:#eee;
+}
+.SubNav ul li a:hover{
+  color:#FF3200;
+  text-decoration: none;
+}
+.openNav{
+right:0px !important;
+ z-index: 100;
+}
+.MoveBody{
+    margin-right:200px;
+}
+#overlay{
+z-index:80;
+ position:fixed;
+  height:140%;
+  width:100%;
+  background:rgba(0,0,0,0.5);
+  margin-top:-30px;
+}
+.bodyNav{
+  margin-right:250px;
+}
+.aparatFrame{
+text-align: center;
+  position: relative;
+  padding-bottom: 57.25%;
+  overflow: hidden;
+}
+.aparatFrame iframe{
+display: block;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+@media screen and (max-width:250px){
+.msgbody textarea{
+  width: 106px !important;
+  }
+  } 
+@media screen and (max-width:270px) and (min-width:250px){
+.msgbody textarea{
+  width: 110px !important;
+  }
+  }
+@media screen and (max-width:318px) and (min-width:270px){
+.msgbody textarea{
+  width: 136px !important;
+  }
+ 
+  }
+
+  @media screen and (max-width: 318px){
+     .HL .HeadDesc{
+    margin-right:22px;
+  }
+  .Header .HL {
+  padding: 20px 5px 0px 0px !important;
+}
+  }
+@media screen and (max-width:383px) and (min-width:318px){
+.msgbody textarea{
+  width: 186px !important;
+  }
+  }
+@media screen and (max-width:424px) and (min-width:383px){
+.msgbody textarea{
+  width: 235px !important;
+  }
+  }
+  
+
+@media screen and (max-width:448px){
+
+  .PostContent{
+    font-size:13px;
+  }
+  .Header .HL{
+    padding:20px 16px 0px 0px;
+  }
+  .Header h1{
+    font-size:13px;
+  }
+  .PostHead h1{
+    font-size:13px;
+  }
+}
+@media screen and (max-width:574px){
+  .comment_form label{
+  text-align:right !important;
+}
+}
+
+@media screen and (max-width:300px){
+  .comment_form_row input.comment_form_textbox{
+    width:100%;
+  }
+}
+
+@media screen and (max-width:574px) and (min-width: 420px){
+.msgbody textarea{
+    width:270px !important;
+  }
+}
+
+
+@media screen and (max-width:990px) and (min-width:768px){
+.msgbody textarea{
+  width: 255px;
+}
+}
+
+@media screen and (min-width: 992px){
+    #overlay{
+display:none;
+}
+}
+
+@media screen and (max-width: 992px){
+  .Nav{
+  display:block !important;
+}
+}
+
+@media screen and (max-width: 991px){
+  .SR {
+ border-radius:0px !important; 
+ display:block;
+}
+.SC{
+  min-height: 100px;
+}
+.PostTime {
+position: relative;
+  clear: both;
+  top: 0;
+  text-align: right;
+}
+
+.SR {
+  text-align: right;
+  background: #fff;
+  padding: 0px;
+  }
+  .SRR li {
+    color:#333;
+  }
+  .SRR{
+  color: #fff;
+  text-align: center;
+  padding: 32px 0px 0px 0px;
+  }
+    body{
+    padding-top:15px;
+    overflow-x: hidden;
+    top:0;
+  }
+}
+
+
+
+.OpenDrawer{
+   float: right;
+  padding: 6px;
+  background-color: #FF3200;
+  border-radius: 5px;
+  margin: 16px 0px 0px 25px;
+}
+.OpenDrawer .OpenChild{
+  background: #FFFFFF;
+  height: 2px;
+  width: 17px;
+  display: block;
+  margin: 3px;
+}
+.HL .SideBtn{float:right;}
+.HL .HeadDesc{float:right;}
+            /*** COMMENT BODY***/
+        .comment_body{
+            background: #FAF4E1;
+            margin:10px;
+            border-radius: 5px;
+            border-right:5px solid #EBE3C8;
+            overflow:hidden;
+        }
+
+        .comment .comment_reply {
+            background: none repeat scroll 0 0 #F2E2D5;
+            border-radius: 5px 5px 5px 5px;
+            border-right: 5px solid #E4CAB5;
+            font-size: 10px;
+            width: 350px;
+            margin-top:10px;
+            overflow:hidden;
+        }
+        .comment .comemnt_text {
+            direction: rtl;
+            line-height: 1.5em;
+            text-align: right;
+        }
+
+
+
+        .comment .name {
+            font-weight: 600;
+            color: #4E3E09;
+            padding-right: 5px;
+            text-align: right;
+            line-height: 26px;
+            float: right;
+        }
+
+
+        .comment .date {
+            font-size: 10px;
+            padding: 5px;
+            color: #7E7E7E;
+            float: left;
+        }
+
+
+        .comment .comemnt_web {
+            padding: 5px 0 5px 15px; color: #999; direction: ltr; text-align: left;
+
+        }
+
+
+        .comment .comemnt_web a {
+            color: #554c3d;
+            text-decoration: underline;
+        }
+
+
+
+        .comment_det{
+            border-bottom:1px solid #F4F4F2;
+            padding:4px;
+
+        }
+
+
+        .comment .name,.date,.comemnt_text,.comment_reply{
+            margin-right:3px;
+            padding-right:3px;
+
+        }
+
+            /**** COMMENT FORM ****/
+
+        .comment_form {
+            background: none repeat scroll 0 0 #FAE4E3;
+            border-radius: 5px 5px 5px 5px;
+            border-right: 5px solid #F39199;
+            direction: rtl;
+            margin: 10px;
+            padding: 20px;
+
+        }
+
+
+
+        .comment_form label {
+            display: block;
+            float: right;
+            text-align: left;
+            font-size: 11px;
+            color: #555;
+            padding-left: 10px;
+            width:100px;
+        }
+
+
+        .comment_form .comment_form_row {
+            margin: 3px 0;
+        }
+
+
+        #imageCodeWrapper .imageCode_input #imgstr {
+            font-size: 25px;
+            height: 34px;
+            width: 70px;
+        }
+
+        .comment_form input.btn { input.btn {
+                                      background: url("http://mihanblog.com/public/public/user_data/template/23/images/SubmitComment.gif") no-repeat scroll 0 0         transparent;
+                                      border: medium none;
+                                      color: #FFFFFF;
+                                      font-family:IRANSans-web, tahoma;
+                                      height: 26px;
+                                      margin-top: 10px;
+                                      padding: 0;
+                                      width: 85px;
+                                  }
+        .comment_form .comment_form_textarea, .comment_form .comment_form_textbox {
+            border: 1px solid #C5C5C5;
+        }
+
+        .aparatFrame {
+  text-align: center;
+  position: relative;
+  padding-bottom: 57.25%;
+  overflow: hidden;
+}
+
+.aparatFrame iframe {
+  display: block;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+</style>
+    <title>فروش دامین های رنک دار و با authority بالا</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="alternate" type="application/rss+xml" title="فروش دامین های رنک دار و با authority بالا" href="/post/rss/" />
+    <link rel="alternate" type="application/atom+xml" title="فروش دامین های رنک دار و با authority بالا" href="/post/atom/" />
+    <script type="text/javascript" src="http://static.mihanblog.com//public/user_data/user_files/543/1627803/respond.min.js"></script>
+    <script type="text/javascript">
+  function sideNav() {
+  var sideNav = document.getElementById("SideMenu");
+   if(!hasClass(sideNav,"openNav")){
+   sideNav.className += "openNav";
+   if(!document.getElementById("overlay")){
+     var overlay = document.createElement("div");
+    // document.getElementsByTagName('body')[0].appendChild(overlay);
+     insertAfter(sideNav,overlay)
+     var att = document.createAttribute("id");   
+     att.value = "overlay";                          
+     overlay.setAttributeNode(att);
+     overlay.addEventListener("click", hideSideNav);
+     }
+     }else{
+          removeClass(sideNav,"openNav");
+     }
+}
+function hideSideNav(){
+  var sideNav = document.getElementById("SideMenu");
+   removeClass(sideNav,"openNav");
+  document.getElementsByTagName('body')[0].removeChild(document.getElementById("overlay"));
+}
+function hasClass(element, cls) {
+    return (' ' + element.className + ' ').indexOf(' ' + cls + ' ') > -1;
+}
+
+function removeClass(ele,cls) {
+  if (hasClass(ele,cls)) {
+    var reg = new RegExp('(\\s|^)'+cls+'(\\s|$)');
+    ele.className=ele.className.replace(reg,' ');
+  }
+}
+
+function insertAfter(referenceNode, newNode) {
+    referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
+}
+  
+
+</script>
+
+</head>
+
+<body>
+
+
+
+<div class="Nav visible-xs " id="SideMenu">
+<div class="HomeLink">
+<h3><a href="http://doc-jukebox.info">صفحه اصلی</a></h3></div>
+
+    <!-- Start Recent posts -->
+          <div class="SubNav">
+        <h3>آخرین پست&zwnj;ها</h3>
+        <ul class="clearfix">
+                            <li><a  href="/post/2">فروش دامین رنک 4</a></li>
+                            <li><a  href="/post/1">فروش دامین رنک بالا</a></li>
+                        <li><a  href="/post/list"><b>لیست آخرین پست&zwnj;ها</b></a></li>
+        </ul>
+        </div>
+        <!-- End Recent posts -->
+ 
+    <br />
+    
+    <!-- Start Archives -->
+            <div class="SubNav">
+            <h3>آرشیو</h3>
+            <ul>
+                                    <li><a href='/post/archive/1394/7' title=' مهر 1394(2)'> مهر 1394</a></li>
+                                <li><a href="/post/archive"><b>لیست آرشیوها</b></a></li>
+            </ul>
+            <div class="PT"></div>
+        </div>
+        <!-- End Archives -->
+
+    <!-- Start Links -->
+        <!-- End Links -->
+
+    <!-- Start Links -->
+        <!-- End Links -->
+
+    <!-- Start extrapage -->
+        <!-- End extrapage -->
+
+</div>
+
+<div class="PageWrap">
+<div class="Header container">
+<div class=" col-md-8 col-lg-8 col-sm-12 col-xs-12">
+<div class="HL">
+<div class="SideBtn">
+<a href="#" class="OpenDrawer visible-sm visible-xs" id="open" onclick="sideNav()">
+<span class="OpenChild"></span>
+<span class="OpenChild"></span>
+<span class="OpenChild"></span>
+</a></div>
+  <div class="HeadDesc">  <h1><a href="http://doc-jukebox.info">فروش دامین های رنک دار و با authority بالا</a></h1>
+    <p class="Desc"></p></div>
+</div></div>
+<div class=" col-lg-4 col-md-4 hidden-sm hidden-xs">
+    <div class="HR">
+    <div class="Syn">
+        <ul>
+            <li><a href="/post/rss/">RSS</a></li>
+            <li><a href="/post/atom/">Atom</a></li>
+        </ul>
+    </div> 
+
+  <form id="frm-1449114988565fbd6c417f1" method="get" action="http://doc-jukebox.info/post/search/fid/1449114988565fbd6c417f1"  onsubmit="window.open('', 'search', 'toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=0,width=400,height=310')" target="search"> 
+        <div class="Search">
+            <div>
+                <input type="text" name="search_text" class="keyword" />
+                <div id="buttonsearch"><input type="submit" value="" class="search" /></div>
+            </div>
+        </div>
+    <input type="hidden" name="frm-id" value="1449114988565fbd6c417f1" id="frm-id" /></form>
+    
+</div>
+</div>
+</div> 
+
+
+<div class="BGC container">
+<!-- start header -->
+
+
+
+
+
+<!-- Container -->
+<div class="container-fluids">
+
+<!-- Start SC -->
+<div style=" background-color: #fff;" class=" col-md-8 col-lg-8 col-sm-12 col-xs-12">
+<div class="SC">
+<div class="Menu">
+    <ul>
+        <li><a class="on" href="mailto:"><span>ایمیل به ما</span></a></li>
+        <li><a class="on" href="javascript:messageForm()"><span>تماس با ما</span></a></li>
+
+        <!--<li class="page_item page-item-2"><a href="http://wp-themes.designdisease.com/testrun/about/" title="About"><span>About</span></a></li>-->
+    </ul>
+
+</div>
+
+		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+		    <div class="Post clearfix" id="2">
+
+        <div class="PostHead">
+            <h1><a href="/post/2" rel="bookmark">فروش دامین رنک 4</a></h1>
+            <ul>
+                <li class="PostAuthor clearfix">نویسنده: <a href="/post/author/1355253">مهناز منوچهری</a> </li>
+
+                
+            </ul>
+        </div>
+        <small class="PostTime clearfix">یکشنبه 26 مهر 1394</small>
+
+
+
+
+        <div class="PostContent clearfix">
+
+            <div class="cb_share clearfix">
+                <a rel="nofollow" target="_blank" href="http://www.cloob.com/share/link/add/?url=http://doc-jukebox.info/post/2&amp;title=فروش دامین رنک 4">
+                    ارسال به <img title="ارسال به 100 درجه کلوب دات کام" alt="ارسال به 100 درجه کلوب دات کام" src="http://www.cloob.com/public/public/images/logo/package2/logo_color_16_16.png" />
+                </a>
+            </div>
+
+            <p><div class="owner_photo clearfix"></div><div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div><div align="center"><br><font face="Mihan-IransansBold" size="5"><font color="#6600CC">این دامین به فروش میرسد ...<br></font><font color="#333300">برای خرید دامین با شماره زیر تماس بگیرید .</font><br>09152091003<br><br></font><div align="right"><font face="Mihan-IransansBold" size="5"><font size="2"><font size="3">لیست دامین های آماده فروش</font> <font size="1">(26 مهر) </font>: <br><font color="#3366FF">pt-job.org</font><font color="#3366FF"><br>doc-jukebox.info<br>....<br></font><br></font></font></div></div>
+
+
+</p>
+            <p></p>
+            <p></p>
+
+            <!--<blockquote><p> Mauris eu wisi. Ut ante dui, aliquet nec, congue non, accumsan sit amet, lectus. </p></blockquote>-->
+
+            <ul class="clearfix">
+
+                                    <li>
+                        برچسب&zwnj;ها:
+                                                    <a href="/post/tag/فروش" >فروش</a>،
+                                                    <a href="/post/tag/دامین" >دامین</a>،
+                                                    <a href="/post/tag/فروش دامین ارزان" >فروش دامین ارزان</a>،
+                                                    <a href="/post/tag/فروش دامین رنک دار ارزان" >فروش دامین رنک دار ارزان</a>،
+                                                    <a href="/post/tag/فروش دامین مخصوص بک لینک" >فروش دامین مخصوص بک لینک</a>،
+                                                    <a href="/post/tag/فروش دامین رنک بالا" >فروش دامین رنک بالا</a>،
+                                                &nbsp;
+                    </li>
+                
+
+
+                
+
+            </ul>
+
+        </div>
+    
+        <div  class="PostDet">
+            <li style="float: left;" class="PostCom">   <a target="_self" href="/post/2#commentlist" class="comment-link">نظرات(<script>setCommentCnt(2)</script>)</a>&nbsp;</li>
+            <div style="float: left; margin-top: -5px;"> <script>mihanblogPostLike('2','like')</script></div>
+        </div>
+    </div>
+
+
+    <div class="clearer"></div>
+    <div class="Post clearfix" id="1">
+
+        <div class="PostHead">
+            <h1><a href="/post/1" rel="bookmark">فروش دامین رنک بالا</a></h1>
+            <ul>
+                <li class="PostAuthor clearfix">نویسنده: <a href="/post/author/1355253">مهناز منوچهری</a> </li>
+
+                
+            </ul>
+        </div>
+        <small class="PostTime clearfix">یکشنبه 26 مهر 1394</small>
+
+
+
+
+        <div class="PostContent clearfix">
+
+            <div class="cb_share clearfix">
+                <a rel="nofollow" target="_blank" href="http://www.cloob.com/share/link/add/?url=http://doc-jukebox.info/post/1&amp;title=فروش دامین رنک بالا">
+                    ارسال به <img title="ارسال به 100 درجه کلوب دات کام" alt="ارسال به 100 درجه کلوب دات کام" src="http://www.cloob.com/public/public/images/logo/package2/logo_color_16_16.png" />
+                </a>
+            </div>
+
+            <p><div class="owner_photo clearfix"></div>دو دامین زیر با مشخصات کامل به فروش میرسد ...<br>
+<br>
+doc-jukebox.info<br>
+<b>Rank : 3<br>
+Authority : 38</b><br>
+Alexa : 1,955,875<br>
+بک لینک های فعال : 440<br>
+قیمت : 190 هزارتوومان<br>
+<br>
+<br>
+pt-job.org<br>
+<b>Rank : 4</b><br>
+Authority : 21<br>
+<b>Alexa : 788,987</b><br>
+بک لینک فعال : 100 (حدوداً)<br>
+قیمت : 220 هزارتومان<br>
+<br>
+برای خرید با شماره 09152091003 در تماس باشید.
+
+
+
+</p>
+            <p></p>
+            <p></p>
+
+            <!--<blockquote><p> Mauris eu wisi. Ut ante dui, aliquet nec, congue non, accumsan sit amet, lectus. </p></blockquote>-->
+
+            <ul class="clearfix">
+
+                                    <li>
+                        برچسب&zwnj;ها:
+                                                    <a href="/post/tag/فروش دامین" >فروش دامین</a>،
+                                                    <a href="/post/tag/دامین رنک دار" >دامین رنک دار</a>،
+                                                    <a href="/post/tag/فروش بک لینک" >فروش بک لینک</a>،
+                                                    <a href="/post/tag/فروش دامین اتوریتی" >فروش دامین اتوریتی</a>،
+                                                    <a href="/post/tag/فروش دامین با اتوریتی بالا" >فروش دامین با اتوریتی بالا</a>،
+                                                    <a href="/post/tag/فروش دامین رنک بالا" >فروش دامین رنک بالا</a>،
+                                                &nbsp;
+                    </li>
+                
+
+
+                
+
+            </ul>
+
+        </div>
+    
+        <div  class="PostDet">
+            <li style="float: left;" class="PostCom">   <a target="_self" href="/post/1#commentlist" class="comment-link">نظرات(<script>setCommentCnt(1)</script>)</a>&nbsp;</li>
+            <div style="float: left; margin-top: -5px;"> <script>mihanblogPostLike('1','like')</script></div>
+        </div>
+    </div>
+
+
+    <div class="clearer"></div>
+
+
+<!-- Comment -->
+
+
+<div>
+
+   
+
+    </div>
+<!-- End Comment-->
+
+
+
+<!-- Start Nav -->
+<div align="right" class="page_box">
+    </div>
+<!-- End Nav -->
+
+
+</div></div>
+<!-- End SC -->
+<div class="SR col-md-4 col-lg-4 col-sm-12 col-xs-12">
+<div class="SRL hidden-sm col-md-6 col-lg-6 hidden-xs">
+    
+    <!-- Start Archives -->
+            <div class="Panel PYellow">
+            <h3>آرشیو</h3>
+            <ul>
+                                    <li><a href='/post/archive/1394/7' title=' مهر 1394(2)'> مهر 1394</a></li>
+                                <li><a href="/post/archive"><b>لیست آرشیوها</b></a></li>
+            </ul>
+            <div class="PT"></div>
+        </div>
+        <!-- End Archives -->
+
+    <!-- Start Links -->
+        <!-- End Links -->
+
+    <!-- Start Links -->
+        <!-- End Links -->
+
+    <!-- Start extrapage -->
+        <!-- End extrapage -->
+
+    <div align="center"></div>
+</div>
+<div class=" col-sm-12 col-xs-12 col-md-6 col-lg-6">
+<div class="SRR">
+<div class="hidden-xs hidden-sm">
+    <div id="user_logo" class="clearfix">
+        <div align="center"></div>
+        <div align="center"><a href="/post/author/1355253">مهناز منوچهری</a></div>
+        <p></p>
+    </div><br />
+
+    <!-- Start Recent posts -->
+            <h3>آخرین پست&zwnj;ها</h3>
+        <ul class="clearfix">
+                            <li><a  href="/post/2">فروش دامین رنک 4</a></li>
+                            <li><a  href="/post/1">فروش دامین رنک بالا</a></li>
+                        <li><a  href="/post/list"><b>لیست آخرین پست&zwnj;ها</b></a></li>
+        </ul>
+        <!-- End Recent posts -->
+    <br />
+            <h3>نویسندگان</h3>
+        <ul class="clearfix">
+                            <li class="clearfix"  id="parentheses">
+                    <p><a href="/post/author/1355253"></a></p><a  class="clearfix" href="/post/author/1355253"><p>مهناز منوچهری</p><p>(2)</p></a>
+                </li>
+
+                    </ul>
+        <br/>
+
+    <!-- Start Recent Poll -->
+    
+		    <!-- End Recent Poll -->
+    <br />
+</div>
+
+            <h3><span class="clearfix">آمار وبلاگ</span></h3>
+        <ul class='stat'>
+            <li>کل بازدید : <span><script>getStatVar('total_view');</script></span></li>
+            <li>بازدید امروز :<span><script>getStatVar('today_view');</script></span></li>
+            <li>بازدید دیروز : <span><script>getStatVar('yesterday_view');</script></span></li>
+            <li>بازدید این ماه : <span><script>getStatVar('this_month_view');</script></span></li>
+            <li>بازدید ماه قبل : <span><script>getStatVar('last_month_view');</script></span></li>
+            <li>تعداد نویسندگان : <span><script>getStatVar('total_author');</script></span></li>
+            <li>تعداد کل پست&zwnj;ها : <span><script>getStatVar('total_post');</script></span></li>
+            <li>آخرین بازدید : <span><script>getStatVar('last_view_date');</script></span></li>
+            <li>آخرین بروز رسانی : <span><script>getStatVar('modify_date');</script></span></li>
+        </ul>
+        <br />
+
+<div class="hidden-xs hidden-sm">
+    <!-- Start Recent Tag_Cloud -->
+            <h3><span class="clearfix">اَبر برچسب&zwnj;ها</span></h3>
+        <div class="clearfix">
+            <ul class="cloud">
+                                    <li><a href="/post/tag/%D9%81%D8%B1%D9%88%D8%B4+%D8%AF%D8%A7%D9%85%DB%8C%D9%86+%D8%A7%D8%B1%D8%B2%D8%A7%D9%86" style="font-size:1em">فروش دامین ارزان</a>&nbsp;</li>
+                                    <li><a href="/post/tag/%D8%AF%D8%A7%D9%85%DB%8C%D9%86" style="font-size:1em">دامین</a>&nbsp;</li>
+                                    <li><a href="/post/tag/%D9%81%D8%B1%D9%88%D8%B4+%D8%AF%D8%A7%D9%85%DB%8C%D9%86+%D8%B1%D9%86%DA%A9+%D8%AF%D8%A7%D8%B1+%D8%A7%D8%B1%D8%B2%D8%A7%D9%86" style="font-size:1em">فروش دامین رنک دار ارزان</a>&nbsp;</li>
+                                    <li><a href="/post/tag/%D9%81%D8%B1%D9%88%D8%B4+%D8%AF%D8%A7%D9%85%DB%8C%D9%86+%D9%85%D8%AE%D8%B5%D9%88%D8%B5+%D8%A8%DA%A9+%D9%84%DB%8C%D9%86%DA%A9" style="font-size:1em">فروش دامین مخصوص بک لینک</a>&nbsp;</li>
+                                    <li><a href="/post/tag/%D8%AF%D8%A7%D9%85%DB%8C%D9%86+%D8%B1%D9%86%DA%A9+%D8%AF%D8%A7%D8%B1" style="font-size:1em">دامین رنک دار</a>&nbsp;</li>
+                                    <li><a href="/post/tag/%D9%81%D8%B1%D9%88%D8%B4" style="font-size:1em">فروش</a>&nbsp;</li>
+                                    <li><a href="/post/tag/%D9%81%D8%B1%D9%88%D8%B4+%D8%A8%DA%A9+%D9%84%DB%8C%D9%86%DA%A9" style="font-size:1em">فروش بک لینک</a>&nbsp;</li>
+                                    <li><a href="/post/tag/%D9%81%D8%B1%D9%88%D8%B4+%D8%AF%D8%A7%D9%85%DB%8C%D9%86+%D8%A7%D8%AA%D9%88%D8%B1%DB%8C%D8%AA%DB%8C" style="font-size:1em">فروش دامین اتوریتی</a>&nbsp;</li>
+                                    <li><a href="/post/tag/%D9%81%D8%B1%D9%88%D8%B4+%D8%AF%D8%A7%D9%85%DB%8C%D9%86+%D8%A8%D8%A7+%D8%A7%D8%AA%D9%88%D8%B1%DB%8C%D8%AA%DB%8C+%D8%A8%D8%A7%D9%84%D8%A7" style="font-size:1em">فروش دامین با اتوریتی بالا</a>&nbsp;</li>
+                                    <li><a href="/post/tag/%D9%81%D8%B1%D9%88%D8%B4+%D8%AF%D8%A7%D9%85%DB%8C%D9%86+%D8%B1%D9%86%DA%A9+%D8%A8%D8%A7%D9%84%D8%A7" style="font-size:2em">فروش دامین رنک بالا</a>&nbsp;</li>
+                            </ul>
+        </div>
+        <!-- End Recent Tag_Cloud -->
+    <br />
+
+</div>
+    <div align="center" class="mihan_logo"></div>
+
+
+
+
+
+</div></div>
+
+</div>
+</div>
+
+<!-- tainer -->
+
+<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+<div class="Footer">
+    <p><strong>POWERED BY <a href="http://www.mihanblog.com/"><font color="#FF0000" size="2px">M</font>IHAN<font color="#FF0000" size="2px">B</font>LOG.COM</a></strong><br />
+        Smashing Theme is created by: www.designdisease.com</p>
+</div>
+<div class="col-lg-4 col-md-4 hidden-sm hidden-xs"></div>
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+
+<script type="text/javascript">
+    var map = ["\u0660","\u0661","\u0662","\u0663","\u0664", "\u0665","\u0666","\u0667","\u0668","\u0669"];
+
+
+function replaceNumbers(node) {
+ if (node.nodeType === 3 && node.parentNode.localName != "style" && node.parentNode.localName != "script") {
+   node.nodeValue = node.nodeValue.replace(/[0-9]/g, getArabicNumber);
+ }
+ 
+}
+
+function getArabicNumber(n) {
+ return map[parseInt(n,10)];
+}
+
+function walk(node, func) {
+ func(node);
+ node = node.firstChild;
+ while (node) {
+ walk(node, func);
+ node = node.nextSibling;
+ }
+};
+
+walk(document.body, replaceNumbers);
+
+</script>
+</body>
+</html><script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER--><!--;)-->
+
+
+
+
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-18']);
+    _gaq.push(['_setDomainName', 'doc-jukebox.info']);
+    _gaq.push(['_setAllowLinker', true]);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
