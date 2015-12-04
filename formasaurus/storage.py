@@ -147,7 +147,7 @@ class Storage(object):
             assert len(form_answers) == len(forms)
 
         if visible_html_fields is None:
-            _, _, field_na_value = self.get_form_types()
+            _, _, field_na_value = self.get_field_types()
             visible_html_fields = [{
                 name: field_na_value
                 for name in get_field_names(get_fields_to_annotate(form))
