@@ -2,6 +2,7 @@ lxml
 docopt
 tqdm >= 2.0
 tldextract
+requests
 
 # 0.15 is need for make_pipeline and make_union functions;
 # it is easy enough to support earlier scikit-learn versions

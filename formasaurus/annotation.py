@@ -8,6 +8,8 @@ import os
 from six.moves.urllib.request import urlopen
 from six.moves import input
 
+import requests
+
 from formasaurus.html import get_cleaned_form_html, load_html, get_forms
 from formasaurus.storage import Storage
 
@@ -51,7 +53,8 @@ def load_data(url_or_path):
         # with open(url_or_path, 'rb') as f:
         #     return f.read(), None
     else:
-        return urlopen(url_or_path).read(), url_or_path
+        html = requests.get(url_or_path).content
+        return html, url_or_path
 
 
 def print_form_html(form):
