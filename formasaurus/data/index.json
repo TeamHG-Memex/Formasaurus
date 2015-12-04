@@ -126,21 +126,21 @@
     "html/arijaycomet.com-0.html": {
         "url": "http://arijaycomet.com/",
         "forms": [
-            "X",
-            "X",
-            "X"
+            "s",
+            "m",
+            "o"
         ],
         "visible_html_fields": [
             {
-                "s": "XX"
+                "s": "qq"
             },
             {
-                "email": "XX"
+                "email": "e1"
             },
             {
-                "carousel-reblog-content": "XX",
-                "carousel-reblog-submit": "XX",
-                "carousel-reblog-to-blog-id": "XX"
+                "carousel-reblog-content": "CC",
+                "carousel-reblog-submit": "Bs",
+                "carousel-reblog-to-blog-id": "OS"
             }
         ]
     },
@@ -231,37 +231,37 @@
     "html/asodao.info-0.html": {
         "url": "http://asodao.info/account",
         "forms": [
-            "X"
+            "l"
         ],
         "visible_html_fields": [
             {
-                "commit": "XX",
-                "password": "XX",
-                "username": "XX"
+                "commit": "Bs",
+                "password": "p1",
+                "username": "e1"
             }
         ]
     },
     "html/asodao.info-1.html": {
         "url": "http://asodao.info/signup",
         "forms": [
-            "X"
+            "r"
         ],
         "visible_html_fields": [
             {
-                "commit": "XX",
-                "username": "XX"
+                "commit": "Bs",
+                "username": "e1"
             }
         ]
     },
     "html/astral-guild.net-0.html": {
         "url": "http://astral-guild.net/",
         "forms": [
-            "X"
+            "s"
         ],
         "visible_html_fields": [
             {
-                "text": "XX",
-                "type": "XX"
+                "text": "qq",
+                "type": "qc"
             }
         ]
     },
@@ -409,11 +409,11 @@
     "html/binarymarket.ru-0.html": {
         "url": "http://binarymarket.ru/",
         "forms": [
-            "X"
+            "s"
         ],
         "visible_html_fields": [
             {
-                "s": "XX"
+                "s": "qq"
             }
         ]
     },
@@ -1342,7 +1342,7 @@
         "url": "http://forum.astral-guild.net/user/login.php",
         "forms": [
             "X",
-            "X"
+            "l"
         ],
         "visible_html_fields": [
             {
@@ -1350,8 +1350,8 @@
                 "type": "XX"
             },
             {
-                "userId": "XX",
-                "userPassword": "XX"
+                "userId": "us",
+                "userPassword": "p1"
             }
         ]
     },
@@ -1359,7 +1359,7 @@
         "url": "http://forum.astral-guild.net/user/regist.php",
         "forms": [
             "X",
-            "X"
+            "r"
         ],
         "visible_html_fields": [
             {
@@ -1367,14 +1367,14 @@
                 "type": "XX"
             },
             {
-                "password": "XX",
-                "password2": "XX",
-                "userAnswer": "XX",
-                "userId": "XX",
+                "password": "p1",
+                "password2": "p2",
+                "userAnswer": "sa",
+                "userId": "us",
                 "userMail": "XX",
-                "userName": "XX",
-                "userQuestion": "XX",
-                "userQuestionFixed": "XX"
+                "userName": "nf",
+                "userQuestion": "sq",
+                "userQuestionFixed": "sq"
             }
         ]
     },
@@ -1382,7 +1382,7 @@
         "url": "http://forum.astral-guild.net/user/reissue.php",
         "forms": [
             "X",
-            "X"
+            "p"
         ],
         "visible_html_fields": [
             {
@@ -1390,7 +1390,7 @@
                 "type": "XX"
             },
             {
-                "userMail": "XX"
+                "userMail": "e1"
             }
         ]
     },
@@ -1398,7 +1398,7 @@
         "url": "http://forum.astral-guild.net/search.php",
         "forms": [
             "X",
-            "X"
+            "s"
         ],
         "visible_html_fields": [
             {
@@ -1406,8 +1406,8 @@
                 "type": "XX"
             },
             {
-                "forum": "XX",
-                "text": "XX"
+                "forum": "qc",
+                "text": "qq"
             }
         ]
     },
@@ -1415,7 +1415,7 @@
         "url": "http://forum.astral-guild.net/makeThread.php?forum=1",
         "forms": [
             "X",
-            "X"
+            "c"
         ],
         "visible_html_fields": [
             {
@@ -1423,10 +1423,10 @@
                 "type": "XX"
             },
             {
-                "email": "XX",
-                "name": "XX",
-                "text": "XX",
-                "title": "XX"
+                "email": "e1",
+                "name": "nf",
+                "text": "CC",
+                "title": "CT"
             }
         ]
     },
@@ -5208,80 +5208,80 @@
     "html/www.agentur-filmgesichter.de-0.html": {
         "url": "https://www.agentur-filmgesichter.de/index.php?section=setinfos&content=login&log_mich_ein=true&art=komparse",
         "forms": [
-            "X"
+            "l"
         ],
         "visible_html_fields": [
             {
-                "absenden": "XX",
-                "login": "XX",
-                "passwort": "XX"
+                "absenden": "Bs",
+                "login": "ue",
+                "passwort": "p1"
             }
         ]
     },
     "html/www.agentur-filmgesichter.de-1.html": {
         "url": "https://www.agentur-filmgesichter.de/komparsen/passvergessen.php",
         "forms": [
-            "X"
+            "p"
         ],
         "visible_html_fields": [
             {
-                "absenden": "XX",
-                "captcha_answer_0": "XX",
-                "captcha_answer_1": "XX",
-                "captcha_answer_2": "XX",
-                "mail": "XX",
-                "name": "XX",
-                "vorname": "XX"
+                "absenden": "Bs",
+                "captcha_answer_0": "ca",
+                "captcha_answer_1": "ca",
+                "captcha_answer_2": "ca",
+                "mail": "e1",
+                "name": "n3",
+                "vorname": "n1"
             }
         ]
     },
     "html/www.alo.bg-0.html": {
         "url": "http://www.alo.bg/",
         "forms": [
-            "X"
+            "s"
         ],
         "visible_html_fields": [
             {
-                "q": "XX"
+                "q": "qq"
             }
         ]
     },
     "html/www.alo.bg-1.html": {
         "url": "https://www.alo.bg/register.php",
         "forms": [
-            "X"
+            "r"
         ],
         "visible_html_fields": [
             {
-                "captcha_sum": "XX",
-                "cpassword": "XX",
-                "email": "XX",
-                "password": "XX",
-                "username": "XX"
+                "captcha_sum": "ca",
+                "cpassword": "p2",
+                "email": "e1",
+                "password": "p1",
+                "username": "us"
             }
         ]
     },
     "html/www.alo.bg-2.html": {
         "url": "https://www.alo.bg/login.php",
         "forms": [
-            "X"
+            "l"
         ],
         "visible_html_fields": [
             {
-                "password": "XX",
-                "username": "XX"
+                "password": "p1",
+                "username": "us"
             }
         ]
     },
     "html/www.alo.bg-3.html": {
         "url": "https://www.alo.bg/fpass.php",
         "forms": [
-            "X"
+            "p"
         ],
         "visible_html_fields": [
             {
-                "captcha_sum": "XX",
-                "email": "XX"
+                "captcha_sum": "ca",
+                "email": "e1"
             }
         ]
     },
@@ -5289,16 +5289,16 @@
         "url": "http://www.alo.bg/2636120",
         "forms": [
             "X",
-            "X"
+            "c"
         ],
         "visible_html_fields": [
             {
                 "q": "XX"
             },
             {
-                "abuse_contact": "XX",
-                "abuse_info": "XX",
-                "captcha_sum": "XX"
+                "abuse_contact": "OT",
+                "abuse_info": "CC",
+                "captcha_sum": "ca"
             }
         ]
     },
@@ -5329,12 +5329,12 @@
     "html/www.arxan.com-0.html": {
         "url": "https://www.arxan.com/",
         "forms": [
-            "X"
+            "s"
         ],
         "visible_html_fields": [
             {
-                "s": "XX",
-                "submit": "XX"
+                "s": "qq",
+                "submit": "Bs"
             }
         ]
     },
@@ -5353,53 +5353,53 @@
     "html/www.asindexing.org-0.html": {
         "url": "http://www.asindexing.org/",
         "forms": [
-            "X",
-            "X"
+            "l",
+            "s"
         ],
         "visible_html_fields": [
             {
-                "rememberme": "XX",
-                "submit": "XX"
+                "rememberme": "rC",
+                "submit": "Bs"
             },
             {
-                "s": "XX"
+                "s": "qq"
             }
         ]
     },
     "html/www.asindexing.org-1.html": {
         "url": "http://www.asindexing.org/asilog/?action=lostpassword",
         "forms": [
-            "X"
+            "p"
         ],
         "visible_html_fields": [
             {
-                "user_login": "XX",
-                "wp-submit": "XX"
+                "user_login": "ue",
+                "wp-submit": "Bs"
             }
         ]
     },
     "html/www.askquran.ir-0.html": {
         "url": "http://www.askquran.ir/",
         "forms": [
+            "l",
+            "s",
             "X",
-            "X",
-            "X",
-            "X"
+            "o"
         ],
         "visible_html_fields": [
             {
-                "cookieuser": "XX",
-                "vb_login_password": "XX",
-                "vb_login_password_hint": "XX",
-                "vb_login_username": "XX"
+                "cookieuser": "rC",
+                "vb_login_password": "p1",
+                "vb_login_password_hint": "OR",
+                "vb_login_username": "us"
             },
             {
-                "q": "XX",
-                "submit": "XX"
+                "q": "qq",
+                "submit": "Bs"
             },
             {},
             {
-                "styleid": "XX"
+                "styleid": "OS"
             }
         ]
     },
@@ -5433,7 +5433,7 @@
         "forms": [
             "X",
             "X",
-            "X",
+            "r",
             "X"
         ],
         "visible_html_fields": [
@@ -5448,23 +5448,23 @@
                 "submit": "XX"
             },
             {
-                "Reset": "XX",
-                "agree": "XX",
-                "dst": "XX",
-                "email": "XX",
-                "emailconfirm": "XX",
-                "humanverify[input]": "XX",
-                "options[adminemail]": "XX",
-                "password": "XX",
-                "passwordconfirm": "XX",
-                "timezoneoffset": "XX",
-                "userfield[field1]": "XX",
-                "userfield[field2]": "XX",
-                "userfield[field3]": "XX",
-                "userfield[field4]": "XX",
-                "userfield[field5]": "XX",
-                "userfield[field6][]": "XX",
-                "username": "XX"
+                "Reset": "Br",
+                "agree": "tC",
+                "dst": "ds",
+                "email": "e1",
+                "emailconfirm": "e2",
+                "humanverify[input]": "ca",
+                "options[adminemail]": "eC",
+                "password": "p1",
+                "passwordconfirm": "p2",
+                "timezoneoffset": "tz",
+                "userfield[field1]": "am",
+                "userfield[field2]": "Ci",
+                "userfield[field3]": "OT",
+                "userfield[field4]": "OT",
+                "userfield[field5]": "OT",
+                "userfield[field6][]": "ge",
+                "username": "us"
             },
             {
                 "styleid": "XX"
@@ -5474,75 +5474,75 @@
     "html/www.asodao.info-0.html": {
         "url": "http://www.asodao.info/resetpassword",
         "forms": [
-            "X"
+            "p"
         ],
         "visible_html_fields": [
             {
-                "commit": "XX",
-                "email": "XX"
+                "commit": "Bs",
+                "email": "e1"
             }
         ]
     },
     "html/www.azureva-vacances.com-0.html": {
         "url": "http://www.azureva-vacances.com/",
         "forms": [
-            "X"
+            "s"
         ],
         "visible_html_fields": [
             {
-                "adultes": "XX",
-                "calendar_date": "XX",
-                "chk_a[562]": "XX",
-                "chk_a[563]": "XX",
-                "chk_a[564]": "XX",
-                "chk_a[565]": "XX",
-                "chk_a[566]": "XX",
-                "chk_a[567]": "XX",
-                "chk_i[118]": "XX",
-                "chk_i[119]": "XX",
-                "chk_i[466]": "XX",
-                "chk_i[468]": "XX",
-                "chk_i[469]": "XX",
-                "chk_i[470]": "XX",
-                "chk_i[471]": "XX",
-                "chk_i[473]": "XX",
-                "chk_s[110]": "XX",
-                "chk_s[115]": "XX",
-                "chk_s[116]": "XX",
-                "chk_s[496]": "XX",
-                "chk_s[497]": "XX",
-                "chk_s[498]": "XX",
-                "chk_s[499]": "XX",
-                "chk_s[500]": "XX",
-                "chk_s[501]": "XX",
-                "chk_s[502]": "XX",
-                "chk_s[503]": "XX",
-                "chk_s[504]": "XX",
-                "chk_s[505]": "XX",
-                "chk_s[506]": "XX",
-                "chk_s[507]": "XX",
-                "destination": "XX",
-                "duree": "XX",
-                "enfants_moins_11": "XX",
-                "enfants_moins_14": "XX",
-                "enfants_moins_2": "XX",
-                "enfants_moins_6": "XX",
-                "prestation": "XX",
-                "send_recherche": "XX",
-                "village": "XX"
+                "adultes": "qc",
+                "calendar_date": "OD",
+                "chk_a[562]": "qc",
+                "chk_a[563]": "qc",
+                "chk_a[564]": "qc",
+                "chk_a[565]": "qc",
+                "chk_a[566]": "qc",
+                "chk_a[567]": "qc",
+                "chk_i[118]": "qc",
+                "chk_i[119]": "qc",
+                "chk_i[466]": "qc",
+                "chk_i[468]": "qc",
+                "chk_i[469]": "qc",
+                "chk_i[470]": "qc",
+                "chk_i[471]": "qc",
+                "chk_i[473]": "qc",
+                "chk_s[110]": "qc",
+                "chk_s[115]": "qc",
+                "chk_s[116]": "qc",
+                "chk_s[496]": "qc",
+                "chk_s[497]": "qc",
+                "chk_s[498]": "qc",
+                "chk_s[499]": "qc",
+                "chk_s[500]": "qc",
+                "chk_s[501]": "qc",
+                "chk_s[502]": "qc",
+                "chk_s[503]": "qc",
+                "chk_s[504]": "qc",
+                "chk_s[505]": "qc",
+                "chk_s[506]": "qc",
+                "chk_s[507]": "qc",
+                "destination": "qc",
+                "duree": "qc",
+                "enfants_moins_11": "qc",
+                "enfants_moins_14": "qc",
+                "enfants_moins_2": "qc",
+                "enfants_moins_6": "qc",
+                "prestation": "qc",
+                "send_recherche": "Bs",
+                "village": "qc"
             }
         ]
     },
     "html/www.azureva-vacances.com-1.html": {
         "url": "http://www.azureva-vacances.com/user/register?n_id=101",
         "forms": [
-            "X"
+            "r"
         ],
         "visible_html_fields": [
             {
-                "ContentObjectAttribute_data_user_email_7325973": "XX",
-                "ContentObjectAttribute_data_user_password_7325973": "XX",
-                "ContentObjectAttribute_data_user_password_confirm_7325973": "XX"
+                "ContentObjectAttribute_data_user_email_7325973": "e1",
+                "ContentObjectAttribute_data_user_password_7325973": "p1",
+                "ContentObjectAttribute_data_user_password_confirm_7325973": "p2"
             }
         ]
     },
@@ -5566,23 +5566,23 @@
     "html/www.basic-photography-tips.com-0.html": {
         "url": "http://www.basic-photography-tips.com/starting-a-photography-business.html",
         "forms": [
-            "X"
+            "c"
         ],
         "visible_html_fields": [
             {
-                "submission_author": "XX",
-                "submission_author_location": "XX",
-                "submission_guidelines": "XX",
-                "submission_image_1": "XX",
-                "submission_image_1_text": "XX",
-                "submission_image_2": "XX",
-                "submission_image_2_text": "XX",
-                "submission_image_3": "XX",
-                "submission_image_3_text": "XX",
-                "submission_image_4": "XX",
-                "submission_image_4_text": "XX",
-                "submission_text": "XX",
-                "submission_title": "XX"
+                "submission_author": "nf",
+                "submission_author_location": "Ad",
+                "submission_guidelines": "tC",
+                "submission_image_1": "OU",
+                "submission_image_1_text": "OT",
+                "submission_image_2": "OU",
+                "submission_image_2_text": "OT",
+                "submission_image_3": "OU",
+                "submission_image_3_text": "OT",
+                "submission_image_4": "OU",
+                "submission_image_4_text": "OT",
+                "submission_text": "CC",
+                "submission_title": "CT"
             }
         ]
     },
