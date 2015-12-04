@@ -7,7 +7,7 @@ import os
 def get_version():
     fn = os.path.join(os.path.dirname(__file__), "formasaurus", "__init__.py")
     with open(fn) as f:
-        return re.findall("__version__ = '([\d\.]+)'", f.read())[0]
+        return re.findall("__version__ = '([\d\.\w]+)'", f.read())[0]
 
 
 setup(

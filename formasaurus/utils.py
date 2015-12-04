@@ -7,7 +7,7 @@ import tldextract
 
 def dependencies_string():
     """
-    Return a string with versions of numpy, scipy and scikit-learn.
+    Return a string with versions of formasaurus, numpy, scipy and scikit-learn.
 
     Saved scikit-learn models may be not compatible between different
     numpy/scipy/scikit-learn versions; a string returned by this function
@@ -16,10 +16,13 @@ def dependencies_string():
     import numpy
     import scipy
     import sklearn
+    import formasaurus
+
     py_version = "%s.%s" % sys.version_info[:2]
 
-    return "py%s-numpy%s-scipy%s-sklearn%s" % (
-        py_version, numpy.__version__, scipy.__version__, sklearn.__version__
+    return "%s-py%s-numpy%s-scipy%s-sklearn%s" % (
+        formasaurus.__version__, py_version,
+        numpy.__version__, scipy.__version__, sklearn.__version__
     )
 
 
