@@ -127,11 +127,18 @@ class Storage(object):
         return types, types_inv, na_value
 
     def add_result(self, html, url, form_answers=None,
-                   visible_html_fields=None):
+                   visible_html_fields=None, index=None,
+                   add_empty=True):
         """
         Save HTML source and its <form> and form field types.
         """
         forms = get_forms(load_html(html))
+        if not add_empty:
+            if not len(forms):
+                return
+
+            if all(len(get_fields_to_annotate(form)) == 0 for form in forms):
+                return
 
         if form_answers is None:
             _, _, form_na_value = self.get_form_types()
@@ -147,9 +154,10 @@ class Storage(object):
             } for form in forms]
 
         filename = self.generate_filename(url)
-        rel_filename = os.path.relpath(filename, self.folder)
-        index = self.get_index()
-        index[rel_filename] = {
+        path = os.path.relpath(filename, self.folder)
+        if index is None:
+            index = self.get_index()
+        index[path] = {
             "url": url,
             "forms": form_answers,
             "visible_html_fields": visible_html_fields,
@@ -157,6 +165,7 @@ class Storage(object):
         with open(filename, 'wb') as f:
             f.write(html)
         self.write_index(index)
+        return path
 
     def iter_annotations(self, index=None, drop_duplicates=True, drop_na=True,
                          verbose=False, leave=False):
@@ -188,7 +197,11 @@ class Storage(object):
             print("")
 
     def iter_trees(self, index=None):
-        """ Return an iterator over (filename, tree, info) tuples """
+        """
+        Return an iterator over ``(filename, tree, info)`` tuples
+        where ``filename`` is a relative file name, ``tree`` is a lxml tree
+        and ``info`` is a dictionary with annotation data.
+        """
         if index is None:
             index = self.get_index()
         sorted_items = sorted(
@@ -199,8 +212,14 @@ class Storage(object):
             tree = self.get_tree(path, info)
             yield path, tree, info
 
-    def get_tree(self, path, info):
-        """ Load a single tree """
+    def get_tree(self, path, info=None):
+        """
+        Load a single tree.
+        ``path`` is a relative path to a file (key in index.json file),
+        ``info`` is annotation data (value in index.json file).
+        """
+        if info is None:
+            info = self.get_index()[path]
         with open(os.path.join(self.folder, path), "rb") as f:
             return load_html(f.read(), info["url"])
 
