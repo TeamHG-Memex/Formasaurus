@@ -5,6 +5,7 @@ IPython widgets for data annotation.
 from ipywidgets import widgets
 from IPython.display import display
 
+from formasaurus import annotation
 from formasaurus.html import (
     get_cleaned_form_html,
     html_escape,
@@ -205,3 +206,25 @@ def MultiFormAnnotator(annotations, form_types, field_types,
 
     slider.on_trait_change(on_change, 'value')
     on_change('value', slider.value)
+
+
+def AddPageWidget(storage):
+    """
+    Widget used to add a new web page to dataset.
+    """
+    url_field = widgets.Text(description='URL:', value='')
+    fetch_btn = widgets.Button(description='Add')
+
+    def on_submit(_):
+        html, url = annotation.load_data(url_field.value)
+        path = storage.add_result(html, url, add_empty=False)
+        if path is None:
+            print("No forms at ", url)
+        else:
+            print("Added:", path, url)
+        url_field.value = ""
+
+    fetch_btn.on_click(on_submit)
+    url_field.on_submit(on_submit)
+    box = widgets.HBox([url_field, fetch_btn], padding=4)
+    display(box)
