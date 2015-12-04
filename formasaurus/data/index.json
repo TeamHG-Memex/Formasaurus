@@ -5031,64 +5031,64 @@
     "html/www.acozinhar.pt-0.html": {
         "url": "http://www.acozinhar.pt/portal/parceiros/",
         "forms": [
-            "X"
+            "l"
         ],
         "visible_html_fields": [
             {
-                "log": "XX",
-                "pwd": "XX",
-                "rememberme": "XX",
-                "submit": "XX"
+                "log": "us",
+                "pwd": "p1",
+                "rememberme": "rC",
+                "submit": "Bs"
             }
         ]
     },
     "html/www.acozinhar.pt-1.html": {
         "url": "http://www.acozinhar.pt/portal/wp-signup.php",
         "forms": [
-            "X"
+            "r"
         ],
         "visible_html_fields": [
             {
-                "submit": "XX",
-                "user_email": "XX",
-                "user_name": "XX"
+                "submit": "Bs",
+                "user_email": "e1",
+                "user_name": "us"
             }
         ]
     },
     "html/www.acozinhar.pt-2.html": {
         "url": "http://www.acozinhar.pt/portal/wp-login.php?action=lostpassword",
         "forms": [
-            "X"
+            "p"
         ],
         "visible_html_fields": [
             {
-                "user_login": "XX",
-                "wp-submit": "XX"
+                "user_login": "ue",
+                "wp-submit": "Bs"
             }
         ]
     },
     "html/www.acozinhar.pt-3.html": {
         "url": "http://www.acozinhar.pt/portal/wp-login.php",
         "forms": [
-            "X"
+            "l"
         ],
         "visible_html_fields": [
             {
-                "log": "XX",
-                "pwd": "XX",
-                "rememberme": "XX",
-                "wp-submit": "XX"
+                "log": "us",
+                "pwd": "p1",
+                "rememberme": "rC",
+                "wp-submit": "Bs"
             }
         ]
     },
     "html/www.activemobility.co.uk-0.html": {
         "url": "https://www.activemobility.co.uk/index.php",
         "forms": [
-            "X"
+            "s"
         ],
         "visible_html_fields": [
             {
-                "keywords": "XX"
+                "keywords": "qq"
             }
         ]
     },
@@ -5096,28 +5096,28 @@
         "url": "https://www.activemobility.co.uk/create-account.html",
         "forms": [
             "X",
-            "X"
+            "r"
         ],
         "visible_html_fields": [
             {
                 "keywords": "XX"
             },
             {
-                "city": "XX",
-                "company": "XX",
-                "confirmation": "XX",
-                "country": "XX",
-                "email_address": "XX",
-                "fax": "XX",
-                "firstname": "XX",
-                "lastname": "XX",
-                "newsletter": "XX",
-                "password": "XX",
-                "postcode": "XX",
-                "state": "XX",
-                "street_address": "XX",
-                "suburb": "XX",
-                "telephone": "XX"
+                "city": "Ci",
+                "company": "no",
+                "confirmation": "p2",
+                "country": "Co",
+                "email_address": "e1",
+                "fax": "fa",
+                "firstname": "n1",
+                "lastname": "n3",
+                "newsletter": "eC",
+                "password": "p1",
+                "postcode": "Zi",
+                "state": "St",
+                "street_address": "Sa",
+                "suburb": "A2",
+                "telephone": "ph"
             }
         ]
     },
@@ -5125,16 +5125,16 @@
         "url": "https://www.activemobility.co.uk/login.html",
         "forms": [
             "X",
-            "X"
+            "l"
         ],
         "visible_html_fields": [
             {
                 "keywords": "XX"
             },
             {
-                "email_address": "XX",
-                "new_customer": "XX",
-                "password": "XX"
+                "email_address": "e1",
+                "new_customer": "OS",
+                "password": "p1"
             }
         ]
     },
@@ -5142,25 +5142,25 @@
         "url": "https://www.activemobility.co.uk/hearing-mini-p-2635.html",
         "forms": [
             "X",
-            "X",
-            "X"
+            "b",
+            "o"
         ],
         "visible_html_fields": [
             {
                 "keywords": "XX"
             },
             {
-                "cart_quantity": "XX",
-                "email": "XX",
-                "message": "XX",
-                "name": "XX",
-                "vote": "XX"
+                "cart_quantity": "qt",
+                "email": "e1",
+                "message": "CC",
+                "name": "nf",
+                "vote": "OS"
             },
             {
-                "email": "XX",
-                "message": "XX",
-                "name": "XX",
-                "vote": "XX"
+                "email": "e1",
+                "message": "CC",
+                "name": "nf",
+                "vote": "OS"
             }
         ]
     },

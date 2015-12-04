@@ -7,6 +7,7 @@
             {"short": "p", "full": "password/login recovery"},
             {"short": "c", "full": "contact"},
             {"short": "m", "full": "join mailing list"},
+            {"short": "b", "full": "order/add to cart"},
             {"short": "o", "full": "other"},
             {"short": "X", "full": "NOT ANNOTATED"}
         ],
@@ -92,6 +93,8 @@
 
             {"short": "qq", "full": "search query"},
             {"short": "qc", "full": "search category / refinement"},
+
+            {"short": "qt", "full": "product quantity"},
 
             {"short": "nv", "full": "navigation"},
 
