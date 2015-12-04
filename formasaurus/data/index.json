@@ -614,25 +614,6 @@
             }
         ]
     },
-    "html/buyee.jp-4.html": {
-        "url": "http://buyee.jp/rakuten/detail/cameron%3A10047511",
-        "forms": [
-            "X",
-            "X",
-            "X"
-        ],
-        "visible_html_fields": [
-            {},
-            {
-                "query": "XX"
-            },
-            {
-                "shopping[itemVariation_\u30ab\u30e9\u30fc]": "XX",
-                "shopping[itemVariation_\u30ec\u30d3\u30e5\u30fc\u3092\u66f8\u3044\u30663\u5e74\u4fdd\u8a3c\u266a]": "XX",
-                "shopping[quantity]": "XX"
-            }
-        ]
-    },
     "html/cafephim.vn-0.html": {
         "url": "http://cafephim.vn/",
         "forms": [
@@ -8872,21 +8853,6 @@
             {
                 "inf_field_Email": "XX",
                 "inf_field_FirstName": "XX"
-            }
-        ]
-    },
-    "html/www.ldblog.jp-0.html": {
-        "url": "http://www.ldblog.jp/",
-        "forms": [
-            "X",
-            "X"
-        ],
-        "visible_html_fields": [
-            {
-                "q": "XX"
-            },
-            {
-                "u": "XX"
             }
         ]
     },
