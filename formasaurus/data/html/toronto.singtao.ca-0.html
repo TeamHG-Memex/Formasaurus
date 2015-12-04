@@ -1,0 +1,645 @@
+﻿﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>加拿大多倫多中文新聞網- 星島日報。Canada Toronto Chinese newspaper</title>
+  <meta name="description" content="加拿大多倫多華人中文新聞網-星島日報，為當地移民朋友提供多倫多、溫哥華、卡爾加裡及中國大陸、香港、台灣地區熱點新聞，社論、財經、體育、娛樂信息。Canada Toronto Vancouver and Calgary Chinesewebsite - Singtao newspaper, news of China, Hongkong, Taiwan, Finance, Sports, Entertainment,Canadian Chinese immigration, Chinese community in Toronto." />
+<meta name="keywords" content="多倫多中文網, 多倫多新聞, 多倫多中文新聞, 加拿大中文網, 加拿大中文新聞, 加拿大新聞, 加拿大中文日報, Canadian chinese website, Canadian Toronto chinese newspaper, 海外華人新聞, 華人移民, chineseimmigration, chinese community center">
+<meta name="Author" content="singtao.ca">
+<meta name="copyright" content="singtao.ca">
+<meta name="distribution" content="Global">
+<meta name="reply-to" content="info@singtao.ca">
+<meta name="revisit-after" content="30">
+<meta name="robots" content="index,follow">
+
+<link rel="shortcut icon" href="http://toronto.singtao.ca/wp-content/themes/ait2015/image/star.ico">
+<link rel="icon" type="image/x-icon" href="http://toronto.singtao.ca/wp-content/themes/ait2015/image/star.ico">
+<link href="http://toronto.singtao.ca/wp-content/themes/ait2015/site_2009_ver2.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-520e8df764202309" async="async"></script>
+<script type='text/javascript'>
+(function() {
+var useSSL = 'https:' == document.location.protocol;
+var src = (useSSL ? 'https:' : 'http:') +
+'//www.googletagservices.com/tag/js/gpt.js';
+document.write('<scr' + 'ipt src="' + src + '"></scr' + 'ipt>');
+})();
+</script>
+<SCRIPT type=text/javascript>
+
+ 	var lastTabId = 1;
+	var lastTabIdR = 6;
+  var adTags = {"index_1":["\/2976666\/ST_TOR_HP_Link","[300, 100]","div-gpt-ad-1391102265612-0"],"index_top":["\/2976666\/ST_TOR_HP_WallpaperLink_1x1","[1, 1]","div-gpt-ad-1391102254612-0","div-gpt-ad-1391102254612-0-oop"]};
+  var adTagsUse = [];
+
+  function resizeIframe(iframe) {
+        iframe.style.display = 'block';
+    iframe.height = iframe.contentWindow.document.body.scrollHeight + "px";
+  }
+
+	function tab_switch(id,from,to)//6---10      1---5
+	{
+    //taboff tabOff
+    //document.getElementById('section-' + lastTabIdR).style.display = 'none';
+    //document.getElementById('section-' + id).style.display = 'block';
+    //lastTabIdR = id;
+    for(var i = from; i <= to; i++) {
+      if (i == id) {
+        document.getElementById('t' + id).className = 'tabOn' ;
+        document.getElementById('section-' + id).style.display = 'block';
+      } else {
+        document.getElementById('t' + i).className = 'tabOff';
+        document.getElementById('section-' + i).style.display = 'none';
+      }
+    }
+	}
+
+
+
+        function setCookie(name, value)//兩個參數，一個是cookie的名子，一個是值
+        {
+            var Days = 30; //此 cookie 將被保存 30 天
+            var exp = new Date();    //new Date("December 31, 9998");
+            exp.setTime(exp.getTime() + Days * 24 * 60 * 60 * 1000);
+            document.cookie = name + "=" + escape(value) + ";expires=" + exp.toGMTString() + ";path=/";
+            //;expires=" + exp.toGMTString()
+        }
+        function getCookie(name)//取cookies函數
+        {
+            var arr = document.cookie.match(new RegExp("(^| )" + name + "=([^;]*)(;|$)"));
+            if (arr != null) return unescape(arr[2]); return null;
+
+        }
+
+    var sPageURL = window.location.search.substring(1);
+    if ( sPageURL.indexOf("variant=")<0 ) {
+      lan = getCookie('aitChLan');
+      if ( lan==null ) {
+        setCookie('aitChLan','zh-hk');
+        lan = getCookie('aitChLan');
+        //alert( 'lan is set:'+lan );
+      }
+      if ( window.location.href.indexOf("?")<0 ) {
+        window.location.href = window.location.href+'?variant='+lan;
+      } else {
+        window.location.href = window.location.href+'&variant='+lan;
+      }
+    }
+
+
+
+
+  function aitSwitchLan() {
+    //marven
+    //lan = getCookie('wpcc_variant_5a3eb1ea4218922093e10ea99c5203fd-nouse');
+
+    lan = getCookie('aitChLan');
+
+    //切換
+    url = window.location.href;
+    if ( lan=='zh-hk' ) {
+      setCookie('aitChLan','zh-cn');
+      url = url.replace(/variant=zh-hk/, "variant=zh-cn");
+    } else {
+      setCookie('aitChLan','zh-hk');
+      url = url.replace(/variant=zh-cn/, "variant=zh-hk");
+    }
+    window.location.href = url;
+  }
+
+
+  $( document ).ready(function() {
+
+
+    if ( typeof lan == 'undefined' ) {
+      lan = 'zh-hk';
+    }
+
+
+    $('.transChina').click(function() {
+      aitSwitchLan();
+    });
+  });
+
+
+  function aitHotNews() {
+    $.ajax({
+      type: "GET",
+      url: "http://toronto.singtao.ca/wp-content/themes/ait2015/scheduler/articlelist_72.xml",
+      dataType: "xml",
+      cache: false,
+      success: function (ResponseText) {
+        //alert(ResponseText);return;
+        var table = "";
+        var idx = 0;
+        $(ResponseText).find('article').each(function () {
+          //alert(1);
+          var title = $(this).find('title').text();
+          //console.log(title);
+          if ( title=='' ) {
+            //這裏應該查一下reason
+            return true;
+          }
+          title = title.substring(0,12)+'...';
+          var url = $(this).find('url').text();
+          if ( url.indexOf("/post-")<0 && url.indexOf("sandbox")<0 ) {
+            //console.log(url);
+            return true;
+          }
+          table += '<li><a target="_blank" href="'+url+'" class="f" title="'+title+'">'+title+'</a></li>';
+          idx ++;
+          if (idx == 10) {
+            return false;
+          }
+        });
+        //table += "</table>";
+        //alert(table);
+        //alert( $(".tagHotNews").length );
+        $(".tagHotNews").html(table);
+      }
+    });
+  }
+  $( document ).ready(function() {
+    if ( $(".tagHotNews").length!=0 ) {
+      aitHotNews();
+    }
+  });
+
+
+</SCRIPT>
+<style>
+.sp_content {width:200px;}
+.sp_content li{margin-bottom:5px;}
+#zt {
+  background:url("http://toronto.singtao.ca/wp-content/themes/ait2015/image/hotBK.jpg") no-repeat scroll center top transparent;
+  height:247px;
+}
+
+.whole_image {
+  width:155px;
+  height:120px;
+  display:inline;
+  margin-right: 10px;
+}
+
+.transChina {
+}
+label.vfb-desc {
+  display:inline-block;
+  width:220px;
+}
+textarea.vfb-textarea {
+  width:100%;
+}
+.visual-form-builder-container {
+  MARGIN-RIGHT: auto; MARGIN-LEFT: auto;float:none;
+  width:600px;
+}
+.image-cut {
+  width:165px;height:125px;
+
+  background-size: auto 100%;
+  background-color: #777;
+
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+  position: relative;
+}
+</style>
+<!--doubleClick-->
+<script type='text/javascript' src='http://partner.googleadservices.com/gampad/google_service.js'>
+</script>
+<script type='text/javascript'>
+GS_googleAddAdSenseService("ca-pub-6410773352388001");
+GS_googleEnableAllServices();
+</script>
+
+<script type='text/javascript'>
+GA_googleAddSlot('ca-pub-6410773352388001', 'ST_TOR_House_LeftTileBottom1_160x60');
+GA_googleAddSlot('ca-pub-6410773352388001', 'ST_TOR_House_LeftTileBottom2_160x60');
+GA_googleAddSlot('ca-pub-6410773352388001', 'ST_TOR_House_LeftTileBottom3_160x60');
+GA_googleAddSlot('ca-pub-6410773352388001', 'ST_TOR_House_LeftTileBottom4_160x60');
+GA_googleAddSlot('ca-pub-6410773352388001', 'ST_TOR_House_SpecialNewsBanner_300x77');
+GA_googleAddSlot('ca-pub-6410773352388001', 'ST_TOR_HP_CenterBanner_485x60');
+GA_googleAddSlot('ca-pub-6410773352388001', 'ST_TOR_HP_LeftTile1_160x60');
+GA_googleAddSlot('ca-pub-6410773352388001', 'ST_TOR_HP_LeftTile2_160x60');
+GA_googleAddSlot('ca-pub-6410773352388001', 'ST_TOR_HP_LeftTile3_160x60');
+GA_googleAddSlot('ca-pub-6410773352388001', 'ST_TOR_HP_RightBanner_300x77');
+GA_googleAddSlot('ca-pub-6410773352388001', 'ST_TOR_HP_RightSkyscraper_160x600');
+GA_googleAddSlot('ca-pub-6410773352388001', 'ST_TOR_HP_VideoBox_300x250');
+GA_googleAddSlot('ca-pub-6410773352388001', 'ST_TOR_CCUEFeatureArticle_300x360');
+GA_googleAddSlot('ca-pub-6410773352388001', 'ST_TOR_ROS_CenterBanner_485x60');
+GA_googleAddSlot('ca-pub-6410773352388001', 'ST_TOR_HP_LeftTile1_160x60');
+GA_googleAddSlot('ca-pub-6410773352388001', 'ST_TOR_HP_LeftTile2_160x60');
+GA_googleAddSlot('ca-pub-6410773352388001', 'ST_TOR_HP_LeftTile3_160x60');
+GA_googleAddSlot('ca-pub-6410773352388001', 'ST_TOR_ROS_LeftTile1_160x60');
+GA_googleAddSlot('ca-pub-6410773352388001', 'ST_TOR_ROS_LeftTile2_160x60');
+GA_googleAddSlot('ca-pub-6410773352388001', 'ST_TOR_ROS_LeftTile3_160x60');
+GA_googleAddSlot('ca-pub-6410773352388001', 'ST_TOR_ROS_VideoBox_300x250');
+GA_googleAddSlot('ca-pub-6410773352388001', 'ST_TOR_ROS_RightBanner_300x77');
+GA_googleAddSlot('ca-pub-6410773352388001', 'ST_TOR_ROS_RightSkyscraper_160x600');
+GA_googleAddSlot('ca-pub-6410773352388001', 'ST_TOR_HALFPAGE_300X600');
+GA_googleAddSlot('ca-pub-6410773352388001', 'ST_TOR_HP_Halfpage_300x600');
+GA_googleAddSlot('ca-pub-6410773352388001', 'ST_TOR_AUTO_728X90');
+GA_googleAddSlot('ca-pub-6410773352388001', 'ST_TOR_AUTO_300X250');
+GA_googleAddSlot('ca-pub-6410773352388001', 'ST_TOR_AUTO_VIDEOBOX_300X250');
+GA_googleAddSlot('ca-pub-6410773352388001', 'ST_TOR_AUTO_LT1_160X60');
+GA_googleAddSlot('ca-pub-6410773352388001', 'ST_TOR_AUTO_LT2_160X60');
+GA_googleAddSlot('ca-pub-6410773352388001', 'ST_TOR_AUTO_SKY_160X600');
+GA_googleFetchAds();
+</script>
+
+
+
+<script type='text/javascript'>
+
+  // for   adtechus
+  var curDateTime = new Date();
+  var offset = -(curDateTime.getTimezoneOffset());
+  if (offset > 0)
+    offset = "+" + offset;
+
+  if (window.adgroupid == undefined) {
+    window.adgroupid = Math.round(Math.random() * 1000);
+  }
+
+
+  //addyn/3.0/5214.1/905096/0/225/ADTECH
+  function aitTechus(adId) {
+    var adhtml = '<scr'+'ipt language="javascript1.1" src="http://adserver.adtechus.com/'+adId+';loc=100;target=_blank;key=key1+key2+key3+key4;grp='+window.adgroupid+';misc='+new Date().getTime()+';aduho='+offset+';rdclick="></scri'+'pt>';
+    document.write(adhtml);
+  }
+
+
+
+
+</script>
+
+<!-- end google code for floating overlay -->
+
+<!-- start eyeReturn track code -->
+<script type="text/javascript">
+(function l(d){
+	var site = '5892', page = 'generic', s, er = d.createElement('script');
+	er.type = 'text/javascript';
+	er.async = true;
+	er.src = '//o2.eyereturn.com/?site=' + site + '&page=' + page;
+	s = d.getElementsByTagName('script')[0];
+	s.parentNode.insertBefore(er, s);
+})(document);
+</script>
+<!-- end eyeReturn track code -->
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-5576765-4', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<!-- Start Alexa Certify Javascript -->
+<script type="text/javascript">
+_atrk_opts = { atrk_acct:"Tynzl1ak0EY1Io", domain:"singtao.ca",dynamic: true};
+(function() { var as = document.createElement('script'); as.type = 'text/javascript'; as.async = true; as.src = "https://d31qbv1cthcecs.cloudfront.net/atrk.js"; var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(as, s); })();
+</script>
+<noscript><img src="https://d5nxst8fruw4z.cloudfront.net/atrk.gif?account=Tynzl1ak0EY1Io" style="display:none" height="1" width="1" alt="" /></noscript>
+<!-- End Alexa Certify Javascript -->
+
+
+</head>
+
+<body>
+
+<style>
+.middle > * {
+  vertical-align: middle;
+}
+.clearfix {
+  clear: both;
+}
+#wrap{
+  width: 1000px;
+}
+#top {
+  width: 1000px;
+}
+#headerright{
+  width:800px;
+}
+#main {
+  width: 1000px;
+}
+#left{
+  width:165px;
+}
+#right{
+  width:825px;
+  margin-left:5px;
+}
+#right1{
+  width:510px;
+}
+</style>
+
+
+
+
+
+
+
+<!-- ad-key:tag:index_top //--><script>adTagsUse.push('index_top');</script>
+
+
+
+<div id="wrap">
+	<div id="top">
+		<div id="headerLeft">
+			<div id="logo"><a href="http://toronto.singtao.ca/?variant=zh-hk" ><img src="http://toronto.singtao.ca/wp-content/themes/ait2015/image/logo.jpg" /></a></div>
+		</div>
+        <div id="headerright">
+          <div id="l1">
+                 <div id="tabmenu">
+                    <img src="http://toronto.singtao.ca/wp-content/themes/ait2015/image/area/toronto_tab_on.jpg" /><a href="http://vancouver.singtao.ca/"><img src="http://toronto.singtao.ca/wp-content/themes/ait2015/image/area/vancouver_tab_off.jpg" /></a><a href="http://calgary.singtao.ca/"><img src="http://toronto.singtao.ca/wp-content/themes/ait2015/image/area/calgary_tab_off.jpg" /></a>                 </div>
+                               <div id="date" ><div>2015年12月4日&nbsp;&nbsp;星期五&nbsp;&nbsp;農曆&nbsp;&nbsp;十月廿三</div></div>
+
+              <div id="search">
+              <form name="xh" action="/cse" style="border:none; " >
+                <input type="text" id="q" name="key" onClick="if(this.value=='輸入關鍵詞'){this.value='';}" size="10" value="輸入關鍵詞"/>
+                <div id="search_btn" onClick="xh.submit();"></div>
+              </form>
+              </div>
+
+              <div id="search2">
+                <a href="/category/search2009/"><img src="http://toronto.singtao.ca/wp-content/themes/ait2015/image/search2.jpg" /></a>
+              </div>
+                      </div><!--end l1 -->
+        <div id="l2">
+	        <div id="nav">
+               <ul>
+                 <li><a href="http://toronto.singtao.ca/?variant=zh-hk">首頁</a></li>
+                 <li><a href="http://toronto.singtao.ca/category/%e5%8d%b3%e6%99%82/?variant=zh-hk">即時</a></li><li><a href="http://toronto.singtao.ca/category/%e8%a6%81%e8%81%9e/?variant=zh-hk">要聞</a></li><li><a href="http://toronto.singtao.ca/category/%e5%9f%8e%e5%b8%82/?variant=zh-hk">城市</a></li><li><a href="http://toronto.singtao.ca/category/%e5%8a%a0%e5%9c%8b/?variant=zh-hk">加國</a></li><li><a href="http://toronto.singtao.ca/category/%e5%8d%b3%e6%99%82/%e6%98%9f%e5%b3%b6%e8%bb%8a%e5%88%8a/?variant=zh-hk">車刊</a></li><li><a href="http://toronto.singtao.ca/category/%e5%8d%b3%e6%99%82/%e6%98%9f%e5%b3%b6%e6%99%82%e5%b0%9a/?variant=zh-hk">時尚</a></li><li><a href="http://toronto.singtao.ca/category/%e5%9c%8b%e9%9a%9b/?variant=zh-hk">國際</a></li><li><a href="http://toronto.singtao.ca/category/%e6%b8%af%e8%81%9e/?variant=zh-hk">港聞</a></li><li><a href="http://toronto.singtao.ca/category/%e4%b8%ad%e5%9c%8b/?variant=zh-hk">中國</a></li><li><a href="http://toronto.singtao.ca/category/%e5%8f%b0%e7%81%a3/?variant=zh-hk">台灣</a></li><li><a href="http://toronto.singtao.ca/category/%e9%ab%94%e8%82%b2/?variant=zh-hk">體育</a></li><li><a href="http://toronto.singtao.ca/category/%e8%b2%a1%e7%b6%93/?variant=zh-hk">財經</a></li><li><a href="http://toronto.singtao.ca/category/%e5%a8%9b%e6%a8%82/?variant=zh-hk">娛樂</a></li>                 <!-- <li><a href="http://news.singtao.ca/toronto/editorial.html">社論</a></li> -->
+                                <li><a href="#" class="transChina">簡繁轉換</a></li>
+                               </ul>
+            </div>
+         </div>
+      </div><!--end headerright -->
+
+
+	
+	</div><!--end top -->
+
+
+
+	<div id="main">
+
+
+	    <div id="left">
+
+                  <div id="left_menu" stylea="height: 270px;">
+             <table width="157" border="0" cellspacing="0" cellpadding="0">
+
+               <tr>
+                 <td width="30" height="30" align="center" valign="bottom"><img src="http://toronto.singtao.ca/wp-content/themes/ait2015/image/icon/left_menu1.jpg" alt="" width="19px" height="19px" border="0" /></td>
+                 <td width="127" valign="middle"><a href="/category/%E5%88%86%E9%A1%9E%E5%BB%A3%E5%91%8A" target="_blank" >分類廣告</a></td>
+               </tr>
+               <tr>
+                 <td height="30" align="center" valign="bottom"><img src="http://toronto.singtao.ca/wp-content/themes/ait2015/image/icon/left_menu2.jpg" alt="" width="19px" height="19px" border="0" /></td>
+                 <td valign="middle"><a href="http://ad.singtao.ca/" target="_blank" >即期商業廣告</a></td>
+                 <td width="30" valign="middle"><img src="http://toronto.singtao.ca/wp-content/themes/ait2015/image/icon/new_icon.jpg" alt="" width="30px" height="19px" border="0" /></td>
+               </tr>
+               <tr>
+                 <td height="30" align="center" valign="bottom"><img src="http://toronto.singtao.ca/wp-content/themes/ait2015/image/icon/left_menu3.jpg" width="19px" height="19px" /></td>
+                 <td valign="middle"><a href='http://www.ccue.ca' target="_blank">事事如意</a></td>
+               </tr>
+               <tr>
+                 <td height="30" align="center" valign="bottom"><img src="http://toronto.singtao.ca/wp-content/themes/ait2015/image/icon/left_menu4.jpg" width="19px" height="19px" /></td>
+                 <td valign="middle"><a href="http://www.dushi.ca/" target="_blank" >加拿大都市網</a></td>
+               </tr>
+               <tr>
+                 <td height="30" align="center" valign="bottom"><img src="http://toronto.singtao.ca/wp-content/themes/ait2015/image/icon/left_menu5.jpg" width="19px" height="19px" /></td>
+                 <td valign="middle"><a href="http://www.a1chineseradio.ca/" target="_blank" >A1中文電台</a></td>
+               </tr>
+               <tr>
+                 <td height="30" align="center" valign="bottom"><img src="http://toronto.singtao.ca/wp-content/themes/ait2015/image/icon/left_menu6.jpg" width="19px" height="19px" /></td>
+                 <td valign="middle"><a href='http://www.ccue.ca/tor/fenlei/' target="_blank">金頁電話簿</a></td>
+               </tr>
+                              <tr>
+                 <td height="30" align="center" valign="bottom"><img src="http://toronto.singtao.ca/wp-content/themes/ait2015/image/icon/left_menu9.jpg" width="19px" height="19px" /></td>
+                 <td valign="middle"><a href="http://newhome.singtao.ca" target="_blank">星島新盤搜尋</a></td>
+                 <td width="30" valign="middle"><img src="http://toronto.singtao.ca/wp-content/themes/ait2015/image/icon/new_icon_new.png" alt="" width="30px" height="24px" border="0"></td>
+               </tr>
+                              <tr>
+                 <td height="30" align="center" valign="bottom"><img src="http://toronto.singtao.ca/wp-content/themes/ait2015/image/icon/left_menu8.jpg" alt="EliteGen 星尚" width="19px" height="19px" border="0" /></td>
+                 <td valign="middle"><a href="http://elitegen.singtao.ca/magazine_tor/" target="_blank" >EliteGen 星尚</a></td>
+                 <td width="30" valign="middle"><img src="http://toronto.singtao.ca/wp-content/themes/ait2015/image/icon/new_icon.jpg" alt="" width="30px" height="19px" border="0" /></td>
+               </tr>
+               <tr>
+                 <td height="30" align="center" valign="bottom"><img src="http://toronto.singtao.ca/wp-content/themes/ait2015/image/icon/left_menu7.jpg" width="19px" height="19px" /></td>
+                 <td valign="middle"><a href='http://re.singtao.ca/toronto/' target="_blank">星島地產</a></td>
+               </tr>
+               <tr>
+                 <td height="30" align="center" valign="bottom"><img src="http://toronto.singtao.ca/wp-content/themes/ait2015/image/icon/left_menu10.jpg" width="19px" height="19px" /></td>
+                 <td valign="middle"><a href="http://www.ccue.ca/report/report.php" target="_blank" >用戶反饋</a></td>
+               </tr>
+               <tr>
+                 <td height="30" align="center" valign="bottom"><img src="http://toronto.singtao.ca/wp-content/themes/ait2015/image/icon/left_menu11.jpg" width="19px" height="19px" /></td>
+                 <td valign="middle"><a href="/mail-order-pre" target="_blank" >訂閱星島日報</a></td>
+               </tr>
+
+                           </table>
+          </div>
+                             <div class="ad160x60"><a href="http://ad.singtao.ca/category/%E6%B1%BD%E8%BB%8A/"><img src="http://toronto.singtao.ca/wp-content/themes/ait2015/image/car_dealership_ad_160x60.jpg" /></a></div>
+       
+              <div class="ad160x60"><!-- ad-key:index_left_160x60_1 //--><script>GA_googleFillSlot("ST_TOR_HP_LeftTile1_160x60");</script></div>
+              <div class="ad160x60"><!-- ad-key:index_left_160x60_2 //--><script>GA_googleFillSlot("ST_TOR_HP_LeftTile2_160x60");</script></div>
+              <div class="ad160x60"><!-- ad-key:index_left_160x60_3 //--><script>GA_googleFillSlot("ST_TOR_HP_LeftTile3_160x60");</script></div>
+
+<div class="ad160" id="ad160">
+  <!-- ad-key:techus:index_left //--><script>aitTechus('addyn/3.0/5214.1/905067/0/154/ADTECH');</script>
+</div>
+
+			  <div class="ad160x60"><!-- ad-key:index_left_bottom_160x60_1 //--><script>GA_googleFillSlot("ST_TOR_House_LeftTileBottom1_160x60");</script></div>
+        <div class="ad160x60"><!-- ad-key:index_left_bottom_160x60_2 //--><script>GA_googleFillSlot("ST_TOR_House_LeftTileBottom2_160x60");</script></div>
+        <div class="ad160x60"><!-- ad-key:index_left_bottom_160x60_3 //--><script>GA_googleFillSlot("ST_TOR_House_LeftTileBottom3_160x60");</script></div>
+			  <div class="ad160x60"><!-- ad-key:index_left_bottom_160x60_4 //--><script>GA_googleFillSlot("ST_TOR_House_LeftTileBottom4_160x60");</script></div>
+
+                <div class="ad160x60"><a href="http://www.ccue.ca/subscribe_tor/subscribe.html" target="_blank"><img src="http://toronto.singtao.ca/wp-content/themes/ait2015/image/newsletter.gif" /></a></div>
+
+
+</div>
+        <div id="right">
+
+
+          
+              <div class="ad728" id="ad728">
+                <!-- ad-key:techus:index_728 //--><script>aitTechus('addyn/3.0/5214.1/905096/0/225/ADTECH');</script>              </div>
+
+           <div id="right1">
+           		<!---tab news -->
+              
+           		
+    <div class="center_box_2_1 float_right" style="margin-bottom:5px;">
+      <div class="box_header"><div id="t3" class="tabOn" onMouseOver="tab_switch(3,3,7); return false;"><span class="cpadding cbpadding"><a href="http://toronto.singtao.ca/category/%e8%a6%81%e8%81%9e/?variant=zh-hk">要聞</a></span></div><div id="t4" class="tabOff" onMouseOver="tab_switch(4,3,7); return false;"><span class="cpadding cbpadding"><a href="http://toronto.singtao.ca/category/%e5%9f%8e%e5%b8%82/?variant=zh-hk">城市</a></span></div><div id="t5" class="tabOff" onMouseOver="tab_switch(5,3,7); return false;"><span class="cpadding cbpadding"><a href="http://toronto.singtao.ca/category/%e5%8a%a0%e5%9c%8b/?variant=zh-hk">加國</a></span></div><div id="t6" class="tabOff" onMouseOver="tab_switch(6,3,7); return false;"><span class="cpadding cbpadding"><a href="http://toronto.singtao.ca/category/%e5%9c%8b%e9%9a%9b/?variant=zh-hk">國際</a></span></div><div id="t7" class="tabOff" onMouseOver="tab_switch(7,3,7); return false;"><span class="cpadding cbpadding"><a href="http://toronto.singtao.ca/category/%e5%a8%9b%e6%a8%82/?variant=zh-hk">娛樂</a></span></div></div><div  id="section-3"   class="boxc_content_1 clearfix">  <div class="box_padding">    <div class="border1 float_left"><img src="http://toronto.singtao.ca/wp-content/uploads/toronto_sandbox/../master_sandbox/2015/12/tsa02p01031215.jpg" width="165" height="125" /></div>    <div id="inner_headline1" class="float_left" >      <P style="margin-bottom:10px;font-size:18px;line-height:25px;"><a href="http://toronto.singtao.ca/529506/2015-12-03/post-%e5%89%8d%e5%85%ac%e6%b0%91%e6%b3%95%e5%ae%98-%e6%8c%87%e6%9c%9f%e9%99%90%e5%a4%aa%e7%9f%ad-%e6%9c%aa%e5%8f%8a%e7%94%b3%e9%a0%98%e5%85%b7-%e6%99%82%e6%95%88%e8%ad%89%e6%98%8e%e6%9b%b8-%e7%89%b9/?variant=zh-hk" class="underline2" target="_blank">前公民法官 指期限太短 未及申領具 時效證明書  特快入境獲邀者 缺良民證「被棄權」</a></P>    </div>    <ul class="arrow">      <li><a href="http://toronto.singtao.ca/529499/2015-12-03/post-%e9%99%b3%e5%ae%b6%e8%ab%be%e7%8d%b2%e5%a7%94%e5%9c%8b%e6%9c%83%e5%89%af%e8%ad%b0%e9%95%b7-%e8%ba%8d%e5%8d%87%e3%80%8c%e6%9b%b4%e5%a4%a7%e8%88%9e%e5%8f%b0%e3%80%8d/?variant=zh-hk" target="_blank" title="陳家諾獲委國會副議長 躍升「更大舞台..." class="f">陳家諾獲委國會副議長 躍升「更大舞台...</a></li>      <li><a href="http://toronto.singtao.ca/529496/2015-12-03/post-%e5%8a%a0%e5%b7%9e%e3%80%8c%e5%85%ac%e5%8b%99%e5%93%a1%e3%80%8d%e6%a7%8d%e6%89%8b-%e5%82%b3%e5%87%ba%e5%b8%ad%e6%b4%be%e5%b0%8d%e5%be%8c%e5%b1%a0%e6%ae%ba/?variant=zh-hk" target="_blank" title="加州「公務員」槍手 傳出席派對後屠殺" class="f">加州「公務員」槍手 傳出席派對後屠殺</a></li>      <li><a href="http://toronto.singtao.ca/529495/2015-12-03/post-%e4%b8%8a%e6%a6%9c%e8%bb%8a%e6%ac%be-%e5%9d%87%e7%84%a1%e9%9b%bb%e5%ad%90-%e9%98%b2%e7%9b%9c%e7%b3%bb%e7%b5%b1-%e7%a6%8f%e7%89%b9%e5%b0%8f%e5%9e%8b%e9%81%8b%e8%b2%a8%e8%bb%8a-%e3%80%8c%e9%9b%84/?variant=zh-hk" target="_blank" title="上榜車款 均無電子 防盜系統  福特..." class="f">上榜車款 均無電子 防盜系統  福特...</a></li>      <li><a href="http://toronto.singtao.ca/529486/2015-12-03/post-%e5%93%a1%e5%b7%a5%e8%aa%a4%e4%bb%a5%e7%82%ba%e6%98%af%e6%bc%94%e7%bf%92-%e6%9b%be%e7%ac%91%e9%81%93%e5%85%b7%e6%a7%8d%e9%80%bc%e7%9c%9f/?variant=zh-hk" target="_blank" title="員工誤以為是演習 曾笑道具槍逼真" class="f">員工誤以為是演習 曾笑道具槍逼真</a></li>    </ul>    <span style="float:right;"><A class="underline4" href="http://toronto.singtao.ca/category/%e8%a6%81%e8%81%9e/?variant=zh-hk">更多&raquo;</A></span>  </div></div><div  id="section-4"  style="display:none" class="boxc_content_1 clearfix">  <div class="box_padding">    <div class="border1 float_left"><img src="http://toronto.singtao.ca/wp-content/uploads/toronto_sandbox/../master_sandbox/2015/12/tsa12p01031215.jpg" width="165" height="125" /></div>    <div id="inner_headline1" class="float_left" >      <P style="margin-bottom:10px;font-size:18px;line-height:25px;"><a href="http://toronto.singtao.ca/529456/2015-12-03/post-%e8%a2%ab%e6%89%b9%e7%99%bc%e9%9b%bb-%e8%a6%8f%e5%8a%83%e5%b7%ae-%e8%80%97%e7%9c%81%e6%b0%91-370%e5%84%84%e5%85%83-%e8%83%bd%e6%ba%90%e5%bb%b3%e9%95%b7%ef%bc%9a%e6%94%b6%e8%b2%bb-%e7%94%b1%e4%bf%9d/?variant=zh-hk" class="underline2" target="_blank">被批發電 規劃差 耗省民 370億元  能源廳長：收費 由保守黨政府制訂</a></P>    </div>    <ul class="arrow">      <li><a href="http://toronto.singtao.ca/529455/2015-12-03/post-%e5%b0%88%e5%ae%b6%ef%bc%9a%e6%b1%ba%e7%ad%96%e6%ad%a3%e7%a2%ba%e5%89%87%e8%aa%bf%e6%95%b4%e8%b2%bb%e5%90%88%e7%90%86/?variant=zh-hk" target="_blank" title="專家：決策正確則調整費合理" class="f">專家：決策正確則調整費合理</a></li>      <li><a href="http://toronto.singtao.ca/529453/2015-12-03/post-%e9%9b%85%e8%b3%a2%e7%8d%85%e5%ad%90%e6%9c%83%e5%a4%b1%e6%ac%be%e6%a1%88-%e5%89%8d%e6%9c%83%e9%95%b7%e7%a8%b1%e8%a2%ab%e5%91%8a%e7%bd%aa%e6%88%90/?variant=zh-hk" target="_blank" title="雅賢獅子會失款案 前會長稱被告罪成" class="f">雅賢獅子會失款案 前會長稱被告罪成</a></li>      <li><a href="http://toronto.singtao.ca/529451/2015-12-03/post-%e7%8f%be%e4%bb%bb%e6%9c%83%e9%95%b7%ef%bc%9a%e5%b7%b2%e6%94%b6%e5%9b%9e2%e8%90%ac%e5%85%83/?variant=zh-hk" target="_blank" title="現任會長：已收回2萬元" class="f">現任會長：已收回2萬元</a></li>      <li><a href="http://toronto.singtao.ca/529441/2015-12-03/post-%e8%aa%bf%e6%9f%a5%e7%99%bc%e7%8f%be-%e5%a4%9a%e5%b8%82%e5%b9%b3%e5%9d%87-%e8%8a%b157%e5%85%83-%e5%8a%a0%e4%ba%ba%e5%87%ba%e5%a4%96%e6%97%85%e9%81%8a-%e6%98%93%e5%bf%bd%e7%95%a5%e9%9a%b1%e8%97%8f/?variant=zh-hk" target="_blank" title="調查發現 多市平均 花57元  加人..." class="f">調查發現 多市平均 花57元  加人...</a></li>    </ul>    <span style="float:right;"><A class="underline4" href="http://toronto.singtao.ca/category/%e5%9f%8e%e5%b8%82/?variant=zh-hk">更多&raquo;</A></span>  </div></div><div  id="section-5"  style="display:none" class="boxc_content_1 clearfix">  <div class="box_padding">    <div class="border1 float_left"><img src="http://toronto.singtao.ca/wp-content/uploads/toronto_sandbox/../master_sandbox/2015/12/tsa15p04031215.jpg" width="165" height="125" /></div>    <div id="inner_headline1" class="float_left" >      <P style="margin-bottom:10px;font-size:18px;line-height:25px;"><a href="http://toronto.singtao.ca/529430/2015-12-03/post-sophia%e5%8f%8a-jackson-%e6%ad%b7%e4%b9%85%e5%b8%b8%e6%96%b0-%e5%b9%b4%e8%bc%95%e7%88%b6%e6%af%8d%e6%84%9b%e4%b8%8a%e7%b6%b2-%e3%80%8c%e6%90%9c%e5%b0%8b%e3%80%8d%e6%96%b0%e7%94%9f%e5%85%92%e5%90%8d/?variant=zh-hk" class="underline2" target="_blank">Sophia及 Jackson 歷久常新   年輕父母愛上網 「搜尋」新生兒名字</a></P>    </div>    <ul class="arrow">      <li><a href="http://toronto.singtao.ca/529429/2015-12-03/post-%e3%80%8c%e6%87%89%e5%9a%b4%e8%82%85%e6%85%8e%e9%87%8d%e8%99%95%e7%90%86%e3%80%8d/?variant=zh-hk" target="_blank" title="「應嚴肅慎重處理」" class="f">「應嚴肅慎重處理」</a></li>      <li><a href="http://toronto.singtao.ca/529428/2015-12-03/post-%e5%9c%9f%e7%94%9f%e8%8f%af%e4%ba%ba%e4%ba%8c%e4%bb%a3-%e7%94%a8%e9%9b%bb%e5%bd%b1%e4%b8%bb%e8%a7%92%e7%82%ba%e5%85%92%e5%91%bd%e5%90%8d/?variant=zh-hk" target="_blank" title="土生華人二代 用電影主角為兒命名" class="f">土生華人二代 用電影主角為兒命名</a></li>      <li><a href="http://toronto.singtao.ca/527057/2015-12-02/post-45%e5%8f%97%e8%a8%aa%e8%80%85-%e4%b8%8d%e7%9f%a5%e9%81%93-%e6%80%a7%e4%bc%b4%e6%98%af%e5%90%a6-%e6%84%9b%e6%bb%8b%e6%82%a3%e8%80%85-%e6%97%a5%e5%9d%877%e5%9c%8b%e6%b0%91%e6%9f%93hiv-%e9%80%be/?variant=zh-hk" target="_blank" title="45%受訪者 不知道 性伴是否 愛滋..." class="f">45%受訪者 不知道 性伴是否 愛滋...</a></li>      <li><a href="http://toronto.singtao.ca/527056/2015-12-02/post-%e9%86%ab%e7%94%9f%e6%8c%87%e6%84%9b%e6%bb%8b%e9%ab%98%e5%8d%b1%e4%ba%ba%e5%a3%ab-%e5%8f%af%e6%8e%a5%e5%8f%97%e5%85%8d%e8%b2%bb%e8%a1%80%e6%b6%b2%e6%aa%a2%e6%9f%a5/?variant=zh-hk" target="_blank" title="醫生指愛滋高危人士 可接受免費血液檢..." class="f">醫生指愛滋高危人士 可接受免費血液檢...</a></li>    </ul>    <span style="float:right;"><A class="underline4" href="http://toronto.singtao.ca/category/%e5%8a%a0%e5%9c%8b/?variant=zh-hk">更多&raquo;</A></span>  </div></div><div  id="section-6"  style="display:none" class="boxc_content_1 clearfix">  <div class="box_padding">    <div class="border1 float_left"><img src="http://toronto.singtao.ca/wp-content/uploads/toronto_sandbox/../master_sandbox/2015/12/s1000524863.jpg" width="165" height="125" /></div>    <div id="inner_headline1" class="float_left" >      <P style="margin-bottom:10px;font-size:18px;line-height:25px;"><a href="http://toronto.singtao.ca/529427/2015-12-03/post-%e5%93%a1%e5%b7%a5%e8%a2%ab%e7%96%8f%e6%95%a3-%e7%be%8e%e8%ad%a6%e9%8c%84%e5%8f%a3%e4%be%9b-%e5%81%b5%e6%8e%a2%e9%9b%86%e7%b7%9a%e7%b4%a2-%e9%81%87%e8%a5%b2%e8%80%85%e5%ae%b6%e5%b1%ac%e5%bf%83/?variant=zh-hk" class="underline2" target="_blank">員工被疏散 美警錄口供 偵探集線索  遇襲者家屬心憂 齊聚教會外守候</a></P>    </div>    <ul class="arrow">      <li><a href="http://toronto.singtao.ca/529417/2015-12-03/post-%e6%96%b0%e8%81%9e%e6%94%9d%e5%bd%b1%e5%b8%ab%e7%ac%ac%e4%b8%80%e6%99%82%e9%96%93%e5%88%b0%e5%a0%b4/?variant=zh-hk" target="_blank" title="新聞攝影師第一時間到場" class="f">新聞攝影師第一時間到場</a></li>      <li><a href="http://toronto.singtao.ca/529416/2015-12-03/post-%e6%a7%8d%e6%93%8a%e6%a1%88%e8%ae%93%e7%be%8e%e6%ad%b2%e6%9c%ab%e5%81%87%e6%9c%9f%e8%92%99%e9%99%b0%e9%9c%be/?variant=zh-hk" target="_blank" title="槍擊案讓美歲末假期蒙陰霾" class="f">槍擊案讓美歲末假期蒙陰霾</a></li>      <li><a href="http://toronto.singtao.ca/529415/2015-12-03/post-%e8%a1%9b%e6%98%9f%e7%85%a7%e7%89%87%e9%a1%af%e7%a4%ba%e3%80%8c%e6%9c%9d%e9%ae%ae%e6%a0%b8%e8%a9%a6%e5%a0%b4%e5%85%a7%e6%8c%96%e6%96%b0%e5%9c%b0%e9%81%93%e3%80%8d/?variant=zh-hk" target="_blank" title="衞星照片顯示「朝鮮核試場內挖新地道」" class="f">衞星照片顯示「朝鮮核試場內挖新地道」</a></li>      <li><a href="http://toronto.singtao.ca/529411/2015-12-03/post-%e6%a7%8d%e6%89%8b%e7%96%91%e9%80%83%e5%85%a5%e6%b0%91%e5%ae%85%e5%8d%80-%e5%b1%85%e6%b0%91%e6%93%94%e5%bf%83%e7%8f%be%e5%a0%b4%e6%b2%bb%e5%ae%89-%e8%a1%97%e9%81%93%e8%88%87%e5%ad%b8%e6%a0%a1%e8%a2%ab/?variant=zh-hk" target="_blank" title="槍手疑逃入民宅區 居民擔心現場治安 ..." class="f">槍手疑逃入民宅區 居民擔心現場治安 ...</a></li>    </ul>    <span style="float:right;"><A class="underline4" href="http://toronto.singtao.ca/category/%e5%9c%8b%e9%9a%9b/?variant=zh-hk">更多&raquo;</A></span>  </div></div><div  id="section-7"  style="display:none" class="boxc_content_1 clearfix">  <div class="box_padding">    <div class="border1 float_left"><img src="http://toronto.singtao.ca/wp-content/uploads/toronto_sandbox/../master_sandbox/2015/12/ent01x500312151.jpg" width="165" height="125" /></div>    <div id="inner_headline1" class="float_left" >      <P style="margin-bottom:10px;font-size:18px;line-height:25px;"><a href="http://toronto.singtao.ca/529151/2015-12-03/post-%e5%85%ac%e9%96%8b%e6%96%b0%e6%ad%a1%e9%81%ad%e8%b5%b7%e5%ba%95%e6%83%b9%e6%98%af%e9%9d%9e-%e5%9f%8e%e5%9f%8e%e8%ad%b7%e5%a5%b3%e5%8f%8b%ef%bc%9a%e6%af%8f%e5%80%8b%e4%ba%ba%e9%83%bd%e6%9c%89%e9%81%8e/?variant=zh-hk" class="underline2" target="_blank">公開新歡遭起底惹是非  城城護女友：每個人都有過去</a></P>    </div>    <ul class="arrow">      <li><a href="http://toronto.singtao.ca/529150/2015-12-03/post-%e5%9f%8e%e5%9f%8e%e4%bb%a4%e7%99%bd%e5%8f%aa%e5%bf%83%e8%b7%b3%e5%8a%a0%e9%80%9f/?variant=zh-hk" target="_blank" title="城城令白只心跳加速" class="f">城城令白只心跳加速</a></li>      <li><a href="http://toronto.singtao.ca/529143/2015-12-03/post-%e6%8b%96%e6%89%8b%e7%85%a7%e5%bc%95%e7%88%86%e7%98%8b%e7%8b%82%e6%8a%bd%e6%b0%b4%e6%bd%ae/?variant=zh-hk" target="_blank" title="拖手照引爆瘋狂抽水潮" class="f">拖手照引爆瘋狂抽水潮</a></li>      <li><a href="http://toronto.singtao.ca/529142/2015-12-03/post-%e5%b0%8f%e6%96%b9%e7%be%a8%e6%85%95%e9%98%bf%e5%9f%8e%e2%80%82%e8%a2%abstephy%e7%85%a7%e8%82%ba-2/?variant=zh-hk" target="_blank" title="小方羨慕阿城 被Stephy照肺" class="f">小方羨慕阿城 被Stephy照肺</a></li>      <li><a href="http://toronto.singtao.ca/529079/2015-12-03/post-%e5%b0%8f%e6%96%b9%e7%be%a8%e6%85%95%e9%98%bf%e5%9f%8e%e2%80%82%e8%a2%abstephy%e7%85%a7%e8%82%ba/?variant=zh-hk" target="_blank" title="小方羨慕阿城 被Stephy照肺" class="f">小方羨慕阿城 被Stephy照肺</a></li>    </ul>    <span style="float:right;"><A class="underline4" href="http://toronto.singtao.ca/category/%e5%a8%9b%e6%a8%82/?variant=zh-hk">更多&raquo;</A></span>  </div></div>    </div>
+
+    
+    <div class="center_box_2_1 float_right">
+      <div class="box_header" style="margin-top:5px;"><div id="t41" class="tabOn" onMouseOver="tab_switch(41,41,45); return false;"><span class="cpadding cbpadding"><a href="http://toronto.singtao.ca/category/%e5%8d%b3%e6%99%82/%e5%8d%b3%e6%99%82%e5%8a%a0%e5%9c%8b/?variant=zh-hk">即時加國</a></span></div><div id="t42" class="tabOff" onMouseOver="tab_switch(42,41,45); return false;"><span class="cpadding cbpadding"><a href="/category/即時香港">即時中港台</a></span></div><div id="t43" class="tabOff" onMouseOver="tab_switch(43,41,45); return false;"><span class="cpadding cbpadding"><a href="http://toronto.singtao.ca/category/%e5%8d%b3%e6%99%82/%e5%8d%b3%e6%99%82%e5%a8%9b%e6%a8%82/?variant=zh-hk">即時娛樂</a></span></div><div id="t44" class="tabOff" onMouseOver="tab_switch(44,41,45); return false;"><span class="cpadding cbpadding"><a href="http://toronto.singtao.ca/category/%e5%8d%b3%e6%99%82/%e5%8d%b3%e6%99%82%e8%b2%a1%e7%b6%93/?variant=zh-hk">即時財經</a></span></div><div id="t45" class="tabOff" onMouseOver="tab_switch(45,41,45); return false;"><span class="cpadding cbpadding"><a href="http://toronto.singtao.ca/category/%e5%8d%b3%e6%99%82/%e5%8d%b3%e6%99%82%e5%9c%8b%e9%9a%9b/?variant=zh-hk">即時國際</a></span></div></div><div  id="section-41"   class="boxc_content_1 clearfix">  <div class="box_padding">    <ul class="arrow1">      <li><img src="http://toronto.singtao.ca/wp-content/themes/ait2015/image/li.gif" style="margin-right:5px"><a href="http://toronto.singtao.ca/531161/2015-12-03/post-%e5%a3%ab%e5%98%89%e5%a0%a1%e8%bb%8a%e7%a6%8d-%e4%b8%80%e4%ba%ba%e6%ad%bb%e4%ba%a1/?variant=zh-hk" target="_blank" class="f" title="士嘉堡車禍 一人死亡">士嘉堡車禍 一人死亡</a></li>      <li><img src="http://toronto.singtao.ca/wp-content/themes/ait2015/image/li.gif" style="margin-right:5px"><a href="http://toronto.singtao.ca/531159/2015-12-03/post-%e7%a4%be%e5%8d%80%e5%85%ac%e5%b1%8b%e5%85%ac%e5%8f%b8%e6%89%b9%e5%87%86%e6%98%8e%e5%b9%b413%e5%84%84%e9%a0%90%e7%ae%97-%e9%82%84%e4%b8%8d%e5%a4%a0/?variant=zh-hk" target="_blank" class="f" title="社區公屋公司批准明年13...">社區公屋公司批准明年13...</a></li>      <li><img src="http://toronto.singtao.ca/wp-content/themes/ait2015/image/li.gif" style="margin-right:5px"><a href="http://toronto.singtao.ca/531153/2015-12-03/post-%e8%87%aa%e7%94%b1%e9%bb%a8%e8%ad%b0%e5%93%a1%e9%87%8c%e6%a0%b9%e7%95%b6%e9%81%b8%e4%b8%8b%e8%ad%b0%e9%99%a2%e8%ad%b0%e9%95%b7/?variant=zh-hk" target="_blank" class="f" title="自由黨議員里根當選下議院...">自由黨議員里根當選下議院...</a></li>      <li><img src="http://toronto.singtao.ca/wp-content/themes/ait2015/image/li.gif" style="margin-right:5px"><a href="http://toronto.singtao.ca/531140/2015-12-03/post-highway-9%e5%a4%9a%e8%bb%8a%e7%9b%b8%e6%92%9e6%e4%ba%ba%e5%8f%97%e5%82%b7-2%e4%ba%ba%e5%8d%b1%e6%ae%86/?variant=zh-hk" target="_blank" class="f" title="Highway 9多車相...">Highway 9多車相...</a></li>      <li><img src="http://toronto.singtao.ca/wp-content/themes/ait2015/image/li.gif" style="margin-right:5px"><a href="http://toronto.singtao.ca/531138/2015-12-03/post-%e7%94%b7%e5%ad%90%e9%98%bb%e7%a4%99%e8%ad%a6%e5%ae%98%e6%8a%93%e4%ba%ba-%e8%aa%aa%e7%9b%b8%e4%bf%a1%e5%ab%8c%e7%8a%af%e6%9c%89%e7%94%9f%e5%91%bd%e5%8d%b1%e9%9a%aa/?variant=zh-hk" target="_blank" class="f" title="男子阻礙警官抓人 說相信...">男子阻礙警官抓人 說相信...</a></li>      <li><img src="http://toronto.singtao.ca/wp-content/themes/ait2015/image/li.gif" style="margin-right:5px"><a href="http://toronto.singtao.ca/531101/2015-12-03/post-highway-400%e4%b8%89%e8%bb%8a%e7%9b%b8%e6%92%9e-%e4%b8%80%e4%ba%ba%e5%8d%b1%e6%ae%86/?variant=zh-hk" target="_blank" class="f" title="Highway 400三...">Highway 400三...</a></li>      <li><img src="http://toronto.singtao.ca/wp-content/themes/ait2015/image/li.gif" style="margin-right:5px"><a href="http://toronto.singtao.ca/531081/2015-12-03/post-%e5%8f%b0%e8%ad%b7%e7%85%a7%e9%bb%91%e5%b8%82%e5%83%b910%e8%90%ac%e7%be%8e%e5%85%83-%e5%86%92%e7%94%a8%e8%80%85%e5%a4%9a%e5%a4%a7%e9%99%b8%e4%ba%ba/?variant=zh-hk" target="_blank" class="f" title="台「護照」黑市價10萬美...">台「護照」黑市價10萬美...</a></li>      <li><img src="http://toronto.singtao.ca/wp-content/themes/ait2015/image/li.gif" style="margin-right:5px"><a href="http://toronto.singtao.ca/531035/2015-12-03/post-%e5%8e%9f%e6%b2%b9%e5%83%b9%e6%94%b6%e7%9b%a4%e7%aa%81%e9%a3%9b%e7%8c%9b%e6%bc%b2/?variant=zh-hk" target="_blank" class="f" title="原油價收盤突飛猛漲">原油價收盤突飛猛漲</a></li>      <li><img src="http://toronto.singtao.ca/wp-content/themes/ait2015/image/li.gif" style="margin-right:5px"><a href="http://toronto.singtao.ca/531033/2015-12-03/post-%e5%8c%97%e7%be%8e%e8%82%a1%e5%b8%82%e5%85%a8%e6%97%a5%e8%99%95%e6%96%bc%e4%bd%8e%e8%b0%b7-%e6%94%b6%e7%9b%a4%e6%9c%aa%e6%ad%a2%e8%a1%80/?variant=zh-hk" target="_blank" class="f" title="北美股市全日處於低谷 收...">北美股市全日處於低谷 收...</a></li>      <li><img src="http://toronto.singtao.ca/wp-content/themes/ait2015/image/li.gif" style="margin-right:5px"><a href="http://toronto.singtao.ca/531031/2015-12-03/post-%e9%ab%98%e4%b8%ad%e7%99%bc%e7%8f%be%e5%8f%af%e7%96%91%e5%8c%85%e8%a3%b9-%e5%ad%b8%e6%a0%a1%e8%a2%ab%e5%b0%81%e9%96%89%e4%bd%9c%e8%aa%bf%e6%9f%a5/?variant=zh-hk" target="_blank" class="f" title="高中發現可疑包裹 學校被...">高中發現可疑包裹 學校被...</a></li>    </ul>    <span style="float:right;"><A class="underline4" href="http://toronto.singtao.ca/category/%e5%8d%b3%e6%99%82/%e5%8d%b3%e6%99%82%e5%8a%a0%e5%9c%8b/?variant=zh-hk">更多&raquo;</A></span>  </div></div><div  id="section-42"  style="display:none" class="boxc_content_1 clearfix">  <div class="box_padding">    <ul class="arrow1">      <li><img src="http://toronto.singtao.ca/wp-content/themes/ait2015/image/li.gif" style="margin-right:5px"><a href="http://toronto.singtao.ca/532250/2015-12-04/post-%e4%b8%ad%e6%97%a5%e5%b0%87%e8%88%89%e8%a1%8c%e6%b5%b7%e6%b4%8b%e4%ba%8b%e5%8b%99%e9%ab%98%e7%b4%9a%e5%88%a5%e7%a3%8b%e5%95%86/?variant=zh-hk" target="_blank" class="f" title="中日將舉行海洋事務高級別...">中日將舉行海洋事務高級別...</a></li>      <li><img src="http://toronto.singtao.ca/wp-content/themes/ait2015/image/li.gif" style="margin-right:5px"><a href="http://toronto.singtao.ca/531801/2015-12-04/post-%e8%87%98%e8%85%b8%e5%92%8c%e8%85%b8%e6%a8%a3%e6%9c%ac%e4%b8%8d%e7%ac%a6%e7%87%9f%e9%a4%8a%e6%a8%99%e7%b1%a4/?variant=zh-hk" target="_blank" class="f" title="臘腸和&#33206;腸...">臘腸和&#33206;腸...</a></li>      <li><img src="http://toronto.singtao.ca/wp-content/themes/ait2015/image/li.gif" style="margin-right:5px"><a href="http://toronto.singtao.ca/531781/2015-12-04/post-%e5%a4%a7%e6%ac%96%e5%a5%b3%e5%9b%9a%e7%8a%af%e9%a3%b2%e4%b8%8b%e6%b4%97%e9%a0%ad%e6%b0%b4%e8%87%aa%e6%88%91%e5%82%b7%e5%ae%b3/?variant=zh-hk" target="_blank" class="f" title="大欖女囚犯飲下洗頭水自我...">大欖女囚犯飲下洗頭水自我...</a></li>      <li><img src="http://toronto.singtao.ca/wp-content/themes/ait2015/image/li.gif" style="margin-right:5px"><a href="http://toronto.singtao.ca/531737/2015-12-04/post-%e5%b1%af%e9%96%80%e5%b8%82%e5%bb%a3%e5%a0%b4%e9%ab%98%e5%b1%a49000%e5%85%83%e7%a7%9f%e5%87%ba/?variant=zh-hk" target="_blank" class="f" title="屯門市廣場高層9000元...">屯門市廣場高層9000元...</a></li>      <li><img src="http://toronto.singtao.ca/wp-content/themes/ait2015/image/li.gif" style="margin-right:5px"><a href="http://toronto.singtao.ca/531789/2015-12-04/post-%e7%b9%bd%e7%b4%9b%e5%86%ac%e6%97%a5%e7%af%80%e4%ba%ae%e7%87%88%e3%80%80%e8%9b%87%e5%9e%8b%e7%87%88%e9%a3%be%e9%96%83%e7%88%8d%e4%b8%ad%e7%92%b0/?variant=zh-hk" target="_blank" class="f" title="繽紛冬日節亮燈　蛇型燈飾...">繽紛冬日節亮燈　蛇型燈飾...</a></li>      <li><img src="http://toronto.singtao.ca/wp-content/themes/ait2015/image/li.gif" style="margin-right:5px"><a href="http://toronto.singtao.ca/531729/2015-12-04/post-%e6%96%b0%e5%b1%85%e5%b1%8b150%e8%90%ac%e8%b5%b7%e3%80%80%e7%99%bd%e8%a1%a8%e5%96%ae%e8%ba%ab%e9%a0%90%e7%95%99100%e5%80%8b%e5%90%8d%e9%a1%8d/?variant=zh-hk" target="_blank" class="f" title="新居屋150萬起　白表單...">新居屋150萬起　白表單...</a></li>      <li><img src="http://toronto.singtao.ca/wp-content/themes/ait2015/image/li.gif" style="margin-right:5px"><a href="http://toronto.singtao.ca/531738/2015-12-04/post-%e5%a5%b3%e5%ad%90%e9%9d%9e%e6%b3%95%e5%94%ae%e8%97%a5%e8%a2%ab%e6%8d%95/?variant=zh-hk" target="_blank" class="f" title="女子非法售藥被捕">女子非法售藥被捕</a></li>      <li><img src="http://toronto.singtao.ca/wp-content/themes/ait2015/image/li.gif" style="margin-right:5px"><a href="http://toronto.singtao.ca/531730/2015-12-04/post-%e6%a2%81%e6%8c%af%e8%8b%b1%e6%8c%87%e6%8b%89%e5%b8%83%e7%84%a1%e5%8a%a9%e8%a7%a3%e6%b1%ba%e5%a4%a7%e6%a9%8b%e5%95%8f%e9%a1%8c/?variant=zh-hk" target="_blank" class="f" title="梁振英指拉布無助解決大橋...">梁振英指拉布無助解決大橋...</a></li>      <li><img src="http://toronto.singtao.ca/wp-content/themes/ait2015/image/li.gif" style="margin-right:5px"><a href="http://toronto.singtao.ca/531731/2015-12-04/post-%e5%a5%97%e4%b8%81%e6%ac%8a%e8%a9%90%e9%a8%99%e6%a1%88%e3%80%80%e5%ae%b6%e5%b1%ac%e6%9d%91%e6%b0%91%e5%9d%87%e6%8c%87%e5%88%a4%e5%88%91%e9%87%8d/?variant=zh-hk" target="_blank" class="f" title="套丁權詐騙案　家屬村民均...">套丁權詐騙案　家屬村民均...</a></li>      <li><img src="http://toronto.singtao.ca/wp-content/themes/ait2015/image/li.gif" style="margin-right:5px"><a href="http://toronto.singtao.ca/531695/2015-12-04/post-kelly-online-%e5%a4%a7%e5%aa%bd%e5%a4%a7%e5%8f%94%e6%a9%9f%e5%a0%b4%e7%a6%81%e5%8d%80%e6%89%93%e7%be%bd%e6%af%9b%e7%90%83%e3%80%80%e3%80%80/?variant=zh-hk" target="_blank" class="f" title="Kelly Online...">Kelly Online...</a></li>    </ul>    <span style="float:right;"><A class="underline4" href="/category/即時香港">更多&raquo;</A></span>  </div></div><div  id="section-43"  style="display:none" class="boxc_content_1 clearfix">  <div class="box_padding">    <ul class="arrow1">      <li><img src="http://toronto.singtao.ca/wp-content/themes/ait2015/image/li.gif" style="margin-right:5px"><a href="http://toronto.singtao.ca/532248/2015-12-04/post-%e7%be%85%e9%9c%96%e8%87%aa%e5%98%b2%e6%98%af%e6%9c%80%e5%a4%a7%e5%b9%b4%e7%b4%80%e6%a8%82%e5%a3%87%e6%96%b0%e4%ba%ba/?variant=zh-hk" target="_blank" class="f" title="羅霖自嘲是最大年紀樂壇新...">羅霖自嘲是最大年紀樂壇新...</a></li>      <li><img src="http://toronto.singtao.ca/wp-content/themes/ait2015/image/li.gif" style="margin-right:5px"><a href="http://toronto.singtao.ca/531739/2015-12-04/post-%e6%9e%97%e5%b3%af%e7%88%86%e5%8d%83%e8%aa%9e%e9%a3%9f%e9%87%8f%e6%af%94%e4%bb%96%e5%a4%9a%e4%b8%80%e5%80%8d/?variant=zh-hk" target="_blank" class="f" title="林峯爆千語食量比他多一倍">林峯爆千語食量比他多一倍</a></li>      <li><img src="http://toronto.singtao.ca/wp-content/themes/ait2015/image/li.gif" style="margin-right:5px"><a href="http://toronto.singtao.ca/531732/2015-12-04/post-%e5%bc%b5%e7%ab%8b%e5%9f%ba%e5%b9%b4%e7%b4%80%e5%a4%a7%e6%8b%92%e8%b7%9f%e5%a4%a9%e5%a0%82%e9%b3%a5%e7%a9%bf%e9%ab%98%e8%b7%9f/?variant=zh-hk" target="_blank" class="f" title="張立基年紀大拒跟天堂鳥穿...">張立基年紀大拒跟天堂鳥穿...</a></li>      <li><img src="http://toronto.singtao.ca/wp-content/themes/ait2015/image/li.gif" style="margin-right:5px"><a href="http://toronto.singtao.ca/531708/2015-12-04/post-%e9%83%ad%e5%af%8c%e5%9f%8e%e5%be%ae%e5%8d%9a%e6%99%92%e8%88%87%e5%a5%b3%e5%8f%8b%e5%90%83%e9%a3%af%e5%90%88%e7%85%a7/?variant=zh-hk" target="_blank" class="f" title="郭富城微博曬與女友吃飯合...">郭富城微博曬與女友吃飯合...</a></li>      <li><img src="http://toronto.singtao.ca/wp-content/themes/ait2015/image/li.gif" style="margin-right:5px"><a href="http://toronto.singtao.ca/531663/2015-12-04/post-%e5%82%85%e6%98%8e%e6%86%b2%e6%9c%9b%e5%85%ac%e5%b1%8b%e5%94%94%e4%bd%bf%e5%81%b7%e9%a4%8a%e5%af%b5%e7%89%a9/?variant=zh-hk" target="_blank" class="f" title="傅明憲望公屋唔使偷養寵物">傅明憲望公屋唔使偷養寵物</a></li>      <li><img src="http://toronto.singtao.ca/wp-content/themes/ait2015/image/li.gif" style="margin-right:5px"><a href="http://toronto.singtao.ca/531603/2015-12-04/post-%e7%9b%a7%e6%b5%b7%e9%b5%ac%e5%94%b1%e6%83%a1%e6%90%9e%e6%ad%8c%e5%8f%aa%e6%80%95%e7%84%a1%e8%a7%80%e7%9c%be/?variant=zh-hk" target="_blank" class="f" title="盧海鵬唱惡搞歌只怕無觀眾">盧海鵬唱惡搞歌只怕無觀眾</a></li>      <li><img src="http://toronto.singtao.ca/wp-content/themes/ait2015/image/li.gif" style="margin-right:5px"><a href="http://toronto.singtao.ca/531560/2015-12-04/post-%e9%9f%93%e5%a5%b3%e6%98%9f%e6%9d%8e%e6%88%90%e6%95%8f%e7%88%86%e6%9b%89%e6%98%8e%e6%98%af%e4%bd%a2%e6%9d%af%e8%8c%b6/?variant=zh-hk" target="_blank" class="f" title="韓女星李成敏爆曉明是佢杯...">韓女星李成敏爆曉明是佢杯...</a></li>      <li><img src="http://toronto.singtao.ca/wp-content/themes/ait2015/image/li.gif" style="margin-right:5px"><a href="http://toronto.singtao.ca/531522/2015-12-04/post-%e9%bb%83%e6%9b%89%e6%98%8e%e6%89%93%e6%89%8b%e5%8d%b0%e4%b8%8d%e6%96%9c%e8%a6%96%e4%bd%8e%e8%83%b8clara/?variant=zh-hk" target="_blank" class="f" title="黃曉明打手印不斜視低胸C...">黃曉明打手印不斜視低胸C...</a></li>      <li><img src="http://toronto.singtao.ca/wp-content/themes/ait2015/image/li.gif" style="margin-right:5px"><a href="http://toronto.singtao.ca/531496/2015-12-04/post-%e9%99%b3%e6%b3%95%e8%93%89%e6%9c%9b%e5%81%87%e5%ad%b8%e6%ad%b7%e5%8b%bf%e5%86%8d%e5%9b%b0%e6%93%be%e6%80%9d%e8%b2%9d/?variant=zh-hk" target="_blank" class="f" title="陳法蓉望假學歷勿再困擾思...">陳法蓉望假學歷勿再困擾思...</a></li>      <li><img src="http://toronto.singtao.ca/wp-content/themes/ait2015/image/li.gif" style="margin-right:5px"><a href="http://toronto.singtao.ca/530983/2015-12-03/post-%e9%99%b3%e8%95%8a%e8%95%8a%e9%a0%90%e5%91%8a%e9%87%91%e5%89%9b%e5%b9%be%e6%97%a5%e5%be%8c%e5%9b%9e%e6%b8%af/?variant=zh-hk" target="_blank" class="f" title="陳蕊蕊預告金剛幾日後回港">陳蕊蕊預告金剛幾日後回港</a></li>    </ul>    <span style="float:right;"><A class="underline4" href="http://toronto.singtao.ca/category/%e5%8d%b3%e6%99%82/%e5%8d%b3%e6%99%82%e5%a8%9b%e6%a8%82/?variant=zh-hk">更多&raquo;</A></span>  </div></div><div  id="section-44"  style="display:none" class="boxc_content_1 clearfix">  <div class="box_padding">    <ul class="arrow1">      <li><img src="http://toronto.singtao.ca/wp-content/themes/ait2015/image/li.gif" style="margin-right:5px"><a href="http://toronto.singtao.ca/531790/2015-12-04/post-%e5%8d%b3%e6%9c%88%e5%a4%9c%e6%9c%9f%e6%96%b0%e5%a0%b122154%e4%bd%8e%e6%b0%b481%e9%bb%9e/?variant=zh-hk" target="_blank" class="f" title="即月夜期新報22154低...">即月夜期新報22154低...</a></li>      <li><img src="http://toronto.singtao.ca/wp-content/themes/ait2015/image/li.gif" style="margin-right:5px"><a href="http://toronto.singtao.ca/531810/2015-12-04/post-%e6%ad%90%e6%b4%b2%e4%b8%bb%e8%a6%81%e8%82%a1%e5%b8%82%e6%97%a9%e6%ae%b5%e9%bd%8a%e8%b7%8c-12/?variant=zh-hk" target="_blank" class="f" title="歐洲主要股市早段齊跌">歐洲主要股市早段齊跌</a></li>      <li><img src="http://toronto.singtao.ca/wp-content/themes/ait2015/image/li.gif" style="margin-right:5px"><a href="http://toronto.singtao.ca/531809/2015-12-04/post-%e3%80%90%e6%96%b0%e8%82%a1%e9%80%9f%e9%81%9e%e3%80%91%e9%8c%a6%e5%b7%9e%e9%8a%80%e8%a1%8c%e6%9a%97%e7%9b%a4%e5%83%b9%e8%b7%8c2-%e4%b8%80%e6%89%8b%e8%9d%95100%e5%85%83/?variant=zh-hk" target="_blank" class="f" title="【新股速遞】錦州銀行暗盤...">【新股速遞】錦州銀行暗盤...</a></li>      <li><img src="http://toronto.singtao.ca/wp-content/themes/ait2015/image/li.gif" style="margin-right:5px"><a href="http://toronto.singtao.ca/531752/2015-12-04/post-%e3%80%90763%e3%80%91%e6%9d%8e%e6%be%a4%e6%a5%b7%e5%a2%9e%e6%8c%81%e4%b8%ad%e8%88%8850%e8%90%ac%e8%82%a1%e8%87%b35/?variant=zh-hk" target="_blank" class="f" title="【763】李澤楷增持中興...">【763】李澤楷增持中興...</a></li>      <li><img src="http://toronto.singtao.ca/wp-content/themes/ait2015/image/li.gif" style="margin-right:5px"><a href="http://toronto.singtao.ca/531751/2015-12-04/post-%e3%80%902333%e3%80%91%e9%95%b7%e6%b1%bd%e9%a6%9611%e5%80%8b%e6%9c%88%e9%8a%b7%e9%87%8f%e5%8d%8715-8/?variant=zh-hk" target="_blank" class="f" title="【2333】長汽首11個...">【2333】長汽首11個...</a></li>      <li><img src="http://toronto.singtao.ca/wp-content/themes/ait2015/image/li.gif" style="margin-right:5px"><a href="http://toronto.singtao.ca/531753/2015-12-04/post-%e3%80%90173%e3%80%91%e5%91%82%e5%bf%97%e5%92%8c%e5%a2%9e%e6%8c%81%e5%98%89%e8%8f%af179%e8%90%ac%e8%82%a1%e8%87%b361-53/?variant=zh-hk" target="_blank" class="f" title="【173】呂志和增持嘉華...">【173】呂志和增持嘉華...</a></li>      <li><img src="http://toronto.singtao.ca/wp-content/themes/ait2015/image/li.gif" style="margin-right:5px"><a href="http://toronto.singtao.ca/531754/2015-12-04/post-%e3%80%9012%e3%80%91%e6%9d%8e%e5%85%86%e5%9f%ba%e5%a2%9e%e6%8c%81%e6%81%92%e5%9c%b0%e5%8f%8a%e7%be%8e%e9%ba%97%e8%8f%af-38/?variant=zh-hk" target="_blank" class="f" title="【12】李兆基增持恆地及...">【12】李兆基增持恆地及...</a></li>      <li><img src="http://toronto.singtao.ca/wp-content/themes/ait2015/image/li.gif" style="margin-right:5px"><a href="http://toronto.singtao.ca/531755/2015-12-04/post-%e3%80%906839%e3%80%91%e9%9b%b2%e5%8d%97%e6%b0%b4%e5%8b%99%e7%b5%84%e5%90%88%e8%b3%87%e5%85%ac%e5%8f%b8%e5%be%9e%e4%ba%8b%e7%a6%8f%e5%bb%ba%e7%9c%81%e6%b0%b4%e7%92%b0%e5%a2%83%e6%8a%95%e8%b3%87/?variant=zh-hk" target="_blank" class="f" title="【6839】雲南水務組合...">【6839】雲南水務組合...</a></li>      <li><img src="http://toronto.singtao.ca/wp-content/themes/ait2015/image/li.gif" style="margin-right:5px"><a href="http://toronto.singtao.ca/531756/2015-12-04/post-%e3%80%90700%e3%80%91%e9%a6%ac%e5%8c%96%e9%a8%b0%e6%b8%9b%e6%8c%81%e9%a8%b0%e8%a8%8a2506%e8%90%ac%e8%82%a1-%e5%a5%97%e7%8f%be38-7%e5%84%84%e5%85%83/?variant=zh-hk" target="_blank" class="f" title="【700】馬化騰減持騰訊...">【700】馬化騰減持騰訊...</a></li>      <li><img src="http://toronto.singtao.ca/wp-content/themes/ait2015/image/li.gif" style="margin-right:5px"><a href="http://toronto.singtao.ca/531757/2015-12-04/post-%e6%ad%90%e6%b4%b2%e4%b8%bb%e8%a6%81%e8%82%a1%e5%b8%82%e6%97%a9%e6%ae%b5%e7%ba%8c%e8%b7%8c-10/?variant=zh-hk" target="_blank" class="f" title="歐洲主要股市早段續跌">歐洲主要股市早段續跌</a></li>    </ul>    <span style="float:right;"><A class="underline4" href="http://toronto.singtao.ca/category/%e5%8d%b3%e6%99%82/%e5%8d%b3%e6%99%82%e8%b2%a1%e7%b6%93/?variant=zh-hk">更多&raquo;</A></span>  </div></div><div  id="section-45"  style="display:none" class="boxc_content_1 clearfix">  <div class="box_padding">    <ul class="arrow1">      <li><img src="http://toronto.singtao.ca/wp-content/themes/ait2015/image/li.gif" style="margin-right:5px"><a href="http://toronto.singtao.ca/531973/2015-12-04/post-%e9%96%8b%e7%be%85%e5%a4%9c%e7%b8%bd%e6%9c%83%e8%a2%ab%e6%8a%95%e7%87%83%e7%87%92%e5%bd%8816%e6%ad%bb3%e5%82%b7/?variant=zh-hk" target="_blank" class="f" title="開羅夜總會被投燃燒彈16...">開羅夜總會被投燃燒彈16...</a></li>      <li><img src="http://toronto.singtao.ca/wp-content/themes/ait2015/image/li.gif" style="margin-right:5px"><a href="http://toronto.singtao.ca/531528/2015-12-04/post-%e5%a5%a7%e5%b7%b4%e9%a6%ac%e4%b8%80%e5%ae%b6%e7%82%ba%e5%9c%8b%e5%ae%b6%e8%81%96%e8%aa%95%e6%a8%b9%e4%ba%ae%e7%87%88/?variant=zh-hk" target="_blank" class="f" title="奧巴馬一家為國家聖誕樹亮...">奧巴馬一家為國家聖誕樹亮...</a></li>      <li><img src="http://toronto.singtao.ca/wp-content/themes/ait2015/image/li.gif" style="margin-right:5px"><a href="http://toronto.singtao.ca/531529/2015-12-04/post-%e7%be%8e%e8%ad%a6%e5%86%b0%e6%b2%b3%e6%95%91%e9%b9%bf/?variant=zh-hk" target="_blank" class="f" title="美警冰河救鹿">美警冰河救鹿</a></li>      <li><img src="http://toronto.singtao.ca/wp-content/themes/ait2015/image/li.gif" style="margin-right:5px"><a href="http://toronto.singtao.ca/531510/2015-12-04/post-10%e6%95%98%e5%88%a9%e4%ba%9e%e4%ba%ba%e6%bd%9b%e6%b3%b0%e4%bc%ba%e6%a9%9f%e8%a5%b2%e4%bf%84%e7%9b%ae%e6%a8%99/?variant=zh-hk" target="_blank" class="f" title="10敘利亞人潛泰伺機襲俄...">10敘利亞人潛泰伺機襲俄...</a></li>      <li><img src="http://toronto.singtao.ca/wp-content/themes/ait2015/image/li.gif" style="margin-right:5px"><a href="http://toronto.singtao.ca/531485/2015-12-04/post-%e6%99%ae%e4%ba%ac%e6%8f%9a%e8%a8%80%e5%9c%9f%e8%80%b3%e5%85%b6%e5%bf%85%e5%be%8c%e6%82%94%e6%93%8a%e8%90%bd%e4%bf%84%e6%a9%9f/?variant=zh-hk" target="_blank" class="f" title="普京揚言土耳其必後悔擊落...">普京揚言土耳其必後悔擊落...</a></li>      <li><img src="http://toronto.singtao.ca/wp-content/themes/ait2015/image/li.gif" style="margin-right:5px"><a href="http://toronto.singtao.ca/531378/2015-12-04/post-%e6%97%a5%e9%98%b2%e6%b0%b4%e6%89%8b%e6%a9%9f%e5%8f%af%e7%94%a8%e6%b6%b2%e6%b8%85%e6%b4%97/?variant=zh-hk" target="_blank" class="f" title="日防水手機可用&#267...">日防水手機可用&#267...</a></li>      <li><img src="http://toronto.singtao.ca/wp-content/themes/ait2015/image/li.gif" style="margin-right:5px"><a href="http://toronto.singtao.ca/531325/2015-12-04/post-%e3%80%8a%e8%8a%b1%e8%8a%b1%e5%85%ac%e5%ad%90%e3%80%8b%e8%a3%b8%e7%85%a7%e5%91%8a%e5%88%a5%e7%89%88%e5%bd%ad%e7%be%8e%e6%8b%89%e4%ba%ae%e7%9b%b8/?variant=zh-hk" target="_blank" class="f" title="《花花公子》裸照告別版彭...">《花花公子》裸照告別版彭...</a></li>      <li><img src="http://toronto.singtao.ca/wp-content/themes/ait2015/image/li.gif" style="margin-right:5px"><a href="http://toronto.singtao.ca/531316/2015-12-04/post-%e5%8a%a0%e5%b7%9e%e6%a7%8d%e6%93%8a%e6%a1%88%e3%80%80%e7%be%8e%e6%a7%8d%e6%89%8b%e5%ae%b6%e6%9a%b4%e5%ae%b6%e5%ba%ad%e9%95%b7%e5%a4%a7/?variant=zh-hk" target="_blank" class="f" title="加州槍擊案　美槍手家暴家...">加州槍擊案　美槍手家暴家...</a></li>      <li><img src="http://toronto.singtao.ca/wp-content/themes/ait2015/image/li.gif" style="margin-right:5px"><a href="http://toronto.singtao.ca/531238/2015-12-03/post-%e6%9b%be%e6%8a%b1%e5%a5%b3%e5%85%92%e8%a1%97%e9%a0%ad%e8%b3%a3%e7%ad%86%e3%80%80%e6%95%98%e9%9b%a3%e6%b0%91%e7%8d%b2%e7%b6%b2%e6%b0%91%e6%8d%90%e6%ac%be%e5%89%b5%e6%a5%ad/?variant=zh-hk" target="_blank" class="f" title="曾抱女兒街頭賣筆　敘難民...">曾抱女兒街頭賣筆　敘難民...</a></li>      <li><img src="http://toronto.singtao.ca/wp-content/themes/ait2015/image/li.gif" style="margin-right:5px"><a href="http://toronto.singtao.ca/531240/2015-12-03/post-%e5%88%87%e5%b0%bc%e5%8d%8a%e8%ba%ab%e5%83%8f%e6%8f%ad%e5%b9%95%e3%80%80%e5%b8%83%e6%ae%8a%e6%84%9f%e6%bf%80%e4%b8%a6%e8%82%a98%e8%bc%89/?variant=zh-hk" target="_blank" class="f" title="切尼半身像揭幕　布殊感激...">切尼半身像揭幕　布殊感激...</a></li>    </ul>    <span style="float:right;"><A class="underline4" href="http://toronto.singtao.ca/category/%e5%8d%b3%e6%99%82/%e5%8d%b3%e6%99%82%e5%9c%8b%e9%9a%9b/?variant=zh-hk">更多&raquo;</A></span>  </div></div>    </div>
+
+    <div class="splist float_left" >  <div class="sp_title">    <h3>熱點新聞</h3>    <span style="float:right; margin-top:4px;">  </span></div>  <div class="sp_content"><ul class="tagHotNews">  </ul></div></div><div class="splist float_left"  style="margin-left:8px; padding-bottom:15px;">  <div class="sp_title">    <h3>編輯推薦</h3>    <span style="float:right; margin-top:4px;">      <A class=underline4 href="/topic">更多專題»</A>  </span></div>  <div class="sp_content"><ul>    <li><a target="_blank" href="http://toronto.singtao.ca/523971/2015-11-30/post-%E5%A4%9A%E5%80%AB%E5%A4%9A%E6%B9%96%E6%BF%B1%E8%81%96%E8%AA%95%E9%81%8A%E8%A1%8C/?variant=zh-hk" class="f" title="多倫多湖濱聖誕遊行">多倫多湖濱聖誕遊行</a></li>    <li><a target="_blank" href="http://toronto.singtao.ca/523970/2015-11-30/post-whitby%E8%81%96%E8%AA%95%E6%AD%A1%E6%A8%82%E9%81%8A%E8%A1%8C/?variant=zh-hk" class="f" title="Whitby聖誕歡樂遊行">Whitby聖誕歡樂遊行</a></li>    <li><a target="_blank" href="http://toronto.singtao.ca/523967/2015-11-30/post-%E8%81%96%E8%AA%95%E5%81%87%E6%97%A5%E5%B8%82%E5%A0%B4/?variant=zh-hk" class="f" title="聖誕假日市場">聖誕假日市場</a></li>    <li><a target="_blank" href="http://toronto.singtao.ca/523966/2015-11-30/post-%E7%83%A4%E8%A3%BD%E8%81%96%E8%AA%95%E9%BB%9E%E5%BF%83%E5%B7%A5%E4%BD%9C%E5%9D%8A/?variant=zh-hk" class="f" title="烤製聖誕點心工作坊">烤製聖誕點心工作坊</a></li>    <li><a target="_blank" href="http://toronto.singtao.ca/523965/2015-11-30/post-%E6%95%99%E5%A0%82%E8%81%96%E8%AA%95%E6%89%8B%E5%B7%A5%E8%97%9D%E5%93%81%E5%94%AE%E8%B3%A3/?variant=zh-hk" class="f" title="教堂聖誕手工藝品售賣">教堂聖誕手工藝品售賣</a></li>    <li><a target="_blank" href="http://toronto.singtao.ca/523963/2015-11-30/post-%E8%81%96%E8%AA%95%E9%9B%86%E5%B8%82/?variant=zh-hk" class="f" title="聖誕集市">聖誕集市</a></li>  </ul></div></div><!-- ad-key:cate_list //--><script>GA_googleFillSlot("ST_TOR_HP_CenterBanner_485x60");</script>
+<div class="newslist2 paddingL5T10">  <div class="box_header">    <div class="box_left"><a href="http://toronto.singtao.ca/category/%e6%b8%af%e8%81%9e/?variant=zh-hk">港聞</a></div>    <div class="box_right"><a href="http://toronto.singtao.ca/category/%e6%b8%af%e8%81%9e/?variant=zh-hk"><img src="http://toronto.singtao.ca/wp-content/themes/ait2015/image/more.jpg" /></a></div>  </div>  <div class="box_content">    <div class="float_left margin_left whole_image">      <img src="http://toronto.singtao.ca/wp-content/uploads/toronto_sandbox/../master_sandbox/2015/12/nec01p01031215.jpg" class="border" style="max-width:100%;max-height:100%;vertical-align: middle;"/>    </div>    <div id="inner_headline" class="float_left" style="width:320px;">      <P style="margin-bottom:10px;font-size:18px;line-height:25px;"><a href="http://toronto.singtao.ca/529362/2015-12-03/post-%e6%96%b0%e5%a2%9e%e5%a7%94%e5%93%a1-%e6%93%b4%e8%87%b322%e4%ba%ba-tsa%e5%a7%94%e6%9c%83%e5%a4%a7%e6%94%b9%e7%b5%84-%e6%a0%a1%e9%95%b7%e6%95%99%e5%b8%ab%e4%bd%94%e4%b8%80%e5%8d%8a/?variant=zh-hk" class="underline2"  target="_blank">新增委員 擴至22人  TSA委會大改組 校長教師佔一半</a></P>      <P style="text-align:justify"><p>記者：梁子健</p><p>&nbsp;</p><p>小三全港性系統評估(TSA)爭議愈演愈烈，教育局副局...<a href="http://toronto.singtao.ca/529362/2015-12-03/post-%e6%96%b0%e5%a2%9e%e5%a7%94%e5%93%a1-%e6%93%b4%e8%87%b322%e4%ba%ba-tsa%e5%a7%94%e6%9c%83%e5%a4%a7%e6%94%b9%e7%b5%84-%e6%a0%a1%e9%95%b7%e6%95%99%e5%b8%ab%e4%bd%94%e4%b8%80%e5%8d%8a/?variant=zh-hk" class="underline"  target="_blank">&lt;詳細&gt;</a></p>    </div>    <div class="newslist3 paddingL5T10">      <ul>        <li><img src="http://toronto.singtao.ca/wp-content/themes/ait2015/image/li.gif" style="padding-right:5px;" /><a href="http://toronto.singtao.ca/529362/2015-12-03/post-%e6%96%b0%e5%a2%9e%e5%a7%94%e5%93%a1-%e6%93%b4%e8%87%b322%e4%ba%ba-tsa%e5%a7%94%e6%9c%83%e5%a4%a7%e6%94%b9%e7%b5%84-%e6%a0%a1%e9%95%b7%e6%95%99%e5%b8%ab%e4%bd%94%e4%b8%80%e5%8d%8a/?variant=zh-hk" target="_blank" title="新增委員 擴至22人  ..." class="underlineBLK">新增委員 擴至22人  ...</a></li>        <li><img src="http://toronto.singtao.ca/wp-content/themes/ait2015/image/li.gif" style="padding-right:5px;" /><a href="http://toronto.singtao.ca/529361/2015-12-03/post-%e9%97%9c%e6%b3%a8%e7%b5%84%e4%b8%8d%e6%9c%9f%e6%9c%9b%e5%8f%8d%e6%98%a0%e5%ae%b6%e9%95%b7%e7%ab%8b%e5%a0%b4/?variant=zh-hk" target="_blank" title="關注組不期望反映家長立場" class="underlineBLK">關注組不期望反映家長立場</a></li>        <li><img src="http://toronto.singtao.ca/wp-content/themes/ait2015/image/li.gif" style="padding-right:5px;" /><a href="http://toronto.singtao.ca/529360/2015-12-03/post-%e6%a5%8a%e5%81%89%e9%9b%84%e5%a4%a7%e8%a8%88%e7%99%bc%e5%b1%95%e5%b2%a9%e6%b4%9e%e5%a2%9e%e5%b7%a5%e6%a5%ad%e9%82%a8/?variant=zh-hk" target="_blank" title="楊偉雄大計發展岩洞增工業..." class="underlineBLK">楊偉雄大計發展岩洞增工業...</a></li>        <li><img src="http://toronto.singtao.ca/wp-content/themes/ait2015/image/li.gif" style="padding-right:5px;" /><a href="http://toronto.singtao.ca/529359/2015-12-03/post-%e5%bb%a3%e6%9d%b1%e8%a9%b1%e3%80%8c%e5%94%94%e9%b9%b9%e5%94%94%e6%b7%a1%e3%80%8d-%e9%a6%96%e4%b8%8a%e7%ab%8b%e6%9c%83%e6%9c%9b%e8%ad%b0%e5%93%a1%e9%ab%94%e8%ab%92/?variant=zh-hk" target="_blank" title="廣東話「唔鹹唔淡」 首上..." class="underlineBLK">廣東話「唔鹹唔淡」 首上...</a></li>        <li><img src="http://toronto.singtao.ca/wp-content/themes/ait2015/image/li.gif" style="padding-right:5px;" /><a href="http://toronto.singtao.ca/529354/2015-12-03/post-%e6%b3%95%e5%ae%98%e8%bc%95%e5%88%a4-%e6%94%af%e6%8c%81%e8%80%85%e9%bc%93%e6%8e%8c-%e4%ba%9e%e8%a6%96%e6%8b%9622%e5%93%a1%e5%b7%a5%e7%b3%a7-%e8%91%89%e5%ae%b6%e5%af%b6%e7%bd%b015%e8%90%ac%e5%85%83/?variant=zh-hk" target="_blank" title="法官輕判 支持者鼓掌  ..." class="underlineBLK">法官輕判 支持者鼓掌  ...</a></li>        <li><img src="http://toronto.singtao.ca/wp-content/themes/ait2015/image/li.gif" style="padding-right:5px;" /><a href="http://toronto.singtao.ca/529350/2015-12-03/post-%e8%97%9d%e4%ba%ba%e6%89%93%e6%b0%a3-%e7%a8%b1%e8%ae%9a%e6%b3%95%e5%ae%98/?variant=zh-hk" target="_blank" title="藝人打氣 稱讚法官" class="underlineBLK">藝人打氣 稱讚法官</a></li>      </ul>    </div>  </div></div>
+<div class="newslist2 paddingL5T10">  <div class="box_header">    <div class="box_left"><a href="http://toronto.singtao.ca/category/%e4%b8%ad%e5%9c%8b/?variant=zh-hk">中國</a></div>    <div class="box_right"><a href="http://toronto.singtao.ca/category/%e4%b8%ad%e5%9c%8b/?variant=zh-hk"><img src="http://toronto.singtao.ca/wp-content/themes/ait2015/image/more.jpg" /></a></div>  </div>  <div class="box_content">    <div class="float_left margin_left whole_image">      <img src="http://toronto.singtao.ca/wp-content/uploads/toronto_sandbox/../master_sandbox/2015/12/bus01p01b031215.jpg" class="border" style="max-width:100%;max-height:100%;vertical-align: middle;"/>    </div>    <div id="inner_headline" class="float_left" style="width:320px;">      <P style="margin-bottom:10px;font-size:18px;line-height:25px;"><a href="http://toronto.singtao.ca/529311/2015-12-03/post-%e9%ab%98%e5%b1%a4%e8%96%a6%e5%85%92%e5%ad%90-%e7%b8%bd%e8%a3%81%e6%92%90%e3%80%8c%e6%81%b0%e7%95%b6%e3%80%8d-%e6%8d%b2%e6%91%a9%e9%80%9a%e6%8b%9b%e8%81%98%e9%a2%a8%e6%b3%a2-%e6%b8%af%e9%87%91/?variant=zh-hk" class="underline2"  target="_blank">高層薦兒子 總裁撐「恰當」  捲摩通招聘風波 港金管局禁員工轉介工作</a></P>      <P style="text-align:justify"><p>美國當局調查摩根大通招聘中國「官二代」、「富二代」以招攬生意一事，燒到香港金融管理局（簡稱金管局）高層。...<a href="http://toronto.singtao.ca/529311/2015-12-03/post-%e9%ab%98%e5%b1%a4%e8%96%a6%e5%85%92%e5%ad%90-%e7%b8%bd%e8%a3%81%e6%92%90%e3%80%8c%e6%81%b0%e7%95%b6%e3%80%8d-%e6%8d%b2%e6%91%a9%e9%80%9a%e6%8b%9b%e8%81%98%e9%a2%a8%e6%b3%a2-%e6%b8%af%e9%87%91/?variant=zh-hk" class="underline"  target="_blank">&lt;詳細&gt;</a></p>    </div>    <div class="newslist3 paddingL5T10">      <ul>        <li><img src="http://toronto.singtao.ca/wp-content/themes/ait2015/image/li.gif" style="padding-right:5px;" /><a href="http://toronto.singtao.ca/529311/2015-12-03/post-%e9%ab%98%e5%b1%a4%e8%96%a6%e5%85%92%e5%ad%90-%e7%b8%bd%e8%a3%81%e6%92%90%e3%80%8c%e6%81%b0%e7%95%b6%e3%80%8d-%e6%8d%b2%e6%91%a9%e9%80%9a%e6%8b%9b%e8%81%98%e9%a2%a8%e6%b3%a2-%e6%b8%af%e9%87%91/?variant=zh-hk" target="_blank" title="高層薦兒子 總裁撐「恰當..." class="underlineBLK">高層薦兒子 總裁撐「恰當...</a></li>        <li><img src="http://toronto.singtao.ca/wp-content/themes/ait2015/image/li.gif" style="padding-right:5px;" /><a href="http://toronto.singtao.ca/529310/2015-12-03/post-%e8%80%81%e4%ba%ba%e8%b3%a3%e8%a1%80%e8%93%8b%e6%88%bf%e6%9f%93%e6%84%9b%e6%bb%8b%e2%80%82%e8%ae%93%e5%85%92%e5%88%a5%e5%9b%9e%e5%ae%b6/?variant=zh-hk" target="_blank" title="老人賣血蓋房染愛滋 讓兒..." class="underlineBLK">老人賣血蓋房染愛滋 讓兒...</a></li>        <li><img src="http://toronto.singtao.ca/wp-content/themes/ait2015/image/li.gif" style="padding-right:5px;" /><a href="http://toronto.singtao.ca/529309/2015-12-03/post-%e6%bb%ac%e7%b3%a7%e6%b2%b9%e5%b8%82%e5%a0%b4%e7%81%ab%e7%81%bd-%e6%9a%ab%e7%84%a1%e5%82%b7%e4%ba%a1%e5%a0%b1%e5%91%8a/?variant=zh-hk" target="_blank" title="滬糧油市場火災 暫無傷亡..." class="underlineBLK">滬糧油市場火災 暫無傷亡...</a></li>        <li><img src="http://toronto.singtao.ca/wp-content/themes/ait2015/image/li.gif" style="padding-right:5px;" /><a href="http://toronto.singtao.ca/529306/2015-12-03/post-%e9%83%b5%e8%bc%aa%e4%b8%8a%e7%8e%a9%e5%a4%b1%e8%b9%a4-%e9%99%9d%e5%ae%98%e5%a4%b1%e8%81%af3%e5%80%8b%e6%9c%88/?variant=zh-hk" target="_blank" title="郵輪上玩失蹤 陝官失聯3..." class="underlineBLK">郵輪上玩失蹤 陝官失聯3...</a></li>        <li><img src="http://toronto.singtao.ca/wp-content/themes/ait2015/image/li.gif" style="padding-right:5px;" /><a href="http://toronto.singtao.ca/529305/2015-12-03/post-%e7%b0%bd10%e5%90%88%e4%bd%9c%e5%8d%94%e8%ad%b0%e2%80%82%e6%89%b6%e5%8a%a9%e6%b4%a5%e5%b7%b4%e5%b8%83%e9%9f%8b-%e7%bf%92%e8%bf%91%e5%b9%b3%e6%8a%b5%e5%8d%97%e9%9d%9e%e2%80%82%e7%a5%96%e9%a6%ac/?variant=zh-hk" target="_blank" title="簽10合作協議 扶助津巴..." class="underlineBLK">簽10合作協議 扶助津巴...</a></li>        <li><img src="http://toronto.singtao.ca/wp-content/themes/ait2015/image/li.gif" style="padding-right:5px;" /><a href="http://toronto.singtao.ca/529278/2015-12-03/post-%e5%87%ba%e5%85%b7%e5%81%87%e5%ad%98%e5%96%ae-10%e9%a4%98%e5%8f%97%e5%ae%b3%e4%ba%ba-%e5%85%a9%e8%81%b7%e5%93%a1%e8%a2%ab%e6%8d%95-%e9%8a%80%e8%a1%8c%e8%81%b7%e5%93%a1%e8%b2%bc%e6%81%af%e5%ad%98/?variant=zh-hk" target="_blank" title="出具假存單 10餘受害人..." class="underlineBLK">出具假存單 10餘受害人...</a></li>      </ul>    </div>  </div></div><div class="newslist2 paddingL5T10"></div>
+<div class="newslist2 paddingL5T10">  <div class="box_header">    <div class="box_left"><a href="http://toronto.singtao.ca/category/%e5%8f%b0%e7%81%a3/?variant=zh-hk">台灣</a></div>    <div class="box_right"><a href="http://toronto.singtao.ca/category/%e5%8f%b0%e7%81%a3/?variant=zh-hk"><img src="http://toronto.singtao.ca/wp-content/themes/ait2015/image/more.jpg" /></a></div>  </div>  <div class="box_content">    <div class="float_left margin_left whole_image">      <img src="http://toronto.singtao.ca/wp-content/uploads/toronto_sandbox/../master_sandbox/2015/12/s1000524845.jpg" class="border" style="max-width:100%;max-height:100%;vertical-align: middle;"/>    </div>    <div id="inner_headline" class="float_left" style="width:320px;">      <P style="margin-bottom:10px;font-size:18px;line-height:25px;"><a href="http://toronto.singtao.ca/529215/2015-12-03/post-%e5%bc%95%e7%99%bc%e5%90%84%e7%95%8c%e5%8f%8d%e5%bd%88-%e5%8f%b8%e6%b3%95%e9%99%a2%e6%be%84%e6%b8%85-%e3%80%8c%e8%88%87%e5%88%a4%e6%b1%ba%e7%84%a1%e9%97%9c%e3%80%8d-%e9%a0%82%e6%96%b0%e6%a1%88/?variant=zh-hk" class="underline2"  target="_blank">引發各界反彈 司法院澄清 「與判決無關」  頂新案判無罪 地院院長調職</a></P>      <P style="text-align:justify"><p>本報訊</p><p>&nbsp;</p><p>頂新黑心油事件，彰化地院將魏應充等6人判無罪，引發各界民粹...<a href="http://toronto.singtao.ca/529215/2015-12-03/post-%e5%bc%95%e7%99%bc%e5%90%84%e7%95%8c%e5%8f%8d%e5%bd%88-%e5%8f%b8%e6%b3%95%e9%99%a2%e6%be%84%e6%b8%85-%e3%80%8c%e8%88%87%e5%88%a4%e6%b1%ba%e7%84%a1%e9%97%9c%e3%80%8d-%e9%a0%82%e6%96%b0%e6%a1%88/?variant=zh-hk" class="underline"  target="_blank">&lt;詳細&gt;</a></p>    </div>    <div class="newslist3 paddingL5T10">      <ul>        <li><img src="http://toronto.singtao.ca/wp-content/themes/ait2015/image/li.gif" style="padding-right:5px;" /><a href="http://toronto.singtao.ca/529215/2015-12-03/post-%e5%bc%95%e7%99%bc%e5%90%84%e7%95%8c%e5%8f%8d%e5%bd%88-%e5%8f%b8%e6%b3%95%e9%99%a2%e6%be%84%e6%b8%85-%e3%80%8c%e8%88%87%e5%88%a4%e6%b1%ba%e7%84%a1%e9%97%9c%e3%80%8d-%e9%a0%82%e6%96%b0%e6%a1%88/?variant=zh-hk" target="_blank" title="引發各界反彈 司法院澄清..." class="underlineBLK">引發各界反彈 司法院澄清...</a></li>        <li><img src="http://toronto.singtao.ca/wp-content/themes/ait2015/image/li.gif" style="padding-right:5px;" /><a href="http://toronto.singtao.ca/529214/2015-12-03/post-%e7%8e%8b%e9%87%91%e5%b9%b3%e8%bc%94%e9%81%b8%e3%80%8c%e9%bb%9e%e5%b0%87%e5%ae%b4%e3%80%8d%e2%80%82%e6%92%bc%e5%8b%95%e5%8d%97%e9%83%a8%e7%ab%8b%e5%a7%94%e9%81%b8%e6%83%85/?variant=zh-hk" target="_blank" title="王金平輔選「點將宴」 撼..." class="underlineBLK">王金平輔選「點將宴」 撼...</a></li>        <li><img src="http://toronto.singtao.ca/wp-content/themes/ait2015/image/li.gif" style="padding-right:5px;" /><a href="http://toronto.singtao.ca/529213/2015-12-03/post-%e8%94%a1%e8%8b%b1%e6%96%87%e8%b7%a8%e6%b5%b7%e5%8a%a9%e9%99%a3%e2%80%82%e6%b1%ba%e5%ae%9a%e7%bf%bb%e8%bd%89%e9%87%91%e9%96%80/?variant=zh-hk" target="_blank" title="蔡英文跨海助陣 決定翻轉..." class="underlineBLK">蔡英文跨海助陣 決定翻轉...</a></li>        <li><img src="http://toronto.singtao.ca/wp-content/themes/ait2015/image/li.gif" style="padding-right:5px;" /><a href="http://toronto.singtao.ca/529212/2015-12-03/post-%e3%80%8c%e5%85%ac%e7%9b%8a%e7%89%8c%e6%95%91%e7%8e%84%e3%80%8d%e2%80%82%e8%97%8d%e5%86%8d%e6%8d%907%e7%ad%86%e9%bb%a8%e7%94%a2/?variant=zh-hk" target="_blank" title="「公益牌救玄」 藍再捐7..." class="underlineBLK">「公益牌救玄」 藍再捐7...</a></li>        <li><img src="http://toronto.singtao.ca/wp-content/themes/ait2015/image/li.gif" style="padding-right:5px;" /><a href="http://toronto.singtao.ca/529211/2015-12-03/post-%e5%85%a8%e5%8f%b0%e8%80%81%e5%b1%8b59%e8%90%ac%e6%88%b6-%e8%87%a8%e5%bc%b7%e9%9c%87%e5%a8%81%e8%84%85/?variant=zh-hk" target="_blank" title="全台老屋59萬戶  臨強..." class="underlineBLK">全台老屋59萬戶  臨強...</a></li>        <li><img src="http://toronto.singtao.ca/wp-content/themes/ait2015/image/li.gif" style="padding-right:5px;" /><a href="http://toronto.singtao.ca/529210/2015-12-03/post-%e5%8d%97%e9%83%a810%e6%a2%9d%e6%96%b7%e5%b1%a4-%e8%bf%91%e7%99%be%e5%b9%b4%e6%b2%92%e5%8b%95%e9%81%8e/?variant=zh-hk" target="_blank" title="南部10條斷層  近百年..." class="underlineBLK">南部10條斷層  近百年...</a></li>      </ul>    </div>  </div></div>
+<div class="newslist2 paddingL5T10">  <div class="box_header">    <div class="box_left"><a href="http://toronto.singtao.ca/category/%e8%b2%a1%e7%b6%93/?variant=zh-hk">財經</a></div>    <div class="box_right"><a href="http://toronto.singtao.ca/category/%e8%b2%a1%e7%b6%93/?variant=zh-hk"><img src="http://toronto.singtao.ca/wp-content/themes/ait2015/image/more.jpg" /></a></div>  </div>  <div class="box_content">    <div class="float_left margin_left whole_image">      <img src="http://toronto.singtao.ca/wp-content/uploads/toronto_sandbox/../master_sandbox/2015/12/tsa23P01031215.jpg" class="border" style="max-width:100%;max-height:100%;vertical-align: middle;"/>    </div>    <div id="inner_headline" class="float_left" style="width:320px;">      <P style="margin-bottom:10px;font-size:18px;line-height:25px;"><a href="http://toronto.singtao.ca/529186/2015-12-03/post-%e6%9c%9f%e6%b2%b9%e9%87%91%e9%8a%85-%e5%83%b9%e6%a0%bc-%e8%b5%b0%e4%bd%8e%e6%8b%96%e7%b4%af-%e8%83%bd%e6%ba%90%e8%82%a1%e9%a0%98%e8%b7%8c-tsx%e7%80%89172%e9%bb%9e/?variant=zh-hk" class="underline2"  target="_blank">期油金銅 價格 走低拖累  能源股領跌 TSX瀉172點</a></P>      <P style="text-align:justify"><p>綜合報道</p><p>&nbsp;</p><p>能源、金及銅價格下跌拖累加股市大幅下跌。多倫多S&amp...<a href="http://toronto.singtao.ca/529186/2015-12-03/post-%e6%9c%9f%e6%b2%b9%e9%87%91%e9%8a%85-%e5%83%b9%e6%a0%bc-%e8%b5%b0%e4%bd%8e%e6%8b%96%e7%b4%af-%e8%83%bd%e6%ba%90%e8%82%a1%e9%a0%98%e8%b7%8c-tsx%e7%80%89172%e9%bb%9e/?variant=zh-hk" class="underline"  target="_blank">&lt;詳細&gt;</a></p>    </div>    <div class="newslist3 paddingL5T10">      <ul>        <li><img src="http://toronto.singtao.ca/wp-content/themes/ait2015/image/li.gif" style="padding-right:5px;" /><a href="http://toronto.singtao.ca/529186/2015-12-03/post-%e6%9c%9f%e6%b2%b9%e9%87%91%e9%8a%85-%e5%83%b9%e6%a0%bc-%e8%b5%b0%e4%bd%8e%e6%8b%96%e7%b4%af-%e8%83%bd%e6%ba%90%e8%82%a1%e9%a0%98%e8%b7%8c-tsx%e7%80%89172%e9%bb%9e/?variant=zh-hk" target="_blank" title="期油金銅 價格 走低拖累..." class="underlineBLK">期油金銅 價格 走低拖累...</a></li>        <li><img src="http://toronto.singtao.ca/wp-content/themes/ait2015/image/li.gif" style="padding-right:5px;" /><a href="http://toronto.singtao.ca/529185/2015-12-03/post-%e9%9d%9e%e6%8c%89%e6%8f%ad%e5%82%b5%e5%8b%99%e6%8b%96%e6%ac%a0%e7%8e%87-%e9%8c%84%e5%be%976%e5%b9%b4%e4%be%86%e6%9c%80%e4%bd%8e%e7%b4%80%e9%8c%84/?variant=zh-hk" target="_blank" title="非按揭債務拖欠率 錄得6..." class="underlineBLK">非按揭債務拖欠率 錄得6...</a></li>        <li><img src="http://toronto.singtao.ca/wp-content/themes/ait2015/image/li.gif" style="padding-right:5px;" /><a href="http://toronto.singtao.ca/529183/2015-12-03/post-%e8%80%b6%e5%80%ab%e5%8a%9b%e6%8c%ba-12%e6%9c%88%e5%8a%a0%e6%81%af-%e7%be%8e%e8%82%a1%e6%94%b6%e8%b7%8c-%e7%be%8e%e8%81%af%e5%84%b2%e8%a4%90%e7%9a%ae%e6%9b%b8%ef%bc%9a-%e7%b6%93%e6%bf%9f%e6%ba%ab/?variant=zh-hk" target="_blank" title="耶倫力挺 12月加息 美..." class="underlineBLK">耶倫力挺 12月加息 美...</a></li>        <li><img src="http://toronto.singtao.ca/wp-content/themes/ait2015/image/li.gif" style="padding-right:5px;" /><a href="http://toronto.singtao.ca/529181/2015-12-03/post-%e6%b2%b9%e9%87%91%e9%9b%99%e9%9b%99%e5%86%8d%e8%b7%8c/?variant=zh-hk" target="_blank" title="油金雙雙再跌" class="underlineBLK">油金雙雙再跌</a></li>        <li><img src="http://toronto.singtao.ca/wp-content/themes/ait2015/image/li.gif" style="padding-right:5px;" /><a href="http://toronto.singtao.ca/529178/2015-12-03/post-%e8%bf%915%e5%80%8b%e6%9c%88%e6%9c%80%e9%ab%98-%e6%b0%91%e9%96%93%e5%b0%b1%e6%a5%ad%e5%a0%b1%e5%96%9c/?variant=zh-hk" target="_blank" title="近5個月最高 民間就業報..." class="underlineBLK">近5個月最高 民間就業報...</a></li>        <li><img src="http://toronto.singtao.ca/wp-content/themes/ait2015/image/li.gif" style="padding-right:5px;" /><a href="http://toronto.singtao.ca/529176/2015-12-03/post-%e9%ab%98%e5%b1%a4%e5%bd%a2%e5%ae%b9-%e8%a8%97%e9%81%8b%e5%95%86%e5%8f%8d%e6%87%89-%e4%ba%a6%e4%bb%a4%e4%ba%ba%e9%bc%93%e8%88%9e-%e5%a4%aa%e9%90%b5%e6%93%ac%e8%b3%bc%e7%be%8e%e5%90%8c%e6%a5%ad/?variant=zh-hk" target="_blank" title="高層形容 託運商反應 亦..." class="underlineBLK">高層形容 託運商反應 亦...</a></li>      </ul>    </div>  </div></div>
+<div class="newslist2 paddingL5T10">  <div class="box_header">    <div class="box_left"><a href="http://toronto.singtao.ca/category/%e9%ab%94%e8%82%b2/?variant=zh-hk">體育</a></div>    <div class="box_right"><a href="http://toronto.singtao.ca/category/%e9%ab%94%e8%82%b2/?variant=zh-hk"><img src="http://toronto.singtao.ca/wp-content/themes/ait2015/image/more.jpg" /></a></div>  </div>  <div class="box_content">    <div class="float_left margin_left whole_image">      <img src="http://toronto.singtao.ca/wp-content/uploads/toronto_sandbox/../master_sandbox/2015/12/vsp02-1203.jpg" class="border" style="max-width:100%;max-height:100%;vertical-align: middle;"/>    </div>    <div id="inner_headline" class="float_left" style="width:320px;">      <P style="margin-bottom:10px;font-size:18px;line-height:25px;"><a href="http://toronto.singtao.ca/529385/2015-12-03/post-%e5%8b%9e%e9%87%8c%e5%8f%9631%e5%88%86%e7%8c%9b%e9%be%8d%e6%93%92%e9%b7%b9/?variant=zh-hk" class="underline2"  target="_blank">勞里取31分猛龍擒鷹</a></P>      <P style="text-align:justify"><p>加通社綜合電</p><p>&nbsp;</p><p>&nbsp;</p><p>NBA多倫多猛龍隊(Rap...<a href="http://toronto.singtao.ca/529385/2015-12-03/post-%e5%8b%9e%e9%87%8c%e5%8f%9631%e5%88%86%e7%8c%9b%e9%be%8d%e6%93%92%e9%b7%b9/?variant=zh-hk" class="underline"  target="_blank">&lt;詳細&gt;</a></p>    </div>    <div class="newslist3 paddingL5T10">      <ul>        <li><img src="http://toronto.singtao.ca/wp-content/themes/ait2015/image/li.gif" style="padding-right:5px;" /><a href="http://toronto.singtao.ca/529385/2015-12-03/post-%e5%8b%9e%e9%87%8c%e5%8f%9631%e5%88%86%e7%8c%9b%e9%be%8d%e6%93%92%e9%b7%b9/?variant=zh-hk" target="_blank" title="勞里取31分猛龍擒鷹" class="underlineBLK">勞里取31分猛龍擒鷹</a></li>        <li><img src="http://toronto.singtao.ca/wp-content/themes/ait2015/image/li.gif" style="padding-right:5px;" /><a href="http://toronto.singtao.ca/529380/2015-12-03/post-%e6%a5%93%e8%91%89%e5%96%ae%e7%af%80%e5%a4%b14%e7%90%83-%e4%b8%8d%e6%95%b5%e5%99%b4%e5%b0%84%e6%a9%9f/?variant=zh-hk" target="_blank" title="楓葉單節失4球 不敵噴射..." class="underlineBLK">楓葉單節失4球 不敵噴射...</a></li>        <li><img src="http://toronto.singtao.ca/wp-content/themes/ait2015/image/li.gif" style="padding-right:5px;" /><a href="http://toronto.singtao.ca/529379/2015-12-03/post-%e5%ba%ab%e9%87%8c%e8%bf%94%e9%84%89%e7%8b%82%e7%a0%8d40%e5%88%86-%e5%8b%87%e5%a3%ab%e8%bc%95%e5%8f%96%e9%bb%83%e8%9c%82/?variant=zh-hk" target="_blank" title="庫里返鄉狂砍40分  勇..." class="underlineBLK">庫里返鄉狂砍40分  勇...</a></li>        <li><img src="http://toronto.singtao.ca/wp-content/themes/ait2015/image/li.gif" style="padding-right:5px;" /><a href="http://toronto.singtao.ca/529378/2015-12-03/post-%e9%82%a6%e5%a5%b4%e9%87%8d%e6%8e%8c%e9%9b%84%e7%8d%85%e5%b8%a5%e5%8d%b0/?variant=zh-hk" target="_blank" title="邦奴重掌雄獅帥印" class="underlineBLK">邦奴重掌雄獅帥印</a></li>        <li><img src="http://toronto.singtao.ca/wp-content/themes/ait2015/image/li.gif" style="padding-right:5px;" /><a href="http://toronto.singtao.ca/529377/2015-12-03/post-%e5%9f%ba%e8%97%8d%e9%a6%ac%e6%9d%8e%e5%bf%97%e8%b1%aa-%e5%88%86%e6%8a%95%e4%b8%ad%e7%94%b2%e7%90%83%e9%9a%8a/?variant=zh-hk" target="_blank" title="基藍馬李志豪 分投中甲球..." class="underlineBLK">基藍馬李志豪 分投中甲球...</a></li>        <li><img src="http://toronto.singtao.ca/wp-content/themes/ait2015/image/li.gif" style="padding-right:5px;" /><a href="http://toronto.singtao.ca/529376/2015-12-03/post-%e9%ab%98%e6%af%94%e5%9b%9e%e5%8b%87-%e6%b9%96%e4%ba%ba%e5%8b%9d%e5%b7%ab%e5%b8%ab/?variant=zh-hk" target="_blank" title="高比回勇 湖人勝巫師" class="underlineBLK">高比回勇 湖人勝巫師</a></li>      </ul>    </div>  </div></div>
+
+
+           		<!--
+           		<div class="center_box_2_1 float_right">&nbsp;</div>
+           		//-->
+
+      
+                <!--specail news list end -->
+
+              <!---news list begin -->
+
+
+
+              <!--ad 485x60  港聞 中國 後面 -->
+              	<div style="width:485; height:60px; padding-top:10px; padding-right:10px;"><!-- ST_TOR_HP_CenterBanner_485x60 --><script type='text/javascript'>GA_googleFillSlot("ST_TOR_HP_CenterBanner_485x60");</script></div>
+			  <!--ad end -->
+
+
+
+              <!---news list end -->
+
+           </div> <!--end right1 -->
+           <div id="right2">
+
+            <div class="ad300" id="ad300" style="margin-bottom:5px;">
+
+              <!-- ad-key:techus:index_right //--><script>aitTechus('addyn/3.0/5214.1/905087/0/170/ADTECH');</script>
+            </div>
+
+                
+                
+            <div style='width:300px;margin-bottom:10px;padding-left:5px;'>
+              <!-- ad-key:index_right_300x77 //--><script>GA_googleFillSlot("ST_TOR_House_SpecialNewsBanner_300x77");</script>              <!-- ad-key:index_VideoBox_300x250 //--><script>GA_googleFillSlot("ST_TOR_HP_VideoBox_300x250");</script>              <!-- ad-key:index_RightBanner_300x77 //--><script>GA_googleFillSlot("ST_TOR_HP_RightBanner_300x77");</script>              <!-- ad-key:index_Halfpage_300x600 //--><script>GA_googleFillSlot("ST_TOR_HP_Halfpage_300x600");</script>              <!-- ad-key:index_right_300x360 //--><script>GA_googleFillSlot("ST_TOR_CCUEFeatureArticle_300x360");</script>            </div>
+
+
+
+
+
+
+        <div id="exchange" class="float_left marginL5T10">
+        <div id="exchange_header"><h3>外匯行情</h3></div>
+
+        <div id="exchange_content" style="margin-top: 0px;">
+          <iframe width="280" scrolling="no" height="410" frameborder="0" allowtransparency="true" src="http://toronto.singtao.ca/wp-content/themes/ait2015/exchange/exchange3.php"/></iframe>
+        </div>
+        </div><!--end exhcnage -->
+
+
+      <div class="float_left" id="magBK" style="width:310px; text-align:center; padding-left:5px;">
+					<div><h3>星島副刊雜誌</h3></div>
+				   	<div id="mag" style="padding-left:7px;"><iframe src ="http://news.singtao.ca/index_mag.html" width="290" height="380" frameborder="0" scrolling="no"><p>Your browser does not support iframes.</p></iframe></div>
+			</div>
+
+           </div> <!--end right2 -->
+		</div><!--end right -->
+
+
+
+		  <!--financial-->
+				<!--<div style="padding-top:20px; float:left;"><iframe src="http://www.singtao.ca/events/financial/index_tor_frm.php" frameborder="0" scrolling="no" height="500px" width="1000px" align="top"></iframe></div>-->
+				 <!--financial end -->
+
+
+
+<script>
+
+var adAccount = 'ca-pub-6410773352388001';
+
+
+  $( document ).ready(function() {
+  });
+
+
+    for (var i = 0; i < adTagsUse.length; i++) {
+      var tagUse = adTagsUse[i];
+
+      if ( adTags[tagUse] ) {
+        //console.log(adTags[tagUse]);
+        if ( adTags[tagUse].length>=3 ) {
+					googletag.defineSlot(adTags[tagUse][0],adTags[tagUse][1],adTags[tagUse][2]).addService(googletag.pubads());
+        }
+        if ( adTags[tagUse].length>=4 ) {
+					googletag.defineOutOfPageSlot(adTags[tagUse][0], adTags[tagUse][3]).addService(googletag.pubads());
+        }
+      }
+    }
+
+
+		googletag.pubads().enableSyncRendering();
+		googletag.pubads().enableSingleRequest();
+		googletag.enableServices();
+</script>
+
+<div id="footer">
+  <div id="footer1">
+
+				<a href="/disclaimer" class="underline">Privacy Policy</a>
+		<a href="/disclaimer_cn" class="underline">隱私政策</a>
+
+		&nbsp;<span class="bottom_link_line">|</span>&nbsp;
+		<a href="/contactus" class="underline">Contact Us 聯絡我們</a>
+
+		&nbsp;<span class="bottom_link_line">|</span>&nbsp;
+
+		<a href="http://news.singtao.ca/singtaomedia/index.html" class="underline" target="_blank">About Us 關於我們</a>
+
+		&nbsp;<span class="bottom_link_line">|</span>&nbsp;
+
+		<a href="/terms" class="underline">Terms of Services</a>
+		&nbsp;<a href="/terms_cn" class="underline">服務條款</a>
+
+		<br />
+
+		<a href="/wp-content/uploads/toronto_sandbox/2015/03/Advertising_Terms_Conditions_0207.pdf" target="_blank" class="underline">
+    Advertising Terms &amp; Conditions 刊登廣告條款</a>
+
+
+		
+	</div>
+
+
+						<div id="footer2">
+						<p>Legal Notice: Copyright Sing Tao Daily Limited. All rights reserved. Distribution, transmission or republication of any material from www.singtao.ca is strictly prohibited without the prior written permission of Sing Tao Daily Limited. <br />
+    For information please contact us at <a href="/cdn-cgi/l/email-protection#1a6973747d6e7b757b7e7773745a6973747d6e7b7534797b" class="underline"><span class="__cf_email__" data-cfemail="d7a4beb9b0a3b6b8b6b3babeb997a4beb9b0a3b6b8f9b4b6">[email&#160;protected]</span><script data-cfhash='f9e31' type="text/javascript">
+/* <![CDATA[ */!function(){try{var t="currentScript"in document?document.currentScript:function(){for(var t=document.getElementsByTagName("script"),e=t.length;e--;)if(t[e].getAttribute("data-cfhash"))return t[e]}();if(t&&t.previousSibling){var e,r,n,i,c=t.previousSibling,a=c.getAttribute("data-cfemail");if(a){for(e="",r=parseInt(a.substr(0,2),16),n=2;a.length-n;n+=2)i=parseInt(a.substr(n,2),16)^r,e+=String.fromCharCode(i);e=document.createTextNode(e),c.parentNode.replaceChild(e,c)}t.parentNode.removeChild(t);}}catch(u){}}()/* ]]> */</script></a> . www.singtao.ca online since 2000.
+		</p>
+		<p><a class="underline" href="http://www.singtao.ca"><span class="gray">Canada Chinese Newspaper</span></a></p>
+						</div>
+<a class="transChina">簡繁轉換</a>
+<div id="google_translate_element"></div>
+<script>
+//new google.translate.TranslateElement
+</script>
+					</div><!--end footer -->
+
+	</div><!-- end main -->
+
+</div><!--end wrap -->
+
+<script type="text/javascript">
+/* <![CDATA[ */
+(function(){try{var s,a,i,j,r,c,l=document.getElementsByTagName("a"),t=document.createElement("textarea");for(i=0;l.length-i;i++){try{a=l[i].getAttribute("href");if(a&&a.indexOf("/cdn-cgi/l/email-protection") > -1  && (a.length > 28)){s='';j=27+ 1 + a.indexOf("/cdn-cgi/l/email-protection");if (a.length > j) {r=parseInt(a.substr(j,2),16);for(j+=2;a.length>j&&a.substr(j,1)!='X';j+=2){c=parseInt(a.substr(j,2),16)^r;s+=String.fromCharCode(c);}j+=1;s+=a.substr(j,a.length-j);}t.innerHTML=s.replace(/</g,"&lt;").replace(/>/g,"&gt;");l[i].setAttribute("href","mailto:"+t.value);}}catch(e){}}}catch(e){}})();
+/* ]]> */
+</script>
+</body>
+</html>
