@@ -75,8 +75,9 @@ class Storage(object):
 
     def get_index(self):
         """ Read an index """
-        with open(os.path.join(self.folder, "index.json"), "r") as f:
-            return json.load(f)
+        with open(os.path.join(self.folder, "index.json"), "rb") as f:
+            data = f.read().decode('utf8')
+            return json.loads(data)
 
     def write_index(self, index):
         """ Save an index """
@@ -91,8 +92,9 @@ class Storage(object):
                     for row in info['visible_html_fields']
                 ]
 
-        with open(os.path.join(self.folder, "index.json"), "w") as f:
-            json.dump(index, f, ensure_ascii=False, indent=4)
+        with open(os.path.join(self.folder, "index.json"), "wb") as f:
+            data = json.dumps(index, ensure_ascii=False, indent=4)
+            f.write(data.encode('utf8'))
 
     def get_config(self):
         """ Read meta information, including form and field types """
