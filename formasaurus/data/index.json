@@ -128,7 +128,7 @@
         "forms": [
             "s",
             "m",
-            "o"
+            "c"
         ],
         "visible_html_fields": [
             {
@@ -148,8 +148,8 @@
         "url": "http://arstechnica.com/",
         "forms": [
             "s",
-            "s",
-            "o"
+            "N",
+            "N"
         ],
         "visible_html_fields": [
             {
@@ -159,7 +159,7 @@
                 "mag_list": "nv"
             },
             {
-                "sub_list": "OS"
+                "sub_list": "nv"
             }
         ]
     },
@@ -469,7 +469,7 @@
     "html/brooklynbrewshop.com-1.html": {
         "url": "http://brooklynbrewshop.com/beer-making-kits/hard-cider-kit",
         "forms": [
-            "o",
+            "b",
             "X"
         ],
         "visible_html_fields": [
@@ -561,24 +561,24 @@
     "html/buyee.jp-0.html": {
         "url": "https://buyee.jp/signup/login",
         "forms": [
-            "X"
+            "l"
         ],
         "visible_html_fields": [
             {
-                "login[mailAddress]": "XX",
-                "login[password]": "XX"
+                "login[mailAddress]": "e1",
+                "login[password]": "p1"
             }
         ]
     },
     "html/buyee.jp-1.html": {
         "url": "https://buyee.jp/signup/password",
         "forms": [
-            "X"
+            "r"
         ],
         "visible_html_fields": [
             {
-                "signup[captcha]": "XX",
-                "signup[mailAddress]": "XX"
+                "signup[captcha]": "ca",
+                "signup[mailAddress]": "e1"
             }
         ]
     },
@@ -586,18 +586,18 @@
         "url": "https://buyee.jp/signup/pre",
         "forms": [
             "X",
-            "X",
-            "X"
+            "r",
+            "r"
         ],
         "visible_html_fields": [
             {},
             {
-                "signup[mailAddress]": "XX"
+                "signup[mailAddress]": "e1"
             },
             {
-                "signupTenso[captcha]": "XX",
-                "signupTenso[mailAddress]": "XX",
-                "signupTenso[password]": "XX"
+                "signupTenso[captcha]": "ca",
+                "signupTenso[mailAddress]": "e1",
+                "signupTenso[password]": "p1"
             }
         ]
     },
@@ -605,27 +605,27 @@
         "url": "http://buyee.jp/rakuten/",
         "forms": [
             "X",
-            "X"
+            "s"
         ],
         "visible_html_fields": [
             {},
             {
-                "query": "XX"
+                "query": "qq"
             }
         ]
     },
     "html/cafephim.vn-0.html": {
         "url": "http://cafephim.vn/",
         "forms": [
-            "X",
-            "X"
+            "s",
+            "s"
         ],
         "visible_html_fields": [
             {
-                "s": "XX"
+                "s": "qq"
             },
             {
-                "s": "XX"
+                "s": "qq"
             }
         ]
     },
@@ -647,29 +647,29 @@
     "html/climatecolab.org-0.html": {
         "url": "http://climatecolab.org/",
         "forms": [
+            "l",
+            "c",
             "X",
-            "X",
-            "X",
-            "X",
-            "X"
+            "l",
+            "p"
         ],
         "visible_html_fields": [
             {
-                "login": "XX",
-                "password": "XX",
-                "submit": "XX"
+                "login": "us",
+                "password": "p1",
+                "submit": "Bs"
             },
             {
-                "description": "XX",
-                "email": "XX"
+                "description": "CC",
+                "email": "e1"
             },
             {},
             {
-                "login": "XX",
-                "password": "XX"
+                "login": "us",
+                "password": "p1"
             },
             {
-                "screenName": "XX"
+                "screenName": "ue"
             }
         ]
     },
@@ -678,10 +678,10 @@
         "forms": [
             "X",
             "X",
+            "o",
+            "r",
             "X",
-            "X",
-            "X",
-            "X",
+            "l",
             "X"
         ],
         "visible_html_fields": [
@@ -695,24 +695,24 @@
                 "email": "XX"
             },
             {
-                "file": "XX"
+                "file": "OU"
             },
             {
-                "captchaText": "XX",
-                "country": "XX",
-                "email": "XX",
-                "firstName": "XX",
-                "lastName": "XX",
-                "password": "XX",
-                "retypeEmail": "XX",
-                "retypePassword": "XX",
-                "screenName": "XX",
-                "shortBio": "XX"
+                "captchaText": "ca",
+                "country": "Co",
+                "email": "e1",
+                "firstName": "n1",
+                "lastName": "n3",
+                "password": "p1",
+                "retypeEmail": "e2",
+                "retypePassword": "p2",
+                "screenName": "us",
+                "shortBio": "am"
             },
             {},
             {
-                "login": "XX",
-                "password": "XX"
+                "login": "us",
+                "password": "p1"
             },
             {
                 "screenName": "XX"
@@ -749,7 +749,7 @@
         "url": "http://darkmoney.cc/",
         "forms": [
             "l",
-            "o"
+            "V"
         ],
         "visible_html_fields": [
             {
@@ -759,7 +759,7 @@
             },
             {
                 "langid": "OS",
-                "styleid": "OS"
+                "styleid": "st"
             }
         ]
     },
@@ -802,14 +802,14 @@
     "html/data.douglas.de-0.html": {
         "url": "https://data.douglas.de/hybr/popup/hilfe/no/hilfe_kt.htm",
         "forms": [
-            "X"
+            "c"
         ],
         "visible_html_fields": [
             {
-                "betreff": "XX",
-                "fromemail": "XX",
-                "name": "XX",
-                "text": "XX"
+                "betreff": "CT",
+                "fromemail": "e1",
+                "name": "nf",
+                "text": "CC"
             }
         ]
     },
@@ -818,7 +818,7 @@
         "forms": [
             "s",
             "l",
-            "o",
+            "V",
             "l"
         ],
         "visible_html_fields": [
@@ -830,7 +830,7 @@
                 "loginUsername": "us"
             },
             {
-                "styleID": "OS"
+                "styleID": "st"
             },
             {
                 "loginPassword": "p1",
@@ -844,7 +844,7 @@
         "forms": [
             "s",
             "r",
-            "o",
+            "V",
             "l"
         ],
         "visible_html_fields": [
@@ -865,7 +865,7 @@
                 "values[userOption139]": "OT"
             },
             {
-                "styleID": "OS"
+                "styleID": "st"
             },
             {
                 "loginPassword": "p1",
@@ -934,15 +934,15 @@
     "html/diasdepressao.com-0.html": {
         "url": "http://diasdepressao.com/",
         "forms": [
-            "X",
-            "X"
+            "s",
+            "s"
         ],
         "visible_html_fields": [
             {
-                "s": "XX"
+                "s": "qq"
             },
             {
-                "q": "XX",
+                "q": "qq",
                 "sa": "XX"
             }
         ]
@@ -951,7 +951,7 @@
         "url": "http://diasdepressao.com/contato/",
         "forms": [
             "X",
-            "X",
+            "c",
             "X"
         ],
         "visible_html_fields": [
@@ -959,9 +959,9 @@
                 "s": "XX"
             },
             {
-                "your-email": "XX",
-                "your-message": "XX",
-                "your-name": "XX"
+                "your-email": "e1",
+                "your-message": "CC",
+                "your-name": "nf"
             },
             {
                 "q": "XX",
@@ -1037,46 +1037,46 @@
     "html/doc-jukebox.info-0.html": {
         "url": "http://doc-jukebox.info/",
         "forms": [
-            "X"
+            "s"
         ],
         "visible_html_fields": [
             {
-                "search_text": "XX"
+                "search_text": "qq"
             }
         ]
     },
     "html/dokidome.com-0.html": {
         "url": "http://dokidome.com/",
         "forms": [
-            "X",
-            "X"
+            "c",
+            "s"
         ],
         "visible_html_fields": [
             {
-                "author": "XX",
-                "comment": "XX",
-                "submit": "XX"
+                "author": "nf",
+                "comment": "CC",
+                "submit": "Bs"
             },
             {
-                "s": "XX"
+                "s": "qq"
             }
         ]
     },
     "html/domdom.kz-0.html": {
         "url": "https://domdom.kz/",
         "forms": [
-            "X",
-            "X"
+            "s",
+            "c"
         ],
         "visible_html_fields": [
             {
-                "s_word": "XX"
+                "s_word": "qq"
             },
             {
-                "body": "XX",
-                "email": "XX",
-                "name": "XX",
-                "subject": "XX"
+                "body": "CC",
+                "email": "e1",
+                "name": "nf",
+                "subject": "CT"
             }
         ]
     },
@@ -1107,21 +1107,21 @@
     "html/entremuslims.fr-0.html": {
         "url": "http://entremuslims.fr/",
         "forms": [
-            "X"
+            "s"
         ],
         "visible_html_fields": [
             {
-                "cat": "XX",
-                "dons": "XX",
-                "keywords": "XX",
-                "offres": "XX",
-                "photo": "XX",
-                "recherches": "XX",
-                "reg": "XX",
-                "titre": "XX",
-                "urgentes": "XX",
-                "video": "XX",
-                "zip_code": "XX"
+                "cat": "qc",
+                "dons": "qc",
+                "keywords": "qq",
+                "offres": "qc",
+                "photo": "qc",
+                "recherches": "qc",
+                "reg": "St",
+                "titre": "qc",
+                "urgentes": "qc",
+                "video": "qc",
+                "zip_code": "Zi"
             }
         ]
     },
@@ -1129,8 +1129,8 @@
         "url": "http://entremuslims.fr/deposer-une-annonce.htm",
         "forms": [
             "X",
-            "X",
-            "X"
+            "o",
+            "o"
         ],
         "visible_html_fields": [
             {
@@ -1147,26 +1147,26 @@
                 "zip_code": "XX"
             },
             {
-                "photo": "XX"
+                "photo": "OU"
             },
             {
-                "ann": "XX",
-                "cat": "XX",
-                "cgu": "XX",
-                "cod": "XX",
-                "dailymotion": "XX",
-                "ema": "XX",
-                "ema2": "XX",
-                "nom": "XX",
-                "pas": "XX",
-                "pas2": "XX",
-                "pri": "XX",
-                "reg": "XX",
-                "sta": "XX",
-                "tit": "XX",
-                "typ": "XX",
-                "vil": "XX",
-                "youtube": "XX"
+                "ann": "OT",
+                "cat": "OS",
+                "cgu": "tC",
+                "cod": "Zi",
+                "dailymotion": "ws",
+                "ema": "e1",
+                "ema2": "e2",
+                "nom": "nf",
+                "pas": "p1",
+                "pas2": "p2",
+                "pri": "ON",
+                "reg": "St",
+                "sta": "OS",
+                "tit": "OT",
+                "typ": "OS",
+                "vil": "Ci",
+                "youtube": "ws"
             }
         ]
     },
@@ -1174,7 +1174,7 @@
         "url": "http://entremuslims.fr/contact.htm",
         "forms": [
             "X",
-            "X"
+            "c"
         ],
         "visible_html_fields": [
             {
@@ -1191,52 +1191,52 @@
                 "zip_code": "XX"
             },
             {
-                "code": "XX",
-                "con_ema": "XX",
-                "con_mes": "XX",
-                "con_nom": "XX",
-                "con_tel": "XX",
-                "con_tit": "XX",
-                "contact": "XX"
+                "code": "ca",
+                "con_ema": "e1",
+                "con_mes": "CC",
+                "con_nom": "nf",
+                "con_tel": "ph",
+                "con_tit": "CT",
+                "contact": "OS"
             }
         ]
     },
     "html/excursionphuket.com-0.html": {
         "url": "http://excursionphuket.com/",
         "forms": [
-            "X",
-            "X",
-            "X"
+            "s",
+            "l",
+            "r"
         ],
         "visible_html_fields": [
             {
-                "s": "XX",
-                "searchsubmit": "XX"
+                "s": "qq",
+                "searchsubmit": "Bs"
             },
             {
-                "log": "XX",
-                "login": "XX",
-                "pwd": "XX",
-                "rememberme": "XX"
+                "log": "us",
+                "login": "Bs",
+                "pwd": "p1",
+                "rememberme": "rC"
             },
             {
-                "c_val_s_reg": "XX",
-                "checkboxagree": "XX",
-                "register": "XX",
-                "user_email": "XX",
-                "user_login": "XX"
+                "c_val_s_reg": "ab",
+                "checkboxagree": "tC",
+                "register": "Bs",
+                "user_email": "e1",
+                "user_login": "us"
             }
         ]
     },
     "html/excursionphuket.com-1.html": {
         "url": "http://excursionphuket.com/wp-login.php?action=lostpassword",
         "forms": [
-            "X"
+            "p"
         ],
         "visible_html_fields": [
             {
-                "user_login": "XX",
-                "wp-submit": "XX"
+                "user_login": "ue",
+                "wp-submit": "Bs"
             }
         ]
     },
@@ -1280,7 +1280,7 @@
         "forms": [
             "l",
             "s",
-            "o"
+            "V"
         ],
         "visible_html_fields": [
             {
@@ -1294,7 +1294,7 @@
                 "submit": "Bs"
             },
             {
-                "styleid": "OS"
+                "styleid": "st"
             }
         ]
     },
@@ -1546,7 +1546,7 @@
             "l",
             "s",
             "o",
-            "o"
+            "V"
         ],
         "visible_html_fields": [
             {
@@ -1561,7 +1561,7 @@
             },
             {},
             {
-                "styleid": "OS"
+                "styleid": "st"
             }
         ]
     },
@@ -1571,7 +1571,7 @@
             "l",
             "s",
             "r",
-            "o"
+            "V"
         ],
         "visible_html_fields": [
             {
@@ -1601,7 +1601,7 @@
                 "username": "us"
             },
             {
-                "styleid": "OS"
+                "styleid": "st"
             }
         ]
     },
@@ -1660,45 +1660,45 @@
     "html/forums.famili.fr-0.html": {
         "url": "http://forums.famili.fr/",
         "forms": [
+            "s",
+            "l",
             "X",
+            "l",
+            "s",
             "X",
-            "X",
-            "X",
-            "X",
-            "X",
-            "X",
-            "X"
+            "s",
+            "m"
         ],
         "visible_html_fields": [
             {
-                "query": "XX"
+                "query": "qq"
             },
             {
-                "memberLogin": "XX",
-                "memberPassword": "XX",
-                "setCookie": "XX"
-            },
-            {},
-            {
-                "memberLogin": "XX",
-                "memberPassword": "XX",
-                "setCookie": "XX"
-            },
-            {
-                "query": "XX",
-                "submit": "XX"
+                "memberLogin": "us",
+                "memberPassword": "p1",
+                "setCookie": "rC"
             },
             {},
             {
-                "query": "XX"
+                "memberLogin": "us",
+                "memberPassword": "p1",
+                "setCookie": "rC"
             },
             {
-                "emailAddress": "XX",
-                "inscription": "XX",
-                "newsletters[33]": "XX",
-                "newsletters[34]": "XX",
-                "newsletters[426]": "XX",
-                "newsletters[43]": "XX"
+                "query": "qq",
+                "submit": "Bs"
+            },
+            {},
+            {
+                "query": "qq"
+            },
+            {
+                "emailAddress": "e1",
+                "inscription": "Bs",
+                "newsletters[33]": "OS",
+                "newsletters[34]": "OS",
+                "newsletters[426]": "OS",
+                "newsletters[43]": "OS"
             }
         ]
     },
@@ -1733,7 +1733,7 @@
             "s",
             "l",
             "l",
-            "s",
+            "N",
             "c"
         ],
         "visible_html_fields": [
@@ -1767,7 +1767,7 @@
             "l",
             "s",
             "o",
-            "o",
+            "V",
             "s"
         ],
         "visible_html_fields": [
@@ -1786,7 +1786,7 @@
             },
             {},
             {
-                "styleid": "OS"
+                "styleid": "st"
             },
             {
                 "q": "qq"
@@ -1800,7 +1800,7 @@
             "l",
             "s",
             "r",
-            "o",
+            "V",
             "s"
         ],
         "visible_html_fields": [
@@ -1836,7 +1836,7 @@
                 "username": "us"
             },
             {
-                "styleid": "OS"
+                "styleid": "st"
             },
             {
                 "q": "XX"
@@ -2154,7 +2154,7 @@
         "forms": [
             "s",
             "s",
-            "s",
+            "o",
             "o"
         ],
         "visible_html_fields": [
@@ -2433,7 +2433,7 @@
         "forms": [
             "s",
             "s",
-            "o"
+            "b"
         ],
         "visible_html_fields": [
             {
@@ -2443,7 +2443,7 @@
                 "keyword": "qq"
             },
             {
-                "cart_quantity": "ON"
+                "cart_quantity": "qt"
             }
         ]
     },
@@ -3091,11 +3091,11 @@
     "html/multikino.lt-0.html": {
         "url": "http://multikino.lt/lt/dabar/",
         "forms": [
-            "o"
+            "s"
         ],
         "visible_html_fields": [
             {
-                "cinema": "OS",
+                "cinema": "qc",
                 "dates": "OD"
             }
         ]
@@ -3247,14 +3247,14 @@
         "url": "http://nahodsa.sk/children-boys-westway-trainers-1.html",
         "forms": [
             "s",
-            "o"
+            "b"
         ],
         "visible_html_fields": [
             {
                 "q": "XX"
             },
             {
-                "qty": "ON",
+                "qty": "qt",
                 "super_attribute[126]": "OS"
             }
         ]
@@ -3262,7 +3262,7 @@
     "html/naviny.by-0.html": {
         "url": "http://naviny.by/",
         "forms": [
-            "o",
+            "s",
             "l",
             "m",
             "s",
@@ -3270,7 +3270,7 @@
             "s",
             "s",
             "s",
-            "o",
+            "P",
             "o",
             "o",
             "o"
@@ -3278,7 +3278,7 @@
         "visible_html_fields": [
             {
                 "archiveDate": "OD",
-                "formArchive": "XX"
+                "formArchive": "OR"
             },
             {
                 "login": "us",
@@ -3759,7 +3759,7 @@
         "url": "http://postr.hu/",
         "forms": [
             "s",
-            "o"
+            "c"
         ],
         "visible_html_fields": [
             {
@@ -3980,13 +3980,13 @@
     "html/restrito.cotemig.com.br-0.html": {
         "url": "https://restrito.cotemig.com.br/portal/v2/esqueceusenha.php",
         "forms": [
-            "X"
+            "p"
         ],
         "visible_html_fields": [
             {
-                "cpf": "XX",
-                "email": "XX",
-                "login": "XX"
+                "cpf": "OT",
+                "email": "e1",
+                "login": "us"
             }
         ]
     },
@@ -4569,60 +4569,60 @@
     "html/theb52s.shop.livenation.com-0.html": {
         "url": "http://theb52s.shop.livenation.com/",
         "forms": [
-            "o",
-            "o",
-            "o",
-            "o",
-            "o",
-            "o",
-            "o",
-            "o",
-            "o",
-            "o",
-            "o",
+            "s",
+            "b",
+            "b",
+            "b",
+            "b",
+            "b",
+            "b",
+            "b",
+            "b",
+            "b",
+            "b",
             "m"
         ],
         "visible_html_fields": [
             {
-                "selProductSort": "OS"
+                "selProductSort": "sp"
             },
             {
-                "qty": "XX",
-                "sku": "XX"
-            },
-            {
-                "qty": "XX",
-                "sku": "XX"
-            },
-            {
-                "qty": "XX",
-                "sku": "XX"
-            },
-            {
-                "qty": "XX",
-                "sku": "XX"
-            },
-            {
-                "qty": "ON",
+                "qty": "qt",
                 "sku": "OS"
             },
             {
-                "qty": "ON",
+                "qty": "qt",
                 "sku": "OS"
             },
             {
-                "qty": "ON",
+                "qty": "qt",
                 "sku": "OS"
             },
             {
-                "qty": "ON",
+                "qty": "qt",
                 "sku": "OS"
             },
             {
-                "qty": "ON"
+                "qty": "qt",
+                "sku": "OS"
             },
             {
-                "qty": "ON",
+                "qty": "qt",
+                "sku": "OS"
+            },
+            {
+                "qty": "qt",
+                "sku": "OS"
+            },
+            {
+                "qty": "qt",
+                "sku": "OS"
+            },
+            {
+                "qty": "qt"
+            },
+            {
+                "qty": "qt",
                 "sku": "OS"
             },
             {
@@ -5143,7 +5143,7 @@
         "forms": [
             "X",
             "b",
-            "o"
+            "c"
         ],
         "visible_html_fields": [
             {
@@ -5384,7 +5384,7 @@
             "l",
             "s",
             "X",
-            "o"
+            "V"
         ],
         "visible_html_fields": [
             {
@@ -5399,7 +5399,7 @@
             },
             {},
             {
-                "styleid": "OS"
+                "styleid": "st"
             }
         ]
     },
@@ -5553,13 +5553,13 @@
         ],
         "visible_html_fields": [
             {
-                "InsuranceType": "XX",
-                "ccprods": "XX",
-                "local": "XX",
-                "lookFor": "XX",
-                "prods": "XX",
-                "selCreditCard": "XX",
-                "zip": "XX"
+                "InsuranceType": "OS",
+                "ccprods": "OS",
+                "local": "OS",
+                "lookFor": "OS",
+                "prods": "OS",
+                "selCreditCard": "OS",
+                "zip": "Zi"
             }
         ]
     },
@@ -5650,7 +5650,7 @@
             "l",
             "s",
             "o",
-            "o"
+            "V"
         ],
         "visible_html_fields": [
             {
@@ -5665,7 +5665,7 @@
             },
             {},
             {
-                "styleid": "OS"
+                "styleid": "st"
             }
         ]
     },
@@ -5675,7 +5675,7 @@
             "l",
             "s",
             "r",
-            "o"
+            "V"
         ],
         "visible_html_fields": [
             {
@@ -5703,7 +5703,7 @@
                 "username": "us"
             },
             {
-                "styleid": "OS"
+                "styleid": "st"
             }
         ]
     },
@@ -5712,8 +5712,8 @@
         "forms": [
             "s",
             "s",
-            "o",
-            "o"
+            "s",
+            "N"
         ],
         "visible_html_fields": [
             {
@@ -5723,10 +5723,10 @@
                 "keywords": "qq"
             },
             {
-                "sd": "OS",
-                "sk": "OS",
+                "sd": "sp",
+                "sk": "sp",
                 "sort": "Bs",
-                "st": "OS"
+                "st": "qc"
             },
             {
                 "f": "nv"
@@ -5874,16 +5874,16 @@
     "html/www.bloggermint.com-0.html": {
         "url": "http://www.bloggermint.com/",
         "forms": [
-            "X",
-            "X"
+            "s",
+            "m"
         ],
         "visible_html_fields": [
             {
-                "q": "XX",
-                "sa": "XX"
+                "q": "qq",
+                "sa": "Bs"
             },
             {
-                "email": "XX"
+                "email": "e1"
             }
         ]
     },
@@ -5893,8 +5893,8 @@
             "s",
             "s",
             "s",
-            "o",
-            "o"
+            "c",
+            "c"
         ],
         "visible_html_fields": [
             {
@@ -5974,18 +5974,18 @@
     "html/www.breakfast-reviews.net-0.html": {
         "url": "http://www.breakfast-reviews.net/",
         "forms": [
-            "X",
-            "X"
+            "s",
+            "o"
         ],
         "visible_html_fields": [
             {
-                "s": "XX"
+                "s": "qq"
             },
             {
-                "input_4": "XX",
-                "input_5": "XX",
-                "input_6": "XX",
-                "input_7": "XX"
+                "input_4": "OS",
+                "input_5": "ph",
+                "input_6": "e1",
+                "input_7": "ws"
             }
         ]
     },
@@ -5993,45 +5993,45 @@
         "url": "http://www.breakfast-reviews.net/contatti/",
         "forms": [
             "X",
-            "X",
-            "X"
+            "c",
+            "o"
         ],
         "visible_html_fields": [
             {
                 "s": "XX"
             },
             {
-                "input_10.1": "XX",
-                "input_11": "XX",
-                "input_2": "XX",
-                "input_4": "XX",
-                "input_6.3": "XX",
-                "input_6.6": "XX",
-                "input_7": "XX",
-                "input_8.1": "XX",
-                "input_8.2": "XX",
-                "input_9.1": "XX"
+                "input_10.1": "tC",
+                "input_11": "CT",
+                "input_2": "CT",
+                "input_4": "CC",
+                "input_6.3": "n1",
+                "input_6.6": "n3",
+                "input_7": "e1",
+                "input_8.1": "eC",
+                "input_8.2": "eC",
+                "input_9.1": "tC"
             },
             {
-                "input_4": "XX",
-                "input_5": "XX",
-                "input_6": "XX",
-                "input_7": "XX"
+                "input_4": "OS",
+                "input_5": "ph",
+                "input_6": "e1",
+                "input_7": "ws"
             }
         ]
     },
     "html/www.brief.pl-0.html": {
         "url": "http://www.brief.pl/",
         "forms": [
-            "X"
+            "m"
         ],
         "visible_html_fields": [
             {
-                "iLegals": "XX",
-                "sCompany": "XX",
-                "sEmail": "XX",
-                "sFirstName": "XX",
-                "sLastName": "XX"
+                "iLegals": "tC",
+                "sCompany": "no",
+                "sEmail": "e1",
+                "sFirstName": "n1",
+                "sLastName": "n3"
             }
         ]
     },
@@ -6109,7 +6109,7 @@
         "url": "http://www.bsuir.by/conference/ucp.php?mode=register&sid=ea6cd060879d8f1b281b139b2b14b262",
         "forms": [
             "s",
-            "o",
+            "V",
             "r"
         ],
         "visible_html_fields": [
@@ -6129,7 +6129,7 @@
         "url": "http://www.bsuir.by/conference/ucp.php?mode=register",
         "forms": [
             "s",
-            "o",
+            "V",
             "r"
         ],
         "visible_html_fields": [
@@ -6167,31 +6167,31 @@
     "html/www.bummelwelt.de-0.html": {
         "url": "http://www.bummelwelt.de/",
         "forms": [
+            "s",
+            "X",
+            "l",
             "X",
             "X",
             "X",
-            "X",
-            "X",
-            "X",
-            "X"
+            "l"
         ],
         "visible_html_fields": [
             {
-                "q": "XX"
+                "q": "qq"
             },
             {},
             {
-                "remember_me": "XX",
-                "session[password]": "XX",
-                "session[username_or_email]": "XX"
+                "remember_me": "rC",
+                "session[password]": "p1",
+                "session[username_or_email]": "ue"
             },
             {},
             {},
             {},
             {
-                "remember_me": "XX",
-                "session[password]": "XX",
-                "session[username_or_email]": "XX"
+                "remember_me": "rC",
+                "session[password]": "p1",
+                "session[username_or_email]": "ue"
             }
         ]
     },
@@ -6402,7 +6402,7 @@
     "html/www.cccco.edu-0.html": {
         "url": "http://www.cccco.edu/",
         "forms": [
-            "o"
+            "s"
         ],
         "visible_html_fields": [
             {
@@ -6413,11 +6413,11 @@
     "html/www.chicco.co.uk-0.html": {
         "url": "http://www.chicco.co.uk/",
         "forms": [
-            "X"
+            "s"
         ],
         "visible_html_fields": [
             {
-                "q": "XX"
+                "q": "qq"
             }
         ]
     },
@@ -6425,65 +6425,65 @@
         "url": "http://www.chicco.co.uk/contacts.html",
         "forms": [
             "X",
-            "X"
+            "c"
         ],
         "visible_html_fields": [
             {
                 "q": "XX"
             },
             {
-                "address": "XX",
-                "captcha_button": "XX",
-                "captchatry": "XX",
-                "city": "XX",
-                "email": "XX",
-                "file1": "XX",
-                "message": "XX",
-                "name": "XX",
-                "phone": "XX",
-                "policy": "XX",
-                "postalcode": "XX",
-                "province": "XX",
-                "servicerequest": "XX",
-                "surname": "XX"
+                "address": "Sa",
+                "captcha_button": "ca",
+                "captchatry": "ca",
+                "city": "Ci",
+                "email": "e1",
+                "file1": "OU",
+                "message": "CC",
+                "name": "n1",
+                "phone": "ph",
+                "policy": "tC",
+                "postalcode": "Zi",
+                "province": "St",
+                "servicerequest": "CT",
+                "surname": "n3"
             }
         ]
     },
     "html/www.cision.com-0.html": {
         "url": "http://www.cision.com/us/client-login/?nav_location=eyebrow_menu",
         "forms": [
-            "X"
+            "m"
         ],
         "visible_html_fields": [
             {
-                "Save": "XX",
-                "canadaOptIn1": "XX",
-                "country": "XX",
-                "daily": "XX",
-                "emailAddress": "XX",
-                "firstName": "XX",
-                "lastName": "XX",
-                "weekly": "XX"
+                "Save": "Bs",
+                "canadaOptIn1": "eC",
+                "country": "Co",
+                "daily": "oC",
+                "emailAddress": "e1",
+                "firstName": "n1",
+                "lastName": "n3",
+                "weekly": "oC"
             }
         ]
     },
     "html/www.cision.com-1.html": {
         "url": "http://www.cision.com/us/contact-us/?nav_location=eyebrow_menu",
         "forms": [
-            "X"
+            "m"
         ],
         "visible_html_fields": [
             {
-                "Company": "XX",
-                "Country": "XX",
-                "Email": "XX",
-                "FirstName": "XX",
-                "LastName": "XX",
-                "Phone": "XX",
-                "Save": "XX",
-                "State": "XX",
-                "emailOptIn": "XX",
-                "productRequest": "XX"
+                "Company": "no",
+                "Country": "Co",
+                "Email": "e1",
+                "FirstName": "n1",
+                "LastName": "n3",
+                "Phone": "ph",
+                "Save": "Bs",
+                "State": "St",
+                "emailOptIn": "eC",
+                "productRequest": "OS"
             }
         ]
     },
@@ -6527,34 +6527,34 @@
     "html/www.civfanatics.ru-0.html": {
         "url": "http://www.civfanatics.ru/content/",
         "forms": [
+            "l",
+            "s",
             "X",
-            "X",
-            "X",
-            "X",
-            "X",
-            "X"
+            "N",
+            "m",
+            "V"
         ],
         "visible_html_fields": [
             {
-                "cookieuser": "XX",
-                "vb_login_password": "XX",
-                "vb_login_password_hint": "XX",
-                "vb_login_username": "XX"
+                "cookieuser": "rC",
+                "vb_login_password": "p1",
+                "vb_login_password_hint": "OR",
+                "vb_login_username": "us"
             },
             {
-                "query": "XX",
-                "submit": "XX"
+                "query": "qq",
+                "submit": "Bs"
             },
             {},
             {
-                "page": "XX"
+                "page": "ON"
             },
             {
-                "email": "XX"
+                "email": "e1"
             },
             {
-                "langid": "XX",
-                "styleid": "XX"
+                "langid": "OS",
+                "styleid": "st"
             }
         ]
     },
@@ -6563,7 +6563,7 @@
         "forms": [
             "X",
             "X",
-            "X",
+            "r",
             "X"
         ],
         "visible_html_fields": [
@@ -6578,22 +6578,22 @@
                 "submit": "XX"
             },
             {
-                "Reset": "XX",
-                "agree": "XX",
-                "dst": "XX",
-                "email": "XX",
-                "emailconfirm": "XX",
-                "humanverify[input]": "XX",
-                "options[adminemail]": "XX",
-                "options[showemail]": "XX",
-                "password": "XX",
-                "passwordconfirm": "XX",
-                "referrername": "XX",
-                "timezoneoffset": "XX",
-                "userfield[field19]": "XX",
-                "userfield[field5]": "XX",
-                "userfield[field7]": "XX",
-                "username": "XX"
+                "Reset": "Br",
+                "agree": "tC",
+                "dst": "ds",
+                "email": "e1",
+                "emailconfirm": "e2",
+                "humanverify[input]": "ab",
+                "options[adminemail]": "eC",
+                "options[showemail]": "eC",
+                "password": "p1",
+                "passwordconfirm": "p2",
+                "referrername": "in",
+                "timezoneoffset": "tz",
+                "userfield[field19]": "ge",
+                "userfield[field5]": "OT",
+                "userfield[field7]": "ca",
+                "username": "us"
             },
             {
                 "langid": "XX",
@@ -6607,7 +6607,7 @@
             "X",
             "X",
             "X",
-            "X",
+            "s",
             "X"
         ],
         "visible_html_fields": [
@@ -6623,18 +6623,18 @@
             },
             {},
             {
-                "beforeafter": "XX",
-                "dosearch": "XX",
-                "exactname": "XX",
-                "humanverify[input]": "XX",
-                "order": "XX",
-                "query": "XX",
-                "searchdate": "XX",
-                "searchuser": "XX",
-                "sortby": "XX",
-                "tag": "XX",
-                "titleonly": "XX",
-                "type[]": "XX"
+                "beforeafter": "qc",
+                "dosearch": "Bs",
+                "exactname": "qc",
+                "humanverify[input]": "ca",
+                "order": "sp",
+                "query": "qq",
+                "searchdate": "qc",
+                "searchuser": "qq",
+                "sortby": "sp",
+                "tag": "qq",
+                "titleonly": "qc",
+                "type[]": "qc"
             },
             {
                 "langid": "XX",
@@ -6671,14 +6671,14 @@
     "html/www.cognitiveclouds.com-0.html": {
         "url": "http://www.cognitiveclouds.com/contact/",
         "forms": [
-            "X"
+            "c"
         ],
         "visible_html_fields": [
             {
-                "fm_email": "XX",
-                "fm_message": "XX",
-                "fm_name": "XX",
-                "fm_phone": "XX"
+                "fm_email": "e1",
+                "fm_message": "CC",
+                "fm_name": "nf",
+                "fm_phone": "ph"
             }
         ]
     },
@@ -6720,36 +6720,36 @@
     "html/www.cotemig.com.br-0.html": {
         "url": "http://www.cotemig.com.br/",
         "forms": [
-            "X",
-            "X",
-            "X"
+            "s",
+            "m",
+            "l"
         ],
         "visible_html_fields": [
             {
-                "s": "XX",
-                "submit": "XX"
+                "s": "qq",
+                "submit": "Bs"
             },
             {
-                "captcha-183": "XX",
-                "checkbox-988[]": "XX",
-                "email": "XX",
-                "nome": "XX"
+                "captcha-183": "ca",
+                "checkbox-988[]": "OM",
+                "email": "e1",
+                "nome": "nf"
             },
             {
-                "password": "XX",
-                "user": "XX"
+                "password": "p1",
+                "user": "us"
             }
         ]
     },
     "html/www.coverings.com-0.html": {
         "url": "http://www.coverings.com/",
         "forms": [
-            "X",
+            "s",
             "X"
         ],
         "visible_html_fields": [
             {
-                "SearchCriteria": "XX"
+                "SearchCriteria": "qq"
             },
             {}
         ]
@@ -6758,7 +6758,7 @@
         "url": "http://www.coverings.com/page.cfm/Action=Form/FormID=5/t=m",
         "forms": [
             "X",
-            "X",
+            "m",
             "X"
         ],
         "visible_html_fields": [
@@ -6766,20 +6766,20 @@
                 "SearchCriteria": "XX"
             },
             {
-                "Address1": "XX",
-                "Address2": "XX",
-                "City": "XX",
-                "Company": "XX",
-                "Country": "XX",
-                "Email": "XX",
-                "FirstName": "XX",
-                "FormSubmit": "XX",
-                "Name": "XX",
-                "State": "XX",
-                "Tel": "XX",
-                "Title": "XX",
-                "recaptcha_challenge_field": "XX",
-                "zipcode": "XX"
+                "Address1": "A1",
+                "Address2": "A2",
+                "City": "Ci",
+                "Company": "no",
+                "Country": "Co",
+                "Email": "e1",
+                "FirstName": "n1",
+                "FormSubmit": "Bs",
+                "Name": "n3",
+                "State": "St",
+                "Tel": "ph",
+                "Title": "OT",
+                "recaptcha_challenge_field": "ca",
+                "zipcode": "Zi"
             },
             {}
         ]
@@ -6877,7 +6877,7 @@
         "url": "http://www.debian-administration.org/",
         "forms": [
             "l",
-            "o"
+            "P"
         ],
         "visible_html_fields": [
             {
@@ -7000,35 +7000,35 @@
     "html/www.designconnected.com-0.html": {
         "url": "http://www.designconnected.com/",
         "forms": [
-            "X",
-            "X",
-            "X",
-            "X",
-            "X",
-            "X"
+            "s",
+            "l",
+            "p",
+            "m",
+            "m",
+            "c"
         ],
         "visible_html_fields": [
             {
-                "keywordss": "XX"
+                "keywordss": "qq"
             },
             {
-                "password": "XX",
-                "remember_me": "XX",
-                "username": "XX"
+                "password": "p1",
+                "remember_me": "rC",
+                "username": "ue"
             },
             {
-                "femail": "XX"
+                "femail": "e1"
             },
             {
-                "email": "XX"
+                "email": "e1"
             },
             {
-                "email": "XX"
+                "email": "e1"
             },
             {
-                "comments": "XX",
-                "person_email": "XX",
-                "person_name": "XX"
+                "comments": "CC",
+                "person_email": "e1",
+                "person_name": "nf"
             }
         ]
     },
@@ -7036,7 +7036,7 @@
         "url": "http://www.designconnected.com/members/registration",
         "forms": [
             "X",
-            "X",
+            "r",
             "X",
             "X",
             "X",
@@ -7048,14 +7048,14 @@
                 "keywordss": "XX"
             },
             {
-                "country_id": "XX",
-                "member_alias": "XX",
-                "member_company": "XX",
-                "member_email": "XX",
-                "member_fullname": "XX",
-                "member_occupation": "XX",
-                "member_web": "XX",
-                "password1": "XX"
+                "country_id": "Co",
+                "member_alias": "us",
+                "member_company": "no",
+                "member_email": "e1",
+                "member_fullname": "nf",
+                "member_occupation": "OS",
+                "member_web": "ws",
+                "password1": "p1"
             },
             {
                 "password": "XX",
@@ -7122,37 +7122,37 @@
     "html/www.disfracesjarana.com-0.html": {
         "url": "https://www.disfracesjarana.com/",
         "forms": [
+            "s",
+            "s",
+            "b",
+            "b",
             "X",
-            "X",
-            "X",
-            "X",
-            "X",
-            "X",
-            "X",
-            "X"
+            "b",
+            "b",
+            "b"
         ],
         "visible_html_fields": [
             {
-                "keyword": "XX"
+                "keyword": "qq"
             },
             {
-                "keyword": "XX"
+                "keyword": "qq"
             },
             {
-                "quantity[]": "XX"
+                "quantity[]": "qt"
             },
             {
-                "quantity[]": "XX"
+                "quantity[]": "qt"
             },
             {},
             {
-                "quantity[]": "XX"
+                "quantity[]": "qt"
             },
             {
-                "quantity[]": "XX"
+                "quantity[]": "qt"
             },
             {
-                "quantity[]": "XX"
+                "quantity[]": "qt"
             }
         ]
     },
@@ -7161,7 +7161,7 @@
         "forms": [
             "X",
             "X",
-            "X"
+            "c"
         ],
         "visible_html_fields": [
             {
@@ -7171,10 +7171,10 @@
                 "keyword": "XX"
             },
             {
-                "jform[contact_email]": "XX",
-                "jform[contact_message]": "XX",
-                "jform[contact_name]": "XX",
-                "jform[contact_subject]": "XX"
+                "jform[contact_email]": "e1",
+                "jform[contact_message]": "CC",
+                "jform[contact_name]": "nf",
+                "jform[contact_subject]": "CT"
             }
         ]
     },
@@ -7183,11 +7183,11 @@
         "forms": [
             "X",
             "X",
-            "X",
-            "X",
-            "X",
-            "X",
-            "X"
+            "b",
+            "b",
+            "b",
+            "b",
+            "b"
         ],
         "visible_html_fields": [
             {
@@ -7197,36 +7197,36 @@
                 "keyword": "XX"
             },
             {
-                "customPlugin[20036][drop][custom_drop]": "XX",
-                "quantity[]": "XX"
+                "customPlugin[20036][drop][custom_drop]": "OS",
+                "quantity[]": "qt"
             },
             {
-                "quantity[]": "XX"
+                "quantity[]": "qt"
             },
             {
-                "quantity[]": "XX"
+                "quantity[]": "qt"
             },
             {
-                "quantity[]": "XX"
+                "quantity[]": "qt"
             },
             {
-                "quantity[]": "XX"
+                "quantity[]": "qt"
             }
         ]
     },
     "html/www.douglas.no-0.html": {
         "url": "https://www.douglas.no/douglas/?trac=no.02o.zan.onsite_promo.homepage.freeshipping.000023&nsctrid=v01MTMyMTExMjExMTExMTExMTAxNDIxOTAwMDAwMDAwMTQ0OTIzMDEwOWN2bmQ5bm8yMTA3ODI3NDg0NDg5MTQzMjk2",
         "forms": [
-            "X",
-            "X"
+            "s",
+            "m"
         ],
         "visible_html_fields": [
             {
-                "query": "XX"
+                "query": "qq"
             },
             {
-                "email": "XX",
-                "subscribe": "XX"
+                "email": "e1",
+                "subscribe": "Bs"
             }
         ]
     },
@@ -7249,18 +7249,18 @@
     "html/www.dragees-massardier.fr-0.html": {
         "url": "http://www.dragees-massardier.fr/index.cfm",
         "forms": [
-            "X",
-            "X"
+            "s",
+            "m"
         ],
         "visible_html_fields": [
             {
-                "aucun": "XX",
-                "mot": "XX"
+                "aucun": "Bs",
+                "mot": "qq"
             },
             {
-                "abonne": "XX",
-                "aucun": "XX",
-                "mail": "XX"
+                "abonne": "OS",
+                "aucun": "Bs",
+                "mail": "e1"
             }
         ]
     },
@@ -7268,7 +7268,7 @@
         "url": "http://www.dragees-massardier.fr/contactez-nous,fr,7,5.cfm",
         "forms": [
             "X",
-            "X",
+            "c",
             "X"
         ],
         "visible_html_fields": [
@@ -7277,9 +7277,9 @@
                 "mot": "XX"
             },
             {
-                "Votre_demande": "XX",
-                "confirmation": "XX",
-                "email": "XX"
+                "Votre_demande": "CC",
+                "confirmation": "ca",
+                "email": "e1"
             },
             {
                 "abonne": "XX",
@@ -7292,7 +7292,7 @@
         "url": "http://www.dragees-massardier.fr/guimauve-croissant-marshmallow,fr,4,DI152.cfm#.VmDjNMryJsw",
         "forms": [
             "X",
-            "X",
+            "b",
             "X"
         ],
         "visible_html_fields": [
@@ -7301,8 +7301,8 @@
                 "mot": "XX"
             },
             {
-                "aucun": "XX",
-                "qte": "XX"
+                "aucun": "Bs",
+                "qte": "qt"
             },
             {
                 "abonne": "XX",
@@ -7314,11 +7314,11 @@
     "html/www.duracellpowermat.com-0.html": {
         "url": "https://www.duracellpowermat.com/",
         "forms": [
-            "X"
+            "s"
         ],
         "visible_html_fields": [
             {
-                "q": "XX"
+                "q": "qq"
             }
         ]
     },
@@ -7460,23 +7460,23 @@
     "html/www.etctenancycleaning.co.uk-0.html": {
         "url": "https://www.etctenancycleaning.co.uk/contact-us",
         "forms": [
-            "X",
-            "X"
+            "c",
+            "c"
         ],
         "visible_html_fields": [
             {
-                "email_address": "XX",
-                "full_name": "XX",
-                "message": "XX",
-                "phone_number": "XX",
-                "sendmessage": "XX"
+                "email_address": "e1",
+                "full_name": "nf",
+                "message": "CC",
+                "phone_number": "ph",
+                "sendmessage": "Bs"
             },
             {
-                "email_address": "XX",
-                "full_name": "XX",
-                "message": "XX",
-                "phone_number": "XX",
-                "sendmessage": "XX"
+                "email_address": "e1",
+                "full_name": "nf",
+                "message": "CC",
+                "phone_number": "ph",
+                "sendmessage": "Bs"
             }
         ]
     },
@@ -7546,65 +7546,65 @@
         "url": "http://www.famili.fr/",
         "forms": [
             "X",
+            "l",
             "X",
+            "m",
+            "P",
+            "m",
             "X",
-            "X",
-            "X",
-            "X",
-            "X",
-            "X",
-            "X"
+            "c",
+            "m"
         ],
         "visible_html_fields": [
             {
                 "query": "XX"
             },
             {
-                "memberLogin": "XX",
-                "memberPassword": "XX",
-                "setCookie": "XX"
+                "memberLogin": "us",
+                "memberPassword": "p1",
+                "setCookie": "rC"
             },
             {},
             {
-                "emailAddress": "XX",
-                "news_email": "XX",
-                "newsletters[33]": "XX",
-                "newsletters[34]": "XX",
-                "newsletters[426]": "XX",
-                "newsletters[43]": "XX",
-                "newsletters[567]": "XX"
+                "emailAddress": "e1",
+                "news_email": "Bs",
+                "newsletters[33]": "oC",
+                "newsletters[34]": "oC",
+                "newsletters[426]": "oC",
+                "newsletters[43]": "oC",
+                "newsletters[567]": "oC"
             },
             {
-                "pollChoice": "XX"
+                "pollChoice": "OS"
             },
             {
-                "emailAddress": "XX",
-                "inscription": "XX",
-                "newsletters[33]": "XX",
-                "newsletters[34]": "XX",
-                "newsletters[426]": "XX",
-                "newsletters[43]": "XX",
-                "newsletters[567]": "XX"
+                "emailAddress": "e1",
+                "inscription": "Bs",
+                "newsletters[33]": "oC",
+                "newsletters[34]": "oC",
+                "newsletters[426]": "oC",
+                "newsletters[43]": "oC",
+                "newsletters[567]": "oC"
             },
             {
-                "emailAddress": "XX",
-                "inscription": "XX",
-                "newsletters[33]": "XX",
-                "newsletters[34]": "XX",
-                "newsletters[426]": "XX",
-                "newsletters[43]": "XX",
-                "newsletters[567]": "XX"
+                "emailAddress": "e1",
+                "inscription": "Bs",
+                "newsletters[33]": "oC",
+                "newsletters[34]": "oC",
+                "newsletters[426]": "oC",
+                "newsletters[43]": "oC",
+                "newsletters[567]": "oC"
             },
             {
-                "emailToFriendFootercontrol[]": "XX",
-                "mailFromFooter": "XX",
-                "mailFromPrenomFooter": "XX",
-                "mailMessageFooter": "XX",
-                "mailToFooter": "XX"
+                "emailToFriendFootercontrol[]": "OM",
+                "mailFromFooter": "e1",
+                "mailFromPrenomFooter": "n1",
+                "mailMessageFooter": "CC",
+                "mailToFooter": "e1"
             },
             {
-                "newsFromPopup": "XX",
-                "newsFromPopup426": "XX"
+                "newsFromPopup": "e1",
+                "newsFromPopup426": "oC"
             }
         ]
     },
@@ -7614,7 +7614,7 @@
             "X",
             "X",
             "X",
-            "X",
+            "r",
             "X",
             "X",
             "X",
@@ -7633,25 +7633,25 @@
             },
             {},
             {
-                "address": "XX",
-                "addressComplement": "XX",
-                "caracteristique5": "XX",
-                "city": "XX",
-                "conditions": "XX",
-                "confirmationpassword": "XX",
-                "country": "XX",
-                "dateOfBirth": "XX",
-                "email": "XX",
-                "firstName": "XX",
-                "gender": "XX",
-                "identifier": "XX",
-                "name": "XX",
-                "optin": "XX",
-                "optinSMS": "XX",
-                "optinSMSNumber": "XX",
-                "password": "XX",
-                "phoneNumber": "XX",
-                "postCode": "XX"
+                "address": "Ad",
+                "addressComplement": "Ad",
+                "caracteristique5": "OS",
+                "city": "Ci",
+                "conditions": "tC",
+                "confirmationpassword": "p2",
+                "country": "Co",
+                "dateOfBirth": "bD",
+                "email": "e1",
+                "firstName": "n1",
+                "gender": "ge",
+                "identifier": "us",
+                "name": "n3",
+                "optin": "eC",
+                "optinSMS": "oC",
+                "optinSMSNumber": "ph",
+                "password": "p1",
+                "phoneNumber": "ph",
+                "postCode": "Zi"
             },
             {
                 "emailAddress": "XX",
@@ -7770,7 +7770,7 @@
         "url": "http://www.farodevigo.es/",
         "forms": [
             "s",
-            "o"
+            "s"
         ],
         "visible_html_fields": [
             {
@@ -7779,7 +7779,7 @@
             },
             {
                 "BuscarEmpleos": "Bs",
-                "select": "OS"
+                "select": "qc"
             }
         ]
     },
@@ -8496,7 +8496,7 @@
         "url": "http://www.kaufland.bg/Nachalo/index.jsp",
         "forms": [
             "s",
-            "o"
+            "s"
         ],
         "visible_html_fields": [
             {
@@ -8511,7 +8511,7 @@
         "url": "http://www.koob.ru/",
         "forms": [
             "s",
-            "o"
+            "s"
         ],
         "visible_html_fields": [
             {
@@ -9548,8 +9548,8 @@
         "forms": [
             "s",
             "l",
-            "o",
-            "o",
+            "N",
+            "N",
             "m"
         ],
         "visible_html_fields": [
@@ -9673,7 +9673,7 @@
             "s",
             "o",
             "o",
-            "o"
+            "b"
         ],
         "visible_html_fields": [
             {
@@ -9687,7 +9687,7 @@
             },
             {
                 "attributes[4]": "oC",
-                "products_qty": "ON"
+                "products_qty": "qt"
             }
         ]
     },
@@ -10158,7 +10158,7 @@
         "url": "http://www.notebooksbilliger.de/kundenkonto/anmelden/regis/register",
         "forms": [
             "s",
-            "o",
+            "r",
             "r",
             "r"
         ],
@@ -10356,7 +10356,7 @@
         "url": "http://www.olcsobbat.hu/termek/dps_titan_8_wi_fi_4gb-534e01528e16d53c3a000322/",
         "forms": [
             "X",
-            "o",
+            "s",
             "m"
         ],
         "visible_html_fields": [
@@ -10364,13 +10364,13 @@
                 "search": "XX"
             },
             {
-                "fizetesiMod": "XX",
-                "hely": "XX",
-                "ingyenesSzallitas": "XX",
-                "megbizhatoBolt": "XX",
-                "rendezes": "XX",
-                "szallitasiMod": "XX",
-                "webshopId": "XX"
+                "fizetesiMod": "qc",
+                "hely": "Ad",
+                "ingyenesSzallitas": "qc",
+                "megbizhatoBolt": "qc",
+                "rendezes": "sp",
+                "szallitasiMod": "qc",
+                "webshopId": "qc"
             },
             {
                 "RegistrationForm[email]": "e1",
@@ -10542,7 +10542,7 @@
     "html/www.petsbest.com-0.html": {
         "url": "http://www.petsbest.com/",
         "forms": [
-            "o"
+            "s"
         ],
         "visible_html_fields": [
             {
@@ -10923,7 +10923,7 @@
     "html/www.riemurasia.net-0.html": {
         "url": "http://www.riemurasia.net/index.php",
         "forms": [
-            "o",
+            "P",
             "o"
         ],
         "visible_html_fields": [
@@ -11054,7 +11054,7 @@
         "forms": [
             "s",
             "o",
-            "o",
+            "b",
             "o",
             "o",
             "o"
@@ -11065,7 +11065,7 @@
             },
             {},
             {
-                "qty": "ON"
+                "qty": "qt"
             },
             {},
             {},
@@ -11281,7 +11281,7 @@
             "l",
             "o",
             "o",
-            "o"
+            "V"
         ],
         "visible_html_fields": [
             {
@@ -11296,7 +11296,7 @@
             {},
             {},
             {
-                "styleid": "OS"
+                "styleid": "st"
             }
         ]
     },
@@ -11391,14 +11391,14 @@
         "url": "http://www.spartoo.pt/novidades-semana-homem-textil.php",
         "forms": [
             "s",
-            "o"
+            "s"
         ],
         "visible_html_fields": [
             {
                 "keywords": "XX"
             },
             {
-                "productsPerPage": "OS"
+                "productsPerPage": "sp"
             }
         ]
     },
@@ -11498,7 +11498,7 @@
             "l",
             "s",
             "o",
-            "o"
+            "V"
         ],
         "visible_html_fields": [
             {
@@ -11513,7 +11513,7 @@
             },
             {},
             {
-                "styleid": "OS"
+                "styleid": "st"
             }
         ]
     },
@@ -11542,12 +11542,12 @@
                 "beforeafter": "qc",
                 "dosearch": "Bs",
                 "exactname": "qc",
-                "order": "qc",
+                "order": "sp",
                 "query": "qq",
                 "recaptcha_challenge_field": "ca",
                 "searchdate": "qc",
                 "searchuser": "qq",
-                "sortby": "qc",
+                "sortby": "sp",
                 "tag": "qq",
                 "titleonly": "qc",
                 "type[]": "qc"
