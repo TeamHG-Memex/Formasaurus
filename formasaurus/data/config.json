@@ -5,9 +5,12 @@
             {"short": "l", "full": "login"},
             {"short": "r", "full": "registration"},
             {"short": "p", "full": "password/login recovery"},
-            {"short": "c", "full": "contact"},
+            {"short": "c", "full": "contact/comment"},
             {"short": "m", "full": "join mailing list"},
             {"short": "b", "full": "order/add to cart"},
+            {"short": "P", "full": "poll"},
+            {"short": "V", "full": "display options"},
+            {"short": "N", "full": "navigation"},
             {"short": "o", "full": "other"},
             {"short": "X", "full": "NOT ANNOTATED"}
         ],
@@ -97,6 +100,8 @@
             {"short": "qt", "full": "product quantity"},
 
             {"short": "nv", "full": "navigation"},
+            {"short": "st", "full": "style select"},
+            {"short": "sp", "full": "sorting option"},
 
             {"short": "ON", "full": "other number"},
             {"short": "OT", "full": "other text"},
