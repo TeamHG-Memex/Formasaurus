@@ -1,4 +1,15 @@
 {
+    "html/5kaixin.net-0.html": {
+        "url": "http://5kaixin.net/",
+        "forms": [
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "keyword": "XX"
+            }
+        ]
+    },
     "html/account.oneplus.net-0.html": {
         "url": "https://account.oneplus.net/sign-up",
         "forms": [
@@ -716,6 +727,35 @@
             },
             {
                 "screenName": "XX"
+            }
+        ]
+    },
+    "html/compraafuera.com-0.html": {
+        "url": "http://compraafuera.com/",
+        "forms": [
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "s": "XX"
+            }
+        ]
+    },
+    "html/compraafuera.com-1.html": {
+        "url": "http://compraafuera.com/contacto/",
+        "forms": [
+            "X",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "your-email": "XX",
+                "your-message": "XX",
+                "your-name": "XX",
+                "your-subject": "XX"
+            },
+            {
+                "s": "XX"
             }
         ]
     },
@@ -1968,6 +2008,18 @@
             }
         ]
     },
+    "html/funmaza.in-0.html": {
+        "url": "http://funmaza.in/",
+        "forms": [
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "q": "XX",
+                "sa": "XX"
+            }
+        ]
+    },
     "html/funzu.com-0.html": {
         "url": "http://funzu.com/",
         "forms": [
@@ -2374,6 +2426,25 @@
             }
         ]
     },
+    "html/ifmgroup.it-0.html": {
+        "url": "http://ifmgroup.it/it/contatti",
+        "forms": [
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "op": "XX",
+                "submitted[azienda]": "XX",
+                "submitted[cognome]": "XX",
+                "submitted[email]": "XX",
+                "submitted[messaggio]": "XX",
+                "submitted[nome]": "XX",
+                "submitted[oggetto]": "XX",
+                "submitted[privacy][accetto]": "XX",
+                "submitted[telefono]": "XX"
+            }
+        ]
+    },
     "html/info.pompeiis.com-0.html": {
         "url": "http://info.pompeiis.com/contact-us/",
         "forms": [
@@ -2425,6 +2496,111 @@
                 "password": "p1",
                 "password1": "p2",
                 "user_id": "us"
+            }
+        ]
+    },
+    "html/inmykonos.com-0.html": {
+        "url": "http://inmykonos.com/",
+        "forms": [
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "find": "XX"
+            }
+        ]
+    },
+    "html/inmykonos.com-1.html": {
+        "url": "http://inmykonos.com/account.html",
+        "forms": [
+            "X",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "find": "XX"
+            },
+            {
+                "email": "XX",
+                "password": "XX"
+            }
+        ]
+    },
+    "html/inmykonos.com-2.html": {
+        "url": "http://inmykonos.com/account/register/business.html",
+        "forms": [
+            "X",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "find": "XX"
+            },
+            {
+                "dob[day]": "XX",
+                "dob[month]": "XX",
+                "dob[year]": "XX",
+                "email": "XX",
+                "first_name": "XX",
+                "gender": "XX",
+                "last_name": "XX",
+                "password": "XX",
+                "password_copy": "XX",
+                "telephone": "XX",
+                "terms[]": "XX"
+            }
+        ]
+    },
+    "html/inmykonos.com-3.html": {
+        "url": "http://inmykonos.com/account/password-recovery.htm",
+        "forms": [
+            "X",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "find": "XX"
+            },
+            {
+                "email": "XX",
+                "recaptcha_challenge_field": "XX"
+            }
+        ]
+    },
+    "html/inmykonos.com-4.html": {
+        "url": "http://inmykonos.com/eat-in-mykonos/beach-restaurants/1190-capelayo.html",
+        "forms": [
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "find": "XX"
+            }
+        ]
+    },
+    "html/inmykonos.com-5.html": {
+        "url": "http://inmykonos.com/eat-in-mykonos/beach-restaurants/1190-capelayo/reviews/add.html",
+        "forms": [
+            "X",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "find": "XX"
+            },
+            {
+                "bad": "XX",
+                "email": "XX",
+                "good": "XX",
+                "message": "XX",
+                "name": "XX",
+                "origin": "XX",
+                "recaptcha_challenge_field": "XX",
+                "recommend": "XX",
+                "score": "XX",
+                "subject": "XX",
+                "type": "XX",
+                "year": "XX"
             }
         ]
     },
@@ -3822,6 +3998,32 @@
             {}
         ]
     },
+    "html/potolok75.ru-0.html": {
+        "url": "http://potolok75.ru/",
+        "forms": [
+            "X",
+            "X",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "name": "XX",
+                "phone": "XX"
+            },
+            {
+                "name": "XX",
+                "oformlenie": "XX",
+                "phone": "XX",
+                "ploshad": "XX",
+                "room": "XX",
+                "uglov": "XX"
+            },
+            {
+                "name": "XX",
+                "phone": "XX"
+            }
+        ]
+    },
     "html/premium.wpmudev.org-0.html": {
         "url": "http://premium.wpmudev.org/",
         "forms": [
@@ -4148,6 +4350,53 @@
             }
         ]
     },
+    "html/sketchhunt.com-0.html": {
+        "url": "http://sketchhunt.com/contact/",
+        "forms": [
+            "X",
+            "X",
+            "X",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "s": "XX"
+            },
+            {
+                "g49-comment": "XX",
+                "g49-emailoptional": "XX",
+                "g49-nameoptional": "XX",
+                "g49-websitelinktoyoursuggestion": "XX"
+            },
+            {},
+            {
+                "commit": "XX",
+                "media_url": "XX"
+            }
+        ]
+    },
+    "html/sketchhunt.com-1.html": {
+        "url": "http://sketchhunt.com/sketch-hunt-stickers/",
+        "forms": [
+            "X",
+            "X",
+            "X",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "s": "XX"
+            },
+            {
+                "submit": "XX"
+            },
+            {},
+            {
+                "commit": "XX",
+                "media_url": "XX"
+            }
+        ]
+    },
     "html/sourceforge.net-0.html": {
         "url": "https://sourceforge.net/user/registration",
         "forms": [
@@ -4202,6 +4451,50 @@
             },
             {
                 "email": "e1"
+            }
+        ]
+    },
+    "html/sovereigngrace.com-0.html": {
+        "url": "http://sovereigngrace.com/",
+        "forms": [
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "search_term": "XX"
+            }
+        ]
+    },
+    "html/sovereigngrace.com-1.html": {
+        "url": "http://sovereigngrace.com/our-churches",
+        "forms": [
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "search_term": "XX"
+            }
+        ]
+    },
+    "html/sovereigngrace.com-2.html": {
+        "url": "http://sovereigngrace.com/plant",
+        "forms": [
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "search_term": "XX"
+            }
+        ]
+    },
+    "html/sovereigngrace.com-3.html": {
+        "url": "http://sovereigngrace.com/partner",
+        "forms": [
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "search_term": "XX"
             }
         ]
     },
@@ -5025,6 +5318,36 @@
                 "ds": "OS",
                 "rd": "OD",
                 "t": "OS"
+            }
+        ]
+    },
+    "html/whengeekswed.com-0.html": {
+        "url": "http://whengeekswed.com/",
+        "forms": [
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "s": "XX"
+            }
+        ]
+    },
+    "html/whengeekswed.com-1.html": {
+        "url": "http://whengeekswed.com/blog/contact/",
+        "forms": [
+            "X",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "s": "XX"
+            },
+            {
+                "captcha-405": "XX",
+                "your-email": "XX",
+                "your-message": "XX",
+                "your-name": "XX",
+                "your-subject": "XX"
             }
         ]
     },
@@ -6668,6 +6991,28 @@
             }
         ]
     },
+    "html/www.clicads.com.ng-0.html": {
+        "url": "http://www.clicads.com.ng/",
+        "forms": [
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "search": "XX"
+            }
+        ]
+    },
+    "html/www.clicads.com.ng-1.html": {
+        "url": "http://www.clicads.com.ng/post_free_ads_in_nigeria.html",
+        "forms": [
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "search": "XX"
+            }
+        ]
+    },
     "html/www.cognitiveclouds.com-0.html": {
         "url": "http://www.cognitiveclouds.com/contact/",
         "forms": [
@@ -7311,6 +7656,114 @@
             }
         ]
     },
+    "html/www.dragees-massardier.fr-3.html": {
+        "url": "http://www.dragees-massardier.fr/index.cfm",
+        "forms": [
+            "X",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "aucun": "XX",
+                "mot": "XX"
+            },
+            {
+                "abonne": "XX",
+                "aucun": "XX",
+                "mail": "XX"
+            }
+        ]
+    },
+    "html/www.dragees-massardier.fr-4.html": {
+        "url": "http://www.dragees-massardier.fr/mignonnette-dragees-coccinelle,fr,4,1617.cfm",
+        "forms": [
+            "X",
+            "X",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "aucun": "XX",
+                "mot": "XX"
+            },
+            {
+                "aucun": "XX",
+                "option1": "XX",
+                "qte": "XX"
+            },
+            {
+                "abonne": "XX",
+                "aucun": "XX",
+                "mail": "XX"
+            }
+        ]
+    },
+    "html/www.dragees-massardier.fr-5.html": {
+        "url": "http://www.dragees-massardier.fr/boutique/adresse_e_mail.cfm?code_lg=lg_fr&ret=sommaire",
+        "forms": [
+            "X",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "aucun": "XX",
+                "mot": "XX"
+            },
+            {
+                "aucun": "XX",
+                "email": "XX",
+                "password": "XX",
+                "submitbtn": "XX"
+            }
+        ]
+    },
+    "html/www.dragees-massardier.fr-6.html": {
+        "url": "http://www.dragees-massardier.fr/boutique/coordonnees_enregistrement.cfm?code_lg=lg_fr",
+        "forms": [
+            "X",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "aucun": "XX",
+                "mot": "XX"
+            },
+            {
+                "adresse": "XX",
+                "adresse2": "XX",
+                "associe": "XX",
+                "code_postal": "XX",
+                "confirm_email": "XX",
+                "confirm_password": "XX",
+                "email": "XX",
+                "fax": "XX",
+                "infos_commande": "XX",
+                "mailing": "XX",
+                "nom": "XX",
+                "num_pays": "XX",
+                "password": "XX",
+                "prenom": "XX",
+                "sexe": "XX",
+                "societe": "XX",
+                "tel": "XX",
+                "tel_portable": "XX",
+                "typeClientRadio": "XX",
+                "ville": "XX"
+            }
+        ]
+    },
+    "html/www.dragees-massardier.fr-7.html": {
+        "url": "http://www.dragees-massardier.fr/boutique/mot_de_passe_perdu.cfm?code_lg=lg_fr",
+        "forms": [
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "aucun": "XX",
+                "email": "XX"
+            }
+        ]
+    },
     "html/www.duracellpowermat.com-0.html": {
         "url": "https://www.duracellpowermat.com/",
         "forms": [
@@ -7477,6 +7930,39 @@
                 "message": "CC",
                 "phone_number": "ph",
                 "sendmessage": "Bs"
+            }
+        ]
+    },
+    "html/www.extrarace.com-0.html": {
+        "url": "http://www.extrarace.com/",
+        "forms": [
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "EMAIL": "XX",
+                "subscribe": "XX"
+            }
+        ]
+    },
+    "html/www.extrarace.com-1.html": {
+        "url": "http://www.extrarace.com/contact/",
+        "forms": [
+            "X",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "captcha": "XX",
+                "email": "XX",
+                "message": "XX",
+                "nom": "XX",
+                "sujet": "XX",
+                "upload": "XX"
+            },
+            {
+                "EMAIL": "XX",
+                "subscribe": "XX"
             }
         ]
     },
@@ -7953,6 +8439,30 @@
             }
         ]
     },
+    "html/www.funmaza.in-0.html": {
+        "url": "http://www.funmaza.in/advertise.html",
+        "forms": [
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "q": "XX",
+                "sa": "XX"
+            }
+        ]
+    },
+    "html/www.funmaza.in-1.html": {
+        "url": "http://www.funmaza.in/contact.html",
+        "forms": [
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "q": "XX",
+                "sa": "XX"
+            }
+        ]
+    },
     "html/www.gardenstew.com-0.html": {
         "url": "http://www.gardenstew.com/",
         "forms": [
@@ -8228,6 +8738,17 @@
             },
             {
                 "search": "qq"
+            }
+        ]
+    },
+    "html/www.inmykonos.com-0.html": {
+        "url": "http://www.inmykonos.com/shop-in-mykonos/jewelry.html",
+        "forms": [
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "find": "XX"
             }
         ]
     },
@@ -9323,6 +9844,30 @@
                 "your-email": "e1",
                 "your-message": "CC",
                 "your-name": "nf"
+            }
+        ]
+    },
+    "html/www.masterhorologer.com-0.html": {
+        "url": "http://www.masterhorologer.com/",
+        "forms": [
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "q": "XX",
+                "sa": "XX"
+            }
+        ]
+    },
+    "html/www.masterhorologer.com-1.html": {
+        "url": "http://www.masterhorologer.com/p/contact-us_29.html",
+        "forms": [
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "q": "XX",
+                "sa": "XX"
             }
         ]
     },
@@ -11453,6 +11998,278 @@
             }
         ]
     },
+    "html/www.spinkat.ru-0.html": {
+        "url": "http://www.spinkat.ru/",
+        "forms": [
+            "X",
+            "X",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "keyword": "XX"
+            },
+            {
+                "logn": "XX",
+                "passw": "XX"
+            },
+            {
+                "captcha2": "XX",
+                "email": "XX",
+                "lastname": "XX",
+                "message": "XX",
+                "phone": "XX"
+            }
+        ]
+    },
+    "html/www.spinkat.ru-1.html": {
+        "url": "http://www.spinkat.ru/contacts/",
+        "forms": [
+            "X",
+            "X",
+            "X",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "keyword": "XX"
+            },
+            {
+                "email": "XX",
+                "message": "XX",
+                "name": "XX",
+                "subject": "XX"
+            },
+            {
+                "logn": "XX",
+                "passw": "XX"
+            },
+            {
+                "captcha2": "XX",
+                "email": "XX",
+                "lastname": "XX",
+                "message": "XX",
+                "phone": "XX"
+            }
+        ]
+    },
+    "html/www.spinkat.ru-2.html": {
+        "url": "http://www.spinkat.ru/registration/",
+        "forms": [
+            "X",
+            "X",
+            "X",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "keyword": "XX"
+            },
+            {
+                "address": "XX",
+                "captcha": "XX",
+                "email": "XX",
+                "firstname": "XX",
+                "lastname": "XX",
+                "middlename": "XX",
+                "passwd": "XX",
+                "passwd2": "XX",
+                "phone": "XX",
+                "subscribe": "XX"
+            },
+            {
+                "logn": "XX",
+                "passw": "XX"
+            },
+            {
+                "captcha2": "XX",
+                "email": "XX",
+                "lastname": "XX",
+                "message": "XX",
+                "phone": "XX"
+            }
+        ]
+    },
+    "html/www.spinkat.ru-3.html": {
+        "url": "http://www.spinkat.ru/item/eholot-humminbird-788cxi-hd-di-combo_10001150.html",
+        "forms": [
+            "X",
+            "X",
+            "X",
+            "X",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "keyword": "XX"
+            },
+            {
+                "captcha": "XX",
+                "email": "XX",
+                "message": "XX",
+                "name": "XX"
+            },
+            {
+                "captcha": "XX",
+                "email": "XX",
+                "message": "XX",
+                "name": "XX",
+                "rate": "XX"
+            },
+            {
+                "logn": "XX",
+                "passw": "XX"
+            },
+            {
+                "captcha2": "XX",
+                "email": "XX",
+                "lastname": "XX",
+                "message": "XX",
+                "phone": "XX"
+            }
+        ]
+    },
+    "html/www.spinkat.ru-4.html": {
+        "url": "http://www.spinkat.ru/item/minn-kotareg-80-terrovatrade-us245ipilotreg--foot-pedal-24v_2352.html",
+        "forms": [
+            "X",
+            "X",
+            "X",
+            "X",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "keyword": "XX"
+            },
+            {
+                "captcha": "XX",
+                "email": "XX",
+                "message": "XX",
+                "name": "XX"
+            },
+            {
+                "captcha": "XX",
+                "email": "XX",
+                "message": "XX",
+                "name": "XX",
+                "rate": "XX"
+            },
+            {
+                "logn": "XX",
+                "passw": "XX"
+            },
+            {
+                "captcha2": "XX",
+                "email": "XX",
+                "lastname": "XX",
+                "message": "XX",
+                "phone": "XX"
+            }
+        ]
+    },
+    "html/www.spinkat.ru-5.html": {
+        "url": "http://www.spinkat.ru/forum/index.php",
+        "forms": [
+            "X",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "keywords": "XX"
+            },
+            {
+                "autologin": "XX",
+                "login": "XX",
+                "password": "XX",
+                "username": "XX"
+            }
+        ]
+    },
+    "html/www.spinkat.ru-6.html": {
+        "url": "http://www.spinkat.ru/forum/ucp.php?mode=register",
+        "forms": [
+            "X",
+            "X",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "keywords": "XX"
+            },
+            {
+                "lang": "XX"
+            },
+            {
+                "agreed": "XX",
+                "not_agreed": "XX"
+            }
+        ]
+    },
+    "html/www.spinkat.ru-7.html": {
+        "url": "http://www.spinkat.ru/forum/search.php",
+        "forms": [
+            "X",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "keywords": "XX"
+            },
+            {
+                "author": "XX",
+                "ch": "XX",
+                "fid[]": "XX",
+                "keywords": "XX",
+                "reset": "XX",
+                "sc": "XX",
+                "sd": "XX",
+                "sf": "XX",
+                "sk": "XX",
+                "sr": "XX",
+                "st": "XX",
+                "submit": "XX",
+                "terms": "XX"
+            }
+        ]
+    },
+    "html/www.spinkat.ru-8.html": {
+        "url": "http://www.spinkat.ru/forum/ucp.php?mode=login",
+        "forms": [
+            "X",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "keywords": "XX"
+            },
+            {
+                "autologin": "XX",
+                "login": "XX",
+                "password": "XX",
+                "username": "XX",
+                "viewonline": "XX"
+            }
+        ]
+    },
+    "html/www.spinkat.ru-9.html": {
+        "url": "http://www.spinkat.ru/forum/ucp.php?mode=sendpassword",
+        "forms": [
+            "X",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "keywords": "XX"
+            },
+            {
+                "email": "XX",
+                "reset": "XX",
+                "submit": "XX",
+                "username": "XX"
+            }
+        ]
+    },
     "html/www.srovnanicen.cz-0.html": {
         "url": "http://www.srovnanicen.cz/",
         "forms": [
@@ -11489,6 +12306,77 @@
                 "msg": "CC",
                 "submit": "Bs",
                 "url": "ws"
+            }
+        ]
+    },
+    "html/www.stoneridgehomesinc.com-0.html": {
+        "url": "http://www.stoneridgehomesinc.com/",
+        "forms": [
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "input_1": "XX",
+                "input_2": "XX",
+                "input_3": "XX",
+                "recaptcha_challenge_field": "XX"
+            }
+        ]
+    },
+    "html/www.stoneridgehomesinc.com-1.html": {
+        "url": "http://www.stoneridgehomesinc.com/contact-us/",
+        "forms": [
+            "X",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "input_1": "XX",
+                "input_2": "XX",
+                "input_3": "XX",
+                "recaptcha_challenge_field": "XX"
+            },
+            {
+                "input_1": "XX",
+                "input_2": "XX",
+                "input_3": "XX",
+                "input_4": "XX",
+                "recaptcha_challenge_field": "XX"
+            }
+        ]
+    },
+    "html/www.stoneridgehomesinc.com-2.html": {
+        "url": "http://www.stoneridgehomesinc.com/resources/mortgage-calculator/",
+        "forms": [
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "input_1": "XX",
+                "input_2": "XX",
+                "input_3": "XX",
+                "recaptcha_challenge_field": "XX"
+            }
+        ]
+    },
+    "html/www.stoneridgehomesinc.com-3.html": {
+        "url": "http://www.stoneridgehomesinc.com/properties/10-sw-tall-oak-blvd/",
+        "forms": [
+            "X",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "input_1": "XX",
+                "input_2": "XX",
+                "input_3": "XX",
+                "recaptcha_challenge_field": "XX"
+            },
+            {
+                "input_1": "XX",
+                "input_2": "XX",
+                "input_3": "XX",
+                "input_5": "XX"
             }
         ]
     },

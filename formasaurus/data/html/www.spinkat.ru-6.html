@@ -1,0 +1,281 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="ru" xml:lang="ru">
+<head>
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta http-equiv="content-style-type" content="text/css" />
+<meta http-equiv="content-language" content="ru" />
+<meta http-equiv="imagetoolbar" content="no" />
+<meta name="resource-type" content="document" />
+<meta name="distribution" content="global" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+
+<title>Форум spinkat.ru &bull; Личный раздел &bull; Регистрация</title>
+
+<link rel="alternate" type="application/atom+xml" title="Канал - Форум spinkat.ru" href="http://www.spinkat.ru/forum/feed.php" /><link rel="alternate" type="application/atom+xml" title="Канал - Новые темы" href="http://www.spinkat.ru/forum/feed.php?mode=topics" />
+
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+
+<script type="text/javascript">
+// <![CDATA[
+	var jump_page = 'Введите номер страницы, на которую хотите перейти:';
+	var on_page = '';
+	var per_page = '';
+	var base_url = '';
+	var style_cookie = 'phpBBstyle';
+	var style_cookie_settings = '; path=/forum; domain=spinkat.ru';
+	var onload_functions = new Array();
+	var onunload_functions = new Array();
+
+	
+
+	/**
+	* Find a member
+	*/
+	function find_username(url)
+	{
+		popup(url, 760, 570, '_usersearch');
+		return false;
+	}
+
+	/**
+	* New function for handling multiple calls to window.onload and window.unload by pentapenguin
+	*/
+	window.onload = function()
+	{
+		for (var i = 0; i < onload_functions.length; i++)
+		{
+			eval(onload_functions[i]);
+		}
+	};
+
+	window.onunload = function()
+	{
+		for (var i = 0; i < onunload_functions.length; i++)
+		{
+			eval(onunload_functions[i]);
+		}
+	};
+
+// ]]>
+</script>
+<script type="text/javascript" src="./styles/prosilver/template/styleswitcher.js"></script>
+<script type="text/javascript" src="./styles/prosilver/template/forum_fn.js"></script>
+
+<script type="text/javascript" src="./highslide/highslide-full.js"></script>
+<link href="./highslide/highslide.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+// <![CDATA[
+hs.graphicsDir = './highslide/graphics/';
+hs.align = 'center';
+hs.transitions = ['expand', 'crossfade'];
+hs.outlineType = 'rounded-white';
+hs.fadeInOut = true;
+//hs.dimmingOpacity = 0.75;
+
+// Add the controlbar
+hs.addSlideshow({
+	//slideshowGroup: 'group1',
+	interval: 5000,
+	repeat: false,
+	useControls: true,
+	fixedControls: 'fit',
+	overlayOptions: {
+		opacity: 0.75,
+		position: 'bottom center',
+		hideOnMouseOut: true
+	}
+});
+// ]]>
+</script>
+
+<link href="./styles/prosilver/theme/print.css" rel="stylesheet" type="text/css" media="print" title="printonly" />
+<link href="./styles/prosilver/theme/stylesheet.css" rel="stylesheet" type="text/css" media="screen, projection" />
+
+<link href="./styles/prosilver/theme/normal.css" rel="stylesheet" type="text/css" title="A" />
+<link href="./styles/prosilver/theme/medium.css" rel="alternate stylesheet" type="text/css" title="A+" />
+<link href="./styles/prosilver/theme/large.css" rel="alternate stylesheet" type="text/css" title="A++" />
+
+
+<link rel="stylesheet" type="text/css" href="/css/screen_forum.css" media="all" />
+
+<script type="text/javascript">
+// <![CDATA[
+	window.onload = resizeimg;
+	function resizeimg()
+	{
+		if (document.getElementsByTagName)
+		{
+			var resClass = document.getElementsByTagName('span');
+			for (var i = 0; i < resClass.length; i++)
+			{
+				if (resClass[i].className == "image-resize")
+				{
+					var img = resClass[i].getElementsByTagName("img");
+					if (img[0].width > 400)
+					{
+						resClass[i].innerHTML = '<a href="' + img[0].src + '" class="highslide" onclick="return hs.expand(this)"><img src="' + img[0].src + '" width="400" alt=""></a>';
+					}
+				}
+			}
+		}
+	}
+// ]]>
+</script>
+
+</head>
+
+<body id="phpbb" class="section-ucp ltr">
+
+<div id="wrap">
+	<a id="top" name="top" accesskey="t"></a>
+	<div id="page-header">
+		
+    
+    <div id="wrapper">
+        <div id="header">
+            <div class="logo"><a href="/"><img src="/img/logo_new.png" alt="Спининги & Катушки - Интернет-магазин по продаже профессиональных спиннингов и катушек" /></a></div>
+            <div class="name"><b>Форум</b>Все о рыбалке и снастях</div>
+            <div class="search">
+                <div>
+                    <form action="./search.php?sid=dc5941e50a73df1af4e5f29fd5cdbf28" method="get" id="search">
+                        <input title="Найти" type="submit" value="" />
+                        <input type="text"  name="keywords" id="keywords" title="Ключевые слова" value="Поиск…" onclick="if(this.value=='Поиск…')this.value='';" onblur="if(this.value=='')this.value='Поиск…';"  />
+                    </form>
+                </div>
+                       <a href="./search.php?sid=dc5941e50a73df1af4e5f29fd5cdbf28" title="Параметры расширенного поиска">Расширенный поиск</a> <input type="hidden" name="sid" value="dc5941e50a73df1af4e5f29fd5cdbf28" />
+
+            </div>
+        </div>
+    </div>
+
+
+		<div class="navbar">
+			<div class="inner"><span class="corners-top"><span></span></span>
+
+			<ul class="linklist navlinks">
+				<li class="icon-home"><a href="./index.php?sid=dc5941e50a73df1af4e5f29fd5cdbf28" accesskey="h">Список форумов</a> </li>
+
+				<li class="rightside"><a href="#" onclick="fontsizeup(); return false;" onkeypress="return fontsizeup(event);" class="fontsize" title="Изменить размер шрифта">Изменить размер шрифта</a></li>
+
+				
+			</ul>
+
+			
+
+			<ul class="linklist rightside">
+				<li class="icon-faq"><a href="./faq.php?sid=dc5941e50a73df1af4e5f29fd5cdbf28" title="Часто задаваемые вопросы">FAQ</a></li>
+				<li class="icon-members"><a href="./memberlist.php?sid=dc5941e50a73df1af4e5f29fd5cdbf28" title="Просмотр всего списка пользователей">Пользователи</a></li>
+					<li class="icon-logout"><a href="./ucp.php?mode=login&amp;sid=dc5941e50a73df1af4e5f29fd5cdbf28" title="Вход" accesskey="x">Вход</a></li>
+				
+			</ul>
+
+			<span class="corners-bottom"><span></span></span></div>
+		</div>
+
+	</div>
+
+	<a name="start_here"></a>
+	<div id="page-body">
+		
+<script type="text/javascript">
+// <![CDATA[
+	/**
+	* Change language
+	*/
+	function change_language(lang_iso)
+	{
+		document.forms['register'].change_lang.value = lang_iso;
+		document.forms['register'].submit();
+	}
+
+// ]]>
+</script>
+
+	<form method="post" action="./ucp.php?mode=register&amp;sid=dc5941e50a73df1af4e5f29fd5cdbf28" id="register">
+		<p class="rightside">
+			<label for="lang">Язык:</label><select name="lang" id="lang" onchange="change_language(this.value); return false;" title="Язык"><option value="en">British English</option><option value="ru" selected="selected">Русский</option></select>
+			<input type="hidden" name="change_lang" value="" />
+
+		</p>
+	</form>
+
+	<div class="clear"></div>
+
+
+
+	<form method="post" action="./ucp.php?mode=register&amp;sid=dc5941e50a73df1af4e5f29fd5cdbf28" id="agreement">
+
+	<div class="panel">
+		<div class="inner"><span class="corners-top"><span></span></span>
+		<div class="content">
+			<h2>Форум spinkat.ru - Регистрация</h2>
+			<p>Заходя на конференцию «Форум spinkat.ru» (в дальнейшем «мы», «наш», «Форум spinkat.ru», «http://www.spinkat.ru/forum»), вы подтверждаете своё согласие со следующими условиями. Если вы не согласны с ними, пожалуйста, не заходите и не пользуйтесь форумами «Форум spinkat.ru». Мы оставляем за собой право изменять эти правила в любое время и сделаем всё возможное, чтобы уведомить вас об этом, однако с вашей стороны было бы разумным регулярно просматривать этот текст на предмет изменений, так как использование конференции «Форум spinkat.ru» после обновления/исправления условий означает ваше согласие с ними.<br />
+	<br />
+	Наши форумы работают под управлением программного обеспечения для создания конференций phpBB (в дальнейшем «они», «программное обеспечение phpBB», «www.phpbb.com», «phpBB Group», «phpBB Teams»), выпущенного по лицензии «<a href="http://opensource.org/licenses/gpl-license.php">General Public License</a>» (в дальнейшем «GPL»). Скачать его можно по адресу <a href="https://www.phpbb.com/">www.phpbb.com</a>. Ограничения лицензии GPL для программного обеспечения phpBB строго связаны с организацией и поддержкой интернет-конференций, и phpBB Group не несёт ответственности за то, что администрация конференций определяет в качестве допустимого содержания и/или поведения в них. За дополнительной информацией о phpBB обращайтесь по адресу <a href="https://www.phpbb.com/">https://www.phpbb.com/</a>.<br />
+	<br />
+	Вы соглашаетесь не размещать оскорбительных, угрожающих, клеветнических сообщений, порнографических сообщений, призывов к национальной розни и прочих сообщений, которые могут нарушить законы вашей страны, страны, которая предоставляет услуги хостинга для форумов «Форум spinkat.ru» или международное право. Попытки размещения таких сообщений могут привести к вашему немедленному отключению от конференции, при этом ваш провайдер будет поставлен в известность, если мы сочтём это нужным. IP-адреса всех сообщений сохраняются для возможности проведения такой политики. Вы соглашаетесь с тем, что администраторы форумов «Форум spinkat.ru» имеют право удалить, отредактировать, перенести или закрыть любую тему в любое время по своему усмотрению. Как пользователь вы согласны с тем, что введённая вами информация будет храниться в базе данных. Хотя эта информация не будет открыта третьим лицам без вашего разрешения, ни администрация конференции «Форум spinkat.ru», ни phpBB Group не может быть ответственна за действия хакеров, которые могут привести к несанкционированному доступу к ней.
+	</p>
+		</div>
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<div class="panel">
+		<div class="inner"><span class="corners-top"><span></span></span>
+		<fieldset class="submit-buttons">
+			
+			<input type="submit" name="agreed" id="agreed" value="Я согласен с этими условиями" class="button1" />&nbsp;
+			<input type="submit" name="not_agreed" value="Я не согласен с этими условиями" class="button2" />
+			
+			<input type="hidden" name="change_lang" value="" />
+
+			<input type="hidden" name="creation_time" value="1449528819" />
+<input type="hidden" name="form_token" value="9646be061962bf4924ba99ef46d9b07be468bf49dc5941e50a73df1af4e5f29fd5cdbf28" />
+
+		</fieldset>
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+	</form>
+
+</div>
+
+<div id="page-footer">
+
+	<div class="navbar">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<ul class="linklist">
+			<li class="icon-home"><a href="./index.php?sid=dc5941e50a73df1af4e5f29fd5cdbf28" accesskey="h">Список форумов</a></li>
+				
+			<li class="rightside"><a href="./memberlist.php?mode=leaders&amp;sid=dc5941e50a73df1af4e5f29fd5cdbf28">Наша команда</a> &bull; <a href="./ucp.php?mode=delete_cookies&amp;sid=dc5941e50a73df1af4e5f29fd5cdbf28">Удалить cookies конференции</a> &bull; Часовой пояс: UTC + 4 часа </li>
+		</ul>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<div class="copyright">Создано на основе <a href="https://www.phpbb.com/">phpBB</a>&reg; Forum Software &copy; phpBB Group
+		<br /><a href='http://www.phpbbguru.net/'>Русская поддержка phpBB</a><br />
+		<script type="text/javascript">// <![CDATA[
+			var tokenFields = document.getElementsByName('form_token');
+			for (var i = 0; i < tokenFields.length; i++)
+				{tokenFields[i].value = tokenFields[i].value.replace('dc5941e50a73df1af4e5f29fd5cdbf28', '');}
+		// ]]></script>
+		
+	</div>
+</div>
+
+</div>
+
+<div>
+	<a id="bottom" name="bottom" accesskey="z"></a>
+	
+</div>
+
+</body>
+</html>
