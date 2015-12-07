@@ -16,7 +16,7 @@ LOGIN_PAGE = b'''
     <body>
         <form method=POST action="/login">
             Username: <input name="username" type="text">
-            Password: <input name="password" type="passoword">
+            Password: <input name="password" type="password">
             <input type="submit" value="Login">
         </form>
     </body>
