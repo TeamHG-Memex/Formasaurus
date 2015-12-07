@@ -30,7 +30,7 @@
             {"short": "in", "full": "ref code / invitation code / coupon"},
 
             {"short": "ca", "full": "captcha"},
-            {"short": "ab", "full": "anti-bot field (e.g. 'leave blank')"},
+            {"short": "hp", "full": "honeypot"},
             {"short": "pi", "full": "pin code received by sms/..."},
 
             {"short": "tC", "full": "TOS confirmation"},
