@@ -943,7 +943,7 @@
             },
             {
                 "q": "qq",
-                "sa": "XX"
+                "sa": "Bs"
             }
         ]
     },
@@ -1371,7 +1371,7 @@
                 "password2": "p2",
                 "userAnswer": "sa",
                 "userId": "us",
-                "userMail": "XX",
+                "userMail": "e1",
                 "userName": "nf",
                 "userQuestion": "sq",
                 "userQuestionFixed": "sq"
@@ -5737,7 +5737,7 @@
         "url": "http://www.bilbasen.dk/",
         "forms": [
             "s",
-            "s"
+            "-"
         ],
         "visible_html_fields": [
             {
@@ -7618,7 +7618,7 @@
             "X",
             "X",
             "X",
-            "X",
+            "-",
             "o",
             "X"
         ],
@@ -9739,10 +9739,10 @@
         "forms": [
             "r",
             "o",
+            "-",
+            "-",
             "o",
-            "o",
-            "o",
-            "o"
+            "-"
         ],
         "visible_html_fields": [
             {
