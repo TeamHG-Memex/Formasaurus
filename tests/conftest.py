@@ -48,7 +48,8 @@ def empty_storage(tmpdir):
                 {"short": "l", "full": "login"},
                 {"short": "X", "full": "NOT ANNOTATED"}
             ],
-            "NA_value": "X"
+            "NA_value": "X",
+            "skip_value": "-"
         },
 
         "field_types": {
@@ -58,7 +59,8 @@ def empty_storage(tmpdir):
                 {"short": "qq", "full": "search query"},
                 {"short": "XX", "full": "NOT ANNOTATED"}
             ],
-            "NA_value": "XX"
+            "NA_value": "XX",
+            "skip_value": "--"
         }
     }
     storage.initialize(config)

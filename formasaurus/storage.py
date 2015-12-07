@@ -21,6 +21,7 @@ from formasaurus.html import (
 )
 
 FormAnnotation = collections.namedtuple('FormAnnotation', 'form type index info key')
+AnnotationSchema = collections.namedtuple('AnnotationSchema', 'types types_inv na_value skip_value')
 
 
 class Storage(object):
@@ -101,32 +102,34 @@ class Storage(object):
         with open(os.path.join(self.folder, "config.json"), "r") as f:
             return json.load(f)
 
-    def get_field_types(self):
+    def get_field_schema(self):
         """
-        Return (types, types_inv, na_value) tuple. `types` is an
+        Return AnnotationSchema instance. `r.types` is an
         OrderedDict with field type names {full_name: short_name};
-        `types_inv` is a {short_name: full_name} dict;
-        `na_value` is a short name of type name used for unannotated fields.
+        `r.types_inv` is a {short_name: full_name} dict;
+        `r.na_value` is a short name of type name used for unannotated fields.
         """
-        return self._get_types('field_types')
+        return self._get_schema('field_types')
 
-    def get_form_types(self):
+    def get_form_schema(self):
         """
-        Return (types, types_inv, na_value) tuple. `types` is an
+        Return AnnotationSchema instance. `r.types` is an
         OrderedDict with form type names {full_name: short_name};
-        `types_inv` is a {short_name: full_name} dict;
-        `na_value` is a short name of type name used for unannotated forms.
+        `r.types_inv` is a {short_name: full_name} dict;
+        `r.na_value` is a short name of type name used for unannotated forms;
+        `r.skip_value` is a short name of a type name which should be skipped.
         """
-        return self._get_types('form_types')
+        return self._get_schema('form_types')
 
-    def _get_types(self, key):
+    def _get_schema(self, key):
         config = self.get_config()
         na_value = config[key]['NA_value']
+        skip_value = config[key]['skip_value']
         types = collections.OrderedDict([
             (f['full'], f['short']) for f in config[key]['types']
         ])
         types_inv = inverse_mapping(types)
-        return types, types_inv, na_value
+        return AnnotationSchema(types, types_inv, na_value, skip_value)
 
     def add_result(self, html, url, form_answers=None,
                    visible_html_fields=None, index=None,
@@ -143,15 +146,15 @@ class Storage(object):
                 return
 
         if form_answers is None:
-            _, _, form_na_value = self.get_form_types()
-            form_answers = [form_na_value for _ in forms]
+            form_schema = self.get_form_schema()
+            form_answers = [form_schema.na_value for _ in forms]
         else:
             assert len(form_answers) == len(forms)
 
         if visible_html_fields is None:
-            _, _, field_na_value = self.get_field_types()
+            field_schema = self.get_field_schema()
             visible_html_fields = [{
-                name: field_na_value
+                name: field_schema.na_value
                 for name in get_field_names(get_fields_to_annotate(form))
             } for form in forms]
 
@@ -170,11 +173,11 @@ class Storage(object):
         return path
 
     def iter_annotations(self, index=None, drop_duplicates=True, drop_na=True,
-                         verbose=False, leave=False):
+                         drop_skipped=True, verbose=False, leave=False):
         """
         Return an iterator over (form, type, index, info, path) tuples.
         """
-        form_types, form_types_inv, na_value = self.get_form_types()
+        schema = self.get_form_schema()
         trees = self.iter_trees(index=index)
 
         if verbose:
@@ -184,7 +187,10 @@ class Storage(object):
         seen = set()
         for path, tree, info in trees:
             for idx, (form, tp) in enumerate(zip(get_forms(tree), info["forms"])):
-                if drop_na and tp == na_value:
+                if drop_na and tp == schema.na_value:
+                    continue
+
+                if drop_skipped and tp == schema.skip_value:
                     continue
 
                 if drop_duplicates:
@@ -294,12 +300,12 @@ class Storage(object):
 
     def get_fingerprints(self, verbose=True, leave=False):
         """ Return a dict with all fingerprints of the existing forms """
-        form_types, form_types_inv, na_value = self.get_form_types()
+        schema = self.get_form_schema()
         annotations = self.iter_annotations(verbose=verbose, leave=leave)
         return {
             self.get_fingerprint(ann.form): ann.type
             for ann in annotations
-            if ann.type != na_value
+            if ann.type != schema.na_value
         }
 
     def get_fingerprint(self, form):
@@ -322,10 +328,10 @@ class Storage(object):
     def print_form_type_counts(self):
         """ Print the number annotations of each form types in this storage """
         print("Annotated HTML forms:\n")
-        form_types, form_types_inv, na_value = self.get_form_types()
+        schema = self.get_form_schema()
         type_counts = self.get_form_type_counts()
         for shortcut, count in type_counts.most_common():
-            type_name = form_types_inv[shortcut]
+            type_name = schema.types_inv[shortcut]
             print("%-5d %-25s (%s)" % (count, type_name, shortcut))
         print("\nTotal form count: %d" % (sum(type_counts.values())))
 

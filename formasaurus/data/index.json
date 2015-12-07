@@ -585,7 +585,7 @@
     "html/buyee.jp-2.html": {
         "url": "https://buyee.jp/signup/pre",
         "forms": [
-            "X",
+            "-",
             "r",
             "r"
         ],
@@ -604,7 +604,7 @@
     "html/buyee.jp-3.html": {
         "url": "http://buyee.jp/rakuten/",
         "forms": [
-            "X",
+            "-",
             "s"
         ],
         "visible_html_fields": [
@@ -649,7 +649,7 @@
         "forms": [
             "l",
             "c",
-            "X",
+            "-",
             "l",
             "p"
         ],
@@ -1662,10 +1662,10 @@
         "forms": [
             "s",
             "l",
-            "X",
+            "-",
             "l",
             "s",
-            "X",
+            "-",
             "s",
             "m"
         ],
@@ -2533,7 +2533,7 @@
     "html/it.vizeat.com-1.html": {
         "url": "https://it.vizeat.com/pages/diventa-host",
         "forms": [
-            "X"
+            "-"
         ],
         "visible_html_fields": [
             {
@@ -2978,7 +2978,7 @@
             "X",
             "X",
             "b",
-            "X"
+            "-"
         ],
         "visible_html_fields": [
             {
@@ -4264,7 +4264,7 @@
         "url": "http://startromagna.it/",
         "forms": [
             "s",
-            "X"
+            "l"
         ],
         "visible_html_fields": [
             {
@@ -4455,12 +4455,12 @@
         "forms": [
             "o",
             "o",
-            "X",
-            "X",
-            "X",
-            "X",
-            "X",
-            "X",
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
             "s",
             "l"
         ],
@@ -4573,11 +4573,11 @@
             "b",
             "b",
             "b",
-            "b",
-            "b",
-            "b",
-            "b",
-            "b",
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
             "b",
             "b",
             "m"
@@ -4766,7 +4766,7 @@
     "html/ulcm.org-0.html": {
         "url": "http://ulcm.org/",
         "forms": [
-            "X"
+            "-"
         ],
         "visible_html_fields": [
             {
@@ -5383,7 +5383,7 @@
         "forms": [
             "l",
             "s",
-            "X",
+            "-",
             "V"
         ],
         "visible_html_fields": [
@@ -6168,11 +6168,11 @@
         "url": "http://www.bummelwelt.de/",
         "forms": [
             "s",
-            "X",
+            "-",
             "l",
-            "X",
-            "X",
-            "X",
+            "-",
+            "-",
+            "-",
             "l"
         ],
         "visible_html_fields": [
@@ -6529,7 +6529,7 @@
         "forms": [
             "l",
             "s",
-            "X",
+            "-",
             "N",
             "m",
             "V"
@@ -6606,7 +6606,7 @@
         "forms": [
             "X",
             "X",
-            "X",
+            "-",
             "s",
             "X"
         ],
@@ -6745,7 +6745,7 @@
         "url": "http://www.coverings.com/",
         "forms": [
             "s",
-            "X"
+            "-"
         ],
         "visible_html_fields": [
             {
@@ -7125,11 +7125,11 @@
             "s",
             "s",
             "b",
-            "b",
-            "X",
-            "b",
-            "b",
-            "b"
+            "-",
+            "-",
+            "-",
+            "-",
+            "-"
         ],
         "visible_html_fields": [
             {
@@ -7184,10 +7184,10 @@
             "X",
             "X",
             "b",
-            "b",
-            "b",
-            "b",
-            "b"
+            "-",
+            "-",
+            "-",
+            "-"
         ],
         "visible_html_fields": [
             {
@@ -7551,7 +7551,7 @@
             "m",
             "P",
             "m",
-            "X",
+            "-",
             "c",
             "m"
         ],
@@ -8544,25 +8544,25 @@
         "forms": [
             "s",
             "c",
-            "X",
-            "X",
-            "X",
-            "X",
-            "X",
-            "X",
-            "X",
-            "X",
-            "X",
-            "X",
-            "X",
-            "X",
-            "X",
-            "X",
-            "X",
-            "X",
-            "X",
-            "X",
-            "X"
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
+            "-"
         ],
         "visible_html_fields": [
             {
@@ -8911,10 +8911,10 @@
         "url": "http://www.lexipol.com/contact-us/",
         "forms": [
             "X",
+            "-",
             "X",
-            "X",
-            "X",
-            "X"
+            "-",
+            "-"
         ],
         "visible_html_fields": [
             {
@@ -8978,10 +8978,10 @@
         "url": "http://www.lexipol.com/careers/",
         "forms": [
             "X",
+            "-",
             "X",
-            "X",
-            "X",
-            "X"
+            "-",
+            "c"
         ],
         "visible_html_fields": [
             {
@@ -9021,19 +9021,19 @@
                 "input_8": "XX"
             },
             {
-                "input_1": "XX",
-                "input_10.1": "XX",
-                "input_10.2": "XX",
-                "input_10.3": "XX",
-                "input_10.4": "XX",
-                "input_10.5": "XX",
-                "input_11": "XX",
-                "input_12": "XX",
-                "input_2": "XX",
-                "input_3": "XX",
-                "input_4": "XX",
-                "input_5": "XX",
-                "input_6": "XX"
+                "input_1": "OT",
+                "input_10.1": "CT",
+                "input_10.2": "CT",
+                "input_10.3": "CT",
+                "input_10.4": "CT",
+                "input_10.5": "CT",
+                "input_11": "CC",
+                "input_12": "St",
+                "input_2": "nf",
+                "input_3": "no",
+                "input_4": "OS",
+                "input_5": "ph",
+                "input_6": "e1"
             }
         ]
     },
@@ -9244,7 +9244,7 @@
     "html/www.markupfirm.com-1.html": {
         "url": "http://www.markupfirm.com/contact",
         "forms": [
-            "X",
+            "-",
             "X",
             "c"
         ],
@@ -11666,7 +11666,7 @@
         "url": "https://www.tyreleader.co.uk/",
         "forms": [
             "s",
-            "X",
+            "-",
             "s",
             "m"
         ],
@@ -12461,7 +12461,7 @@
     "html/www.zoover.cz-1.html": {
         "url": "http://www.zoover.cz/AddContribution/SuggestAccoPOI.aspx?ctid=61131700-405f-4bb6-b2fb-97bea301cc32",
         "forms": [
-            "X"
+            "-"
         ],
         "visible_html_fields": [
             {

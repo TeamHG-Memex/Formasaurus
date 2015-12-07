@@ -82,10 +82,10 @@ def _annotate_forms(storage, tree):
     else:
         print("Page has %d form(s)" % len(forms))
 
-    form_types, form_types_inv, na = storage.get_form_types()
+    schema = storage.get_form_schema()
 
-    print_form_types(form_types)
-    shortcuts = "/".join(form_types.values())
+    print_form_types(schema.types)
+    shortcuts = "/".join(schema.types.values())
     fingerprints = storage.get_fingerprints()
 
     res = []
@@ -94,7 +94,7 @@ def _annotate_forms(storage, tree):
         fp = storage.get_fingerprint(form)
         if fp in fingerprints:
             xpath = "(//form)[%d]" % idx
-            tp = form_types_inv[fingerprints[fp]]
+            tp = schema.types_inv[fingerprints[fp]]
             print("Skipping duplicate form %-10s %r" % (xpath, tp))
             res.append("X")
             continue
@@ -105,7 +105,7 @@ def _annotate_forms(storage, tree):
             tp = input("\nPlease enter the form type (%s) "
                        "or ? for help: " % shortcuts).strip()
             if tp == '?':
-                print_form_types(form_types)
+                print_form_types(schema.types)
                 continue
             if tp not in set(shortcuts):
                 print("Please enter one of the following "

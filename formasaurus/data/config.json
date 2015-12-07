@@ -12,9 +12,11 @@
             {"short": "V", "full": "display options"},
             {"short": "N", "full": "navigation"},
             {"short": "o", "full": "other"},
+            {"short": "-", "full": "SKIP THIS FORM"},
             {"short": "X", "full": "NOT ANNOTATED"}
         ],
-        "NA_value": "X"
+        "NA_value": "X",
+        "skip_value": "-"
     },
 
     "field_types": {
@@ -118,6 +120,7 @@
 
             {"short": "XX", "full": "NOT ANNOTATED"}
         ],
-        "NA_value": "XX"
+        "NA_value": "XX",
+        "skip_value": "--"
     }
 }

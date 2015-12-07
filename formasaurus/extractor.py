@@ -20,12 +20,9 @@ class FormExtractor(object):
     """
     FormExtractor detects HTML form types.
     """
-    def __init__(self, model=None,
-                 form_types=None, form_types_inv=None, na_value=None):
+    def __init__(self, model=None, schema=None):
         self.model = model
-        self.form_types = form_types
-        self.form_types_inv = form_types_inv
-        self.na_value = na_value
+        self.form_schema = schema
 
     @classmethod
     def load(cls, filename=None, create=True):
@@ -66,10 +63,7 @@ class FormExtractor(object):
     def train(self, data_folder, train_ratio=1.0):
         """ Train the model using data from ``data_folder``. """
         store = Storage(data_folder)
-        form_types, form_types_inv, na_value = store.get_form_types()
-        self.form_types = form_types
-        self.form_types_inv = form_types_inv
-        self.na_value = na_value
+        self.form_schema = store.get_form_schema()
 
         X, y = store.get_Xy(drop_duplicates=True, verbose=True, leave=True)
         train_size = int(len(y) * train_ratio)

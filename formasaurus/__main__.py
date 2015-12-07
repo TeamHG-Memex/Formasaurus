@@ -104,7 +104,7 @@ def main():
         ratio = float(args['--test-size'])
 
         store = Storage(args["--data-folder"])
-        form_types, form_types_inv, na_name = store.get_form_types()
+        schema = store.get_form_schema()
         model = formtype_model.get_model()
 
         annotations = store.iter_annotations(verbose=True, leave=True)
@@ -117,7 +117,7 @@ def main():
 
         evaluation.print_metrics(model, X, y, X_train, X_test, y_train, y_test,
                                  ipython=False, cv=n_folds, short_matrix=True,
-                                 class_map=form_types_inv)
+                                 class_map=schema.types_inv)
 
 
 if __name__ == '__main__':
