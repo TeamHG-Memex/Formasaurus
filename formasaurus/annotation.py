@@ -14,7 +14,7 @@ from formasaurus.html import get_cleaned_form_html, load_html, get_forms
 from formasaurus.storage import Storage
 
 
-def annotate_forms(data_folder, url_argument):
+def annotate_forms(data_folder, url):
     """
     Run an interactive HTML form annotation tool.
 
@@ -24,7 +24,7 @@ def annotate_forms(data_folder, url_argument):
     results are added to index.json file.
     """
     storage = Storage(data_folder)
-    html, url = load_data(url_argument)
+    html = download(url)
     doc = load_html(html, url)
     form_answers = _annotate_forms(storage, doc)
     if form_answers:
@@ -43,18 +43,11 @@ def check_annotated_data(data_folder):
         sys.exit(1)
 
 
-def load_data(url_or_path):
+def download(url):
     """
-    Load binary data from a local file or an url;
-    return (data, url) tuple.
+    Download a web page from url, return its content as unicode.
     """
-    if os.path.exists(url_or_path):
-        raise NotImplementedError("Re-annotation is not supported yet")
-        # with open(url_or_path, 'rb') as f:
-        #     return f.read(), None
-    else:
-        html = requests.get(url_or_path).content
-        return html, url_or_path
+    return requests.get(url).text
 
 
 def print_form_html(form):

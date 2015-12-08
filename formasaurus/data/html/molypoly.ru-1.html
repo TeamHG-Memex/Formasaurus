@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title>Интернет магазин корейской косметики</title>
+<title>РРЅС‚РµСЂРЅРµС‚ РјР°РіР°Р·РёРЅ РєРѕСЂРµР№СЃРєРѕР№ РєРѕСЃРјРµС‚РёРєРё</title>
 <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
 <meta name="description" content="">
 <meta name="keywords" content="">
@@ -16,8 +16,8 @@ function moveitem(x1,x2,id,direction,duration)
  
    var start = new Date().getTime();
    setTimeout(function() {
-var now = (new Date().getTime()) - start; // Текущее время
-var progress = now / duration; // Прогресс анимации
+var now = (new Date().getTime()) - start; // РўРµРєСѓС‰РµРµ РІСЂРµРјСЏ
+var progress = now / duration; // РџСЂРѕРіСЂРµСЃСЃ Р°РЅРёРјР°С†РёРё
 	    for (i=1;i<=2;i++)
 		{
 		
@@ -36,7 +36,7 @@ var progress = now / duration; // Прогресс анимации
 		if (direction=='ym')
 		document.getElementById(id).style.marginTop = result + "px";
 	    }
-	    if (progress < 1) // Если анимация не закончилась, продолжаем
+	    if (progress < 1) // Р•СЃР»Рё Р°РЅРёРјР°С†РёСЏ РЅРµ Р·Р°РєРѕРЅС‡РёР»Р°СЃСЊ, РїСЂРѕРґРѕР»Р¶Р°РµРј
 	        setTimeout(arguments.callee, 10);
 		else 
 		{
@@ -126,16 +126,16 @@ $(function(){
 <div class="content">
 
      <div id=lk>
-     <a class=link1 href="#" onClick="toggle_show('log')">Авторизация</a>
-     <a class=link2 href="index.php?razdelID=779&mode=adduser&fase=fiz">Регистрация</a>
-     <a class=link3 href="index.php?razdelID=779&mode=rememberpassword">Напомнить пароль</a>
+     <a class=link1 href="#" onClick="toggle_show('log')">РђРІС‚РѕСЂРёР·Р°С†РёСЏ</a>
+     <a class=link2 href="index.php?razdelID=779&mode=adduser&fase=fiz">Р РµРіРёСЃС‚СЂР°С†РёСЏ</a>
+     <a class=link3 href="index.php?razdelID=779&mode=rememberpassword">РќР°РїРѕРјРЅРёС‚СЊ РїР°СЂРѕР»СЊ</a>
      <div class="forgotpassword"></div>
      
      <form id="forma_avtor" method=post action="index.php">
-     <p class=avt1>Логин</p>
-     <p><input type="text" class="logfield" name="log" value="логин" onClick="if (this.value=='логин') this.value='';"></p>
-      <p class=avt2>Пароль</p>
-      <p><input type="password" name="pass" class="passfield" value="пароль" class="tahoma" onClick="if (this.value=='пароль') this.value='';"></p>
+     <p class=avt1>Р›РѕРіРёРЅ</p>
+     <p><input type="text" class="logfield" name="log" value="Р»РѕРіРёРЅ" onClick="if (this.value=='Р»РѕРіРёРЅ') this.value='';"></p>
+      <p class=avt2>РџР°СЂРѕР»СЊ</p>
+      <p><input type="password" name="pass" class="passfield" value="РїР°СЂРѕР»СЊ" class="tahoma" onClick="if (this.value=='РїР°СЂРѕР»СЊ') this.value='';"></p>
      
      <input type="submit" class=submit name="upload" value="" onMouseover="this.style.backgroundPosition='left -34px'" onMouseout="this.style.backgroundPosition='left top'">
      </form>
@@ -143,7 +143,7 @@ $(function(){
      
      
      
-     <div ID="korzinblock" class="png24"><p class="korzinheader">Корзина</p><p class="korzinitem1">Товаров в корзине <span style="">0 шт.</span></p><p class="korzinitem2">Ваша корзина пуста</span></p><p  class="korzinlinknot">Оформить</p><p class="tokorzinnot">Корзина</p></div>
+     <div ID="korzinblock" class="png24"><p class="korzinheader">РљРѕСЂР·РёРЅР°</p><p class="korzinitem1">РўРѕРІР°СЂРѕРІ РІ РєРѕСЂР·РёРЅРµ <span style="">0 С€С‚.</span></p><p class="korzinitem2">Р’Р°С€Р° РєРѕСЂР·РёРЅР° РїСѓСЃС‚Р°</span></p><p  class="korzinlinknot">РћС„РѕСЂРјРёС‚СЊ</p><p class="tokorzinnot">РљРѕСЂР·РёРЅР°</p></div>
 </div>
 </div>
 <div id="fonformenu">
@@ -154,46 +154,46 @@ $(function(){
  <form action="index.php" method=get>
  <input type=hidden name=razdelID value="384">
 <input type=hidden name=filtersoff value="yes">
-<input class="inputlitle" type="text" name="search_string" value="поиск по каталогу" onClick="if (this.value=='поиск по каталогу') this.value='';">
+<input class="inputlitle" type="text" name="search_string" value="РїРѕРёСЃРє РїРѕ РєР°С‚Р°Р»РѕРіСѓ" onClick="if (this.value=='РїРѕРёСЃРє РїРѕ РєР°С‚Р°Р»РѕРіСѓ') this.value='';">
 <input class="submitsearch" type="submit" name="upload" value="" onMouseover="this.style.backgroundPosition='left -31px'" onMouseout="this.style.backgroundPosition='left top'">
 </form>
 </div>
 
-    <p class="section-menu" style="z-index:60"><a href="index.php?razdelID=384">Весь каталог</a></p>
+    <p class="section-menu" style="z-index:60"><a href="index.php?razdelID=384">Р’РµСЃСЊ РєР°С‚Р°Р»РѕРі</a></p>
     <div id="section">
-    <p class="section-menu-selected2" style="z-index:50" id="sectionmenu1"><a href="index.php?razdelID=384&sectionID=1"  >Производители</a><span style="cursor:pointer;" ID="plusminus1" onClick="toggle_show('section1');toggle_image_show2('plusminus1');" class="plusminus2"><img  src="images/spacer.gif" border=0 align=absmiddle></span></p><div ID="section1" style="display:block;padding-bottom:20px;">
+    <p class="section-menu-selected2" style="z-index:50" id="sectionmenu1"><a href="index.php?razdelID=384&sectionID=1"  >РџСЂРѕРёР·РІРѕРґРёС‚РµР»Рё</a><span style="cursor:pointer;" ID="plusminus1" onClick="toggle_show('section1');toggle_image_show2('plusminus1');" class="plusminus2"><img  src="images/spacer.gif" border=0 align=absmiddle></span></p><div ID="section1" style="display:block;padding-bottom:20px;">
 <p class="subsection-menu" style="z-index:50" id="sectionmenu901"><a href="index.php?razdelID=384&sectionID=901"  >TONYMOLY</a></p><p class="subsection-menu" style="z-index:49" id="sectionmenu908"><a href="index.php?razdelID=384&sectionID=908"  >SKIN79</a></p><p class="subsection-menu" style="z-index:48" id="sectionmenu902"><a href="index.php?razdelID=384&sectionID=902"  >Missha</a></p><p class="subsection-menu" style="z-index:47" id="sectionmenu903"><a href="index.php?razdelID=384&sectionID=903"  >SkinFood</a></p><p class="subsection-menu" style="z-index:46" id="sectionmenu904"><a href="index.php?razdelID=384&sectionID=904"  >Etude House</a></p><p class="subsection-menu" style="z-index:45" id="sectionmenu912"><a href="index.php?razdelID=384&sectionID=912"  >The Face Shop</a></p><p class="subsection-menu" style="z-index:44" id="sectionmenu907"><a href="index.php?razdelID=384&sectionID=907"  >Holika Holika</a></p><p class="subsection-menu" style="z-index:43" id="sectionmenu909"><a href="index.php?razdelID=384&sectionID=909"  >Mizon</a></p><p class="subsection-menu" style="z-index:42" id="sectionmenu910"><a href="index.php?razdelID=384&sectionID=910"  >Innisfree</a></p><p class="subsection-menu" style="z-index:41" id="sectionmenu911"><a href="index.php?razdelID=384&sectionID=911"  >FakeFace</a></p><p class="subsection-menu" style="z-index:40" id="sectionmenu913"><a href="index.php?razdelID=384&sectionID=913"  >Secret Key</a></p><p class="subsection-menu" style="z-index:39" id="sectionmenu914"><a href="index.php?razdelID=384&sectionID=914"  >Its Skin</a></p></div>
 
     </div>
     <div id="katalog">
-    <p class="section-menu" style="z-index:50" id="sectionmenu1303"><a href="index.php?razdelID=1303"  >BB крем / СС крем</a></p><p class="section-menu2" style="z-index:49" id="sectionmenu1337"><a href="index.php?razdelID=1337"  >НОВИНКИ</a></p><p class="section-menu" style="z-index:48" id="sectionmenu1300"><a href="index.php?razdelID=1300"  >Умывание, очищение кожи</a><span style="cursor:pointer;" ID="plusminus1300" onClick="toggle_show('section1300');toggle_image_show2('plusminus1300');" class="plusminus1"><img  src="images/spacer.gif" border=0 align=absmiddle></span></p><div ID="section1300" style="display:none;padding-bottom:20px;">
-<p class="subsection-menu" style="z-index:50" id="sectionmenu1306"><a href="index.php?razdelID=1306"  >Пенки, гидрофильные масла</a></p><p class="subsection-menu" style="z-index:49" id="sectionmenu1307"><a href="index.php?razdelID=1307"  >Скрабы, пилинги</a></p><p class="subsection-menu" style="z-index:48" id="sectionmenu1319"><a href="index.php?razdelID=1319"  >Другое очищение</a></p></div>
-<p class="section-menu2" style="z-index:47" id="sectionmenu1302"><a href="index.php?razdelID=1302"  >Маски для лица</a></p><p class="section-menu" style="z-index:46" id="sectionmenu1301"><a href="index.php?razdelID=1301"  >Уход за кожей лица</a><span style="cursor:pointer;" ID="plusminus1301" onClick="toggle_show('section1301');toggle_image_show2('plusminus1301');" class="plusminus1"><img  src="images/spacer.gif" border=0 align=absmiddle></span></p><div ID="section1301" style="display:none;padding-bottom:20px;">
-<p class="subsection-menu" style="z-index:50" id="sectionmenu1310"><a href="index.php?razdelID=1310"  >Серия "Улитка"</a></p><p class="subsection-menu" style="z-index:49" id="sectionmenu1316"><a href="index.php?razdelID=1316"  >Для зрелой кожи</a></p><p class="subsection-menu" style="z-index:48" id="sectionmenu1335"><a href="index.php?razdelID=1335"  >Чувствительная кожа</a></p><p class="subsection-menu" style="z-index:47" id="sectionmenu1312"><a href="index.php?razdelID=1312"  >Расширенные поры</a></p><p class="subsection-menu" style="z-index:46" id="sectionmenu1314"><a href="index.php?razdelID=1314"  >Проблемная кожа</a></p><p class="subsection-menu" style="z-index:45" id="sectionmenu1311"><a href="index.php?razdelID=1311"  >Отбеливание</a></p><p class="subsection-menu" style="z-index:44" id="sectionmenu1336"><a href="index.php?razdelID=1336"  >Сухая кожа</a></p><p class="subsection-menu" style="z-index:43" id="sectionmenu1321"><a href="index.php?razdelID=1321"  >Уход за кожей вокруг глаз</a></p><p class="subsection-menu" style="z-index:42" id="sectionmenu1341"><a href="index.php?razdelID=1341"  >Для всех типов кожи</a></p></div>
-<p class="section-menu2" style="z-index:45" id="sectionmenu1317"><a href="index.php?razdelID=1317"  >Уход за телом</a><span style="cursor:pointer;" ID="plusminus1317" onClick="toggle_show('section1317');toggle_image_show2('plusminus1317');" class="plusminus2"><img  src="images/spacer.gif" border=0 align=absmiddle></span></p><div ID="section1317" style="display:none;padding-bottom:20px;">
-<p class="subsection-menu" style="z-index:50" id="sectionmenu1325"><a href="index.php?razdelID=1325"  >Тело</a></p><p class="subsection-menu" style="z-index:49" id="sectionmenu1324"><a href="index.php?razdelID=1324"  >Волосы</a></p><p class="subsection-menu" style="z-index:48" id="sectionmenu1322"><a href="index.php?razdelID=1322"  >Руки </a></p><p class="subsection-menu" style="z-index:47" id="sectionmenu1323"><a href="index.php?razdelID=1323"  >Ноги</a></p><p class="subsection-menu" style="z-index:46" id="sectionmenu1329"><a href="index.php?razdelID=1329"  >Солнцезащитные средства</a></p></div>
-<p class="section-menu" style="z-index:44" id="sectionmenu1338"><a href="index.php?razdelID=1338"  >Для мужчин</a></p><p class="section-menu2" style="z-index:43" id="sectionmenu1318"><a href="index.php?razdelID=1318"  >Декоративная косметика</a><span style="cursor:pointer;" ID="plusminus1318" onClick="toggle_show('section1318');toggle_image_show2('plusminus1318');" class="plusminus2"><img  src="images/spacer.gif" border=0 align=absmiddle></span></p><div ID="section1318" style="display:none;padding-bottom:20px;">
-<p class="subsection-menu" style="z-index:50" id="sectionmenu1328"><a href="index.php?razdelID=1328"  >Для лица</a></p><p class="subsection-menu" style="z-index:49" id="sectionmenu1327"><a href="index.php?razdelID=1327"  >Для губ</a></p><p class="subsection-menu" style="z-index:48" id="sectionmenu1326"><a href="index.php?razdelID=1326"  >Для глаз</a></p><p class="subsection-menu" style="z-index:47" id="sectionmenu1320"><a href="index.php?razdelID=1320"  >Аксессуары</a></p><p class="subsection-menu" style="z-index:46" id="sectionmenu1334"><a href="index.php?razdelID=1334"  >Парфюм</a></p><p class="subsection-menu" style="z-index:45" id="sectionmenu1339"><a href="index.php?razdelID=1339"  >Для ногтей</a></p></div>
-<p class="section-menu" style="z-index:42" id="sectionmenu1342"><a href="index.php?razdelID=1342"  >Другие полезности</a></p>
+    <p class="section-menu" style="z-index:50" id="sectionmenu1303"><a href="index.php?razdelID=1303"  >BB РєСЂРµРј / РЎРЎ РєСЂРµРј</a></p><p class="section-menu2" style="z-index:49" id="sectionmenu1337"><a href="index.php?razdelID=1337"  >РќРћР’РРќРљР</a></p><p class="section-menu" style="z-index:48" id="sectionmenu1300"><a href="index.php?razdelID=1300"  >РЈРјС‹РІР°РЅРёРµ, РѕС‡РёС‰РµРЅРёРµ РєРѕР¶Рё</a><span style="cursor:pointer;" ID="plusminus1300" onClick="toggle_show('section1300');toggle_image_show2('plusminus1300');" class="plusminus1"><img  src="images/spacer.gif" border=0 align=absmiddle></span></p><div ID="section1300" style="display:none;padding-bottom:20px;">
+<p class="subsection-menu" style="z-index:50" id="sectionmenu1306"><a href="index.php?razdelID=1306"  >РџРµРЅРєРё, РіРёРґСЂРѕС„РёР»СЊРЅС‹Рµ РјР°СЃР»Р°</a></p><p class="subsection-menu" style="z-index:49" id="sectionmenu1307"><a href="index.php?razdelID=1307"  >РЎРєСЂР°Р±С‹, РїРёР»РёРЅРіРё</a></p><p class="subsection-menu" style="z-index:48" id="sectionmenu1319"><a href="index.php?razdelID=1319"  >Р”СЂСѓРіРѕРµ РѕС‡РёС‰РµРЅРёРµ</a></p></div>
+<p class="section-menu2" style="z-index:47" id="sectionmenu1302"><a href="index.php?razdelID=1302"  >РњР°СЃРєРё РґР»СЏ Р»РёС†Р°</a></p><p class="section-menu" style="z-index:46" id="sectionmenu1301"><a href="index.php?razdelID=1301"  >РЈС…РѕРґ Р·Р° РєРѕР¶РµР№ Р»РёС†Р°</a><span style="cursor:pointer;" ID="plusminus1301" onClick="toggle_show('section1301');toggle_image_show2('plusminus1301');" class="plusminus1"><img  src="images/spacer.gif" border=0 align=absmiddle></span></p><div ID="section1301" style="display:none;padding-bottom:20px;">
+<p class="subsection-menu" style="z-index:50" id="sectionmenu1310"><a href="index.php?razdelID=1310"  >РЎРµСЂРёСЏ "РЈР»РёС‚РєР°"</a></p><p class="subsection-menu" style="z-index:49" id="sectionmenu1316"><a href="index.php?razdelID=1316"  >Р”Р»СЏ Р·СЂРµР»РѕР№ РєРѕР¶Рё</a></p><p class="subsection-menu" style="z-index:48" id="sectionmenu1335"><a href="index.php?razdelID=1335"  >Р§СѓРІСЃС‚РІРёС‚РµР»СЊРЅР°СЏ РєРѕР¶Р°</a></p><p class="subsection-menu" style="z-index:47" id="sectionmenu1312"><a href="index.php?razdelID=1312"  >Р Р°СЃС€РёСЂРµРЅРЅС‹Рµ РїРѕСЂС‹</a></p><p class="subsection-menu" style="z-index:46" id="sectionmenu1314"><a href="index.php?razdelID=1314"  >РџСЂРѕР±Р»РµРјРЅР°СЏ РєРѕР¶Р°</a></p><p class="subsection-menu" style="z-index:45" id="sectionmenu1311"><a href="index.php?razdelID=1311"  >РћС‚Р±РµР»РёРІР°РЅРёРµ</a></p><p class="subsection-menu" style="z-index:44" id="sectionmenu1336"><a href="index.php?razdelID=1336"  >РЎСѓС…Р°СЏ РєРѕР¶Р°</a></p><p class="subsection-menu" style="z-index:43" id="sectionmenu1321"><a href="index.php?razdelID=1321"  >РЈС…РѕРґ Р·Р° РєРѕР¶РµР№ РІРѕРєСЂСѓРі РіР»Р°Р·</a></p><p class="subsection-menu" style="z-index:42" id="sectionmenu1341"><a href="index.php?razdelID=1341"  >Р”Р»СЏ РІСЃРµС… С‚РёРїРѕРІ РєРѕР¶Рё</a></p></div>
+<p class="section-menu2" style="z-index:45" id="sectionmenu1317"><a href="index.php?razdelID=1317"  >РЈС…РѕРґ Р·Р° С‚РµР»РѕРј</a><span style="cursor:pointer;" ID="plusminus1317" onClick="toggle_show('section1317');toggle_image_show2('plusminus1317');" class="plusminus2"><img  src="images/spacer.gif" border=0 align=absmiddle></span></p><div ID="section1317" style="display:none;padding-bottom:20px;">
+<p class="subsection-menu" style="z-index:50" id="sectionmenu1325"><a href="index.php?razdelID=1325"  >РўРµР»Рѕ</a></p><p class="subsection-menu" style="z-index:49" id="sectionmenu1324"><a href="index.php?razdelID=1324"  >Р’РѕР»РѕСЃС‹</a></p><p class="subsection-menu" style="z-index:48" id="sectionmenu1322"><a href="index.php?razdelID=1322"  >Р СѓРєРё </a></p><p class="subsection-menu" style="z-index:47" id="sectionmenu1323"><a href="index.php?razdelID=1323"  >РќРѕРіРё</a></p><p class="subsection-menu" style="z-index:46" id="sectionmenu1329"><a href="index.php?razdelID=1329"  >РЎРѕР»РЅС†РµР·Р°С‰РёС‚РЅС‹Рµ СЃСЂРµРґСЃС‚РІР°</a></p></div>
+<p class="section-menu" style="z-index:44" id="sectionmenu1338"><a href="index.php?razdelID=1338"  >Р”Р»СЏ РјСѓР¶С‡РёРЅ</a></p><p class="section-menu2" style="z-index:43" id="sectionmenu1318"><a href="index.php?razdelID=1318"  >Р”РµРєРѕСЂР°С‚РёРІРЅР°СЏ РєРѕСЃРјРµС‚РёРєР°</a><span style="cursor:pointer;" ID="plusminus1318" onClick="toggle_show('section1318');toggle_image_show2('plusminus1318');" class="plusminus2"><img  src="images/spacer.gif" border=0 align=absmiddle></span></p><div ID="section1318" style="display:none;padding-bottom:20px;">
+<p class="subsection-menu" style="z-index:50" id="sectionmenu1328"><a href="index.php?razdelID=1328"  >Р”Р»СЏ Р»РёС†Р°</a></p><p class="subsection-menu" style="z-index:49" id="sectionmenu1327"><a href="index.php?razdelID=1327"  >Р”Р»СЏ РіСѓР±</a></p><p class="subsection-menu" style="z-index:48" id="sectionmenu1326"><a href="index.php?razdelID=1326"  >Р”Р»СЏ РіР»Р°Р·</a></p><p class="subsection-menu" style="z-index:47" id="sectionmenu1320"><a href="index.php?razdelID=1320"  >РђРєСЃРµСЃСЃСѓР°СЂС‹</a></p><p class="subsection-menu" style="z-index:46" id="sectionmenu1334"><a href="index.php?razdelID=1334"  >РџР°СЂС„СЋРј</a></p><p class="subsection-menu" style="z-index:45" id="sectionmenu1339"><a href="index.php?razdelID=1339"  >Р”Р»СЏ РЅРѕРіС‚РµР№</a></p></div>
+<p class="section-menu" style="z-index:42" id="sectionmenu1342"><a href="index.php?razdelID=1342"  >Р”СЂСѓРіРёРµ РїРѕР»РµР·РЅРѕСЃС‚Рё</a></p>
     </div>
 
     </td>
     <td width="20">
     <img src="images/spacer.gif" width="20" />    </td>
     <td align="left" valign="top">
-    <div id="hmenu"><a id="hmenulink1" class="topmenu" href="main" onMouseover="document.getElementById('hmenulinkcircle1').style.backgroundPosition='-36px -52px'" onMouseout="document.getElementById('hmenulinkcircle1').style.backgroundPosition='-36px top'">Главная</a><a id="hmenulink2" class="topmenu" href="deliveryandpayment" onMouseover="document.getElementById('hmenulinkcircle2').style.backgroundPosition='-36px -52px'" onMouseout="document.getElementById('hmenulinkcircle2').style.backgroundPosition='-36px top'">Доставка-оплата</a><a id="hmenulink3" class="topmenu" href="index.php?razdelID=1330&filtersoff=yes" onMouseover="document.getElementById('hmenulinkcircle3').style.backgroundPosition='-36px -52px'" onMouseout="document.getElementById('hmenulinkcircle3').style.backgroundPosition='-36px top'">Скидки</a><a id="hmenulink4" class="topmenu" href="asc" onMouseover="document.getElementById('hmenulinkcircle4').style.backgroundPosition='-36px -52px'" onMouseout="document.getElementById('hmenulinkcircle4').style.backgroundPosition='-36px top'">Вопрос-ответ</a><a id="hmenulink5" class="topmenu" href="contactinfo" onMouseover="document.getElementById('hmenulinkcircle5').style.backgroundPosition='-36px -52px'" onMouseout="document.getElementById('hmenulinkcircle5').style.backgroundPosition='-36px top'">Контакты</a><a id="hmenulink6" class="topmenu" href="index.php?razdelID=1333&filtersoff=yes" onMouseover="document.getElementById('hmenulinkcircle6').style.backgroundPosition='-36px -52px'" onMouseout="document.getElementById('hmenulinkcircle6').style.backgroundPosition='-36px top'">Отзывы</a></div>
-    <p class="razdelname">Регистрация</p>
-    <div class="textonsecond"><p>Внимание! Данная информация не будет использована нами для передачи третьим лицам, а также для несанкционированной рассылки.</p>
-<p>Указывая Ваш email, Вы соглашаетесь с тем, что на данный email будут приходить письма от нашей системы (пароли для доступа и другие важные информационные сообщения).</p>
-<p>После регистрации у Вас будет возможность отказаться от получения этих сообщений.</p>
-<p>После нажатия на кнопку &quot;Зарегистрироваться&quot; на Ваш email будет отправлено письмо с логином и паролем для доступа в нашу систему.</p></div>
+    <div id="hmenu"><a id="hmenulink1" class="topmenu" href="main" onMouseover="document.getElementById('hmenulinkcircle1').style.backgroundPosition='-36px -52px'" onMouseout="document.getElementById('hmenulinkcircle1').style.backgroundPosition='-36px top'">Р“Р»Р°РІРЅР°СЏ</a><a id="hmenulink2" class="topmenu" href="deliveryandpayment" onMouseover="document.getElementById('hmenulinkcircle2').style.backgroundPosition='-36px -52px'" onMouseout="document.getElementById('hmenulinkcircle2').style.backgroundPosition='-36px top'">Р”РѕСЃС‚Р°РІРєР°-РѕРїР»Р°С‚Р°</a><a id="hmenulink3" class="topmenu" href="index.php?razdelID=1330&filtersoff=yes" onMouseover="document.getElementById('hmenulinkcircle3').style.backgroundPosition='-36px -52px'" onMouseout="document.getElementById('hmenulinkcircle3').style.backgroundPosition='-36px top'">РЎРєРёРґРєРё</a><a id="hmenulink4" class="topmenu" href="asc" onMouseover="document.getElementById('hmenulinkcircle4').style.backgroundPosition='-36px -52px'" onMouseout="document.getElementById('hmenulinkcircle4').style.backgroundPosition='-36px top'">Р’РѕРїСЂРѕСЃ-РѕС‚РІРµС‚</a><a id="hmenulink5" class="topmenu" href="contactinfo" onMouseover="document.getElementById('hmenulinkcircle5').style.backgroundPosition='-36px -52px'" onMouseout="document.getElementById('hmenulinkcircle5').style.backgroundPosition='-36px top'">РљРѕРЅС‚Р°РєС‚С‹</a><a id="hmenulink6" class="topmenu" href="index.php?razdelID=1333&filtersoff=yes" onMouseover="document.getElementById('hmenulinkcircle6').style.backgroundPosition='-36px -52px'" onMouseout="document.getElementById('hmenulinkcircle6').style.backgroundPosition='-36px top'">РћС‚Р·С‹РІС‹</a></div>
+    <p class="razdelname">Р РµРіРёСЃС‚СЂР°С†РёСЏ</p>
+    <div class="textonsecond"><p>Р’РЅРёРјР°РЅРёРµ! Р”Р°РЅРЅР°СЏ РёРЅС„РѕСЂРјР°С†РёСЏ РЅРµ Р±СѓРґРµС‚ РёСЃРїРѕР»СЊР·РѕРІР°РЅР° РЅР°РјРё РґР»СЏ РїРµСЂРµРґР°С‡Рё С‚СЂРµС‚СЊРёРј Р»РёС†Р°Рј, Р° С‚Р°РєР¶Рµ РґР»СЏ РЅРµСЃР°РЅРєС†РёРѕРЅРёСЂРѕРІР°РЅРЅРѕР№ СЂР°СЃСЃС‹Р»РєРё.</p>
+<p>РЈРєР°Р·С‹РІР°СЏ Р’Р°С€ email, Р’С‹ СЃРѕРіР»Р°С€Р°РµС‚РµСЃСЊ СЃ С‚РµРј, С‡С‚Рѕ РЅР° РґР°РЅРЅС‹Р№ email Р±СѓРґСѓС‚ РїСЂРёС…РѕРґРёС‚СЊ РїРёСЃСЊРјР° РѕС‚ РЅР°С€РµР№ СЃРёСЃС‚РµРјС‹ (РїР°СЂРѕР»Рё РґР»СЏ РґРѕСЃС‚СѓРїР° Рё РґСЂСѓРіРёРµ РІР°Р¶РЅС‹Рµ РёРЅС„РѕСЂРјР°С†РёРѕРЅРЅС‹Рµ СЃРѕРѕР±С‰РµРЅРёСЏ).</p>
+<p>РџРѕСЃР»Рµ СЂРµРіРёСЃС‚СЂР°С†РёРё Сѓ Р’Р°СЃ Р±СѓРґРµС‚ РІРѕР·РјРѕР¶РЅРѕСЃС‚СЊ РѕС‚РєР°Р·Р°С‚СЊСЃСЏ РѕС‚ РїРѕР»СѓС‡РµРЅРёСЏ СЌС‚РёС… СЃРѕРѕР±С‰РµРЅРёР№.</p>
+<p>РџРѕСЃР»Рµ РЅР°Р¶Р°С‚РёСЏ РЅР° РєРЅРѕРїРєСѓ &quot;Р—Р°СЂРµРіРёСЃС‚СЂРёСЂРѕРІР°С‚СЊСЃСЏ&quot; РЅР° Р’Р°С€ email Р±СѓРґРµС‚ РѕС‚РїСЂР°РІР»РµРЅРѕ РїРёСЃСЊРјРѕ СЃ Р»РѕРіРёРЅРѕРј Рё РїР°СЂРѕР»РµРј РґР»СЏ РґРѕСЃС‚СѓРїР° РІ РЅР°С€Сѓ СЃРёСЃС‚РµРјСѓ.</p></div>
     
 <script>
 function checkform()
 {
 if (document.regform.pw.value!=document.regform.p_w.value) {
-    // выводим сообщение об ошибке
-    alert('Неправильно подтвержден пароль!!!');
+    // РІС‹РІРѕРґРёРј СЃРѕРѕР±С‰РµРЅРёРµ РѕР± РѕС€РёР±РєРµ
+    alert('РќРµРїСЂР°РІРёР»СЊРЅРѕ РїРѕРґС‚РІРµСЂР¶РґРµРЅ РїР°СЂРѕР»СЊ!!!');
     document.regform.pw.focus();
     return (false);
 }
@@ -204,19 +204,19 @@ if (document.regform.pw.value!=document.regform.p_w.value) {
 
   <table  align=center border=0 cellpadding=0 cellspacing=6>
   <tr><td colspan=2>
-  <p><span style="color:red;">*</span> - обязательные поля</p>
+  <p><span style="color:red;">*</span> - РѕР±СЏР·Р°С‚РµР»СЊРЅС‹Рµ РїРѕР»СЏ</p>
   </td>
   </tr>
   <tr>
-    <td><p class="formheader" style="text-align:right;"><span style="color:red;">*</span>Имя (логин)<br><span style="color:#808080;font-size:12px;font-weight:normal;">(Имя должно состоять только из латинских букв и цифр, без пробелов. Длина — от 3 до 15 символов.)</span></p></td>
+    <td><p class="formheader" style="text-align:right;"><span style="color:red;">*</span>РРјСЏ (Р»РѕРіРёРЅ)<br><span style="color:#808080;font-size:12px;font-weight:normal;">(РРјСЏ РґРѕР»Р¶РЅРѕ СЃРѕСЃС‚РѕСЏС‚СЊ С‚РѕР»СЊРєРѕ РёР· Р»Р°С‚РёРЅСЃРєРёС… Р±СѓРєРІ Рё С†РёС„СЂ, Р±РµР· РїСЂРѕР±РµР»РѕРІ. Р”Р»РёРЅР° вЂ” РѕС‚ 3 РґРѕ 15 СЃРёРјРІРѕР»РѕРІ.)</span></p></td>
     <td><input  class=allinput  type=text name=nickname value=></td>
   </tr>
   <tr>
-    <td><p class="formheader" style="text-align:right;"><span style="color:red;">*</span>Пароль<br><span style="color:#808080;font-size:12px;font-weight:normal;">(Пароль должен состоять только из латинских букв и цифр, без пробелов, шесть символов минимум)</span></p></td>
+    <td><p class="formheader" style="text-align:right;"><span style="color:red;">*</span>РџР°СЂРѕР»СЊ<br><span style="color:#808080;font-size:12px;font-weight:normal;">(РџР°СЂРѕР»СЊ РґРѕР»Р¶РµРЅ СЃРѕСЃС‚РѕСЏС‚СЊ С‚РѕР»СЊРєРѕ РёР· Р»Р°С‚РёРЅСЃРєРёС… Р±СѓРєРІ Рё С†РёС„СЂ, Р±РµР· РїСЂРѕР±РµР»РѕРІ, С€РµСЃС‚СЊ СЃРёРјРІРѕР»РѕРІ РјРёРЅРёРјСѓРј)</span></p></td>
     <td><input  class=allinput  type="password" name="pw" value="" ></td>
   </tr>
    <tr>
-   <td><p class="formheader" style="text-align:right;"><span style="color:red;">*</span>Пароль  еще раз</p></td>
+   <td><p class="formheader" style="text-align:right;"><span style="color:red;">*</span>РџР°СЂРѕР»СЊ  РµС‰Рµ СЂР°Р·</p></td>
     <td><input  class=allinput  type="password" name="p_w" value=></td>
   </tr>
     <tr>
@@ -228,47 +228,47 @@ if (document.regform.pw.value!=document.regform.p_w.value) {
     <td><input type=hidden type=text name=urname value=""></td>
   </tr>
     <tr>
-    <td><p class="formheader" style="text-align:right;">Фамилия<br><span style="color:#808080;font-size:12px;font-weight:normal;">Ваша фамилия</span></p></td>
+    <td><p class="formheader" style="text-align:right;">Р¤Р°РјРёР»РёСЏ<br><span style="color:#808080;font-size:12px;font-weight:normal;">Р’Р°С€Р° С„Р°РјРёР»РёСЏ</span></p></td>
     <td><input  class=allinput  type=text name=fio value=""></td>
   </tr>
   <tr>
-    <td><p class="formheader" style="text-align:right;">Имя<br><span style="color:#808080;font-size:12px;font-weight:normal;">Ваше имя</span></p></td>
+    <td><p class="formheader" style="text-align:right;">РРјСЏ<br><span style="color:#808080;font-size:12px;font-weight:normal;">Р’Р°С€Рµ РёРјСЏ</span></p></td>
     <td><input  class=allinput  type=text name=fioname value=""></td>
   </tr>
   <tr>
-    <td><p class="formheader" style="text-align:right;">Отчество<br><span style="color:#808080;font-size:12px;font-weight:normal;">Ваше отчество</span></p></td>
+    <td><p class="formheader" style="text-align:right;">РћС‚С‡РµСЃС‚РІРѕ<br><span style="color:#808080;font-size:12px;font-weight:normal;">Р’Р°С€Рµ РѕС‚С‡РµСЃС‚РІРѕ</span></p></td>
     <td><input  class=allinput  type=text name=fiosurname value=""></td>
   </tr>
   <tr>
-    <td><p class="formheader" style="text-align:right;"><span style="color:red;">*</span>e-mail<br><span style="color:#808080;font-size:12px;font-weight:normal;">(Ваш корректно указанный e-mail)</span></p></td>
+    <td><p class="formheader" style="text-align:right;"><span style="color:red;">*</span>e-mail<br><span style="color:#808080;font-size:12px;font-weight:normal;">(Р’Р°С€ РєРѕСЂСЂРµРєС‚РЅРѕ СѓРєР°Р·Р°РЅРЅС‹Р№ e-mail)</span></p></td>
     <td><input  class=allinput  type=text name=mail value=""></td>
   </tr>
     <tr>
-    <td><p class="formheader" style="text-align:right;">Телефон<br><span style="color:#808080;font-size:12px;font-weight:normal;">((Только цифры в федеральном формате 89ххххххххх, 84232XXXXXX))</span></p></td>
+    <td><p class="formheader" style="text-align:right;">РўРµР»РµС„РѕРЅ<br><span style="color:#808080;font-size:12px;font-weight:normal;">((РўРѕР»СЊРєРѕ С†РёС„СЂС‹ РІ С„РµРґРµСЂР°Р»СЊРЅРѕРј С„РѕСЂРјР°С‚Рµ 89С…С…С…С…С…С…С…С…С…, 84232XXXXXX))</span></p></td>
     <td><input  class=allinput  name=phone value=""></td>
   </tr>
   <tr>
-    <td><p class="formheader" style="text-align:right;"><span style="color:red;">*</span>Город<br><span style="color:#808080;font-size:12px;font-weight:normal;">(буквенные символы одного из языков и цифры)</span></p></td>
+    <td><p class="formheader" style="text-align:right;"><span style="color:red;">*</span>Р“РѕСЂРѕРґ<br><span style="color:#808080;font-size:12px;font-weight:normal;">(Р±СѓРєРІРµРЅРЅС‹Рµ СЃРёРјРІРѕР»С‹ РѕРґРЅРѕРіРѕ РёР· СЏР·С‹РєРѕРІ Рё С†РёС„СЂС‹)</span></p></td>
     <td>
     
     <input  class=allinput  id="city3"  name=city value="" ></td>
   </tr>
     <tr>
-    <td><p class="formheader" style="text-align:right;"><span style="color:red;">*</span>Почтовый индекс:<br><span style="color:#808080;font-size:12px;font-weight:normal;">(буквенные символы одного из языков и цифры)</span></p></td>
+    <td><p class="formheader" style="text-align:right;"><span style="color:red;">*</span>РџРѕС‡С‚РѕРІС‹Р№ РёРЅРґРµРєСЃ:<br><span style="color:#808080;font-size:12px;font-weight:normal;">(Р±СѓРєРІРµРЅРЅС‹Рµ СЃРёРјРІРѕР»С‹ РѕРґРЅРѕРіРѕ РёР· СЏР·С‹РєРѕРІ Рё С†РёС„СЂС‹)</span></p></td>
     <td><input type=text name=index class=allinput value=""></td>
   </tr>
     <tr>
-    <td><p class="formheader" style="text-align:right;"><span style="color:red;">*</span>Адрес<br><span style="color:#808080;font-size:12px;font-weight:normal;">(буквенные символы и цифры)</span></p></td>
+    <td><p class="formheader" style="text-align:right;"><span style="color:red;">*</span>РђРґСЂРµСЃ<br><span style="color:#808080;font-size:12px;font-weight:normal;">(Р±СѓРєРІРµРЅРЅС‹Рµ СЃРёРјРІРѕР»С‹ Рё С†РёС„СЂС‹)</span></p></td>
     <td><textarea name=addres class=textareasmall></textarea></td>
   </tr>
   </tr>
     <tr>
-    <td><p class="formheader" style="text-align:right;">Согласен получать рассылку с сайта<br></p></td>
+    <td><p class="formheader" style="text-align:right;">РЎРѕРіР»Р°СЃРµРЅ РїРѕР»СѓС‡Р°С‚СЊ СЂР°СЃСЃС‹Р»РєСѓ СЃ СЃР°Р№С‚Р°<br></p></td>
     <td><input name=spamagree type=checkbox value=1 ></td>
   </tr>
    <tr>
     <td>
-    <p class=formheader>Дополнительная информация</p>
+    <p class=formheader>Р”РѕРїРѕР»РЅРёС‚РµР»СЊРЅР°СЏ РёРЅС„РѕСЂРјР°С†РёСЏ</p>
     </td>
       <td>
     <textarea class=textareabig name=message></textarea>
@@ -277,14 +277,14 @@ if (document.regform.pw.value!=document.regform.p_w.value) {
   </tr>
   <tr>
     <td colspan=2>
-    <p class="sitemessage">В случае оформления заказа эти сведения необходимы для более быстрой обработки Вашего заказа</p>
+    <p class="sitemessage">Р’ СЃР»СѓС‡Р°Рµ РѕС„РѕСЂРјР»РµРЅРёСЏ Р·Р°РєР°Р·Р° СЌС‚Рё СЃРІРµРґРµРЅРёСЏ РЅРµРѕР±С…РѕРґРёРјС‹ РґР»СЏ Р±РѕР»РµРµ Р±С‹СЃС‚СЂРѕР№ РѕР±СЂР°Р±РѕС‚РєРё Р’Р°С€РµРіРѕ Р·Р°РєР°Р·Р°</p>
     </td>
   
   </tr>
   
   </table><table width="600" align=center border=0 cellpadding=0 cellspacing=6>
     <tr>
-    <td align=right valign=center><p class="formheader" style="text-align:right;">Введите этот текст<br><span style="color:#808080;font-size:12px;font-weight:normal;">(латинские буквы и цифры)</span></p><img src="dontbebot/?PHPSESSID=iuls2007cameh8sg8cqlj4iet6">
+    <td align=right valign=center><p class="formheader" style="text-align:right;">Р’РІРµРґРёС‚Рµ СЌС‚РѕС‚ С‚РµРєСЃС‚<br><span style="color:#808080;font-size:12px;font-weight:normal;">(Р»Р°С‚РёРЅСЃРєРёРµ Р±СѓРєРІС‹ Рё С†РёС„СЂС‹)</span></p><img src="dontbebot/?PHPSESSID=iuls2007cameh8sg8cqlj4iet6">
     
     </td>
     <td>
@@ -293,7 +293,7 @@ if (document.regform.pw.value!=document.regform.p_w.value) {
   </tr></table>
   <table width="600" align=center border=0 cellpadding=0 cellspacing=6>
   <tr>
-   <td colspan=2 align=center><input class=allsubmit type=submit name=upload value=отправить></td>
+   <td colspan=2 align=center><input class=allsubmit type=submit name=upload value=РѕС‚РїСЂР°РІРёС‚СЊ></td>
   <input type=hidden name=usernomer value="1449191562">
   </tr>
 </table>
@@ -317,9 +317,9 @@ try{s=screen;a+=';s='+s.width+'*'+s.height;a+=';d='+(s.colorDepth?s.colorDepth:s
 try{if(typeof((new Array).push('t'))==="number")js=13;}catch(e){}
 try{document.write('<a href="http://top.mail.ru/jump?from=2241647">'+
 '<img src="http://d4.c3.b2.a2.top.mail.ru/counter?id=2241647;t=131;js='+js+a+';rand='+Math.random()+
-'" alt="Рейтинг@Mail.ru" style="border:0;" height="40" width="88" \/><\/a>');}catch(e){}//]]></script>
+'" alt="Р РµР№С‚РёРЅРі@Mail.ru" style="border:0;" height="40" width="88" \/><\/a>');}catch(e){}//]]></script>
 <noscript><p><a href="http://top.mail.ru/jump?from=2241647"><img src="http://d4.c3.b2.a2.top.mail.ru/counter?js=na;id=2241647;t=131" 
-style="border:0;" height="40" width="88" alt="Рейтинг@Mail.ru" /></a></p>
+style="border:0;" height="40" width="88" alt="Р РµР№С‚РёРЅРі@Mail.ru" /></a></p>
 </noscript>
 <!-- //Rating@Mail.ru counter -->
 </div>

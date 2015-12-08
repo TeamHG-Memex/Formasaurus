@@ -3,7 +3,7 @@
 <html>
 <head>
 
-	<title>БЕЛОРУССКИЕ НОВОСТИ | Беларусь | Минск | факты | комментарии 
+	<title>Р‘Р•Р›РћР РЈРЎРЎРљРР• РќРћР’РћРЎРўР | Р‘РµР»Р°СЂСѓСЃСЊ | РњРёРЅСЃРє | С„Р°РєС‚С‹ | РєРѕРјРјРµРЅС‚Р°СЂРёРё 
 
 
 </title>
@@ -22,10 +22,10 @@
 		function checkForm(){
 	var pat_email=/^[a-zA-Z][a-zA-Z\_\.\-\d]*@[a-zA-Z\_\.\-\d]+.[a-zA-Z]{2,4}$/;
 	var pat_text=/^\s*$/;
-	if (pat_text.test(document.formNews.formMistakeName.value)) {alert ("Заполните поле 'Имя'");	return false;}
-	if (pat_text.test(document.formNews.formMistakeCity.value)) {alert ("Заполните поле 'Город'");	return false;}
-	if (!pat_text.test(document.formNews.formMistakeEmail.value) && !pat_email.test(document.formNews.formMistakeEmail.value)) {alert ("Заполните правильно поле 'E-Mail'");	return false;}
-	if (pat_text.test(document.formNews.formMistakeComment.value)) {alert ("Заполните поле 'Сообщение'");	return false;}
+	if (pat_text.test(document.formNews.formMistakeName.value)) {alert ("Р—Р°РїРѕР»РЅРёС‚Рµ РїРѕР»Рµ 'РРјСЏ'");	return false;}
+	if (pat_text.test(document.formNews.formMistakeCity.value)) {alert ("Р—Р°РїРѕР»РЅРёС‚Рµ РїРѕР»Рµ 'Р“РѕСЂРѕРґ'");	return false;}
+	if (!pat_text.test(document.formNews.formMistakeEmail.value) && !pat_email.test(document.formNews.formMistakeEmail.value)) {alert ("Р—Р°РїРѕР»РЅРёС‚Рµ РїСЂР°РІРёР»СЊРЅРѕ РїРѕР»Рµ 'E-Mail'");	return false;}
+	if (pat_text.test(document.formNews.formMistakeComment.value)) {alert ("Р—Р°РїРѕР»РЅРёС‚Рµ РїРѕР»Рµ 'РЎРѕРѕР±С‰РµРЅРёРµ'");	return false;}
 
 
 
@@ -38,13 +38,13 @@
 <body onload="setInit (); setAutoFocus ('formMistakeName');">
 <div id="loHeader" class="header">
 	<div class="headerTitle">
-		<h1>Пишите нам</h1>
+		<h1>РџРёС€РёС‚Рµ РЅР°Рј</h1>
 	</div>
 </div>
 
 <div id="loContent" class="content">
 	<div class="contentTextContent">
-		<p><strong><em>Уважаемые читатели!</em><br />Вы можете отправить нам свое сообщение.</strong></p>
+		<p><strong><em>РЈРІР°Р¶Р°РµРјС‹Рµ С‡РёС‚Р°С‚РµР»Рё!</em><br />Р’С‹ РјРѕР¶РµС‚Рµ РѕС‚РїСЂР°РІРёС‚СЊ РЅР°Рј СЃРІРѕРµ СЃРѕРѕР±С‰РµРЅРёРµ.</strong></p>
 	</div>
 	<div class="contentFormContent">
 		<p><b></b></p>
@@ -53,11 +53,11 @@
 			<col class="colFormStandardInputTitle">
 			<col class="colFormStandardInput">
 			<tr>
-				<td class="formInputTitle"><label for="formMistakeName">Имя:</label></td>
+				<td class="formInputTitle"><label for="formMistakeName">РРјСЏ:</label></td>
 				<td class="formInput"><input type="text" style="width: 250px" id="formMistakeName" name="formMistakeName" value="" class="textfield"></td>
 			</tr>
 			<tr>
-				<td class="formInputTitle"><label for="formMistakeCity">Город:</label></td>
+				<td class="formInputTitle"><label for="formMistakeCity">Р“РѕСЂРѕРґ:</label></td>
 				<td class="formInput"><input type="text" style="width: 250px" id="formMistakeCity" name="formMistakeCity" value="" class="textfield"></td>
 			</tr>
 			<tr>
@@ -65,14 +65,14 @@
 				<td class="formInput"><input type="text" style="width: 250px" id="formMistakeEmail" name="formMistakeEmail" value="" class="textfield"></td>
 			</tr>
 			<tr class="formInputSeparator">
-				<td class="formInputTitle"><label for="formMistakeComment">Сообщение:</label></td>
+				<td class="formInputTitle"><label for="formMistakeComment">РЎРѕРѕР±С‰РµРЅРёРµ:</label></td>
 				<td class="formInput"><textarea style="width: 250px" id="formMistakeComment" name="formMistakeComment" cols="20" rows="5" class="textfield"></textarea></td>
 			</tr>
 			<tr>
 				<td class="formInputTitle">&nbsp;</td>
 				<td class="formButtonRow">
-					<input type="submit" id="formMistakeSubmit" value="Отправить" class="button">
-					<input type="button" id="formMistakeClose" value="Закрыть" class="button buttonClose" onclick="window.close();">
+					<input type="submit" id="formMistakeSubmit" value="РћС‚РїСЂР°РІРёС‚СЊ" class="button">
+					<input type="button" id="formMistakeClose" value="Р—Р°РєСЂС‹С‚СЊ" class="button buttonClose" onclick="window.close();">
 				</td>
 			</tr>
 			</table>

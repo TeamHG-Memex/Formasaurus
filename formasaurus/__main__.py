@@ -44,7 +44,7 @@ import formasaurus
 from formasaurus.annotation import (
     annotate_forms,
     check_annotated_data,
-    load_data,
+    download,
     print_form_html
 )
 from formasaurus.extractor import FormExtractor
@@ -63,7 +63,7 @@ def main():
     if args['add']:
         annotate_forms(
             data_folder=args['--data-folder'],
-            url_argument=args["<url>"],
+            url=args["<url>"],
         )
 
     elif args['check-data']:
@@ -81,8 +81,8 @@ def main():
         print("Loading the extractor..")
         ex = FormExtractor.load(args["<modelfile>"])
         print("Downloading data...")
-        data, url = load_data(args["<url>"])
-        tree = load_html(data, url)
+        data = download(args["<url>"])
+        tree = load_html(data, args['<url>'])
 
         result = ex.extract_forms_proba(tree, threshold)
         if not result:

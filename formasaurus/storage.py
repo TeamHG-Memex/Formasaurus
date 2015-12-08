@@ -168,6 +168,8 @@ class Storage(object):
             "visible_html_fields": visible_html_fields,
         }
         with open(filename, 'wb') as f:
+            if not isinstance(html, bytes):
+                html = html.encode('utf8')
             f.write(html)
         self.write_index(index)
         return path

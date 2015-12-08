@@ -23,9 +23,18 @@ def remove_by_xpath(tree, xpath):
         bad.getparent().remove(bad)
 
 
+
+parser = lxml.html.HTMLParser(encoding='utf8')
+
 def load_html(data, base_url=None):
-    """ Parse HTML data to a lxml tree """
-    return lxml.html.fromstring(data, base_url=base_url)
+    """
+    Parse HTML data to a lxml tree.
+     ``data`` must be either unicode or utf8-encoded
+    (even if original page declares a different encoding).
+    """
+    if not isinstance(data, bytes):
+        data = data.encode('utf8')
+    return lxml.html.fromstring(data, base_url=base_url, parser=parser)
 
 
 def html_tostring(tree):

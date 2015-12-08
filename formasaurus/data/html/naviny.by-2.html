@@ -5,7 +5,7 @@
 <!-- HEAD -->
 <head>
 
-	<title>Сообщить новость | БЕЛОРУССКИЕ НОВОСТИ | Беларусь | Минск | факты | комментарии 
+	<title>РЎРѕРѕР±С‰РёС‚СЊ РЅРѕРІРѕСЃС‚СЊ | Р‘Р•Р›РћР РЈРЎРЎРљРР• РќРћР’РћРЎРўР | Р‘РµР»Р°СЂСѓСЃСЊ | РњРёРЅСЃРє | С„Р°РєС‚С‹ | РєРѕРјРјРµРЅС‚Р°СЂРёРё 
 
 
 </title>
@@ -26,11 +26,11 @@
 				if (checkMail(document.formNews.formEmail))
 					return true;
 				else {
-					alert("Проверьте правильность E-mail");
+					alert("РџСЂРѕРІРµСЂСЊС‚Рµ РїСЂР°РІРёР»СЊРЅРѕСЃС‚СЊ E-mail");
 					return false;
 				}
 			else {
-				alert("Заполните все поля");
+				alert("Р—Р°РїРѕР»РЅРёС‚Рµ РІСЃРµ РїРѕР»СЏ");
 				return false;
 			}
 
@@ -44,14 +44,14 @@
 <!-- searchExclude -->
 <div id="loHeader" class="header">
 	<div class="headerTitle">
-		<h1>Сообщить новость</h1>
+		<h1>РЎРѕРѕР±С‰РёС‚СЊ РЅРѕРІРѕСЃС‚СЊ</h1>
 	</div>
 </div>
 
 <div id="loContent" class="content">
 	<div class="contentTextContent">
-            <p>Уважаемые читатели!<br/>
-                Вы можете сообщить нам о событии, не освещенном в "Белорусских новостях", или рекомендовать нам обратить внимание на те или иные обстоятельства произошедшего
+            <p>РЈРІР°Р¶Р°РµРјС‹Рµ С‡РёС‚Р°С‚РµР»Рё!<br/>
+                Р’С‹ РјРѕР¶РµС‚Рµ СЃРѕРѕР±С‰РёС‚СЊ РЅР°Рј Рѕ СЃРѕР±С‹С‚РёРё, РЅРµ РѕСЃРІРµС‰РµРЅРЅРѕРј РІ "Р‘РµР»РѕСЂСѓСЃСЃРєРёС… РЅРѕРІРѕСЃС‚СЏС…", РёР»Рё СЂРµРєРѕРјРµРЅРґРѕРІР°С‚СЊ РЅР°Рј РѕР±СЂР°С‚РёС‚СЊ РІРЅРёРјР°РЅРёРµ РЅР° С‚Рµ РёР»Рё РёРЅС‹Рµ РѕР±СЃС‚РѕСЏС‚РµР»СЊСЃС‚РІР° РїСЂРѕРёР·РѕС€РµРґС€РµРіРѕ
             </p>
 	</div>
 	<div class="contentFormContent">
@@ -63,7 +63,7 @@
 			<col class="colFormStandardInputTitle">
 			<col class="colFormStandardInput">
 			<tr>
-				<td class="formInputTitle"><label for="formName">Имя:</label></td>
+				<td class="formInputTitle"><label for="formName">РРјСЏ:</label></td>
 				<td class="formInput"><input type="text" style="width: 250px" id="formMistakeName" name="name" value="" class="textfield"></td>
 			</tr>
 			<tr>
@@ -71,16 +71,16 @@
 				<td class="formInput"><input type="text" style="width: 250px" id="formMistakeEmail" name="email" value="" class="textfield"></td>
 			</tr>
 			<tr class="formInputSeparator">
-				<td class="formInputTitle"><label for="formComment">Сообщение:</label></td>
+				<td class="formInputTitle"><label for="formComment">РЎРѕРѕР±С‰РµРЅРёРµ:</label></td>
 				<td class="formInput">
                                         <textarea style="width: 250px" id="formMistakeComment" name="message" cols="20" rows="5" class="textfield"  ></textarea></td>
 			</tr>
 			<tr>
 				<td class="formInputTitle">&nbsp;</td>
 				<td class="formButtonRow">
-					<input type="submit" id="formSubmit" value="Отправить" class="button">
-					<input type="button" id="formClose" value="Закрыть" class="button buttonClose" onclick="window.close();">
-					<input type="hidden" name="page" value="Сообщить новость"/>
+					<input type="submit" id="formSubmit" value="РћС‚РїСЂР°РІРёС‚СЊ" class="button">
+					<input type="button" id="formClose" value="Р—Р°РєСЂС‹С‚СЊ" class="button buttonClose" onclick="window.close();">
+					<input type="hidden" name="page" value="РЎРѕРѕР±С‰РёС‚СЊ РЅРѕРІРѕСЃС‚СЊ"/>
 				</td>
 			</tr>
 			</table>

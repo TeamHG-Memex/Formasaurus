@@ -216,7 +216,8 @@ def AddPageWidget(storage):
     fetch_btn = widgets.Button(description='Add')
 
     def on_submit(_):
-        html, url = annotation.load_data(url_field.value)
+        url = url_field.value
+        html = annotation.download(url)
         path = storage.add_result(html, url, add_empty=False)
         if path is None:
             print("No forms at ", url)
