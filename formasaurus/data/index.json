@@ -8454,12 +8454,12 @@
     "html/www.funmaza.in-1.html": {
         "url": "http://www.funmaza.in/contact.html",
         "forms": [
-            "X"
+            "s"
         ],
         "visible_html_fields": [
             {
-                "q": "XX",
-                "sa": "XX"
+                "q": "qq",
+                "sa": "Bs"
             }
         ]
     },
@@ -10362,10 +10362,10 @@
         "url": "https://www.mocavo.com/signup",
         "forms": [
             "r",
+            "-",
+            "-",
             "X",
-            "X",
-            "X",
-            "X"
+            "-"
         ],
         "visible_html_fields": [
             {
