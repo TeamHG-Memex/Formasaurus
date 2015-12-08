@@ -8588,6 +8588,106 @@
             }
         ]
     },
+    "html/www.greatmusicproductsonline.com-0.html": {
+        "url": "http://www.greatmusicproductsonline.com/",
+        "forms": [
+            "s"
+        ],
+        "visible_html_fields": [
+            {
+                "stext": "qq",
+                "submit": "Bs"
+            }
+        ]
+    },
+    "html/www.greatmusicproductsonline.com-1.html": {
+        "url": "http://www.greatmusicproductsonline.com/proddetail.asp?prod=VBAG",
+        "forms": [
+            "-",
+            "b"
+        ],
+        "visible_html_fields": [
+            {
+                "stext": "XX",
+                "submit": "XX"
+            },
+            {
+                "quant": "qt"
+            }
+        ]
+    },
+    "html/www.greatmusicproductsonline.com-2.html": {
+        "url": "http://www.greatmusicproductsonline.com/cart.asp?mode=login",
+        "forms": [
+            "s",
+            "l"
+        ],
+        "visible_html_fields": [
+            {
+                "stext": "qq",
+                "submit": "Bs"
+            },
+            {
+                "cook": "rC",
+                "email": "e1",
+                "pass": "p1"
+            }
+        ]
+    },
+    "html/www.greatmusicproductsonline.com-3.html": {
+        "url": "http://www.greatmusicproductsonline.com/cart.asp?mode=newaccount",
+        "forms": [
+            "X",
+            "r"
+        ],
+        "visible_html_fields": [
+            {
+                "stext": "XX",
+                "submit": "XX"
+            },
+            {
+                "allowemail": "eC",
+                "email": "e1",
+                "name": "nf",
+                "pass": "p1"
+            }
+        ]
+    },
+    "html/www.greatmusicproductsonline.com-4.html": {
+        "url": "http://www.greatmusicproductsonline.com/products.asp?cat=13",
+        "forms": [
+            "X",
+            "X",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "stext": "XX",
+                "submit": "XX"
+            },
+            {},
+            {}
+        ]
+    },
+    "html/www.greatmusicproductsonline.com-5.html": {
+        "url": "http://www.greatmusicproductsonline.com/search.asp",
+        "forms": [
+            "X",
+            "s"
+        ],
+        "visible_html_fields": [
+            {
+                "stext": "XX",
+                "submit": "XX"
+            },
+            {
+                "scat": "qc",
+                "sprice": "ON",
+                "stext": "qq",
+                "stype": "qc"
+            }
+        ]
+    },
     "html/www.hautelook.com-0.html": {
         "url": "https://www.hautelook.com/",
         "forms": [
@@ -9685,6 +9785,105 @@
             }
         ]
     },
+    "html/www.luthimate.fr-0.html": {
+        "url": "http://www.luthimate.fr/fr/",
+        "forms": [
+            "s",
+            "s",
+            "m"
+        ],
+        "visible_html_fields": [
+            {
+                "search_query": "qq"
+            },
+            {
+                "manufacturer_list": "qc"
+            },
+            {
+                "email": "e1"
+            }
+        ]
+    },
+    "html/www.luthimate.fr-1.html": {
+        "url": "http://www.luthimate.fr/fr/authentification?back=my-account",
+        "forms": [
+            "X",
+            "X",
+            "r",
+            "l",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "search_query": "XX"
+            },
+            {
+                "manufacturer_list": "XX"
+            },
+            {
+                "email_create": "e1"
+            },
+            {
+                "email": "e1",
+                "passwd": "p1"
+            },
+            {
+                "email": "XX"
+            }
+        ]
+    },
+    "html/www.luthimate.fr-2.html": {
+        "url": "http://www.luthimate.fr/fr/mot-de-passe-oublie",
+        "forms": [
+            "X",
+            "X",
+            "p",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "search_query": "XX"
+            },
+            {
+                "manufacturer_list": "XX"
+            },
+            {
+                "email": "e1"
+            },
+            {
+                "email": "XX"
+            }
+        ]
+    },
+    "html/www.luthimate.fr-3.html": {
+        "url": "http://www.luthimate.fr/fr/boutons-bois/144-bouton-en-bois-tigerwood.html",
+        "forms": [
+            "X",
+            "X",
+            "b",
+            "c",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "search_query": "XX"
+            },
+            {
+                "manufacturer_list": "XX"
+            },
+            {
+                "qty": "qt"
+            },
+            {
+                "content": "CC",
+                "criterion[1]": "OS",
+                "title": "CT"
+            },
+            {
+                "email": "XX"
+            }
+        ]
+    },
     "html/www.ma-reduc.com-0.html": {
         "url": "http://www.ma-reduc.com/",
         "forms": [
@@ -10397,10 +10596,10 @@
         "url": "http://www.mocavo.com/contact",
         "forms": [
             "c",
+            "-",
+            "-",
             "X",
-            "X",
-            "X",
-            "X"
+            "-"
         ],
         "visible_html_fields": [
             {
@@ -10436,10 +10635,10 @@
             "o",
             "s",
             "r",
+            "-",
+            "-",
             "X",
-            "X",
-            "X",
-            "X"
+            "-"
         ],
         "visible_html_fields": [
             {
@@ -10585,6 +10784,524 @@
                 "review_state:list": "qc",
                 "rs_toggle": "qc",
                 "submit": "Bs"
+            }
+        ]
+    },
+    "html/www.musichousebari.it-0.html": {
+        "url": "http://www.musichousebari.it/",
+        "forms": [
+            "s",
+            "m",
+            "s"
+        ],
+        "visible_html_fields": [
+            {
+                "Submit": "Bs",
+                "search": "qq"
+            },
+            {
+                "Submit": "Bs",
+                "inputnews": "e1"
+            },
+            {
+                "Submit": "Bs",
+                "areg": "ON",
+                "catemen": "qc",
+                "dareg": "ON",
+                "marca": "qc"
+            }
+        ]
+    },
+    "html/www.musichousebari.it-1.html": {
+        "url": "http://www.musichousebari.it/login.asp",
+        "forms": [
+            "X",
+            "l",
+            "X",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "Submit": "XX",
+                "search": "XX"
+            },
+            {
+                "loginge": "Bs",
+                "password": "p1",
+                "salpass": "rC",
+                "username": "us"
+            },
+            {
+                "Submit": "XX",
+                "inputnews": "XX"
+            },
+            {
+                "Submit": "XX",
+                "areg": "XX",
+                "catemen": "XX",
+                "dareg": "XX",
+                "marca": "XX"
+            }
+        ]
+    },
+    "html/www.musichousebari.it-2.html": {
+        "url": "http://www.musichousebari.it/ricordapassword.asp",
+        "forms": [
+            "X",
+            "p",
+            "X",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "Submit": "XX",
+                "search": "XX"
+            },
+            {
+                "Submit3": "Bs",
+                "emailric": "e1"
+            },
+            {
+                "Submit": "XX",
+                "inputnews": "XX"
+            },
+            {
+                "Submit": "XX",
+                "areg": "XX",
+                "catemen": "XX",
+                "dareg": "XX",
+                "marca": "XX"
+            }
+        ]
+    },
+    "html/www.musichousebari.it-3.html": {
+        "url": "http://www.musichousebari.it/strumento_musicale.asp?id=1093",
+        "forms": [
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "Submit": "XX",
+                "search": "XX"
+            }
+        ]
+    },
+    "html/www.musichousebari.it-4.html": {
+        "url": "http://www.musichousebari.it/ordina.asp?id=1093",
+        "forms": [
+            "X",
+            "b"
+        ],
+        "visible_html_fields": [
+            {
+                "Submit": "XX",
+                "search": "XX"
+            },
+            {
+                "Submit2": "Bs",
+                "aaaa": "by",
+                "cap": "Zi",
+                "cap2": "Zi",
+                "cellulare": "ph",
+                "citta": "Ci",
+                "citta2": "Ci",
+                "codicefiscale": "OT",
+                "cognome": "n3",
+                "condizioni": "tC",
+                "costo_spedizione": "OR",
+                "email": "e1",
+                "gg": "bd",
+                "indirizzo": "Sn",
+                "indirizzo2": "Sn",
+                "mm": "bm",
+                "modalita_pagamento": "OR",
+                "newsletter": "eC",
+                "nome": "n1",
+                "note": "CC",
+                "numero": "S#",
+                "numero2": "S#",
+                "pagamento": "OS",
+                "partitaiva": "OT",
+                "privacy": "tC",
+                "provincia": "St",
+                "provincia2": "St",
+                "ragione": "nf",
+                "spedizione": "OS",
+                "telefono": "ph",
+                "telefono2": "ph",
+                "totale": "OR"
+            }
+        ]
+    },
+    "html/www.musikdreiklang.de-0.html": {
+        "url": "http://www.musikdreiklang.de/",
+        "forms": [
+            "s"
+        ],
+        "visible_html_fields": [
+            {
+                "q": "qq"
+            }
+        ]
+    },
+    "html/www.musikdreiklang.de-1.html": {
+        "url": "http://www.musikdreiklang.de/yamaha-ydp-s52-b-digitalpiano-2207.html",
+        "forms": [
+            "X",
+            "b"
+        ],
+        "visible_html_fields": [
+            {
+                "q": "XX"
+            },
+            {
+                "qty": "qt"
+            }
+        ]
+    },
+    "html/www.musikdreiklang.de-2.html": {
+        "url": "https://www.musikdreiklang.de/customer/account/login/",
+        "forms": [
+            "s",
+            "l"
+        ],
+        "visible_html_fields": [
+            {
+                "q": "qq"
+            },
+            {
+                "login[password]": "p1",
+                "login[username]": "e1"
+            }
+        ]
+    },
+    "html/www.musikdreiklang.de-3.html": {
+        "url": "https://www.musikdreiklang.de/customer/account/create/",
+        "forms": [
+            "X",
+            "r"
+        ],
+        "visible_html_fields": [
+            {
+                "q": "XX"
+            },
+            {
+                "confirmation": "p2",
+                "email": "e1",
+                "firstname": "n1",
+                "lastname": "n3",
+                "password": "p1"
+            }
+        ]
+    },
+    "html/www.musikdreiklang.de-4.html": {
+        "url": "https://www.musikdreiklang.de/customer/account/forgotpassword/",
+        "forms": [
+            "X",
+            "p"
+        ],
+        "visible_html_fields": [
+            {
+                "q": "XX"
+            },
+            {
+                "email": "e1"
+            }
+        ]
+    },
+    "html/www.musikdreiklang.de-5.html": {
+        "url": "http://www.musikdreiklang.de/contacts/",
+        "forms": [
+            "X",
+            "c"
+        ],
+        "visible_html_fields": [
+            {
+                "q": "XX"
+            },
+            {
+                "comment": "CC",
+                "email": "e1",
+                "hideit": "hp",
+                "name": "nf",
+                "telephone": "ph"
+            }
+        ]
+    },
+    "html/www.muzdom.ru-0.html": {
+        "url": "http://www.muzdom.ru/",
+        "forms": [
+            "s",
+            "b",
+            "l",
+            "l",
+            "-",
+            "l"
+        ],
+        "visible_html_fields": [
+            {
+                "q": "qq",
+                "s": "Bs"
+            },
+            {
+                "order_num": "OT"
+            },
+            {
+                "OPENID_IDENTITY_MAILRU": "oi",
+                "OPENID_IDENTITY_YANDEX": "oi"
+            },
+            {
+                "USER_REMEMBER": "rC",
+                "notify_user_login": "us",
+                "notify_user_password": "p1"
+            },
+            {
+                "OPENID_IDENTITY_MAILRU": "XX",
+                "OPENID_IDENTITY_YANDEX": "XX"
+            },
+            {
+                "Login": "Bs",
+                "USER_LOGIN": "us",
+                "USER_PASSWORD": "p1",
+                "USER_REMEMBER": "rC"
+            }
+        ]
+    },
+    "html/www.muzdom.ru-1.html": {
+        "url": "http://www.muzdom.ru/company/feedback/",
+        "forms": [
+            "X",
+            "c",
+            "X",
+            "-",
+            "-",
+            "-",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "q": "XX",
+                "s": "XX"
+            },
+            {
+                "MESSAGE": "CC",
+                "captcha_word": "ca",
+                "submit": "Bs",
+                "user_email": "e1",
+                "user_name": "nf"
+            },
+            {
+                "order_num": "XX"
+            },
+            {
+                "OPENID_IDENTITY_MAILRU": "XX",
+                "OPENID_IDENTITY_YANDEX": "XX"
+            },
+            {
+                "USER_REMEMBER": "XX",
+                "notify_user_login": "XX",
+                "notify_user_password": "XX"
+            },
+            {
+                "OPENID_IDENTITY_MAILRU": "XX",
+                "OPENID_IDENTITY_YANDEX": "XX"
+            },
+            {
+                "Login": "XX",
+                "USER_LOGIN": "XX",
+                "USER_PASSWORD": "XX",
+                "USER_REMEMBER": "XX"
+            }
+        ]
+    },
+    "html/www.muzdom.ru-2.html": {
+        "url": "http://www.muzdom.ru/login/?register=yes&backurl=%2Fcompany%2Ffeedback%2F",
+        "forms": [
+            "X",
+            "r",
+            "X",
+            "-",
+            "-",
+            "-",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "q": "XX",
+                "s": "XX"
+            },
+            {
+                "REGISTER[CONFIRM_PASSWORD]": "p2",
+                "REGISTER[EMAIL]": "e1",
+                "REGISTER[NAME]": "nf",
+                "REGISTER[PASSWORD]": "p1",
+                "REGISTER[PERSONAL_MOBILE]": "ph",
+                "captcha_word": "ca",
+                "register_submit_button": "Bs"
+            },
+            {
+                "order_num": "XX"
+            },
+            {
+                "OPENID_IDENTITY_MAILRU": "XX",
+                "OPENID_IDENTITY_YANDEX": "XX"
+            },
+            {
+                "USER_REMEMBER": "XX",
+                "notify_user_login": "XX",
+                "notify_user_password": "XX"
+            },
+            {
+                "OPENID_IDENTITY_MAILRU": "XX",
+                "OPENID_IDENTITY_YANDEX": "XX"
+            },
+            {
+                "Login": "XX",
+                "USER_LOGIN": "XX",
+                "USER_PASSWORD": "XX",
+                "USER_REMEMBER": "XX"
+            }
+        ]
+    },
+    "html/www.muzdom.ru-3.html": {
+        "url": "http://www.muzdom.ru/auth/?forgot_password=yes",
+        "forms": [
+            "X",
+            "p",
+            "X",
+            "-",
+            "-",
+            "-",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "q": "XX",
+                "s": "XX"
+            },
+            {
+                "USER_EMAIL": "e1",
+                "USER_LOGIN": "us",
+                "send_account_info": "Bs"
+            },
+            {
+                "order_num": "XX"
+            },
+            {
+                "OPENID_IDENTITY_MAILRU": "XX",
+                "OPENID_IDENTITY_YANDEX": "XX"
+            },
+            {
+                "USER_REMEMBER": "XX",
+                "notify_user_login": "XX",
+                "notify_user_password": "XX"
+            },
+            {
+                "OPENID_IDENTITY_MAILRU": "XX",
+                "OPENID_IDENTITY_YANDEX": "XX"
+            },
+            {
+                "Login": "XX",
+                "USER_LOGIN": "XX",
+                "USER_PASSWORD": "XX",
+                "USER_REMEMBER": "XX"
+            }
+        ]
+    },
+    "html/www.muzdom.ru-4.html": {
+        "url": "http://www.muzdom.ru/auth/?login=yes",
+        "forms": [
+            "X",
+            "l",
+            "-",
+            "X",
+            "-",
+            "-",
+            "-",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "q": "XX",
+                "s": "XX"
+            },
+            {
+                "Login": "Bs",
+                "USER_LOGIN": "e1",
+                "USER_PASSWORD": "p1",
+                "USER_REMEMBER": "rC"
+            },
+            {
+                "OPENID_IDENTITY_MAILRU": "XX",
+                "OPENID_IDENTITY_YANDEX": "XX"
+            },
+            {
+                "order_num": "XX"
+            },
+            {
+                "OPENID_IDENTITY_MAILRU": "XX",
+                "OPENID_IDENTITY_YANDEX": "XX"
+            },
+            {
+                "USER_REMEMBER": "XX",
+                "notify_user_login": "XX",
+                "notify_user_password": "XX"
+            },
+            {
+                "OPENID_IDENTITY_MAILRU": "XX",
+                "OPENID_IDENTITY_YANDEX": "XX"
+            },
+            {
+                "Login": "XX",
+                "USER_LOGIN": "XX",
+                "USER_PASSWORD": "XX",
+                "USER_REMEMBER": "XX"
+            }
+        ]
+    },
+    "html/www.muzdom.ru-5.html": {
+        "url": "http://www.muzdom.ru/catalog/keyboard/detail/62523/",
+        "forms": [
+            "X",
+            "b",
+            "X",
+            "-",
+            "-",
+            "-",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "q": "XX",
+                "s": "XX"
+            },
+            {
+                "new_order[EMAIL]": "e1",
+                "new_order[FIO]": "nf",
+                "new_order[PHONE]": "ph",
+                "ocb_form_button": "Bs"
+            },
+            {
+                "order_num": "XX"
+            },
+            {
+                "OPENID_IDENTITY_MAILRU": "XX",
+                "OPENID_IDENTITY_YANDEX": "XX"
+            },
+            {
+                "USER_REMEMBER": "XX",
+                "notify_user_login": "XX",
+                "notify_user_password": "XX"
+            },
+            {
+                "OPENID_IDENTITY_MAILRU": "XX",
+                "OPENID_IDENTITY_YANDEX": "XX"
+            },
+            {
+                "Login": "XX",
+                "USER_LOGIN": "XX",
+                "USER_PASSWORD": "XX",
+                "USER_REMEMBER": "XX"
             }
         ]
     },
