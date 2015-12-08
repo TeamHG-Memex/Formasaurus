@@ -485,7 +485,7 @@
         ],
         "visible_html_fields": [
             {
-                "qty": "ON"
+                "qty": "qt"
             },
             {
                 "email": "XX"
