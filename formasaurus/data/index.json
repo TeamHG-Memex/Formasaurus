@@ -5374,6 +5374,172 @@
             }
         ]
     },
+    "html/well.ca-0.html": {
+        "url": "https://well.ca/",
+        "forms": [
+            "X",
+            "X",
+            "s",
+            "X"
+        ],
+        "visible_html_fields": [
+            {},
+            {},
+            {
+                "keyword": "qq"
+            },
+            {
+                "keyword": "XX"
+            }
+        ]
+    },
+    "html/well.ca-1.html": {
+        "url": "https://well.ca/login.html",
+        "forms": [
+            "X",
+            "X",
+            "X",
+            "X"
+        ],
+        "visible_html_fields": [
+            {},
+            {},
+            {
+                "keyword": "XX"
+            },
+            {
+                "keyword": "XX"
+            }
+        ]
+    },
+    "html/well.ca-2.html": {
+        "url": "https://well.ca/index.php?main_page=password_forgotten",
+        "forms": [
+            "X",
+            "X",
+            "X",
+            "X",
+            "p"
+        ],
+        "visible_html_fields": [
+            {},
+            {},
+            {
+                "keyword": "XX"
+            },
+            {
+                "keyword": "XX"
+            },
+            {
+                "email_address": "e1"
+            }
+        ]
+    },
+    "html/well.ca-3.html": {
+        "url": "https://well.ca/create_account.html",
+        "forms": [
+            "X",
+            "X",
+            "X",
+            "X",
+            "r"
+        ],
+        "visible_html_fields": [
+            {},
+            {},
+            {
+                "keyword": "XX"
+            },
+            {
+                "keyword": "XX"
+            },
+            {
+                "babyclub": "eC",
+                "confirmation": "p2",
+                "dob_day": "bd",
+                "dob_month": "bm",
+                "dob_year": "by",
+                "email_address": "e1",
+                "firstname": "n1",
+                "gender": "ge",
+                "lastname": "n3",
+                "newsletter": "eC",
+                "password": "p1"
+            }
+        ]
+    },
+    "html/well.ca-4.html": {
+        "url": "https://well.ca/categories/hair-care_398.html",
+        "forms": [
+            "X",
+            "X",
+            "X",
+            "X"
+        ],
+        "visible_html_fields": [
+            {},
+            {},
+            {
+                "keyword": "XX"
+            },
+            {
+                "keyword": "XX"
+            }
+        ]
+    },
+    "html/well.ca-5.html": {
+        "url": "https://well.ca/categories/shampoo-conditioner_340.html",
+        "forms": [
+            "X",
+            "X",
+            "X",
+            "X"
+        ],
+        "visible_html_fields": [
+            {},
+            {},
+            {
+                "keyword": "XX"
+            },
+            {
+                "keyword": "XX"
+            }
+        ]
+    },
+    "html/well.ca-6.html": {
+        "url": "https://well.ca/products/head-and-shoulders-men-full-thick_87329.html?cat=340",
+        "forms": [
+            "X",
+            "X",
+            "X",
+            "X",
+            "b",
+            "X",
+            "c"
+        ],
+        "visible_html_fields": [
+            {},
+            {},
+            {
+                "keyword": "XX"
+            },
+            {
+                "keyword": "XX"
+            },
+            {
+                "cart_quantity": "qt"
+            },
+            {},
+            {
+                "answer": "ca",
+                "email": "e1",
+                "nickname": "n1",
+                "rating": "OS",
+                "reviewTextarea": "CC",
+                "videoLink": "ws"
+            }
+        ]
+    },
     "html/whengeekswed.com-0.html": {
         "url": "http://whengeekswed.com/",
         "forms": [
@@ -6662,6 +6828,146 @@
             }
         ]
     },
+    "html/www.campmor.com-0.html": {
+        "url": "https://www.campmor.com/",
+        "forms": [
+            "s",
+            "m",
+            "m"
+        ],
+        "visible_html_fields": [
+            {
+                "searchTerm": "qq"
+            },
+            {
+                "email1": "e1"
+            },
+            {
+                "email1": "e1"
+            }
+        ]
+    },
+    "html/www.campmor.com-1.html": {
+        "url": "https://www.campmor.com/Register____",
+        "forms": [
+            "X",
+            "r",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "searchTerm": "XX"
+            },
+            {
+                "challengeAnswer": "sa",
+                "challengeQuestion": "sq",
+                "firstName": "n1",
+                "lastName": "n3",
+                "logonId": "e1",
+                "logonPassword": "p1",
+                "logonPasswordVerify": "p2",
+                "middleName": "n2",
+                "sendMeEmail": "eC"
+            },
+            {
+                "email1": "XX"
+            }
+        ]
+    },
+    "html/www.campmor.com-2.html": {
+        "url": "https://www.campmor.com/SignIn____",
+        "forms": [
+            "X",
+            "l",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "searchTerm": "XX"
+            },
+            {
+                "logonId": "us",
+                "logonPassword": "p1"
+            },
+            {
+                "email1": "XX"
+            }
+        ]
+    },
+    "html/www.campmor.com-3.html": {
+        "url": "https://www.campmor.com/PwdReset___",
+        "forms": [
+            "X",
+            "p",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "searchTerm": "XX"
+            },
+            {
+                "challengeAnswer": "sa",
+                "challengeQuestion": "sq",
+                "logonId": "us"
+            },
+            {
+                "email1": "XX"
+            }
+        ]
+    },
+    "html/www.campmor.com-4.html": {
+        "url": "https://www.campmor.com/ContactUsView?storeId=226&catalogId=40000000226&langId=-1",
+        "forms": [
+            "X",
+            "c",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "searchTerm": "XX"
+            },
+            {
+                "email": "e1",
+                "msgText": "CC",
+                "name": "nf",
+                "phone": "ph",
+                "subject": "CT"
+            },
+            {
+                "email1": "XX"
+            }
+        ]
+    },
+    "html/www.campmor.com-5.html": {
+        "url": "https://www.campmor.com/c/s/footwear/kids-boots-and-shoes/kids-sandals-water-shoes",
+        "forms": [
+            "X",
+            "-"
+        ],
+        "visible_html_fields": [
+            {
+                "searchTerm": "XX"
+            },
+            {
+                "email1": "XX"
+            }
+        ]
+    },
+    "html/www.campmor.com-6.html": {
+        "url": "https://www.campmor.com/c/teva-hurricane-2-sports-sandals-kids",
+        "forms": [
+            "X",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "searchTerm": "XX"
+            },
+            {
+                "email1": "XX"
+            }
+        ]
+    },
     "html/www.capitalbikeshare.com-0.html": {
         "url": "https://www.capitalbikeshare.com/",
         "forms": [
@@ -6936,6 +7242,168 @@
                 "province": "St",
                 "servicerequest": "CT",
                 "surname": "n3"
+            }
+        ]
+    },
+    "html/www.christmascentral.com-0.html": {
+        "url": "http://www.christmascentral.com/",
+        "forms": [
+            "s",
+            "m"
+        ],
+        "visible_html_fields": [
+            {
+                "SearchTerm": "qq"
+            },
+            {
+                "EMAIL": "e1"
+            }
+        ]
+    },
+    "html/www.christmascentral.com-1.html": {
+        "url": "https://www.christmascentral.com/signin.aspx",
+        "forms": [
+            "X",
+            "l",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "SearchTerm": "XX"
+            },
+            {
+                "EMail": "e1",
+                "ForgotEMail": "e1",
+                "LoginButton": "Bs",
+                "PersistLogin": "rC",
+                "btnRequestNewPassword": "Bs",
+                "txtPassword": "p1"
+            },
+            {
+                "EMAIL": "XX"
+            }
+        ]
+    },
+    "html/www.christmascentral.com-2.html": {
+        "url": "https://www.christmascentral.com/createaccount.aspx?checkout=False",
+        "forms": [
+            "X",
+            "r",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "SearchTerm": "XX"
+            },
+            {
+                "BillingAddressControl$Address1": "Ad",
+                "BillingAddressControl$City": "Ci",
+                "BillingAddressControl$Company": "no",
+                "BillingAddressControl$CopyFromCheckBox": "aC",
+                "BillingAddressControl$Country": "Co",
+                "BillingAddressControl$FirstName": "n1",
+                "BillingAddressControl$LastName": "n3",
+                "BillingAddressControl$Phone": "ph",
+                "BillingAddressControl$PostCodeSearch": "Zi",
+                "BillingAddressControl$PostCodeSearchButton": "Bo",
+                "BillingAddressControl$PostCodeSelect": "Zi",
+                "BillingAddressControl$PostCodeSelectButton": "Bo",
+                "BillingAddressControl$ResidenceType": "OS",
+                "BillingAddressControl$State": "St",
+                "BillingAddressControl$Zip": "Zi",
+                "EMail": "e1",
+                "FirstName": "n1",
+                "LastName": "n3",
+                "OKToEMail": "eC",
+                "Phone": "ph",
+                "ShippingAddressControl$Address1": "Ad",
+                "ShippingAddressControl$City": "Ci",
+                "ShippingAddressControl$Company": "no",
+                "ShippingAddressControl$CopyFromCheckBox": "aC",
+                "ShippingAddressControl$Country": "Co",
+                "ShippingAddressControl$FirstName": "n1",
+                "ShippingAddressControl$LastName": "n3",
+                "ShippingAddressControl$Phone": "ph",
+                "ShippingAddressControl$PostCodeSearch": "Zi",
+                "ShippingAddressControl$PostCodeSearchButton": "Bo",
+                "ShippingAddressControl$PostCodeSelect": "Zi",
+                "ShippingAddressControl$PostCodeSelectButton": "Bo",
+                "ShippingAddressControl$ResidenceType": "OS",
+                "ShippingAddressControl$State": "St",
+                "ShippingAddressControl$Zip": "Zi",
+                "btnContinueCheckout": "Bs",
+                "txtpassword": "p1",
+                "txtpassword2": "p2"
+            },
+            {
+                "EMAIL": "XX"
+            }
+        ]
+    },
+    "html/www.christmascentral.com-3.html": {
+        "url": "http://www.christmascentral.com/showcategory.aspx?CategoryID=17&SEName=patio-lawn-and-garden",
+        "forms": [
+            "X",
+            "s",
+            "s",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "SearchTerm": "XX"
+            },
+            {
+                "SearchTerm": "qq"
+            },
+            {
+                "pageSize": "sp",
+                "sortBy": "sp"
+            },
+            {
+                "EMAIL": "XX"
+            }
+        ]
+    },
+    "html/www.christmascentral.com-4.html": {
+        "url": "http://www.christmascentral.com/p-28050-9-crank-tilt-patio-market-umbrella-black-black-forest-green.aspx",
+        "forms": [
+            "X",
+            "b",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "SearchTerm": "XX"
+            },
+            {
+                "Quantity": "qt"
+            },
+            {
+                "EMAIL": "XX"
+            }
+        ]
+    },
+    "html/www.christmascentral.com-5.html": {
+        "url": "http://www.christmascentral.com/t-Contact-Us.aspx",
+        "forms": [
+            "X",
+            "c",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "SearchTerm": "XX"
+            },
+            {
+                "B1": "Bs",
+                "EMail": "e1",
+                "Name": "nf",
+                "Phone": "ph",
+                "S1": "CC",
+                "Subject": "CT"
+            },
+            {
+                "EMAIL": "XX"
             }
         ]
     },
@@ -7296,6 +7764,53 @@
             {}
         ]
     },
+    "html/www.crateandbarrel.com-0.html": {
+        "url": "https://www.crateandbarrel.com/account/login.aspx?r=%2faccount%2f",
+        "forms": [
+            "X",
+            "X",
+            "l",
+            "X"
+        ],
+        "visible_html_fields": [
+            {},
+            {},
+            {
+                "_rememberMe": "rC"
+            },
+            {}
+        ]
+    },
+    "html/www.crateandbarrel.com-1.html": {
+        "url": "https://www.crateandbarrel.com/account/create.aspx",
+        "forms": [
+            "X",
+            "X",
+            "r",
+            "X"
+        ],
+        "visible_html_fields": [
+            {},
+            {},
+            {
+                "_ctl0:CrateMainContent:addressForm:ddlCountry": "Co",
+                "_ctl0:CrateMainContent:addressForm:ddlState": "St",
+                "_ctl0:CrateMainContent:addressForm:overrideValidation": "OR",
+                "_ctl0:CrateMainContent:addressForm:txtAddress1": "Ad",
+                "_ctl0:CrateMainContent:addressForm:txtAddress2": "Ad",
+                "_ctl0:CrateMainContent:addressForm:txtAddress3": "Ad",
+                "_ctl0:CrateMainContent:addressForm:txtCity": "Ci",
+                "_ctl0:CrateMainContent:addressForm:txtDayPhone": "ph",
+                "_ctl0:CrateMainContent:addressForm:txtEvePhone": "ph",
+                "_ctl0:CrateMainContent:addressForm:txtFirstName": "n1",
+                "_ctl0:CrateMainContent:addressForm:txtLastName": "n3",
+                "_ctl0:CrateMainContent:addressForm:txtPostal": "Zi",
+                "_ctl0:CrateMainContent:addressForm:txtState": "St",
+                "_ctl0:CrateMainContent:addressForm:txtZip": "Zi"
+            },
+            {}
+        ]
+    },
     "html/www.crtvg.es-0.html": {
         "url": "http://www.crtvg.es/tvg/tvg-en-directo",
         "forms": [
@@ -7382,6 +7897,91 @@
             },
             {
                 "data[Usuario][correo_electronico]": "e1"
+            }
+        ]
+    },
+    "html/www.ctshirts.co.uk-0.html": {
+        "url": "http://www.ctshirts.co.uk/default.aspx?q=|||||||||||||||",
+        "forms": [
+            "s",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "search_term": "qq"
+            },
+            {}
+        ]
+    },
+    "html/www.ctshirts.co.uk-1.html": {
+        "url": "https://www.ctshirts.co.uk/AccountLogin.aspx",
+        "forms": [
+            "X",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "search_term": "XX"
+            },
+            {}
+        ]
+    },
+    "html/www.ctshirts.co.uk-2.html": {
+        "url": "https://www.ctshirts.co.uk/ForgottenPassword.aspx?Referrer=1",
+        "forms": [
+            "X",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "search_term": "XX"
+            },
+            {}
+        ]
+    },
+    "html/www.ctshirts.co.uk-3.html": {
+        "url": "https://www.ctshirts.co.uk/CreatAccount.aspx",
+        "forms": [
+            "X",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "search_term": "XX"
+            },
+            {}
+        ]
+    },
+    "html/www.ctshirts.co.uk-4.html": {
+        "url": "https://www.ctshirts.co.uk/mens-casualwear/mens-shorts?q=gbpdefault|||||||||||||||",
+        "forms": [
+            "X",
+            "s"
+        ],
+        "visible_html_fields": [
+            {
+                "search_term": "XX"
+            },
+            {
+                "ctl00$contentBody$paging$ddlSortBy": "sp",
+                "ctl00$contentBody$pagingBottom$ddlSortBy": "sp"
+            }
+        ]
+    },
+    "html/www.ctshirts.co.uk-5.html": {
+        "url": "https://www.ctshirts.co.uk/mens-casualwear/mens-shorts/Navy-and-black-seersucker-Classic-fit-shorts?q=gbpdefault||hb095blk|||||||||||||",
+        "forms": [
+            "X",
+            "b"
+        ],
+        "visible_html_fields": [
+            {
+                "search_term": "XX"
+            },
+            {
+                "ctl00$contentBody$ctl02$submit": "Bs",
+                "quantity": "qt",
+                "shoe_size": "OS"
             }
         ]
     },
@@ -9251,6 +9851,79 @@
             }
         ]
     },
+    "html/www.jacamo.co.uk-0.html": {
+        "url": "http://www.jacamo.co.uk/shop/home.action",
+        "forms": [
+            "m"
+        ],
+        "visible_html_fields": [
+            {
+                "newsletterEmail": "e1"
+            }
+        ]
+    },
+    "html/www.jacamo.co.uk-1.html": {
+        "url": "https://www.jacamo.co.uk/shop/signin/display.action",
+        "forms": [
+            "l",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "accountRefOrEmail": "ue",
+                "password": "p1",
+                "rememberMe": "rC"
+            },
+            {}
+        ]
+    },
+    "html/www.jacamo.co.uk-2.html": {
+        "url": "https://www.jacamo.co.uk/shop/forgottenPassword/display.action",
+        "forms": [
+            "p",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "accountRef": "us",
+                "emailAddress": "e1",
+                "postcode": "Zi",
+                "surname": "n3"
+            },
+            {
+                "newsletterEmail": "XX"
+            }
+        ]
+    },
+    "html/www.jacamo.co.uk-3.html": {
+        "url": "http://www.jacamo.co.uk/shop/joe-browns-perfect-placket-shirt-long/nc741/product/details/show.action?pdBoUid=3883#colour:Cream,size:",
+        "forms": [
+            "b",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "fitting": "OS",
+                "optionColour": "OS",
+                "optionSize": "OS",
+                "quantity": "qt"
+            },
+            {
+                "newsletterEmail": "XX"
+            }
+        ]
+    },
+    "html/www.jacamo.co.uk-4.html": {
+        "url": "http://www.jacamo.co.uk/shop/1/_/N-zhhZ11emZ1ytvh3i/products/show.action?hnid=40005&originalSearchTerm=New%20In&cm_sp=CGN-TopNav-_-NavigationGroup-_-NewIn",
+        "forms": [
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "newsletterEmail": "XX"
+            }
+        ]
+    },
     "html/www.jofogas.hu-0.html": {
         "url": "http://www.jofogas.hu/",
         "forms": [
@@ -9342,6 +10015,43 @@
                 "tip_email": "e1",
                 "tip_msg": "CC",
                 "tip_name": "nf"
+            }
+        ]
+    },
+    "html/www.juno.co.uk-0.html": {
+        "url": "http://www.juno.co.uk/",
+        "forms": [
+            "s"
+        ],
+        "visible_html_fields": [
+            {
+                "q[all][]": "qq"
+            }
+        ]
+    },
+    "html/www.juno.co.uk-1.html": {
+        "url": "http://www.juno.co.uk/dj-equipment/dj-laptop-stands",
+        "forms": [
+            "-",
+            "s"
+        ],
+        "visible_html_fields": [
+            {
+                "q[all][]": "XX"
+            },
+            {
+                "q[all][]": "qq"
+            }
+        ]
+    },
+    "html/www.juno.co.uk-2.html": {
+        "url": "http://www.juno.co.uk/products/udg-creator-adjustable-aluminium-laptop-controller-stand/492398-01/",
+        "forms": [
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "q[all][]": "XX"
             }
         ]
     },
@@ -12115,6 +12825,82 @@
             }
         ]
     },
+    "html/www.pandahall.com-0.html": {
+        "url": "http://www.pandahall.com/",
+        "forms": [
+            "s"
+        ],
+        "visible_html_fields": [
+            {
+                "keyword": "qq"
+            }
+        ]
+    },
+    "html/www.pandahall.com-1.html": {
+        "url": "https://www.pandahall.com/Customer/SignIn",
+        "forms": [
+            "-",
+            "l",
+            "r"
+        ],
+        "visible_html_fields": [
+            {
+                "keyword": "XX"
+            },
+            {
+                "email": "e1",
+                "password": "p1",
+                "remember": "rC"
+            },
+            {
+                "email": "e1",
+                "firstName": "n1",
+                "lastName": "n3",
+                "newsletter": "eC",
+                "password": "p1",
+                "repeatPassword": "p2"
+            }
+        ]
+    },
+    "html/www.pandahall.com-2.html": {
+        "url": "https://www.pandahall.com/Customer/ForgottenPwd",
+        "forms": [
+            "X",
+            "p"
+        ],
+        "visible_html_fields": [
+            {
+                "keyword": "XX"
+            },
+            {
+                "email": "e1",
+                "repEmail": "e2",
+                "verifyNumber": "ca"
+            }
+        ]
+    },
+    "html/www.pandahall.com-3.html": {
+        "url": "http://www.pandahall.com/mix-beads-wholesale/1.html",
+        "forms": [
+            "-"
+        ],
+        "visible_html_fields": [
+            {
+                "keyword": "XX"
+            }
+        ]
+    },
+    "html/www.pandahall.com-4.html": {
+        "url": "http://www.pandahall.com/p-580437-copper-jewelry-wire-lead-free-cadmium-free-nickel-free-mixed-color.html?areaType=MixProducts",
+        "forms": [
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "keyword": "XX"
+            }
+        ]
+    },
     "html/www.pcgames.de-0.html": {
         "url": "http://www.pcgames.de/",
         "forms": [
@@ -13687,6 +14473,148 @@
             }
         ]
     },
+    "html/www.thebookpeople.co.uk-0.html": {
+        "url": "http://www.thebookpeople.co.uk/webapp/wcs/stores/servlet/qs_home_tbp?storeId=10001&catalogId=10051&langId=100",
+        "forms": [
+            "s",
+            "m"
+        ],
+        "visible_html_fields": [
+            {
+                "searchTerm": "qq"
+            },
+            {
+                "emailAddress": "e1"
+            }
+        ]
+    },
+    "html/www.thebookpeople.co.uk-1.html": {
+        "url": "https://www.thebookpeople.co.uk/webapp/wcs/stores/servlet/LogonForm?storeId=10001&langId=100&krypto=YC0jD6mHQtsKyGjlA5%2Bp9pAquOdZDWBHRQ76BxAMA1cxKdAg76TMsFD5cVMX86kiZys0bBFMW2Yb%0AKRJ%2FDaVixeCo0k3Om5cPpOUEIINMX0Ssq536K6KBYhqVt9aXEjYi%2FGVbOcR4YYz5269LODcZ42ra%0Aow4%3D&ddkey=http:account_summary",
+        "forms": [
+            "X",
+            "l",
+            "-",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "searchTerm": "XX"
+            },
+            {
+                "logonId": "e1",
+                "logonPassword": "p1"
+            },
+            {
+                "address1": "A1",
+                "address2": "A2",
+                "addressesFound": "OT",
+                "businessTitle": "OT",
+                "city": "Ci",
+                "country": "Co",
+                "logonPassword": "p1",
+                "organizationName": "no",
+                "recommendedByDist_10001_a_null": "oC",
+                "registeredLogonId": "e1",
+                "schools": "oC",
+                "slbrochureqty": "OS",
+                "slesttype": "OS",
+                "state": "St",
+                "ukPostcode": "Zi"
+            },
+            {
+                "emailAddress": "XX"
+            }
+        ]
+    },
+    "html/www.thebookpeople.co.uk-2.html": {
+        "url": "https://www.thebookpeople.co.uk/webapp/wcs/stores/servlet/qs_product_tbp?productId=597430&storeId=10001&catalogId=10051&langId=100&topCatId=48122&categoryId=122754",
+        "forms": [
+            "X",
+            "b",
+            "X",
+            "m"
+        ],
+        "visible_html_fields": [
+            {
+                "searchTerm": "XX"
+            },
+            {
+                "quantity": "qt"
+            },
+            {},
+            {
+                "emailAddress": "e1"
+            }
+        ]
+    },
+    "html/www.thebookpeople.co.uk-3.html": {
+        "url": "https://www.thebookpeople.co.uk/webapp/wcs/stores/servlet/account_register?targetURL=account_summary%3fstoreId%3d10001%26amp%3blangId%3d100&storeId=10001&langId=100&URL=account_summary%3fstoreId%3d10001%26langId%3d100&catalogId=10051&ebookType=&productId=&catEntryId=&targetURL=account_summary?storeId=10001&langId=100",
+        "forms": [
+            "X",
+            "-",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "searchTerm": "XX"
+            },
+            {
+                "address1": "A1",
+                "address2": "A2",
+                "addressesFound": "OT",
+                "businessTitle": "XX",
+                "city": "Ci",
+                "country": "Co",
+                "email1": "e1",
+                "firstName": "n1",
+                "lastName": "n3",
+                "logonPassword": "p1",
+                "logonPasswordVerify": "p2",
+                "organizationName": "no",
+                "personTitle": "OS",
+                "phone1": "ph",
+                "recommendedByDist_10001_a_null": "XX",
+                "schools": "oC",
+                "slbrochureqty": "XX",
+                "slesttype": "XX",
+                "state": "St",
+                "subscribeCatalogues": "XX",
+                "subscribeNewsLetters": "XX",
+                "subscribeThirdParty": "XX",
+                "ukPostcode": "Zi"
+            },
+            {
+                "emailAddress": "XX"
+            }
+        ]
+    },
+    "html/www.thebookpeople.co.uk-4.html": {
+        "url": "https://www.thebookpeople.co.uk/webapp/wcs/stores/servlet/CategoryDisplay?storeId=10001&catalogId=10051&langId=100&categoryId=152263&topCatId=152235",
+        "forms": [
+            "X",
+            "X",
+            "X",
+            "X",
+            "X",
+            "X",
+            "X",
+            "-"
+        ],
+        "visible_html_fields": [
+            {
+                "searchTerm": "XX"
+            },
+            {},
+            {},
+            {},
+            {},
+            {},
+            {},
+            {
+                "emailAddress": "XX"
+            }
+        ]
+    },
     "html/www.thefoundry.co.uk-0.html": {
         "url": "http://www.thefoundry.co.uk/",
         "forms": [
@@ -14267,6 +15195,199 @@
             }
         ]
     },
+    "html/www.wilsonsleather.com-0.html": {
+        "url": "https://www.wilsonsleather.com/",
+        "forms": [
+            "r",
+            "l",
+            "s",
+            "m"
+        ],
+        "visible_html_fields": [
+            {
+                "Cancel": "Bc",
+                "ContinueAccountSetupForm": "Bs",
+                "emailSignup": "eC",
+                "liteRegistrationAnswer": "sa",
+                "liteRegistrationHint": "sq",
+                "loginPassword": "p1",
+                "loginPasswordConfirm": "p2",
+                "newCustomerEmail": "e1"
+            },
+            {
+                "Cancel": "Bc",
+                "ContinueAccountSetupForm": "Bs",
+                "loginEmail": "e1",
+                "loginPassword2": "p1"
+            },
+            {
+                "keyword": "qq"
+            },
+            {
+                "emailAddress": "e1"
+            }
+        ]
+    },
+    "html/www.wilsonsleather.com-1.html": {
+        "url": "https://www.wilsonsleather.com/category/customer-service/contact+us.do",
+        "forms": [
+            "X",
+            "X",
+            "X",
+            "c",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "Cancel": "XX",
+                "ContinueAccountSetupForm": "XX",
+                "emailSignup": "XX",
+                "liteRegistrationAnswer": "XX",
+                "liteRegistrationHint": "XX",
+                "loginPassword": "XX",
+                "loginPasswordConfirm": "XX",
+                "newCustomerEmail": "XX"
+            },
+            {
+                "Cancel": "XX",
+                "ContinueAccountSetupForm": "XX",
+                "loginEmail": "XX",
+                "loginPassword2": "XX"
+            },
+            {
+                "keyword": "XX"
+            },
+            {
+                "emailAddress": "e1",
+                "firstName": "n1",
+                "lastName": "n3",
+                "message": "CC",
+                "topic": "CT"
+            },
+            {
+                "emailAddress": "XX"
+            }
+        ]
+    },
+    "html/www.wilsonsleather.com-2.html": {
+        "url": "https://www.wilsonsleather.com/category/handbags-accessories/crossbody.do",
+        "forms": [
+            "X",
+            "X",
+            "X",
+            "s",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "Cancel": "XX",
+                "ContinueAccountSetupForm": "XX",
+                "emailSignup": "XX",
+                "liteRegistrationAnswer": "XX",
+                "liteRegistrationHint": "XX",
+                "loginPassword": "XX",
+                "loginPasswordConfirm": "XX",
+                "newCustomerEmail": "XX"
+            },
+            {
+                "Cancel": "XX",
+                "ContinueAccountSetupForm": "XX",
+                "loginEmail": "XX",
+                "loginPassword2": "XX"
+            },
+            {
+                "keyword": "XX"
+            },
+            {
+                "sortBy": "sp"
+            },
+            {
+                "emailAddress": "XX"
+            }
+        ]
+    },
+    "html/www.wilsonsleather.com-3.html": {
+        "url": "https://www.wilsonsleather.com/product/wilsons+leather+bottom+gusset+leather+crossbody.do?sortby=ourPicks&from=fn",
+        "forms": [
+            "X",
+            "X",
+            "X",
+            "b",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "Cancel": "XX",
+                "ContinueAccountSetupForm": "XX",
+                "emailSignup": "XX",
+                "liteRegistrationAnswer": "XX",
+                "liteRegistrationHint": "XX",
+                "loginPassword": "XX",
+                "loginPasswordConfirm": "XX",
+                "newCustomerEmail": "XX"
+            },
+            {
+                "Cancel": "XX",
+                "ContinueAccountSetupForm": "XX",
+                "loginEmail": "XX",
+                "loginPassword2": "XX"
+            },
+            {
+                "keyword": "XX"
+            },
+            {
+                "addToBasket": "Bs",
+                "option_114540_100023_100830": "OS",
+                "options_114540_100022": "OS",
+                "options_114540_100023": "OS",
+                "qty": "qt"
+            },
+            {
+                "emailAddress": "XX"
+            }
+        ]
+    },
+    "html/www.wilsonsleather.com-4.html": {
+        "url": "https://www.wilsonsleather.com/category/customer-service/contact-us.do",
+        "forms": [
+            "X",
+            "X",
+            "X",
+            "X",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "Cancel": "XX",
+                "ContinueAccountSetupForm": "XX",
+                "emailSignup": "XX",
+                "liteRegistrationAnswer": "XX",
+                "liteRegistrationHint": "XX",
+                "loginPassword": "XX",
+                "loginPasswordConfirm": "XX",
+                "newCustomerEmail": "XX"
+            },
+            {
+                "Cancel": "XX",
+                "ContinueAccountSetupForm": "XX",
+                "loginEmail": "XX",
+                "loginPassword2": "XX"
+            },
+            {
+                "keyword": "XX"
+            },
+            {
+                "emailAddress": "XX",
+                "firstName": "XX",
+                "lastName": "XX",
+                "message": "XX",
+                "topic": "XX"
+            },
+            {
+                "emailAddress": "XX"
+            }
+        ]
+    },
     "html/www.woolworths.co.uk-0.html": {
         "url": "http://www.woolworths.co.uk/",
         "forms": [
@@ -14318,6 +15439,66 @@
             {
                 "btnFooterSignUp": "Bs",
                 "emailsignup": "e1"
+            }
+        ]
+    },
+    "html/www.worldsoccershop.com-0.html": {
+        "url": "http://www.worldsoccershop.com/",
+        "forms": [
+            "s"
+        ],
+        "visible_html_fields": [
+            {
+                "w": "qq"
+            }
+        ]
+    },
+    "html/www.worldsoccershop.com-1.html": {
+        "url": "http://www.worldsoccershop.com/email-signup.html",
+        "forms": [
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "w": "XX"
+            }
+        ]
+    },
+    "html/www.worldsoccershop.com-2.html": {
+        "url": "http://www.worldsoccershop.com/departments-footwear-lotto-junior-soccer-shoes.html",
+        "forms": [
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "w": "XX"
+            }
+        ]
+    },
+    "html/www.worldsoccershop.com-3.html": {
+        "url": "http://www.worldsoccershop.com/84682.html",
+        "forms": [
+            "X",
+            "b"
+        ],
+        "visible_html_fields": [
+            {
+                "w": "XX"
+            },
+            {
+                "vwattr0_Size": "OS",
+                "vwquantity0": "qt"
+            }
+        ]
+    },
+    "html/www.worldsoccershop.com-4.html": {
+        "url": "http://www.worldsoccershop.com/write-review.html?pr_page_id=84682",
+        "forms": [
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "w": "XX"
             }
         ]
     },
