@@ -1,0 +1,1738 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" 
+xmlns:fb="http://www.facebook.com/2008/fbml" 
+xmlns:og="http://opengraphprotocol.org/schema/">
+<head>
+
+
+<!--[if lt IE 8]> 
+	<script src="//content.cafepress.com/js/oldBrowserPopup.js"></script>
+<![endif]-->
+<!--[if lt IE 9]>
+	<script src="//content.cafepress.com/CP2.0/js/vendor/html5shiv.js"></script>
+<![endif]-->
+
+
+
+	<title>Francisco Goya: Painting of Woman Mini Art Print
+	&gt; Mini Posters
+	&gt; Famous Art Science Quotes Poster T-Shirt Gift Shop</title>
+    
+    
+	<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+	
+	    <meta name="description" content="Famous Art Science Quotes Poster T-Shirt Gift Shop: Francisco Goya: Painting of Woman Mini Art Print: "Feminism is the radical notion that women are people." (Cheris Kramerae, author of A Feminist Dictionary, 1996, printed on Goya Portrait of a Woman) Mini Art Poster ">
+	    <meta name="keywords" content="Philosophy, Shop, Gift, Idea, Artist, Images, Products, Ancient, Greek, Indian, Chinese, Western, Education, Religion, Life, Science, Quote, Fine, Art, Prints, Posters, Calendars, Cards, Journals, Clothes, Men's, Women's, Clothing, T-Shirts, Apparel">
+    
+	<meta name="design_id" content="9760751"/>
+    <meta property="fb:app_id" content="114957851874294" />
+    <meta property="og:title" content="Francisco Goya: Painting of Woman Mini Art Print&gt; Mini Posters&gt; Famous Art Science Quotes Poster T-Shirt Gift Shop" />
+    <meta property="og:type" content="product" />
+    <meta property="og:url" content="http://www.cafepress.com/philosophy_shop.39196067"/>
+       
+         <meta property="og:image" content="http://i3.cpcache.com/product/39196067/francisco_goya_painting_of_woman_mini_art_print.jpg?height=240&width=240" />
+	
+    <meta property="og:description" content="Francisco Goya: Painting of Woman Mini Art Print" />
+    <meta property="og:site_name" content="CafePress.com" />
+    
+<link rel="stylesheet" type="text/css" href="http://content.cpcache.com/premium/css/premiumPDP.css?07112011" title="style" />
+<link type="text/css" rel="stylesheet" href="http://content.cpcache.com/js/jquery/jcarousel/lib/jquery.jcarousel.css"/>
+<link media="screen" rel="stylesheet" type="text/css" href="http://content.cpcache.com/js/jquery/jcarousel/lib/skin.css">
+<link type="text/css" rel="stylesheet" href="http://content.cpcache.com/js/jquery/jcarousel/lib/skinForShop.css"/>
+<link type="text/css" rel="stylesheet" href="http://content.cpcache.com/js/jquery/jcrop/jquery.Jcrop.css"/>
+
+
+<link rel="canonical" href="http://www.cafepress.com/+francisco_goya_painting_of_woman_mini_art_print,39196067"   />
+
+
+
+<script language="javascript">
+
+var thumbnailPerspective = "default";
+var stockAvailabilityMap = [[]];
+var outOfStockAvailabilityMap = [[]];
+var stockMsgMap = new Array();
+var sizeVisibleCount = 0;
+stockAvailabilityMap[0]=[];
+outOfStockAvailabilityMap[0]=[];
+stockAvailabilityMap[0][0] = [	{ id: 0, name: 'N/A', isDefault: true, stockAvailabilityMessage: 'In stock' }];
+outOfStockAvailabilityMap[0][0] = [];
+
+function selectSize(sizeId, elementId, name) {
+    var size = document.getElementById(elementId);
+    size.value = sizeId;
+    var sizelabel = document.getElementById('defaultSize');
+    if (sizelabel)
+    {
+		sizelabel.innerHTML = name;
+    }
+    
+    var sizeBoxes = document.getElementById('sizeBoxes');
+	if (sizeBoxes)
+	{
+		var liArray = sizeBoxes.childNodes;
+		for(var i=0;i<liArray.length ; i++){
+			if(liArray[i].id != undefined && liArray[i].className != null)
+			{ 
+			    if (liArray[i].id == sizeId && liArray[i].className.indexOf("selectedSize") < 0){
+					liArray[i].className += " selectedSize";
+				} else if (liArray[i].id != sizeId && liArray[i].className.indexOf("selectedSize") >= 0 ) {
+					liArray[i].className = liArray[i].className.replace(" selectedSize","");
+				}
+			}
+		}
+	}
+}
+
+function refreshSizeDropDown(sizeDropDownId, colorDropDownId) {
+	sizeVisibleCount = 0 ; //reset the size selection count
+
+	var sizeDropDown = document.getElementById(sizeDropDownId);
+	var colorDropDown = document.getElementById(colorDropDownId);
+	var colorVal = colorDropDown != null ? colorDropDown.options[colorDropDown.options.selectedIndex].value : '0';
+	var attributeVal = 0;
+	var attributeDropDown = document.getElementById('productAttribute');
+	if(attributeDropDown != null)
+	{
+		var e = attributeDropDown.children[0];
+		attributeVal = e.options[e.selectedIndex].value
+	}
+	var isFulfillmentElement = document.getElementById('isFulfillment');
+	var isFulfillment =false;
+	if(isFulfillmentElement != null){
+		isFulfillment=isFulfillmentElement.value;
+	}
+	var productSizeArray = stockAvailabilityMap[colorVal][attributeVal];
+	if (sizeDropDown != null && sizeDropDown.options!=null) {
+		if(sizeDropDown.options.length > 0)
+		{
+			var defaultValue = sizeDropDown.options[sizeDropDown.options.selectedIndex].value;
+		}else
+		{
+			var defaultValue=0;
+		}
+		sizeDropDown.options.length=0;
+		var x;
+		for (x in productSizeArray) {
+			sizeDropDown.options[x] = new Option(productSizeArray[x].name, productSizeArray[x].id, productSizeArray[x].isDefault, productSizeArray[x].id==defaultValue);
+			
+			sizeVisibleCount++; //increment the number of sizes visible
+		}
+	}
+	else if (sizeDropDown != null)
+	{
+		var sizeBoxes = document.getElementById('sizeBoxes');
+		var previouslySelectedSize = sizeDropDown.value;
+		if (sizeBoxes)
+		{
+			var liArray = sizeBoxes.childNodes;
+			var i=0;
+			var needToUpdateSize = true;
+			var firstAvailableSize;
+			for (i=0; i<liArray.length; i++)
+			{
+				if(liArray[i].id != undefined)
+				{
+					var x;
+					if (!isFulfillment)
+					{
+						liArray[i].style.display='none';
+						for (x in productSizeArray)
+						{
+							if (productSizeArray[x].id== liArray[i].id)
+							{
+								liArray[i].style.display='block';
+								if (!firstAvailableSize) { firstAvailableSize = i; }
+								
+								sizeVisibleCount++; //increment the number of colors
+								
+								break;
+							}
+						}
+					} else {
+						if (!firstAvailableSize) { firstAvailableSize = i; }						
+					}
+					if (liArray[i].style.display=='block' && liArray[i].id == previouslySelectedSize)
+					{
+						needToUpdateSize = false;
+					}
+				}
+			}
+			if (needToUpdateSize && firstAvailableSize && firstAvailableSize < liArray.length)
+			{
+				selectSize(liArray[firstAvailableSize].id, sizeDropDownId, liArray[firstAvailableSize].title);
+			}
+		}
+	}
+	//alert("sizeVisibleCount="+sizeVisibleCount);
+}
+
+function createMessageMapKey(colorVal, sizeVal) {
+	return colorVal + "_" + sizeVal;
+}
+
+function refreshAvailabilityMessage() {
+	var sizeDropDown = document.getElementById('size_39196067');
+	var colorDropDown = document.getElementById('color_39196067');
+	var attributeVal = 0;
+	var attributeDropDown = document.getElementById('productAttribute');
+	if(attributeDropDown != null)
+	{
+		var e = attributeDropDown.children[0];
+		attributeVal = e.options[e.selectedIndex].value
+	}
+	var colorVal = colorDropDown != null ? colorDropDown.options[colorDropDown.options.selectedIndex].value : '0';
+	var sizeVal = 0;
+	if(sizeDropDown != null && sizeDropDown.options!= null && sizeDropDown.options.length > 0)
+	{
+		sizeVal = sizeDropDown.options[sizeDropDown.options.selectedIndex].value;
+	}
+	else if(sizeDropDown != null && sizeDropDown.value != null && sizeDropDown.value != '')
+	{
+	    sizeVal = sizeDropDown.value
+	}
+	
+	if(true) {
+		var availabilityMsg = document.getElementById("availabilityMessage");
+		if (availabilityMsg != null) {
+				var inStockAvailability = stockAvailabilityMap[colorVal][attributeVal];
+				var outOfStockAvailability = outOfStockAvailabilityMap[colorVal][attributeVal];
+				//set default value when there is no valid stock information
+				if(inStockAvailability && inStockAvailability.length == 0 && outOfStockAvailability && outOfStockAvailability.length == 0) {
+					setAddToCartVisibility(true);
+				}
+				else {
+						var selectionInStock = false;
+		    			for (x in inStockAvailability) {
+							if (inStockAvailability[x].id == parseInt(sizeVal)) {
+									availabilityMsg.innerHTML = "Availability: " + inStockAvailability[x].stockAvailabilityMessage ;
+									selectionInStock = true;
+									availabilityMsg.style.color = "";
+							}							
+						}
+					if(!selectionInStock) {
+						for (x in outOfStockAvailability){
+							if (outOfStockAvailability[x].id == parseInt(sizeVal)) {
+									availabilityMsg.innerHTML = "Availability: " + outOfStockAvailability[x].stockAvailabilityMessage ;
+									availabilityMsg.style.color = "red";
+							}							
+						}
+				}
+				setAddToCartVisibility(selectionInStock);
+				}
+		}
+	}
+	else
+	{
+		if (sizeVisibleCount != 0) {
+		var key = createMessageMapKey(colorVal, sizeVal);
+	} else {
+		var key = createMessageMapKey(colorVal, 0);
+	}
+	//alert("sizeVisibleCount key="+key);
+	//look it up
+	if (stockMsgMap) {
+		var stockOverride = stockMsgMap[key];
+		var availabilityMsg = document.getElementById("availabilityMessage");
+		if (availabilityMsg != null) {
+			if (stockOverride != null) {
+				availabilityMsg.innerHTML = "Availability: " + stockOverride.message;
+			} else {
+				availabilityMsg.innerHTML = "Availability: " + "In Stock";
+			}
+			if ((stockOverride != undefined && stockOverride != null && !stockOverride.isAddToCartable) ||
+			(stockOverride == null && 'True' == 'False')) {
+				availabilityMsg.style.color = "red";
+				if (sizeDropDown)
+				{
+					sizeDropDown.disabled = true;
+				}
+			} else {
+				availabilityMsg.style.color = "#666666";
+				if (sizeDropDown)
+				{
+					sizeDropDown.disabled = false;
+				}
+			}
+		}
+		var addToCartSection = document.getElementById("addToCartSection");
+		if (addToCartSection != undefined) {
+			if (stockOverride != undefined && stockOverride != null && !stockOverride.isAddToCartable) {
+				addToCartSection.style.visibility = "hidden";
+			} else {
+				addToCartSection.style.visibility = "visible";
+			}
+		}
+	}
+	}
+}
+
+function setAddToCartVisibility(isInStock) {
+var addToCartSection = document.getElementById("addToCartSection");
+		if (addToCartSection != undefined) {
+		if(!isInStock) {
+				addToCartSection.style.visibility = "hidden";
+			} else {
+				addToCartSection.style.visibility = "visible";
+			}
+		}
+}
+
+
+function attributeDropDownChangeHandler(){
+	refreshSizeDropDown('size_39196067','color_39196067');
+}
+
+function changeDefaultColor(newColor) {
+	var colorLabel = document.getElementById('defaultColor');
+	if (colorLabel != undefined) {
+		colorLabel.innerHTML = newColor;
+	}
+	
+if(true) {
+		refreshAvailabilityMessage();
+	}
+}
+</script><script language="javascript">
+
+function refreshPrice(sizeId) {
+	// blat default sellprice and if product on sale, saleprice, into priceDiv div
+	var priceStr = '<span id="sellPriceId">$9.99</span>';
+	var priceDiv = document.getElementById('priceDiv');
+	if (priceDiv != undefined) {
+		priceDiv.innerHTML = '<span class="customize_price" >' + priceStr + '</span>';
+	}
+	
+	// replace sellprice and also saleprice (if applicable)
+	var sellPriceId = document.getElementById('sellPriceId');
+	
+	if (sellPriceId != undefined) {
+		sellPriceId.innerHTML = sizeArray[sizeId].displaySellPrice;
+		var salePriceId = document.getElementById('salePriceId');
+		if (salePriceId != undefined) {
+			salePriceId.innerHTML = sizeArray[sizeId].displayDiscountPrice;
+		}
+	}
+}
+
+</script>
+
+<!-- Start Includes -->
+
+<script type="text/javascript">
+	var isPremiumShop = true;
+</script>
+
+
+<script type="text/javascript">
+    
+
+window.cafepress = window.cafepress || {};
+window.cafepress.signedIn = false;
+window.cafepress.countryCode = 'US';
+window.cafepress.currencyCode = 'USD';
+window.cafepress.domain = 'cafepress.com'; 
+window.cafepress.www = 'www.cafepress.com';
+window.cafepress.secureWww = 'https://www.cafepress.com';
+window.cafepress.members = 'members.cafepress.com';
+window.cafepress.secureMembers = 'https://members.cafepress.com';
+window.cafepress.cartItemCount = 0;
+window.cafepress.cartLabel = 'Cart';
+window.cafepress.cartItemLabel = 'Item';
+window.cafepress.userName = '';
+window.cafepress.showWishlists = true;
+
+
+    window.cafepress.tracking = window.cafepress.tracking || {};
+    window.cafepress.tracking.sessionId = 'f138e0204aeab50f23826a46beee927b';   
+
+
+window.cafepress.aidValue = '';  // member_no of DT affiliate obtained from last traffic touch
+
+window.cafepress.user = {
+      memberId: 0, 
+      displayName:  '',
+      userName:  '',
+      email:  '',
+      hasShops: false, 
+      profileUrl: '' 
+}
+
+window.cafepress.domain_au = 'cafepress.com.au';
+window.cafepress.domain_ca = 'cafepress.ca';
+window.cafepress.domain_gb = 'cafepress.co.uk';
+window.cafepress.domain_us = 'cafepress.com';
+
+
+window.cafepress.originCountryCode = 'US'
+
+
+window.cafepress.useAutoCompleteService = true;
+
+window.cafepress.tracking = window.cafepress.tracking || {};
+window.cafepress.tracking.pageLandingType = 'PremiumShopPDP';
+window.cafepress.tracking.productFamily = 'Mini Poster Print';
+window.cafepress.tracking.salesChannel = 'Shop';
+window.cafepress.tracking.abTestString = '';
+window.cafepress.tracking.businessUnit = 'Shop';
+
+window.cafepress.tracking.searchQuery = '';
+window.cafepress.tracking.searchTerm = '';
+window.cafepress.tracking.trafficMedium = 'Unknown';
+window.cafepress.tracking.utmTracking = '';
+window.cafepress.tracking.serverName = 'LVWWEB123';
+
+
+window.cafepress.isAmazonCheckoutEnabled = true
+window.cafepress.amazonMerchantId =  'A2H01TL96F69F5';
+
+window.cafepress.amazonClientId = '';
+window.cafepress.googleClientId = '693565830552-1e9tnl90qpth8rb2oj4ofd7uvg8goajr.apps.googleusercontent.com';
+	
+</script>
+<!--Omniture Code Begins -->
+	<!-- SiteCatalyst code variables version: H.2.
+Copyright 1997-2005 Omniture, Inc. -->
+
+
+
+<script type="text/javascript">
+	var session_logged_in_email="";
+	var session_member_no="";
+	var session_memberno="";
+	var AFFILIATE_MEMBER_NO="";
+	var AFFILIATE_CJ_MASTER_PID="7532081";
+	var AFFILIATE_CJ_PID="";
+	var LANDING_PAGE_MEMBER_NO="";
+	var AnalyzableVisitorExperimentAssignment="";
+	var VisitorId="A0A62FF30E4E967E8AC45B1B68BF51FA:4C35A1DE388447A8F139C4E309EC6A6C";
+	var notpurchase_channel_CSR="False";
+	var AFFILIATE_TYPE="";
+	var AFFILIATE_MEMBER_NO="";
+	var marketplace_google_tracking_page="";
+	var marketplace_google_tracking_product_category="";
+	var landingPage = '';
+	var landingProduct = '';
+</script>
+
+<!-- End SiteCatalyst code variables version: H.2. -->
+
+<!-- Omniture Code Ends -->
+<script src="http://content.cpcache.com/js/jquery/jquery-1.7.1.min.js?v=4bab8348a52d17428f684ad1ec3a427e" type="text/javascript"></script>
+<script src="http://content.cpcache.com/js/commonscriptsv13.js?v=e133e3e611de259c0d1ec1a04084b57d" type="text/javascript"></script>
+<script src="http://content.cpcache.com/js/jquery/jqueryui/jquery.ui-1.8.7.min.js?v=592a91aabb421f8230e75643f3c6c4da" type="text/javascript"></script>
+<script src="http://content.cpcache.com/js/jquery/thickbox/thickbox-compressedv2.js?v=245c63dc4064cb493e4d0e86c0aba5fa" type="text/javascript"></script>
+<script src="http://content.cpcache.com/js/library/tracking/tracking_global.js?v=eaf7986dce953a3efa8f582f576f4cf9" type="text/javascript"></script>
+<script src="http://content.cpcache.com/js/library/tracking/uascript.js?v=7623e8a63623f40a9e71b43713df51f4" type="text/javascript"></script>
+
+
+
+
+    
+<script language="javascript">
+    window.cafepress.storeID = 'philosophy_shop'; 
+</script>
+    
+<link rel="stylesheet" type="text/css" href="/content/premium/css/premiumShopv4.min.css?11032011" title="style" />
+<!--[if IE]><link rel="stylesheet" href="/content/premium/css/ieShopStylesv2.min.css?08102011" type="text/css" media="screen, projection"><![endif]-->
+
+<style type="text/css"><!--
+body,tr,td,caption {font-family: Verdana,Geneva,Arial,Helvetica,sans-serif;color: #333333;}
+form,input,button,select,option {font-family: Verdana,Geneva,Arial,Helvetica,sans-serif;}
+.smallprint {font-size:8pt;font-family: Verdana,Geneva,Arial,Helvetica,sans-serif;}
+.checkoutbg {background-color: #ffffff;}
+.tableheaderbg {background-color: #000000;color: #ffffff;font-weight: bold;}
+.tablebg {background-color: #F5F5F5;color: #000000;}
+.tablebg2 {background-color: #E9E9E9;color: #000000;}
+.sidebarbg {background-color: #ffffff;}
+.smallsidebartext {font-size:8pt;color: #000000;font-family: Verdana,Geneva,Arial,Helvetica,sans-serif;}
+.smallselectedsidebartext {font-size:8pt;color: #000000;font-family: Verdana,Geneva,Arial,Helvetica,sans-serif;font-weight:bold;}
+.sidebartext {color: #000000;font-family: Verdana,Geneva,Arial,Helvetica,sans-serif;}
+.head , H1 {color: #000000;font-family: Verdana,Geneva,Arial,Helvetica,sans-serif;}
+.alertmessage {color: #ff0000;font-family: Verdana,Geneva,Arial,Helvetica,sans-serif;}
+img.imageborder,div.imageborder {border-width:0;}
+-->
+</style>
+
+<link href="http://www.spaceandmotion.com/css/philosophy-shop.css" rel="stylesheet" type="text/css">
+<link href="http://www.spaceandmotion.com/favcon/favicon-philosophy-shop.ico" rel="shortcut icon">
+<script src="http://platform.twitter.com/anywhere.js?id=xVk7WFSdhq8LaF2qFl9bA&amp;v=1">
+</script>
+<script type="text/javascript">
+twttr.anywhere(function(twitter) { 
+twitter('#hovercard').hovercards({ expanded: true });
+twitter('#follow').followButton("Philosophy_Shop");
+twitter('#tweet').tweetBox({ label:"Tweet This!", defaultContent:"" +document.title+". "+window.location, height:100, width:350 });
+});
+</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-140527-2']);
+  _gaq.push(['_setDomainName', '.cafepress.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</head>
+
+
+   
+    
+	<body  >
+
+
+<script type="text/javascript">
+	
+
+function intlDropdown() {
+	var t;
+	$("#intlCurrencyPrem").hover(
+		function () { t = setTimeout('showIntlDropdown();',400); }, 
+		function () { clearTimeout(t); hideIntlDropdown() }
+	);
+}
+function showIntlDropdown() { $("#intlCurrencyDropdown").fadeIn("fast"); }
+function hideIntlDropdown() { $("#intlCurrencyDropdown").fadeOut("fast"); }
+$(document).ready(function() { intlDropdown(); });
+
+	
+</script>
+<!--[if IE]><link rel="stylesheet" href="http://content.cpcache.com/css/iestyles.css" type="text/css" media="screen, projection"><![endif]-->
+
+<a name="top"></a>
+<div id="cpPremiumHeader">
+	
+
+  <ul id="premshopNav" class="horizontal">
+    <li id="premheadCart" class="noborder"><a id="CartHeaderLink" rel="nofollow" href="http://www.cafepress.com/cp/viewcart.aspx?s=philosophy_shop&keepshopping=/philosophy_shop/1015647">Cart &amp; Checkout</a></li>
+    <li id="premheadHelp"><a rel="nofollow" href="http://www.cafepress.com/cp/info/help/index.aspx?page=custserv.aspx">Help</a></li>
+    <li id="premheadStatus"><a rel="nofollow" href="http://www.cafepress.com/cp/info/help/orderstatus.aspx?s=philosophy_shop">Order Status</a></li>
+    
+    <li id="premheadShophome"><a href="http://www.cafepress.com/philosophy_shop">Shop Home</a></li>
+    
+    <li>Currency:</li>
+    <li id="intlCurrencyPrem" class="noborder">
+	  <script type="text/javascript">
+	    writePremiumShopHeader();
+	  </script>
+    </li>
+    
+  </ul>  
+  <div id="premheadCleardiv" class="clear"></div>
+</div>
+<script type="text/javascript">
+	initializePremiumShopHeader();
+</script>
+
+<div id="cpWrapper" class="philosophy_shop 2002788">
+
+
+<!-- custom shop header --><!-- custom shop header --><!-- custom shop header -->
+<!-- custom shop header --><!-- custom shop header --><!-- custom shop header -->
+<div id="navright" class="divabsright"> 
+  <div id="navright2" class="divfixright"> 
+    <table width="170" border="0" align="center">
+      <tr> 
+        <td align="left"><fb:like width="200"></fb:like></td>
+      </tr>
+      <tr> 
+        <td align="center"><a href="#facebook" title="Comment with Facebook Connect. (Link to heading lower on page)" class="f14">Comment 
+          with<br />
+          Facebook Connect</a><br />
+        </td>
+      </tr>
+      <tr> 
+        <td align="center"><a href="#googlefriend" title="Google Friend Connect. (Link to heading lower on page)"  class="f14">Google 
+          Friend</a><br />
+        </td>
+      </tr>
+      <tr> 
+        <td align="center"><a href="#twitter" title="Tweet us on Twitter. (Link to heading lower on page)"  class="f14">Twitter 
+          / Tweet</a></td>
+      </tr>
+      <tr> 
+        <td align="center"><div id="hovercard">@Philosophy_Shop</div>
+          <br /></td>
+      </tr>
+      <tr> 
+        <td align="left"> <script type="text/javascript">var addthis_config = {"data_track_clickback":true};</script> 
+          <div class="addthis_toolbox addthis_default_style"> <a href="http://www.addthis.com/bookmark.php?v=250&amp;username=philosophyshop" class="addthis_button_compact">Share</a> 
+            <span class="addthis_separator">|</span> <a class="addthis_button_facebook"></a> 
+            <a class="addthis_button_myspace"></a> <a class="addthis_button_google"></a> 
+            <a class="addthis_button_twitter"></a></div>
+          <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#username=philosophyshop"></script> 
+          <hr /></td>
+      </tr>
+      <tr> 
+        <td align="left"><h3>Products</h3></td>
+      </tr>
+      <tr> 
+        <td align="left"><a href="http://www.cafepress.com/philosophy_shop/1013699"  title="Selection of our favourite Large Posters (23 by 35 inches)" class="head10b">Large 
+          Posters</a><br /> <a href="http://www.cafepress.com/philosophy_shop/1015590" title="Selection of our favourite Small Posters (13 by 20 inches)" class="head10b">Small 
+          Posters</a><br /> <a href="http://www.cafepress.com/philosophy_shop/1015647" title="Selection of our favourite Mini Poster Prints (11 by 17 inches)" class="head10b">Mini 
+          Poster Prints<br />
+          </a><a href="http://www.cafepress.com/philosophy_shop/1015670" title="Enjoy the formal elegance of our favourite framed Poster Prints." class="head10b">Framed 
+          Poster Panel Prints</a><br /> <a href="http://www.cafepress.com/philosophy_shop/1015708" title="The 2010 Wall Calendars and Calendar Prints make lovely gifts (for yourself or others!)" class="head10b">2010 
+          Wall Calendars<br />
+          </a><a href="http://www.cafepress.com/philosophy_shop/1015760" title="Start a Diary or keep up to date with one of our creative writing Journals custom printed with photo &amp; Quote." class="head10b">Journals 
+          / Diaries</a><br /> <a href="http://www.cafepress.com/philosophy_shop/1015780" title="Postcards: Send the Gift of Truth to a friend or lover with our favourite collection of Post Cards" class="head10b">Postcards</a><br /> 
+          <a href="http://www.cafepress.com/philosophy_shop/1015791" title="We have a sensual selection of thoughtful and erotic Greeting Cards and Christmas Cards that make nice simple gifts." class="head10b">Greeting 
+          Cards</a><br /> <a href="http://www.cafepress.com/philosophy_shop/1018324" title="Our favourite Mousepads: Make working on the Computer more fun with a cool Mouse Pad." class="head10b">Mousepads</a><br /> 
+          <a href="http://www.cafepress.com/philosophy_shop/1018383" title="Say something profound to the world with a philosophical Bumper Sticker." class="head10b">Bumper 
+          Stickers</a><br /> <a href="http://www.cafepress.com/philosophy_shop/1018410" title="Enjoy a steaming hot Coffee and Ponder on Life the Universe and Everything with our custom printed Coffee Mugs. Or have your own 'Beerfest' with our elegant Beer Steins." class="head10b">Coffee 
+          Cups, Mugs &amp; Beer Steins</a><br /> <a href="http://www.cafepress.com/philosophy_shop/1018441" title="Keep track of time (in a busy world) with our cool time clocks." class="head10b">Wall 
+          / Time Clocks</a><br /> <a href="http://www.cafepress.com/philosophy_shop/1018460" title="Buttons Badges Pins: Great Christmas Gifts / Stocking Stuffers!" class="head10b">Buttons 
+          / Badges</a><br /> <a href="http://www.cafepress.com/philosophy_shop/1018507" title="Decorate your Fridge with our Unique Custom Printed Refrigerator Magnets." class="head10b">Fridge 
+          Magnets</a><br /> <a href="http://www.cafepress.com/philosophy_shop/1018533" title="Store your fine jewelry and trinkets in our lovely Framed Fine Art Tile Jewelry Box. And the Custom Printed Tile Drink Coasters make a decorative addition to evening drinks around the table!" class="head10b">Jewelry 
+          Box &amp; Coasters</a><br /> <a href="http://www.cafepress.com/philosophy_shop/1021466" title="Selection of 60 of our favourite Printed T-Shirts (with Portrait and Quote). Ash Grey T-Shirts, Fitted T-Shirts, Golf Shirts, Ringer T-Shirts, Men's Sleeveless Tees, Organic Cotton T Shirts." class="head10b">Unique 
+          Custom Printed Tees</a><br /> <a href="http://www.cafepress.com/philosophy_shop/1021536" title="Selection of Men's and Women's discount Value Printed T-Shirts (14.99 US) and Custom Printed White Tshirts (19.99 US)" class="head10b">Men's 
+          Women's White T-Shirts</a><br /> <a href="http://www.cafepress.com/philosophy_shop/1303793" title="Selection of Men's and Women's Custom Printed Black T-Shirts (24.99 US)" class="head10b">Men's 
+          Women's Black T-Shirts</a><br /> <a href="http://www.cafepress.com/philosophy_shop/1021565" title="Cool clothes to keep you warm. Our selection of Hooded Sweatshirts, Longsleeve T-Shirts, Sweatshirts and Baseball Jerseys." class="head10b">Longsleeve 
+          T Shirts Hooded Sweatshirts</a><br /> <a href="http://www.cafepress.com/philosophy_shop/1021603" title="Selection of our 'tight and sexy' long sleeve Women's Clothing. Jr Hoodie, Raglan Hoodie and Jr Raglan Womens Clothes. Womens Tracksuits." class="head10b">Women's 
+          Long Sleeve Clothing</a><br /> <a href="http://www.cafepress.com/philosophy_shop/1021579" title="Selection of our 'tight and sexy' shortsleeve Women's Clothing. Baby Doll T-Shirts, Cap Sleeve (White Tank Top, Short Black Sleeves), Women's T-Shirts, Womens Tank Tops, Junior (Jr) Spaghetti Tank Tops, Jr Ringer T-Shirts" class="head10b">Tight 
+          Sexy Ladies Clothes</a><br /> <a href="http://www.cafepress.com/philosophy_shop/1021665" title="Smart and Sexy Underwear: Custom Printed Men's / Woman's Boxer Shorts (Boxers)." class="head10b">Men's 
+          &amp; Women's Boxer Shorts</a><br /> <a href="http://www.cafepress.com/philosophy_shop/1371614" title="Sensual Women's Intimate Lingerie: Custom Printed Erotic / Exotic Woman's Thongs and Sexy Slips / Camisoles." class="head10b">Women's 
+          Intimate Lingerie, Erotic Thongs</a><br /> <a href="http://www.cafepress.com/philosophy_shop/1021697" title="Selection of our favourite Custom Printed Cotton Canvas Tote Bags and Messenger Bags. They look great in public, are very useful, and make cool gifts!" class="head10b">Cotton 
+          Canvas Printed Tote Bag &amp; Messenger Bags</a><br /> <a href="http://www.cafepress.com/philosophy_shop/1021636" title="Smart Clothes for Cool Kids. Bibs, Infant Creepers, Childs Baseball Jersey, Kids Hoodie's, Children's Sweatshirts, Kid's T-Shirts and Infant Tees." class="head10b">Children 
+          / Infant / Kids Clothes</a><br /> <a href="http://www.cafepress.com/philosophy_shop/1021724" title="Chef's Kitchen and Barbecue (BBQ) Aprons. What fun! Preparing hot food in a cool custom printed cooking Apron." class="head10b">Printed 
+          Kitchen Chef BBQ Cooking Aprons</a><br /> <a href="http://www.cafepress.com/philosophy_shop/1021708" title="Selection of White and Black Baseball Caps and Trucker Hats for that cool look in the hot sun." class="head10b">Baseball 
+          Caps &amp; Trucker Hats</a><br /> <a href="http://www.cafepress.com/philosophy_shop/1021550" title="Buy a nice warm gift for Man's best friend with our eclectic selection of Dog Coats." class="head10b">Dog 
+          Clothes</a></td>
+      </tr>
+    </table>
+  </div>
+</div>
+<div id="navleft" class="divabsleft"> 
+  <div id="navleft2" class="divfixleft"> 
+    <table width="150" border="0" align="center">
+      <tr> 
+        <td align="center"><h3>Subjects</h3></td>
+      </tr>
+      <tr> 
+        <td align="left"><a href="http://www.cafepress.com/philosophy_shop/923543" title="Ancient Greek Philosophy / Philosopher's Portraits and Quotes: Thales, Anaximander, Anaximenes, Heraclitus, Pythagoras, Parmenides, Socrates, Plato, Aristotle, Hypatia, Epicurus." class="head10b"> 
+          Ancient Greek Philosophy</a></td>
+      </tr>
+      <tr> 
+        <td align="left"><a href="http://www.cafepress.com/philosophy_shop/923576" title="Eastern Philosophy (Indian, Chinese) Portraits and Quotes. Confucius, Lao Tzu, Buddha, Mahatma Gandhi, Dalai Lama (Tibet), Hinduism, Buddhism, Taoism." class="head10b"> 
+          Chinese Indian Metaphysics</a></td>
+      </tr>
+      <tr> 
+        <td align="left"><a href="http://www.cafepress.com/philosophy_shop/923943" title="Western Philosophy: Our favourite Philosophers from the 15th to 20th Century. de Montaigne, Hobbes, Descartes, Leibniz, Spinoza, Berkeley, Hume, Kant, Schopenhauer, Nietzsche, ..." class="head10b"> 
+          Western Philosophy</a></td>
+      </tr>
+      <tr> 
+        <td align="left"><a href="http://www.cafepress.com/philosophy_shop/923893" title="Modern / 20th Century Philosophy. Albert Camus, Noam Chomsky, Jacques Derrida, Michel Foucault, William James, Karl Popper, Bertrand Russell, Ludwig Wittgenstein, ... " class="head10b"> 
+          20th Century Philosophers</a></td>
+      </tr>
+      <tr> 
+        <td align="left"><a href="http://www.cafepress.com/philosophy_shop/923197" title="Physics: Newton's Mechanics, Electromagnetic Field Theory, Einstein's Theory of Relativity, Quantum Theory, Cosmology. Galileo, Newton, Faraday, Maxwell, Rutherford, Lorentz, Planck, Bohr, de Broglie, Schrodinger, Dirac, Born, Feynman, Bohm." class="head10b"> 
+          Physics &amp; Science Quotes</a></td>
+      </tr>
+      <tr> 
+        <td align="left"><a href="http://www.cafepress.com/philosophy_shop/923615" title="Famous Scientists, Inventors, Explorers: Archimedes, Columbus, Bell, Edison, Tesla." class="head10b"> 
+          Scientists &amp; Inventors</a></td>
+      </tr>
+      <tr> 
+        <td align="left"><a href="http://www.cafepress.com/philosophy_shop/923886" title="Famous Mathematicians: Pythagoras, Euclid, Newton, Pascal, Leibniz, Godel, Einstein, ..." class="head10b"> 
+          Famous Mathematicians</a></td>
+      </tr>
+      <tr> 
+        <td align="left"><a href="http://www.cafepress.com/philosophy_shop/923715" title="Theology: Quotes on God, Religion and Morality. Aristotle, Cicero, Jesus Christ, Thomas Aquinas, Francis Bacon, Leo Tolstoy, Albert Einstein." class="head10b"> 
+          God Religion Morality</a></td>
+      </tr>
+      <tr> 
+        <td align="left"><a href="http://www.cafepress.com/philosophy_shop/920860" title="Famous Leaders, Politicians, Emperors, American Presidents, British Prime Ministers, etc. Some very powerful and profound quotes on Civilisation, War and Peace, Democracy, Politics, Political Science and Society." class="head10b"> 
+          Famous Leader Politics</a></td>
+      </tr>
+      <tr> 
+        <td align="left"><a href="http://www.cafepress.com/philosophy_shop/922974" title="Famous Philosophers of Education / Educational Philosophy: Socrates, Plato, Aristotle, de Montaigne, Rousseau, Montessori, Steiner, Freud, Einstein." class="head10b"> 
+          Education Educational</a></td>
+      </tr>
+      <tr> 
+        <td align="left"><a href="http://www.cafepress.com/philosophy_shop/923667" title="Life, Nature, Evolution, Ecology, Environment: Famous environmentalist's portraits and quotes. Thoreau, Darwin, Spencer, Arne Naess / Deep Ecology." class="head10b"> 
+          Evolution Life Nature</a></td>
+      </tr>
+      <tr> 
+        <td align="left"><a href="http://www.cafepress.com/philosophy_shop/923908" title="Motivational / Inspirational Portraits and Wisdom Quotes. Socrates, Plato, Aristotle, Edmund Burke, Winston Churchill, Mahatma Gandhi, Sigmund Freud, Martin Luther King, Albert Einstein." class="head10b"> 
+          Motivational Inspirational</a></td>
+      </tr>
+      <tr> 
+        <td align="left"><a href="http://www.cafepress.com/philosophy_shop/923853" title="Famous Poets / Metaphysical Poetry. Baudelaire, Coleridge, Shelley, Wordsworth, ..." class="head10b"> 
+          Metaphysical Poets</a></td>
+      </tr>
+      <tr> 
+        <td align="left"><a href="http://www.cafepress.com/philosophy_shop/923837" title="Literature: Famous Books and Authors Portraits and Quotes. Emily &amp; Charlotte Bronte, George Orwell, Edgar Allen Poe, William Shakespeare, Mary Shelley, Voltaire, Oscar Wilde, ..." class="head10b"> 
+          Literature Books Authors</a></td>
+      </tr>
+      <tr> 
+        <td align="left"><a href="http://www.cafepress.com/philosophy_shop/923756" title="Famous Musicians &amp; Classical Composers: Bach, Beethoven, Handel, Mozart, Wagner." class="head10b"> 
+          Musicians Composers</a></td>
+      </tr>
+      <tr> 
+        <td align="left"><a href="http://www.cafepress.com/philosophy_shop/923652" title="Famous Women of Philosophy, Science, Feminism &amp; Art: Sappho, Hypatia, Cleopatra, Wollstonecraft, Shelly, Curie, Nin, de Beauvoir, Arendt." class="head10b"> 
+          Women Feminism Art</a></td>
+      </tr>
+      <tr> 
+        <td align="left"><a href="http://www.cafepress.com/philosophy_shop/1029487" title="Renaissance Fine Art: Sandro Botticelli, Leonardo Da Vinci, Michelangelo, Titian (Tiziano Vecellio), Caravaggio, Velazquez, Rembrandt van Rijn, Peter Paul Rubens. Impressionist Fine Art: Francisco de Goya, Pierre-August Renoir, Vincent Van Gogh, Henri Matisse, Pablo Picasso. Vintage Erotic Art / Sapphic Erotica." class="head10b"> 
+          Renaissance Fine Art</a></td>
+      </tr>
+      <tr> 
+        <td align="left"><a href="http://www.cafepress.com/philosophy_shop/1004477" title="Adult Satirical Stupid Humor &amp; Funny Jokes: In a crazy world a sense of humor is great protection! Enjoy some profoundly silly twisted humour from great minds!" class="head10b"> 
+          Satire Humor Funny Jokes</a></td>
+      </tr>
+      <tr align="center"> 
+        <td class="f10grey"><hr /> <form action="http://www.google.com/search" method="get" target="_blank">
+            <input type="submit" name="btnG" value="Google Search" title="Google Search this Philosophy Website or our Philosophy Shop (click button to select)" class="f10grey" />
+            <input type="text" name="q" size="25" maxlength="255" class="f10grey" />
+            <input type="hidden" name="domains" value="cafepress.com/philosophy_shop; spaceandmotion.com" />
+            <br />
+            <input type="radio" name="sitesearch" value="cafepress.com/philosophy_shop" class="f10grey" checked="checked" />
+            Philosophy Shop<br />
+            <input type="radio" name="sitesearch" value="spaceandmotion.com" />
+            <a href="http://www.spaceandmotion.com/" title="Home Page: Purpose of this Website on Truth and the Dynamic Unity of Reality. Most Simple Science Theory of Reality clearly works. On the Philosophy Physics Metaphysics of Space and the Wave Structure of Matter." target="_blank" class="h10blue">Philosophy 
+            Website</a></form></td>
+      </tr>
+      <tr align="center"> 
+        <td><hr />
+          Newsletter<br /> <form method="post" action="http://www.cafepress.com/cp/members/member_subscription.aspx">
+            <input name="storeid" value="philosophy_shop" type="hidden" />
+            <input name="external" value="2" type="hidden" />
+            <input name="emailtype" value="1" type="hidden" />
+            <input name="cbstore" value="on" type="hidden" />
+            <input name="successurl" value="" type="hidden" />
+            <input name="failureurl" value="" type="hidden" />
+            <input name="txtemail" type="text" size="20" maxlength="50" class="f10grey" value="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Add email" onfocus="this.value=''" />
+            <input type="submit" value="Submit" class="f10grey" title="Sign up to the Philosophy Shop Monthly Newsletter" />
+          </form></td>
+      </tr>
+    </table>
+  </div>
+</div>
+<div align="center"> 
+  <div align="left" style="width:65%; padding: 0px 10px 0px 10px; text-align:left; background-color:white;"> 
+    <div align="center" class="divtitle"><a href="http://www.cafepress.com/philosophy_shop" title="Home Page: PHILOSOPHY GIFT SHOP of Famous Philosophers, Scientists &amp; Artists Quotations, Fine Art Prints / Portraits. Products include Posters, 2010 Wall Calendars, Greeting Cards, Post Cards, Journals, Men's &amp; Women's Clothing &amp; Apparel, T-Shirts, Sweatshirts, Tote Bags, Caps, Hats, Stickers, Buttons &amp; Magnets."> 
+      <span class="heading">The Philosophy Gift Shop</span></a><br />
+      <span class="f18"><em>'The Gift of Truth Excels all Other Gifts' (Buddha)</em></span> 
+    </div>
+    <div class="f12"><img src="http://www.spaceandmotion.com/Images/philosophy-shop/karene-river-200-5.jpg" alt="Karene Jade Howie - Student of Philosophy and overworked shop keeper!" name="karenejade" width="157" height="200" align="left" id="karenejade" /><br />
+      Hello and welcome to the Philosophy Shop. We have a beautiful gallery of 
+      famous portraits and fine art prints with profound quotes from many of the 
+      greatest minds of human history - making it simple and easy to find artful 
+      intelligent gifts for friends and family (and yourself of course!).<br />
+      <br />
+      We have purchased a variety of things (posters, journals, calendars, caps, 
+      t-shirts, buttons, coffee mugs, etc.) and can confirm their high quality. 
+      But most importantly, the daily experience of seeing these portraits and 
+      words of wisdom is a cheerful reminder of the more noble and beautiful aspects 
+      of our human nature &amp; creativity.<br />
+      <br />
+      So stand out from the crowd (and get some interesting comments!) with our 
+      cool collection of clothing, prints and apparel!<br /><br />
+
+      <br />
+      Hope you enjoy browsing around. Cheers,<br />
+      <a href="http://www.spaceandmotion.com/Howie-Biography.htm" class="f16" title="Karene the Philosophy Shop Mistress! Biography and further thoughts of Karene Jade Howie, student of Philosophy, Human Sexuality." target="_blank">Karene 
+      Jade Howie</a><br />
+      <br />
+    <br />
+    <table border="0" align="center" id="philosophy">
+      <tr align="center" valign="top" class="head10b"> 
+        <td><a href="http://www.cafepress.com/philosophy_shop/923543" title="Ancient Greek Philosophy / Philosopher's Portraits and Quotes: Thales, Anaximander, Anaximenes, Heraclitus, Pythagoras, Parmenides, Socrates, Plato, Aristotle, Hypatia, Epicurus." class="head10b"><img src="http://www.spaceandmotion.com/Images/philosophy-shop/ancient-greek-philosophy.jpg" alt="'At his best, man is the noblest of all animals; separated from law and justice he is the worst.' (Aristotle)" name="ancientgreekshop" width="40" height="60" border="0" id="ancientgreekshop" /></a></td>
+        <td><a href="http://www.cafepress.com/philosophy_shop/923576" title="Eastern Philosophy (Indian, Chinese) Portraits and Quotes. Confucius, Lao Tzu, Buddha, Mahatma Gandhi, Dalai Lama (Tibet), Hinduism, Buddhism, Taoism." class="head9ph"><img src="http://www.spaceandmotion.com/Images/philosophy-shop/eastern-indian-chinese.jpg" alt="'Hatred is never appeased by hatred in this world; it is appeased by love. This is an eternal Law.' (Buddha)" name="easternshop" width="40" height="60" border="0" id="easternshop" /></a></td>
+        <td><a href="http://www.cafepress.com/philosophy_shop/923943" title="Western Philosophy: Our favourite Philosophers from the 15th to 20th Century. de Montaigne, Hobbes, Descartes, Leibniz, Spinoza, Berkeley, Hume, Kant, Schopenhauer, Nietzsche, ..." class="head10b"><img src="http://www.spaceandmotion.com/Images/philosophy-shop/western-philosophy.jpg" alt="'I have striven not to laugh at human actions, not to weep at them, nor to hate them, but to understand them.' (Spinoza)" name="westernshop" width="40" height="60" border="0" id="westernshop" /></a></td>
+        <td><a href="http://www.cafepress.com/philosophy_shop/923893" title="Modern / 20th Century Philosophy. Albert Camus, Noam Chomsky, Jacques Derrida, Michel Foucault, William James, Karl Popper, Bertrand Russell, Ludwig Wittgenstein, ... " class="head10b"><img src="http://www.spaceandmotion.com/Images/philosophy-shop/modern-philosophy.jpg" alt="'The whole problem with the world is that fools and fanatics are always so certain of themselves, and wiser people so full of doubts.' (Bertrand Russell)" name="modernshop" width="40" height="60" border="0" id="modernshop" /></a></td>
+        <td><a href="http://www.cafepress.com/philosophy_shop/923197" title="Physics: Newton's Mechanics, Electromagnetic Field Theory, Einstein's Theory of Relativity, Quantum Theory, Cosmology. Galileo, Newton, Faraday, Maxwell, Rutherford, Lorentz, Planck, Bohr, de Broglie, Schrodinger, Dirac, Born, Feynman, Bohm." class="head10b"><img src="http://www.spaceandmotion.com/Images/philosophy-shop/physics-relativity-quantum.jpg" alt="'The scientist only imposes two things, namely truth and sincerity, imposes them upon himself and upon other scientists'. (Erwin Schrodinger)" name="physicsshop" width="40" height="60" border="0" id="physicsshop" /></a></td>
+        <td><a href="http://www.cafepress.com/philosophy_shop/923886" title="Famous Mathematicians: Pythagoras, Euclid, Newton, Pascal, Leibniz, Godel, Einstein, ..." class="head10b"><img src="http://www.spaceandmotion.com/Images/philosophy-shop/mathematics-shop.jpg" alt="'The laws of nature are but the mathematical thoughts of God.' (Euclid)" name="mathsshop" width="40" height="60" border="0" id="mathsshop" /></a></td>
+        <td><a href="http://www.cafepress.com/philosophy_shop/923615" title="Famous Scientists, Inventors, Explorers: Archimedes, Columbus, Bell, Edison, Tesla." class="head10b"><img src="http://www.spaceandmotion.com/Images/philosophy-shop/scientists-inventors.jpg" alt="'I am one of those who think like Nobel, that humanity will draw more good than evil from new discoveries.' (Marie Curie)" name="scientistshop" width="40" height="60" border="0" id="scientistshop" /></a></td>
+        <td><a href="http://www.cafepress.com/philosophy_shop/923715" title="Theology: Quotes on God, Religion and Morality. Aristotle, Cicero, Jesus Christ, Thomas Aquinas, Francis Bacon, Leo Tolstoy, Albert Einstein." class="head10b"><img src="http://www.spaceandmotion.com/Images/philosophy-shop/theology-god-religion.jpg" alt="'Religion is regarded by the common people as true, by the wise as false, and by the rulers as useful.' (Seneca the Younger)" name="theologyshop" width="40" height="60" border="0" id="theologyshop" /></a></td>
+        <td><a href="http://www.cafepress.com/philosophy_shop/920860" title="Famous Leaders, Politicians, Emperors, American Presidents, British Prime Ministers, etc. Some very powerful and profound quotes on Civilisation, War and Peace, Democracy, Politics, Political Science and Society." class="head10b"><img src="http://www.spaceandmotion.com/Images/philosophy-shop/famous-leaders-politicians.jpg" alt="'If civilization is to survive, we must cultivate the science of human relationships - the ability of all peoples, of all kinds, to live together, in the same world at peace.' (Franklin D. Roosevelt (FDR))" name="politicshop" width="40" height="60" border="0" id="politicshop" /></a></td>
+      </tr>
+      <tr align="center" valign="top" class="head10b"> 
+        <td><a href="http://www.cafepress.com/philosophy_shop/922974" title="Famous Philosophers of Education / Educational Philosophy: Socrates, Plato, Aristotle, de Montaigne, Rousseau, Montessori, Steiner, Freud, Einstein." class="head10b"><img src="http://www.spaceandmotion.com/Images/philosophy-shop/educational-philosophy-shop.jpg" alt="'Since philosophy is the art which teaches us how to live, and since children need to learn it as much as we do at other ages, why do we not instruct them in it?' (Michel de Montaigne on Philosophy of Education)" name="educationshop" width="40" height="60" border="0" id="educationshop" /></a></td>
+        <td><a href="http://www.cafepress.com/philosophy_shop/923667" title="Life, Nature, Evolution, Ecology, Environment: Famous environmentalist's portraits and quotes. Thoreau, Darwin, Spencer, Arne Naess / Deep Ecology." class="head9ph"><img src="http://www.spaceandmotion.com/Images/philosophy-shop/evolution-ecology-nature.jpg" alt="'The wise man must remember that while he is a descendant of the past, he is a parent of the future.' (Herbert Spencer)" name="evolutionshop" width="40" height="60" border="0" id="evolutionshop" /></a></td>
+        <td><a href="http://www.cafepress.com/philosophy_shop/923908" title="Motivational / Inspirational Portraits and Wisdom Quotes. Socrates, Plato, Aristotle, Edmund Burke, Winston Churchill, Mahatma Gandhi, Sigmund Freud, Martin Luther King, Albert Einstein." class="head10b"><img src="http://www.spaceandmotion.com/Images/philosophy-shop/motivational-inspirational.jpg" alt="'The Truth is far more powerful than any weapon of mass destruction.' (Mohandas Mahatma Gandhi)" name="motivationshop" width="40" height="60" border="0" id="motivationshop" /></a></td>
+        <td><a href="http://www.cafepress.com/philosophy_shop/923853" title="Famous Poets / Metaphysical Poetry. Baudelaire, Coleridge, Shelley, Wordsworth, ..." class="head10b"><img src="http://www.spaceandmotion.com/Images/philosophy-shop/poets-metaphysical-poetry.jpg" alt="'No one was ever yet a great poet, without being at the same time a profound philosopher. For poetry is the blossom and the fragrancy of all human knowledge, human thoughts, human passions, emotions, language.' (Samuel Taylor Coleridge)" name="poetshop" width="40" height="60" border="0" id="poetshop" /></a></td>
+        <td><a href="http://www.cafepress.com/philosophy_shop/923837" title="Literature: Famous Books and Authors Portraits and Quotes. Emily &amp; Charlotte Bronte, George Orwell, Edgar Allen Poe, William Shakespeare, Mary Shelley, Voltaire, Oscar Wilde, ..." class="head10b"><img src="http://www.spaceandmotion.com/Images/philosophy-shop/literature-books-authors.jpg" alt="'In a time of universal deceit - telling the truth is a revolutionary act.' (George Orwell)" name="bookshop" width="40" height="60" border="0" id="bookshop" /></a></td>
+        <td><a href="http://www.cafepress.com/philosophy_shop/923756" title="Famous Musicians &amp; Classical Composers: Bach, Beethoven, Handel, Mozart, Wagner." class="head10b"><img src="http://www.spaceandmotion.com/Images/philosophy-shop/music-composers.jpg" alt="'Neither a lofty degree of intelligence nor imagination nor both together go to the making of genius. Love, love, love, that is the soul of genius.' (Wolfgang Amadeus Mozart)" name="musicshop" width="40" height="60" border="0" id="musicshop" /></a></td>
+        <td><a href="http://www.cafepress.com/philosophy_shop/923652" title="Famous Women of Philosophy, Science, Feminism &amp; Art: Sappho, Hypatia, Cleopatra, Wollstonecraft, Shelly, Curie, Nin, de Beauvoir, Arendt." class="head10b"><img src="http://www.spaceandmotion.com/Images/philosophy-shop/famous-women-feminist.jpg" alt="'No man chooses evil because it is evil; he only mistakes it for happiness, the good he seeks.' (Mary Wollstonecraft, Vindication of the Rights of Women)" name="womenshop" width="40" height="60" border="0" id="womenshop" /></a></td>
+        <td><a href="http://www.cafepress.com/philosophy_shop/1029487" title="Renaissance Fine Art: Sandro Botticelli, Leonardo Da Vinci, Michelangelo, Titian (Tiziano Vecellio), Caravaggio, Velazquez, Rembrandt van Rijn, Peter Paul Rubens. Impressionist Fine Art: Francisco de Goya, Pierre-August Renoir, Vincent Van Gogh, Henri Matisse, Pablo Picasso. Vintage Erotic Art / Sapphic Erotica." class="head10b"><img src="http://www.spaceandmotion.com/Images/philosophy-shop/fine-art-prints.jpg" alt="'Fantasy, abandoned by reason, produces impossible monsters; united with it, she is the mother of the arts and the origin of marvels.' (Francisco de Goya)" name="fineartshop" width="40" height="60" border="0" id="fineartshop" /></a></td>
+        <td><a href="http://www.cafepress.com/philosophy_shop/1004477" title="Adult Satirical Stupid Humor &amp; Funny Jokes: In a crazy world a sense of humor is great protection! Enjoy some profoundly silly twisted humour from great minds!" class="head10b"><img src="http://www.spaceandmotion.com/Images/philosophy-shop/humor-funny-jokes.jpg" alt="'QUESTION: What do you get when you cross the Godfather with a philosopher? ANSWER: An offer you can't understand.'" name="humorshop" width="40" height="60" border="0" id="humorshop" /></a></td>
+      </tr>
+    </table>
+    <hr />
+<!-- /custom shop header --><!-- /custom shop header --><!-- /custom shop header -->
+<!-- /custom shop header --><!-- /custom shop header --><!-- /custom shop header -->
+
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+	<tr>
+
+		<td id="bodyContentTD">
+            <div id="bodyContent" class="bodyText">
+        
+            <!-- CafePress content --><!-- CafePress content --><!-- CafePress content -->
+            <!-- CafePress content --><!-- CafePress content --><!-- CafePress content -->
+
+<link rel="stylesheet" type="text/css" href="http://content.cpcache.com/js/jquery/jqueryui/jquery-ui-1.8.7.cafepress.css"/>
+<link rel="stylesheet" type="text/css" href="http://content.cpcache.com/premium/css/premiumPersonalizev2.css"/>
+
+
+<!-- Start Main Content -->
+
+
+<!-- Breadcrumbs -->
+
+<p class="breadCrumb"><nobr><a href="/philosophy_shop">Famous Art Science Quotes Poster T-Shirt Gift Shop</a></nobr> &gt; <nobr><a href="/philosophy_shop/1015647">Mini Posters</a></nobr> &gt; <b>Francisco Goya: Painting of Woman Mini Art Print</b></p>
+
+<!-- /Breadcrumbs -->
+
+
+<table border="0" bordercolor="#000000" cellspacing="0" cellpadding="0" width="100%" id="productArea">
+	<tr valign="top">
+
+		<td align="center" width="240">
+			<table border="0" cellspacing="0" cellpadding="0" align="center" tablecontent="productimage" width="240">
+				<tr>
+					<td align="center">
+						<!-- Product Image -->
+						<div class="views">
+						   
+							<img id="mainimg" class="templateimage" border="0" class="imageborder" name="mainimg" src="http://i3.cpcache.com/product/39196067/francisco_goya_painting_of_woman_mini_art_print.jpg?height=240&width=240" alt="Francisco Goya: Painting of Woman Mini Art Print" id="productImageLarge" />
+							 
+							<br /><br /><br />
+   						</div>
+						
+					</td>
+				</tr>
+
+			
+				<tr>
+					<td><img src="http://content.cpcache.com/global/img/spacer.gif" width="1" height="6" alt="" border="0"></td>
+				</tr>
+				<tr>
+					<td align="left" nowrap class="xsmallText"><span class="xsmallText">
+					
+							<a class="viewlarger" href="javascript:getColorAndViewLarger('color_39196067','/cp/moredetails.aspx?showBleed=false&ProductNo=39196067','height=610,width=650,scrollbars=1')">View larger</a><br/>
+					
+					</span></td>
+				</tr>
+			
+
+			</table>
+			<!-- Product Swatches -->
+			
+
+			<!-- /Product Swatches -->
+		</td>
+
+
+
+    	<td class="smallText" style="padding-left:10px;" width="100%">
+
+        <div class="container">
+            <!-- Product Name/Caption -->
+    		<div id="productCaption" class="pageTitle head"><h1>Francisco Goya: Painting of Woman Mini Art Print</h1></div>
+    		<!-- /Product Name/Caption -->
+
+
+
+
+		<!-- Product Class -->
+		
+		<!-- /Product Class -->
+
+
+
+		
+
+			<!-- CD Info:  Genre or Category -->
+			
+			<!-- /CD info -->
+
+			<!-- Product Description Provided by Store Owner -->
+			
+				<p>"Feminism is the radical notion that women are people." (Cheris Kramerae, author of A Feminist Dictionary, 1996, printed on Goya Portrait of a Woman) Mini Art Poster</p>
+			
+			<!-- /Product Description -->
+		
+
+
+<div id="ordering" class="block">
+	<!-- Ordering -->
+<form method="post" id="prod_detail_form" name="prod_detail_form" action="/cp/addtocart.aspx">
+   
+    <input type=hidden name=keepshopping value="/philosophy_shop/1015647">
+    <input type="hidden" name="storeid" value="philosophy_shop">
+    <input type="hidden" name="channel" value="3" />
+    
+    <input type="hidden" name="s" value="1015647"/>
+    
+
+	<div id="premOrdering" class="block">
+		
+		<!-- Price -->
+		<div id="priceDiv"><span id="sellPriceId">$9.99</span></div>
+		<!-- /Price -->
+        <!-- Personalization --><!-- Personalization --><!-- Personalization -->
+        <!-- Personalization --><!-- Personalization --><!-- Personalization -->
+        <script type="text/javascript">
+        function addTnSize(url) {
+            return url.substr(0, url.length - 4) + "_81x77_padToSquare-true.png";
+        }
+        </script>
+
+        <!-- Front Personalization -->
+		
+        <!-- /End Front Personalization -->
+        
+		<!-- Back Personalization -->
+		
+        
+        </div>
+        <!--  / End Back Personalization -->
+        
+        
+                
+		<!-- Size Attribute Selector -->
+		
+		<div id="sizeContainer" class="xsmallText block">
+		    
+ 
+
+
+		</div>
+		
+
+		<!-- Color Attribute Selector -->
+		
+			<select name="color_39196067" id="color_39196067" style="display:none">
+			<option value="0"/></select>
+		
+        <div id="addToCartSection" class="block">
+           <table>
+            	<tr>
+            		<td class="xsmallText">Qty:
+            		<!-- TODO: CONDITION -->
+            		
+            		<input name="qty_39196067" value="1" onkeyup="removeNonNumbers(this);" size="5" maxlength="5" />&nbsp;&nbsp;
+                    
+            		</td>
+            		<!-- END -->
+            		<td style="padding-top:8px;">
+            		
+
+			        <input type="hidden" id="isTemplateProduct" value="False" />
+					
+						<input id="AddToCartButtonId" type="image" src="http://content.cpcache.com/marketplace/img/btn_AddtoCart.gif" alt="Add to Cart" />
+					
+            			    <input id="imageNo" type="hidden" value="9760751" />
+            			    <input id="productTypeNo" type="hidden" value="92" />
+            			    <input id="userToken" type="hidden" value="830243cd-c9a8-4769-be57-3227ede337d4"/>
+            		    
+            		</td>            		            	
+            	</tr>
+            </table>
+        </div>       
+		
+    <!-- Country Alert -->
+    
+    <!-- /Country Alert -->
+        <div class="xsmallText availMsg block" id="availabilityMessage">
+        AVAILABILITY:
+        
+        	<!-- this must be javascript!  for some reason availabiltiy messages 
+        		written directly dont display javascript:launchHelp links correctly -->
+        	<script language="javascript">
+        	document.write("In Stock");
+        	</script>
+        	
+        </div>
+
+		
+
+
+		<span class="xsmallText prodNumber block" id="productNumber">
+		<!-- Product Number-->
+		Product Number: 030-39196067
+		<!-- /Product Number-->
+		</span>
+           
+	</div><!-- /premOrdering -->
+
+		
+		
+    <div id="shareContainer" class="block">
+		<div id="fb-root"></div>
+        <script>
+            window.fbAsyncInit = function() {
+                FB.init({ appId: 114957851874294, status: true, cookie: true,
+                    xfbml: true
+                });
+            };
+            (function() {
+                var e = document.createElement('script'); e.async = true;
+                e.src = document.location.protocol +
+                '//connect.facebook.net/en_US/all.js';
+                document.getElementById('fb-root').appendChild(e);
+            } ());
+        </script>
+         <fb:like href="http://www.cafepress.com/philosophy_shop.39196067" show_faces="false" width="350" font="arial"></fb:like>
+		<div class="addthis_toolbox addthis_default_style">   
+	        <a href="http://www.addthis.com/bookmark.php?v=250&amp;username=cpadmin" addthis:url="http://www.cafepress.com/philosophy_shop.39196067" class="addthis_button_compact" >Share</a>
+            <span class="addthis_separator">|</span>
+            <a class="addthis_button_twitter" addthis:url="http://www.cafepress.com/philosophy_shop.39196067" ></a>
+            <a class="addthis_button_myspace" addthis:url="http://www.cafepress.com/philosophy_shop.39196067" ></a>
+            <a class="addthis_button_kaboodle" addthis:url="http://www.cafepress.com/philosophy_shop.39196067" ></a>
+            <a class="addthis_button_google" addthis:url="http://www.cafepress.com/philosophy_shop.39196067" ></a>
+            <a class="addthis_button_email" addthis:url="http://www.cafepress.com/philosophy_shop.39196067" ></a>
+	    </div>
+	    <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#username=cpadmin"></script>
+    </div>
+	</form>
+</div><!-- /Ordering -->
+
+<div id="productInfo" class="block">
+
+
+    
+    <!-- Default Product Information -->
+    <!-- Excludes Fulfillment Items -->
+    
+    
+    <a name="prodinfo"></a><b>Product Information</b><br/>
+    <!-- Misc Notes -->
+    
+    <!-- /Misc Notes -->
+    
+    <!-- CafePress Product Description -->
+    Like a poster -- only smaller!  Our high quality one page prints are printed on glossy, 12 point paper and measure 11" x 17".
+   
+<ul><li>Full bleed dynamic color</li>
+<li>Glossy, 12 point paper</li></ul><br><ul><li>IMPORTED</li></ul>
+    	<!-- /CP Product Description -->
+    	
+<!-- /Default Product Information -->
+
+	
+
+
+		<!-- Extra Fulfillment Product Info -->
+				
+		<!-- /Extra Fulfillment Product Info -->
+
+		<!-- Disinfo Newsletter-->
+		
+		<!-- End Disinfo Newsletter-->
+
+		<!-- disclaimer -->
+			<!-- snehal 4/4/07 part of release 3 changes
+		   we are choosing to denote products like maternity light as a colored garment even though
+		   there is just one color for that product. This simplifies a lot of things. And hence the following check
+		   where if the available colors are more than one and then a Shopkeeper chooses only one color for a perticular
+		   garment in his store then show the * message -->
+		
+</div>
+
+<div id="extraDetails" class="block">
+		<!-- Track Listing -->
+		
+
+	<div id="longDescription" class="block">
+		<!-- Long Description -->
+			
+		<!-- /Long Description -->
+	</div>
+</div>
+
+</div>
+
+		</td>
+	</tr>
+</table>
+<div id="carouselcontainer" style="display: none">
+	<h4 id="carouselheader">Browse more products:</h4>
+	<ul id="otherproductscarousel" class="jcarousel-skin-pdp"></ul>
+</div>
+
+<!--Begin TellApart-->
+<div id="__cmbDiv" style="display: none"></div>
+<script language="JavaScript" type="text/javascript">
+    var __cmbLoaded = false, __cmbRunnable = null;
+    (function() {
+        try {
+            var b;
+            var actionType = "pv";
+            function d() {
+                var action = TellApartCrumb.makeCrumbAction("5KYSO562qV11", actionType);
+                action.setActionAttr("ProductCategoryPath", "Francisco Goya: Painting of Woman Mini Art Print");
+                action.setActionAttr("SKU", "39196067");
+                action.setActionAttr("PageType", "Product");
+                action.finalize()
+            };
+
+            if ("https:" == document.location.protocol) b = "https://sslt.tellapart.com/crumb.js";
+            else { for (var g = navigator.userAgent, h = 0, e = 0, i = g.length; e < i; e++) h ^= g.charCodeAt(e); b = "http://static.tellapart.com/crumb" + h % 10 + ".js" }
+            if (actionType === "tx") { __cmbRunnable = d; document.write("\x3Cscript type='text/java" + "script' src='" + b + "'\x3E\x3C/script\x3E"); __cmbLoaded = true }
+            else {
+                var a = document.createElement("script"); a.src = b; a.onload = function() { __cmbLoaded = true; d() };
+                a.onreadystatechange = function() { if (/loaded|complete/.test(a.readyState) && !__cmbLoaded) { __cmbLoaded = true; d() } };
+                var s = document.getElementsByTagName("script")[0];
+                s.parentNode.insertBefore(a, s)
+            } 
+        } catch (j) { } 
+    })();
+</script>
+<script language="JavaScript" type="text/javascript">
+    if (__cmbRunnable != null) { __cmbRunnable(); __cmbRunnable = null };
+</script>
+<!--End TellApart-->
+
+<script type="text/javascript" src="http://content.cpcache.com/js/jquery/jcarousel/lib/jquery.jcarousel.js"></script>
+<script type="text/javascript">
+	var pdpOtherProducts = new Array();
+	var productImageToUrlMapping = {};
+
+	function addProductImage(product, perspective, color, size, url) {
+		var productToPerspectiveMap = productImageToUrlMapping;
+		
+		if (! productToPerspectiveMap[product]) productToPerspectiveMap[product] = {};
+		var perspectiveToSizeMap = productToPerspectiveMap[product];
+		
+		if (! perspectiveToSizeMap[perspective]) perspectiveToSizeMap[perspective] = {};
+		var sizeToColorMap = perspectiveToSizeMap[perspective];
+		
+		if (! sizeToColorMap[size]) sizeToColorMap[size] = {};
+		var colorToUrlMap = sizeToColorMap[size];
+		
+		var imageObj = {
+			url: url
+		};
+		
+		colorToUrlMap[color] = imageObj;
+	}
+	
+	function setProductImageUrl(product, perspective)
+	{
+		var pdpAreaWidth = $('#productArea').width();
+		var size = (pdpAreaWidth >= 635) ? 350 : 240;
+		var color = jQuery('#color_' + product + ' option:selected').attr("value");
+		if (! perspective) perspective = getFirstKeyFromMap(productImageToUrlMapping[product]);
+		if (! size) size = getFirstKeyFromMap(productImageToUrlMapping[product][perspective]);
+		if (! color) color = getFirstKeyFromMap(productImageToUrlMapping[product][perspective][size]);
+		
+		//alert("setProductImageUrl: " + product + " perspective " + perspective + " size: " + size + " color: " + color + " url: " + productImageToUrlMapping[product][perspective][size][color].url.replace('[subfields]', RefreshTemplateSubstitutableValues("", true)));
+		$('.templateimage').attr('src', productImageToUrlMapping[product][perspective][size][color].url.replace('[subfields]', RefreshTemplateSubstitutableValues("", true, perspective)));
+		$('#viewlarger').attr('side', perspective);
+		productPerspective = perspective;
+	}
+	
+	function populateOtherProducts(productId, caption, productimageurl)
+	{
+		var otherProductObj = {
+			id: productId,
+			caption: caption,
+			imageurl: productimageurl
+		};
+		pdpOtherProducts.push(otherProductObj);
+	}
+	function carouselItemLoadCallback(carousel, state)
+	{
+		var items = pdpOtherProducts;
+	    for (var i = carousel.first; i <= carousel.last; i++) {
+	        if (carousel.has(i)) {
+	            continue;
+	        }
+	
+	        if (i > items.length) {
+	            break;
+	        }
+	        
+	        carousel.add(i, carouselGetItemHTML(items[i-1]));
+	    }
+	};
+	function carouselGetItemHTML(item)
+	{
+	    return '<div class="carouselitem"><a href="' + getUrl(item.id) + '" rel="nofollow"><img src="' + item.imageurl + '" alt="' + item.caption + '" /></a><br/><a href="' + getUrl(item.id) + '" rel="nofollow">' + item.caption + '</a></div>';
+	};
+	function getUrl(productId)
+	{
+		var url = document.URL;
+		var dotIndex = url.lastIndexOf('.');
+		var url2 = url.substring(0, dotIndex+1);
+		return url2 + productId;
+	};
+	function getFirstKeyFromMap(map) {
+		for (key in map) {
+			return key;
+		}
+	}		
+
+	populateOtherProducts(39196071,'Sexuality Feminism Goya Greeting Cards (Package of', 'http://i3.cpcache.com/product/39196071/sexuality_feminism_goya_greeting_cards_package_of.jpg?height=100&width=100')
+populateOtherProducts(47095233,'Sexuality Feminism: Rights of Black T-Shirt', 'http://i3.cpcache.com/product/47095233/sexuality_feminism_rights_of_black_tshirt.jpg?height=100&width=100')
+populateOtherProducts(39196070,'Sexuality Feminism Goya Journal', 'http://i3.cpcache.com/product/39196070/sexuality_feminism_goya_journal.jpg?height=100&width=100')
+populateOtherProducts(39025638,'Sexuality Feminism Goya Teddy Bear', 'http://i3.cpcache.com/product/39025638/sexuality_feminism_goya_teddy_bear.jpg?height=100&width=100')
+populateOtherProducts(39025617,'Sexuality Feminism Goya Men\'s Sleeveless Tee', 'http://i3.cpcache.com/product/39025617/sexuality_feminism_goya_mens_sleeveless_tee.jpg?height=100&width=100')
+populateOtherProducts(52003129,'Sexuality Feminism: Rights of Black T-Shirt', 'http://i3.cpcache.com/product/52003129/sexuality_feminism_rights_of_black_tshirt.jpg?height=100&width=100')
+populateOtherProducts(39025598,'Sexuality Feminism Goya Infant Creeper', 'http://i3.cpcache.com/product/39025598/sexuality_feminism_goya_infant_creeper.jpg?height=100&width=100')
+populateOtherProducts(39025610,'Sexuality Feminism Goya Large Poster', 'http://i3.cpcache.com/product/39025610/sexuality_feminism_goya_large_poster.jpg?height=100&width=100')
+populateOtherProducts(39025596,'Sexuality Feminism Goya Greeting Cards (Package of', 'http://i3.cpcache.com/product/39025596/sexuality_feminism_goya_greeting_cards_package_of.jpg?height=100&width=100')
+populateOtherProducts(39025579,'Sexuality Feminism Goya Baseball Jersey', 'http://i3.cpcache.com/product/39025579/sexuality_feminism_goya_baseball_jersey.jpg?height=100&width=100')
+populateOtherProducts(39025604,'Sexuality Feminism Goya Kids Baseball Jersey', 'http://i3.cpcache.com/product/39025604/sexuality_feminism_goya_kids_baseball_jersey.jpg?height=100&width=100')
+populateOtherProducts(39025606,'Sexuality Feminism Goya Kids Sweatshirt', 'http://i3.cpcache.com/product/39025606/sexuality_feminism_goya_kids_sweatshirt.jpg?height=100&width=100')
+populateOtherProducts(39025651,'Sexuality Feminism Goya Women\'s Tank Top', 'http://i3.cpcache.com/product/39025651/sexuality_feminism_goya_womens_tank_top.jpg?height=100&width=100')
+populateOtherProducts(39025650,'Sexuality Feminism Goya Women\'s T-Shirt', 'http://i3.cpcache.com/product/39025650/sexuality_feminism_goya_womens_tshirt.jpg?height=100&width=100')
+populateOtherProducts(39025603,'Sexuality Feminism Goya Jr. Spaghetti Tank', 'http://i3.cpcache.com/product/39025603/sexuality_feminism_goya_jr_spaghetti_tank.jpg?height=100&width=100')
+populateOtherProducts(39025592,'Sexuality Feminism Goya Fitted T-Shirt', 'http://i3.cpcache.com/product/39025592/sexuality_feminism_goya_fitted_tshirt.jpg?height=100&width=100')
+populateOtherProducts(39025577,'Sexuality Feminism Goya Ash Grey T-Shirt', 'http://i3.cpcache.com/product/39025577/sexuality_feminism_goya_ash_grey_tshirt.jpg?height=100&width=100')
+populateOtherProducts(39025616,'Sexuality Feminism Goya Ringer T', 'http://i3.cpcache.com/product/39025616/sexuality_feminism_goya_ringer_t.jpg?height=100&width=100')
+populateOtherProducts(39025646,'Sexuality Feminism Goya White T-Shirt', 'http://i3.cpcache.com/product/39025646/sexuality_feminism_goya_white_tshirt.jpg?height=100&width=100')
+populateOtherProducts(39025599,'Sexuality Feminism Goya Journal', 'http://i3.cpcache.com/product/39025599/sexuality_feminism_goya_journal.jpg?height=100&width=100')
+populateOtherProducts(39025595,'Sexuality Feminism Goya Golf Shirt', 'http://i3.cpcache.com/product/39025595/sexuality_feminism_goya_golf_shirt.jpg?height=100&width=100')
+populateOtherProducts(39196068,'Feminism: Women as People: Goya Print Large Poster', 'http://i3.cpcache.com/product/39196068/feminism_women_as_people_goya_print_large_poster.jpg?height=100&width=100')
+populateOtherProducts(39025653,'Sexuality Feminism Goya Yellow T-Shirt', 'http://i3.cpcache.com/product/39025653/sexuality_feminism_goya_yellow_tshirt.jpg?height=100&width=100')
+populateOtherProducts(39025642,'Sexuality Feminism Goya Tote Bag', 'http://i3.cpcache.com/product/39025642/sexuality_feminism_goya_tote_bag.jpg?height=100&width=100')
+populateOtherProducts(39025591,'Sexuality Feminism Goya Dog T-Shirt', 'http://i3.cpcache.com/product/39025591/sexuality_feminism_goya_dog_tshirt.jpg?height=100&width=100')
+populateOtherProducts(39025600,'Sexuality Feminism Goya Jr. Jersey T-Shirt', 'http://i3.cpcache.com/product/39025600/sexuality_feminism_goya_jr_jersey_tshirt.jpg?height=100&width=100')
+populateOtherProducts(39025612,'Sexuality Feminism Goya Long Sleeve T-Shirt', 'http://i3.cpcache.com/product/39025612/sexuality_feminism_goya_long_sleeve_tshirt.jpg?height=100&width=100')
+populateOtherProducts(39025647,'Sexuality Feminism Goya Women\'s Cap Sleeve T-Shirt', 'http://i3.cpcache.com/product/39025647/sexuality_feminism_goya_womens_cap_sleeve_tshirt.jpg?height=100&width=100')
+populateOtherProducts(39025631,'Sexuality Feminism Goya Jr. Ringer T-Shirt', 'http://i3.cpcache.com/product/39025631/sexuality_feminism_goya_jr_ringer_tshirt.jpg?height=100&width=100')
+populateOtherProducts(39025578,'Sexuality Feminism Goya BBQ Apron', 'http://i3.cpcache.com/product/39025578/sexuality_feminism_goya_bbq_apron.jpg?height=100&width=100')
+populateOtherProducts(39025589,'Sexuality Feminism Goya Cap', 'http://i3.cpcache.com/product/39025589/sexuality_feminism_goya_cap.jpg?height=100&width=100')
+populateOtherProducts(39025597,'Sexuality Feminism Goya Hooded Sweatshirt', 'http://i3.cpcache.com/product/39025597/sexuality_feminism_goya_hooded_sweatshirt.jpg?height=100&width=100')
+populateOtherProducts(39025601,'Sexuality Feminism Goya Jr. Hoodie', 'http://i3.cpcache.com/product/39025601/sexuality_feminism_goya_jr_hoodie.jpg?height=100&width=100')
+populateOtherProducts(39025641,'Sexuality Feminism Goya Toddler T-Shirt', 'http://i3.cpcache.com/product/39025641/sexuality_feminism_goya_toddler_tshirt.jpg?height=100&width=100')
+populateOtherProducts(39025580,'Sexuality Feminism Goya Bib', 'http://i3.cpcache.com/product/39025580/sexuality_feminism_goya_bib.jpg?height=100&width=100')
+populateOtherProducts(39025648,'Sexuality Feminism Goya Women\'s Pink T-Shirt', 'http://i3.cpcache.com/product/39025648/sexuality_feminism_goya_womens_pink_tshirt.jpg?height=100&width=100')
+populateOtherProducts(39196072,'Goya Art: Portrait of a Woman Fr. Poster', 'http://i3.cpcache.com/product/39196072/goya_art_portrait_of_a_woman_fr_poster.jpg?height=100&width=100')
+populateOtherProducts(39025605,'Sexuality Feminism Goya Kids Hoodie', 'http://i3.cpcache.com/product/39025605/sexuality_feminism_goya_kids_hoodie.jpg?height=100&width=100')
+populateOtherProducts(39025632,'Sexuality Feminism Goya Small Poster', 'http://i3.cpcache.com/product/39025632/sexuality_feminism_goya_small_poster.jpg?height=100&width=100')
+populateOtherProducts(39025593,'Sexuality Feminism Goya Framed Panel Print', 'http://i3.cpcache.com/product/39025593/sexuality_feminism_goya_framed_panel_print.jpg?height=100&width=100')
+populateOtherProducts(39025625,'Sexuality Feminism Goya Organic Cotton Tee', 'http://i3.cpcache.com/product/39025625/sexuality_feminism_goya_organic_cotton_tee.jpg?height=100&width=100')
+populateOtherProducts(39196065,'Goya Portrait of Lady: Radical Feminism', 'http://i3.cpcache.com/product/39196065/goya_portrait_of_lady_radical_feminism.jpg?height=100&width=100')
+populateOtherProducts(39025582,'Sexuality Feminism Goya Boxer Shorts', 'http://i3.cpcache.com/product/39025582/sexuality_feminism_goya_boxer_shorts.jpg?height=100&width=100')
+populateOtherProducts(39025637,'Sexuality Feminism Goya Sweatshirt', 'http://i3.cpcache.com/product/39025637/sexuality_feminism_goya_sweatshirt.jpg?height=100&width=100')
+populateOtherProducts(39025602,'Sexuality Feminism Goya Jr. Raglan', 'http://i3.cpcache.com/product/39025602/sexuality_feminism_goya_jr_raglan.jpg?height=100&width=100')
+populateOtherProducts(39025607,'Sexuality Feminism Goya Kids T-Shirt', 'http://i3.cpcache.com/product/39025607/sexuality_feminism_goya_kids_tshirt.jpg?height=100&width=100')
+populateOtherProducts(39025590,'Sexuality Feminism Goya Classic Thong', 'http://i3.cpcache.com/product/39025590/sexuality_feminism_goya_classic_thong.jpg?height=100&width=100')
+populateOtherProducts(39025644,'Sexuality Feminism Goya Value T-shirt', 'http://i3.cpcache.com/product/39025644/sexuality_feminism_goya_value_tshirt.jpg?height=100&width=100')
+populateOtherProducts(39025622,'Sexuality Feminism Goya Mini Poster Print', 'http://i3.cpcache.com/product/39025622/sexuality_feminism_goya_mini_poster_print.jpg?height=100&width=100')
+addProductImage(39196067,'Front',0, 350, 'http://i3.cpcache.com/product/39196067/francisco_goya_painting_of_woman_mini_art_print.jpg?height=350&width=350')
+addProductImage(39196067,'Front',0, 240, 'http://i3.cpcache.com/product/39196067/francisco_goya_painting_of_woman_mini_art_print.jpg?height=240&width=240')
+addProductImage(39196067,'Front',0, 48, 'http://i3.cpcache.com/product/39196067/francisco_goya_painting_of_woman_mini_art_print.jpg?height=48&width=48')
+
+	jQuery(document).ready(function() {
+		if ("0" != "0" && "" != "")
+		{
+			jQuery('#mainimg').css("border", "0");
+			jQuery('#mainimg').css("color", "");
+		}else
+		{
+			jQuery('#mainimg').addClass("defaultimageborder");
+			jQuery('#mainimg').removeClass("imageborder");
+		}		
+
+		if (pdpOtherProducts.length > 0)
+			jQuery('#carouselcontainer').show();
+
+		jQuery('#otherproductscarousel').jcarousel({ 
+			size: pdpOtherProducts.length,
+			itemLoadCallback: {
+				onBeforeAnimation: carouselItemLoadCallback
+			}
+		});		
+	});
+</script>
+
+<script type="text/javascript">
+	refreshAvailabilityMessage();
+ 	var fc_prod_view="39196067";
+</script>
+
+
+
+<div id="cropDialog">
+    <div id="cropTargetContainer">
+        <img src='' id='croptarget' alt='' />
+    </div>
+    <div id="previewPane" >
+        <p>Drag the square at the left to choose the part of your image you want to use.  Tips: Click and drag any corner to resize; click and drag from the inside to move.</p>
+        <div id="previewWrapper">
+            <h3>Crop Preview:</h3>
+            <div id="previewImgContainer" style="overflow:hidden">
+                <img src='' id='croppreview' alt='' />
+            </div>
+            <p>Click done if you're happy with the way it looks.</p>
+        </div>
+    </div>
+</div>
+<div id="personalizePreviewDialog"></div>
+
+<script type="text/javascript">
+	var merchandiseId = "92";
+	
+	if (!window.templateProducts) { templateProducts = new Array(); }
+	
+</script>
+<script type="text/javascript" src="http://content.cpcache.com/js/ajaxupload.3.6.js"></script>
+
+
+
+<script type="text/javascript">
+	var configVars = {
+		contentUrl: "http://content.cpcache.com",
+		imagingUrl: "http://images.cpcache.com"
+	},
+	templateImageSubstitutableFieldsFront = new Array(),
+	templateImageSubstitutableFieldsBack = new Array(),
+	templateSubstitutableFieldsFront = new Array(),
+	templateSubstitutableFieldsBack = new Array(),
+	ImagesUploaded = new Array(),
+	ImageBasket = new Array(),
+	dialog,
+	viewLarger,
+	viewBack,
+	previewDesign,
+	selectedImageId,
+	productId = 39196067,
+	productPerspective = 'front';
+	
+
+
+</script>
+<script src="http://content.cpcache.com/js/jquery/jcrop/jquery.Jcrop.min.js?v=26e80482a83cb6b56ab4915cc8a7e87e" type="text/javascript"></script>
+<script src="http://content.cpcache.com/js/personalization/imagecrop.js?v=dc25ce7454141aeba9f15ed50cf9cdf5" type="text/javascript"></script>
+<script src="http://content.cpcache.com/js/templateinit_premium.js?v=71b7e99c1b73a653a0d51005f5c0b90a" type="text/javascript"></script>
+<script src="http://content.cpcache.com/js/personalization/personalization_shops.js?v=f6be385625cd2732fd40da10b1cb9c93" type="text/javascript"></script>
+<script src="http://content.cpcache.com/shop/shops_pdp.js?v=fb1c5a0840515dc56416bef9c9b306fd" type="text/javascript"></script>
+
+
+
+    
+<script type="text/javascript">
+    updateUrlParamsOnLoad("Front");
+</script>
+
+
+
+
+<script language="javascript">
+	om_pagename = "ProductDetailsPage" ;
+	om_channel = "PremiumShop";
+	om_events ="prodView";
+	om_products ="39196067" ;
+	om_eVar12 = "2002788";
+	om_eVar3="PremiumShop";
+	om_prop8 = "philosophy_shop";	
+</script>
+
+
+
+<!-- End Content, Start Footer Include -->
+			<!-- /CafePress content --><!-- /CafePress content --><!-- /CafePress content -->
+            <!-- /CafePress content --><!-- /CafePress content --><!-- /CafePress content -->
+            
+            </div><!-- / bodyContent -->
+		</td>
+	</tr>
+</table>
+
+
+
+<!-- custom shop footer --><!-- custom shop footer --><!-- custom shop footer -->
+<!-- custom shop footer --><!-- custom shop footer --><!-- custom shop footer -->
+<hr />
+    <div align="center"> <a name="facebook" id="facebook"></a> <span class="f24">Facebook 
+      Connect</span><br />
+      <div align="center"><fb:comments></fb:comments></div>
+      <br />
+      <div align="center"><fb:like-box profile_id="110284645691827" width="500"></fb:like-box></div>
+      <hr />
+      <br />
+      <br />
+      <a name="googlefriend" id="googlefriend"></a> <span class="f24">Google Friend 
+      Connect</span><br />
+      <script type="text/javascript" src="http://www.google.com/friendconnect/script/friendconnect.js"></script>
+      <div id="div-5176364042860426481" style="width:500px;border:1px solid #cccccc;"></div>
+      <script type="text/javascript">
+var skin = {};
+skin['BORDER_COLOR'] = '#cccccc';
+skin['ENDCAP_BG_COLOR'] = '#333333';
+skin['ENDCAP_TEXT_COLOR'] = '#cccccc';
+skin['ENDCAP_LINK_COLOR'] = '#7777cc';
+skin['ALTERNATE_BG_COLOR'] = '#ffffff';
+skin['CONTENT_BG_COLOR'] = '#ffffff';
+skin['CONTENT_LINK_COLOR'] = '#7777cc';
+skin['CONTENT_TEXT_COLOR'] = '#333333';
+skin['CONTENT_SECONDARY_LINK_COLOR'] = '#7777cc';
+skin['CONTENT_SECONDARY_TEXT_COLOR'] = '#666666';
+skin['CONTENT_HEADLINE_COLOR'] = '#333333';
+skin['NUMBER_ROWS'] = '12';
+google.friendconnect.container.setParentUrl('/' /* location of rpc_relay.html and canvas.html */);
+google.friendconnect.container.renderMembersGadget(
+ { id: 'div-5176364042860426481',
+   site: '15474033014787319677' },
+  skin);
+</script>
+      <script type="text/javascript" src="http://www.google.com/friendconnect/script/friendconnect.js"></script>
+      <div id="div-5816668652001846411" style="width:500px;border:1px solid #cccccc;"></div>
+      <script type="text/javascript">
+var skin = {};
+skin['BORDER_COLOR'] = '#cccccc';
+skin['ENDCAP_BG_COLOR'] = '#333333';
+skin['ENDCAP_TEXT_COLOR'] = '#cccccc';
+skin['ENDCAP_LINK_COLOR'] = '#7777cc';
+skin['ALTERNATE_BG_COLOR'] = '#ffffff';
+skin['CONTENT_BG_COLOR'] = '#ffffff';
+skin['CONTENT_LINK_COLOR'] = '#7777cc';
+skin['CONTENT_TEXT_COLOR'] = '#333333';
+skin['CONTENT_SECONDARY_LINK_COLOR'] = '#7777cc';
+skin['CONTENT_SECONDARY_TEXT_COLOR'] = '#666666';
+skin['CONTENT_HEADLINE_COLOR'] = '#c0c0c0';
+skin['DEFAULT_COMMENT_TEXT'] = 'Comments  / Questions welcome! Post here ...';
+skin['HEADER_TEXT'] = 'Ratings / Comments';
+skin['POSTS_PER_PAGE'] = '5';
+google.friendconnect.container.setParentUrl('/' /* location of rpc_relay.html and canvas.html */);
+google.friendconnect.container.renderReviewGadget(
+ { id: 'div-5816668652001846411',
+   site: '15474033014787319677',
+   'view-params':{"disableMinMax":"true","scope":"SITE","allowAnonymousPost":"true","startMaximized":"true"}
+ },
+  skin);
+</script>
+      <hr />
+      <a name="twitter" id="twitter"></a> <span class="f24">Twitter</span><br />
+      <div id="hovercard">@Philosophy_Shop</div>
+      <br />
+      <br />
+      <div id="follow">&nbsp;</div>
+      <br />
+      <br />
+      <div id="tweet">&nbsp;</div>
+      <br />
+      <br />
+      <h3>Philosophy Shop Tweets</h3>
+      <script type="text/javascript" src="http://widgets.twimg.com/j/2/widget.js"></script>
+      <script type="text/javascript">
+new TWTR.Widget({
+  version: 2,
+  type: 'profile',
+  rpp: 8,
+  interval: 6000,
+  width: 350,
+  height: 500,
+  theme: {
+    shell: {
+      background: '#333333',
+      color: '#ffffff'
+    },
+    tweets: {
+      background: '#ffffff',
+      color: '#444444',
+      links: '#6a07eb'
+    }
+  },
+  features: {
+    scrollbar: false,
+    loop: false,
+    live: false,
+    hashtags: false,
+    timestamp: true,
+    avatars: false,
+    behavior: 'all'
+  }
+}).render().setUser('Philosophy_Shop').start();
+</script>
+    </div>
+    <hr />
+    <h3 align="center">About Cafepress: Website Details / Customer Service &amp; 
+      Help</h3>
+    <p class="f12"><a href="http://www.cafepress.com/cp/search/index.aspx/?pid=2002788" target="_blank" title="Search Cafepress Website">ABOUT 
+      CAFEPRESS:</a> Cafepress are a print on demand online shop. As of November 
+      2009 there are over 6 million members (shopkeepers who create their own 
+      shops &amp; products) and 40 million products! The website is in the top 
+      1000 websites on the internet and gets around one million visitors each 
+      day. Because products are print on demand they are more expensive than mass 
+      produced goods, however, you have the advantage of purchasing unique custom 
+      made products that are not found anywhere else (this is particularly true 
+      for our philosophy shop). Cafepress ships products world wide (we live in 
+      Australia and have bought numerous items without any problems) and they 
+      have a thirty day full refund so it is a safe place to purchase some pretty 
+      cool gifts / presents (for yourself or others!).</p>
+    <p class="f12"><strong>Order by Phone</strong> 1-877-809-1659 (30 Day Refund 
+      - Satisfaction Guaranteed)</p>
+    <p class="f12"><a href="http://www.cafepress.com/cp/info/help/" target="_blank" title="Cafepress Customer Help for Orders and Shipping.">CUSTOMER 
+      SERVICE:</a> For help with: Cafepress Sales - Where's My Stuff - Track your 
+      Recent Orders - View or Change your Order - Shipping and Returns - Shipping 
+      Rates - Make a Return or Exchange - Questions and Order by Phone 1-877-809-1659 
+      - Satisfaction Guaranteed.</p>
+    <p align="center"><a href="http://www.cafepress.com/cp/info/help/privacy_policy.aspx"><img height="31" alt="" src="http://www.cafepress.com/content/help/img/finalmark.gif" width="116" border="0" /></a><a href="http://www.webbyawards.com/webbys/current.php#webby_entry_retail" target="_blank" rel="nofollow"><img height="53" alt="Webby Award Winner 2005" src="http://www.cafepress.com/content/global/img/webbylogo.gif" width="79" border="0" /></a><a href="http://www.cafepress.com/cp/info/help/"><img height="45" alt="Need Help, Click Here" src="http://www.cafepress.com/content/global/img/needhelp.gif" width="83" border="0" /></a></p>
+    <hr />
+    <br />
+<p align="center"><a class="tf_upfront_badge" href="http://www.thefind.com/store/about-cafepress" title="TheFind Upfront" style="text-decoration:none;"><b>Philosophy Shop: Famous Portraits and Quotes on Posters, Tshirts, Clothing, Apparel.</b> is <u>UpFront</u></a>
+  <script src="//upfront.thefind.com/scripts/main/utils-init-ajaxlib/upfront-badgeinit.js" type="text/javascript"></script>
+  <script type="text/javascript">thefind.upfront.init('tf_upfront_badge', '03d029980a83203e55ded48ae9d71a70')</script></p>
+    <hr />
+    <br />
+    <table align="center">
+      <tr> 
+        <td class="f16"><img src="http://www.spaceandmotion.com/Images/philosophy-shop/karene-river-200-5.jpg" alt="Karene contemplating all the work she has done on the Philosophy Shop!" name="site" width="157" height="200" align="left" id="site" /><strong>ABOUT 
+          YOUR SHOP KEEPER</strong>: <a href="http://www.spaceandmotion.com/Howie-Biography.htm" title="Karene the Shop Keeper! Biography: Karene Jade Howie, Student of Philosophy" target="_blank">KARENE 
+          HOWIE</a><br />
+          My partner (philosopher Geoff Haselhurst) and I are building a large 
+          philosophy website which is the source (and inspiration) for most of 
+          the Philosophy images and quotes in this shop.<br />
+          Below are some of our favourite philosophers / quotes and links to relevant 
+          pages of our website. Philosophy (which is ultimately about Wisdom from 
+          Truth and Reality) is important to our world (all proceeds from this 
+          shop are used to promote our work on Philosophy).<br />
+          Thus we also hope that you find our philosophy website interesting!<br />
+          Cheers, Karene. (August, 2010)<br /></td>
+      </tr>
+    </table>
+    <hr />
+    <div align="center"><a href="http://www.spaceandmotion.com" title="Home Page with Summary of the Wave Structure of Matter. Contents / Links to over 250 physics philosophy and metaphysics articles on website (see below for main articles)." target="_blank">The 
+      Most Simple Science Theory of Physical Reality.<br />
+      Philosophy Physics Metaphysics of Space &amp; the Wave Structure of Matter 
+      (WSM).</a></div>
+    <table border="0" align="center">
+      <tr align="center"> 
+        <td><a href="http://www.spaceandmotion.com/Most-Simple-Scientific-Theory-Reality.htm"><img src="http://www.spaceandmotion.com/Images/simple-science-theory-reality.jpg" alt="'Most of the fundamental ideas of science are simple and can be expressed in a language comprehensible to everyone. ... Everything should be made as simple as possible, but not simpler.' (Albert Einstein)" name="science321" width="58" height="58" border="0" id="science321" /></a></td>
+        <td><a href="http://www.spaceandmotion.com/metaphysics.htm"><img src="http://www.spaceandmotion.com/Images/metaphysics-one-reality-kant.jpg" alt="'Metaphysics is universal and is exclusively concerned with primary substance. ... And here we will have the science to study that which is, both in its essence and in the properties which it has.' (Aristotle, 340BC)" name="metaphysics321" width="58" height="58" border="0" id="metaphysics321" /></a></td>
+        <td><a href="http://www.spaceandmotion.com/Physics-Albert-Einstein-Theory-Relativity.htm"><img src="http://www.spaceandmotion.com/Images/albert-einstein-theory-of-relativity.jpg" alt="'When forced to summarize the general theory of relativity in one sentence: Time and space and gravitation have no separate existence from matter.' (Albert Einstein)" name="einstein321" width="58" height="58" border="0" id="einstein321" /></a></td>
+        <td><a href="http://www.spaceandmotion.com/Physics-Quantum-Theory-Mechanics.htm"><img src="http://www.spaceandmotion.com/Images/physics-quantum-theory-mechanics.jpg" alt="'What we observe as material bodies and forces are nothing but shapes and variations in the structure of space. Particles are just schaumkommen (appearances).' (Erwin Schrodinger on Quantum Physics / Wave Mechanics)" name="quantum321" width="58" height="58" border="0" id="quantum321" /></a></td>
+        <td><a href="http://www.spaceandmotion.com/Cosmology.htm"><img src="http://www.spaceandmotion.com/Images/cosmology-universe-big-bang.jpg" alt="'Can we visualize a universe which is finite yet unbounded? ... The supreme task of the physicist is to arrive at those universal laws from which the cosmos can be built up by pure deduction.' (Albert Einstein)" name="cosmology321" width="58" height="58" border="0" id="cosmology321" /></a></td>
+        <td><a href="http://www.spaceandmotion.com/Philosophy.htm"><img src="http://www.spaceandmotion.com/Images/philosophy-truth-wisdom-reality.jpg" alt="'There is nothing more necessary than truth. ... One does not want to be deceived, under the supposition that it is injurious, dangerous, or fatal to be deceived.' (Friedrich Nietzsche on Philosophy)" name="philosophy321" width="58" height="58" border="0" id="philosophy321" /></a></td>
+        <td><a href="http://www.spaceandmotion.com/evolution-ecology-nature-culture-society.htm"><img src="http://www.spaceandmotion.com/Images/nature-ecology-evolution-utopia.jpg" alt="'Although I am fully convinced of the truth of Evolution, I by no means expect to convince experienced naturalists. But I look with confidence to the future naturalists, who will be able to view both sides with impartiality.' (Charles Darwin)" name="evolution321" width="58" height="58" border="0" id="evolution321" /></a></td>
+        <td><a href="http://www.spaceandmotion.com/theology-morality-god-world-religions.htm"><img src="http://www.spaceandmotion.com/Images/theology-morality-god-religion.jpg" alt="'If religion is the establishing of a relationship between man and the universe, then morality is the explanation of those activities that automatically result when a person maintains a relationship to the universe.' (Leo Tolstoy)" name="theology321" width="58" height="58" border="0" id="theology321" /></a></td>
+        <td><a href="http://sexuality.spaceandmotion.com/"><img src="http://www.spaceandmotion.com/Images/philosophy-sex-shop.jpg" alt="'Analyse any human emotion, no matter how far it may be removed from the sphere of sex, and you are sure to discover somewhere the primal impulse, to which life owes its perpetuation.' (Sigmund Freud)" name="sex321" width="58" height="58" border="0" id="sex321" /></a></td>
+        <td><a href="http://www.spaceandmotion.com/health/index.htm"><img src="http://www.spaceandmotion.com/Images/organic-farming-food-nutrition.jpg" alt="Evolving a healthy lifestyle. Preventative medicine of physical exercise and consuming clean air, water and nature based organic food." name="health321" width="58" height="58" border="0" id="health321" /></a></td>
+      </tr>
+      <tr align="center"> 
+        <td><a href="http://www.spaceandmotion.com/Most-Simple-Scientific-Theory-Reality.htm" title="What is the most simple Science Theory for describing Physical Reality (Occam's Razor)? The Wave Structure of Matter (WSM). Founded on One Principle describing One Substance Space and its Properties as a Wave Medium." class="head10b">Simple<br />
+          Science</a></td>
+        <td><a href="http://www.spaceandmotion.com/metaphysics.htm" title="On the Metaphysics of One Substance, Space, existing with the Properties of a Wave Medium, for Spherical Standing Waves that form Matter. Uniting Space Time Matter and Motion (the Dynamic Unity of Reality)." class="head10b">Metaphysics<br />
+          Reality</a></td>
+        <td><a href="http://www.spaceandmotion.com/Physics-Albert-Einstein-Theory-Relativity.htm" title="Simplifying Albert Einstein's Theory of Special and General Relativity: From Einstein's Continuous Spherical Fields in Space-Time to the Wave Structure of Matter's Spherical Waves in Continuous Space." class="head10b">Einstein's<br />
+          Relativity</a></td>
+        <td><a href="http://www.spaceandmotion.com/Physics-Quantum-Theory-Mechanics.htm" title="Explaining the discrete 'particle' properties of light and matter (particle / wave duality) of Quantum Theory / Wave Mechanics with the Spherical Standing Wave Structure of Matter (WSM)." class="head10b">Quantum<br />
+          Physics</a></td>
+        <td><a href="http://www.spaceandmotion.com/Cosmology.htm" title="The Wave Structure of Matter (WSM) explains a Finite Spherical Universe within an Infinite Eternal Space. The end of the Big Bang Theory. (Wolff-Haselhurst Cosmology)" class="head10b">Cosmology<br />
+          Universe</a></td>
+        <td><a href="http://www.spaceandmotion.com/Philosophy.htm" title="Philosophy: Love of wisdom from truth and reality. 'Those whose hearts are fixed on reality itself deserve the title of Philosophers ... the philosopher is in love with truth, the unchanging reality which is the object of knowledge.' (Plato)" class="head10b">Philosophy<br />
+          Truth</a></td>
+        <td><a href="http://www.spaceandmotion.com/evolution-ecology-nature-culture-society.htm" title="Explaining the Interconnected Evolution and Ecology of both Life and Matter. Utopia as the evolution of human culture &amp; society founded on Truth, Reality and Harmony with Nature." class="head10b">Evolution<br />
+          Utopia</a></td>
+        <td><a href="http://www.spaceandmotion.com/theology-morality-god-world-religions.htm" title="Theology: Religion (religare = to bind) as our true connection to universe (God, Nature, Tao, Brahman, Space). Morality as guidance of actions from necessary connection to Universe. Dynamic Unity of WSM confirms Buddhism / Pantheism." class="head10b">Theology<br />
+          Morality</a></td>
+        <td><a href="http://sexuality.spaceandmotion.com/" title="Evolutionary Philosophy of Human Sexuality. On Sexual Evolution, Sexology, Female &amp; Male Sexuality, Child / Teen Sexual Development, Education, Men's &amp; Women's Sexual Health, Oral Sex, Masturbation, Gay, Lesbian, Abuse, Laws &amp; Politics, Religion &amp; Taboos, Porn Industry, Erotic Art, Fetish, Sacred Sexuality, Statistics, Slang." class="head10b">Philosophy<br />
+          Sexuality</a></td>
+        <td><a href="http://www.spaceandmotion.com/health/index.htm" title="Improving Human Health with Physical Exercise and an Evolutionary Diet (correct nutrition from Nature based Organic foods) Vs. Medicine and Prescription Drugs." class="head10b">Human 
+          Health<br />
+          Nutrition Diet</a></td>
+      </tr>
+    </table>
+    <hr />
+    <table align="center">
+      <tr> 
+        <td align="center"><h3>Copyright 2005 - 2010: All Rights Reserved</h3></td>
+      </tr>
+      <tr> 
+        <td><hr /></td>
+      </tr>
+      <tr> 
+        <td><script src="http://www.google-analytics.com/urchin.js" type="text/javascript"></script> 
+          <script type="text/javascript"> _uacct = "UA-140527-2"; urchinTracker(); </script></td>
+      </tr>
+      <tr> 
+        <td align="center"><script type="text/javascript" language="JavaScript"> var sc_project=520511;  var sc_partition=3;  </script> 
+          <script type="text/javascript" language="JavaScript" src="http://www.statcounter.com/counter/counter.js"></script> 
+        </td>
+      </tr>
+      <tr> 
+        <td align="center" class="f12">The Philosophy Shop averages around 2,500 
+          visitors each day (6,000 page views).<br />
+          We are one of the Top Shops at Cafepress (out of about 6 million shops).</td>
+      </tr>
+    </table>
+    <hr />
+    <div id="fb-root">&nbsp;</div>
+    <script>
+  window.fbAsyncInit = function() {
+    FB.init({appId: '348955065223', status: true, cookie: true,
+             xfbml: true});
+  };
+  (function() {
+    var e = document.createElement('script'); e.async = true;
+    e.src = document.location.protocol +
+      '//connect.facebook.net/en_US/all.js';
+    document.getElementById('fb-root').appendChild(e);
+  }());
+</script>
+  </div>
+</div>
+<!-- /custom shop footer --><!-- /custom shop footer --><!-- /custom shop footer -->
+<!-- /custom shop footer --><!-- /custom shop footer --><!-- /custom shop footer -->
+
+</div><!-- / cpWrapper -->
+
+<div id="cafepressFooter" class="footerContent smallprint">
+    <a href="http://www.cafepress.com/+gifts"><img src="http://content.cpcache.com/shop/images/cafepress_footer.gif" alt="Powered by CafePress"/></a>
+    <p id="cafepressFooterText" class="footerText">
+		This shop is powered by <a href="/" target="_blank" >CafePress Inc.</a>
+		Copyright © 1999-<script type="text/javascript">var d = new Date();document.write(d.getFullYear());</script> CafePress.com. All rights reserved.<br>
+		<a rel="nofollow" href="/cp/info/help/privacy.aspx">Privacy Policy</a> |
+		<a rel="nofollow" href="/cp/info/help/law.aspx">Trademark &amp; Copyright Information</a><br/>
+		Non-US currency rates are updated daily and may fluctuate.
+	</p>
+    <div class="clear">&nbsp;</div>
+</div>
+<script src="http://content.cpcache.com/js/jquery/jquery.translate-1.4.7-all.min.js" type="text/javascript"></script>
+<script>
+	$(document).ready(function(){
+		var isDE = window.cafepress.countryCode;
+		if(isDE == 'DE'){
+			$.translate(function(){	
+				$('body').translate('de');
+                $('.cartItem').translate('de');
+			});
+		}
+	});
+</script>
+
+
+
+
+<!--Cats Code Begin-->
+	
+	<div id="instrumentation" style="display:none; color:white">{"SumOfAllMeasurementsBelowReportingThreshold":23}</div>
+<!--Cats Code End-->
+
+<!--Omniture Code Begins -->
+<!-- SiteCatalyst code variables version: H.2.
+Copyright 1997-2005 Omniture, Inc. -->
+
+
+
+<script type="text/javascript">
+	var session_logged_in_email="";
+	var session_member_no="";
+	var session_memberno="";
+	var AFFILIATE_MEMBER_NO="";
+	var AFFILIATE_CJ_MASTER_PID="7532081";
+	var AFFILIATE_CJ_PID="";
+	var LANDING_PAGE_MEMBER_NO="";
+	var AnalyzableVisitorExperimentAssignment="";
+	var VisitorId="A0A62FF30E4E967E8AC45B1B68BF51FA:4C35A1DE388447A8F139C4E309EC6A6C";
+	var notpurchase_channel_CSR="False";
+	var AFFILIATE_TYPE="";
+	var AFFILIATE_MEMBER_NO="";
+	var marketplace_google_tracking_page="";
+	var marketplace_google_tracking_product_category="";
+	var landingPage = '';
+	var landingProduct = '';
+</script>
+
+<!-- End SiteCatalyst code variables version: H.2. -->
+
+<!-- Omniture Code Ends -->
+
+<script type="text/javascript">
+  if (window.ROITracker){
+  var gaTracker150 = new ROITracker("UA-11730150-1", "t150", '.cafepress.com');
+  globalTracker.addTracker(gaTracker150);
+  gaTracker150._setAllowLinker(true);
+  gaTracker150._setAllowHash(false);
+  gaTracker150._trackPageview();
+
+  var gaTracker374 = new ROITracker("UA-3370374-1", "t374", '.cafepress.com');
+  globalTracker.addTracker(gaTracker374);
+  gaTracker374._setAllowLinker(true);
+  gaTracker374._setAllowHash(false);
+  gaTracker374._trackPageLoadTime();
+  gaTracker374._trackPageview();
+  } else {
+  if(typeof ga === "undefined") {
+  (function(i,s,o,g,r,a,m){
+  i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  }
+
+  ga('create', 'UA-11730150-1', {
+  cookieDomain: '.cafepress.com',
+  name: 'UA_150'
+  });
+  ga('UA_150.send', 'pageview');
+
+  ga('create', 'UA-3370374-1', {
+  cookieDomain: '.cafepress.com',
+  name: 'UA_374'
+  });
+  ga('UA_374.send', 'pageview');
+  }
+</script>
+
+
+<!-- Start Google Analytics UA-5952421-1 (Stores) 2009-01-11 Tracking -->
+
+<script type="text/javascript">
+	var fallback = false;
+	if (typeof window.ROITracker === "undefined") {
+		if(typeof ga === "undefined") {
+			var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+			document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/analytics.js' type='text/javascript'%3E%3C/script%3E"));
+		}
+		fallback = true;
+	}
+</script>
+<script type="text/javascript">
+	if (fallback) {
+		if (ga) {
+			ga('create', 'UA-5952421-1', {
+				cookieDomain: window.cafepress.domain,
+				name: 't7'
+			});
+			ga('t7.send', 'pageview');
+		}
+	} else {
+		var extraTracker = new ROITracker("UA-5952421-1", "t7", window.cafepress.domain);
+		globalTracker.addTracker(extraTracker);
+		extraTracker.disableMethod("_setCustomVar");
+		extraTracker._setSampleRate("100");
+		extraTracker._trackPageview();
+	}
+</script>
+
+<!-- End Google Analytics UA-5952421-1 (Stores) Tracking -->
+
+
+
+
+
+
+
+
+<script language="JavaScript">
+	var CampaignSource = "";
+	var CampaignMedium = "";
+	var CampaignKeyword = "";
+</script>
+
+<!-- Purposely deleting as temporary measure toward centralizing analytics.  -MC 9/15/2008-->
+
+<!-- End Footer_Prem -->
+
+
+
+</body>
+</html>

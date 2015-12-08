@@ -655,6 +655,59 @@
             }
         ]
     },
+    "html/carseatcover.com-0.html": {
+        "url": "http://carseatcover.com/cgi-bin/e-cart.cgi/factory-outlet/scViewProductGraphics.html?sid=7avi5kekk4lplei99qg5682ur4",
+        "forms": [
+            "s",
+            "s"
+        ],
+        "visible_html_fields": [
+            {
+                "p_keyword": "qq"
+            },
+            {
+                "p_make": "qc"
+            }
+        ]
+    },
+    "html/carseatcover.com-1.html": {
+        "url": "http://carseatcover.com/factory-outlet/HSUniversalSearchProductGraphics.html?p_marker=US&sid=7avi5kekk4lplei99qg5682ur4",
+        "forms": [
+            "-",
+            "b",
+            "-"
+        ],
+        "visible_html_fields": [
+            {
+                "p_keyword": "XX"
+            },
+            {
+                "COLOR": "OS",
+                "PATTERN": "OS"
+            },
+            {
+                "COLOR": "XX",
+                "PATTERN": "XX"
+            }
+        ]
+    },
+    "html/carseatcover.com-2.html": {
+        "url": "http://carseatcover.com/factory-outlet/hscViewProductDetail.html?sid=7avi5kekk4lplei99qg5682ur4&p_prodid=HSBU2546R&p_colhdr=CHDR",
+        "forms": [
+            "-",
+            "X",
+            "b"
+        ],
+        "visible_html_fields": [
+            {
+                "p_keyword": "XX"
+            },
+            {},
+            {
+                "p_couponcode": "in"
+            }
+        ]
+    },
     "html/climatecolab.org-0.html": {
         "url": "http://climatecolab.org/",
         "forms": [
@@ -6547,6 +6600,45 @@
             }
         ]
     },
+    "html/www.cafepress.com-0.html": {
+        "url": "http://www.cafepress.com/philosophy_shop",
+        "forms": [
+            "s",
+            "m"
+        ],
+        "visible_html_fields": [
+            {
+                "btnG": "Bs",
+                "q": "qq",
+                "sitesearch": "qc"
+            },
+            {
+                "txtemail": "e1"
+            }
+        ]
+    },
+    "html/www.cafepress.com-1.html": {
+        "url": "http://www.cafepress.com/philosophy_shop.39196067",
+        "forms": [
+            "X",
+            "X",
+            "b"
+        ],
+        "visible_html_fields": [
+            {
+                "btnG": "XX",
+                "q": "XX",
+                "sitesearch": "XX"
+            },
+            {
+                "txtemail": "XX"
+            },
+            {
+                "color_39196067": "OS",
+                "qty_39196067": "qt"
+            }
+        ]
+    },
     "html/www.caltronind.com-0.html": {
         "url": "http://www.caltronind.com/contact",
         "forms": [
@@ -6730,6 +6822,81 @@
         "visible_html_fields": [
             {
                 "dnn$dnnSEARCH$txtSearch": "qq"
+            }
+        ]
+    },
+    "html/www.cheesehouse.com-0.html": {
+        "url": "http://www.cheesehouse.com/",
+        "forms": [
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "email": "e1",
+                "name": "us",
+                "submit": "Bs"
+            }
+        ]
+    },
+    "html/www.cheesehouse.com-1.html": {
+        "url": "http://www.cheesehouse.com/contact-us.aspx",
+        "forms": [
+            "-"
+        ],
+        "visible_html_fields": [
+            {
+                "ctl00$ctl03$go": "XX",
+                "ctl00$ctl03$search": "XX",
+                "ctl00$pageContent$ctl01$btnSubmit": "XX",
+                "ctl00$pageContent$ctl01$cpcVerify": "XX",
+                "ctl00$pageContent$ctl01$ppQuestions$txtPQ2PA2": "XX",
+                "ctl00$pageContent$ctl01$ppQuestions$txtPQ3PA3": "XX",
+                "ctl00$pageContent$ctl01$ppQuestions$txtPQ4PA4": "XX",
+                "ctl00$pageContent$ctl01$ppQuestions$txtPQ5PA5": "XX"
+            }
+        ]
+    },
+    "html/www.cheesehouse.com-2.html": {
+        "url": "http://www.cheesehouse.com/shislers-dandelion-jelly.aspx",
+        "forms": [
+            "-"
+        ],
+        "visible_html_fields": [
+            {
+                "ctl00$ctl03$go": "XX",
+                "ctl00$ctl03$search": "XX",
+                "ctl00$pageContent$addToCart": "XX",
+                "ctl00$pageContent$ctl115$productList$ctl00$imbAdd": "XX",
+                "ctl00$pageContent$ctl115$productList$ctl01$imbAdd": "XX",
+                "ctl00$pageContent$ctl115$productList$ctl02$imbAdd": "XX",
+                "ctl00$pageContent$ctl115$productList$ctl03$imbAdd": "XX",
+                "ctl00$pageContent$txtQuantity": "XX"
+            }
+        ]
+    },
+    "html/www.cheesehouse.com-3.html": {
+        "url": "http://www.cheesehouse.com/picklesandpeppers.aspx",
+        "forms": [
+            "-"
+        ],
+        "visible_html_fields": [
+            {
+                "ctl00$ctl03$go": "XX",
+                "ctl00$ctl03$search": "XX",
+                "ctl00$pageContent$ctl05$productList$ctl00$imbAdd": "XX",
+                "ctl00$pageContent$ctl05$productList$ctl01$imbAdd": "XX",
+                "ctl00$pageContent$ctl05$productList$ctl02$imbAdd": "XX",
+                "ctl00$pageContent$ctl05$productList$ctl03$imbAdd": "XX",
+                "ctl00$pageContent$ctl05$productList$ctl04$imbAdd": "XX",
+                "ctl00$pageContent$ctl05$productList$ctl05$imbAdd": "XX",
+                "ctl00$pageContent$ctl05$productList$ctl06$imbAdd": "XX",
+                "ctl00$pageContent$ctl05$productList$ctl07$imbAdd": "XX",
+                "ctl00$pageContent$ctl05$productList$ctl08$imbAdd": "XX",
+                "ctl00$pageContent$ctl05$productList$ctl09$imbAdd": "XX",
+                "ctl00$pageContent$ctl05$productList$ctl10$imbAdd": "XX",
+                "ctl00$pageContent$ctl05$productList$ctl11$imbAdd": "XX",
+                "ctl00$pageContent$ctl05$sizeSelector": "XX",
+                "ctl00$pageContent$ctl05$sortSelector": "XX"
             }
         ]
     },
@@ -7215,6 +7382,58 @@
             },
             {
                 "data[Usuario][correo_electronico]": "e1"
+            }
+        ]
+    },
+    "html/www.davidcareyinc.com-0.html": {
+        "url": "http://www.davidcareyinc.com/",
+        "forms": [
+            "s"
+        ],
+        "visible_html_fields": [
+            {
+                "search": "qq"
+            }
+        ]
+    },
+    "html/www.davidcareyinc.com-1.html": {
+        "url": "http://www.davidcareyinc.com/ford-model-a-camp-shirt.html",
+        "forms": [
+            "X",
+            "b"
+        ],
+        "visible_html_fields": [
+            {
+                "search": "XX"
+            },
+            {
+                "pers[41][31]": "OS",
+                "quantity": "qt"
+            }
+        ]
+    },
+    "html/www.davidcareyinc.com-2.html": {
+        "url": "http://www.davidcareyinc.com/Contact-Us-5.html",
+        "forms": [
+            "X",
+            "c"
+        ],
+        "visible_html_fields": [
+            {
+                "search": "XX"
+            },
+            {
+                "custom_form_input-13": "nf",
+                "custom_form_input-14": "no",
+                "custom_form_input-15": "e1",
+                "custom_form_input-16": "ph",
+                "custom_form_input-17": "Sa",
+                "custom_form_input-18": "Ci",
+                "custom_form_input-19": "St",
+                "custom_form_input-20": "Zi",
+                "custom_form_input-21": "Co",
+                "custom_form_input-22": "CT",
+                "custom_form_input-23": "CC"
             }
         ]
     },
@@ -8728,6 +8947,60 @@
             }
         ]
     },
+    "html/www.heatshieldstore.com-0.html": {
+        "url": "https://www.heatshieldstore.com/sun_shades_for/acura/ilx_w_sensor_/2016",
+        "forms": [
+            "b",
+            "s",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "gold_1587_877688_42161": "OS",
+                "gold_1587_877689_42161": "OS",
+                "gold_1587_877690_42161": "OS",
+                "part_877688_42161_306150_0": "qt",
+                "part_877689_42161_306150_0": "qt",
+                "part_877690_42161_306150_0": "qt"
+            },
+            {
+                "make_url": "qc",
+                "model_url": "qc",
+                "model_year": "Oy"
+            },
+            {}
+        ]
+    },
+    "html/www.heatshieldstore.com-1.html": {
+        "url": "https://www.heatshieldstore.com/",
+        "forms": [
+            "-",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "make_url": "XX",
+                "model_url": "XX",
+                "model_year": "XX"
+            },
+            {}
+        ]
+    },
+    "html/www.heatshieldstore.com-2.html": {
+        "url": "https://www.heatshieldstore.com/contact",
+        "forms": [
+            "c",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "contact_form_email": "e1",
+                "contact_form_message": "CC",
+                "contact_form_name": "nf"
+            },
+            {}
+        ]
+    },
     "html/www.hq-mirror.de-0.html": {
         "url": "http://www.hq-mirror.de/auth/register",
         "forms": [
@@ -9425,6 +9698,57 @@
             },
             {
                 "keywords": "qq"
+            }
+        ]
+    },
+    "html/www.lanskybros.com-0.html": {
+        "url": "http://www.lanskybros.com/",
+        "forms": [
+            "-"
+        ],
+        "visible_html_fields": [
+            {
+                "ctl00$ctl00$NestedMaster$PageHeader$StoreHeader_H$SimpleSearch1$SearchPhrase": "XX",
+                "ctl00$ctl00$NestedMaster$PageHeader$StoreHeader_H$SimpleSearch2$SearchPhrase": "XX"
+            }
+        ]
+    },
+    "html/www.lanskybros.com-1.html": {
+        "url": "http://www.lanskybros.com/Ridin-with-the-King-P145.aspx",
+        "forms": [
+            "-"
+        ],
+        "visible_html_fields": [
+            {
+                "ctl00$ctl00$NestedMaster$LeftSidebar$CategorySearchSidebar_Left$KeywordButton": "XX",
+                "ctl00$ctl00$NestedMaster$LeftSidebar$CategorySearchSidebar_Left$KeywordField": "XX",
+                "ctl00$ctl00$NestedMaster$PageContent$ctl00$BuyProductDialog1$AddToBasketButton": "XX",
+                "ctl00$ctl00$NestedMaster$PageContent$ctl00$BuyProductDialog1$AddToWishlistButton": "XX",
+                "ctl00$ctl00$NestedMaster$PageContent$ctl00$BuyProductDialog1$OptionsList$ctl00$OptionChoices": "XX",
+                "ctl00$ctl00$NestedMaster$PageContent$ctl00$BuyProductDialog1$Quantity": "XX",
+                "ctl00$ctl00$NestedMaster$PageHeader$StoreHeader_H$SimpleSearch1$SearchPhrase": "XX",
+                "ctl00$ctl00$NestedMaster$PageHeader$StoreHeader_H$SimpleSearch2$SearchPhrase": "XX"
+            }
+        ]
+    },
+    "html/www.lanskybros.com-2.html": {
+        "url": "https://www.lanskybros.com/Login.aspx",
+        "forms": [
+            "-"
+        ],
+        "visible_html_fields": [
+            {
+                "ctl00$ctl00$NestedMaster$PageContent$LoginDialog1$LoginButton": "XX",
+                "ctl00$ctl00$NestedMaster$PageContent$LoginDialog1$Password": "XX",
+                "ctl00$ctl00$NestedMaster$PageContent$LoginDialog1$RememberUserName": "XX",
+                "ctl00$ctl00$NestedMaster$PageContent$LoginDialog1$UserName": "XX",
+                "ctl00$ctl00$NestedMaster$PageContent$RegisterDialog1$ConfirmPassword": "XX",
+                "ctl00$ctl00$NestedMaster$PageContent$RegisterDialog1$Password": "XX",
+                "ctl00$ctl00$NestedMaster$PageContent$RegisterDialog1$RegisterButton": "XX",
+                "ctl00$ctl00$NestedMaster$PageContent$RegisterDialog1$RememberUserName": "XX",
+                "ctl00$ctl00$NestedMaster$PageContent$RegisterDialog1$UserName": "XX",
+                "ctl00$ctl00$PageHeader$StoreHeader$SimpleSearch1$SearchPhrase": "XX",
+                "ctl00$ctl00$PageHeader$StoreHeader$SimpleSearch2$SearchPhrase": "XX"
             }
         ]
     },
@@ -10787,6 +11111,17 @@
             }
         ]
     },
+    "html/www.mozzarelle-gioia.it-0.html": {
+        "url": "http://www.mozzarelle-gioia.it/products/mozzarella_desalinizzata.asp",
+        "forms": [
+            "b"
+        ],
+        "visible_html_fields": [
+            {
+                "Formato": "OS"
+            }
+        ]
+    },
     "html/www.musichousebari.it-0.html": {
         "url": "http://www.musichousebari.it/",
         "forms": [
@@ -11798,6 +12133,162 @@
             {
                 "Login": "us",
                 "Password": "p1"
+            }
+        ]
+    },
+    "html/www.perfumemart.com-0.html": {
+        "url": "http://www.perfumemart.com/",
+        "forms": [
+            "s",
+            "s",
+            "m"
+        ],
+        "visible_html_fields": [
+            {
+                "keyword": "qq",
+                "search": "Bs"
+            },
+            {
+                "manf": "qc"
+            },
+            {
+                "email": "e1",
+                "subscribe": "OS",
+                "www": "Bs"
+            }
+        ]
+    },
+    "html/www.perfumemart.com-1.html": {
+        "url": "https://www.perfumemart.com/crm.asp?action=contactus",
+        "forms": [
+            "X",
+            "X",
+            "X",
+            "c"
+        ],
+        "visible_html_fields": [
+            {
+                "keyword": "XX",
+                "search": "XX"
+            },
+            {
+                "manf": "XX"
+            },
+            {
+                "email": "XX",
+                "subscribe": "XX",
+                "www": "XX"
+            },
+            {
+                "custemail": "e1",
+                "customer": "nf",
+                "departmentid": "OS",
+                "phone": "ph",
+                "reply": "CC",
+                "subject": "CT"
+            }
+        ]
+    },
+    "html/www.perfumemart.com-2.html": {
+        "url": "http://www.perfumemart.com/Eau-Duelle-by-Diptyque-Eau-De-Toilette-Spray-34-oz-for-Women_p_19435.html",
+        "forms": [
+            "X",
+            "X",
+            "X",
+            "b"
+        ],
+        "visible_html_fields": [
+            {
+                "keyword": "XX",
+                "search": "XX"
+            },
+            {
+                "manf": "XX"
+            },
+            {
+                "email": "XX",
+                "subscribe": "XX",
+                "www": "XX"
+            },
+            {
+                "Add": "Bs",
+                "qty-0": "qt"
+            }
+        ]
+    },
+    "html/www.perfumemart.com-3.html": {
+        "url": "https://www.perfumemart.com/myaccount.asp",
+        "forms": [
+            "X",
+            "X",
+            "X",
+            "l",
+            "p",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "keyword": "XX",
+                "search": "XX"
+            },
+            {
+                "manf": "XX"
+            },
+            {
+                "email": "XX",
+                "subscribe": "XX",
+                "www": "XX"
+            },
+            {
+                "Submit1": "Bs",
+                "email": "e1",
+                "password": "p1"
+            },
+            {
+                "Submit2": "Bs",
+                "email": "e1"
+            },
+            {}
+        ]
+    },
+    "html/www.perfumemart.com-4.html": {
+        "url": "https://www.perfumemart.com/register.asp?cg=0",
+        "forms": [
+            "X",
+            "X",
+            "X",
+            "r"
+        ],
+        "visible_html_fields": [
+            {
+                "keyword": "XX",
+                "search": "XX"
+            },
+            {
+                "manf": "XX"
+            },
+            {
+                "email": "XX",
+                "subscribe": "XX",
+                "www": "XX"
+            },
+            {
+                "Add22": "Bs",
+                "comments": "CC",
+                "email": "e1",
+                "pass": "p1",
+                "randomWord": "ca",
+                "shipping_address": "A1",
+                "shipping_address2": "A2",
+                "shipping_city": "Ci",
+                "shipping_company": "no",
+                "shipping_country": "Co",
+                "shipping_firstname": "n1",
+                "shipping_lastname": "n3",
+                "shipping_phone": "ph",
+                "shipping_state": "St",
+                "shipping_zip": "Zi",
+                "tax_id": "OT"
             }
         ]
     },
@@ -14109,6 +14600,40 @@
             {
                 "login[password]": "p1",
                 "login[username]": "e1"
+            }
+        ]
+    },
+    "html/www19.corecommerce.com-0.html": {
+        "url": "https://www19.corecommerce.com/~davidcareyinc/login.php?m=client_login",
+        "forms": [
+            "s",
+            "l"
+        ],
+        "visible_html_fields": [
+            {
+                "search": "qq"
+            },
+            {
+                "cEmail1": "e1",
+                "cPass1": "p1",
+                "remember": "rC"
+            }
+        ]
+    },
+    "html/www19.corecommerce.com-1.html": {
+        "url": "https://www19.corecommerce.com/~davidcareyinc/login.php?m=create_account&go=&email=",
+        "forms": [
+            "X",
+            "r"
+        ],
+        "visible_html_fields": [
+            {
+                "search": "XX"
+            },
+            {
+                "email": "e1",
+                "password": "p1",
+                "password2": "p2"
             }
         ]
     },
