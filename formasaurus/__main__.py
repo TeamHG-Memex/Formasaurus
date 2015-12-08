@@ -107,7 +107,8 @@ def main():
         schema = store.get_form_schema()
         model = formtype_model.get_model()
 
-        annotations = store.iter_annotations(verbose=True, leave=True)
+        annotations = store.iter_annotations(verbose=True, leave=True,
+                                             simplify_form_types=True)
         X, y = zip(*((a.form, a.type) for a in annotations))
 
         test_size = int(len(y) * ratio)

@@ -21,7 +21,10 @@ from formasaurus.html import (
 )
 
 FormAnnotation = collections.namedtuple('FormAnnotation', 'form type index info key')
-AnnotationSchema = collections.namedtuple('AnnotationSchema', 'types types_inv na_value skip_value')
+AnnotationSchema = collections.namedtuple(
+    'AnnotationSchema',
+    'types types_inv na_value skip_value simplify_map'
+)
 
 
 class Storage(object):
@@ -125,11 +128,12 @@ class Storage(object):
         config = self.get_config()
         na_value = config[key]['NA_value']
         skip_value = config[key]['skip_value']
+        simplify_map = config[key]['simplify_map']
         types = collections.OrderedDict([
             (f['full'], f['short']) for f in config[key]['types']
         ])
         types_inv = inverse_mapping(types)
-        return AnnotationSchema(types, types_inv, na_value, skip_value)
+        return AnnotationSchema(types, types_inv, na_value, skip_value, simplify_map)
 
     def add_result(self, html, url, form_answers=None,
                    visible_html_fields=None, index=None,
@@ -175,7 +179,8 @@ class Storage(object):
         return path
 
     def iter_annotations(self, index=None, drop_duplicates=True, drop_na=True,
-                         drop_skipped=True, verbose=False, leave=False):
+                         drop_skipped=True, simplify_form_types=False,
+                         verbose=False, leave=False):
         """
         Return an iterator over (form, type, index, info, path) tuples.
         """
@@ -189,6 +194,9 @@ class Storage(object):
         seen = set()
         for path, tree, info in trees:
             for idx, (form, tp) in enumerate(zip(get_forms(tree), info["forms"])):
+                if simplify_form_types:
+                    tp = schema.simplify_map.get(tp, tp)
+
                 if drop_na and tp == schema.na_value:
                     continue
 
@@ -233,7 +241,8 @@ class Storage(object):
         with open(os.path.join(self.folder, path), "rb") as f:
             return load_html(f.read(), info["url"])
 
-    def get_Xy(self, drop_duplicates=True, verbose=False, leave=False):
+    def get_Xy(self, drop_duplicates=True, verbose=False, leave=False,
+               simplify_form_types=True):
         """
         Return X, y with formtype training data.
         """
@@ -241,9 +250,11 @@ class Storage(object):
             drop_duplicates=drop_duplicates,
             verbose=verbose,
             leave=leave,
+            simplify_form_types=simplify_form_types,
         ))
 
-    def annotations_to_Xy(self, annotations):
+    @classmethod
+    def annotations_to_Xy(cls, annotations):
         X, y, indices, info_records, info_keys = zip(*annotations)
         return X, y
 
@@ -316,22 +327,33 @@ class Storage(object):
         """
         return get_form_hash(form, only_visible=True)
 
-    def get_form_type_counts(self, drop_duplicates=True, verbose=True):
+    def get_form_type_counts(self, drop_duplicates=True, simplify=False,
+                             verbose=True):
         """ Return a {formtype: count} collections.Counter """
         if not drop_duplicates:
             index = self.get_index()
-            return collections.Counter(
-                chain.from_iterable(v["forms"] for v in index.values())
-            )
+            schema = self.get_form_schema()
+            if simplify:
+                it = (
+                    [schema.simplify_map.get(tp, tp) for tp in v["forms"]]
+                    for v in index.values()
+                )
+            else:
+                it = (list(v["forms"].keys()) for v in index.values())
+            return collections.Counter(chain.from_iterable(it))
 
-        annotations = self.iter_annotations(verbose=verbose)
+        annotations = self.iter_annotations(verbose=verbose,
+                                            simplify_form_types=simplify)
         return collections.Counter(ann.type for ann in annotations)
 
-    def print_form_type_counts(self):
+    def print_form_type_counts(self, simplify=False):
         """ Print the number annotations of each form types in this storage """
-        print("Annotated HTML forms:\n")
+        if simplify:
+            print("Annotated HTML forms (simplified classes):\n")
+        else:
+            print("Annotated HTML forms (detailed classes):\n")
         schema = self.get_form_schema()
-        type_counts = self.get_form_type_counts()
+        type_counts = self.get_form_type_counts(simplify=simplify)
         for shortcut, count in type_counts.most_common():
             type_name = schema.types_inv[shortcut]
             print("%-5d %-25s (%s)" % (count, type_name, shortcut))

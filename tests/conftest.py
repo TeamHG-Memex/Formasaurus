@@ -46,8 +46,12 @@ def empty_storage(tmpdir):
             "types": [
                 {"short": "s", "full": "search"},
                 {"short": "l", "full": "login"},
+                {"short": "o", "full": "other"},
                 {"short": "X", "full": "NOT ANNOTATED"}
             ],
+            "simplify_map": {
+                "l": "o",
+            },
             "NA_value": "X",
             "skip_value": "-"
         },
@@ -59,6 +63,7 @@ def empty_storage(tmpdir):
                 {"short": "qq", "full": "search query"},
                 {"short": "XX", "full": "NOT ANNOTATED"}
             ],
+            "simplify_map": {},
             "NA_value": "XX",
             "skip_value": "--"
         }
