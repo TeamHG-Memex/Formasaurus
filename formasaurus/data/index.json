@@ -569,6 +569,30 @@
             }
         ]
     },
+    "html/brownpapertickets.com-0.html": {
+        "url": "http://brownpapertickets.com/",
+        "forms": [
+            "l",
+            "s",
+            "X",
+            "m"
+        ],
+        "visible_html_fields": [
+            {
+                "login_FiZuwzBHAS": "ue",
+                "not_a_valid_field": "OR",
+                "pass_bpC5XKv5z2": "p1"
+            },
+            {
+                "keywords": "qq"
+            },
+            {},
+            {
+                "email": "e1",
+                "zip": "Zi"
+            }
+        ]
+    },
     "html/buyee.jp-0.html": {
         "url": "https://buyee.jp/signup/login",
         "forms": [
@@ -1184,6 +1208,18 @@
             }
         ]
     },
+    "html/dynamic.focalprice.com-0.html": {
+        "url": "http://dynamic.focalprice.com/helpinfo?currentCategoryID=18",
+        "forms": [
+            "l"
+        ],
+        "visible_html_fields": [
+            {
+                "emailAddress": "e1",
+                "password": "p1"
+            }
+        ]
+    },
     "html/en.wikipedia.org-0.html": {
         "url": "http://en.wikipedia.org/wiki/Main_Page",
         "forms": [
@@ -1574,6 +1610,84 @@
                 "cancel": "Br",
                 "password": "p1",
                 "username": "us"
+            }
+        ]
+    },
+    "html/forum.grasscity.com-0.html": {
+        "url": "https://forum.grasscity.com/index.php?app=core&module=global&section=login",
+        "forms": [
+            "l",
+            "l"
+        ],
+        "visible_html_fields": [
+            {
+                "anonymous": "oC",
+                "ips_password": "p1",
+                "ips_username": "us",
+                "rememberMe": "rC"
+            },
+            {
+                "anonymous": "oC",
+                "ips_password": "p1",
+                "ips_username": "us",
+                "rememberMe": "rC"
+            }
+        ]
+    },
+    "html/forum.grasscity.com-1.html": {
+        "url": "https://forum.grasscity.com/index.php?app=core&module=global&section=register",
+        "forms": [
+            "r",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "EmailAddress": "e1",
+                "PassWord": "p1",
+                "PassWord_Check": "p2",
+                "agree_tos": "tC",
+                "allow_admin_mail": "eC",
+                "mailingList[c243775e87][grps][6][1024]": "OS",
+                "mailingList[c243775e87][grps][6][128]": "OS",
+                "mailingList[c243775e87][grps][6][16]": "OS",
+                "mailingList[c243775e87][grps][6][1]": "OS",
+                "mailingList[c243775e87][grps][6][2048]": "OS",
+                "mailingList[c243775e87][grps][6][256]": "OS",
+                "mailingList[c243775e87][grps][6][2]": "OS",
+                "mailingList[c243775e87][grps][6][32]": "OS",
+                "mailingList[c243775e87][grps][6][4]": "OS",
+                "mailingList[c243775e87][grps][6][512]": "OS",
+                "mailingList[c243775e87][grps][6][64]": "OS",
+                "mailingList[c243775e87][grps][6][8]": "OS",
+                "mailingList[c243775e87][sub]": "eC",
+                "members_display_name": "us"
+            },
+            {
+                "anonymous": "XX",
+                "ips_password": "XX",
+                "ips_username": "XX",
+                "rememberMe": "XX"
+            }
+        ]
+    },
+    "html/forum.grasscity.com-2.html": {
+        "url": "http://forum.grasscity.com/toking-tools-qa/1390809-bongs-vs-bubblers.html#entry22210173",
+        "forms": [
+            "s",
+            "X",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "search_app": "qc",
+                "search_term": "qq"
+            },
+            {},
+            {
+                "anonymous": "XX",
+                "ips_password": "XX",
+                "ips_username": "XX",
+                "rememberMe": "XX"
             }
         ]
     },
@@ -3017,6 +3131,60 @@
             }
         ]
     },
+    "html/members.focalprice.com-0.html": {
+        "url": "http://members.focalprice.com/signin?refer=http%3a%2f%2fmembers.focalprice.com%2fMy%2fAccount",
+        "forms": [
+            "-",
+            "s",
+            "l",
+            "m"
+        ],
+        "visible_html_fields": [
+            {
+                "emailAddress": "XX",
+                "password": "XX"
+            },
+            {
+                "keyword": "qq"
+            },
+            {
+                "emailAddress": "e1",
+                "password": "p1"
+            },
+            {
+                "email": "e1"
+            }
+        ]
+    },
+    "html/members.focalprice.com-1.html": {
+        "url": "http://members.focalprice.com/register",
+        "forms": [
+            "-",
+            "X",
+            "r",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "emailAddress": "XX",
+                "password": "XX"
+            },
+            {
+                "keyword": "XX"
+            },
+            {
+                "chkIsEmail": "eC",
+                "chkIsTerm": "tC",
+                "comparePassword": "p2",
+                "emailAddress": "e1",
+                "nickName": "us",
+                "password": "p1"
+            },
+            {
+                "email": "XX"
+            }
+        ]
+    },
     "html/memebase.cheezburger.com-0.html": {
         "url": "http://memebase.cheezburger.com/verydemotivational",
         "forms": [
@@ -4256,6 +4424,372 @@
             }
         ]
     },
+    "html/sales.starcitygames.com-0.html": {
+        "url": "http://sales.starcitygames.com/spoiler/spoiler.php",
+        "forms": [
+            "s",
+            "l",
+            "X",
+            "-",
+            "s",
+            "m"
+        ],
+        "visible_html_fields": [
+            {
+                "go": "Bs",
+                "substring": "qq"
+            },
+            {
+                "log0n": "e1",
+                "password": "p1",
+                "submit": "Bs"
+            },
+            {},
+            {
+                "action": "XX",
+                "art[]": "XX",
+                "c[C1]": "XX",
+                "c[C2]": "XX",
+                "c[C3]": "XX",
+                "c[C4]": "XX",
+                "c[C5]": "XX",
+                "c_all": "XX",
+                "ccl": "XX",
+                "ccu": "XX",
+                "colormatch": "XX",
+                "critter[]": "XX",
+                "crittermatch": "XX",
+                "display": "XX",
+                "flavor": "XX",
+                "flavormatch": "XX",
+                "foil": "XX",
+                "for": "XX",
+                "format": "XX",
+                "g[G1]": "XX",
+                "g[G2]": "XX",
+                "g[G3]": "XX",
+                "g_all": "XX",
+                "maxavail": "XX",
+                "maxcost": "XX",
+                "minavail": "XX",
+                "mincost": "XX",
+                "multicolor": "XX",
+                "name": "XX",
+                "namematch": "XX",
+                "numpage": "XX",
+                "oracle": "XX",
+                "pwr": "XX",
+                "pwrcc": "XX",
+                "pwrop": "XX",
+                "r[R10]": "XX",
+                "r[R1]": "XX",
+                "r[R2]": "XX",
+                "r[R3]": "XX",
+                "r[R4]": "XX",
+                "r[R5]": "XX",
+                "r[R8]": "XX",
+                "r[R9]": "XX",
+                "r_all": "XX",
+                "reset": "XX",
+                "s[1077]": "XX",
+                "s[143]": "XX",
+                "s[205]": "XX",
+                "s[5108]": "XX",
+                "s[5115]": "XX",
+                "s[5134]": "XX",
+                "s[5139]": "XX",
+                "s[5141]": "XX",
+                "s[5143]": "XX",
+                "s[5145]": "XX",
+                "s[5147]": "XX",
+                "s[5149]": "XX",
+                "s[5151]": "XX",
+                "s[5153]": "XX",
+                "s[5155]": "XX",
+                "s[5157]": "XX",
+                "s[5171]": "XX",
+                "s[5172]": "XX",
+                "s[5174]": "XX",
+                "s[5175]": "XX",
+                "s[5176]": "XX",
+                "s[5177]": "XX",
+                "s[5186]": "XX",
+                "s[5187]": "XX",
+                "s[5189]": "XX",
+                "s[5190]": "XX",
+                "s[5191]": "XX",
+                "s[5194]": "XX",
+                "s[5195]": "XX",
+                "s[5196]": "XX",
+                "s[5197]": "XX",
+                "s[5201]": "XX",
+                "s[5202]": "XX",
+                "s[5207]": "XX",
+                "s[5209]": "XX",
+                "s[5211]": "XX",
+                "s[5213]": "XX",
+                "s[5214]": "XX",
+                "s[5215]": "XX",
+                "s[5217]": "XX",
+                "s[5219]": "XX",
+                "s[5220]": "XX",
+                "s[5221]": "XX",
+                "s[5225]": "XX",
+                "s[5228]": "XX",
+                "s[5236]": "XX",
+                "s[5237]": "XX",
+                "s[5241]": "XX",
+                "s[5243]": "XX",
+                "s[5245]": "XX",
+                "s[5246]": "XX",
+                "s[5247]": "XX",
+                "s[5248]": "XX",
+                "s[5249]": "XX",
+                "s[5253]": "XX",
+                "s[5254]": "XX",
+                "s[5258]": "XX",
+                "s[5260]": "XX",
+                "s[5265]": "XX",
+                "s[5266]": "XX",
+                "s[5268]": "XX",
+                "s[5269]": "XX",
+                "s[5270]": "XX",
+                "s[5271]": "XX",
+                "s[5280]": "XX",
+                "s[5281]": "XX",
+                "s[5285]": "XX",
+                "s[5286]": "XX",
+                "s[5288]": "XX",
+                "s[5290]": "XX",
+                "s[5291]": "XX",
+                "s[5293]": "XX",
+                "s[5294]": "XX",
+                "s[5295]": "XX",
+                "s[5296]": "XX",
+                "s[5298]": "XX",
+                "s[5301]": "XX",
+                "s[5302]": "XX",
+                "s[5304]": "XX",
+                "s[5306]": "XX",
+                "s[5308]": "XX",
+                "s[5310]": "XX",
+                "s[5311]": "XX",
+                "s[5312]": "XX",
+                "s[5313]": "XX",
+                "s[5314]": "XX",
+                "s[5315]": "XX",
+                "s[AA10]": "XX",
+                "s[AA1]": "XX",
+                "s[AA2]": "XX",
+                "s[AA4]": "XX",
+                "s[AA5]": "XX",
+                "s[AA6]": "XX",
+                "s[AA7]": "XX",
+                "s[AA8]": "XX",
+                "s[ala1]": "XX",
+                "s[ala2]": "XX",
+                "s[ala3]": "XX",
+                "s[bx63]": "XX",
+                "s[bx64]": "XX",
+                "s[bx65]": "XX",
+                "s[bx66]": "XX",
+                "s[cor10]": "XX",
+                "s[cor11]": "XX",
+                "s[cor12]": "XX",
+                "s[cor13]": "XX",
+                "s[cor14]": "XX",
+                "s[cor2]": "XX",
+                "s[cor3]": "XX",
+                "s[cor4]": "XX",
+                "s[cor5]": "XX",
+                "s[cor6]": "XX",
+                "s[cor7]": "XX",
+                "s[cor8]": "XX",
+                "s[cor9]": "XX",
+                "s[ear12]": "XX",
+                "s[ear13]": "XX",
+                "s[ear14]": "XX",
+                "s[ear15]": "XX",
+                "s[ear16]": "XX",
+                "s[gol83]": "XX",
+                "s[gol84]": "XX",
+                "s[ice18]": "XX",
+                "s[ice19]": "XX",
+                "s[ice20]": "XX",
+                "s[ice21]": "XX",
+                "s[ice22]": "XX",
+                "s[inv35]": "XX",
+                "s[inv36]": "XX",
+                "s[inv37]": "XX",
+                "s[kam47]": "XX",
+                "s[kam48]": "XX",
+                "s[kam49]": "XX",
+                "s[lor1]": "XX",
+                "s[lor2]": "XX",
+                "s[mas32]": "XX",
+                "s[mas33]": "XX",
+                "s[mas34]": "XX",
+                "s[mib44]": "XX",
+                "s[mib45]": "XX",
+                "s[mib46]": "XX",
+                "s[mir23]": "XX",
+                "s[mir24]": "XX",
+                "s[mir25]": "XX",
+                "s[ody38]": "XX",
+                "s[ody39]": "XX",
+                "s[ody40]": "XX",
+                "s[ons41]": "XX",
+                "s[ons42]": "XX",
+                "s[ons43]": "XX",
+                "s[por56]": "XX",
+                "s[por57]": "XX",
+                "s[por58]": "XX",
+                "s[por59]": "XX",
+                "s[por60]": "XX",
+                "s[rav50]": "XX",
+                "s[rav51]": "XX",
+                "s[rav52]": "XX",
+                "s[rep17]": "XX",
+                "s[sag29]": "XX",
+                "s[sag30]": "XX",
+                "s[sag31]": "XX",
+                "s[sha1]": "XX",
+                "s[sha2]": "XX",
+                "s[tem26]": "XX",
+                "s[tem27]": "XX",
+                "s[tem28]": "XX",
+                "s[tim53]": "XX",
+                "s[tim54]": "XX",
+                "s[tim55]": "XX",
+                "s[ung61]": "XX",
+                "s[ung62]": "XX",
+                "s_all": "XX",
+                "sort1": "XX",
+                "sort2": "XX",
+                "sort3": "XX",
+                "sort4": "XX",
+                "t[T10]": "XX",
+                "t[T11]": "XX",
+                "t[T12]": "XX",
+                "t[T13]": "XX",
+                "t[T14]": "XX",
+                "t[T15]": "XX",
+                "t[T16]": "XX",
+                "t[T17]": "XX",
+                "t[T18]": "XX",
+                "t[T19]": "XX",
+                "t[T1]": "XX",
+                "t[T20]": "XX",
+                "t[T21]": "XX",
+                "t[T22]": "XX",
+                "t[T23]": "XX",
+                "t[T24]": "XX",
+                "t[T25]": "XX",
+                "t[T26]": "XX",
+                "t[T27]": "XX",
+                "t[T28]": "XX",
+                "t[T29]": "XX",
+                "t[T2]": "XX",
+                "t[T30]": "XX",
+                "t[T31]": "XX",
+                "t[T32]": "XX",
+                "t[T33]": "XX",
+                "t[T34]": "XX",
+                "t[T35]": "XX",
+                "t[T36]": "XX",
+                "t[T37]": "XX",
+                "t[T38]": "XX",
+                "t[T39]": "XX",
+                "t[T3]": "XX",
+                "t[T40]": "XX",
+                "t[T41]": "XX",
+                "t[T42]": "XX",
+                "t[T43]": "XX",
+                "t[T44]": "XX",
+                "t[T45]": "XX",
+                "t[T46]": "XX",
+                "t[T4]": "XX",
+                "t[T5]": "XX",
+                "t[T6]": "XX",
+                "t[T7]": "XX",
+                "t[T8]": "XX",
+                "t[T9]": "XX",
+                "t_all": "XX",
+                "text": "XX",
+                "textmatch": "XX",
+                "tgh": "XX",
+                "tghcc": "XX",
+                "tghop": "XX",
+                "z[]": "XX"
+            },
+            {
+                "imageField": "Bs",
+                "zip_code": "Zi"
+            },
+            {
+                "ea": "e1",
+                "go": "Bs"
+            }
+        ]
+    },
+    "html/sales.starcitygames.com-1.html": {
+        "url": "https://sales.starcitygames.com/password_reset.php",
+        "forms": [
+            "X",
+            "X",
+            "X",
+            "p"
+        ],
+        "visible_html_fields": [
+            {
+                "go": "XX",
+                "substring": "XX"
+            },
+            {
+                "log0n": "XX",
+                "password": "XX",
+                "submit": "XX"
+            },
+            {},
+            {
+                "email": "e1"
+            }
+        ]
+    },
+    "html/sales.starcitygames.com-2.html": {
+        "url": "http://sales.starcitygames.com/carddisplay.php?product=725292",
+        "forms": [
+            "X",
+            "X",
+            "X",
+            "b",
+            "-",
+            "-"
+        ],
+        "visible_html_fields": [
+            {
+                "go": "XX",
+                "substring": "XX"
+            },
+            {
+                "log0n": "XX",
+                "password": "XX",
+                "submit": "XX"
+            },
+            {},
+            {
+                "qty": "qt"
+            },
+            {
+                "imageField": "XX",
+                "zip_code": "XX"
+            },
+            {
+                "ea": "XX",
+                "go": "XX"
+            }
+        ]
+    },
     "html/secure.businessweek.com-0.html": {
         "url": "https://secure.businessweek.com/register",
         "forms": [
@@ -4303,6 +4837,34 @@
             }
         ]
     },
+    "html/secure.firemountaingems.com-0.html": {
+        "url": "https://secure.firemountaingems.com/Account/Create?SelfRedirect=True",
+        "forms": [
+            "l",
+            "X",
+            "s",
+            "s",
+            "m"
+        ],
+        "visible_html_fields": [
+            {
+                "EMAIL": "e1",
+                "PASSWORD": "p1",
+                "rememberme": "rC",
+                "submit": "Bs"
+            },
+            {},
+            {
+                "searchvalue": "qq"
+            },
+            {
+                "term": "qq"
+            },
+            {
+                "SignupEmailAddress": "e1"
+            }
+        ]
+    },
     "html/selfservice.dstv.com-0.html": {
         "url": "http://selfservice.dstv.com/",
         "forms": [
@@ -4339,6 +4901,134 @@
             {
                 "Submit1": "Bs",
                 "email": "e1"
+            }
+        ]
+    },
+    "html/shop.dunkindonuts.com-0.html": {
+        "url": "http://shop.dunkindonuts.com/coffee_1997_p01_01/?CCAID=DDSTDDCF",
+        "forms": [
+            "s",
+            "c",
+            "X",
+            "m"
+        ],
+        "visible_html_fields": [
+            {
+                "txtSearch": "qq"
+            },
+            {
+                "input_genmessage": "CC",
+                "newsletterSubscribe": "eC",
+                "recipient_email": "e1",
+                "recipient_name": "nf",
+                "your_email": "e1",
+                "your_name": "nf"
+            },
+            {
+                "input_genmessage": "XX",
+                "newsletterSubscribe": "XX",
+                "recipient_email": "XX",
+                "recipient_name": "XX",
+                "your_email": "XX",
+                "your_name": "XX"
+            },
+            {
+                "txtEmailFooter": "e1"
+            }
+        ]
+    },
+    "html/shop.dunkindonuts.com-1.html": {
+        "url": "http://shop.dunkindonuts.com/french-vanilla-ground-coffee-1-lb_601576_11/",
+        "forms": [
+            "X",
+            "b",
+            "b",
+            "o",
+            "X",
+            "X",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "txtSearch": "XX"
+            },
+            {
+                "txtQuantity": "qt"
+            },
+            {
+                "txtSubQuantity": "qt"
+            },
+            {
+                "interval": "OS"
+            },
+            {
+                "input_genmessage": "XX",
+                "newsletterSubscribe": "XX",
+                "recipient_email": "XX",
+                "recipient_name": "XX",
+                "your_email": "XX",
+                "your_name": "XX"
+            },
+            {
+                "input_genmessage": "XX",
+                "newsletterSubscribe": "XX",
+                "recipient_email": "XX",
+                "recipient_name": "XX",
+                "your_email": "XX",
+                "your_name": "XX"
+            },
+            {
+                "txtEmailFooter": "XX"
+            }
+        ]
+    },
+    "html/shop.dunkindonuts.com-2.html": {
+        "url": "https://shop.dunkindonuts.com/checkout/login.aspx?rp=%2fcheckout%2fmyaccount.aspx",
+        "forms": [
+            "-"
+        ],
+        "visible_html_fields": [
+            {
+                "ctl00$CustomerFeedbackForm$CloseAndResetIcon": "XX",
+                "ctl00$CustomerFeedbackForm$CloseButtonDesktop": "XX",
+                "ctl00$CustomerFeedbackForm$CloseButtonMobile": "XX",
+                "ctl00$CustomerFeedbackForm$FeedbackEmailTextBox": "XX",
+                "ctl00$CustomerFeedbackForm$FeedbackMessage": "XX",
+                "ctl00$CustomerFeedbackForm$FeedbackPhoneTextBox": "XX",
+                "ctl00$CustomerFeedbackForm$FeedbackSubmitButton": "XX",
+                "ctl00$CustomerFeedbackForm$ThankYouCloseButton": "XX",
+                "ctl00$MainContentPlaceHolder$ConfirmPasswordTextBox": "XX",
+                "ctl00$MainContentPlaceHolder$NewCustomer_ContinueButton": "XX",
+                "ctl00$MainContentPlaceHolder$NewCustomer_EmailTextBox": "XX",
+                "ctl00$MainContentPlaceHolder$PasswordTextBox": "XX",
+                "ctl00$MainContentPlaceHolder$ReturningCustomer_EmailTextBox": "XX",
+                "ctl00$MainContentPlaceHolder$ReturningCustomer_PasswordTextBox": "XX",
+                "ctl00$MainContentPlaceHolder$ReturningCustomer_SignInButton": "XX",
+                "ctl00$PageHeader$SearchButton": "XX",
+                "ctl00$PageHeader$SearchInputTextBox": "XX"
+            }
+        ]
+    },
+    "html/shop.dunkindonuts.com-3.html": {
+        "url": "https://shop.dunkindonuts.com/checkout/resetpassword.aspx",
+        "forms": [
+            "-"
+        ],
+        "visible_html_fields": [
+            {
+                "ctl00$CustomerFeedbackForm$CloseAndResetIcon": "XX",
+                "ctl00$CustomerFeedbackForm$CloseButtonDesktop": "XX",
+                "ctl00$CustomerFeedbackForm$CloseButtonMobile": "XX",
+                "ctl00$CustomerFeedbackForm$FeedbackEmailTextBox": "XX",
+                "ctl00$CustomerFeedbackForm$FeedbackMessage": "XX",
+                "ctl00$CustomerFeedbackForm$FeedbackPhoneTextBox": "XX",
+                "ctl00$CustomerFeedbackForm$FeedbackSubmitButton": "XX",
+                "ctl00$CustomerFeedbackForm$ThankYouCloseButton": "XX",
+                "ctl00$MainContentPlaceHolder$EmailAddressPanel_ContinueButton": "XX",
+                "ctl00$MainContentPlaceHolder$EmailAddressPanel_EmailAddressTextBox": "XX",
+                "ctl00$PageHeader$SearchButton": "XX",
+                "ctl00$PageHeader$SearchInputTextBox": "XX",
+                "recaptcha_challenge_field": "XX"
             }
         ]
     },
@@ -5570,6 +6260,293 @@
             }
         ]
     },
+    "html/www.1000bulbs.com-0.html": {
+        "url": "https://www.1000bulbs.com/",
+        "forms": [
+            "s",
+            "l",
+            "s",
+            "b",
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
+            "m"
+        ],
+        "visible_html_fields": [
+            {
+                "q": "qq"
+            },
+            {
+                "email": "e1",
+                "password": "p1"
+            },
+            {
+                "q": "qq"
+            },
+            {
+                "quantity": "qt"
+            },
+            {
+                "quantity": "XX"
+            },
+            {
+                "quantity": "XX"
+            },
+            {
+                "quantity": "XX"
+            },
+            {
+                "quantity": "XX"
+            },
+            {
+                "quantity": "XX"
+            },
+            {
+                "quantity": "XX"
+            },
+            {
+                "quantity": "XX"
+            },
+            {
+                "quantity": "XX"
+            },
+            {
+                "quantity": "XX"
+            },
+            {
+                "quantity": "XX"
+            },
+            {
+                "quantity": "XX"
+            },
+            {
+                "quantity": "XX"
+            },
+            {
+                "quantity": "XX"
+            },
+            {
+                "quantity": "XX"
+            },
+            {
+                "quantity": "XX"
+            },
+            {
+                "quantity": "XX"
+            },
+            {
+                "quantity": "XX"
+            },
+            {
+                "email": "e1",
+                "submit": "Bs"
+            }
+        ]
+    },
+    "html/www.1000bulbs.com-1.html": {
+        "url": "https://www.1000bulbs.com/login",
+        "forms": [
+            "X",
+            "X",
+            "X",
+            "l",
+            "r",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "q": "XX"
+            },
+            {
+                "email": "XX",
+                "password": "XX"
+            },
+            {
+                "q": "XX"
+            },
+            {
+                "Submit": "Bs",
+                "email": "e1",
+                "password": "p1"
+            },
+            {
+                "Submit": "Bs",
+                "email": "e1",
+                "name": "us",
+                "new_password": "p1",
+                "new_password_confirm": "p2",
+                "subscribe_opt_in": "eC"
+            },
+            {
+                "email": "XX",
+                "submit": "XX"
+            }
+        ]
+    },
+    "html/www.1000bulbs.com-2.html": {
+        "url": "https://www.1000bulbs.com/recover_password/",
+        "forms": [
+            "X",
+            "X",
+            "X",
+            "p",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "q": "XX"
+            },
+            {
+                "email": "XX",
+                "password": "XX"
+            },
+            {
+                "q": "XX"
+            },
+            {
+                "email_address": "e1"
+            },
+            {
+                "email": "XX",
+                "submit": "XX"
+            }
+        ]
+    },
+    "html/www.1000bulbs.com-3.html": {
+        "url": "https://www.1000bulbs.com/search?category=5942&filter[Brand][0]=Hortilux&sel[Brand][0]=Hortilux&sort=price_a",
+        "forms": [
+            "X",
+            "X",
+            "X",
+            "b",
+            "b",
+            "b",
+            "X",
+            "-",
+            "X",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "q": "XX"
+            },
+            {
+                "email": "XX",
+                "password": "XX"
+            },
+            {
+                "q": "XX"
+            },
+            {
+                "quantity": "qt"
+            },
+            {
+                "quantity": "qt"
+            },
+            {
+                "quantity": "qt"
+            },
+            {
+                "quantity": "XX"
+            },
+            {
+                "quantity": "XX"
+            },
+            {
+                "quantity": "XX"
+            },
+            {
+                "email": "XX",
+                "submit": "XX"
+            }
+        ]
+    },
+    "html/www.1000bulbs.com-4.html": {
+        "url": "https://www.1000bulbs.com/product/113695/EIKO-H11BCVSUBP1.html",
+        "forms": [
+            "X",
+            "X",
+            "X",
+            "b",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "q": "XX"
+            },
+            {
+                "email": "XX",
+                "password": "XX"
+            },
+            {
+                "q": "XX"
+            },
+            {
+                "quantity": "qt"
+            },
+            {
+                "email": "XX",
+                "submit": "XX"
+            }
+        ]
+    },
+    "html/www.1000bulbs.com-5.html": {
+        "url": "https://www.1000bulbs.com/pages/Contact-Us.html",
+        "forms": [
+            "X",
+            "X",
+            "X",
+            "c",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "q": "XX"
+            },
+            {
+                "email": "XX",
+                "password": "XX"
+            },
+            {
+                "q": "XX"
+            },
+            {
+                "contact_us[city]": "Ci",
+                "contact_us[comments]": "CC",
+                "contact_us[company_name]": "no",
+                "contact_us[country]": "Co",
+                "contact_us[email]": "e1",
+                "contact_us[fax]": "fa",
+                "contact_us[first_name]": "n1",
+                "contact_us[last_name]": "n3",
+                "contact_us[phone]": "ph",
+                "contact_us[state]": "St",
+                "contact_us[street]": "Sa",
+                "contact_us[zip]": "Zi",
+                "formOPTin": "tC",
+                "recaptcha_challenge_field": "ca",
+                "submit": "Bs"
+            },
+            {
+                "email": "XX",
+                "submit": "XX"
+            }
+        ]
+    },
     "html/www.acozinhar.pt-0.html": {
         "url": "http://www.acozinhar.pt/portal/parceiros/",
         "forms": [
@@ -6513,6 +7490,135 @@
             }
         ]
     },
+    "html/www.bradfordexchange.com-0.html": {
+        "url": "http://www.bradfordexchange.com/",
+        "forms": [
+            "s",
+            "X",
+            "m",
+            "-"
+        ],
+        "visible_html_fields": [
+            {
+                "mainSearch-searchText": "qq"
+            },
+            {},
+            {
+                "email": "e1"
+            },
+            {
+                "email": "XX"
+            }
+        ]
+    },
+    "html/www.bradfordexchange.com-1.html": {
+        "url": "http://www.bradfordexchange.com/mcategory/disney.html?cm_re=SubCategory-_-NightmareBeforeChristmas-_-NA",
+        "forms": [
+            "X",
+            "-",
+            "X",
+            "-"
+        ],
+        "visible_html_fields": [
+            {
+                "mainSearch-searchText": "XX"
+            },
+            {
+                "email": "XX"
+            },
+            {},
+            {
+                "email": "XX"
+            }
+        ]
+    },
+    "html/www.bradfordexchange.com-2.html": {
+        "url": "http://www.bradfordexchange.com/products/917623_star-wars-train-collection.html",
+        "forms": [
+            "X",
+            "X",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "mainSearch-searchText": "XX"
+            },
+            {},
+            {
+                "email": "XX"
+            }
+        ]
+    },
+    "html/www.bradfordexchange.com-3.html": {
+        "url": "https://www.bradfordexchange.com/signin.html?vid=20091217001&mt=1&redirecturl=maregistersuccess.html%3Fvid%3D20091217001",
+        "forms": [
+            "-",
+            "l",
+            "-"
+        ],
+        "visible_html_fields": [
+            {
+                "mainSearch-searchText": "XX"
+            },
+            {
+                "login": "e1",
+                "password": "p1"
+            },
+            {
+                "email": "XX"
+            }
+        ]
+    },
+    "html/www.bradfordexchange.com-4.html": {
+        "url": "https://www.bradfordexchange.com/register.html?vid=20091217001&mt=3",
+        "forms": [
+            "s",
+            "s",
+            "-"
+        ],
+        "visible_html_fields": [
+            {
+                "mainSearch-searchText": "qq"
+            },
+            {
+                "mainSearch-searchText": "qq"
+            },
+            {
+                "email": "XX"
+            }
+        ]
+    },
+    "html/www.bradfordexchange.com-5.html": {
+        "url": "https://www.bradfordexchange.com/orderstatuslogin.html?vid=20091217001&mt=1&redirecturl=maorderstatus.html%3Fvid%3D20091217001&on=&email=",
+        "forms": [
+            "-",
+            "o",
+            "X",
+            "-",
+            "-"
+        ],
+        "visible_html_fields": [
+            {
+                "mainSearch-searchText": "XX"
+            },
+            {
+                "email": "e1",
+                "houseNumber": "PO",
+                "orderNumber": "OT",
+                "subscribeChk": "eC",
+                "unitNumber": "A#",
+                "zipcode": "Zi"
+            },
+            {},
+            {
+                "login": "XX",
+                "password": "XX"
+            },
+            {
+                "email": "XX"
+            }
+        ]
+    },
     "html/www.breakfast-reviews.net-0.html": {
         "url": "http://www.breakfast-reviews.net/",
         "forms": [
@@ -6614,6 +7720,288 @@
                 "input_7.5": "OM",
                 "input_7.6": "OM",
                 "input_7.7": "OM"
+            }
+        ]
+    },
+    "html/www.brownpapertickets.com-0.html": {
+        "url": "https://www.brownpapertickets.com/join.html",
+        "forms": [
+            "-",
+            "s",
+            "r",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "login_zzYTqsmj57": "XX",
+                "not_a_valid_field": "XX",
+                "pass_ktDFQGQTQv": "XX"
+            },
+            {
+                "keywords": "qq"
+            },
+            {
+                "account_type": "OS",
+                "country": "Co",
+                "daily_discount_events": "eC",
+                "daily_new_events": "eC",
+                "login": "e1",
+                "password": "p1",
+                "public_name": "ns",
+                "zip": "Zi"
+            },
+            {
+                "email": "XX",
+                "zip": "XX"
+            }
+        ]
+    },
+    "html/www.brownpapertickets.com-1.html": {
+        "url": "https://www.brownpapertickets.com/findpassword.html",
+        "forms": [
+            "-",
+            "X",
+            "p",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "login_G5bt8424HG": "XX",
+                "not_a_valid_field": "XX",
+                "pass_efEhsvubPN": "XX"
+            },
+            {
+                "keywords": "XX"
+            },
+            {
+                "email": "e1",
+                "login": "us",
+                "zipcode": "Zi"
+            },
+            {
+                "email": "XX",
+                "zip": "XX"
+            }
+        ]
+    },
+    "html/www.brownpapertickets.com-2.html": {
+        "url": "http://www.brownpapertickets.com/browse.html",
+        "forms": [
+            "-",
+            "X",
+            "s",
+            "o",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "login_JpmGK6WSfy": "XX",
+                "not_a_valid_field": "XX",
+                "pass_CagWtNupI8": "XX"
+            },
+            {
+                "keywords": "XX"
+            },
+            {
+                "category_id": "qc",
+                "country": "Co",
+                "discount": "qc",
+                "dogfriendly": "qc",
+                "end_date": "OD",
+                "keywords": "qq",
+                "kid": "qc",
+                "max_dollar": "qc",
+                "min_dollar": "qc",
+                "nonsmoking": "qc",
+                "start_date": "OD",
+                "wheelchair": "qc"
+            },
+            {
+                "staticzip": "Zi"
+            },
+            {
+                "email": "XX",
+                "zip": "XX"
+            }
+        ]
+    },
+    "html/www.brownpapertickets.com-3.html": {
+        "url": "http://www.brownpapertickets.com/event/2391834",
+        "forms": [
+            "-",
+            "X",
+            "-",
+            "c",
+            "X",
+            "N",
+            "o",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "login_jXQuIFJWIV": "XX",
+                "not_a_valid_field": "XX",
+                "pass_rDcCsEugDA": "XX"
+            },
+            {
+                "keywords": "XX"
+            },
+            {
+                "country_id": "XX",
+                "date_id": "XX",
+                "price_4381134": "XX",
+                "price_4381135": "XX",
+                "price_4381136": "XX",
+                "price_4381137": "XX",
+                "price_4381138": "XX",
+                "price_4381139": "XX",
+                "price_4381140": "XX",
+                "price_4381141": "XX",
+                "price_4381142": "XX",
+                "price_4381143": "XX",
+                "price_4381144": "XX",
+                "price_4381145": "XX",
+                "price_4381146": "XX",
+                "price_4381147": "XX",
+                "price_4381148": "XX",
+                "price_4381149": "XX",
+                "price_4381150": "XX",
+                "price_4381151": "XX",
+                "price_4381152": "XX",
+                "price_4381153": "XX",
+                "price_4381154": "XX",
+                "price_4381155": "XX",
+                "price_4381156": "XX",
+                "price_4381157": "XX",
+                "price_4381158": "XX",
+                "price_4381159": "XX",
+                "price_4381160": "XX",
+                "price_4381161": "XX",
+                "price_4381162": "XX",
+                "price_4381163": "XX",
+                "price_4381164": "XX",
+                "price_4381165": "XX",
+                "price_4381166": "XX",
+                "price_4381167": "XX",
+                "price_4381168": "XX",
+                "price_4381169": "XX",
+                "price_4381170": "XX",
+                "price_4381171": "XX",
+                "price_4381172": "XX",
+                "price_4381173": "XX",
+                "price_4381174": "XX",
+                "price_4381175": "XX",
+                "shipping_1340136": "XX",
+                "shipping_1342838": "XX",
+                "shipping_1342839": "XX",
+                "shipping_1342840": "XX",
+                "shipping_1342841": "XX",
+                "shipping_1342842": "XX",
+                "shipping_1342843": "XX",
+                "shipping_1342844": "XX",
+                "shipping_1342845": "XX",
+                "shipping_1342846": "XX",
+                "shipping_1342847": "XX",
+                "shipping_1342848": "XX",
+                "shipping_1342849": "XX",
+                "shipping_1342850": "XX",
+                "shipping_1342851": "XX",
+                "shipping_1342852": "XX",
+                "shipping_1342853": "XX",
+                "shipping_1342854": "XX",
+                "shipping_1342855": "XX",
+                "shipping_1342856": "XX",
+                "shipping_1342857": "XX",
+                "shipping_1342858": "XX",
+                "shipping_1342859": "XX",
+                "shipping_1342860": "XX",
+                "shipping_1342861": "XX",
+                "shipping_1342862": "XX",
+                "shipping_1342863": "XX",
+                "shipping_1342864": "XX",
+                "shipping_1342865": "XX",
+                "shipping_1342866": "XX",
+                "shipping_1342867": "XX",
+                "shipping_1342868": "XX",
+                "shipping_1342869": "XX",
+                "shipping_1342870": "XX",
+                "shipping_1342871": "XX",
+                "shipping_1342872": "XX",
+                "shipping_1342873": "XX",
+                "shipping_1342874": "XX",
+                "shipping_1342875": "XX",
+                "shipping_1342876": "XX",
+                "shipping_1342877": "XX",
+                "shipping_1342878": "XX",
+                "shipping_1342879": "XX",
+                "shipping_1342880": "XX",
+                "shipping_1342881": "XX",
+                "shipping_1342882": "XX",
+                "shipping_1342883": "XX",
+                "shipping_1342884": "XX",
+                "shipping_1342885": "XX",
+                "shipping_1342886": "XX",
+                "shipping_1342887": "XX",
+                "shipping_1342888": "XX",
+                "shipping_1342889": "XX",
+                "shipping_1342890": "XX",
+                "shipping_1342891": "XX",
+                "shipping_1342892": "XX",
+                "shipping_1342893": "XX",
+                "shipping_1342894": "XX",
+                "shipping_1342895": "XX",
+                "shipping_1342896": "XX",
+                "shipping_1342897": "XX",
+                "shipping_1342898": "XX",
+                "shipping_1342899": "XX",
+                "shipping_1342900": "XX",
+                "shipping_1342901": "XX",
+                "shipping_1342902": "XX",
+                "shipping_1342903": "XX",
+                "shipping_1342904": "XX",
+                "shipping_1342905": "XX",
+                "shipping_1342906": "XX",
+                "shipping_1342907": "XX",
+                "shipping_1342908": "XX",
+                "shipping_1342909": "XX",
+                "shipping_1342910": "XX",
+                "shipping_1342911": "XX",
+                "shipping_1342912": "XX",
+                "shipping_1342913": "XX",
+                "shipping_1342914": "XX",
+                "shipping_1342915": "XX",
+                "shipping_1342916": "XX",
+                "shipping_1342917": "XX",
+                "shipping_1342918": "XX",
+                "shipping_1342919": "XX",
+                "shipping_1342920": "XX",
+                "shipping_1342921": "XX",
+                "shipping_1342922": "XX",
+                "shipping_1342923": "XX",
+                "shipping_1342924": "XX",
+                "shipping_1342925": "XX",
+                "shipping_1342926": "XX",
+                "shipping_1342927": "XX",
+                "shipping_1342928": "XX",
+                "shipping_1342929": "XX",
+                "shipping_1342930": "XX",
+                "shipping_1342931": "XX",
+                "shipping_1342932": "XX"
+            },
+            {
+                "question": "CC"
+            },
+            {},
+            {
+                "dates": "OD"
+            },
+            {
+                "remind": "ON",
+                "start_date": "OD"
+            },
+            {
+                "email": "XX",
+                "zip": "XX"
             }
         ]
     },
@@ -6805,6 +8193,176 @@
             }
         ]
     },
+    "html/www.calendars.com-0.html": {
+        "url": "http://www.calendars.com/",
+        "forms": [
+            "X",
+            "s",
+            "b"
+        ],
+        "visible_html_fields": [
+            {},
+            {
+                "searchBox": "qq"
+            },
+            {
+                "checkout": "Bs"
+            }
+        ]
+    },
+    "html/www.calendars.com-1.html": {
+        "url": "https://www.calendars.com/user/login.jsp?_requestid=2129272",
+        "forms": [
+            "X",
+            "-",
+            "-",
+            "l"
+        ],
+        "visible_html_fields": [
+            {},
+            {
+                "searchBox": "XX"
+            },
+            {
+                "checkout": "XX"
+            },
+            {
+                "/atg/userprofiling/ProfileFormHandler.faceBookLogin": "Bo",
+                "/atg/userprofiling/ProfileFormHandler.login": "Bs",
+                "/atg/userprofiling/ProfileFormHandler.value.login": "ue",
+                "/atg/userprofiling/ProfileFormHandler.value.password": "p1"
+            }
+        ]
+    },
+    "html/www.calendars.com-2.html": {
+        "url": "https://www.calendars.com/user/register.jsp",
+        "forms": [
+            "X",
+            "-",
+            "-",
+            "r"
+        ],
+        "visible_html_fields": [
+            {},
+            {
+                "searchBox": "XX"
+            },
+            {
+                "checkout": "XX"
+            },
+            {
+                "atg/userprofiling/ProfileFormHandler.create": "Bs",
+                "atg/userprofiling/ProfileFormHandler.value.confirmPassword": "p2",
+                "atg/userprofiling/ProfileFormHandler.value.email": "e1",
+                "atg/userprofiling/ProfileFormHandler.value.firstName": "n1",
+                "atg/userprofiling/ProfileFormHandler.value.lastName": "n3",
+                "atg/userprofiling/ProfileFormHandler.value.login": "us",
+                "atg/userprofiling/ProfileFormHandler.value.optIn": "eC",
+                "atg/userprofiling/ProfileFormHandler.value.password": "p1",
+                "atg/userprofiling/ProfileFormHandler.value.termsOfUse": "tC"
+            }
+        ]
+    },
+    "html/www.calendars.com-3.html": {
+        "url": "http://www.calendars.com/Food-Puzzles/cat1670002/",
+        "forms": [
+            "X",
+            "-",
+            "-",
+            "X",
+            "X",
+            "X",
+            "X",
+            "X",
+            "X",
+            "X",
+            "X",
+            "s",
+            "X",
+            "X",
+            "X",
+            "X",
+            "X",
+            "X",
+            "X",
+            "X",
+            "X",
+            "X",
+            "X",
+            "X",
+            "X",
+            "X",
+            "X",
+            "X",
+            "X",
+            "X",
+            "X",
+            "X"
+        ],
+        "visible_html_fields": [
+            {},
+            {
+                "searchBox": "XX"
+            },
+            {
+                "checkout": "XX"
+            },
+            {},
+            {},
+            {},
+            {},
+            {},
+            {},
+            {},
+            {},
+            {
+                "filterType": "qc",
+                "inStockOnly": "qc",
+                "sortType": "sp"
+            },
+            {},
+            {},
+            {},
+            {},
+            {},
+            {},
+            {},
+            {},
+            {},
+            {},
+            {},
+            {},
+            {},
+            {},
+            {},
+            {},
+            {},
+            {},
+            {},
+            {}
+        ]
+    },
+    "html/www.calendars.com-4.html": {
+        "url": "http://www.calendars.com/Diners-Collage-1000-Piece-Puzzle/Diners-Collage-1000-Piece-Puzzle/prod201500014845/?categoryId=cat00127&seoCatId=cat1670002",
+        "forms": [
+            "X",
+            "-",
+            "-",
+            "b"
+        ],
+        "visible_html_fields": [
+            {},
+            {
+                "searchBox": "XX"
+            },
+            {
+                "checkout": "XX"
+            },
+            {
+                "/atg/commerce/order/purchase/CartModifierFormHandler.quantity": "qt"
+            }
+        ]
+    },
     "html/www.caltronind.com-0.html": {
         "url": "http://www.caltronind.com/contact",
         "forms": [
@@ -6825,6 +8383,118 @@
             },
             {
                 "q": "qq"
+            }
+        ]
+    },
+    "html/www.campingworld.com-0.html": {
+        "url": "http://www.campingworld.com/",
+        "forms": [
+            "s",
+            "s",
+            "m"
+        ],
+        "visible_html_fields": [
+            {
+                "Ntt": "qq"
+            },
+            {
+                "category": "qc",
+                "condition": "qc",
+                "dealerid": "Ci",
+                "fromYear": "Oy",
+                "loctype": "qc",
+                "make": "qc",
+                "mileage": "qc",
+                "model": "qc",
+                "price": "qc",
+                "stocknumber": "qq",
+                "toYear": "Oy",
+                "zipcode": "Zi"
+            },
+            {
+                "emailAddress": "e1"
+            }
+        ]
+    },
+    "html/www.campingworld.com-1.html": {
+        "url": "http://www.campingworld.com/goodsamclub/join/",
+        "forms": [
+            "X",
+            "b",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "Ntt": "XX"
+            },
+            {
+                "skulist": "OS"
+            },
+            {
+                "emailAddress": "XX"
+            }
+        ]
+    },
+    "html/www.campingworld.com-2.html": {
+        "url": "http://www.campingworld.com/search/index.cfm?Ntt=&N=0&Ntx=mode+matchallpartial&Ntk=primary&Nty=1&Ntpc=1",
+        "forms": [
+            "X",
+            "s",
+            "X",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "Ntt": "XX"
+            },
+            {
+                "searchwithin": "qq"
+            },
+            {
+                "searchwithin": "XX"
+            },
+            {
+                "emailAddress": "XX"
+            }
+        ]
+    },
+    "html/www.campingworld.com-3.html": {
+        "url": "http://www.campingworld.com/shopping/item/honda-eu2000i-generator-carb-compliant/34961",
+        "forms": [
+            "X",
+            "b",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "Ntt": "XX"
+            },
+            {
+                "qty": "qt"
+            },
+            {
+                "emailAddress": "XX"
+            }
+        ]
+    },
+    "html/www.campingworld.com-4.html": {
+        "url": "http://www.campingworld.com/orderstatus/",
+        "forms": [
+            "X",
+            "o",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "Ntt": "XX"
+            },
+            {
+                "bill_to_lname": "n3",
+                "order_id": "OT",
+                "ship_to_zip": "Zi"
+            },
+            {
+                "emailAddress": "XX"
             }
         ]
     },
@@ -8583,6 +10253,143 @@
             }
         ]
     },
+    "html/www.dunkindonuts.com-0.html": {
+        "url": "http://www.dunkindonuts.com/dunkindonuts/en.html",
+        "forms": [
+            "o",
+            "X",
+            "X",
+            "s"
+        ],
+        "visible_html_fields": [
+            {
+                "locationInput": "Ci"
+            },
+            {},
+            {},
+            {
+                "q": "qq"
+            }
+        ]
+    },
+    "html/www.dunkindonuts.com-1.html": {
+        "url": "http://www.dunkindonuts.com/dunkindonuts/en/responsive/dunkin_email.html",
+        "forms": [
+            "-",
+            "X",
+            "X",
+            "m",
+            "-"
+        ],
+        "visible_html_fields": [
+            {
+                "locationInput": "XX"
+            },
+            {},
+            {},
+            {
+                "news-letter": "eC",
+                "profile_dob_day": "bd",
+                "profile_dob_month": "bm",
+                "profile_email": "e1",
+                "profile_first_name": "n1",
+                "profile_last_name": "n3",
+                "profile_promo_code": "in",
+                "profile_zip": "Zi",
+                "termsCondition": "tC"
+            },
+            {
+                "q": "XX"
+            }
+        ]
+    },
+    "html/www.dunkindonuts.com-2.html": {
+        "url": "https://www.dunkindonuts.com/dunkindonuts/en/signin.html",
+        "forms": [
+            "-",
+            "X",
+            "X",
+            "l",
+            "-"
+        ],
+        "visible_html_fields": [
+            {
+                "locationInput": "XX"
+            },
+            {},
+            {},
+            {
+                "pdl2qrn7": "e1",
+                "zg5kw3": "p1"
+            },
+            {
+                "q": "XX"
+            }
+        ]
+    },
+    "html/www.dunkindonuts.com-3.html": {
+        "url": "https://www.dunkindonuts.com/dunkindonuts/en/signin/forgotpassword.html",
+        "forms": [
+            "-",
+            "X",
+            "X",
+            "p",
+            "-"
+        ],
+        "visible_html_fields": [
+            {
+                "locationInput": "XX"
+            },
+            {},
+            {},
+            {
+                "EMAIL": "e1"
+            },
+            {
+                "q": "XX"
+            }
+        ]
+    },
+    "html/www.dunkindonuts.com-4.html": {
+        "url": "https://www.dunkindonuts.com/dunkindonuts/en/responsive/ddperks/enteryourinfo.html",
+        "forms": [
+            "r"
+        ],
+        "visible_html_fields": [
+            {
+                "autoRechrage": "oC",
+                "balance1": "OS",
+                "balance2": "OS",
+                "billing_address": "A1",
+                "billing_address2": "A2",
+                "card_number": "c#",
+                "chargeCard": "OS",
+                "city": "Ci",
+                "dayOfMonth": "OS",
+                "dayOfWeek": "OS",
+                "expireMonth": "cm",
+                "expireYear": "cy",
+                "monthlyAmount": "OS",
+                "profile_dob_day": "bd",
+                "profile_dob_month": "bm",
+                "profile_dob_year": "by",
+                "profile_email": "e1",
+                "profile_email_confirm": "e2",
+                "profile_first_name": "n1",
+                "profile_last_name": "n3",
+                "profile_password_new": "p1",
+                "profile_password_new_confirmation": "p2",
+                "profile_zip": "Zi",
+                "promoCodeCheckBox": "oC",
+                "registration_code": "in",
+                "security_code": "cs",
+                "security_code_visa": "cs",
+                "state": "St",
+                "termsCondition": "tC",
+                "weeklyAmount": "OS"
+            }
+        ]
+    },
     "html/www.duracellpowermat.com-0.html": {
         "url": "https://www.duracellpowermat.com/",
         "forms": [
@@ -9221,6 +11028,202 @@
             }
         ]
     },
+    "html/www.firemountaingems.com-0.html": {
+        "url": "http://www.firemountaingems.com/",
+        "forms": [
+            "X",
+            "X",
+            "X",
+            "m",
+            "X",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "EMAIL": "XX",
+                "PASSWORD": "XX",
+                "rememberme": "XX",
+                "submit": "XX"
+            },
+            {},
+            {
+                "searchvalue": "XX"
+            },
+            {
+                "SignupEmailAddress": "e1"
+            },
+            {
+                "term": "XX"
+            },
+            {
+                "SignupEmailAddress": "XX"
+            }
+        ]
+    },
+    "html/www.firemountaingems.com-1.html": {
+        "url": "http://www.firemountaingems.com/shop/plastic-beads?navsrc=top_shop_AcrylicBeads&T=T1B",
+        "forms": [
+            "X",
+            "X",
+            "X",
+            "s",
+            "X",
+            "X",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "EMAIL": "XX",
+                "PASSWORD": "XX",
+                "rememberme": "XX",
+                "submit": "XX"
+            },
+            {},
+            {
+                "searchvalue": "XX"
+            },
+            {
+                "PriceRangeLower": "ON",
+                "PriceRangeUpper": "ON"
+            },
+            {
+                "SignupEmailAddress": "XX"
+            },
+            {
+                "term": "XX"
+            },
+            {
+                "SignupEmailAddress": "XX"
+            }
+        ]
+    },
+    "html/www.firemountaingems.com-2.html": {
+        "url": "http://www.firemountaingems.com/itemdetails/h206447pb",
+        "forms": [
+            "X",
+            "X",
+            "X",
+            "b",
+            "b",
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
+            "X",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "EMAIL": "XX",
+                "PASSWORD": "XX",
+                "rememberme": "XX",
+                "submit": "XX"
+            },
+            {},
+            {
+                "searchvalue": "XX"
+            },
+            {
+                "DETAILSADDH206447PB": "Bs",
+                "QTY": "qt"
+            },
+            {
+                "ADDH206446PB": "Bs",
+                "QTY": "qt"
+            },
+            {
+                "ADDH206445PB": "XX",
+                "QTY": "XX"
+            },
+            {
+                "ADDH206459PB": "XX",
+                "QTY": "XX"
+            },
+            {
+                "ADDH20A2457MB": "XX",
+                "QTY": "XX"
+            },
+            {
+                "ADDH20A2458MB": "XX",
+                "QTY": "XX"
+            },
+            {
+                "ADDH206440PB": "XX",
+                "QTY": "XX"
+            },
+            {
+                "ADDH206438PB": "XX",
+                "QTY": "XX"
+            },
+            {
+                "ADDH206442PB": "XX",
+                "QTY": "XX"
+            },
+            {
+                "ADDH206454PB": "XX",
+                "QTY": "XX"
+            },
+            {
+                "ADDH206439PB": "XX",
+                "QTY": "XX"
+            },
+            {
+                "term": "XX"
+            },
+            {
+                "SignupEmailAddress": "XX"
+            }
+        ]
+    },
+    "html/www.focalprice.com-0.html": {
+        "url": "http://www.focalprice.com/",
+        "forms": [
+            "-",
+            "-",
+            "m"
+        ],
+        "visible_html_fields": [
+            {
+                "emailAddress": "XX",
+                "password": "XX"
+            },
+            {
+                "keyword": "XX"
+            },
+            {
+                "email": "e1"
+            }
+        ]
+    },
+    "html/www.focalprice.com-1.html": {
+        "url": "http://www.focalprice.com/MT0607B/No.1_G2_MTK2502_Waterproof_Bluetooth_4.0_Smart_Watch_with_Heart_Rate_Monitor.html",
+        "forms": [
+            "-",
+            "-",
+            "-",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "emailAddress": "XX",
+                "password": "XX"
+            },
+            {
+                "keyword": "XX"
+            },
+            {
+                "keywords": "XX"
+            },
+            {
+                "email": "XX"
+            }
+        ]
+    },
     "html/www.food.com-0.html": {
         "url": "http://www.food.com/",
         "forms": [
@@ -9369,6 +11372,119 @@
                 "searchObject[4]": "qc",
                 "searchOnMain": "Bs",
                 "searchOperation": "qc"
+            }
+        ]
+    },
+    "html/www.grasscity.com-0.html": {
+        "url": "http://www.grasscity.com/int_en/?SID=a8mqino26njunhed445avhe0f3",
+        "forms": [
+            "m",
+            "X",
+            "s"
+        ],
+        "visible_html_fields": [
+            {
+                "email": "e1"
+            },
+            {},
+            {
+                "w": "qq"
+            }
+        ]
+    },
+    "html/www.grasscity.com-1.html": {
+        "url": "https://www.grasscity.com/int_en/customer/account/login/referer/aHR0cDovL3d3dy5ncmFzc2NpdHkuY29tL2ludF9lbi8_U0lEPWE4bXFpbm8yNm5qdW5oZWQ0NDVhdmhlMGYzJl9fX1NJRD1V/",
+        "forms": [
+            "X",
+            "X",
+            "l"
+        ],
+        "visible_html_fields": [
+            {},
+            {
+                "w": "XX"
+            },
+            {
+                "login[password]": "p1",
+                "login[username]": "us"
+            }
+        ]
+    },
+    "html/www.grasscity.com-2.html": {
+        "url": "https://www.grasscity.com/int_en/customer/account/create/",
+        "forms": [
+            "X",
+            "X",
+            "r"
+        ],
+        "visible_html_fields": [
+            {},
+            {
+                "w": "XX"
+            },
+            {
+                "confirmation": "p2",
+                "day": "bd",
+                "email": "e1",
+                "firstname": "n1",
+                "gender": "ge",
+                "is_subscribed": "eC",
+                "lastname": "n3",
+                "month": "bm",
+                "password": "p1",
+                "persistent_remember_me": "rC",
+                "year": "by"
+            }
+        ]
+    },
+    "html/www.grasscity.com-3.html": {
+        "url": "http://www.grasscity.com/int_en/black-leaf-microperc-oil-bong-with-showerhead-diffusor.html?nosto=new-products-home",
+        "forms": [
+            "X",
+            "b",
+            "o",
+            "X",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "email": "XX"
+            },
+            {
+                "qty": "qt",
+                "super_attribute[512]": "OS"
+            },
+            {
+                "productTagName": "OT"
+            },
+            {},
+            {
+                "w": "XX"
+            }
+        ]
+    },
+    "html/www.grasscity.com-4.html": {
+        "url": "http://www.grasscity.com/int_en/sendfriend/product/send/id/17061/",
+        "forms": [
+            "X",
+            "c",
+            "X",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "email": "XX"
+            },
+            {
+                "recipients[email][]": "e1",
+                "recipients[name][]": "nf",
+                "sender[email]": "e1",
+                "sender[message]": "CC",
+                "sender[name]": "nf"
+            },
+            {},
+            {
+                "w": "XX"
             }
         ]
     },
@@ -9599,6 +11715,23 @@
                 "contact_form_name": "nf"
             },
             {}
+        ]
+    },
+    "html/www.hermes.com-0.html": {
+        "url": "http://www.hermes.com/index_ru.html",
+        "forms": [
+            "r"
+        ],
+        "visible_html_fields": [
+            {
+                "nl_civilite": "ge",
+                "nl_cp": "Zi",
+                "nl_firstname": "n1",
+                "nl_mail": "e1",
+                "nl_name": "n3",
+                "nl_option": "eC",
+                "nl_pays": "Co"
+            }
         ]
     },
     "html/www.hq-mirror.de-0.html": {
@@ -10015,6 +12148,120 @@
                 "tip_email": "e1",
                 "tip_msg": "CC",
                 "tip_name": "nf"
+            }
+        ]
+    },
+    "html/www.jpc.de-0.html": {
+        "url": "https://www.jpc.de/",
+        "forms": [
+            "s"
+        ],
+        "visible_html_fields": [
+            {
+                "fastsearch": "qq",
+                "rubric": "qc"
+            }
+        ]
+    },
+    "html/www.jpc.de-1.html": {
+        "url": "https://www.jpc.de/jpcng/home/logon/index.html?task=createform",
+        "forms": [
+            "X",
+            "r"
+        ],
+        "visible_html_fields": [
+            {
+                "fastsearch": "XX",
+                "rubric": "XX"
+            },
+            {
+                "addressform-no": "S#",
+                "anrede_id": "ge",
+                "dummy_email": "OR",
+                "email": "e1",
+                "geburtstag": "bD",
+                "land": "Co",
+                "nachname": "n3",
+                "ort": "Ci",
+                "passwort1": "p1",
+                "passwort2": "p2",
+                "plz": "Zi",
+                "strasse": "Sn",
+                "titel_id": "OS",
+                "vorname": "n1",
+                "zusatz": "Ad"
+            }
+        ]
+    },
+    "html/www.jpc.de-2.html": {
+        "url": "https://www.jpc.de/jpcng/home/kontakt/",
+        "forms": [
+            "X",
+            "c"
+        ],
+        "visible_html_fields": [
+            {
+                "fastsearch": "XX",
+                "rubric": "XX"
+            },
+            {
+                "anrede": "ge",
+                "email": "e1",
+                "kdnr": "OT",
+                "land": "Co",
+                "mitteilung": "CC",
+                "nachname": "n3",
+                "name": "OR",
+                "ort": "Ci",
+                "plz": "Zi",
+                "strasse": "Sn",
+                "vorname": "n1",
+                "zusatz": "n2"
+            }
+        ]
+    },
+    "html/www.jpc.de-3.html": {
+        "url": "https://www.jpc.de/jpcng/jazz/home",
+        "forms": [
+            "s"
+        ],
+        "visible_html_fields": [
+            {
+                "fastsearch": "qq",
+                "rubric": "qc"
+            }
+        ]
+    },
+    "html/www.jpc.de-4.html": {
+        "url": "https://www.jpc.de/jpcng/jazz/detail/-/art/Dave-Holland-geb-1946-Prism/hnum/1537284",
+        "forms": [
+            "X",
+            "X",
+            "X",
+            "l"
+        ],
+        "visible_html_fields": [
+            {
+                "fastsearch": "XX",
+                "rubric": "XX"
+            },
+            {},
+            {},
+            {
+                "login": "ue",
+                "pw": "p1"
+            }
+        ]
+    },
+    "html/www.jpc.de-5.html": {
+        "url": "https://www.jpc.de/jpcng/home/cart/-/task/show",
+        "forms": [
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "fastsearch": "XX",
+                "rubric": "XX"
             }
         ]
     },
@@ -10816,6 +13063,168 @@
         "visible_html_fields": [
             {
                 "q": "XX"
+            }
+        ]
+    },
+    "html/www.luckybrand.com-0.html": {
+        "url": "http://www.luckybrand.com/",
+        "forms": [
+            "s",
+            "l",
+            "m",
+            "m",
+            "r"
+        ],
+        "visible_html_fields": [
+            {
+                "q": "qq"
+            },
+            {
+                "dwfrm_login_password": "p1",
+                "dwfrm_login_username_d0ajfhqdmnul": "e1"
+            },
+            {
+                "19136": "e1"
+            },
+            {
+                "dwfrm_subscription_customer_addToKidsList": "eC",
+                "dwfrm_subscription_customer_addToPlusList": "eC",
+                "email": "e1",
+                "firstname": "n1",
+                "lastname": "n3",
+                "zip": "Zi"
+            },
+            {
+                "email": "e1"
+            }
+        ]
+    },
+    "html/www.luckybrand.com-1.html": {
+        "url": "http://www.luckybrand.com/seavees-baja-stripe/YLS0030.html?dwvar_YLS0030_color=020&cgid=shoes&start=17&dwvar_YLS0030_dimension=*N",
+        "forms": [
+            "X",
+            "-",
+            "b",
+            "X",
+            "-",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "q": "XX"
+            },
+            {
+                "dwfrm_login_password": "XX",
+                "dwfrm_login_username_d0exfenrrobw": "XX"
+            },
+            {
+                "Quantity": "qt"
+            },
+            {
+                "19136": "XX"
+            },
+            {
+                "dwfrm_subscription_customer_addToKidsList": "XX",
+                "dwfrm_subscription_customer_addToPlusList": "XX",
+                "email": "XX",
+                "firstname": "XX",
+                "lastname": "XX",
+                "zip": "XX"
+            },
+            {
+                "email": "XX"
+            }
+        ]
+    },
+    "html/www.luckybrand.com-2.html": {
+        "url": "https://www.luckybrand.com/account",
+        "forms": [
+            "s",
+            "-",
+            "r",
+            "X",
+            "-",
+            "-"
+        ],
+        "visible_html_fields": [
+            {
+                "q": "qq"
+            },
+            {
+                "dwfrm_login_password": "XX",
+                "dwfrm_login_username_d0lmxgytgqfe": "XX"
+            },
+            {
+                "dwfrm_profile_customer_addToCatalogList": "oC",
+                "dwfrm_profile_customer_addToKidsList": "eC",
+                "dwfrm_profile_customer_addToPlusList": "eC",
+                "dwfrm_profile_customer_addtoemaillist": "eC",
+                "dwfrm_profile_customer_email": "e1",
+                "dwfrm_profile_customer_emailconfirm": "e2",
+                "dwfrm_profile_customer_firstname": "n1",
+                "dwfrm_profile_customer_lastname": "n3",
+                "dwfrm_profile_login_password": "p1",
+                "dwfrm_profile_login_passwordconfirm": "p2"
+            },
+            {
+                "19136": "XX"
+            },
+            {
+                "dwfrm_subscription_customer_addToKidsList": "XX",
+                "dwfrm_subscription_customer_addToPlusList": "XX",
+                "email": "XX",
+                "firstname": "XX",
+                "lastname": "XX",
+                "zip": "XX"
+            },
+            {
+                "email": "XX"
+            }
+        ]
+    },
+    "html/www.luckybrand.com-3.html": {
+        "url": "https://www.luckybrand.com/on/demandware.store/Sites-LuckyBrand-Site/en_US/Account-Show",
+        "forms": [
+            "X",
+            "-",
+            "-",
+            "X",
+            "o",
+            "X",
+            "-",
+            "-"
+        ],
+        "visible_html_fields": [
+            {
+                "q": "XX"
+            },
+            {
+                "dwfrm_login_password": "XX",
+                "dwfrm_login_username_d0aqjxekibaf": "XX"
+            },
+            {
+                "dwfrm_login_password": "XX",
+                "dwfrm_login_username_d0vtunxesiep": "XX"
+            },
+            {},
+            {
+                "dwfrm_ordertrack_email": "e1",
+                "dwfrm_ordertrack_orderNumber": "OT",
+                "dwfrm_ordertrack_postalCode": "Zi"
+            },
+            {
+                "19136": "XX"
+            },
+            {
+                "dwfrm_subscription_customer_addToKidsList": "XX",
+                "dwfrm_subscription_customer_addToPlusList": "XX",
+                "email": "XX",
+                "firstname": "XX",
+                "lastname": "XX",
+                "zip": "XX"
+            },
+            {
+                "email": "XX"
             }
         ]
     },
@@ -12865,12 +15274,12 @@
     "html/www.pandahall.com-2.html": {
         "url": "https://www.pandahall.com/Customer/ForgottenPwd",
         "forms": [
-            "X",
+            "s",
             "p"
         ],
         "visible_html_fields": [
             {
-                "keyword": "XX"
+                "keyword": "qq"
             },
             {
                 "email": "e1",
@@ -12893,7 +15302,7 @@
     "html/www.pandahall.com-4.html": {
         "url": "http://www.pandahall.com/p-580437-copper-jewelry-wire-lead-free-cadmium-free-nickel-free-mixed-color.html?areaType=MixProducts",
         "forms": [
-            "X"
+            "-"
         ],
         "visible_html_fields": [
             {
@@ -13369,6 +15778,125 @@
             },
             {
                 "email": "e1"
+            }
+        ]
+    },
+    "html/www.radioshack.com-0.html": {
+        "url": "https://www.radioshack.com/",
+        "forms": [
+            "s",
+            "s",
+            "m",
+            "-",
+            "c"
+        ],
+        "visible_html_fields": [
+            {
+                "q": "qq"
+            },
+            {
+                "q": "qq"
+            },
+            {
+                "contact[email]": "e1"
+            },
+            {
+                "contact[email]": "XX"
+            },
+            {
+                "Feedback[feedback]": "CC"
+            }
+        ]
+    },
+    "html/www.radioshack.com-1.html": {
+        "url": "https://www.radioshack.com/products/griffin-powerblock-micro-universal?variant=5717389189",
+        "forms": [
+            "X",
+            "X",
+            "X",
+            "b",
+            "-",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "q": "XX"
+            },
+            {
+                "q": "XX"
+            },
+            {
+                "contact[email]": "XX"
+            },
+            {
+                "id": "OS",
+                "quantity": "qt"
+            },
+            {
+                "contact[email]": "XX"
+            },
+            {
+                "Feedback[feedback]": "XX"
+            }
+        ]
+    },
+    "html/www.radioshack.com-2.html": {
+        "url": "https://www.radioshack.com/pages/contact-us",
+        "forms": [
+            "X",
+            "X",
+            "X",
+            "c",
+            "X",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "q": "XX"
+            },
+            {
+                "q": "XX"
+            },
+            {
+                "contact[email]": "XX"
+            },
+            {
+                "content": "CC",
+                "email": "e1",
+                "name": "nf"
+            },
+            {
+                "contact[email]": "XX"
+            },
+            {
+                "Feedback[feedback]": "XX"
+            }
+        ]
+    },
+    "html/www.radioshack.com-3.html": {
+        "url": "https://www.radioshack.com/collections/connectors-connectivity/s1_component-parts",
+        "forms": [
+            "X",
+            "X",
+            "X",
+            "X",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "q": "XX"
+            },
+            {
+                "q": "XX"
+            },
+            {
+                "contact[email]": "XX"
+            },
+            {
+                "contact[email]": "XX"
+            },
+            {
+                "Feedback[feedback]": "XX"
             }
         ]
     },
@@ -14275,6 +16803,93 @@
             }
         ]
     },
+    "html/www.starcitygames.com-0.html": {
+        "url": "http://www.starcitygames.com/",
+        "forms": [
+            "s",
+            "-",
+            "X",
+            "-",
+            "-"
+        ],
+        "visible_html_fields": [
+            {
+                "go": "Bs",
+                "substring": "qq"
+            },
+            {
+                "log0n": "XX",
+                "password": "XX",
+                "submit": "XX"
+            },
+            {},
+            {
+                "imageField": "XX",
+                "zip_code": "XX"
+            },
+            {
+                "ea": "XX",
+                "go": "XX"
+            }
+        ]
+    },
+    "html/www.starcitygames.com-1.html": {
+        "url": "https://www.starcitygames.com/myaccount/signup",
+        "forms": [
+            "-",
+            "-",
+            "X",
+            "r"
+        ],
+        "visible_html_fields": [
+            {
+                "go": "XX",
+                "substring": "XX"
+            },
+            {
+                "log0n": "XX",
+                "password": "XX",
+                "submit": "XX"
+            },
+            {},
+            {
+                "email": "e1",
+                "email2": "e2",
+                "firstname": "n1",
+                "lastname": "n3",
+                "month2": "bm",
+                "passwd1": "p1",
+                "passwd2": "p2",
+                "thedate": "bd",
+                "year2": "by"
+            }
+        ]
+    },
+    "html/www.starcitygames.com-2.html": {
+        "url": "https://www.starcitygames.com/login/",
+        "forms": [
+            "-",
+            "X",
+            "X",
+            "l"
+        ],
+        "visible_html_fields": [
+            {
+                "go": "XX",
+                "substring": "XX"
+            },
+            {
+                "log0n": "XX",
+                "password": "XX",
+                "submit": "XX"
+            },
+            {},
+            {
+                "ex_usr_email": "e1",
+                "ex_usr_pass": "p1"
+            }
+        ]
+    },
     "html/www.stearnsdesignbuild.com-0.html": {
         "url": "http://www.stearnsdesignbuild.com/contact/",
         "forms": [
@@ -14623,6 +17238,85 @@
         "visible_html_fields": [
             {
                 "query": "qq"
+            }
+        ]
+    },
+    "html/www.thingsremembered.com-0.html": {
+        "url": "http://www.thingsremembered.com/",
+        "forms": [
+            "m",
+            "s",
+            "m"
+        ],
+        "visible_html_fields": [
+            {
+                "userEmailFooter": "e1"
+            },
+            {
+                "keyword": "qq"
+            },
+            {
+                "email1": "e1"
+            }
+        ]
+    },
+    "html/www.thingsremembered.com-1.html": {
+        "url": "https://www.thingsremembered.com/user/login.jsp",
+        "forms": [
+            "X",
+            "X",
+            "X",
+            "r"
+        ],
+        "visible_html_fields": [
+            {
+                "userEmailFooter": "XX"
+            },
+            {
+                "keyword": "XX"
+            },
+            {},
+            {
+                "emailAddress": "e1",
+                "passwordNewMember": "p1",
+                "reEnterEmailAddress": "e2",
+                "verifyPassword": "p2",
+                "zipCode": "Zi"
+            }
+        ]
+    },
+    "html/www.thingsremembered.com-2.html": {
+        "url": "https://www.thingsremembered.com/user/forgot_password.jsp",
+        "forms": [
+            "p"
+        ],
+        "visible_html_fields": [
+            {
+                "userName": "e1"
+            }
+        ]
+    },
+    "html/www.thingsremembered.com-3.html": {
+        "url": "http://www.thingsremembered.com/product/Zipper-Padfolio/163104.uts",
+        "forms": [
+            "X",
+            "X",
+            "b",
+            "o"
+        ],
+        "visible_html_fields": [
+            {
+                "userEmailFooter": "XX"
+            },
+            {
+                "keyword": "XX"
+            },
+            {
+                "quantity": "qt"
+            },
+            {
+                "shipOrPickupRadio": "OS",
+                "storesListZipCode": "Zi"
             }
         ]
     },
@@ -15385,6 +18079,38 @@
             },
             {
                 "emailAddress": "XX"
+            }
+        ]
+    },
+    "html/www.wine.com-0.html": {
+        "url": "https://www.wine.com/v6/account/accountform.aspx",
+        "forms": [
+            "r"
+        ],
+        "visible_html_fields": [
+            {
+                "ctl00$BodyContent$AccountForm1$btnSubmitHidden": "Bs",
+                "ctl00$BodyContent$AccountForm1$tbxCommunityUsername": "us",
+                "ctl00$BodyContent$AccountForm1$tbxDOBDay": "bd",
+                "ctl00$BodyContent$AccountForm1$tbxDOBMonth": "bm",
+                "ctl00$BodyContent$AccountForm1$tbxDOBYear": "by",
+                "ctl00$BodyContent$AccountForm1$tbxEmail": "e1",
+                "ctl00$BodyContent$AccountForm1$tbxFirst": "n1",
+                "ctl00$BodyContent$AccountForm1$tbxLast": "n3",
+                "ctl00$BodyContent$AccountForm1$tbxPassword": "p1",
+                "ctl00$BodyContent$AccountForm1$tbxZip": "Zi"
+            }
+        ]
+    },
+    "html/www.wine.com-1.html": {
+        "url": "http://www.wine.com/customercare/",
+        "forms": [
+            "s"
+        ],
+        "visible_html_fields": [
+            {
+                "ctl00$ctl00$BodyContent$CustomerCareBodyContent$btnNext": "Bs",
+                "ctl00$ctl00$BodyContent$CustomerCareBodyContent$txtQuestion": "qq"
             }
         ]
     },

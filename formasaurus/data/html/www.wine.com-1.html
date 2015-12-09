@@ -1,0 +1,724 @@
+
+
+<!DOCTYPE html>
+<html>
+<head id="ctl00_ctl00_Head1" prefix="og: http://ogp.me/ns#"><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"cf656cd632","applicationID":"1052607","transactionName":"ZgNVbUUHD0tZU0IPC19JdmpnSQJNS0RZCwFDBVZLUkkFXV5RQwoQHwdESU8=","queueTime":0,"applicationTime":72,"ttGuid":"320E5661D6DC34FF","agent":"js-agent.newrelic.com/nr-768.min.js"}</script><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"UQIPUVJACQMFVldSAA=="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(t){function e(e,n,a){t&&t(e,n,a),a||(a={});for(var c=s(e),f=c.length,u=i(a,o,r),d=0;f>d;d++)c[d].apply(u,n);return u}function a(t,e){f[t]=s(t).concat(e)}function s(t){return f[t]||[]}function c(){return n(e)}var f={};return{on:a,emit:e,create:c,listeners:s,_events:f}}function r(){return{}}var o="nr@context",i=t("gos");e.exports=n()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t){try{i.console&&console.log(t)}catch(e){}}var n,r=t("ee"),o=t(1),i={};try{n=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(i.console=!0,-1!==n.indexOf("dev")&&(i.dev=!0),-1!==n.indexOf("nr_dev")&&(i.nrDev=!0))}catch(a){}i.nrDev&&r.on("internal-error",function(t){e(t.stack)}),i.dev&&r.on("fn-err",function(t,n,r){e(r.stack)}),i.dev&&(e("NR AGENT IN DEVELOPMENT MODE"),e("flags: "+o(i,function(t){return t}).join(", ")))},{1:20,ee:"QJf3ax"}],4:[function(t){function e(t,e,n,i,s){try{c?c-=1:r("err",[s||new UncaughtException(t,e,n)])}catch(f){try{r("ierr",[f,(new Date).getTime(),!0])}catch(u){}}return"function"==typeof a?a.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(6),i=t("ee"),a=window.onerror,s=!1,c=0;t("loader").features.err=!0,t(3),window.onerror=e;try{throw new Error}catch(f){"stack"in f&&(t(4),t(5),"addEventListener"in window&&t(1),window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)&&t(2),s=!0)}i.on("fn-start",function(){s&&(c+=1)}),i.on("fn-err",function(t,e,r){s&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){s&&!this.thrown&&c>0&&(c-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:5,2:8,3:3,4:7,5:6,6:21,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],5:[function(t,e){function n(t){i.inPlace(t,["addEventListener","removeEventListener"],"-",r)}function r(t){return t[1]}var o=t("ee").create(),i=t(1)(o),a=t("gos");if(e.exports=o,n(window),"getPrototypeOf"in Object){for(var s=document;s&&!s.hasOwnProperty("addEventListener");)s=Object.getPrototypeOf(s);s&&n(s);for(var c=XMLHttpRequest.prototype;c&&!c.hasOwnProperty("addEventListener");)c=Object.getPrototypeOf(c);c&&n(c)}else XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&n(XMLHttpRequest.prototype);o.on("addEventListener-start",function(t,e){function n(){return s}if(t[1]){var r=t[1];if("function"==typeof r){var s=a(r,"nr@wrapped",function(){return i(r,"fn-",n,r.name||"anonymous")});this.wrapped=t[1]=s,o.emit("initEventContext",[t,e],this.wrapped)}else"function"==typeof r.handleEvent&&i.inPlace(r,["handleEvent"],"fn-")}}),o.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:22,ee:"QJf3ax",gos:"7eSDFh"}],6:[function(t,e){var n=t("ee").create(),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:22,ee:"QJf3ax"}],7:[function(t,e){function n(t,e,n){t[0]=i(t[0],"fn-",null,n)}function r(t,e,n){function r(){return a}this.ctx={};var a={"nr@context":this.ctx};o.emit("initTimerContext",[t,n],a),t[0]=i(t[0],"fn-",r,n)}var o=t("ee").create(),i=t(1)(o);e.exports=o,i.inPlace(window,["setTimeout","setImmediate"],"setTimer-"),i.inPlace(window,["setInterval"],"setInterval-"),i.inPlace(window,["clearTimeout","clearImmediate"],"clearTimeout-"),o.on("setInterval-start",n),o.on("setTimer-start",r)},{1:22,ee:"QJf3ax"}],8:[function(t,e){function n(){f.inPlace(this,p,"fn-",o)}function r(t,e){f.inPlace(e,["onreadystatechange"],"fn-")}function o(t,e){return e}function i(t,e){for(var n in t)e[n]=t[n];return e}var a=t("ee").create(),s=t(1),c=t(2),f=c(a),u=c(s),d=window.XMLHttpRequest,p=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=a,window.XMLHttpRequest=function(t){var e=new d(t);try{a.emit("new-xhr",[],e),e.hasOwnProperty("addEventListener")&&u.inPlace(e,["addEventListener","removeEventListener"],"-",o),e.addEventListener("readystatechange",n,!1)}catch(r){try{a.emit("internal-error",[r])}catch(i){}}return e},i(d,XMLHttpRequest),XMLHttpRequest.prototype=d.prototype,f.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),a.on("send-xhr-start",r),a.on("open-xhr-start",r)},{1:5,2:22,ee:"QJf3ax"}],9:[function(t){function e(t){var e=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var i=0;c>i;i++)t.removeEventListener(s[i],this.listener,!1);if(!e.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){e.status=t.status;var a=t.responseType,f="arraybuffer"===a||"blob"===a||"json"===a?t.response:t.responseText,u=n(f);if(u&&(r.rxSize=u),this.sameOrigin){var d=t.getResponseHeader("X-NewRelic-App-Data");d&&(e.cat=d.split(", ").pop())}}else e.status=0;r.cbTime=this.cbTime,o("xhr",[e,r,this.startTime])}}}function n(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function r(t,e){var n=i(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}if(window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)){t("loader").features.xhr=!0;var o=t("handle"),i=t(2),a=t("ee"),s=["load","error","abort","timeout"],c=s.length,f=t(1),u=window.XMLHttpRequest;t(4),t(3),a.on("new-xhr",function(){this.totalCbs=0,this.called=0,this.cbTime=0,this.end=e,this.ended=!1,this.xhrGuids={}}),a.on("open-xhr-start",function(t){this.params={method:t[0]},r(this,t[1]),this.metrics={}}),a.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),a.on("send-xhr-start",function(t,e){var r=this.metrics,o=t[0],i=this;if(r&&o){var f=n(o);f&&(r.txSize=f)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof e.onload))&&i.end(e)}catch(n){try{a.emit("internal-error",[n])}catch(r){}}};for(var u=0;c>u;u++)e.addEventListener(s[u],this.listener,!1)}),a.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),a.on("xhr-load-added",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),a.on("xhr-load-removed",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),a.on("addEventListener-end",function(t,e){e instanceof u&&"load"===t[0]&&a.emit("xhr-load-added",[t[1],t[2]],e)}),a.on("removeEventListener-end",function(t,e){e instanceof u&&"load"===t[0]&&a.emit("xhr-load-removed",[t[1],t[2]],e)}),a.on("fn-start",function(t,e,n){e instanceof u&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),a.on("fn-end",function(t,e){this.xhrCbStart&&a.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:"XL7HBI",2:10,3:8,4:5,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],10:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");return!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname),r.sameOrigin=!e.hostname||e.hostname===document.domain&&e.port===n.port&&e.protocol===n.protocol,r}},{}],11:[function(t,e){function n(t){return function(){r(t,[(new Date).getTime()].concat(i(arguments)))}}var r=t("handle"),o=t(1),i=t(2);"undefined"==typeof window.newrelic&&(newrelic=window.NREUM);var a=["setPageViewName","addPageAction","setCustomAttribute","finished","addToTrace","inlineHit","noticeError"];o(a,function(t,e){window.NREUM[e]=n("api-"+e)}),e.exports=window.NREUM},{1:20,2:21,handle:"D5DuLP"}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):void(r.q&&(r.q[t]||(r.q[t]=[]),r.q[t].push(e)))}var r=t("ee").create();e.exports=n,n.ee=r,r.q={}},{ee:"QJf3ax"}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],G9z0Bl:[function(t,e){function n(){var t=p.info=NREUM.info,e=f.getElementsByTagName("script")[0];if(t&&t.licenseKey&&t.applicationID&&e){s(d,function(e,n){e in t||(t[e]=n)});var n="https"===u.split(":")[0]||t.sslForHttp;p.proto=n?"https://":"http://",a("mark",["onload",i()]);var r=f.createElement("script");r.src=p.proto+t.agent,e.parentNode.insertBefore(r,e)}}function r(){"complete"===f.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=t(1),c=window,f=c.document;t(2);var u=(""+location).split("?")[0],d={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-768.min.js"},p=e.exports={offset:i(),origin:u,features:{}};f.addEventListener?(f.addEventListener("DOMContentLoaded",o,!1),c.addEventListener("load",n,!1)):(f.attachEvent("onreadystatechange",r),c.attachEvent("onload",n)),a("mark",["firstbyte",i()])},{1:20,2:11,handle:"D5DuLP"}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],20:[function(t,e){function n(t,e){var n=[],o="",i=0;for(o in t)r.call(t,o)&&(n[i]=e(o,t[o]),i+=1);return n}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],21:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],22:[function(t,e){function n(t){return!(t&&"function"==typeof t&&t.apply&&!t[i])}var r=t("ee"),o=t(1),i="nr@original",a=Object.prototype.hasOwnProperty;e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,s,f;try{i=this,n=o(arguments),s=r&&r(n,i)||{}}catch(d){u([d,"",[n,i,a],s])}c(e+"start",[n,i,a],s);try{return f=t.apply(i,n)}catch(p){throw c(e+"err",[n,i,p],s),p}finally{c(e+"end",[n,i,f],s)}}return n(t)?t:(e||(e=""),nrWrapper[i]=t,f(t,nrWrapper),nrWrapper)}function s(t,r,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,f?s+o:o,i,s))}function c(e,n,r){try{t.emit(e,n,r)}catch(o){u([o,e,n,r])}}function f(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){u([r])}for(var o in t)a.call(t,o)&&(e[o]=t[o]);return e}function u(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=s,e.flag=i,e}},{1:21,ee:"QJf3ax"}]},{},["G9z0Bl",4,9]);</script><title>
+	wine.com
+</title><link rel="stylesheet" type="text/css" href="/includes/v635844996949680808/css/fonts.css" />
+<meta property="og:site_name" content="Wine.com" /><meta property="og:title" content="Wine.com" /><meta property="og:image" content="http://cache.wine.com/images/logos/300x200_winecom_logo.png" /><link rel=" image_src" href="http://cache.wine.com/images/logos/300x200_winecom_logo.png" /><script type="text/javascript">
+	var utag_data ={
+  "Property": "WineCom",
+  "Environment": "PROD",
+  "PageType": "CustomerService",
+  "Zip": "",
+  "CustomerType": "Prospect",
+  "State": "CA",
+  "WarehouseState": "CA",
+  "CustomerTypeOnLanding": "Prospect"
+};
+</script>
+    <script>!function(e,t){function a(t){t="state"+t,e.className=e.className?e.className+" "+t:t}a("DocInit"),t.CustomerId&&(a("UserRecognized"),"Stewardship"===t.CustomerType&&a("UserStewardship")),"True"===t.StewardShipInCart&&a("StewardShipAdded")}(document.documentElement,utag_data||{})</script>
+    <link rel="stylesheet" type="text/css" href="/includes/v635844996945891988/css/defaultsixC.css" />
+
+<meta name="verify-v1" content="eI+xs9daQSsc1RIldLyWXXJuwtEmPONXlSmzxiylQwY=" />
+<meta name="verify-v1" content="1ZriATpbz8EnZHRDwAfhKoyHHuOIjH3Pv+S94TynWZY=" />
+<meta name="google-site-verification" content="VD5d07Bcz1ye0hPJIdzqIGIMVhGECIbM5Ptf4zWd6Qk" /><script src="/includes/v635404570662231488/js/jquery.min.js"></script>
+<!--[if lt IE 8]>
+<script src="/includes/v635404570662231488/js/json2.min.js"></script>
+<![endif]-->
+<script src="//cdn.optimizely.com/js/524690941.js"></script><script type="text/javascript" src="//media.richrelevance.com/rrserver/js/1.0/p13n.js"></script>
+
+
+    <!--[if lt IE 9]>
+        <script src="/includes/v635844997012792003/js/ie8shims.js"></script>
+<link rel="stylesheet" type="text/css" href="/includes/v635844996951721693/css/ie8shims.css" />
+
+    <![endif]-->
+</head>
+<body id="ctl00_ctl00_Body" style="margin: 0; padding: 0;" class="bgwhite stateOccasion24 stateOccasion25 stateOccasion26 stateOccasion46 stateOccasion47 stateOccasion65 stateOccasion66">
+    <script type="text/javascript">
+	(function(a,b,c,d){
+                a='//tags.tiqcdn.com/utag/wine.com/main/prod/utag.js';
+                b=document;c='script';d=b.createElement(c);d.src=a;d.type='text/java'+c;d.async=true;
+                a=b.getElementsByTagName(c)[0];a.parentNode.insertBefore(d,a);
+                })();
+</script>
+    
+<div id="StateSelectBackground"></div>
+
+<div id="StateSelectDialog" style="display: none;">
+    <div class="logo">
+        <img src="http://cache1.wine.com/assets/logo.png" alt="wine.com" border="0" width="160" height="40" />
+    </div>
+    <div class="stateSelectHeader">What state will you be shipping to?</div>    
+    <div class="stateSelectForm group">
+        <label for="stateSelectPopUp">I'm shipping to</label>
+        <select name="stateSelectPopUp" id="stateSelectPopUp">
+            <option value="AL">Alabama</option>
+            <option value="AK">Alaska</option>
+            <option value="AZ">Arizona</option>
+            <option value="AR">Arkansas</option>
+            <option value="CA">California</option>
+            <option value="CO">Colorado</option>
+            <option value="CT">Connecticut</option>
+            <option value="DE">Delaware</option>
+            <option value="FL">Florida</option>
+            <option value="GA">Georgia</option>
+            <option value="HI">Hawaii</option>
+            <option value="ID">Idaho</option>
+            <option value="IL">Illinois</option>
+            <option value="IN">Indiana</option>
+            <option value="IA">Iowa</option>
+            <option value="KS">Kansas</option>
+            <option value="KY">Kentucky</option>
+            <option value="LA">Louisiana</option>
+            <option value="ME">Maine</option>
+            <option value="MD">Maryland</option>
+            <option value="MA">Massachusetts</option>
+            <option value="MI">Michigan</option>
+            <option value="MN">Minnesota</option>
+            <option value="MS">Mississippi</option>
+            <option value="MO">Missouri</option>
+            <option value="MT">Montana</option>
+            <option value="NE">Nebraska</option>
+            <option value="NV">Nevada</option>
+            <option value="NH">New Hampshire</option>
+            <option value="NJ">New Jersey</option>
+            <option value="NM">New Mexico</option>
+            <option value="NY">New York</option>
+            <option value="NC">North Carolina</option>
+            <option value="ND">North Dakota</option>
+            <option value="OH">Ohio</option>
+            <option value="OK">Oklahoma</option>
+            <option value="OR">Oregon</option>
+            <option value="PA">Pennsylvania</option>
+            <option value="RI">Rhode Island</option>
+            <option value="SC">South Carolina</option>
+            <option value="SD">South Dakota</option>
+            <option value="TN">Tennessee</option>
+            <option value="TX">Texas</option>
+            <option value="UT">Utah</option>
+            <option value="VT">Vermont</option>
+            <option value="VA">Virginia</option>
+            <option value="WA">Washington</option>
+            <option value="DC">Washington D.C.</option>
+            <option value="WV">West Virginia</option>
+            <option value="WI">Wisconsin</option>
+            <option value="WY">Wyoming</option>
+        </select>
+        <span id="StateSelectShopButton" class="ui-btn-corners ui-btn-gradient">CONTINUE</span>
+    </div>
+    <div class="errors txtred">
+        <span class="stateSelectError" style="display: none;">Please select your shipping state to proceed.</span>
+        <span class="cookieRequiredError" style="display: none;">Your browser is currently set to block Cookies which are required for this website to function properly. <a href="/content/privacy-policy.aspx">Privacy Policy</a></span>
+    </div>
+    <div class="why open">
+        <a id="WhySelectStateOpen">why?</a>
+    </div>
+    <div class="why close" style="display:none;">
+        <a id="WhySelectStateClose">close</a>
+    </div>
+    <div class="stateSelectImportance" style="display:none;">
+        Due to state wine regulations, our assortment can vary across the U.S.   Please select the state you are shipping to for the best shopping experience.
+    </div>
+</div>
+
+<script type="text/javascript">
+    (function () {
+        $('#WhySelectStateOpen').click(function () {
+            $('#StateSelectDialog').addClass('noBottomRadius');
+            $('.stateSelectImportance').slideDown();
+            $('.close').show();
+            $('.open').hide();
+        });
+
+        $('#WhySelectStateClose').click(function () {
+            $('.stateSelectImportance').slideUp(function () {
+                $('#StateSelectDialog').removeClass('noBottomRadius');
+            });
+            $('.close').hide();
+            $('.open').show();
+        });
+
+        function loadStateSelectDialog() {
+            $("#StateSelectDialog").show();
+            if (document.cookie == '') {
+                $("#StateSelectDialog .cookieRequiredError").show();
+            }
+        }
+
+        $('#StateSelectShopButton').click(function () {
+            var popUp = document.getElementById("stateSelectPopUp");
+            if (popUp) {
+                var selectedString = popUp.options[popUp.selectedIndex].value;
+                if (selectedString == "--") {
+                    $("#StateSelectDialog .stateSelectError").show();
+                } else {
+                    location.href = "/customercare/?state=" + selectedString;
+                }
+            }
+        });
+
+        var stateFromIpAddress = 'CA';
+        if (stateFromIpAddress !== '') {
+            $('#stateSelectPopUp').val(stateFromIpAddress);
+        }
+
+        loadStateSelectDialog();
+    })();
+</script>
+    <div id="fb-root">
+    </div>
+    
+    
+    <form name="aspnetForm" method="post" id="aspnetForm">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="UR+JmcLAiIwwUpdlXn1H4unlaXboBo1SLs/OOk7f+IspIqKu4UYP+FWHuefhjdXgEdPnkKJ2zpcC5/s8/jAFtvGcOw6XGfliIZl+0V43b+DH/RCgPb2cdryD65G8fdNXQCf0iI5xVw7fhxt9RYD39vHx3pQfNeCjCSZiak9TchQgexkkS44neUJo1f+oIBGeinUFvhetNMmdgRN8t8+kGtxyNfBOxk281Kdgpx5LCvWvh5KkXCq5vKWbAY0MpOgC/K9ak7Hhth3UNZH3fHGb7dg+AcABiCopvT0jWVfdnVzlUWul7Yk2T9YkHlj0we/4Sjw5hrCytJFNHf9fYMOePKhaB7XuOIb9flES9IR/+cHyPCQNNXEFx19MggvBCVpPXYj9i8i+g3MNETqzH/nhgzH0QAXSLdO3GYAtaATtvzi14ZROjoDWKBrKPMVET/XlYDtTbJtntyWbXZWzJDGNOxgA/pa6nM/dDQvgEc1wtKqCqH2+D364atczGdWJvPvrSpqunWPfBEoecQSkqHFW6G2j+oUmVKXHKdrvzU8ey7LFWyYtHImWtAE/Yt1z5pNiAzoUAVFRoQWSMUX9xEIIolWL6uE/VOGf5SRDDsRF6Hn/5y/yNPJ3vt2OAfh+nFepexVGeelTk350CWnwfGkRBuSgi7JKfX/uPcwhYtXwu66HvQjVyLeStXZK+wK5mwZP7lY0QkI96Pgz+kat3ZTSDCDLSdGjB/BbVGaXnbELvhUpQnpmiRzs6H7T/clILWbf7ea+zUrquXvQbXahlolB9gDhEFF0Od7nZLU0Vrv1Ek082QCEzZSbsgeFjCEzWKe7vjuiy7+cAZBTaJBO8TcHyaUIKqw8cf04tAlXMd8u4VG7cNy/Vmk/FhiGyQ7fospYKDKpXbpAV7zwSk1uIA+ZqM98r9hqm1+XzfByT22kfCNpdQPh/jW0nqniaOy25i1/ISLTYmm4NXRkRli2Ea/b1TFtpvwBRZ1mu9ofOf2BFKP962GVU8pfik6j9l7n8Ulc0lvMi3Uw6gaDnDM7z1LZNFn4EKtkXiB885JWQGUTvYOgHePtJl4KjWA27ZD7lF6/8hth+S+MCF7RarRhHmey2+yBgbFEN+t2+kPv08RsSgZ3XoRVozDlYl+mQNmlul+iUxwR4wmlqsSW97J3Jik+Gl5+AfmQmef0qnAS2JlqHbVA2R3+5e1sXF0UjAVfuZ1h6x1PfyqOb/X6x+C2PUV5bwckcvR3elCsEyoOvL7/Gu+rY05LOkm3Yttnk5F9XDrWKnY0QpNWrZnm3ZkAkkSiUVKwXf/x7C6BjXRB8DMQ57F6wDlxi6i2/k+0oCO4kkwDMavIm8EvrSjtkNMxnCP7dirirtUHf9Fsr6DAarNjvmza/609TkWJ0MtGkB4BDItL89MmsIMyUTR2CIpC70BpB+Cryv3zHovl5tkksKaDgLGI9B6sBzEcuwGyI47HBSgHR0eBc1z0WiSwEMJ+FkxHd4pwPHGMU2OE8/K8Dm4XGh60Bdy47/heTnAlZZOYzaZlNtkJOwZL3Cs1HJOQQZ2iR5LiqRNh04LuzAs2mLY80DGyJhqoYG8n/WS47fteGSFPGDvZfdTBd/vxyJduk232EmeK9ASXs/USwVT3EnD2MB3kTEyIz3WYoq3aWlT7sCJxkP390hKrOj0Q3kDsKLB84OdX8WEnoCjNWdLf2fHidsxReQixzR6mqKB8mHnLKWXACsm4sdJD94SHPaqtz7h8KyPzf6DJGSE8vtJ6oo5b6BKDSOU5iVPJyYUyiQvZOHV0m4sDAa5Ff26IYpZvpEHW23BId83rA4O2d8oYj82W4IDlIqpzUuwRdiKw8JSafh7oj64xll3OdgI9lq158UZCL5XpTx1QyZWzhtyVbH6x9gNLmlll3D1AY3MsBM1gFTkfiPqqov5IxuTOQ81xsVoaDjOqlSO0g1wYS/udoWjRGm9pr4Xq9XiCqZUpY5BiELh1F2pNSK4KQ72X7qDje7Y/tbvKSx/u5YTMDDBVocT+iOC0ijxyIn7tQ8NKCxQmNkc63/rTp0gJs7FYGi7xA96PlCNboaHo8FZtQqGZauoCPCR28YUMjTL1lyjy+dkR0wpeyYa8tDZJxyl389syHez4Vx5iJmIAHVoJ4/TjYPSHtQexasE8/lS/5r1wECxG8u1A0+xs89Uptvg7yXTE7sm/ilJsM7BbRYJs0H/m49FRyLmJBZIDq+M+33XnrA779wkRB1OAx5b0mhuAUVTwjuzdSW7Em6xOa/05fGTEQvtqLeBdKTdqybFZ/VJbc5JKshFeQmvBwMv3YakBoX8dj3FrQAdEof7oUIC22g8kDYXQy6zgXuLpb4Tm0pWTLOZH/R9PMdtvG7/hi3/YQltF8qSjqdN96JdvfVDA22YSz0i3bj0sVvth7bLJatgiuGwwwHzRIFcHONcpFwehmrR+r92GtDjwLzPDx32C8IFNU6HxYRTj6dnIdhfBUx8gnIHbi1nWAni2MbzfzhHEIMHhk6Vg/GKQQMbcdN2ks8r541pNiyjbZP+U32uxZ72sc9h5/E4DeaVA2o0s79EnYIRX5j4qyNWLfkhrzwRhgNtegCUgG7CPkDiu" />
+
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="F14C00BF" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="gQnnrA8KthmL4q+F9i+xWoVTZwCeauL9jMZndwz5xb8oemWDZjwQ5fZcWLUiBMz8AA0BCbM9J9eB1Del1qCJ/wwRcU0rr71gyOskg0WhkRfl3AKwdUt13ooomVZ9jhSf/hR62A==" />
+                <header class="pageHeader"><div class="topRow"><a href="/" class="logo"><img src="http://cache1.wine.com/assets/logo.png" alt="Wine.com logo" /><img src="http://cache1.wine.com/assets/logoStewardShip.png" alt="Wine.com Stewardship logo" class="stewardshipLogo" /></a><div class="customerSection"><a href="/v6/account/orderstatus.aspx">Track Order</a><a href="/customercare/"><em>Customer Care</em></a><a href="tel:18005925870"><em>1.800.592.5870</em></a><a href="http://www.wineshopper.com/?s=winecom_topnavbanner&amp;cid=winecom_topnavbanner" class="wineShopperUpSell" data-analytics-click="{&quot;id&quot;: &quot;wineShopperLink&quot;}"><img src="http://cache1.wine.com/assets/wineshopperUpsell.png" /></a></div><div class="stateSection"><label>Ship To<select class="stateSelect checkZip"><option value="AK">AK</option><option value="AL">AL</option><option value="AR">AR</option><option value="AZ">AZ</option><option value="CA" selected="true">CA</option><option value="CO">CO</option><option value="CT">CT</option><option value="DC">DC</option><option value="DE">DE</option><option value="FL">FL</option><option value="GA">GA</option><option value="HI">HI</option><option value="IA">IA</option><option value="ID">ID</option><option value="IL">IL</option><option value="IN">IN</option><option value="KS">KS</option><option value="KY">KY</option><option value="LA">LA</option><option value="MA">MA</option><option value="MD">MD</option><option value="ME">ME</option><option value="MI">MI</option><option value="MN">MN</option><option value="MO">MO</option><option value="MS">MS</option><option value="MT">MT</option><option value="NC">NC</option><option value="ND">ND</option><option value="NE">NE</option><option value="NH">NH</option><option value="NJ">NJ</option><option value="NM">NM</option><option value="NV">NV</option><option value="NY">NY</option><option value="OH">OH</option><option value="OK">OK</option><option value="OR">OR</option><option value="PA">PA</option><option value="RI">RI</option><option value="SC">SC</option><option value="SD">SD</option><option value="TN">TN</option><option value="TX">TX</option><option value="UT">UT</option><option value="VA">VA</option><option value="VT">VT</option><option value="WA">WA</option><option value="WI">WI</option><option value="WV">WV</option><option value="WY">WY</option></select></label><span class="stateMessage">Most <em>CA</em> orders arrive in <em>1 to 2 days</em></span></div></div><nav id="topNav" class="menubar" role="menubar"><ul class="menubarRow"><li class="menubarItem" data-analytics-hover="{&quot;id&quot;: &quot;wineMenuCard&quot;}" data-analytics-group="wineMenuCard"><a class="menuLabel" id="topNavWineMenu" href="/v6/wineshop/" role="menuitem" aria-haspopup="true">Wine</a><nav class="menu" role="menu" aria-labelledby="topNavWineMenu"><ul class="menuColumn"><li class="menuItemHeading">Varietal</li><li class="menuItem"><a href="/v6/Red-Wine/wine/list.aspx?N=7155+124" role="menuitem">Red Wine</a><ul class="menuSubmenu"><li class="menuItem"><a href="/v6/Cabernet-Sauvignon/wine/list.aspx?N=7155+124+139" role="menuitem">Cabernet Sauvignon</a></li><li class="menuItem"><a href="/v6/Bordeaux-Blends/wine/list.aspx?N=7155+124+144" role="menuitem">Bordeaux Blends</a></li><li class="menuItem"><a href="/v6/Pinot-Noir/wine/list.aspx?N=7155+124+143" role="menuitem">Pinot Noir</a></li><li class="menuItem"><a href="/v6/Other-Red-Blends/wine/list.aspx?N=7155+124+145" role="menuitem">Red Blends</a></li><li class="menuItem"><a href="/v6/Sangiovese/wine/list.aspx?N=7155+124+163" role="menuitem">Sangiovese</a></li><li class="menuItem"><a href="/v6/SyrahShiraz/wine/list.aspx?N=7155+124+146" role="menuitem">Syrah / Shiraz</a></li><li class="menuItem"><a href="/v6/Rhone-Blends/wine/list.aspx?N=7155+124+10082" role="menuitem">Rhône Blends</a></li><li class="menuItem"><a href="/v6/Red-Wine/wine/list.aspx?N=7155+124" role="menuitem">View All</a></li></ul></li><li class="menuSpacer"></li><li class="menuItem"><a href="/v6/White-Wine/wine/list.aspx?N=7155+125" role="menuitem">White Wine</a><ul class="menuSubmenu"><li class="menuItem"><a href="/v6/Chardonnay/wine/list.aspx?N=7155+125+140" role="menuitem">Chardonnay</a></li><li class="menuItem"><a href="/v6/Sauvignon-Blanc/wine/list.aspx?N=7155+125+151" role="menuitem">Sauvignon Blanc</a></li><li class="menuItem"><a href="/v6/Pinot-GrisGrigio/wine/list.aspx?N=7155+125+194" role="menuitem">Pinot Gris / Grigio</a></li><li class="menuItem"><a href="/v6/White-Wine/wine/list.aspx?N=7155+125" role="menuitem">View All</a></li></ul></li><li class="menuSpacer"></li><li class="menuItem"><a href="/v6/Champagne-and-Sparkling/wine/list.aspx?N=7155+123" role="menuitem">Champagne &amp; Sparkling</a></li><li class="menuItem"><a href="/v6/Rose-Wine/wine/list.aspx?N=7155+126" role="menuitem">Rosé Wine</a></li><li class="menuItem"><a href="/v6/Dessert-Sherry-and-Port/wine/list.aspx?N=7155+128" role="menuitem">Dessert, Sherry &amp; Port</a></li><li class="menuItem"><a href="/v6/Sake/wine/list.aspx?N=7155+134" role="menuitem">Saké</a></li></ul><ul class="menuColumn"><li class="menuItemHeading">Top Rated</li><li class="menuItem"><a href="/v6/90-Rated-Under-20/wine/list.aspx?N=7155+2407" role="menuitem">90+ Rated Under $20</a></li><li class="menuItem"><a href="/v6/90-Rated-Wine/wine/list.aspx?N=7155+2408" role="menuitem">90+ Rated</a></li><li class="menuItem"><a href="/v6/94-Rated-Wine-Under-75/wine/list.aspx?N=7155+2096" role="menuitem">94+ Rated Under $75</a></li><li class="menuItem"><a href="/v6/94-Rated-Wine/wine/list.aspx?N=7155+2095" role="menuitem">94+ Rated</a></li><li class="menuItemHeading">Trending Now</li><li class="menuItem"><a href="/v6/wineshop/" role="menuitem">Most Popular Now</a></li><li class="menuItem"><a href="/v6/New-Arrivals-This-Week/wine/list.aspx?N=7155+1001&amp;Ns=p_Date_Added|1" role="menuitem">New Arrivals This Week</a></li><li class="menuItemHeading">Great Deals</li><li class="menuItem"><a href="/v6/wineshop/list.aspx?N=7155+1051" role="menuitem">Clearance Sale</a></li><li class="menuItemHeading">Price</li><li class="menuItem"><a href="/v6/Champagne-and-Sparkling/wine/list.aspx?N=7155+13" role="menuitem">Under $20</a></li><li class="menuItem"><a href="/v6/Champagne-and-Sparkling/wine/list.aspx?N=7155+12" role="menuitem">$20 – $40</a></li><li class="menuItem"><a href="/v6/Shop-Champagne-and-Sparkling/wine/list.aspx?N=7155+11" role="menuitem">$40 – $80</a></li><li class="menuItem"><a href="/v6/Shop-Champagne-and-Sparkling/wine/list.aspx?N=7155+10" role="menuitem">$80 and Above</a></li></ul><ul class="menuColumn"><li class="menuItemHeading">Region</li><li class="menuItem"><a href="/v6/California/wine/list.aspx?N=7155+101" role="menuitem">California</a><ul class="menuSubmenu"><li class="menuItem"><a href="/v6/Napa-Valley/wine/list.aspx?N=7155+101+2398" role="menuitem">Napa Valley</a></li><li class="menuItem"><a href="/v6/Sonoma-County/wine/list.aspx?N=7155+101+2371" role="menuitem">Sonoma County</a></li><li class="menuItem"><a href="/v6/Central-Coast/wine/list.aspx?N=7155+101+2462" role="menuitem">Central Coast</a></li></ul></li><li class="menuItem"><a href="/v6/Washington-Shop/wine/list.aspx?N=7155+104" role="menuitem">Washington</a></li><li class="menuItem"><a href="/v6/Oregon-Shop/wine/list.aspx?N=7155+103" role="menuitem">Oregon</a></li><li class="menuSpacer"></li><li class="menuItem"><a href="/v6/search/advancedsearchresults.aspx?N=490+10038+10039+102" role="menuitem">France</a><ul class="menuSubmenu"><li class="menuItem"><a href="/v6/France-Bordeaux/wine/list.aspx?N=7155+10038" role="menuitem">Bordeaux</a></li><li class="menuItem"><a href="/v6/Burgundy/wine/list.aspx?N=7155+102+2457" role="menuitem">Burgundy</a></li><li class="menuItem"><a href="/v6/Champagne/wine/list.aspx?N=7155+102+2331" role="menuitem">Champagne</a></li><li class="menuItem"><a href="/v6/France-Rhone/wine/list.aspx?N=7155+10039" role="menuitem">Rhône Valley</a></li></ul></li><li class="menuItem"><a href="/v6/Italy-Shop/wine/list.aspx?N=7155+105" role="menuitem">Italy</a></li><li class="menuItem"><a href="/v6/Spain-Shop/wine/list.aspx?N=7155+109" role="menuitem">Spain</a></li><li class="menuSpacer"></li><li class="menuItem"><a href="/v6/Australia-Shop/wine/list.aspx?N=7155+108" role="menuitem">Australia</a></li><li class="menuItem"><a href="/v6/Argentina/wine/list.aspx?N=7155+112+2089" role="menuitem">Argentina</a></li><li class="menuItem"><a href="/v6/Chile/wine/list.aspx?N=7155+112+2428" role="menuitem">Chile</a></li><li class="menuItem"><a href="/v6/New-Zealand-Shop/wine/list.aspx?N=7155+114" role="menuitem">New Zealand</a></li><li class="menuItem"><a href="/v6/wineshop/list.aspx?N=7155" role="menuitem">View All Regions</a></li></ul><ul class="menuColumn"><li class="menuItemHeading">Fine Wine</li><li class="menuItem"><a href="/v6/Collectible/wine/list.aspx?N=7155+36" role="menuitem">Collectible</a></li><li class="menuItem"><a href="/v6/Boutique-Wines/wine/list.aspx?N=7155+506" role="menuitem">Boutique</a></li><li class="menuItem"><a href="/v6/Older-Vintages/wine/list.aspx?N=7155+507&amp;Ns=p_Vintage|0" role="menuitem">Older Vintages</a></li><li class="menuItem"><a href="/v6/Boutique-Wines/wine/list.aspx?N=7155+116" role="menuitem">Bordeaux Futures</a></li><li class="menuItemHeading">Special Designation</li><li class="menuItem"><a href="/v6/Screw-Cap-Wines/wine/list.aspx?N=7155+44" role="menuitem">Screw Caps</a></li><li class="menuItem"><a href="/v6/Green-Wines/wine/list.aspx?N=7155+38" role="menuitem">Green Wine</a></li><li class="menuItem"><a href="/v6/Sweet/wine/list.aspx?N=7155+617" role="menuitem">Sweet</a></li><li class="menuItem"><a href="/v6/Half-Bottles/wine/list.aspx?N=7155+42" role="menuitem">Half Bottles</a></li><li class="menuItem"><a href="/v6/Magnums-and-Larger/wine/list.aspx?N=7155+15418" role="menuitem">Magnums &amp; Larger</a></li><li class="menuItemHeading"><a href="/v6/wineclubs/">Wine Clubs</a></li><li class="menuItem"><a href="/v6/wineclubs/Discovery-Tour.aspx" role="menuitem">Discovery Tour</a></li><li class="menuItem"><a href="/v6/wineclubs/Wines-of-the-World.aspx" role="menuitem">Wines of the World</a></li><li class="menuItem"><a href="/v6/wineclubs/90-Point-Rated.aspx" role="menuitem">90+ Rated</a></li><li class="menuItemHeading"><a href="/v6/Wine-Glassware/gift/list.aspx?N=7151+8988">Glassware &amp; Accessories</a></li></ul></nav></li><li class="menubarItem" data-analytics-hover="{&quot;id&quot;: &quot;giftsMenuCard&quot;}" data-analytics-group="giftsMenuCard"><a class="menuLabel" id="topNavGiftsMenu" href="/v6/giftcenter" role="menuitem" aria-haspopup="true">Gifts</a><nav class="menu" role="menu" aria-labelledby="topNavGiftsMenu"><ul class="menuColumn"><li class="menuItemHeading">Type</li><li class="menuItem"><a href="/v6/Wine-Gift-Sets/gift/list.aspx?N=7151+8984" role="menuitem">Curated Wine Sets</a><ul class="menuSubmenu"><li class="menuItem"><a href="/v6/1-4-Bottles/gift/list.aspx?N=7151+8984+513" role="menuitem">1 – 4 Bottles</a></li><li class="menuItem"><a href="/v6/6-12-Bottles/gift/list.aspx?N=7151+8984+514" role="menuitem">6 – 12 Bottles</a></li></ul></li><li class="menuItem"><a href="/v6/Gourmet-Food-Baskets/gift/list.aspx?N=7151+7152" role="menuitem">Wine &amp; Food Gifts</a></li><li class="menuItem"><a href="/v6/Chocolate-and-Sweets-Baskets/gift/list.aspx?N=7151+9031" role="menuitem">Wine &amp; Chocolate Gifts</a></li><li class="menuItem"><a href="/v6/Gourmet-Food-Baskets/gift/list.aspx?N=7151+8992" role="menuitem">Food &amp; Chocolate Gifts</a></li><li class="menuItem"><a href="/v6/Great-Bottles-to-Give/gift/list.aspx?N=7151+15419" role="menuitem">Great Bottles to Give</a><ul class="menuSubmenu"><li class="menuItem"><a href="/v6/Champagne-and-Sparkling-Great-Bottles-to-Give/gift/list.aspx?N=7151+8981+515" role="menuitem">Champagne &amp; Sparkling</a></li><li class="menuItem"><a href="/v6/Great-Bottles-to-Give-Red-Wine/gift/list.aspx?N=7151+8981+124" role="menuitem">Red Wine</a></li><li class="menuItem"><a href="/v6/Great-Bottles-to-Give-White-Wine/gift/list.aspx?N=7151+8981+125" role="menuitem">White Wine</a></li></ul></li><li class="menuItem"><a href="/v6/wineclubs/" role="menuitem">Wine Clubs</a><ul class="menuSubmenu"><li class="menuItem"><a href="/v6/wineclubs/Discovery-Tour.aspx" role="menuitem">Discovery Tour</a></li><li class="menuItem"><a href="/v6/wineclubs/Wines-of-the-World.aspx" role="menuitem">Wines of the World</a></li><li class="menuItem"><a href="/v6/wineclubs/90-Point-Rated.aspx" role="menuitem">90+ Rated</a></li></ul></li><li class="menuItem"><a href="/v6/Wine-Glassware/gift/list.aspx?N=7151+8988" role="menuitem">Glassware &amp; Accessories</a></li></ul><ul class="menuColumn"><li class="menuItemHeading">Price</li><li class="menuItem"><a href="/v6/giftcenter/list.aspx?N=7151+21" role="menuitem">$40 and Below</a></li><li class="menuItem"><a href="/v6/giftcenter/list.aspx?N=7151+22" role="menuitem">$40 – $80</a></li><li class="menuItem"><a href="/v6/giftcenter/list.aspx?N=7151+23" role="menuitem">$80 and Above</a></li><li class="menuItem"><a href="/v6/giftcenter/list.aspx?N=7151+1052" role="menuitem">On Sale</a></li><li class="menuItemHeading">Occasion</li><li class="menuItem showOccasion46"><a href="/v6/Holiday/gift/list.aspx?N=7151+9069" role="menuitem">Holiday</a></li><li class="menuItem showOccasion48"><a href="/v6/Valentines-Day/gift/list.aspx?N=7151+9078" role="menuitem">Valentine's Day</a></li><li class="menuItem showOccasion23"><a href="/v6/Mothers-Day/gift/list.aspx?N=7151+9074" role="menuitem">Mother's Day</a></li><li class="menuItem showOccasion59"><a href="/v6/Fathers-Day/gift/list.aspx?N=7151+9072" role="menuitem">Father's Day</a></li><li class="menuItem showOccasion24"><a href="/v6/Birthday/gift/list.aspx?N=7151+9009" role="menuitem">Birthday</a></li><li class="menuItem showOccasion65"><a href="/v6/Thank-You/gift/list.aspx?N=7151+9026" role="menuitem">Thank You</a></li><li class="menuItem showOccasion66"><a href="/v6/Congratulations/gift/list.aspx?N=7151+9032" role="menuitem">Congratulations</a></li><li class="menuItem showOccasion26"><a href="/v6/Wedding/gift/list.aspx?N=7151+9006" role="menuitem">Wedding</a></li><li class="menuItemHeading"><a href="/v6/giftcenter/giftcertificates.aspx">Gift Cards</a></li></ul><ul class="menuColumn"><li class="menuItemHeading">Trending Now</li><li class="menuItem"><a href="/v6/giftcenter/" role="menuitem">Most Popular</a></li><li class="menuItem"><a href="/v6/New-This-Season/gift/list.aspx?N=7151+1002&amp;Ns=p_Date_Added|1" role="menuitem">New This Season</a></li><li class="menuItemHeading"><a href="/v6/corporategifts/">Corporate Gifting</a></li><li class="menuCopy">Contact us for client gifts, special events, or 10+ recipients.</li><li class="menuItem"><a href="/v6/corporategifts/" role="menuitem">Learn More</a></li></ul></nav></li><li class="menubarItem" data-analytics-hover="{&quot;id&quot;: &quot;discoverMenuCard&quot;}" data-analytics-group="discoverMenuCard"><a class="menuLabel" id="topNavDiscoverMenu" role="menuitem" aria-haspopup="true">Discover</a><nav class="menu" role="menu" aria-labelledby="topNavDiscoverMenu"><header class="menuHeading">Choose your next bottle with confidence.</header><ul class="menuColumn mediaBlockColumn"><li class="mediaBlock"><a href="/content/wine-recs.aspx"><img src="/images/topnav/discover/chat-with-an-expert.jpg" srcset="/images/topnav/discover/chat-with-an-expert.jpg 1x" /></a></li><li class="menuItemHeading">Rediscover your favorites</li><li class="menuItem"><a href="/v6/account/mywines.aspx" role="menuitem">Wines You've Purchased</a></li></ul><ul class="menuColumn mediaBlockColumn"><li class="mediaBlock"><a href="/content/what-were-drinking.aspx"><img src="/images/topnav/discover/what-were-drinking.jpg" srcset="/images/topnav/discover/what-were-drinking.jpg 1x" /></a></li><li class="menuItemHeading">Learn about wine</li><li class="menuItem"><a href="http://blog.wine.com/" role="menuitem">The Wine.com Blog</a></li><li class="menuItem"><a href="/v6/aboutwine/" role="menuitem">Wine Articles</a></li></ul><ul class="menuColumn mediaBlockColumn"><li class="mediaBlock"><a href="/v6/account/recommendations.aspx"><img src="/images/topnav/discover/recommended-for-you.jpg" srcset="/images/topnav/discover/recommended-for-you.jpg 1x" /></a></li><li class="menuItemHeading">Tools</li><li class="menuItem"><a href="/v6/search/advancedsearch.aspx" role="menuitem">Advanced Wine Search</a></li><li class="menuItem"><a href="/v6/aboutwine/pairingfoodwithwine.aspx" role="menuitem">Wine &amp; Food Pairing Guide</a></li></ul></nav></li><li class="menubarItem searchCard"><label class="search"><a href="/v6/search/advancedsearch.aspx">Advanced Wine Search</a><input type="text" placeholder="Search Wine.com" /><img src="http://cache1.wine.com/assets/magnifyglass.png" class="searchButton" alt="Search Button" /><ul id="searchAssist"></ul><div class="search-tips"><a href="#" class="search-tips-close"><span class="offscreen">close</span></a><p>To perform a search, enter a keyword, phrase or item number in the search field and click "search."</p><p>We offer two ways to locate information:</p><ol><li>Keyword search: Use key word(s) (product information, winery, varietal, etc.) to locate products.</li><li>Gift# or Item No. search: Use the item number to search for a product or the Gift# from our catalog. Enter one product number at a time and enter all digits.</li></ol></div></label></li><li class="menubarItem accountCard" data-analytics-hover="{&quot;id&quot;: &quot;accountMenuCard&quot;}" data-analytics-group="accountMenuCard"><a class="menuLabel" aria-haspopup="true" role="menuitem" id="topNavAccountMenu" href="/v6/account/login.aspx">Sign In<em>Account</em></a><nav class="menu" aria-labelledby="topNavAccountMenu" role="menu"><ul class="menuColumn notLoggedIn"><li class="menuItem"><a href="/v6/account/login.aspx" class="signInLink button" data-analytics-click="{&quot;id&quot;: &quot;signInLink&quot;}">Sign In</a><a href="/v6/account/login.aspx" class="facebookSignIn"><img src="http://cache2.wine.com/assets/social_footer_facebook.png" srcset="http://cache2.wine.com/assets/social_footer_facebook@2x.png 2x" /></a></li><li>or <a class="underlined" role="menuitem" href="/v6/account/accountform.aspx">create an account</a></li></ul></nav></li><li class="menubarItem stewardShipCard" data-analytics-hover="{&quot;id&quot;: &quot;stewardShipMenuCard&quot;}" data-analytics-group="stewardShipMenuCard"><a class="menuLabel" aria-haspopup="true" role="menuitem" id="topNavStewardshipMenu" href="/landing/free-shipping.aspx">Free Shipping! <em>StewardShip</em></a><nav class="menu" aria-labelledby="topNavStewardshipMenu" role="menu"><img src="http://cache1.wine.com/assets/logoStewardShip.png" alt="Wine.com Stewardship logo" class="stewardshipLogo" /><aside class="freeTrial buyBox"><p>Get <strong>Unlimited Free Shipping</strong> to anyone, anywhere, starting with <strong>today's order</strong>.</p><p>Plus exclusive access to new releases.</p><div class="addToCartBlock"><input type="button" value="Start My 30 Day FREE Trial" class="addToCart" /><p>After your free trial, StewardShip is just $49/year.</p></div><div class="stewardShipAdded"><h3>Welcome to StewardShip</h3><p>Your free trial and membership will be finalized when you check out.</p></div><footer>*Bordeaux Futures, Wine Clubs and Corporate Gifts are not eligible. Applies to standard shipping, which is quite speedy! Expedited shipping available at discounted rates for StewardShip members.<a href="/free-shipping.aspx">Learn More</a></footer></aside></nav></li><li class="menubarItem wishListCard"><a class="menuLabel" aria-haspopup="true" role="menuitem" href="/v6/community/userlists.aspx" id="topNavWishListMenu"><em>Wish List</em></a><nav class="menu" aria-labelledby="topNavWishListMenu" role="menu"><ul class="menuColumn"><li class="menuCopy">Your "Wish List" helps you save products for easy access later. Click the "Add to Wish List" button on any list or product detail page to save things. Then click the "Wish List" link above to view your Wish List.</li></ul></nav></li><li class="menubarItem cartCard" data-destination="CA"><a href="/checkout/"><span class="itemCount"></span><em>Cart</em></a></li></ul></nav><div class="navOffer">
+
+<!-- zone: 115 Banner Bar Deep cr: 6154 DEEP 1-cent ship $29 SHIP1C29 12/9/2015 7:00:05 AM-->
+
+<strong>1-cent Shipping</strong> On Any Order $29+ With Code <a href="javascript:void(0);" class="promoCode">SHIP1C29</a>
+
+<script>
+$(document).ready(function(){
+
+$('.navOffer .promoCode').on('click', function(){
+$('body').append('<div id="promoPopup" data-role="nonModalPopup centerFixedPopup" style="display:none; width:450px;padding-bottom:10px;"><h1>1-cent Shipping on Any Order $29+ with code SHIP1C29</h1><small>*Order must be placed by 12/10/2015. Applies to standard shipping only. Order must be at least $29 excluding shipping and tax. Wine club purchases are not eligible. Expedited shipping options may require an additional charge. Some products may not be eligible. A standard shipping charge will appear at checkout but the promo code will credit an amount back so that you pay 1 cent for shipping. Promotion does not apply to corporate orders. Not valid on WineShopper orders or Bordeaux Futures.</small></div>');
+$('#promoPopup').winePopup({shadow: false, fixed: true});
+});
+
+});
+</script>
+
+</div></header>
+                
+                <main id="ctl00_ctl00_wineComBodyContainer">
+                    <section id="ctl00_ctl00_leftNav" class="leftBlock sidebar">
+                        
+<nav class="customerCare" role="menu">
+	<header>Customer Care:</header>
+	<ul>
+		<li><span class="menuItem"><a href="/customercare/faqs.aspx?cat=1">YOUR ACCOUNT</a></span></li>
+		<li><span class="menuItem"><a href="/customercare/faqs.aspx?cat=2">SHIPPING -                           rates, options, areas, weather</a></span></li>
+		<li><span class="menuItem"><a href="/customercare/faqs.aspx?cat=35">STEWARDSHIP</a></span></li>
+		<li><span class="menuItem"><a href="/customercare/faqs.aspx?cat=38">BORDEAUX WINE FUTURES</a></span></li>
+		<li><span class="menuItem"><a href="/customercare/faqs.aspx?cat=3">PLACING ORDERS</a></span></li>
+		<li><span class="menuItem"><a href="/customercare/faqs.aspx?cat=5">BILLING</a></span></li>
+		<li><span class="menuItem"><a href="/customercare/faqs.aspx?cat=34">ORDER CHANGE</a></span></li>
+		<li><span class="menuItem"><a href="/customercare/faqs.aspx?cat=4">ORDER STATUS</a></span></li>
+		<li><span class="menuItem"><a href="/customercare/faqs.aspx?cat=33">DELIVERY PROBLEM</a></span></li>
+		<li><span class="menuItem"><a href="/customercare/faqs.aspx?cat=6">WINE CLUB</a></span></li>
+		<li><span class="menuItem"><a href="/customercare/faqs.aspx?cat=8">Other Issues</a></span></li>
+	</ul>
+</nav>
+<nav class="questionsAndAnswers" role="menu">
+	<header>Questions &amp; Answers:</header>
+	<ul>
+		<li><span class="menuItem"><a href="/customercare/categorized.aspx?pid=-2">Most Common Questions</a></span></li>
+		<li><span class="menuItem"><a href="/customercare/categorized.aspx">Browse by Category</a></span></li>
+	</ul>
+</nav>
+<nav class="support" role="menu">
+	<header>Support:</header>
+	<ul>
+		<li><span class="menuItem selected">Ask a Question</span></li>
+		<li><span class="menuItem"><a href="/customercare/show.aspx">Your Questions</a></span></li>
+	</ul>
+</nav>
+
+                    </section><section id="ctl00_ctl00_mainContent" class="mainBlock">
+                            
+   <div class="customerCare">
+    
+    
+    
+    <div id="ctl00_ctl00_BodyContent_CustomerCareBodyContent_welcomeMessage" class="customerCareSection">
+        <div style="font-size: 16px;">Welcome to our online <strong>Wine.com Customer Care</strong>.  We are happy to assist you!</div>
+
+<p><b>CALL US:</b> 1-800-592-5870</p>
+
+<p><b>HOURS:</b><br />
+<br />Monday-Saturday: 6:00am-6:00pm, Pacific time
+<br />Sunday: 7:00am-4:00pm, Pacific time</p>
+
+<p><b>EMAIL US:</b></p>
+<p>Create and/or login to your Wine.com account and follow the steps below.</p>
+<ul>
+<li>Step 1 – Directly below, in the <b>My question is about:</b> section, type in the subject of your question and click <b>NEXT</b></li>
+<li>Step 2 – On the next page, below the <b>Can’t find your Question below?</b> click on the <b>Submit Your Question</b> button</li>
+<li>Step 3 – Enter in the details of your question and then click on the <b>Submit Question</b> button</li>
+</ul>
+
+
+
+    </div>
+    <div class="customerCareSection">
+        <div id="ctl00_ctl00_BodyContent_CustomerCareBodyContent_pnlStepOne">
+	
+            <span class="orangethirtboldul">
+                Ask a Question</span> | <a href="show.aspx" title="View and Update Your Existing Questions"
+                    class="orangethirtboldul" style="font-size: 16px;">View and Update Your Existing
+                    Questions</a>
+        
+</div>
+        <div style="margin: 10px 0; background-color: WhiteSmoke;">
+            Step
+            <span id="ctl00_ctl00_BodyContent_CustomerCareBodyContent_stepNumber" style="font-weight: bold;">1</span>
+            of <strong>3</strong>
+        </div>
+        <div id="ctl00_ctl00_BodyContent_CustomerCareBodyContent_pnlQuestionHolder">
+	
+            My question is about
+            <input name="ctl00$ctl00$BodyContent$CustomerCareBodyContent$txtQuestion" type="text" id="ctl00_ctl00_BodyContent_CustomerCareBodyContent_txtQuestion" />
+            
+            <input type="button" name="ctl00$ctl00$BodyContent$CustomerCareBodyContent$btnNext" value="Next" onclick="javascript:__doPostBack(&#39;ctl00$ctl00$BodyContent$CustomerCareBodyContent$btnNext&#39;,&#39;&#39;)" id="ctl00_ctl00_BodyContent_CustomerCareBodyContent_btnNext" />
+            
+            &nbsp;
+        
+</div>
+    </div>
+    
+            <div class="customerCareSection">
+                <table class="customerCareTable">
+                    <thead>
+                        <tr>
+                            <th colspan="2">
+                                <a href="/customercare/categorized.aspx?PID=-1" title="View all important questions">
+                                    IMPORTANT QUESTIONS</a>
+                            </th>
+                            <th>
+                                VIEWS
+                            </th>
+                        </tr>
+                    </thead>
+                    
+            <tr>
+                <td>
+                    <a href="/customercare/issue_view.aspx?Id=308513">
+                        <img src="/assets/caution.gif" width="15" height="15" alt="" style="border:none;" /></a>
+                </td>
+                <td>
+                    <a href="/customercare/issue_view.aspx?Id=308513">
+                        <b>05. WEATHER HOLDS</b> - Why is my order on hold and what is the cost to ship now?</a>
+                </td>
+                <td>
+                    1191
+                </td>
+            </tr>
+        
+                    <tr>
+                        <td colspan="3" style="text-align: right">
+                            <a href="/customercare/categorized.aspx?PID=-1">View all
+                                important questions</a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        
+    
+            <div class="customerCareSection">
+                <table class="customerCareTable">
+                    <tr>
+                        <th id="ctl00_ctl00_BodyContent_CustomerCareBodyContent_issuesList_issueTitle">
+                            <a id="ctl00_ctl00_BodyContent_CustomerCareBodyContent_issuesList_issueListTitle" title="View all common questions" href="/customercare/categorized.aspx?PID=-2">MOST COMMON QUESTIONS</a>
+                        </th>
+
+                        <th>
+                            VIEWS
+                        </th>
+                    </tr>
+                    
+            <tr>
+                <td>
+                    <a href="/customercare/issue_view.aspx?Id=11">
+                        <b>01. Shipping Regulations</b> - Where does Wine.com ship wine?</a>
+                </td>
+                <td>
+                    424587
+                </td>
+            </tr>
+        
+            <tr>
+                <td>
+                    <a href="/customercare/issue_view.aspx?Id=55">
+                        <b>01. WINE.COM CUSTOMER SERVICE</b> - What are your HOURS and PHONE NUMBER?</a>
+                </td>
+                <td>
+                    144524
+                </td>
+            </tr>
+        
+            <tr>
+                <td>
+                    <a href="/customercare/issue_view.aspx?Id=32">
+                        <b>03. Shipping Rates</b> - What do you charge for shipping?</a>
+                </td>
+                <td>
+                    42690
+                </td>
+            </tr>
+        
+            <tr>
+                <td>
+                    <a href="/customercare/issue_view.aspx?Id=35">
+                        <b>01. Tracking</b> - How can I check on an order status and delivery?</a>
+                </td>
+                <td>
+                    21023
+                </td>
+            </tr>
+        
+            <tr>
+                <td>
+                    <a href="/customercare/issue_view.aspx?Id=49">
+                        <b>06. Wine Club </b> - How do I make changes to a Wine Club subscription?</a>
+                </td>
+                <td>
+                    20516
+                </td>
+            </tr>
+        
+            <tr>
+                <td>
+                    <a href="/customercare/issue_view.aspx?Id=23">
+                        <b>09. Promotion Codes</b> - How do I redeem a promotion code?</a>
+                </td>
+                <td>
+                    14726
+                </td>
+            </tr>
+        
+            <tr>
+                <td>
+                    <a href="/customercare/issue_view.aspx?Id=46">
+                        <b>04. Wine Club</b> - When are wine club orders shipped each month?</a>
+                </td>
+                <td>
+                    11765
+                </td>
+            </tr>
+        
+            <tr>
+                <td>
+                    <a href="/customercare/issue_view.aspx?Id=41">
+                        <b>04. Multiple Charges</b> - Why is my online statement showing more than one charge?</a>
+                </td>
+                <td>
+                    9281
+                </td>
+            </tr>
+        
+            <tr>
+                <td>
+                    <a href="/customercare/issue_view.aspx?Id=52">
+                        <b>05. Unsubscribing Your Email Address</b> - How do I opt out from email offers?</a>
+                </td>
+                <td>
+                    8796
+                </td>
+            </tr>
+        
+            <tr>
+                <td>
+                    <a href="/customercare/issue_view.aspx?Id=14">
+                        <b>03. Tracking and Viewing Your Orders</b> - How can I view and track my orders?</a>
+                </td>
+                <td>
+                    6628
+                </td>
+            </tr>
+        
+                   
+                     <tfoot id="ctl00_ctl00_BodyContent_CustomerCareBodyContent_issuesList_issueFooter">
+                        <tr>
+                            <td colspan="2" style="text-align: right;">
+                               <a title="View all common questions" href="/customercare/categorized.aspx?PID=-2">View all common questions</a>
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        
+
+    <!--
+        The link above may be removed, but
+        THIS copyright notice MUST remain in place.
+        DEVELOPED AND SOLD BY EXPINION.NET
+        HELP DESK 6.0 BY EXPINION.NET
+        http://www.expinion.net/
+    -->
+       </div>
+
+                    </section>
+                </main>
+                <aside id="ctl00_ctl00_PreFooterAside" class="fullBlock">
+                    <!--Pre-footer-->
+                    
+                    <!--End-Pre-Footer-->
+                </aside>
+
+        <!--Begin-Footer-->
+        
+        <footer class="pageFooter"><section class="socialBar centered"><ul class="menuRow" role="navigation" data-analytics-group="social"><li class="menuHeading">Connect with us</li><li><a href="http://blog.wine.com/" target="_blank" data-analytics-click="{&quot;id&quot;: &quot;blog&quot;}"><img alt="Blog" src="/assets/social_footer_wineblog.png" srcset="/assets/social_footer_wineblog@2x.png 2x" /></a></li><li><a href="https://www.facebook.com/winecom" target="_blank" data-analytics-click="{&quot;id&quot;: &quot;facebook&quot;}"><img alt="Facebook" src="/assets/social_footer_facebook.png" srcset="/assets/social_footer_facebook@2x.png 2x" /></a></li><li><a href="https://twitter.com/wine_com/" target="_blank" data-analytics-click="{&quot;id&quot;: &quot;twitter&quot;}"><img alt="Twitter" src="/assets/social_footer_twitter.png" srcset="/assets/social_footer_twitter@2x.png 2x" /></a></li><li><a href="http://www.pinterest.com/winecom/" target="_blank" data-analytics-click="{&quot;id&quot;: &quot;pinterest&quot;}"><img alt="Pinterest" src="/assets/social_footer_pinterest.png" srcset="/assets/social_footer_pinterest@2x.png 2x" /></a></li><li><a href="http://instagram.com/wine_com" target="_blank" data-analytics-click="{&quot;id&quot;: &quot;instagram&quot;}"><img alt="Instagram" src="/assets/social_footer_instagram.png" srcset="/assets/social_footer_instagram@2x.png 2x" /></a></li></ul><div class="signUpAndSave" data-analytics-click="{&quot;id&quot;: &quot;footerEmailButton&quot;}"><label>Sign Up &amp; Save<input type="text" placeholder="Email address" /></label><input type="button" class="primaryBtn" value="Go" /></div></section><section class="main"><nav id="bottomNav" class="menu centered" role="navigation"><ul class="menuColumn"><li class="menuHeading">About Wine.com</li><li class="menuItem"><a href="/content/our-story.aspx">Our Story</a></li><li class="menuItem"><a href="/content/management-team.aspx">Management Team</a></li><li class="menuItem"><a href="http://pr.wine.com/">In the News</a></li><li class="menuItem"><a href="/content/careers.aspx">Careers</a></li></ul><ul class="menuColumn"><li class="menuHeading">Business Development</li><li class="menuItem"><a href="/content/affiliate-program.aspx">Affiliate Program</a></li><li class="menuItem"><a href="/v6/corporategifts/">Corporate Gifts</a></li><li class="menuItem"><a href="https://api.wine.com/">Developer API</a></li><li class="menuItem"><a href="/content/partnerships.aspx">Partnerships</a></li></ul><ul class="menuColumn"><li class="menuHeading">Customer Service</li><li class="menuItem">1-800-592-5870</li><li class="menuItem"><a href="/v6/account/orderstatus.aspx">Track an Order</a></li><li class="menuItem"><a href="/customercare/">Customer Care</a></li><li class="menuItem"><a href="/customercare/faqs.aspx?cat=2">Shipping Information</a></li></ul><ul class="menuColumn"><li class="menuHeading">Services</li><li class="menuItem"><a href="/content/sell-wine.aspx">Sell Us Your Wine</a></li><li class="menuItem"><a href="/content/wine-recs.aspx">Wine Recommendations</a></li><li class="menuItem"><a href="/content/mobile.aspx">Mobile Shopping</a></li><li class="menuItem"><a href="/v6/community/">Community</a></li></ul></nav><div class="copyright centered">Copyright (c) 1999-2015 Wine.com, Inc. All rights reserved. Wine.com and logo are trademarks of Wine.com, Inc. | Rendered on CA2PRDWWW02</div></section><nav id="colophon" class="menu centered" role="navigation"><ul class="menuRow"><li class="menuItem"><a href="javascript:void(0)" rel="nofollow" class="mobileLink">Mobile Site</a></li><li class="menuItem"><a href="/content/privacy-policy.aspx">Privacy Policy</a></li><li class="menuItem"><a href="/content/terms-of-service.aspx">Terms of Service</a></li><li class="menuItem"><a href="mailto:bizdev@wine.com">Feedback</a></li><li class="menuItem"><a href="http://www.wine.com/content/stewardship-settlement.aspx" rel="nofollow">StewardShip Settlement</a></li></ul></nav></footer>
+        <!--End-Footer-->
+        <!-- End mainContainer -->
+        <!--key-->
+        
+
+<div id="key">
+    <div id="iconKey" class="isHidden" onmouseover="keyMouseOver();" onmouseout="keyMouseOut();">
+        <div id="divLegendIconsWrapper" class="LegendIconsWrapper" style="position: absolute; float: left; width: 512px; padding: 10px; border: thin solid Silver; background-color: #f5f5ed;">
+        </div>
+    </div>
+    <div class="legend" id="iconsLegend"></div>
+    <div class="legend" id="ratingsLegend"></div>
+    <div class="legend" id="wineTypesLegend"></div>
+    <div id="winelistKey" class="isHidden">
+        <div id="winelistForm">
+            
+            
+                <div style="float: right;">
+                    <img src="http://cache1.wine.com/assets/icnCloseWindow.gif" width="16" height="16" border="0" alt="close" style="cursor: pointer; margin-bottom: 5px;" onClick="keyHideAll(); return true;" />
+                </div>
+                <div style="margin: 3px 3px 3px 3px;">
+                    Please <a href="/v6/account/login.aspx?next=http://www.wine.com/customercare/" title="Log in">login</a> or <a href="/account/create_account.asp?Mode=New&Next=http://www.wine.com/customercare/" title="Join Now">create</a> an account to create a wine list.
+                </div>
+            
+            
+        </div>
+    </div>
+    <div id="appellationKey" class="isHidden" style="width: 400px;">
+        <div style="float: right; margin: 0px 0px 10px 10px;">
+            <img src="http://cache1.wine.com/assets/icnCloseWindow.gif" width="16" height="16" border="0" alt="close" style="cursor: pointer;" onClick="keyHideAll(); return true;" />
+        </div>
+        <div id="appellationKeyContent" style="margin-bottom: 5px;">
+        </div>
+    </div>
+    <div id="varietalKey" class="isHidden" style="width: 400px;">
+        <div style="float: right; margin: 0px 0px 10px 10px;">
+            <img src="http://cache1.wine.com/assets/icnCloseWindow.gif" width="16" height="16" border="0" alt="close" style="cursor: pointer;" onClick="keyHideAll(); return true;" />
+        </div>
+        <div id="varietalKeyContent" style="margin-bottom: 5px;">
+        </div>
+    </div>
+</div>
+
+        <!--beacons-->
+
+        
+    
+    <script src="/includes/v635844997020779773/js/adobe-analytics.js"></script>
+
+<script>s.account="winecom";s.pageName = "Customer Care:Landing";s.server = "10.147.4.146";s.pageType = "Landing";s.channel = "Customer Care";
+// Omniture Traffic Properties
+s.prop11 = "Customer Care"; //SalesChannel
+s.prop10 = "Landing"; //PageType
+s.prop64 = "false"; //HasSetState
+s.prop56 = "False"; //KnownOnLanding
+s.prop70 = "Non-Stewardship"; //CustomerSegment
+
+s.state = "";s.zip = "";s.events = "";
+
+// Omniture Conversion Tracking
+s.eVar1 = "Customer Care"; //SalesChannel
+s.eVar12 = "Landing"; //PageType
+s.eVar32 = "Overlay"; //StateSelectPrompt
+s.eVar56 = "False"; //KnownOnLanding
+s.eVar70 = "Non-Stewardship"; //CustomerSegment
+
+s.purchaseID = "";
+
+var s_code=s.t();if(s_code){document.write(s_code)}</script>
+
+
+
+        
+<script type="text/javascript">
+
+try{var R3_COMMON = new r3_common();
+R3_COMMON.setApiKey('fd89fba2959239b2');
+R3_COMMON.setBaseUrl('http://recs.richrelevance.com/rrserver/');
+R3_COMMON.setSessionId('e4818709-60c8-4fc6-a48f-e09958f028ba');
+R3_COMMON.setRegionId('CA');
+}catch(ex){}
+</script>
+    </form>
+
+
+    
+    
+<script type="text/javascript">var ShoppingCartShippingState = 'CA'</script>
+
+    <script src="/includes/v635844997010018743/js/winedotcombundle.js"></script>
+
+    
+
+<script type="text/javascript">
+var Facebook = {
+    Status: '',
+    UserID: '',
+    WineComFacebookUserId: '',
+    AccessToken: '',
+    FirstName: '',
+    IsConnected: false,
+    IsAuthorized: false,
+    $LoginButton: '',
+    $LoginListItem: '',
+    
+    init: function(response, serverSideFacebookId, nextUrl) {
+        FB.Event.subscribe('auth.authResponseChange', Facebook.SetLoginStatus);
+        Facebook.$LoginButton = $('#fbLoginLink');
+        Facebook.$LoginListItem = $('#fbLoginListItem');
+        Facebook.$LoginButton.click(function () {
+            FB.login();
+        });
+
+        Facebook.WineComFacebookUserId = serverSideFacebookId + '';
+        Facebook.SetLoginStatus(response, nextUrl);
+    },
+
+    SetLoginStatus: function (response, nextUrl) {
+        Facebook.Status = response.status;
+        if (response.status === 'connected') {
+            Facebook.IsConnected = true;
+            Facebook.IsAuthorized = true;
+            Facebook.UserID = response.authResponse.userID + '';
+            Facebook.AccessToken = response.authResponse.accessToken;
+            FB.api('/me', function(apiResponse) {
+                 Facebook.FirstName = apiResponse.first_name;
+            });
+            Facebook.$LoginListItem.hide();
+        } else if(response.status === 'not_authorized') {
+            Facebook.IsConnected = true;
+            Facebook.IsAuthorized = false;
+            Facebook.$LoginListItem.show();
+        } else {
+            Facebook.IsConnected = false;
+            Facebook.IsAuthorized = false;
+            Facebook.$LoginListItem.show();
+        }
+        
+         if(Facebook.IsConnected && Facebook.IsAuthorized) {
+            //Do some account correction
+            if (Facebook.WineComFacebookUserId === '' || Facebook.WineComFacebookUserId === 'unknown') {
+                //We can't know for sure if the FB user own's this wine.com account.
+            } else if (Facebook.WineComFacebookUserId === Facebook.UserID) {
+                //same person.
+            } else {
+                //Not the same person.
+                var redirectUrl = '/v6/account/login.aspx?mode=signout';
+                if(nextUrl !== '') {
+                    redirectUrl += '&return=' + nextUrl;
+                }
+                window.location = redirectUrl;
+            }
+        }
+    }
+};
+
+function facebookOnScrollLeft(event) {
+    if (typeof FB != 'undefined') {
+        try {
+            var fbLeft = $('.facebookLikeLeft');
+            if (IsInViewport(fbLeft)) {
+                fbLeft.append('<fb:like href="http://www.facebook.com/winecom" width="185" show_faces="false" layout="button_count" action="like" font="verdana" colorscheme="light"></fb:like>');
+                $(window).unbind('scroll', facebookOnScrollLeft);
+                FB.XFBML.parse(fbLeft.get(0));
+            }
+        } catch (e) {
+            $(window).unbind('scroll', facebookOnScrollLeft);
+            return;
+        }
+    }
+}
+
+function facebookOnScrollFooter(event) {
+    if (typeof FB != 'undefined') {
+        try {
+            var fbkLike = $('.facebookLike');
+            if(IsInViewport(fbkLike)) {
+                fbkLike.append('<fb:like href="http://www.facebook.com/winecom" width="360" show_faces="true" layout="standard" action="like" font="verdana" colorscheme="light"></fb:like>');
+                $(window).unbind('scroll', facebookOnScrollFooter);    
+                FB.XFBML.parse(fbkLike.get(0));
+            }
+        }
+        catch (e) {
+            $(window).unbind('scroll', facebookOnScrollFooter);
+            return;
+        }
+    }
+}
+
+window.fbAsyncInit = function () {
+    FB.init({
+        appId: '108763387276', // App ID
+        status: true, // check login status
+        cookie: true, // enable cookies to allow the server to access the session
+        oauth: true, // enable OAuth 2.0
+        xfbml: true,
+        channelUrl: '//' + window.location.hostname + '/facebook/fb_xd_channel.html'
+    });
+
+    FB.getLoginStatus(function(response) {
+        if(typeof Facebook === 'undefined') {
+            console.log('Facebook Obj Literal not created yet.');
+        } else {
+            Facebook.init(response, 'unknown', 'http://www.wine.com/customercare/default.aspx');
+        }
+    });
+
+    if ($('.facebookLikeProduct').length)
+    {
+        $(window).bind('scroll', facebookOnScrollProduct);
+        facebookOnScrollProduct();
+    }
+
+    if ($('.facebookLikeLeft').length)
+    {
+        $(window).bind('scroll', facebookOnScrollLeft);
+        facebookOnScrollLeft();
+    }
+
+    if ($('.facebookLike').length)
+    {
+        $(window).bind('scroll', facebookOnScrollFooter);
+        facebookOnScrollFooter();
+    }
+};
+
+// Load the SDK Asynchronously
+(function (d) {
+    var js, id = 'facebook-jssdk', ref = d.getElementById('fb-root'); 
+    if (d.getElementById(id)) { return; }
+    js = d.createElement('script'); js.id = id; js.async = true;
+    js.src = "//connect.facebook.net/en_US/all.js";
+    if (ref) { ref.parentNode.insertBefore(js, ref); }
+} (document));
+</script>
+
+
+    <div class="stewardShipThanks" style="display: none;">
+        <img src="http://cache1.wine.com/assets/green_arrow.png" width="19" height="11" />
+        Thank you! You will complete your StewardShip Free Trial signup at checkout
+        <span title="Close">x</span>
+    </div>
+    <div id="ssPopupContainer" style="top: 0; width: 600px; position: absolute; left: 50%;" class="isHidden">
+        <div id="ssPopup" style="position: relative; left: -50%;">
+        </div>
+    </div>
+    <div class="errorPopup" style="display: none;">
+
+    </div>
+    <div id="popUpCenter" style="display:none">
+        
+        <span id="pulseNotification" class="pulseSuccess" style="display:none"><img src="http://cache2.wine.com/assets/pulse-positive.gif" id="ctl00_ctl00_pulseIcon" height="26" width="24" class="pulseIcon" /><strong>The image was successfully added</strong><img src="http://cache1.wine.com/assets/pulse-close.gif" id="ctl00_ctl00_pulseClose" alt="closeBox" class="pulseClose" /></span>
+    </div>
+    <div style="display:none" id="profileInfo">
+        <input name="ctl00$ctl00$communityName" type="hidden" id="ctl00_ctl00_communityName" class="communityName" />
+        <input name="ctl00$ctl00$loggedIn" type="hidden" id="ctl00_ctl00_loggedIn" class="loggedIn" />
+    </div>
+</body>
+</html>

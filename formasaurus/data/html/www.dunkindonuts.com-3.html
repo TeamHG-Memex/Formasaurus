@@ -1,0 +1,1877 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html >
+
+
+
+
+
+
+
+
+ 
+  
+
+                
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+
+                    
+                 
+                    
+                 
+                 
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="keywords" content=""/>
+    <meta http-equiv="description" content=""/>
+    <meta http-equiv="title" content="Recover Your Password"/>
+	<meta name="format-detection" content="telephone=no">
+  
+ 
+    
+
+    <meta name="viewport" content="target-densitydpi=device-dpi" />
+    
+    <meta http-equiv="description" content="null"/>
+    <meta property="og:description" content="null"/>
+    
+   <meta property="og:type" content="website">
+    <meta property="og:site_name" content="DunkinDonuts.com">
+    <meta property="og:image" content="/etc/designs/dunkindonuts/images/DD_Logo_share.jpg">
+    
+    <link rel="image_src" href="/etc/designs/dunkindonuts/images/DD_Logo_share.jpg">
+    
+    <link rel="apple-touch-icon" href="/content/dam/Dunkin_Donuts/icons/touch-icon-iphone.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="/content/dam/Dunkin_Donuts/icons/touch-icon-ipad.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="/content/dam/Dunkin_Donuts/icons/touch-icon-iphone4.png"/> 
+    <link rel="shortcut icon" type="image/ico" href="/content/dam/Dunkin_Donuts/icons/favicon.ico"/>
+    
+    <script type="text/javascript" src="/etc/clientlibs/granite/jquery.js"></script>
+<script type="text/javascript" src="/etc/clientlibs/granite/utils.js"></script>
+<script type="text/javascript" src="/etc/clientlibs/granite/jquery/granite.js"></script>
+<script type="text/javascript" src="/etc/clientlibs/foundation/jquery.js"></script>
+<script type="text/javascript">
+    {
+        window.setTimeout(function() {
+            $CQ.getScript("https://www.dunkindonuts.com/libs/wcm/stats/tracker.js?path=/content/dunkindonuts/en/signin/forgotpassword");
+        }, 1);
+    }
+    </script>
+<script type="text/javascript">function trackMVTImpression() {
+    
+        if (window.randomBannerList) {
+            var trackImg = new Image();
+            trackImg.src = CQ.shared.HTTP.getXhrHookedURL('https://www.dunkindonuts.com/libs/wcm/mvt/tracker/view?path=' + encodeURIComponent('/content/dunkindonuts/en/signin/forgotpassword') + '&vars=' + encodeURIComponent(window.randomBannerList));
+        }
+    
+    }</script>
+
+
+    <link rel="stylesheet" href="/etc/designs/dunkindonuts/clientlib.css" type="text/css"/>
+
+    <title>Recover Your Password | Dunkin' Donuts</title>
+    <script type="text/javascript" src="/etc/designs/dunkindonuts/clientlib.js"></script>
+
+    <script type="text/javascript" src="/etc/clientlibs/foundation/shared.js"></script>
+
+    
+    
+
+    <style id="antiClickjack">body{display:none;}</style>
+    <script type="text/javascript">
+        if (self === top) {
+            var antiClickjack = document.getElementById("antiClickjack");
+            antiClickjack.parentNode.removeChild(antiClickjack);
+        } else {
+            top.location = self.location;
+        }
+	</script>
+	
+    <script src="https://www.google.com/uds/api?file=uds.js&v=1.0" type="text/javascript"></script>
+    <link href="https://www.google.com/uds/css/gsearch.css" rel="stylesheet" type="text/css"/>
+    <link href="https://www.google.com/uds/solutions/videobar/gsvideobar.css" rel="stylesheet" type="text/css"/>
+    
+    <!--[if IE 6]><link href="/etc/designs/dunkindonuts/css/ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
+    <!--[if gt IE 6]><link href="/etc/designs/dunkindonuts/css/ie.css" rel="stylesheet" type="text/css" /><![endif]-->
+    
+   
+    
+    
+    
+    
+    
+    
+    
+    
+    <script>
+    CQ.I18n.setLocale('en');
+    
+    </script>
+    
+
+
+
+
+
+ 
+  
+
+                
+
+
+
+<script type="text/javascript">
+
+    // See http://docs.jquery.com/Plugins/Validation/validate#toptions 
+    // for validate methos options
+    var required = "Please enter {0} to proceed.";
+    var maxlength = "The length of {0} should not be greater than {1} symbols."; 
+    var incorrectFormat = "Incorrect format of {0}";
+    
+        
+    var errorMessages = {
+        corporate_title: {
+            required:  CQ.I18n.getMessage("APP252"),    
+            maxlength: CQ.I18n.getMessage("APP253")               
+        },
+        company_name: {
+            required:  CQ.I18n.getMessage("APP356"),    
+            maxlength: CQ.I18n.getMessage("APP255")                 
+        },
+        profile_first_name: {
+            required:  CQ.I18n.getMessage("APP314"),     
+            maxlength: CQ.I18n.getMessage("APP313")
+                
+        },
+        profile_last_name: {
+            required:  CQ.I18n.getMessage("APP317"),     
+            maxlength: CQ.I18n.getMessage("APP316")
+                 
+        },      
+        profile_email: {
+            required: CQ.I18n.getMessage("APP229"),     
+            email: CQ.I18n.getMessage("APP200")    
+        },
+        profile_password: {
+            required: CQ.I18n.getMessage("APP303"),
+            rangelength: CQ.I18n.getMessage("APP246")     //$.validator.format(required, "Password")
+        },              
+        profile_password_new: {
+            required: CQ.I18n.getMessage("APP304"),
+            rangelength: CQ.I18n.getMessage("APP246")      //$.validator.format(required, "New Password")
+        },
+        profile_password_new_confirmation: {
+            equalTo: CQ.I18n.getMessage("APP217"),
+            rangelength: CQ.I18n.getMessage("APP240") 
+        },
+        profile_security_answer: {
+            required: CQ.I18n.getMessage("APP361")     //$.validator.format(required, "Security Question")
+        },
+        profile_security_answer: {
+            required: CQ.I18n.getMessage("APP361")     //$.validator.format(required, "Answer")
+        },
+        profile_card_number: {
+            required:    CQ.I18n.getMessage("APP206"),     //$.validator.format(required, "Card Number"),
+            creditcard:  CQ.I18n.getMessage("APP207"),
+            rangelength:CQ.I18n.getMessage("APP256"),     //$.validator.format(incorrectFormat, "Card Number"),
+            digits:      CQ.I18n.getMessage("APP231")    //$.validator.format(incorrectFormat, "Card Number"),
+                                                         //$.validator.format(incorrectFormat, "Card Number")
+        },
+        profile_card_pin: {
+            required:  CQ.I18n.getMessage("APP221"),     //$.validator.format(required, "PIN/ID#"),
+            minlength: CQ.I18n.getMessage("APP253"),  
+            maxlength: CQ.I18n.getMessage("APP254"),   //$.validator.format(maxlength, "PIN/ID#","8"),
+            digits:    CQ.I18n.getMessage("APP231")     //$.validator.format(incorrectFormat, "PIN/ID#")                        
+        },
+        profile_street_address1: {
+            required: CQ.I18n.getMessage("APP320"),
+            maxlength: CQ.I18n.getMessage("APP319"),
+            validChars: CQ.I18n.getMessage("APP247")     //$.validator.format(required, "Street Address 1"),
+                                                    //$.validator.format(maxlength, "Street Address 1", "50")
+        },
+        profile_street_address2: {
+            required: CQ.I18n.getMessage("APP323"),     //$.validator.format(required, "Street Address 2"),
+            maxlength: CQ.I18n.getMessage("APP322"),
+            validChars: CQ.I18n.getMessage("APP247")     //$.validator.format(maxlength, "Street Address 2", "50")
+        },
+        profile_city: {
+            required: CQ.I18n.getMessage("APP326")     //$.validator.format(required, "City")
+        },
+        profile_state: {
+            required: CQ.I18n.getMessage("APP341")      //"Please select State to proceed."
+        },  
+        profile_zip: {
+            required: CQ.I18n.getMessage("APP204"),    //$.validator.format(required, "Zip"),
+            zipcode:  CQ.I18n.getMessage("APP205")   
+        },                      
+        profile_card_street_address1: {
+            required: CQ.I18n.getMessage("APP320"),     //$.validator.format(required, "Street Address 1"),
+            maxlength: CQ.I18n.getMessage("APP319"),
+            validChars: CQ.I18n.getMessage("APP247")    //$.validator.format(maxlength, "Street Address 2", "50")
+        },
+        profile_card_street_address2: {
+            required: CQ.I18n.getMessage("APP323"),     //$.validator.format(required, "Street Address 2"),
+            maxlength: CQ.I18n.getMessage("APP322")     //$.validator.format(maxlength, "Street Address 2", "50")
+        },
+        profile_card_city: {
+            required: CQ.I18n.getMessage("APP326")     //$.validator.format(required, "City")
+        },
+        profile_card_state: {
+            required: CQ.I18n.getMessage("APP341")     //$.validator.format(required, "State")
+        },
+        profile_card_zip: {
+            required: CQ.I18n.getMessage("APP204"),     //$.validator.format(required, "Zip"),
+            zipcode:  CQ.I18n.getMessage("APP205")
+        },
+        ddcard_number: {
+            required:    CQ.I18n.getMessage("APP206"),     //$.validator.format(required, "Card Number"),
+            creditcard:  CQ.I18n.getMessage("APP207"),
+            rangelength:CQ.I18n.getMessage("APP256"),     //$.validator.format(incorrectFormat, "Card Number"),
+            digits:      CQ.I18n.getMessage("APP231")     //$.validator.format(incorrectFormat, "Card Number")
+        },
+        ddcard_pin: {
+        	required:  CQ.I18n.getMessage("APP221"),     //$.validator.format(required, "PIN/ID#"),
+            minlength: CQ.I18n.getMessage("APP253"),  
+            maxlength: CQ.I18n.getMessage("APP254"),   //$.validator.format(maxlength, "PIN/ID#","8"),
+            digits:    CQ.I18n.getMessage("APP231")     //$.validator.format(incorrectFormat, "PIN/ID#")                    
+        },
+        address_first_name: {
+        	required:  CQ.I18n.getMessage("APP314"),     
+            maxlength: CQ.I18n.getMessage("APP313")     //$.validator.format(maxlength, "First Name", "50")
+        },
+        address_last_name: {
+        	required:  CQ.I18n.getMessage("APP317"),     
+            maxlength: CQ.I18n.getMessage("APP316")     //$.validator.format(maxlength, "Last Name", "50")                  
+        },
+        address_first_street: {
+        	required: CQ.I18n.getMessage("APP320"),
+            maxlength: CQ.I18n.getMessage("APP319"),
+            validChars: CQ.I18n.getMessage("APP247")     //$.validator.format(maxlength, "Street Address 1", "50")
+        },
+        address_second_street: {
+        	required: CQ.I18n.getMessage("APP323"),     //$.validator.format(required, "Street Address 2"),
+            maxlength: CQ.I18n.getMessage("APP322"),
+            validChars: CQ.I18n.getMessage("APP247")     //$.validator.format(maxlength, "Street Address 2", "50")
+        },
+        address_city: {
+        	required: CQ.I18n.getMessage("APP326")     //$.validator.format(required, "City")
+        },
+        address_state: {
+        	required: CQ.I18n.getMessage("APP341")
+        },
+        address_phone: {
+            required: CQ.I18n.getMessage("APP250"),     //$.validator.format(required, "Phone Number"),
+            phone: CQ.I18n.getMessage("APP252")     //$.validator.format(incorrectFormat, "Phone Number")
+        },
+        address_zip: {
+        	required: CQ.I18n.getMessage("APP204"),    //$.validator.format(required, "Zip"),
+            zipcode:  CQ.I18n.getMessage("APP205")
+        },
+        CARD_NUMBER :{
+        	required:    CQ.I18n.getMessage("APP206"),     //$.validator.format(required, "Card Number"),
+            creditcard:  CQ.I18n.getMessage("APP207"),
+            dinamicRange: CQ.I18n.getMessage("APP258"),     //$.validator.format(incorrectFormat, "Card Number"),
+            digits:      CQ.I18n.getMessage("APP231")
+            
+                        
+        },
+        CARD_PIN: {
+        	required:  CQ.I18n.getMessage("APP221"),     //$.validator.format(required, "PIN/ID#"),
+            minlength: CQ.I18n.getMessage("APP253"),  
+            maxlength: CQ.I18n.getMessage("APP254"),   //$.validator.format(maxlength, "PIN/ID#","8"),
+            digits:    CQ.I18n.getMessage("APP231")     //$.validator.format(incorrectFormat, "Security Code")              
+        },
+        PASSWORD: {
+        	required: CQ.I18n.getMessage("APP303"),
+            rangelength: CQ.I18n.getMessage("APP246")     //$.validator.format(required, "Password")
+        },
+        PASSWORD_CONFIRMATION: {
+        	equalTo: CQ.I18n.getMessage("APP217"),
+            rangelength: CQ.I18n.getMessage("APP240")
+        },
+        ANSWER: {
+            required:  CQ.I18n.getMessage("APP255")     //$.validator.format(required, "Your Answer")
+        },
+        CARD_NAME_ON: {
+            required:  CQ.I18n.getMessage("APP353"),
+            validChars: CQ.I18n.getMessage("APP247")     //$.validator.format(required, "Name on Card")
+        },
+        CARD_EXP_MONTH: {
+        	required: CQ.I18n.getMessage("APP248"),     //$.validator.format(required, "Expire Date"),
+            expireDate:  CQ.I18n.getMessage("APP245")
+        },
+        CARD_EXP_YEAR: {
+        	required: CQ.I18n.getMessage("APP248"),
+            expireDate:  CQ.I18n.getMessage("APP245")
+        },
+        label: {
+        	required: CQ.I18n.getMessage("APP273")
+            
+        }
+        
+        
+    };
+
+    var validateOptions = {
+            messages: errorMessages,
+            errorClass: "ferror",
+            errorPlacement: function(error, element) {
+                var fieldLabel = $('label[for$="' + element[0].id + '"]');
+                var errorContainer = fieldLabel.siblings('div');
+                error.appendTo(errorContainer[0]);
+            },
+            ignore: ".ignore"
+    };
+    
+    $.validator.setDefaults(validateOptions);
+    $.validator.addMethod("regex",
+        function(value, element, regexp) {
+            var check = false;
+            var re = new RegExp(regexp);
+            return this.optional(element) || re.test(value);
+        },
+        CQ.I18n.getMessage("APP252")
+    );
+    
+    $.validator.addMethod("zipcode",
+        function(value, element) {
+            var check = false;
+            var re = /^\d{5}(-\d{4})?$/;
+            return this.optional(element) || re.test(value);
+        },
+        CQ.I18n.getMessage("APP252")
+    );
+    
+    $.validator.addMethod("phone",
+        function(value, element) {
+            var check = false;
+            //var re = /^\(?(\d{3})\)?[- ]?(\d{3})[- ]?(\d{4})$/;
+            var re = /^(1[- ]?)?(\(\d{3}\)|\d{3})[- \./]?\d{3}[- \./]?((\d{4})|(\d{2}[- \./]?\d{2}))$/;
+            return this.optional(element) || re.test(value);
+        },
+        CQ.I18n.getMessage("APP252")
+    );          
+
+    $.validator.addMethod("validChars",
+        function(value, element) {
+            
+            //var re = /^[^!\"$%&\(\)\*\+\/:;<=>\?@\[\\\]\^_\{|\}~]*$/
+              var re = /^[^!\"$%&\(\)\*\+:;<=>\?@\[\\\]\^_\{|\}~]*$/   
+            return this.optional(element) || re.test(value);
+        },
+        CQ.I18n.getMessage("APP247")
+    );
+    
+	$.validator.addMethod("validPromoChars", function(value, element) {
+		var re = /^[^!\"$%&\(\)\*\+:;<=>\?#@`\[\\\]\^_\{|\}~]*$/
+		return this.optional(element) || re.test(value);
+		},
+		CQ.I18n.getMessage("APP247")
+	);
+</script>
+ 
+    
+</head>
+<script type="text/javascript"> 
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function()
+{ (i[r].q=i[r].q||[]).push(arguments)}
+
+,i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-63718010-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+
+
+
+
+
+ 
+  
+
+                
+
+
+
+
+ 
+
+
+
+                
+
+
+
+
+   
+
+
+<body>
+	
+
+	<noscript>    
+	    <div class="noscriptmsg">
+	        You don't have javascript enabled. This site requires JavaScript to function properly.    
+	    </div>
+	</noscript>
+    <div class="clickstreamcloud"><script type="text/javascript" src="/etc/clientlibs/granite/underscore.js"></script>
+<script type="text/javascript" src="/etc/clientlibs/foundation/personalization/kernel.js"></script>
+<script type="text/javascript">
+    $CQ(function() {
+        CQ_Analytics.SegmentMgr.loadSegments("/etc/segmentation");
+        CQ_Analytics.ClientContextMgr.PATH = "/etc/clientcontext/default";
+    });
+</script>
+
+<script type="text/javascript" src="/etc/clientcontext/legacy/config.init.js?path=/content/dunkindonuts/en/signin/forgotpassword"></script><div id="clickstreamcloud-gui"></div><script type="text/javascript">
+    $CQ(function() {
+        //old style load config
+        CQ_Analytics.ClickstreamcloudMgr.loadConfig();
+    })
+</script>
+</div>
+
+    <div class="parsys tag_pa">
+</div>
+
+    <div id="wrapper">
+
+        
+
+
+
+
+
+
+ 
+  
+
+                
+
+
+<div id="header">
+    
+
+
+
+
+
+ 
+  
+
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                
+<style>
+    /* CSS for the Language Div */
+ #languageDiv {
+     position:absolute;
+     height:35px;
+     top:12px;
+     right:5px;
+     width:110px;
+ }
+ 
+ #languageDiv a img {
+     float:right;
+     padding-left:10px;
+     width: 25px;
+     height: 15px;
+ }
+</style>
+
+
+        
+        
+        
+            <div id="messages">
+                 <div style="height: 76px; float: left; left: -4px; position: relative; top: 2px; width: 186px;" onclick="location = '/content/dunkindonuts/en.html'"> 
+				<img src="/etc/designs/dunkindonuts/images/dunkin_logo.jpg" alt="Dunkin Donuts"/> </div>
+        		<div>
+        		 
+
+
+
+
+
+
+ 
+  
+
+                
+
+
+
+
+               </div>
+                <div id="languageDiv">
+                    <a alt="english" href="/dunkindonuts/en.html">English</a>
+                    <span> | </span>
+                    <a alt="espanol" href="/dunkindonuts/es.html">Español</a>
+                </div>
+               
+                <div id="changingLocation" class="twoLines">
+                
+               
+                
+                    <div class="logout"><a alt="signin" href="/dunkindonuts/en/signin.html"><span class="welcomeText" >Sign-In</span></a><span> | </span><a alt="signup" href="/dunkindonuts/en/responsive/dunkin_email.html"><span class="welcomeText" >Sign-Up</span></a></div>
+                
+                
+                    
+                    
+
+<form method="POST" action="/dunkindonuts/en/signin/forgotpassword.html" id="change_location_form" name="change_location_form" enctype="multipart/form-data"><input type="hidden" name=":formid" value="change_location_form"/><input type="hidden" name=":formstart" value="/content/dunkindonuts/en/jcr:content/start0"/><input type="hidden" name="_charset_" value="UTF-8"/>
+
+
+
+
+
+ 
+  
+
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+  
+
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="/etc/designs/dunkindonuts/js/changelocation.js"></script>
+
+        <script type="text/javascript">
+	      	//Make Ajax call to get DMA and current user location      	
+	       var maxMatches = 1;
+	       var pageSize = 1;
+	       var units = 'm';
+	       var url =  	'https://www.mapquestapi.com/search/v2/radius';
+	       var key = decodeURI('Gmjtd|lu6t2luan5%2C72%3Do5-larsq');
+	       var origin = '128.75.26.54';
+	       var radius = '200';
+	       var hostedData = 'mqap.33454_DunkinDonuts';
+	        
+	       var defaultCity = 'White Plains';
+	       var defaultState = 'NY';
+	       var defaultZip = '10601';
+	       var defaultDMA = '501';
+	       var dmaCookieDelimiter = ':';
+	       var dmaCookieSize = '5';
+	       var dmaCookieDays = '7';
+	        
+	       // Start the seach
+	        doLocationSearch();
+	    </script>       
+        
+
+<div id="location">
+    <div id="locationView" >
+        <span class="locationText">United States</span>
+        <a alt="changeLocation" href="#" class="changeText" id="changeLocation">Change location</a>
+    </div>
+    <div id="locationEdit" style="display:none;">
+        <div id="locationInputWrapper">
+            <input type="text" name="locationInput" class="formfield">
+            <span id="locationError">
+				   
+             </span>        	
+        </div>
+        <div id="bottomlinks">
+        <a alt="cancel" href="#" class="changeText" id="locationUpdateCancel">Cancel</a>
+        <a alt="update" href="#" class="changeText" id="locationUpdate">Update location</a>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+(function($){
+    $(function(){
+        $('#location').changelocation({});
+    })
+})(jQuery)
+
+
+
+$(document).ready(function () {
+    $("#changeLocation").text(CQ.I18n.getMessage("changelocation.txt"));
+    $("#locationUpdate").text(CQ.I18n.getMessage("changelocation.updatelocation"));
+    $("#locationUpdateCancel").text(CQ.I18n.getMessage("changelocation.cancel"));
+});
+
+
+</script>
+<input type="hidden" name="date" value="Wed Dec 09 10:10:45 EST 2015"/>
+
+
+<input type="hidden" name="redirect_location" value="/content/dunkindonuts/en/signin/forgotpassword.html" /><div class="form">
+</div>
+
+                    <div class="end0 end">
+
+<div class="form_row">
+   <div class="form_leftcol"></div>
+   <div class="form_rightcol">
+</div>
+  </div><div class="form_row_description"></div>
+</div></form>
+
+                </div>
+           </div>
+        
+    
+
+    
+
+
+
+
+
+ 
+  
+
+                
+
+
+
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+      $( '#menu ul.menuVert' ).hide().removeClass( 'invisible' );
+    $('#menu ul.menuHoriz > li').each( function(){
+        var subId = '#menuSub' + $(this).attr('id');
+        $( this ).append( $( subId ) );
+    });
+
+   
+   $('#menu ul.menuHoriz > li').hover(
+       function(){
+           var subId = '#menuSub' + $(this).attr('id');
+           $( this ).addClass( 'hover' );
+           $( subId ).fadeIn();
+       },
+       function(){
+           var subId = '#menuSub' + $(this).attr('id');
+           $( this ).removeClass( 'hover' );
+           $( subId ).fadeOut();
+       }
+   );
+   
+  
+            
+});
+
+    function findStore() {
+        if (!scValidateRestaurantSearch(true)) {
+            $("#fildAStore").css("border","2px solid red");
+            scAddSearchTip(true);
+            return;
+        }
+
+
+        var store = document.getElementById("fildAStore").value;
+        location = "/content/dunkindonuts/en/stores.html?a=" + ((store != scGetDefaultValue('navAddress')) ? store : '');
+    }
+</script>
+      <div id="menu">
+        
+            <ul id="menuSubCoffee" class="menuVert invisible">
+                <div class="submenu_container">
+                    <div class="menuContentContainer">
+                        <div class="menuContent">                     
+                
+                    <div class="submenu_col" id="col1">
+                        
+                        <span class="colHeader"> Let's Hear It For Consistency</span>
+                    
+                    
+                   
+                   <a alt="What Are You Drinkin'?" href="/dunkindonuts/en/coffee.html">What Are You Drinkin'?</a>
+                   
+                            
+                   
+                   <a alt="It Can Only Be Dunkin'" href="/dunkindonuts/en/coffee/didyouknow.html">It Can Only Be Dunkin'</a>
+                   
+                            
+                   
+                   <a alt="Coffee Brewing Tips" href="/dunkindonuts/en/coffee/coffeebrewingtips.html">Coffee Brewing Tips</a>
+                   
+                            
+                    </div>
+                
+                    <div class="submenu_col" id="col2">
+                        
+                        <span class="colHeader">What's Brewing</span>
+                    
+                    
+                   
+                   <a alt="Coffee" href="/dunkindonuts/en/menu/beverages/hotbeverages/coffee.html">Coffee</a>
+                   
+                            
+                   
+                   <a alt="Espresso" href="/dunkindonuts/en/menu/beverages/hotbeverages/specialitycoffee/espresso.html">Espresso</a>
+                   
+                            
+                   
+                   <a alt="Cappuccino" href="/dunkindonuts/en/menu/beverages/hotbeverages/specialitycoffee/cappuccino.html">Cappuccino</a>
+                   
+                            
+                   
+                   <a alt="Latte" href="/dunkindonuts/en/menu/beverages/hotbeverages/specialitycoffee/latte.html">Latte</a>
+                   
+                            
+                    </div>
+                
+                    <div class="submenu_col" id="col3">
+                        
+                        <span class="colHeader">Dunkin' Creamers</span>
+                    
+                    
+                   
+                   <a alt="Coffee Creamers" target="_blank" href="http://www.dunkincreamer.com">Coffee Creamers</a>
+                   <div class="new_window_link"></div>
+                   
+                            
+                    </div>
+                
+                 <div class="promo_col" id="col4">
+                     <div id="promoHeader">
+                         <img alt="promoHeader" src="/content/dam/Dunkin_Donuts/mainnav/shop-online updated.jpg" width="134px" height="110px" style="cursor: pointer;" onclick="location = 'http://shop.dunkindonuts.com'"/>
+                     </div>
+                     <div id="promoTag"><span class="promoBody">Your favorite Dunkin' Coffee, Gifts, and more.<a alt="Your favorite Dunkin' Coffee, Gifts, and more." href="http://shop.dunkindonuts.com">Learn More</a></span></div>
+                 </div>
+                 
+                        </div>
+                    </div>                 
+                 </div>
+            </ul>
+            <ul id="menuSubMenu" class="menuVert invisible">
+                <div class="submenu_container">
+                    <div class="menuContentContainer">
+                    <div class="menuContent">
+                
+                    <div class="submenu_col" id="col1">
+                        
+                        <span class="colHeader">Beverages</span>
+                    
+                    
+                   
+                   <a alt="Hot Beverages" href="/dunkindonuts/en/menu/beverages/hotbeverages.html">Hot Beverages</a>
+                   
+                            
+                   
+                   <a alt="Iced Beverages" href="/dunkindonuts/en/menu/beverages/icedbeverages.html">Iced Beverages</a>
+                   
+                            
+                   
+                   <a alt="Frozen Beverages" href="/dunkindonuts/en/menu/beverages/frozenbeverages.html">Frozen Beverages</a>
+                   
+                            
+                   
+                   <a alt="At Home Brewing" href="/dunkindonuts/en/menu/beverages/athomebrewing.html">At Home Brewing</a>
+                   
+                            
+                    </div>
+                
+                    <div class="submenu_col" id="col2">
+                        
+                        <span class="colHeader">Food</span>
+                    
+                    
+                   
+                   <a alt="Bakery" href="/dunkindonuts/en/menu/food/bakery.html">Bakery</a>
+                   
+                            
+                   
+                   <a alt="Breakfast Sandwiches" href="/dunkindonuts/en/menu/food/sandwiches/breakfastsandwiches.html">Breakfast Sandwiches</a>
+                   
+                            
+                   
+                   <a alt="Bakery Sandwiches" href="/dunkindonuts/en/menu/food/sandwiches/Bakery_Sandwiches.html">Bakery Sandwiches</a>
+                   
+                            
+                   
+                   <a alt="More" href="/dunkindonuts/en/menu/food/More.html">More</a>
+                   
+                            
+                    </div>
+                
+                    <div class="submenu_col" id="col3">
+                        
+                                
+                                <a alt="Nutrition" href="/dunkindonuts/en/menu/nutrition.html"><span class="colHeader">Nutrition</span></a>
+                                
+                        
+                    
+                   
+                   <a alt="Nutrition Catalog" href="/dunkindonuts/en/menu/nutrition/nutrition_catalog.html">Nutrition Catalog</a>
+                   
+                            
+                   
+                   <a alt="DDSMART<sup>®</sup>" href="/dunkindonuts/en/menu/nutrition/ddsmart.html">DDSMART<sup>®</sup></a>
+                   
+                            
+                    </div>
+                
+                    <div class="promo_col" id="col4">
+                           <div id="promoHeader">
+                               <img alt="promoHeader" src="/content/dam/Dunkin_Donuts/mainnav/something-fresh_tile.jpg" width="140px" height="110px" style="cursor: pointer;" onclick="location = '/content/dunkindonuts/en/menu/beverages/hotbeverages/coffee/hot_coffee.html'"/>
+                           </div>
+                           <div id="promoTag"><span class="promoBody">Something fresh is always brewin’ here®<a alt="Something fresh is always brewin’ here®" href="/dunkindonuts/en/menu/beverages/hotbeverages/coffee/hot_coffee.html">Learn More</a></span></div>
+                       </div>
+                    
+                        </div>
+                    </div>
+                </div>
+            </ul>
+            <ul id="menuSubStores" class="menuVert invisible">
+                <div class="submenu_container">
+                <div class="menuContentContainer">
+                    <div class="menuContent">
+                    <div class="submenu_col"  id="col1">
+                
+                        <!-- Column one start -->
+                        <span class="colHeader">Find A Restaurant</span>
+                        <div class="scDDFasMenuInstruction">Please enter your City &amp; State <b>or</b> your Zip Code.</div>
+                        <div class="dd_form" id="form_stores">
+                            <input id="fildAStore" class="dd_formfield" type="text" />
+                            <div class="module_btn" id="form_stores_menu" onclick="javascript:findStore();">
+                                <span class="btnlabel">Search</span>
+                                <span class="btnArrow"></span>
+                            </div>
+                         </div>
+                        
+                        <span class="colHeader">Other information</span>
+                    
+                    
+                   
+                   <a alt="Trip Planner" class="clearfloat" href="/dunkindonuts/en/tripplanner.html">Trip Planner</a>
+                   
+                            
+                   
+                   <a alt="Careers" class="clearfloat" href="/dunkindonuts/en/ddcareers.html">Careers</a>
+                   
+                            
+                   
+                   <a alt="Franchising" class="clearfloat left_float" target="_blank" href="http://www.dunkinfranchising.com">Franchising</a>
+                   <div class="new_window_link"></div>
+                   
+                            
+                    
+                    </div>
+                    <div class="promo_col" id="col4">
+                           <div id="promoHeader">
+                               <img alt="promoHeader" src="/content/dam/Dunkin_Donuts/mainnav/FunPaced.jpg" width="134px" height="110px" style="cursor: pointer;" onclick="location = '/content/dunkindonuts/en/ddcareers.html'"/>
+                           </div>
+                           <div id="promoTag">
+                            <span class="promoBody">Hungry for an<BR> Opportunity?
+                            <a alt="Learn More" href="/dunkindonuts/en/ddcareers.html">Learn More</a></span>
+                           </div>
+                       </div>
+                    
+                        </div>
+                    </div>
+                </div>
+            </ul>
+            <ul id="menuSubCard" class="menuVert invisible">
+                <div class="submenu_container" id="card_plate">
+                <div class="menuContentContainer">
+                        <div class="menuContent">
+                                 <div class="submenu_col" id="col1">
+                 <div class="submenu_col" id="col1">
+                 
+                    <!-- Column one start -->
+                    
+                                
+                                <a alt="Buy a Card" href="/dunkindonuts/en/ddcard/buyacard.html"><span class="colHeader">Buy a Card</span></a>
+                                
+                        
+                    
+                   
+                   <a alt="" href="/dunkindonuts/en/signin/forgotpassword.html"></a>
+                   
+                    
+                    <!-- Column one start -->
+                    
+                                
+                                <a alt="Register a Card" href="/dunkindonuts/en/ddperks/manage_my_cards/card_registration.html"><span class="colHeader">Register a Card</span></a>
+                                
+                        
+                    
+                   
+                   <a alt="Download the DD Mobile<sup>®</sup> App" href="/dunkindonuts/en/mlanding.html">Download the DD Mobile<sup>®</sup> App</a>
+                   
+                    
+                </div>
+                
+                <div class="submenu_col" id="col2">
+                    
+                    <!-- Column one start -->
+                    
+                                
+                                <a alt="Manage My Cards" href="/dunkindonuts/en/ddperks/manage_my_cards.html"><span class="colHeader">Manage My Cards</span></a>
+                                
+                        
+                    
+
+
+
+
+
+ 
+  
+
+                
+
+
+
+
+
+
+
+				
+
+<a href="/dunkindonuts/en/ddcard/rechargecard.html">Reload My Card</a>
+                    
+                    </div>
+					<script>
+					$(document).ready (function() {
+                    $("#Card #promoHeader img").click(function(){
+                      $.get("https://secure.checkout.visa.com/checkout-widget/redirect?niflow=MERCHANT&nicaller=Y03J0QS0ZTPE0IMOH7OW14IGRl4sAjaafN1_k2zQjC5pQkfIs&niptf=NULL&nicmp=DUNKINDONUTS&nichn=ONSITE_PROMOTILEGLOBALNAV&nicmpg=VCO_10OFF35_20150608_20150614_HOMEPAGE&niseg=DUNKINDONUTS&country=US&locale=en-US&nisite=NULL&niplc=NULL&redirect=http://www.dunkindonuts.com/visacheckout");
+                    });
+					 });
+                    </script>
+                    <div class="promo_col" id="col4">
+                           <div id="promoHeader">
+                               <img alt="promoHeader" src="/content/dam/Dunkin_Donuts/mainnav/NavThumb-DDCard.jpg" width="134px" height="110px" style="cursor: pointer;" onclick="location = '/content/dunkindonuts/en/responsive/ddperks/splashpage.html'"/>
+                           </div>
+                           <div id="promoTag"><span class="promoBody">Every swipe or tap gets you to closer to a free medium beverage.<a alt="Join Now" href="/dunkindonuts/en/responsive/ddperks/splashpage.html">Join Now</a></span></div>
+                       </div>
+                    
+                        </div>
+                    </div>
+                </div>
+            </ul>
+            
+            <ul id="menuSubShop" class="menuVert invisible">
+                <div class="submenu_container" id="shop_plate">
+                <div class="menuContentContainer">
+                        <div class="menuContent">
+                
+                    <div class="submenu_col" id="col1">
+                        
+                                
+                                <a alt="Shop Home Page" target="_blank" href="http://shop.dunkindonuts.com/?ccaid=ddptddst"><span class="colHeader">Shop Home Page</span></a>
+                                <div class="new_window_link externalIcon"></div>
+                                
+                        
+                    
+                   
+                   <a alt="Coffee" target="_blank" href="http://shop.dunkindonuts.com/coffee_1997_p01_01/?CCAID=DDSTDDCF">Coffee</a>
+                   <div class="new_window_link"></div>
+                   
+                            
+                   
+                   <a alt="K-Cup® Pods " target="_blank" href="http://shop.dunkindonuts.com/coffee-k-cup_1997-4294959632_p01_01/">K-Cup® Pods </a>
+                   <div class="new_window_link"></div>
+                   
+                            
+                   
+                   <a alt="Tea" target="_blank" href="http://shop.dunkindonuts.com/tea_4294959869-4294959900_p01_01/?CCAID=DDSTDDTEA">Tea</a>
+                   <div class="new_window_link"></div>
+                   
+                            
+                   
+                   <a alt="Cups & Mugs" target="_blank" href="http://shop.dunkindonuts.com/drinkware_363_p01_01/?CCAID=DDSTDDdw">Cups & Mugs</a>
+                   <div class="new_window_link"></div>
+                   
+                            
+                   
+                   <a alt="Apparel" target="_blank" href="http://shop.dunkindonuts.com/shop-all-dunkin-donuts-apparel_4149_p01_04/?CCAID=DDSTDDAP">Apparel</a>
+                   <div class="new_window_link"></div>
+                   
+                            
+                   
+                   <a alt="DD Extras" target="_blank" href="http://shop.dunkindonuts.com/dd-extras_4294959869_p01_01/?CCAID=DDSTDDEX">DD Extras</a>
+                   <div class="new_window_link"></div>
+                   
+                            
+                   
+                   <a alt="Subscription Orders" target="_blank" href="http://shop.dunkindonuts.com/subscription/?CCAID=DDSTDDSO">Subscription Orders</a>
+                   <div class="new_window_link"></div>
+                   
+                            
+                   
+                   <a alt="Gift Ideas" target="_blank" href="http://shop.dunkindonuts.com/gift-ideas/?CCAID=DDSTDDGF">Gift Ideas</a>
+                   <div class="new_window_link"></div>
+                   
+                            
+                   
+                   <a alt="Best Sellers" target="_blank" href="http://shop.dunkindonuts.com/best/?CCAID=DDSTDDB">Best Sellers</a>
+                   <div class="new_window_link"></div>
+                   
+                            
+                   
+                   <a alt="DD Card" target="_blank" href="https://www.dunkindonuts.com/content/dunkindonuts/en/ddcard.html">DD Card</a>
+                   <div class="new_window_link"></div>
+                   
+                            
+                    </div>
+                
+                    <div class="submenu_col" id="col2">
+                        
+                        <span class="colHeader"></span>
+                    
+                    
+                   
+                   <a alt="" href="/dunkindonuts/en/signin/forgotpassword.html"></a>
+                   
+                            
+                    </div>
+                
+                    <div class="promo_col" id="col4">
+                           <div id="promoHeader">
+                               <img alt="promoHeader" src="/content/dam/Dunkin_Donuts/mainnav/shop-online updated.jpg" width="134px" height="110px" style="cursor: pointer;" onclick="location = 'http://shop.dunkindonuts.com/?ccaid=ddptddst'"/>
+                           </div>
+                           <div id="promoTag"><span class="promoBody">Your favorite Dunkin' Coffee, Gifts & more! <a alt="Learn More" href="http://shop.dunkindonuts.com/?ccaid=ddptddst">Learn More</a></span></div>
+                       </div>
+                    
+                    <div class="legal">     </div>
+                    
+                        </div>
+                    </div>
+                </div>
+            </ul>
+            <ul id="menuSubPerks" class="menuVert invisible">
+             
+                
+                <div class="menuitem">
+
+
+
+
+
+ 
+  
+
+                
+
+
+
+
+                
+
+
+
+
+<div class="submenu_container perks_container" id="perks_plate">
+    <img class="submenu-left-image" src="/etc/designs/dunkindonuts/images/DD-Homepage-Hover-Latte-Slice.jpg" alt="Dunkin Donuts" style="float: left; position: absolute;">
+      <div class="menuContentContainer">
+              <div class="menuContent">
+      <div class="h_promo">
+        <img alt="h_promo" src="/content/dam/Dunkin_Donuts/Dunkin UpDDate/DD-Homepage-Hover.jpg" style="cursor: pointer;" onclick="location = '/content/dunkindonuts/en/ddperks.html'">
+      </div>
+      <div class="perks_menu">
+      <div class="submenu_col" id="col1">
+        <!-- Column one start -->
+        
+
+<form method="POST" action="/dunkindonuts/en/signin/forgotpassword.html" id="new_form" name="new_form" enctype="multipart/form-data"><input type="hidden" name=":formid" value="new_form"/><input type="hidden" name=":formstart" value="/content/dunkindonuts/en/jcr:content/menuitem/createaccstart1"/><input type="hidden" name="_charset_" value="UTF-8"/><div class="form">
+</div>
+
+        <div class="createaccend1 end">
+
+<div class="form_row">
+   <div class="form_leftcol"></div>
+   <div class="form_rightcol">
+</div>
+  </div><div class="form_row_description"></div>
+</div></form>
+
+          <!-- Column one end -->
+          
+
+      </div>
+      
+      
+      
+      
+      <div class="submenu_col" id="col2">
+          <!-- Column two start -->
+          
+
+<form method="POST" action="/dunkindonuts/en/signin/forgotpassword.html" id="navsignin" name="navsignin" enctype="multipart/form-data"><input type="hidden" name=":formid" value="navsignin"/><input type="hidden" name=":formstart" value="/content/dunkindonuts/en/jcr:content/menuitem/signinstart1"/><input type="hidden" name="_charset_" value="UTF-8"/>    
+
+
+
+
+
+ 
+  
+
+                
+
+
+    
+    
+   
+    
+    
+    
+    
+    
+    
+ <div id="form_perks_signin" class="form-dropdown-signin" style="margin-top:20px;">
+    <button class="submit_button" type="submit" tabindex="0"  id="signin">
+                <span>Sign In</span> 
+              </button>
+              
+
+</div>
+
+<div id="form_perks_signin" class="form-dropdown-signup" style="margin-top:20px; float:right">
+    <button class="submit_button" type="submit" tabindex="0"  id="signup">
+                <span>Sign me up</span> 
+              </button>
+              
+
+</div>
+<div id="perk_leagal_text">
+    <p class="confirmNote">
+    
+     *On qualifying purchases
+    </p>
+</div>
+
+
+
+
+
+<input type="hidden" id="signinvalue" name="signinvalue" value="/content/dunkindonuts/en/signin.html" />
+<input type="hidden" id="signupvalue" name="signupvalue" value="/content/dunkindonuts/en/responsive/ddperks/splashpage.html" />    
+<input type="hidden" id="myhiddenvalue" name="myhiddenvalue" />
+
+ <script src="/etc/designs/dunkindonuts/js/signinnav.js" type="text/javascript"></script><div class="form">
+</div>
+
+          <div class="signinend1 end">
+
+<div class="form_row">
+   <div class="form_leftcol"></div>
+   <div class="form_rightcol">
+</div>
+  </div><div class="form_row_description"></div>
+</div></form>
+
+      </div>
+      <div class="clearfloat"></div>
+      </div>
+      
+      
+        
+      <!-- Column two end -->
+          </div>
+      </div>
+      
+</div></div>
+
+                 
+            </ul>
+     
+            <ul id="main_nav" class="menuHoriz">
+                <li id="Coffee"><a alt="Coffee" href="/dunkindonuts/en/coffee.html" class="navBtn" id="coffeeBtn"><span class="navBtn_label" id="navlabel_coffee">COFFEE</span> <span class="undertext">Dunkin' Difference, Products</span></a></li>
+                <li id="Menu"><a alt="Menu" href="/dunkindonuts/en/menu.html" class="navBtn" id="menuBtn"><span class="navBtn_label" id="navlabel_menu">MENU</span> <span class="undertext">Beverages, Food, Nutrition</span></a></li>
+                <li id="Stores"><a alt="Stores" href="/dunkindonuts/en/stores.html" class="navBtn" id="storesBtn"><span class="navBtn_label" id="navlabel_stores">RESTAURANTS</span> <span class="undertext">Locations, Details, Careers</span></a></li>
+                <li id="Shop"><a alt="Shop" href="http://shop.dunkindonuts.com/?ccaid=ddptddst" class="navBtn" id="shopBtn"><span class="navBtn_label" id="navlabel_shop">SHOP ONLINE</span> <span class="undertext">Coffee, Merchandise, Gifts</span></a></li>
+                <li id="Card"><a alt="Card" href="/dunkindonuts/en/ddcard.html" class="navBtn" id="cardBtn"><span class="navBtn_label" id="navlabel_ddcard">DD CARD</span> <span class="undertext">Buy, Register, Reload</span></a></li>
+                <!-- <li id="Perks"><a href="/content/dunkindonuts/en/ddperks.html" class="navBtn" id="perksBtn"><span class="navBtn_label" id="navlabel_perks">DD PERKS<sup>&#174;</sup> </span> <span class="undertext">Sign In, Create Account, Overview</span></a></li> -->
+               
+               		<li id="Perks"><a alt="Perks" href="/dunkindonuts/en/responsive/ddperks/splashpage.html" class="navBtn" id="perksBtn"><span class="navBtn_label" id="navlabel_perks">DD PERKS<sup>®</sup></span> <span class="undertext">Earn points and get rewards</span></a></li>
+               
+            </ul>
+            
+ </div>
+ <script type="text/javascript">
+    $(document).ready(function(){               
+        $("#fildAStore").focus(function() {
+         $("#fildAStore").val('');
+        });
+        
+         $("#fildAStore").val('Enter City & State or your ZIP');
+    });
+    </script>
+</div>
+        
+
+
+
+
+
+ 
+  
+
+                
+
+
+<div class="mainBgr">
+</div>
+    <div id="my_center" class="mainCenterLayout">
+        <div>
+	        <div class="breadcrumbpages">
+
+
+
+
+
+ 
+  
+
+                
+
+<div class="breadcrumbcurrentpage"><div class="previous"><a alt="title" href="/dunkindonuts/en.html">
+        Home</a>
+         &gt; <a alt="title" href="/dunkindonuts/en/signin.html">
+        Sign In</a>
+        &nbsp;&gt;&nbsp;</div><div class="current">
+    Recover Your Password</div>
+    
+    </div>
+    <div class="clearfloat"></div></div>
+
+	    </div>
+	    <div class="title">
+
+
+
+
+
+ 
+  
+
+                
+
+
+            <h1>Recover Your Password</h1>
+            </div>
+
+	    
+
+
+
+
+
+ 
+  
+
+                
+
+
+
+<div class="my_central">    
+    
+
+
+
+
+
+ 
+  
+
+                
+
+
+
+
+
+<div>
+    
+        
+        
+            <div class="text parbase">
+<p>Let's get started. We will send you an email containing instructions how you can recover your password.</p>
+
+
+
+</div>
+
+            
+
+<form method="POST" action="/dunkindonuts/en/signin/forgotpassword.html" id="forgotpassword" name="forgotpassword" enctype="multipart/form-data"><input type="hidden" name=":formid" value="forgotpassword"/><input type="hidden" name=":formstart" value="/content/dunkindonuts/en/signin/forgotpassword/jcr:content/start"/><input type="hidden" name="_charset_" value="UTF-8"/>
+
+
+
+
+
+ 
+  
+
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="forgotPass" class="yellow signIn forgotPass">
+    
+    <div class="formLabel">
+        <label>Your email</label>
+        <div style="color: red;">
+			<label for="EMAIL" class="ferror" generated="true">
+			
+			</label>
+		</div>             
+        
+    </div>
+    <div class="newLine">
+        <input class="formfield" name="EMAIL" value="">
+    </div>
+
+        <div class="bottomFormLinks">
+            <button class="module_btn" type="submit">
+                <span class="btnlabel">Go</span>
+                <span class="btnaction btnArrow"></span> 
+            </button> 
+        </div>
+
+</div>
+
+<div class="clearfloat"></div>
+<script type="text/javascript">
+	<!--
+		$(function(){
+			$('#forgotPass').closest('form').validate({
+				rules: {
+					EMAIL: {
+						required: true,
+						email: true,
+						maxlength: 50
+					}
+				},	    					    				
+	    		messages: {
+					EMAIL: {
+	    				required: CQ.I18n.getMessage("APP229"),
+	    				maxlength: CQ.I18n.getMessage("APP202")
+	    			}
+	    		}
+	    	});
+		});
+	//-->	    
+</script>
+<div class="form">
+</div>
+
+            <div class="end">
+
+<div class="form_row">
+   <div class="form_leftcol"></div>
+   <div class="form_rightcol">
+</div>
+  </div><div class="form_row_description"></div>
+</div></form>
+
+        
+    
+</div>
+<div class="clearfloat"></div>
+<div class="parsys centerPar">
+</div>
+
+</div>
+
+	    
+
+
+
+
+
+ 
+  
+
+                
+
+
+
+<div class="my_right">
+    <div class="parsys rightPar">
+</div>
+
+</div>
+	</div>
+        
+
+
+
+
+
+ 
+  
+
+                
+
+
+
+
+<div id="footer">
+<div id="footerSearchForm">
+    
+
+
+
+
+
+ 
+  
+
+                
+
+
+
+
+
+
+
+
+
+<script>
+// Added method to parse from querysting and decode propery spanish n all character.
+function getUrlParams() {
+
+	  var paramMap = {};
+	  if (location.search.length == 0) {
+	    return paramMap;
+	  }
+	  var parts = location.search.substring(1).split("&");
+
+	  for (var i = 0; i < parts.length; i ++) {
+	    var component = parts[i].split("=");
+	    paramMap [decodeURIComponent(component[0])] = decodeURIComponent(component[1]);
+	  }
+	  return paramMap;
+	}
+
+	$(document).ready(function() {
+		var params = getUrlParams();
+
+		if (params.q !== undefined) {
+			$(".inputSearch").attr("value", (params.q).replace(/\+/g, " "));
+		}
+	});
+</script>
+
+
+<a alt="searchResult" name="searchResultUP"></a>
+    <form id="searchForm" action="/dunkindonuts/en/search.html">
+    <div class="search">
+        <div class="inputSearchDiv">
+            <input class="inputSearch" id="q" type="text" size="41" maxlength="2048" name="q" value="" />
+        </div>
+        <button type="submit" class="module_btn">
+            <span class="btnlabel">GO</span>
+            <span class="btnaction btnArrow"></span>
+        </button>
+        <input type="hidden" name="date" value="Wed Dec 09 10:10:45 EST 2015"/>
+        
+        </div>
+    </form>
+
+
+</div>
+<div class="share" id="footershare"><div class="sharelabel">Share: </div>
+<!-- AddThis Button BEGIN -->
+<script type="text/javascript">
+    var addthis_share = {
+        templates: { twitter: '@DunkinDonuts {{title}} {{url}}' }
+    }
+</script>
+
+<div class="addthis_toolbox addthis_default_style ">
+<a alt="addthis_button_1" class="addthis_button_preferred_1"></a>
+<a alt="addthis_button_2" class="addthis_button_preferred_2"></a>
+<a alt="addthis_button_compact" href="https://www.addthis.com/bookmark.php?v=250&amp;username=xa-4d1402905a5ecad7" class="addthis_button_compact"> </a>
+</div>
+
+<!-- AddThis Button END -->
+</div>
+   
+<!--**** Footer Menu Starts *****-->  
+
+    <div id="footerMenu">
+     <div id="col1">
+                 <h1 id="aboutLabel">For Our Fans</h1>
+                 <div id="footerlistMenu">
+                 <ul>
+                
+                         <li><div class="clearfloat"><div class="floatLeft"><a alt="DD Perks" href="/dunkindonuts/en/responsive/ddperks/splashpage.html">DD Perks
+                         </a></div></div></li>
+                            
+                         <li><div class="clearfloat"><div class="floatLeft"><a alt="Manage Card" href="/dunkindonuts/en/ddperks/manage_my_cards.html">Manage Card
+                         </a></div></div></li>
+                            
+                         <li><div class="clearfloat"><div class="floatLeft"><a alt="Get Our Newsletter" href="/dunkindonuts/en/createprofilesimple.html">Get Our Newsletter
+                         </a></div></div></li>
+                            
+                         <li><div class="clearfloat"><div class="floatLeft"><a alt="Download the DD Mobile<sup>®</sup> App" href="/dunkindonuts/en/mlanding.html">Download the DD Mobile<sup>®</sup> App
+                         </a></div></div></li>
+                            
+                                
+                           
+                            </ul>
+                            </div>     
+                    </div>
+                            <div id="col2">
+                 <h1 id="aboutLabel">Quick Links</h1>
+                 <div id="footerlistMenu">
+                 <ul>
+                
+                         <li><div class="clearfloat"><div class="floatLeft"><a alt="Contact Us" href="/dunkindonuts/en/help/contactus.html">Contact Us
+                         </a></div></div></li>
+                            
+                         <li><div class="clearfloat"><div class="floatLeft"><a alt="Dunkin' Donuts Locations" href="/dunkindonuts/en/stores.html">Dunkin' Donuts Locations
+                         </a></div></div></li>
+                            
+                         <li><div class="clearfloat"><div class="floatLeft"><a alt="Nutrition Catalog " href="/dunkindonuts/en/menu/nutrition/nutrition_catalog.html">Nutrition Catalog 
+                         </a></div></div></li>
+                            
+                         <li><div class="clearfloat"><div class="floatLeft"><a alt="DDSMART<sup>®</sup>" href="/dunkindonuts/en/menu/nutrition/ddsmart.html">DDSMART<sup>®</sup>
+                         </a></div></div></li>
+                            
+                         <li><div class="clearfloat"><div class="floatLeft"><a alt="Times Square Webcam" target='_blank' href="http://www.earthcam.com/usa/newyork/timessquare/?cam=tstwo">Times Square Webcam
+                         <img src="/etc/designs/dunkindonuts/clientlib/images/btn_ic_newwindow_right.jpg" alt="opens in a new window"></a></div></div></li>
+                            
+                                
+                           
+                            </ul>
+                            </div>     
+                    </div>
+                            <div id="col3">
+                 <h1 id="aboutLabel">Online Community</h1>
+                 <div id="footerlistMenu">
+                 <ul>
+                
+                         <li><div class="clearfloat"><div class="floatLeft"><a alt="Facebook" target='_blank' href="http://www.facebook.com/DunkinDonuts">Facebook
+                         <img src="/etc/designs/dunkindonuts/clientlib/images/btn_ic_newwindow_right.jpg" alt="opens in a new window"></a></div></div></li>
+                            
+                         <li><div class="clearfloat"><div class="floatLeft"><a alt="YouTube" target='_blank' href="http://www.youtube.com/user/dunkindonuts">YouTube
+                         <img src="/etc/designs/dunkindonuts/clientlib/images/btn_ic_newwindow_right.jpg" alt="opens in a new window"></a></div></div></li>
+                            
+                         <li><div class="clearfloat"><div class="floatLeft"><a alt="Twitter" target='_blank' href="http://twitter.com/dunkindonuts">Twitter
+                         <img src="/etc/designs/dunkindonuts/clientlib/images/btn_ic_newwindow_right.jpg" alt="opens in a new window"></a></div></div></li>
+                            
+                         <li><div class="clearfloat"><div class="floatLeft"><a alt="Dunkin' Blog" href="/DDBlog.html">Dunkin' Blog
+                         </a></div></div></li>
+                            
+                                
+                           
+                            </ul>
+                            </div>     
+                    </div>
+                            <div id="col4">
+                 <h1 id="aboutLabel">Shop Online</h1>
+                 <div id="footerlistMenu">
+                 <ul>
+                
+                         <li><div class="clearfloat"><div class="floatLeft"><a alt="Shop Home Page" target='_blank' href="http://shop.dunkindonuts.com/?CCAID=DDPTDDHO">Shop Home Page
+                         <img src="/etc/designs/dunkindonuts/clientlib/images/btn_ic_newwindow_right.jpg" alt="opens in a new window"></a></div></div></li>
+                            
+                         <li><div class="clearfloat"><div class="floatLeft"><a alt="Coffee" target='_blank' href="http://shop.dunkindonuts.com/coffee_1997_p01_01/?CCAID=DDSTDDCF">Coffee
+                         <img src="/etc/designs/dunkindonuts/clientlib/images/btn_ic_newwindow_right.jpg" alt="opens in a new window"></a></div></div></li>
+                            
+                         <li><div class="clearfloat"><div class="floatLeft"><a alt="Tea " target='_blank' href="http://shop.dunkindonuts.com/tea_4294959869-4294959900_p01_01/?CCAID=DDSTDDTEA">Tea 
+                         <img src="/etc/designs/dunkindonuts/clientlib/images/btn_ic_newwindow_right.jpg" alt="opens in a new window"></a></div></div></li>
+                            
+                         <li><div class="clearfloat"><div class="floatLeft"><a alt="Cups & Mugs" target='_blank' href="http://shop.dunkindonuts.com/drinkware_363_p01_01/?CCAID=DDSTDDdw">Cups & Mugs
+                         <img src="/etc/designs/dunkindonuts/clientlib/images/btn_ic_newwindow_right.jpg" alt="opens in a new window"></a></div></div></li>
+                            
+                         <li><div class="clearfloat"><div class="floatLeft"><a alt="Apparel" target='_blank' href="http://shop.dunkindonuts.com/shop-all-dunkin-donuts-apparel_4149_p01_04/?CCAID=DDSTDDAP">Apparel
+                         <img src="/etc/designs/dunkindonuts/clientlib/images/btn_ic_newwindow_right.jpg" alt="opens in a new window"></a></div></div></li>
+                            
+                                
+                           
+                            </ul>
+                            </div>     
+                    </div>
+                            <div id="col5">
+                 <h1 id="aboutLabel">Company Information</h1>
+                 <div id="footerlistMenu">
+                 <ul>
+                
+                         <li><div class="clearfloat"><div class="floatLeft"><a alt="Company Snapshot" href="/dunkindonuts/en/company.html">Company Snapshot
+                         </a></div></div></li>
+                            
+                         <li><div class="clearfloat"><div class="floatLeft"><a alt="Careers" href="/dunkindonuts/en/ddcareers.html">Careers
+                         </a></div></div></li>
+                            
+                         <li><div class="clearfloat"><div class="floatLeft"><a alt="Franchising" target='_blank' href="http://www.dunkinfranchising.com/aboutus/franchise/franchise-home.html">Franchising
+                         <img src="/etc/designs/dunkindonuts/clientlib/images/btn_ic_newwindow_right.jpg" alt="opens in a new window"></a></div></div></li>
+                            
+                         <li><div class="clearfloat"><div class="floatLeft"><a alt="Dunkin' Brands" target='_blank' href="http://www.dunkinbrands.com/">Dunkin' Brands
+                         <img src="/etc/designs/dunkindonuts/clientlib/images/btn_ic_newwindow_right.jpg" alt="opens in a new window"></a></div></div></li>
+                            
+                         <li><div class="clearfloat"><div class="floatLeft"><a alt="Customer Service" href="/dunkindonuts/en/help.html">Customer Service
+                         </a></div></div></li>
+                            
+                                
+                           
+                            </ul>
+                            </div>     
+                    </div>
+                            <div id="col6">
+                 <h1 id="aboutLabel">About Us</h1>
+                 <div id="footerlistMenu">
+                 <ul>
+                
+                         <li><div class="clearfloat"><div class="floatLeft"><a alt="Global Presence" href="/dunkindonuts/en/company/global.html">Global Presence
+                         </a></div></div></li>
+                            
+                         <li><div class="clearfloat"><div class="floatLeft"><a alt="Press Room" target='_blank' href="http://news.dunkindonuts.com/">Press Room
+                         <img src="/etc/designs/dunkindonuts/clientlib/images/btn_ic_newwindow_right.jpg" alt="opens in a new window"></a></div></div></li>
+                            
+                         <li><div class="clearfloat"><div class="floatLeft"><a alt="Contests & Promos" href="/dunkindonuts/en/promotions.html">Contests & Promos
+                         </a></div></div></li>
+                            
+                         <li><div class="clearfloat"><div class="floatLeft"><a alt="Responsibility" target='_blank' href="http://www.dunkinbrands.com/responsibility">Responsibility
+                         <img src="/etc/designs/dunkindonuts/clientlib/images/btn_ic_newwindow_right.jpg" alt="opens in a new window"></a></div></div></li>
+                            
+                         <li><div class="clearfloat"><div class="floatLeft"><a alt="Foundation" target='_blank' href="http://www.dunkinbrands.com/foundation">Foundation
+                         <img src="/etc/designs/dunkindonuts/clientlib/images/btn_ic_newwindow_right.jpg" alt="opens in a new window"></a></div></div></li>
+                            
+                                
+                           
+                            </ul>
+                            </div>     
+                    </div>
+                            
+             </div>
+                       
+    
+    
+           
+           
+           
+
+
+             
+<!--**** Footer Menu Ends *****-->  
+<div id="highlightBar"></div>
+
+<div id="copyright">
+    <div class="arod_logo">
+    
+         
+            <img alt="America runs on dunkin" src="/etc/designs/dunkindonuts/images/arod_logo.jpg">
+                 
+        
+    </div>
+    <span id="copyrightText" class="legal">&copy; 2011. DD IP Holder LLC. All rights reserved. &nbsp;&nbsp;<a alt="Terms of Use" href="/dunkindonuts/en/help/terms.html">Terms of Use</a>|<a alt="Privacy Policy" href="/dunkindonuts/en/help/privacypolicy.html">Privacy Policy</a>|<a alt="Your Ad Choices" href="/dunkindonuts/en/help/privacypolicy.html#cookiespolicy">Your Ad Choices</a>|<a alt="CA Transparency in Supply Chains Act" href="/dunkindonuts/en/help/terms.html#californiasupply">CA Transparency in Supply Chains Act</a></span>
+</div>
+    <div id="partners_header">Dunkin' Donuts is the proud partner of</div>
+    
+    <div id="parnters_logos">
+        <div class="clearfloat"></div>
+        <div class="partnersLogosPar parsys iparsys"><div class="iparys_inherited"><div class="partnersLogosPar parsys iparsys"><div class="parbase teaser section">
+
+
+           <script type="text/javascript">{initializeTeaserLoader([{"path":"/content/campaigns/dunkindonuts/footer/dallas","name":"dallas","campainName":"footer","id":"footer_dallas","segments":["/etc/segmentation/dunkindonuts/Footer/dallas"],"tags":[]},{"path":"/content/campaigns/dunkindonuts/footer/boston","name":"boston","campainName":"footer","id":"footer_boston","segments":["/etc/segmentation/dunkindonuts/Footer/boston"],"tags":[]},{"path":"/content/campaigns/dunkindonuts/footer/new_york","name":"new_york","campainName":"footer","id":"footer_new_york","segments":["/etc/segmentation/dunkindonuts/Footer/new_york"],"tags":[]},{"path":"/content/campaigns/dunkindonuts/footer/national","name":"national","campainName":"footer","id":"footer_national","segments":[],"tags":[]}], "first", "_content_dunkindonuts_en_jcr_content_partnersLogosPar_teaser", "false", "https://www.dunkindonuts.com/libs/wcm/stats/tracker.js");
+        }</script><div id="_content_dunkindonuts_en_jcr_content_partnersLogosPar_teaser" class="campaign campaign-footer"><noscript><div class="par parsys"><div class="parbase partnersLogo image section">
+
+
+
+
+
+ 
+  
+
+                
+
+
+<a href="http://www.jetblue.com/" target="_blank"><img title="Jet Blue" alt="Jet Blue" class="cq-dd-image" src="/content/campaigns/dunkindonuts/footer/national/_jcr_content/par/partnerslogo_1.img.jpg/dunkindonuts"></a>
+<script type="text/javascript"> 
+$(document).ready (function() {
+    var width = 0;
+    var logos = document.getElementById("parnters_logos");
+    var imgs = logos.getElementsByTagName("img");
+    for (i=0; i<imgs.length; i++){
+        width = width + imgs[i].offsetWidth + 10;
+    }
+    if(imgs.length>=1){        
+        imgs[0].style.marginLeft = 88+ "px";
+    }
+});
+</script></div>
+<div class="parbase partnersLogo image section">
+
+
+
+
+
+ 
+  
+
+                
+
+
+<a href="http://www.baskinrobbins.com" target="_blank"><img title="Baskin Robbins logo" alt="Baskin Robbins logo" class="cq-dd-image" src="/content/campaigns/dunkindonuts/footer/national/_jcr_content/par/partnerslogo_0.img.jpg/dunkindonuts"></a>
+<script type="text/javascript"> 
+$(document).ready (function() {
+    var width = 0;
+    var logos = document.getElementById("parnters_logos");
+    var imgs = logos.getElementsByTagName("img");
+    for (i=0; i<imgs.length; i++){
+        width = width + imgs[i].offsetWidth + 10;
+    }
+    if(imgs.length>=1){        
+        imgs[0].style.marginLeft = 88+ "px";
+    }
+});
+</script></div>
+<div class="parbase partnersLogo image section">
+
+
+
+
+
+ 
+  
+
+                
+
+
+<a href="http://liverpoolfc.com/" target="_blank"><img title="Liverpool logo" alt="Liverpool logo" class="cq-dd-image" src="/content/campaigns/dunkindonuts/footer/national/_jcr_content/par/partnerslogo_2.img.png/dunkindonuts"></a>
+<script type="text/javascript"> 
+$(document).ready (function() {
+    var width = 0;
+    var logos = document.getElementById("parnters_logos");
+    var imgs = logos.getElementsByTagName("img");
+    for (i=0; i<imgs.length; i++){
+        width = width + imgs[i].offsetWidth + 10;
+    }
+    if(imgs.length>=1){        
+        imgs[0].style.marginLeft = 88+ "px";
+    }
+});
+</script></div>
+
+</div>
+</noscript></div></div>
+</div>
+</div>
+</div>
+
+ 
+        
+   </div>
+   <div class="clearfloat"></div>
+
+</div>
+<script type="text/javascript" src="/etc/designs/dunkindonuts/js/patnersLogo.js"></script> 
+<script type="text/javascript">
+$(window).load(function () {
+    $.ajax({
+          type: "GET", 
+          url: 'https://s7.addthis.com/js/250/addthis_widget.js#username=xa-4d1402905a5ecad7',
+          dataType:'script',
+          cache: true,        
+          success: function(data) {
+            $(".footershare").html(data);
+          }
+        });
+});
+</script>
+    </div>
+    
+<div id="scTagOutput" style="display:none;"></div>
+
+<!-- SiteCatalyst code version: H.22.1.
+Copyright 1996-2010 Adobe, Inc. All Rights Reserved
+More info available at http://www.omniture.com -->
+
+
+ 
+<script type="text/javascript">
+    ddScServer = "164.109.96.224";
+    ddScLoggedIn = "false";
+    ddScUserId = "";
+</script> 
+<script language="JavaScript" type="text/javascript"><!--
+
+scTagPage();
+
+
+--></script>
+<script language="JavaScript" type="text/javascript"><!--
+if(navigator.appVersion.indexOf('MSIE')>=0)document.write(unescape('%3C')+'\!-'+'-')
+//--></script><noscript><img src="https://studiocom.122.2o7.net/b/ss/studiocomdunkin/1/H.22.1--NS/0" height="1" width="1" border="0" alt=""/></noscript><!--/DO NOT REMOVE/-->
+<!-- End SiteCatalyst code version: H.22.1. -->    
+
+
+</body>
+</html>
