@@ -39,7 +39,6 @@
             {"short": "pi", "full": "pin code received by sms/..."},
 
             {"short": "tC", "full": "TOS confirmation"},
-            {"short": "18", "full": "18+ confirmation"},
             {"short": "eC", "full": "receive emails confirmation"},
             {"short": "rC", "full": "remember me checkbox"},
             {"short": "aC", "full": "autofill fields checkbox"},
