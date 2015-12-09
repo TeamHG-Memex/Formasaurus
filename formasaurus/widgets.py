@@ -100,7 +100,8 @@ def HtmlView(form, field_name=None):
     return widgets.VBox([form_display, form_raw])
 
 
-def FormAnnotator(ann, form_types, field_types, annotate_fields=True, annotate_types=True):
+def FormAnnotator(ann, form_types, field_types, annotate_fields=True,
+                  annotate_types=True, max_fields=80):
     """
     Widget for annotating an HTML form.
     """
@@ -129,17 +130,22 @@ def FormAnnotator(ann, form_types, field_types, annotate_fields=True, annotate_t
     if annotate_fields:
         pages = []
         names = get_field_names(get_fields_to_annotate(ann.form))
-        for name in names:
-            field_type_select = FieldTypeSelect(ann, name, field_types)
-            html_view = HtmlView(ann.form, name)
-            page = widgets.Box(children=[field_type_select, html_view])
-            pages.append(page)
+        if len(names) > max_fields:
+            children += [
+                widgets.HTML("<h4>Too many fields ({})</h4>".format(len(names)))
+            ]
+        else:
+            for name in names:
+                field_type_select = FieldTypeSelect(ann, name, field_types)
+                html_view = HtmlView(ann.form, name)
+                page = widgets.Box(children=[field_type_select, html_view])
+                pages.append(page)
 
-        field_tabs = widgets.Tab(children=pages, padding=4)
-        for idx, name in enumerate(names):
-            field_tabs.set_title(idx, name)
+            field_tabs = widgets.Tab(children=pages, padding=4)
+            for idx, name in enumerate(names):
+                field_tabs.set_title(idx, name)
 
-        children += [field_tabs]
+            children += [field_tabs]
     else:
         children += [HtmlView(ann.form)]
 
