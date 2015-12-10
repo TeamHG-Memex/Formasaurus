@@ -5,6 +5,7 @@ A module for working with annotation data storage.
 from __future__ import absolute_import
 import os
 import json
+import copy
 import collections
 from itertools import chain
 from six.moves.urllib import parse as urlparse
@@ -20,11 +21,87 @@ from formasaurus.html import (
     get_field_names,
 )
 
-FormAnnotation = collections.namedtuple('FormAnnotation', 'form type index info key')
 AnnotationSchema = collections.namedtuple(
     'AnnotationSchema',
     'types types_inv na_value skip_value simplify_map'
 )
+
+
+_FormAnnotation = collections.namedtuple(
+    'FormAnnotation',
+    'form type index info key form_schema field_schema'
+)
+
+class FormAnnotation(_FormAnnotation):
+
+    @property
+    def url(self):
+        return self.info['url']
+
+    @property
+    def fields(self):
+        """
+        {"field name": "field type"} dict.
+        """
+        return self.info['visible_html_fields'][self.index]
+
+    @property
+    def fields_annotated(self):
+        """ True if form has fields and all fields are annotated. """
+        if not self.fields:
+            return False
+        return all(
+            v != self.field_schema.na_value
+            for v in self.fields.values()
+        )
+
+    @property
+    def fields_partially_annotated(self):
+        """
+        True when some fields are annotated and some are not annotated.
+        """
+        if not self.fields:
+            return False
+        values = self.fields.values()
+        has_na = any(v == self.field_schema.na_value for v in values)
+        has_annotated = not all(v == self.field_schema.na_value for v in values)
+        return has_na and has_annotated
+
+    @property
+    def field_elems(self):
+        """
+        Return a list of lxml Elements for fields which are annotated.
+        Fields are returned in in order they appear in form;
+        only visible submittable fields are considered.
+        """
+        return get_fields_to_annotate(self.form)
+
+    @property
+    def field_types(self):
+        """
+        A list of field types, in order they appear in form.
+        Only visible submittable fields are considered.
+        """
+        fields = self.fields
+        return [fields[field.name] for field in self.field_elems]
+
+    @property
+    def field_types_full(self):
+        """
+        A list of long field type names, in order they appear in form.
+        Only visible submittable fields are considered.
+        """
+        return [self.field_schema.types_inv[tp] for tp in self.field_types]
+
+    @property
+    def type_full(self):
+        """ Full form type name """
+        return self.form_schema.types_inv[self.type]
+
+    def __repr__(self):
+        return "FormAnnotation(form={!r}, type={!r}, index={!r}, url={!r}, key={!r}, fields={!r})".format(
+            self.form, self.type, self.index, self.url, self.key, self.fields
+        )
 
 
 class Storage(object):
@@ -178,13 +255,15 @@ class Storage(object):
         self.write_index(index)
         return path
 
-    def iter_annotations(self, index=None, drop_duplicates=True, drop_na=True,
-                         drop_skipped=True, simplify_form_types=False,
+    def iter_annotations(self, index=None,
+                         drop_duplicates=True, drop_na=True, drop_skipped=True,
+                         simplify_form_types=False, simplify_field_types=False,
                          verbose=False, leave=False):
         """
-        Return an iterator over (form, type, index, info, path) tuples.
+        Return an iterator over :class:`FormAnnotation` objects.
         """
-        schema = self.get_form_schema()
+        form_schema = self.get_form_schema()
+        field_schema = self.get_field_schema()
         trees = self.iter_trees(index=index)
 
         if verbose:
@@ -195,12 +274,12 @@ class Storage(object):
         for path, tree, info in trees:
             for idx, (form, tp) in enumerate(zip(get_forms(tree), info["forms"])):
                 if simplify_form_types:
-                    tp = schema.simplify_map.get(tp, tp)
+                    tp = form_schema.simplify_map.get(tp, tp)
 
-                if drop_na and tp == schema.na_value:
+                if drop_na and tp == form_schema.na_value:
                     continue
 
-                if drop_skipped and tp == schema.skip_value:
+                if drop_skipped and tp == form_schema.skip_value:
                     continue
 
                 if drop_duplicates:
@@ -209,7 +288,14 @@ class Storage(object):
                         continue
                     seen.add(fp)
 
-                yield FormAnnotation(form, tp, idx, info, path)
+                if simplify_field_types:
+                    info = copy.deepcopy(info)
+                    for fields in info['visible_html_fields']:
+                        for k, v in fields.items():
+                            fields[k] = field_schema.simplify_map.get(v, v)
+
+                yield FormAnnotation(form, tp, idx, info, path,
+                                     form_schema, field_schema)
 
         if verbose and leave:
             print("")
@@ -255,7 +341,7 @@ class Storage(object):
 
     @classmethod
     def annotations_to_Xy(cls, annotations):
-        X, y, indices, info_records, info_keys = zip(*annotations)
+        X, y, _, _, _, _, _ = zip(*annotations)
         return X, y
 
     def check(self):
@@ -327,22 +413,13 @@ class Storage(object):
         """
         return get_form_hash(form, only_visible=True)
 
-    def get_form_type_counts(self, drop_duplicates=True, simplify=False,
+    def get_form_type_counts(self, drop_duplicates=True, drop_na=True,
+                             simplify=False,
                              verbose=True):
         """ Return a {formtype: count} collections.Counter """
-        if not drop_duplicates:
-            index = self.get_index()
-            schema = self.get_form_schema()
-            if simplify:
-                it = (
-                    [schema.simplify_map.get(tp, tp) for tp in v["forms"]]
-                    for v in index.values()
-                )
-            else:
-                it = (list(v["forms"].keys()) for v in index.values())
-            return collections.Counter(chain.from_iterable(it))
-
         annotations = self.iter_annotations(verbose=verbose,
+                                            drop_duplicates=drop_duplicates,
+                                            drop_na=drop_na,
                                             simplify_form_types=simplify)
         return collections.Counter(ann.type for ann in annotations)
 

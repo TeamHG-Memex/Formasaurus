@@ -37,7 +37,23 @@ def test_storage_add_result(empty_storage):
 
     assert len(list(st.iter_trees())) == 1
     assert list(st.iter_annotations()) == []
-    assert len(list(st.iter_annotations(drop_na=False))) == 1
+
+    all_annotations = list(st.iter_annotations(drop_na=False))
+    assert len(all_annotations) == 1
+
+    ann = all_annotations[0]
+    assert ann.url == "http://example.com"
+    assert ann.fields == {'q': 'XX'}
+    assert ann.field_types == ['XX']
+    assert ann.field_types_full == ['NOT ANNOTATED']
+    assert ann.type == 'X'
+    assert ann.type_full == 'NOT ANNOTATED'
+    assert not ann.fields_annotated
+    assert not ann.fields_partially_annotated
+
+    assert len(ann.field_elems) == 1
+    assert ann.field_elems[0].type == 'text'
+    assert ann.field_elems[0].name == 'q'
 
     errors = st.check()
     assert errors == 0

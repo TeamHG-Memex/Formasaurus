@@ -71,7 +71,7 @@
             {"short": "Sn", "full": "street name"},
             {"short": "S#", "full": "street number"},
             {"short": "A#", "full": "apartment number"},
-            {"short": "Zi", "full": "zip/postal code"},
+            {"short": "Zi", "full": "postal code"},
             {"short": "A1", "full": "address line 1"},
             {"short": "A2", "full": "address line 2"},
             {"short": "PO", "full": "PO box"},
@@ -82,13 +82,13 @@
             {"short": "P2", "full": "phone part 2"},
             {"short": "P3", "full": "phone part 3"},
             {"short": "fa", "full": "fax"},
-            {"short": "ws", "full": "website/url"},
+            {"short": "ws", "full": "url"},
             {"short": "oi", "full": "OpenID"},
 
             {"short": "am", "full": "about me text"},
             {"short": "av", "full": "picture/avatar upload"},
             {"short": "CC", "full": "comment text"},
-            {"short": "CT", "full": "comment title/subject"},
+            {"short": "CT", "full": "comment title or subject"},
 
             {"short": "c#", "full": "credit card number"},
             {"short": "cs", "full": "credit card security code"},
@@ -111,7 +111,7 @@
 
             {"short": "ON", "full": "other number"},
             {"short": "OT", "full": "other text"},
-            {"short": "OD", "full": "other full date"},
+            {"short": "OD", "full": "full date"},
             {"short": "Od", "full": "day"},
             {"short": "Om", "full": "month"},
             {"short": "Oy", "full": "year"},
@@ -122,9 +122,49 @@
             {"short": "OU", "full": "other file upload"},
             {"short": "OR", "full": "other read-only"},
 
+            {"short": "OO", "full": "other"},
+
             {"short": "XX", "full": "NOT ANNOTATED"}
         ],
-        "simplify_map": {},
+        "simplify_map": {
+            "ns": "nf",
+            "ch": "nf",
+
+            "bd": "Od",
+            "bm": "Om",
+            "by": "Oy",
+            "bD": "OD",
+            "cm": "Om",
+            "cy": "Oy",
+
+            "Sa": "Ad",
+            "Sn": "Ad",
+            "S#": "Ad",
+            "A1": "Ad",
+            "A2": "Ad",
+            "PO": "Ad",
+            "cA": "Ad",
+
+            "P0": "ph",
+            "P1": "ph",
+            "P2": "ph",
+            "P3": "ph",
+
+            "in": "OO",
+            "pi": "OO",
+            "aC": "OO",
+            "av": "OO",
+            "c#": "OO",
+            "cs": "OO",
+            "nv": "OO",
+            "ON": "OO",
+            "OT": "OO",
+            "oC": "OO",
+            "OS": "OO",
+            "OM": "OO",
+            "Bo": "OO",
+            "OU": "OO"
+        },
         "NA_value": "XX",
         "skip_value": "--"
     }
