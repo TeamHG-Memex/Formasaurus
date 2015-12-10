@@ -26,7 +26,7 @@ setup(
         "tldextract",
         "docopt",
         "six",
-        "sklearn-crfsuite",
+        "sklearn-crfsuite >= 0.2",
         "requests",
     ],
     package_data={
