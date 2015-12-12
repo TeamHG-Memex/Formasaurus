@@ -33,7 +33,6 @@ _FormAnnotation = collections.namedtuple(
 )
 
 class FormAnnotation(_FormAnnotation):
-
     @property
     def url(self):
         return self.info['url']

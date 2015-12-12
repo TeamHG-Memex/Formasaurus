@@ -13,7 +13,6 @@ from sklearn.cross_validation import cross_val_score
 from sklearn.metrics import classification_report, confusion_matrix
 
 
-
 SKLEARN_VERSION = LooseVersion(sklearn.__version__)
 
 

@@ -3,6 +3,7 @@ from __future__ import absolute_import
 import sys
 
 import tldextract
+from sklearn.cross_validation import LabelKFold
 
 
 def dependencies_string():
@@ -56,3 +57,38 @@ def inverse_mapping(dct):
     {5: 'x'}
     """
     return {v:k for k,v in dct.items()}
+
+
+def select_by_index(arr, index):
+    """
+    Like numpy indexing, but for lists. This is for cases
+    conversion to numpy array is problematic.
+
+    >>> select_by_index(['a', 'b', 'c', 'd'], [0, 3])
+    ['a', 'd']
+    """
+    return [arr[i] for i in index]
+
+
+def get_annotation_folds(annotations, n_folds):
+    """
+    Return (train_indices, test_indices) folds iterator.
+    It is guaranteed forms from the same website can't be both in
+    train and test parts.
+    """
+    return LabelKFold(
+        labels=[get_domain(ann.url) for ann in annotations],
+        n_folds=n_folds
+    )
+
+
+def get_annotation_train_test_indices(annotations, n_folds=4):
+    """
+    Split annotations into train and test parts, return train and test indices.
+    The size of test part is approximately ``len(annotations)/n_folds``.
+    it is guaranteed forms from the same website can't be both
+    in train and test parts.
+    """
+    for idx_train, idx_test in get_annotation_folds(annotations, n_folds):
+        break
+    return idx_train, idx_test

@@ -33,7 +33,7 @@ setup(
         'formasaurus': ['data/index.json', 'data/html/*.html'],
     },
     extras_require={
-        'with-deps': ['scikit-learn >= 0.15', 'scipy', 'pandas', 'lxml'],
+        'with-deps': ['scikit-learn >= 0.17', 'scipy', 'pandas', 'lxml'],
         'annotation': ['ipython[notebook] >= 4.0', 'ipywidgets'],
     },
     entry_points={
