@@ -95,7 +95,9 @@ def train_crf(annotations,
         )
         rs.fit(X, y)
         crf = rs.best_estimator_
-        log("c1={:0.5f}, c2={:0.5f}".format(crf.c1, crf.c2))
+        log("Best hyperparameters: c1={:0.5f}, c2={:0.5f}".format(crf.c1, crf.c2))
+    else:
+        crf.fit(X, y)
 
     return crf
 
