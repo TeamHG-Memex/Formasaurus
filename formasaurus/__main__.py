@@ -37,7 +37,6 @@ from formasaurus.annotation import (
     check_annotated_data,
     print_form_html
 )
-from formasaurus.extractor import FormExtractor
 from formasaurus.utils import download
 from formasaurus.storage import Storage
 from formasaurus.html import load_html
@@ -55,21 +54,20 @@ def main():
         check_annotated_data(args['--data-folder'])
 
     elif args['train']:
-        ex = FormExtractor.trained_on(
+        ex = formasaurus.FormFieldClassifier.trained_on(
             data_folder=args["--data-folder"],
-            train_ratio=1.0,
         )
         ex.save(args["<modelfile>"])
 
     elif args['run']:
         threshold = float(args['--threshold'])
         print("Loading the extractor..")
-        ex = FormExtractor.load(args["<modelfile>"])
+        ex = formasaurus.FormFieldClassifier.load(args["<modelfile>"])
         print("Downloading data...")
         data = download(args["<url>"])
         tree = load_html(data, args['<url>'])
 
-        result = ex.extract_forms_proba(tree, threshold)
+        result = ex.extract_forms(tree, proba=True, threshold=threshold)
         if not result:
             print("No forms found.")
             return

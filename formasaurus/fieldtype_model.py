@@ -38,7 +38,8 @@ from formasaurus import formtype_model
 from formasaurus.html import get_fields_to_annotate, get_text_around_elems
 from formasaurus.text import (normalize, tokenize, ngrams, number_pattern,
     token_ngrams)
-from formasaurus.utils import select_by_index, get_annotation_folds
+from formasaurus.utils import select_by_index
+from formasaurus.annotation import get_annotation_folds
 
 
 scorer = make_scorer(flat_f1_score, average='weighted')

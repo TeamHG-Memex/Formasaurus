@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 from __future__ import absolute_import
+import os
 import sys
 
 import requests
 import tldextract
-from sklearn.cross_validation import LabelKFold
 
 
 def dependencies_string():
@@ -71,28 +71,26 @@ def select_by_index(arr, index):
     return [arr[i] for i in index]
 
 
-def get_annotation_folds(annotations, n_folds):
-    """
-    Return (train_indices, test_indices) folds iterator.
-    It is guaranteed forms from the same website can't be both in
-    train and test parts.
-    """
-    return LabelKFold(
-        labels=[get_domain(ann.url) for ann in annotations],
-        n_folds=n_folds
-    )
+def at_root(*args):
+    """ Return path relative to formasaurus source code """
+    return os.path.join(os.path.dirname(__file__), *args)
 
 
-def get_annotation_train_test_indices(annotations, n_folds=4):
+def thresholded(dct, threshold):
     """
-    Split annotations into train and test parts, return train and test indices.
-    The size of test part is approximately ``len(annotations)/n_folds``.
-    it is guaranteed forms from the same website can't be both
-    in train and test parts.
+    Return dict ``dct`` without all values less than threshold.
+
+    >>> thresholded({'foo': 0.5, 'bar': 0.1}, 0.5)
+    {'foo': 0.5}
+
+    >>> thresholded({'foo': 0.5, 'bar': 0.1, 'baz': 1.0}, 0.6)
+    {'baz': 1.0}
+
+    >>> dct = {'foo': 0.5, 'bar': 0.1, 'baz': 1.0, 'spam': 0.0}
+    >>> thresholded(dct, 0.0) == dct
+    True
     """
-    for idx_train, idx_test in get_annotation_folds(annotations, n_folds):
-        break
-    return idx_train, idx_test
+    return {k: v for k, v in dct.items() if v >= threshold}
 
 
 def download(url):

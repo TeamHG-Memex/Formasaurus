@@ -5,8 +5,7 @@ import io
 import lxml.html
 import pytest
 
-import formasaurus
-from formasaurus.extractor import DEFAULT_DATA_PATH
+from formasaurus.classifiers import DEFAULT_DATA_PATH
 from formasaurus.storage import Storage
 
 
@@ -21,11 +20,6 @@ LOGIN_PAGE = b'''
     </body>
 </html>
 '''
-
-
-@pytest.fixture
-def ex():
-    return formasaurus.FormExtractor.load()
 
 
 @pytest.fixture

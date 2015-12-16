@@ -5,7 +5,10 @@ HTML forms interactive annotation utilities.
 from __future__ import absolute_import, print_function
 import sys
 
+from sklearn.cross_validation import LabelKFold
+
 from formasaurus.html import get_cleaned_form_html
+from formasaurus.utils import get_domain
 from formasaurus.storage import Storage
 
 
@@ -33,3 +36,29 @@ def print_form_types(form_types):
     for full_name, shortcuts in form_types.items():
         print("  %s %s" % (shortcuts, full_name))
     print("")
+
+
+def get_annotation_folds(annotations, n_folds):
+    """
+    Return (train_indices, test_indices) folds iterator.
+    It is guaranteed forms from the same website can't be both in
+    train and test parts.
+    """
+    return LabelKFold(
+        labels=[get_domain(ann.url) for ann in annotations],
+        n_folds=n_folds
+    )
+
+
+def get_annotation_train_test_indices(annotations, n_folds=4):
+    """
+    Split annotations into train and test parts, return train and test indices.
+    The size of test part is approximately ``len(annotations)/n_folds``.
+    it is guaranteed forms from the same website can't be both
+    in train and test parts.
+    """
+    for idx_train, idx_test in get_annotation_folds(annotations, n_folds):
+        break
+    return idx_train, idx_test
+
+

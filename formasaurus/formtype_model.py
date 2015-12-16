@@ -121,3 +121,13 @@ def get_model(prob=True):
     return make_pipeline(fe, clf)
 
 
+def train(annotations, model=None, full_type_names=False):
+    """ Train form type detection model on annotation data """
+    if model is None:
+        model = get_model()
+    X = [ann.form for ann in annotations]
+    if full_type_names:
+        y = [ann.type_full for ann in annotations]
+    else:
+        y = [ann.type for ann in annotations]
+    return model.fit(X, y)
