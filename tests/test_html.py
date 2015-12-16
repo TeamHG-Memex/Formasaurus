@@ -113,3 +113,4 @@ def test_get_text_around_elems():
     assert after[user] == 'required  Email:'
     assert after[email] == '* Thanks!'
 
+    get_text_around_elems(tree, []) == {}, {}

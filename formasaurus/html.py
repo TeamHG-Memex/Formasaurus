@@ -170,6 +170,8 @@ def get_text_around_elems(tree, elems):
     Return (before, after) tuple with {elem: text} dicts containing
     text before a specified lxml DOM Element and after it.
     """
+    if not elems:
+        return {}, {}
     buf = []
     before = {elem: '' for elem in elems}
     after = {elem: '' for elem in elems}
