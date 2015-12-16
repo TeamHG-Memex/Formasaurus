@@ -158,12 +158,13 @@ def get_realistic_form_labels(annotations, n_folds=10, model=None,
     return y_pred
 
 
-def get_form_features(form, form_type):
+def get_form_features(form, form_type, field_elems=None):
     """
     Return a list of feature dicts, a dict per visible submittable
     field in a <form> element.
     """
-    field_elems = get_fields_to_annotate(form)
+    if field_elems is None:
+        field_elems = get_fields_to_annotate(form)
     text_before, text_after = get_text_around_elems(form, field_elems)
     res = [_elem_features(elem) for elem in field_elems]
 
