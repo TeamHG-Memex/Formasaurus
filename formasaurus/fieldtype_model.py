@@ -24,7 +24,7 @@ To get these 'realistic' noisy form type labels we split data into 10 folds,
 and then for each fold we predict its labels using form type detector
 trained on the rest 9 folds - see :func:`get_realistic_form_labels`.
 """
-from __future__ import absolute_import, division, nested_scopes
+from __future__ import absolute_import, division
 import warnings
 
 import scipy.stats
@@ -45,10 +45,12 @@ scorer = make_scorer(flat_f1_score, average='weighted')
 """ Default scorer for grid search. We're optimizing for F1. """
 
 
-def train_crf(annotations,
-              use_precise_formtypes=True,
-              optimize_hyperparameters_iters=0,
-              verbose=True):
+def train(annotations,
+          use_precise_formtypes=True,
+          optimize_hyperparameters_iters=0,
+          full_form_type_names=False,
+          full_field_type_names=True,
+          verbose=True):
 
     def log(msg):
         if verbose:
@@ -59,16 +61,27 @@ def train_crf(annotations,
 
     if use_precise_formtypes:
         log("Using precise form types")
-        form_types = np.asarray([a.type_full for a in annotations])
+        if full_form_type_names:
+            form_types = np.asarray([a.type_full for a in annotations])
+        else:
+            form_types = np.asarray([a.type for a in annotations])
         # c1, c2 = 0.0223, 0.0033  # values found by randomized search
         c1, c2 = 0.1655, 0.0236  # values found by randomized search
     else:
         log("Computing realistic form types")
-        form_types = get_realistic_form_labels(annotations, n_folds=10)
+        form_types = get_realistic_form_labels(
+            annotations=annotations,
+            n_folds=10,
+            full_type_names=full_form_type_names
+        )
         c1, c2 = 0.247, 0.032  # values found by randomized search
 
     log("Extracting features")
-    X, y = get_Xy(annotations, form_types)
+    X, y = get_Xy(
+        annotations=annotations,
+        form_types=form_types,
+        full_type_names=full_field_type_names,
+    )
 
     crf = CRF(all_possible_transitions=True, max_iterations=100, c1=c1, c2=c2)
 
@@ -102,7 +115,7 @@ def train_crf(annotations,
     return crf
 
 
-def get_Xy(annotations, form_types):
+def get_Xy(annotations, form_types, full_type_names=False):
     """
     Return training data for field type detection.
     """
@@ -111,7 +124,10 @@ def get_Xy(annotations, form_types):
         get_form_features(form, form_type)
         for form, form_type in zip(forms, form_types)
     ]
-    y = [a.field_types_full for a in annotations]
+    if full_type_names:
+        y = [a.field_types_full for a in annotations]
+    else:
+        y = [a.field_types for a in annotations]
     return X, y
 
 
