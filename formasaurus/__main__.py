@@ -1,11 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
-This is a Formasaurus command-line utility for annotating HTML forms,
-training a classifier based on annotated data and evaluating its quality.
+Formasaurus command-line utility.
 
 Usage:
-    formasaurus add <url> [--data-folder <path>]
     formasaurus train <modelfile> [--data-folder <path>]
     formasaurus run <modelfile> <url> [--threshold <probability>]
     formasaurus check-data [--data-folder <path>]
@@ -18,12 +16,6 @@ Options:
     --test-size <ratio>        ratio of data to use for evaluation, from 0 to 1.0 [default: 0.25]
     --cv <n_folds>             use <n_folds> for cross-validation [default: 10]
     --threshold <probability>  don't display predictions with probability below this threshold [default: 0.01]
-
-To annotate new pages use "add" command.
-It downloads a web page, displays all HTML forms and for each form asks
-user about form type. The result is saved on disk: web page is stored
-as a html file and the URL and the annotation results are added
-to index.json file.
 
 To train an extractor for HTML form classification use "train" command.
 
@@ -42,12 +34,11 @@ import docopt
 
 import formasaurus
 from formasaurus.annotation import (
-    annotate_forms,
     check_annotated_data,
-    download,
     print_form_html
 )
 from formasaurus.extractor import FormExtractor
+from formasaurus.utils import download
 from formasaurus.storage import Storage
 from formasaurus.html import load_html
 from formasaurus import evaluation, formtype_model
@@ -60,13 +51,7 @@ def main():
         # by default, use 'data' folder relative to this file
         args['--data-folder'] = os.path.join(os.path.dirname(__file__), 'data')
 
-    if args['add']:
-        annotate_forms(
-            data_folder=args['--data-folder'],
-            url=args["<url>"],
-        )
-
-    elif args['check-data']:
+    if args['check-data']:
         check_annotated_data(args['--data-folder'])
 
     elif args['train']:

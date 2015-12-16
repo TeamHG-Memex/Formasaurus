@@ -2,6 +2,7 @@
 from __future__ import absolute_import
 import sys
 
+import requests
 import tldextract
 from sklearn.cross_validation import LabelKFold
 
@@ -92,3 +93,10 @@ def get_annotation_train_test_indices(annotations, n_folds=4):
     for idx_train, idx_test in get_annotation_folds(annotations, n_folds):
         break
     return idx_train, idx_test
+
+
+def download(url):
+    """
+    Download a web page from url, return its content as unicode.
+    """
+    return requests.get(url).text
