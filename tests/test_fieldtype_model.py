@@ -1,6 +1,4 @@
 # -*- coding: utf-8 -*-
-import pytest
-
 from sklearn.metrics import accuracy_score
 
 from formasaurus.fieldtype_model import (

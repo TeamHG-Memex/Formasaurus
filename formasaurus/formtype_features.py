@@ -2,6 +2,8 @@
 """
 This module provides scikit-learn transformers
 for extracting features from HTML forms.
+
+For all features X is a list of lxml <form> elements.
 """
 from __future__ import absolute_import
 
@@ -12,21 +14,6 @@ import lxml.html
 from sklearn.base import BaseEstimator, TransformerMixin
 
 from .utils import add_scheme_if_missing
-
-
-def _get_type_counts(form):
-    typecount = collections.defaultdict(int)
-    for x in form.inputs:
-        if isinstance(x, lxml.html.InputElement):
-            type_ = x.type
-        elif isinstance(x, lxml.html.TextareaElement):
-            type_ = "textarea"
-        elif isinstance(x, lxml.html.SelectElement):
-            type_ = "select"
-        else:
-            type_ = "other"
-        typecount[type_] += 1
-    return typecount
 
 
 class BaseFormFeatureExtractor(BaseEstimator, TransformerMixin):
@@ -188,3 +175,17 @@ def loginform_features(form):
     }
     return res
 
+
+def _get_type_counts(form):
+    typecount = collections.defaultdict(int)
+    for x in form.inputs:
+        if isinstance(x, lxml.html.InputElement):
+            type_ = x.type
+        elif isinstance(x, lxml.html.TextareaElement):
+            type_ = "textarea"
+        elif isinstance(x, lxml.html.SelectElement):
+            type_ = "select"
+        else:
+            type_ = "other"
+        typecount[type_] += 1
+    return typecount

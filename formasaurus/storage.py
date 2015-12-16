@@ -7,7 +7,6 @@ import os
 import json
 import copy
 import collections
-from itertools import chain
 from six.moves.urllib import parse as urlparse
 
 from tqdm import tqdm

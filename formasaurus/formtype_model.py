@@ -3,7 +3,7 @@
 This module defines which features and which classifier the default
 form type detection model uses.
 """
-from __future__ import absolute_import
+from __future__ import absolute_import, division
 
 from sklearn.feature_extraction import DictVectorizer
 from sklearn.feature_extraction.text import CountVectorizer, TfidfVectorizer
@@ -12,6 +12,7 @@ from sklearn.linear_model import SGDClassifier, LogisticRegression
 from sklearn.svm import LinearSVC
 
 from formasaurus import formtype_features as features
+
 
 # a list of 3-tuples with default features:
 # (feature_name, form_transformer, vectorizer)
