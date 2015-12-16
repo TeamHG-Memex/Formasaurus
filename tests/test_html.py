@@ -47,6 +47,18 @@ def test_html_tostring():
 """
 
 
+def test_load_html():
+    html = b"<div><b></b><b></b></div>"
+    tree = load_html(html)
+    assert len(tree.xpath('//b')) == 2
+
+    tree2 = load_html(html.decode('ascii'))
+    assert len(tree2.xpath('//b')) == 2
+
+    tree3 = load_html(tree)
+    assert tree3 is tree
+
+
 def test_get_forms():
     forms = get_forms(load_html("""
     <p>some text</p>

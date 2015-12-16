@@ -8,6 +8,7 @@ try:
 except ImportError:
     from cgi import escape as html_escape  # Python 2
 
+import six
 import lxml.html
 from lxml.html.clean import Cleaner
 # from lxml.doctestcompare import LXMLOutputChecker, PARSE_HTML
@@ -26,15 +27,21 @@ def remove_by_xpath(tree, xpath):
 
 parser = lxml.html.HTMLParser(encoding='utf8')
 
-def load_html(data, base_url=None):
+def load_html(tree_or_html, base_url=None):
     """
     Parse HTML data to a lxml tree.
-     ``data`` must be either unicode or utf8-encoded
+     ``tree_or_html`` must be either unicode or utf8-encoded
     (even if original page declares a different encoding).
+
+    If ``tree_or_html`` is not a string then it is returned as-is.
     """
-    if not isinstance(data, bytes):
-        data = data.encode('utf8')
-    return lxml.html.fromstring(data, base_url=base_url, parser=parser)
+    if not isinstance(tree_or_html, (six.string_types, bytes)):
+        return tree_or_html
+
+    html = tree_or_html
+    if isinstance(html, six.text_type):
+        html = html.encode('utf8')
+    return lxml.html.fromstring(html, base_url=base_url, parser=parser)
 
 
 def html_tostring(tree):
