@@ -37,6 +37,7 @@ MOCK_MODULES = [
     'tqdm', 'tabulate', 'numpy', 'scipy', 'scipy.stats',
     'pycrfsuite', 'sklearn_crfsuite', 'sklearn_crfsuite.metrics',
     'lxml', 'lxml.html', 'lxml.html.clean',
+    'ipywidgets', 'IPython', 'IPython.display',
 ]
 
 sys.modules.update((mod_name, Mock()) for mod_name in MOCK_MODULES)
