@@ -4,31 +4,12 @@ HTML forms interactive annotation utilities.
 """
 from __future__ import absolute_import, print_function
 import sys
-import os
-from six.moves.urllib.request import urlopen
-from six.moves import input
 
-import lxml.html
-from lxml.html.clean import Cleaner
+from sklearn.cross_validation import LabelKFold
 
-from formasaurus.storage import Storage, FORM_TYPES, load_html, FORM_TYPES_INV
-
-
-def annotate_forms(data_folder, url_argument):
-    """
-    Run an interactive HTML form annotation tool.
-
-    The process is to download a web page, display all HTML forms and for
-    each form ask user about form type. The result is saved on disk:
-    web page is stored as a html file and the URL and the annotation
-    results are added to index.json file.
-    """
-    storage = Storage(data_folder)
-    html, url = load_data(url_argument)
-    doc = load_html(html, url)
-    answers = _annotate_forms(storage, doc)
-    if answers:
-        storage.store_result(html, answers, url)
+from formasaurus.html import get_cleaned_form_html
+from formasaurus.utils import get_domain
+from formasaurus.storage import Storage
 
 
 def check_annotated_data(data_folder):
@@ -37,98 +18,47 @@ def check_annotated_data(data_folder):
     """
     storage = Storage(data_folder)
     errors = storage.check()
-    storage.print_type_counts()
+    storage.print_form_type_counts(simplify=False)
+    storage.print_form_type_counts(simplify=True)
     print("Errors:", errors)
     if errors:
         sys.exit(1)
 
 
-def load_data(url_or_path):
-    """
-    Load binary data from a local file or an url;
-    return (data, url) tuple.
-    """
-    if os.path.exists(url_or_path):
-        raise NotImplementedError("Re-annotation is not supported yet")
-        # with open(url_or_path, 'rb') as f:
-        #     return f.read(), None
-    else:
-        return urlopen(url_or_path).read(), url_or_path
-
-
 def print_form_html(form):
     """ Print a cleaned up version of <form> HTML contents """
-    cleaner = Cleaner(
-        forms=False,
-        javascript=True,
-        scripts=True,
-        style=True,
-        allow_tags={'form', 'input', 'textarea', 'label', 'option',
-                    'select', 'submit', 'a'},
-        remove_unknown_tags=False,
-    )
-    raw_html = lxml.html.tostring(form, pretty_print=True, encoding="unicode")
-    html = cleaner.clean_html(raw_html)
-    lines = [line.strip() for line in html.splitlines(False) if line.strip()]
-    print("\n".join(lines))
+    print(get_cleaned_form_html(form))
 
 
-def print_form_types(types):
+
+def print_form_types(form_types):
     print("\nAllowed form types and their shortcuts:")
-    for full_name, shortcuts in types.items():
+    for full_name, shortcuts in form_types.items():
         print("  %s %s" % (shortcuts, full_name))
     print("")
 
 
-def _annotate_forms(storage, doc, form_types=None):
+def get_annotation_folds(annotations, n_folds):
     """
-    For each form element ask user whether it is a login form or not.
-    Return an array with True/False answers.
+    Return (train_indices, test_indices) folds iterator.
+    It is guaranteed forms from the same website can't be both in
+    train and test parts.
     """
-    forms = doc.xpath("//form")
-    if not forms:
-        print("Page has no forms.")
-        return []
-    else:
-        print("Page has %d form(s)" % len(forms))
+    return LabelKFold(
+        labels=[get_domain(ann.url) for ann in annotations],
+        n_folds=n_folds
+    )
 
-    fingerprints = storage.get_fingerprints()
 
-    if form_types is None:
-        form_types = FORM_TYPES
+def get_annotation_train_test_indices(annotations, n_folds=4):
+    """
+    Split annotations into train and test parts, return train and test indices.
+    The size of test part is approximately ``len(annotations)/n_folds``.
+    it is guaranteed forms from the same website can't be both
+    in train and test parts.
+    """
+    for idx_train, idx_test in get_annotation_folds(annotations, n_folds):
+        break
+    return idx_train, idx_test
 
-    print_form_types(form_types)
-    shortcuts = "/".join(form_types.values())
 
-    res = []
-    for idx, form in enumerate(forms, 1):
-
-        fp = storage.get_fingerprint(form)
-        if fp in fingerprints:
-            xpath = "//form[%d]" % idx
-            tp = FORM_TYPES_INV[fingerprints[fp]]
-            print("Skipping duplicate form %-10s %r" % (xpath, tp))
-            res.append("X")
-            continue
-
-        print_form_html(form)
-
-        while True:
-            tp = input("\nPlease enter the form type (%s) "
-                       "or ? for help: " % shortcuts).strip()
-            if tp == '?':
-                print_form_types(form_types)
-                continue
-            if tp not in set(shortcuts):
-                print("Please enter one of the following "
-                      "letters: %s. You entered %r" % (shortcuts, tp))
-                continue
-            res.append(tp)
-            break
-
-        print("="*40)
-
-    if all(r == 'X' for r in res):
-        print("Page has no new forms.")
-        return []
-    return res

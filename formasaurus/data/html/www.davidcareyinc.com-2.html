@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<!-- Classes taken from http://html5boilerplate.com/ on 2013-10-25, with additonal classes added  -->
+<!--[if lt IE 7]>      <html class="no-js ie lt-ie10 lt-ie9 lt-ie8 lt-ie7 lt_ie10 lt_ie9 lt_ie8 lt_ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js ie ie-7 lt-ie10 lt-ie9 lt-ie8 ie_7 lt_ie10 lt_ie9 lt_ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js ie ie-8 lt-ie10 lt-ie9 gt-ie7 ie_8 lt_ie10 lt_ie9 gt_ie7"> <![endif]-->
+<!--[if IE 9 ]>        <html class="no-js ie ie-9 lt-ie10 gt-ie7 gt-ie8 ie_9 lt_ie10 gt_ie7 gt_ie8"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html class="no-js ie gt-ie7 gt-ie8 gt-ie9 gt_ie7 gt_ie8 gt_ie9 modern_browser"> <!--<![endif]-->
+    <head>
+        <!-- BEGIN Shared HEAD_V3 that's pulled in from the global header file and pulled into header.html -->
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Contact Us</title>
+
+<meta id="extViewportMeta" name="viewport" content="width=device-width, initial-scale=1">
+
+<!--[if lt IE 9]>
+<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+    <meta name="description" content="Contact Us, Contact, Us" />
+    <meta name="keywords" content="Contact Us, Contact, Us" />
+    
+
+	<link rel="canonical" href="http://www.davidcareyinc.com/Contact-Us-5.html" />
+
+
+<!-- JQuery includes (core) -->
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+
+    <script type="text/javascript">
+    <!--
+        var __getScript = function(url, success) {
+            success = success || function(){};
+            var script = document.createElement('script');
+            script.src = url;
+
+            var head = document.getElementsByTagName('head')[0],
+            done = false;
+
+            // Attach handlers for all browsers
+            script.onload = script.onreadystatechange = function() {
+
+                if (!done && (!this.readyState || this.readyState == 'loaded' || this.readyState == 'complete')) {
+
+                    done = true;
+
+                    // callback function provided as param
+                    success();
+
+                    script.onload = script.onreadystatechange = null;
+                    head.removeChild(script);
+
+                };
+            };
+
+            head.appendChild(script);
+
+        };
+        
+        function getStoreUrl(){
+            return 'http://www.davidcareyinc.com/';
+        }
+    //-->
+    </script>
+
+            
+    
+    
+    <script type="text/javascript">
+    <!--
+
+    function recalculatePageHeight(){
+            }
+    
+    function recalculateRelatedProductsHeight(){
+            }
+
+    jQuery(document).ready(function(){
+        
+                        
+                if(jQuery.trim(jQuery('#content-left').html()) == ''){
+            jQuery('#content-left').css('display', 'none');
+        }
+        if(jQuery.trim(jQuery('#content-right').html()) == ''){
+            jQuery('#content-right').css('display', 'none');
+        }
+
+                if($('#top-menu .line-splitter').length > 0){
+                        $('#top-menu .line-splitter').each(function(){
+                $(this).attr('style', 'border-color: ' + $(this).attr('data-color') + '; border-style: ' + $(this).attr('data-style') + '; border-width: ' + $(this).attr('data-width') + ' 0 0 0;');
+            });
+        }
+
+        /* GROUP NAV
+        =================================================== */
+        /* =JFG. Add hook for styling sub-nav since it is not part of the CC markup for Drop Downs or Mega Menus. It's not possible to ascend selectors with just CSS - http://stackoverflow.com/questions/45004/complex-css-selector-for-parent-of-active-child */
+        $('.dd-submenu li, .mm-submenu li').parents('li').addClass('nav-with-sub-menu nav_with_sub_menu'); /* Underscores is old class pre INT-39 */
+
+        $('.element-title').parent().prev().addClass('js-req-last-element-link js_req_last_element_link'); /* Helper class for styling vertical space. Underscores is old class pre INT-39 */
+
+        $('.element-textstr').parent().addClass('js-req-element-textstr-container js_req_element_textstr_container'); /* Helper class for styling vertical space. Underscores is old class pre INT-39 */
+
+        /* =JFG. Temp helper class for detecting what type of menu this is. This is needed to apply  a z-index fix _only_ to the dropdown menu, since otherwise the positioning would affect the Mega Menu (CC-2933). Matt G will replace these in the actual nav later */
+        $("#top-menu").each(function(){
+            if($(this).has('.mm-submenu').length != 0) {
+                $(this).addClass("menu menu--top menu--mega");
+            }
+            if($(this).has('.dd-submenu').length != 0) {
+                $(this).addClass("menu menu--top menu--dropdown");
+            }
+        });
+
+        /* GROUP NAV / MEGA MENU
+        =================================================== */
+        /* New */
+        /* =JFG. Assistive classes for styling mega menu layouts based on their total columns */
+        $("#top-menu > li .mm-submenu").each(function(){
+            var columnClass = "l-cols-" + $(this).children().size();
+            $(this).addClass(columnClass);
+        });
+        /* Old */
+        $("#top-menu > li .mm-submenu").each(function(){
+            var columnClass = "l-cols-" + $(this).children().size();
+            $(this).addClass(columnClass);
+            var columnClassOld = "l_cols--" + $(this).children().size();
+            $(this).addClass(columnClassOld); /* =JFG. older class, pre INT-39 */
+        });
+
+        /* GROUP NAV / ANDROID - fix for navigation parents with link and children
+        =================================================== */
+        /* By Osvaldas Valutis, http://osvaldas.info/drop-down-navigation-responsive-and-touch-friendly
+        Available for use under the MIT License */
+
+        ;(function( $, window, document, undefined )
+        {
+            $.fn.doubleTapToGo = function( params )
+            {
+                if( !( 'ontouchstart' in window ) &&
+                    !navigator.msMaxTouchPoints &&
+                    !navigator.userAgent.toLowerCase().match( /windows phone os 7/i ) ) return false;
+
+                this.each( function()
+                {
+                    var curItem = false;
+
+                    $( this ).on( 'click', function( e )
+                    {
+                        var item = $( this );
+                        if( item[ 0 ] != curItem[ 0 ] )
+                        {
+                            e.preventDefault();
+                            curItem = item;
+                        }
+                    });
+
+                    $( document ).on( 'click touchstart MSPointerDown', function( e )
+                    {
+                        var resetItem = true,
+                            parents   = $( e.target ).parents();
+
+                        for( var i = 0; i < parents.length; i++ )
+                            if( parents[ i ] == curItem[ 0 ] )
+                                resetItem = false;
+
+                        if( resetItem )
+                            curItem = false;
+                    });
+                });
+                return this;
+            };
+        })( jQuery, window, document );
+
+        if(navigator.userAgent.match(/(Android)/i)) { /* =JFG. CC-2502 - Wrapped condition around this function to test for Android to prevent it from mis-firing on iOS */
+            $("#top-menu li:has(ul), #top-bar li:has(ul)").doubleTapToGo(); /* Apply to CoreCommerce navigation */
+        }
+
+        /* =JFG. GROUP MODERNIZR - Modernizr-like features that every theme should get by default
+        =================================================== */
+        $('html').removeClass("no-js"); /* Remove the class .no-js since we know the user definitely has JavaScript enabled if this jQuery is executed - related to CC-2934 */
+
+
+        /* =JFG. GROUP PRODUCT DETAIL
+        =================================================== */
+        /* CC-2934; review form should be hidden for every theme; not a theme-by-theme basis */
+        $("#productDetail .review--product-form").hide();
+    });
+
+    /**
+     * Anything that is put here will be run once the page is completely loaded.  Meaning all images have been completely loaded, etc.
+     */
+    jQuery(window).load(function(){
+            
+        recalculatePageHeight();
+    });
+
+    //-->
+    </script>
+
+<meta property="og:site_name" content="David Carey Inc." />
+
+
+
+ <!-- This must be second -->
+<link rel="stylesheet" type="text/css" href="http://www.davidcareyinc.com/css/dynamic-css.php?currentlyActivePageId=" />
+        <!-- END Shared HEAD_V3 that's pulled in from the global header file and pulled into header.html -->
+
+    <link rel="stylesheet" type="text/css" href="http://www.davidcareyinc.com/00315-1/design/css/main.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="https://www2.corecommerce.com/~davidcareyinc/css/boxy.css" media="screen" />
+
+    <script type="text/javascript" language="javascript" src="https://www2.corecommerce.com/~davidcareyinc/javascript/jquery.boxy.js" ></script>
+
+    <script type="text/javascript">
+    <!--
+        $(document).ready(function(){
+            $('#sizing-chart-link').boxy({center: true,modal: true,closeable: true,title: 'Sizing Chart'});
+        });
+    -->
+    </script>
+    
+</head>
+<body class="page-not-home page_not_home page_content has-widgets content-left-and-content-right-have-widgets has_widgets content_left_and_content_right_have_widgets">
+    <div style="display: none;" id="sizing-chart-shirt">
+        <img src="http://www.davidcareyinc.com/00315-1/design/images/sizing-chart-shirt.png" alt="" />
+    </div>
+    <div style="display: none;" id="sizing-chart-tshirt">
+        <img src="http://www.davidcareyinc.com/00315-1/design/images/sizing-chart-tshirt.png" alt="" />
+    </div>
+    <div style="display: none;" id="sizing-chart-lounge">
+        <img src="http://www.davidcareyinc.com/00315-1/design/images/sizing-chart-lounge.png" alt="" />
+    </div>
+
+    <header>
+        <div class="wrap clr pos-r">
+            <div class="imagelogo"><a href="http://www.davidcareyinc.com"><img src="http://www.davidcareyinc.com/images/00315-1-logoImage.png" alt="" title="" border="0" /></a></div>
+            <div class="header-links">
+                <a href="http://www.davidcareyinc.com/Contact-Us-5.html">Contact US</a> |
+                <a class="loginLink" href="https://www19.corecommerce.com/~davidcareyinc/login.php?m=client_login">Login</a> | 
+                <a href="http://www.davidcareyinc.com/cart.php?m=account"><span>My Account</span></a> | 
+                <a href="http://www.davidcareyinc.com/cart.php?m=view"><span>View Cart</span></a> | 
+                <a href="http://www.davidcareyinc.com/checkout.php"><span>Checkout</span></a>
+            </div>
+        </div>
+    </header>
+
+    <div class="mob-menu"><span aria-hidden="true" class="icon icon--menu"></span> ☰ </div>
+    <nav>
+        <div class="clr wrap">
+            <!-- BEGIN >> cart.header.search.v2.tem.php  -->
+<script type="text/javascript">
+    <!--
+
+    var widgetHeaderSearchProcessing = false;
+    var headerSearchWidgetimeoutId = null;
+    var headerSearchHasBeenFocused = false;
+
+    jQuery(document).ready(function(){
+        $('#header-search .btn').click(function(e){
+            $(this).parents('form[name="ds_header_search"]').submit();//support multiple header search widgets
+            e.preventDefault();
+        });
+
+        //use JS to submit the form NM 26096
+        $('form[name="ds_header_search"]').submit(function(e){
+            e.preventDefault();
+            //CC-1697 - cx is added for fixing 'googlesearch'
+                        var params = {
+            m : 'search_results',
+                headerSearch : 'Y',
+                search : $(this).find('input[name="search"]').val()
+        }
+                window.location.href = "http://www.davidcareyinc.com/cart.php?" + $.param(params);
+        return false;
+    });
+
+        $('#headerSearchField').attr("autocomplete","off");
+        });
+
+    function processInitialHeaderSearchFocus(ele){
+        if(!headerSearchHasBeenFocused){
+            headerSearchHasBeenFocused = true;
+            ele.value = '';
+        }
+    }
+
+    function undoHeaderSearchWidgetDynamicSearch(){
+        if(headerSearchWidgetimeoutId){
+            clearTimeout(headerSearchWidgetimeoutId);
+        }
+        $('#headerSearchWidgetDynamicResults').hide();
+    }
+
+    function initiateHeaderSearchWidgetDynamicSearch(){
+        
+        undoHeaderSearchWidgetDynamicSearch();
+        if(!$('#headerSearchField').val()){
+            return;
+        }
+        headerSearchWidgetimeoutId = setTimeout("doHeaderSearchWidgetDynamicSearch()", 1000);
+    }
+
+    function doHeaderSearchWidgetDynamicSearch(){
+        headerSearchWidgetimeoutId = null;
+        searchTerm = document.ds_header_search.search.value;
+
+        if(!widgetHeaderSearchProcessing){
+            widgetHeaderSearchProcessing = true;
+
+            jQuery.ajax({
+                type : 'GET',
+                cache : false,
+                url : getStoreUrl() + 'controllers/ajaxController.php',
+                data : {
+                    object : 'ProductAjax',
+                    'function' : 'getProductSearchResult',
+                    searchTerm : searchTerm,
+                    customProductLists : '',
+                    category : '',
+                    shopByPrice : '',
+                    vendor : ''
+                }
+            })
+
+                .done(function(response) {
+                    var responseArr = response.split('<_|_>');
+                    searchProcessing = false;
+
+                    if(responseArr[0] == 'success'){
+                        $('#headerSearchWidgetDynamicResults').show();
+                        responseArr.shift();
+                        $('#headerSearchWidgetDynamicResults').html(decodeURIComponent(responseArr.join('<br />')));
+
+                    }
+                })
+
+                .fail(function() {})
+                .always(function() {});
+        }
+    }
+
+
+    //-->
+</script>
+
+<div id="header-search" class="header-search-container">
+    <form name="ds_header_search" action="http://www.davidcareyinc.com/cart.php" method="get">
+        <input type="hidden" name="m" value="search_results" />
+                    <input type="hidden" name="headerSearch" value="Y" />
+            <input type="text" id="headerSearchField" class="header-search-field inline-input" name="search" size="15" value="Search..." onfocus="javascript:processInitialHeaderSearchFocus(this); javascript:initiateHeaderSearchWidgetDynamicSearch();" onkeyup="javascript:initiateHeaderSearchWidgetDynamicSearch();" />
+                <a class="btn btn--1 btn--search btn--inline" href="javascript:">Go</a>
+        <div class="dynamic-results" id="headerSearchWidgetDynamicResults"></div>
+    </form>
+</div>
+<!-- END >> cart.header.search.v2.tem.php -->
+            <div class="nav-wrap"> 
+                <ul id="top-menu">
+  <li id="old-item-0">
+    <a href="http://www.davidcareyinc.com/shirts/">Shirts</a>
+    <div class="mm-submenu" id="item-0-submenu">
+      <ul class="columns-1" id="old-column-0">
+        <li>
+          <a href="Licensed-Shirts-c10/" class="element-title">Licensed Camp Shirts</a>
+        </li>
+        <li>
+          <a href="Corvette-C1-C4-c14/" class="element-link">Corvette C1-C6</a>
+        </li>
+        <li>
+          <a href="Chevrolet-10-c34/" class="element-link">Chevrolets</a>
+        </li>
+      </ul>
+      <ul class="columns-1" id="old-column-1">
+        <li>
+          <a href="Stock-Shirt-Designs-c21/" class="element-title">Stock Camp Shirts</a>
+        </li>
+        <li>
+          <a href="Alaska-5-c11/" class="element-link">Alaska</a>
+        </li>
+        <li>
+          <a href="Animals-11-c23/" class="element-link">Animals</a>
+        </li>
+      </ul>
+      <ul class="columns-1" id="old-column-2">
+        <li>
+          <a href="T-SHIRTS-c77" class="element-title">T-Shirts</a>
+        </li>
+        <li>
+          <a href="Licensed-T-shirts-c79/" class="element-link">Licensed T-shirts</a>
+        </li>
+        <li>
+          <a href="Survivor-Studded-T-shirts-c68/" class="element-link">Survivor Studded T-shirts</a>
+        </li>
+      </ul>
+    </div>
+  </li>
+  <li id="old-item-1">
+    <a href="http://www.davidcareyinc.com/outerwear/">Outerwear</a>
+  </li>
+  <li id="old-item-2">
+    <a href="http://www.davidcareyinc.com/ties/">Ties</a>
+  </li>
+  <li id="old-item-3">
+    <a href="http://www.davidcareyinc.com/scarves/">Scarves</a>
+  </li>
+  <li id="old-item-4">
+    <a href="http://www.davidcareyinc.com/lounge-pants/">Lounge Pants</a>
+  </li>
+  <li id="old-item-5">
+    <a href="http://www.davidcareyinc.com/custom.html">Custom</a>
+  </li>
+  <li id="old-item-6">
+    <a href="http://www.davidcareyinc.com/wholesale.html">Wholesale</a>
+  </li>
+  <li id="old-item-7">
+    <a href="http://www.davidcareyinc.com/policies.html">Policies</a>
+  </li>
+</ul>            </div>
+        </div>
+    </nav>
+
+    <div class="wrap" id="page-content">
+
+        <div class="clr">
+            <div class="content-main">
+                <div class="content content-middle pos-r" id="content-middle"><!-- BEGIN >> cart.pos.v3.tem.php -->
+<!-- END >> cart.pos.v3.tem.php --><div class="container" id="pageContent">
+    <div>
+	        </div>
+
+    <h2 class="titleHeader">
+    	Contact Us    </h2>
+
+   	<div class="pageNote">
+
+	    <p><strong>Corporate Headquarters:</strong></p>
+<address>David Carey, Inc.<br />
+<span style="font-size: 12px;">2250 Paragon Dr. Bldg #A</span></address>
+<address>San Jose CA 95131<br />
+USA</address>
+<p><br />
+<strong>Hours of Operation:</strong><br />
+<span> Monday-Friday 9AM - 4PM PST<br />
+Toll Free 1-800-858-8437<br />
+PH 408-453-7843&nbsp;&nbsp;Fax 408-453-7848 </span></p>
+<p>&nbsp;</p>
+<p></p><form name="custom_form-3" action="http://www.davidcareyinc.com/cart.php" method="post">
+<input type="hidden" name="m" value="form_submit" /><input type="hidden" name="id" value="3" /><div id="custom_form-3">
+<div>
+		<div class="form-label-required required">
+Name:
+		</div>
+		<div class="form-field">
+<input type="text" name="custom_form_input-13" size="25" maxlength="25" value="" />
+
+		</div>
+</div>
+<div>
+		<div class="form-label">
+Company Name:
+		</div>
+		<div class="form-field">
+<input type="text" name="custom_form_input-14" size="25" maxlength="25" value="" />
+
+		</div>
+</div>
+<div>
+		<div class="form-label-required required">
+Email Address:
+		</div>
+		<div class="form-field">
+<input type="text" name="custom_form_input-15" size="25" maxlength="25" value="" />
+
+		</div>
+</div>
+<div>
+		<div class="form-label-required required">
+Telephone Number:
+		</div>
+		<div class="form-field">
+<input type="text" name="custom_form_input-16" size="25" maxlength="25" value="" />
+
+		</div>
+</div>
+<div>
+		<div class="form-label">
+Street Address:
+		</div>
+		<div class="form-field">
+<input type="text" name="custom_form_input-17" size="25" maxlength="25" value="" />
+
+		</div>
+</div>
+<div>
+		<div class="form-label">
+City:
+		</div>
+		<div class="form-field">
+<input type="text" name="custom_form_input-18" size="25" maxlength="25" value="" />
+
+		</div>
+</div>
+<div>
+		<div class="form-label">
+State/Province:
+		</div>
+		<div class="form-field">
+<input type="text" name="custom_form_input-19" size="25" maxlength="25" value="" />
+
+		</div>
+</div>
+<div>
+		<div class="form-label">
+Zipcode:
+		</div>
+		<div class="form-field">
+<input type="text" name="custom_form_input-20" size="25" maxlength="25" value="" />
+
+		</div>
+</div>
+<div>
+		<div class="form-label">
+Country:
+		</div>
+		<div class="form-field">
+<input type="text" name="custom_form_input-21" size="25" maxlength="25" value="" />
+
+		</div>
+</div>
+<div>
+		<div class="form-label-required required">
+Subject:
+		</div>
+		<div class="form-field">
+<input type="text" name="custom_form_input-22" size="25" maxlength="25" value="" />
+
+		</div>
+</div>
+<div>
+		<div class="form-label-required required">
+Message:
+		</div>
+		<div class="form-field">
+<textarea name="custom_form_input-23" rows="3" cols="30"></textarea>
+
+		</div>
+</div>
+	<div class="form-label">&nbsp;</div>
+	<div class="form-field">
+<input type="submit" value="Submit" class="btn btn--1" />	</div>
+</div>
+</form>
+<p></p>
+<p><br />
+</p>
+		
+   	</div>
+
+</div></div>
+
+                <div class="content-sidebar" id="content-left">
+                    <div class="content">
+                        <!-- custom left widgets -->
+                        <div class="widget widget--list" id="widgetCampShirts">
+                            <h3 class="widget-title"> LICENSED CAMP SHIRTS</h3>
+                            <div class="widget__body">
+                                <ul>
+                                <li><a href="http://www.davidcareyinc.com/Chevrolet-10-c34/">Chevrolet</a></li>
+                                <li><a href="http://www.davidcareyinc.com/Corvette-C1-C4-4-c14/">Corvette C1-C6</a></li>
+                                <li><a href="http://www.davidcareyinc.com/Ford-13-c17/">Ford</a></li>
+                                <li><a href="http://www.davidcareyinc.com/mopar/">Mopar</a></li>
+                                <li><a href="http://www.davidcareyinc.com/Pontiac-2-c19/">Pontiac</a></li>
+                                <li><a href="http://www.davidcareyinc.com/Shelby-3-c20/">Shelby</a></li>
+                                <li><a href="http://www.davidcareyinc.com/Buick-4-c119/">Buick</a></li>
+                                <li><a href="http://www.davidcareyinc.com/Oldsmobile-5-c120/">Oldsmobile</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="widget widget--list" id="widgetLicensedShirts">
+                            <h3 class="widget-title"> LICENSED T-SHIRTS</h3>
+                            <div class="widget__body">
+                                <ul>
+                                <li><a href="http://www.davidcareyinc.com/chrysler-plymouth-t-shirts/">Chrysler/Plymouth</a>
+                                </li>
+                                <li><a href="http://www.davidcareyinc.com/dodge-t-shirts/">Dodge</a></li>
+                                <li><a href="http://www.davidcareyinc.com/ford-t-shirts/">Ford</a></li>
+                                <li><a href="http://www.davidcareyinc.com/shirts/licensed-t-shirts/mopar-t-shirts/">Mopar</a></li>
+                                <li><a href="http://www.davidcareyinc.com/ram-t-shirts/">Ram</a></li>
+                                <li><a href="http://www.davidcareyinc.com/shirts/licensed-t-shirts/shelby-t-shirts/">Shelby</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="widget widget--list" id="widgeLicensedOuterwear">
+                            <h3 class="widget-title"> LICENSED Outerwear</h3>
+                            <div class="widget__body">
+                                <ul>
+                                <li><a href="http://www.davidcareyinc.com/chrysler-plymouth-outerwear/">Chrysler/Plymouth</a></li>
+                                <li><a href="http://www.davidcareyinc.com/dodge-outerwear/">Dodge</a></li>
+                                <li><a href="http://www.davidcareyinc.com/ford-outerwear/">Ford</a></li>
+                                <li><a href="http://www.davidcareyinc.com/mopar-outerwear/">Mopar</a></li>
+                                <li><a href="http://www.davidcareyinc.com/ram-outerwear/">Ram</a></li>
+                                <li><a href="http://www.davidcareyinc.com/shelby-outerwear/">Shelby</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="widget widget--list" id="widgetStockCamp">
+                            <h3 class="widget-title">STOCK CAMP DESIGNS </h3>
+                            <div class="widget__body">
+                                <ul>
+                                <li><a href="http://www.davidcareyinc.com/Alaska-5-c11/">Alaska</a></li>
+                                <li><a href="http://www.davidcareyinc.com/Animals-11-c23/">Animals</a></li>
+                                <li><a href="http://www.davidcareyinc.com/Cities-8-c28/">Cities</a></li>
+                                <li><a href="http://www.davidcareyinc.com/Drinks-2-c29/">Drinks</a></li>
+                                <li><a href="http://www.davidcareyinc.com/Fiery-Foods-c31/">Fiery Foods </a></li>
+                                <li><a href="http://www.davidcareyinc.com/Music-6-c36/">Music</a></li>
+                                <li><a href="http://www.davidcareyinc.com/sports-hobbies/">Sports &amp; Hobbies</a></li>
+                                <li><a href="http://www.davidcareyinc.com/SW-Chile-Pepper-c38/">SW/Chile Pepper</a></li>
+                                <li><a href="http://www.davidcareyinc.com/Nautical-Lighthouses-4-c37/">Nautical/Lighthouses</a></li>
+                                <li><a href="http://www.davidcareyinc.com/Transportation-8-c39/">Transportation</a></li>
+                                <li><a href="http://www.davidcareyinc.com/Winery-5-c40/">Winery</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        
+    <!-- BEGIN >> cart.categories.v3.tem.php  -->
+    <div class="widget widget--list" id="widgetCategories">
+
+        <script type="text/javascript">
+            <!--
+
+            function catWidgetTree(id, url){
+                var elem = 'categoryId_'+id;
+
+                if(!document.getElementById(elem)){
+                    return;
+                }
+
+                if(document.getElementById(elem).style.display=='none'){
+                    document.getElementById(elem).style.display = 'block';
+                    document.getElementById(elem).parentNode.className = 'tree tree--expanded';
+
+                    
+                } else {
+                    document.getElementById(elem).style.display = 'none';
+                    document.getElementById(elem).parentNode.className = 'tree';
+
+                }
+            }
+
+            function catWidgetColors(id, color){
+                var elem = 'categoryId_'+id;
+                if(!document.getElementById(elem)){
+                    return;
+                }
+
+                document.getElementById(elem).style.backgroundColor = color;
+            }
+
+            //-->
+        </script>
+
+                                                        <h3 class="widget-title">Categories</h3>
+                                    
+        <div class="widget__body">
+            
+                                                    <ul>
+                                                            <li ><a href="http://www.davidcareyinc.com/animal-ties/">Animal Ties</a></li>
+                                                            <li ><a href="http://www.davidcareyinc.com/david-carey-originals/">David Carey Originals </a></li>
+                                                            <li ><a href="http://www.davidcareyinc.com/licensed-outerwear/">Licensed Outerwear</a></li>
+                                                            <li ><a href="http://www.davidcareyinc.com/licensed-scarves/">Licensed Scarves</a></li>
+                                                            <li ><a href="http://www.davidcareyinc.com/lounge-pants/">Lounge Pants</a></li>
+                                                            <li ><a href="http://www.davidcareyinc.com/outerwear/">Outerwear</a></li>
+                                                            <li ><a href="http://www.davidcareyinc.com/scarves/">Scarves</a></li>
+                                                            <li ><a href="http://www.davidcareyinc.com/shirts/">Shirts</a></li>
+                                                            <li ><a href="http://www.davidcareyinc.com/shirts-licensed-shirts-buick/">Shirts > Licensed Shirts > Buick</a></li>
+                                                            <li ><a href="http://www.davidcareyinc.com/shirts-gt-licensed-t-shirts-gt-mopar/">Shirts&gt;Licensed T-shirts&gt;Mopar</a></li>
+                                                            <li ><a href="http://www.davidcareyinc.com/ties/">Ties</a></li>
+                                                            <li ><a href="http://www.davidcareyinc.com/special-deals/">Special Deals</a></li>
+                                                            <li  class="last"><a href="http://www.davidcareyinc.com/logo-wear/">LOGO WEAR</a></li>
+                                                    </ul>
+                                                        </div>
+
+    </div>
+    <!-- END >> cart.categories.v3.tem.php -->
+
+                        <div id="logo-link">
+                            <a href="http://www.companycasuals.com/dcenterprises">Logo</a>
+                        </div>
+                        <!--custom left widgets -->
+
+                    </div> <!-- #content-left -->
+                </div>
+            </div> <!-- .content-main -->
+
+            <div class="content-sidebar" id="content-right">
+                <div class="content">
+                    
+    <!-- BEGIN >> cart.top.sellers.v3.tem.php -->
+    <div class="widget widget--product" id="widgetTopSellers">
+
+                                    <h3 class="widget-title">Top Sellers</h3>
+                    
+        <div class="widget__products">
+                            <div class="widget__body">
+                                        <div class="widget__products--item">
+                                                                        <div class="photo-container">
+                            <a href="http://www.davidcareyinc.com/ford-model-a-camp-shirt.html" class="thumb"><img   class="photoClass" src="http://www.davidcareyinc.com/images/products/804.jpg" width="211" height="250" alt="" title="" /></a>
+                        </div>
+
+                        <div class="item-info item-info--product">
+                            <div class="item-name item-name--product">
+                                <a href="http://www.davidcareyinc.com/ford-model-a-camp-shirt.html">Ford Model A Camp Shirt</a>
+                            </div>
+
+                            <div class="sprice item-price item-price--product">$55.00 - $57.00</div>
+                            <div class="btn-group btn-group--product">
+                                <a href="http://www.davidcareyinc.com/ford-model-a-camp-shirt.html" class="btn btn--2">Details</a>                            </div>
+                        </div> <!-- .product-list-item-info --> 
+                    </div>
+                    
+                    <div class="btn-group">
+                        <a href="http://www.davidcareyinc.com/top_sellers.html" class="btn btn--1">View All Top Sellers</a>
+                    </div>
+
+                </div>
+            
+        </div> <!-- .widget__products -->
+
+    </div>
+    <!-- END >> cart.top.sellers.v3.tem.php -->
+                </div>
+            </div>
+
+        </div> <!-- .clr -->
+    </div> <!-- #page-content -->
+
+    <!-- Custom Product LS-->
+    <script type="text/javascript">
+        //move product description
+        var moveProductDesc = $('#productDescription').detach();
+        moveProductDesc.insertBefore('#productDetail #photos');
+
+        //product title move
+        var moveProductTitle = $('#productDetail .page-title').detach();
+        moveProductTitle.prependTo('#productDetail');
+
+        $('<div id="sizing-chart-button"><a id="sizing-chart-link" href="#sizing-chart-shirt"></a></div>').appendTo('#productDetail .product__details');
+
+        //find specific words in the product title, then hide the sizing chart pop up
+        var noChartProd = ['Tie', 'Scarf', 'Ties', 'Scarves', 'Pant', 'Pants'];
+        $('#productDetail .page-title').each(function(){
+            var ProdTitle = $(this);
+            var sizeChart = $('#sizing-chart-button');
+            noChartProd.forEach(function (item){
+                if(ProdTitle.text().indexOf(item) > -1){
+                    sizeChart.remove();
+                }
+            });
+        });
+
+    </script>
+    <!-- end custom product -->
+    <footer>
+        <div class="wrap">
+                        <!-- BEGIN >> cart.footer.v3.tem.php  -->
+
+    
+    
+    <div class="widget footer l-cols-1" id="widgetFooter">
+        
+        
+                    
+                            
+                            
+                                    
+                    <div class="footer__column copyright-small" id="footer-copyright">
+                
+                                    <div class="copyright__cc">
+                        Powered By: CoreCommerce 9.3.51                        <a href="https://www.corecommerce.com" rel="nofollow">Ecommerce Software &amp; Shopping Cart Software</a>
+                    </div>
+                            </div>
+            </div>
+<!-- END >> cart.footer.v3.tem.php -->
+            <p>Copyright 2012 David Carey, Inc.</p>
+            <div class="counter">
+                enter
+                <br />
+                <a href="http://www.speedcounter.com/info/how-to-make-a-website/"><img src='http://www.speedcounter.com/count.php?counterid=24513&theme=0' ALT="How to make a Website" ></a><br />
+                <script>CID=24513;</script>
+                <script language="Javascript" SRC='http://www.speedcounter.com/count.js'></script>
+                <i><font size="1" color="666666" face="Times new roman, Times, serif">
+                    <a href="http://www.speedcounter.com/">hit counter</a></font>
+                </i>
+            </div>
+        </div>
+    </footer>
+    <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32320000-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<script src="http://www.davidcareyinc.com/00315-1/design/js/script.min.js" async="async"></script>
+</body>
+</html>

@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Brown Paper Tickets - The fair-trade ticketing company.</title>
+
+<meta name="keywords" content="ticket buy sell tickets events event registration">
+<meta name="description" content="Brown Paper Tickets - The first and only fair trade ticketing company!">
+<meta name="Generator" content="Copyright (c) 2000-2015 Brown Paper Tickets. All rights reserved." />
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="expires" content="0">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=9" />
+<meta property="og:image" content="/g/6/BPT_logo_drop_small.png" />
+
+<link rel="image_src" href="/g/6/BPT_logo_drop_small.png" />
+<link rel="stylesheet" type="text/css" href="/defs_v651.css" />
+
+<style type="text/css">
+.loginbox {
+	padding: 20px 40px 15px 15px;
+	left: 15px;
+	top: 0px;
+	position: absolute;
+	background: #efefef;
+	color: #000000;
+	font-weight: bold;
+	z-index: 10;
+	border: 1px solid #d1d2d4;
+}
+
+a.lang, a:link.lang, a:visited.lang, a:active.lang {
+text-decoration: none;
+font-weight: bold; 
+color: #d1d2d4;
+padding: 2px;
+-webkit-border-radius: 3px;
+-moz-border-radius: 3px; 
+border-radius: 3px;
+} 
+
+a:hover.lang {
+text-decoration: none;
+font-weight: bold;
+background: #d1d2d4;
+color: #707070;
+padding: 2px;
+-webkit-border-radius: 3px;
+-moz-border-radius: 3px; 
+border-radius: 3px;
+}
+
+a.lang_sel, a:link.lang_sel, a:visited.lang_sel, a:active.lang_sel {
+text-decoration: none;
+font-weight: bold; 
+color: #ffffff;
+padding: 2px;
+-webkit-border-radius: 3px;
+-moz-border-radius: 3px; 
+border-radius: 3px;
+} 
+
+a:hover.lang_sel {
+text-decoration: none;
+font-weight: bold;
+background: #d1d2d4;
+color: #707070;
+padding: 2px;
+-webkit-border-radius: 3px;
+-moz-border-radius: 3px; 
+border-radius: 3px;
+}
+
+a:link.whiteblue, a:visited.whiteblue, a:active.whiteblue {
+text-decoration: none;
+font-weight: bold; 
+padding: 2px;
+color: #FFFFFF;
+-webkit-border-radius: 3px;
+-moz-border-radius: 3px; 
+border-radius: 3px;
+}
+
+a:hover.whiteblue {
+text-decoration: none;
+font-weight: bold;
+padding: 2px;
+color: #12b7c6;
+background: #efefef;
+-webkit-border-radius: 3px;
+-moz-border-radius: 3px; 
+border-radius: 3px;
+}
+
+DIV.menudropdown {
+	margin-top: 0px; 
+	padding: 10px;
+	position: absolute;
+	top: 100%;
+	left: -2px;
+	width: 250px;
+	background: #d9d9d9;
+	border-top: solid #6d6e71 3px;
+	border-left: solid #6d6e71 2px;
+	border-right: solid #6d6e71 2px;
+	border-bottom: solid #6d6e71 2px;
+	color: #000000;
+	font-weight: bold;
+	z-index: 11;
+	visibility: hidden;
+	-webkit-border-bottom-left-radius: 6px; 
+	-webkit-border-bottom-right-radius: 6px;
+	-moz-border-radius: 0px 0px 6px 6px; 
+	border-radius: 0px 0px 6px 6px;
+}
+
+
+a:link.plainblue, a:visited.plainblue, a:active.plainblue {
+	text-decoration: none;
+	font-weight: bold; 
+	color: #12b7c6;
+}
+
+a:hover.plainblue {
+	text-decoration: underline;
+	font-weight: bold;
+	color: #12b7c6;
+	background: none;
+}
+
+.suggestion_notover_link {
+	background-color: #FFFFFF;
+	padding: 6px;
+}
+
+.suggestion_over_link {
+	background-color: #DBF1F4;
+	padding: 6px;
+	cursor: pointer;
+}
+
+#suggestions {
+	position: absolute;
+	right: 0px;
+	background-color: #FFFFFF; 
+	color: #707070;
+	font-weight: bold;
+	text-align: left;
+	white-space: nowrap;
+	margin: -1px 0px 0px 0px;
+	font-size: 12px;
+	z-index: 1000000;
+	display: none;
+	-moz-box-shadow: 2px 2px 1px 1px #888888;
+	-webkit-box-shadow: 2px 2px 1px 1px #888888;
+	box-shadow: 2px 2px 1px 1px #888888;
+	border: solid #999999 1px;
+}
+
+
+a:link.findcreate, a:visited.findcreate, a:active.findcreate {
+	color: #ffffff;
+	background: #1fbac8;
+	font-size: 12px;
+	display: block;
+	padding: 6px 8px 6px 8px;
+	text-decoration: none;
+	font-weight: bold; 
+	height: 100%;
+}
+
+a:hover.findcreate {
+	color: #ffffff;
+	background: #1edced; 
+	font-size: 12px;
+	display: block;
+	padding: 6px 8px 6px 8px;
+	text-decoration: none;
+	font-weight: bold; 
+	height: 100%;
+}
+
+</style>
+</head>
+<body   STYLE="padding: 0px; background: #6d6e71;">
+<script src="/jquery/jquery.js" type="text/javascript"></script>
+<script src="/scripts_v651.js" type="text/javascript" language="javascript"></script>
+<div STYLE="z-index: 2000000; width: 100%;">
+<TABLE CELLPADDING=0 CELLSPACING=0 BORDER=0 WIDTH=100%>
+	<TR>
+		<TD STYLE="margin-left: auto; margin-right: auto; background: #58585a;"><TABLE WIDTH=980px CELLPADDING=0 CELLSPACING=0 BORDER=0 STYLE="margin-left: auto; margin-right: auto;">
+			<TR>
+				<TD>&nbsp;</TD>
+					<TD WIDTH=300px VALIGN=CENTER STYLE="background: #58585a; color: #bdbec0; padding: 4px 15px 4px 15px;"><B>View site in <a href="http://www.brownpapertickets.com/setlanguage.html?language=en" option value="english" CLASS=lang_sel>English</a>,
+	<a href="http://es.brownpapertickets.com/" option value="spanish" CLASS=lang>Espa&#241;ol</a>, or <a href="http://fr.brownpapertickets.com" option value="french" CLASS=lang>Fran&#231;ais</a></B></TD></TR>
+			</TR></TABLE></TD></TR>
+	<TR>
+		<TD WIDTH=100% STYLE="background: #d1d2d4; border-bottom: solid #b2b4b6 1px;" VALIGN=TOP>
+			<TABLE WIDTH=980px CELLPADDING=0 CELLSPACING=0 BORDER=0 STYLE="margin-left: auto; margin-right: auto;">
+				<TR>
+					<TD HEIGHT=50px ROWSPAN=2 VALIGN=CENTER ALIGN=LEFT WIDTH=195px STYLE="padding-left: 4px;"><A HREF="http://www.brownpapertickets.com" CLASS=plain><IMG SRC="/g/6/BPT_logo_drop_small.png" WIDTH=192px HEIGHT=50px BORDER=0></A></TD>
+					<TD HEIGHT=50px ROWSPAN=2 VALIGN=CENTER STYLE="color: #707070; font-size: 12px;"><B>The fair-trade ticketing company.</B></TD>
+					<TD WIDTH=290px HEIGHT=30px STYLE="background: #12b7c6; padding: 4px 15px 4px 15px; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; -moz-border-radius-bottomleft: 10px; -moz-border-radius-bottomright: 10px; -webkit-border-bottom-left-radius: 10px; -webkit-border-bottom-right-radius: 10px;" ALIGN=LEFT>
+<TABLE CELLPADDING=0 CELLSPACING=0 BORDER=0 WIDTH=100%>
+	<TR>
+		<TD ALIGN=LEFT VALIGN=CENTER>
+			<TABLE CELLPADDING=0 CELLSPACING=0 BORDER=0>
+				<TR>
+					<TD VALIGN=CENTER><A HREF="https://www.brownpapertickets.com/join.html" CLASS=whiteblue>Sign Me Up!</A></TD>
+					<TD VALIGN=CENTER><B>&nbsp;|&nbsp;</B></TD>
+					<TD VALIGN=CENTER><A HREF="https://www.brownpapertickets.com/login.html" onClick="showLogin(); document.getElementById('headerlogin').focus(); return false;" CLASS=whiteblue>Log In</A></TD>
+					<TD ALIGN=CENTER VALIGN=CENTER WIDTH=15px><DIV ID=loginarrow STYLE="cursor: pointer;" onClick="showLogin(); return false;"><IMG SRC="/g/smallarrowdown.gif"></DIV></TD></TR>
+			</TABLE>
+		</TD>
+	</TR>
+</TABLE>
+</TD>
+					<TD WIDTH=10px>&nbsp;</TD></TR>
+				<TR>
+					<TD VALIGN=TOP ALIGN=LEFT HEIGHT=30px;><div STYLE="position: relative; width: 290px; background: #ff0000;">
+<div CLASS=loginbox ID=loginbox STYLE="display: none;"> <!--Start login box-->
+<FORM ACTION="https://www.brownpapertickets.com/login.html" ID="header_login_form" METHOD=POST accept-charset="utf-8" novalidate>
+<TABLE CELLPADDING=0 CELLSPACING=0 BORDER=0>
+	<TR>
+		<TD NOWRAP STYLE="padding-bottom: 8px;"><INPUT TYPE="email" NAME="login_zzYTqsmj57" VALUE="Email or login" CLASS="small_form_input" ID="headerlogin" AUTOCOMPLETE="off" STYLE="display: inline; width: 175px; border: 1px solid #d1d2d4; color: #707070; font-weight: normal; font-family: Helvetica, Arial, Sans-serif;" onKeydown="if (this.value==this.defaultValue) this.value='';" onBlur="if (this.value=='') this.value=this.defaultValue;"></TD>
+	<TR>
+		<TD NOWRAP NOWRAP STYLE="padding-bottom: 12px;"><INPUT TYPE="text" NAME="not_a_valid_field" VALUE="Password" ID="header_password_plain_text" CLASS="small_form_input" AUTOCOMPLETE="off" STYLE="display: inline; width: 175px; border: 1px solid #d1d2d4; color: #707070; font-weight: normal; font-family: Helvetica, Arial, Sans-serif;" onFocus="showHeaderPassword();">
+<INPUT TYPE="password" NAME="pass_ktDFQGQTQv" ID="header_password_password" CLASS="small_form_input" AUTOCOMPLETE="off" STYLE="display: none; width: 175px; border: 1px solid #d1d2d4; color: #707070; font-weight: normal; font-family: Helvetica, Arial, Sans-serif;" onBlur="hideHeaderPassword();"></TD></TR>
+</TABLE>
+<TABLE CELLPADDING=0 CELLSPACING=0 BORDER=0>
+	<TR>
+		<TD STYLE="font-size: 1em; font-weight: bold; margin: 0px;">
+<DIV onClick=" document.getElementById('header_login_form').submit();" CLASS=bluelink><div STYLE="display: none; height: 1px; width: 1px; overflow: hidden;"><INPUT TYPE="submit" VALUE="Submit"></div>Go</div>
+</TD>
+		<TD STYLE="padding-left: 15px;"><A HREF="https://www.brownpapertickets.com/findpassword.html" CLASS=sgr>Forget your login?</A></TD></TR>
+</TABLE>
+</FORM>
+</div>
+</div></TD></TR>
+			</TABLE>
+	</TD></TR>
+</TABLE>
+<TABLE WIDTH=100% CELLPADDING=0 CELLSPACING=0 BORDER=0>
+	<TR>
+		<TD STYLE="background: #ffffff; width: 100%;">
+
+
+<TABLE WIDTH=980px CELLPADDING=0 CELLSPACING=0 BORDER=0 STYLE="margin-left: auto; margin-right: auto;">
+	<TR>
+		<TD ALIGN=RIGHT VALIGN=CENTER STYLE="padding-right: 10px; padding-top: 10px;" border=1><TABLE CELLPADDING=0 CELLSPACING=0 BORDER=0>
+			<TR>
+				<TD NOWRAP>
+					<TABLE CELLPADDING=0 CELLSPACING=0 BORDER=0>
+						<TR>
+							<TD VALIGN=CENTER STYLE="height: 100%;"><A HREF="http://www.brownpapertickets.com/browse.html" CLASS=findcreate STYLE="border-right: 1px dotted #efefef;">Find An Event</A></TD>
+							<TD VALIGN=CENTER STYLE="height: 100%;"><A HREF="http://www.brownpapertickets.com/createevent.html" CLASS=findcreate STYLE="border-right: 1px dotted #efefef;">Create Your Event</A></TD>
+							<TD VALIGN=CENTER STYLE="height: 100%;"><A HREF="http://www.brownpapertickets.com/faq.html" CLASS=findcreate>Help</A></TD></TR>
+					</TABLE>
+				</TD>
+				<TD WIDTH=15px>&nbsp;</TD>
+				<TD><FORM ACTION="/browse.html" NAME="search" ID="search" METHOD=POST>
+					<INPUT TYPE="hidden" NAME="formsubmitted" VALUE="1">
+					<INPUT TYPE="hidden" NAME="reset" VALUE="1">
+					<INPUT TYPE="hidden" NAME="secretkeywords" ID="secretkeywords" VALUE="">
+					<TABLE CELLPADDING=0 CELLSPACING=0 BORDER=0>
+						<TR>
+							<TD ALIGN=LEFT STYLE="padding: 2px 0px 2px 0px;">
+								<div STYLE="border: 1px solid #999999; padding: 4px; margin: 0; border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; width: 215px;">
+								<TABLE CELLPADDING=0 CELLSPACING=0 BORDER=0 WIDTH=100%>
+									<TR>
+										<TD><input type="text" name="keywords" id="keywords" value="Search events..." onFocus="if (this.value==this.defaultValue) this.value='';" onBlur="if (this.value=='') this.value=this.defaultValue; setTimeout(function(){document.getElementById('suggestions').style.display = 'none';},200);" onkeyup="suggest(this.value)" autocomplete="off" STYLE="background: #ffffff; color: #707070; border: 0; font-weight: bold; font-size: 12px; padding: 0px; height: 14px; width: 100%;" CLASS=nohighlight></TD><TD VALIGN=CENTER ALIGN=RIGHT WIDTH=35px STYLE="padding-right: 5px;"><input type="image" value="Search Events" SRC="/g/6/BPT_mag_glass.png" HEIGHT=14px WIDTH=20px>
+										</TD></TR>
+								</TABLE></div><div STYLE="position: relative;"><DIV ID="suggestions"></DIV></div>
+
+						</TD></TR>
+					</TABLE>
+				</FORM></TD></TR></TABLE>
+</TD></TR>
+</TABLE>
+</div>
+<div STYLE="width: 100%; height: 4px;"></div>
+
+
+
+<TABLE CELLPADDING=0 CELLSPACING=0 BORDER=0 WIDTH=980px STYLE="margin-left: auto; margin-right: auto;">
+
+		<TD ALIGN=LEFT VALIGN=TOP STYLE="padding-left: 10px">
+
+<script src="https://www.brownpapertickets.com/jquery.js" type="text/javascript" language="javascript"></script>
+
+<script language="javascript">
+
+function checkLogin(chosenName) {
+
+	$("#usernamemessage").removeClass().addClass('userboxchecking').text('Checking user name...').fadeIn(1000);
+
+	$.post("checkusername",{ user_name:chosenName } ,function(data)
+	{
+		if(data=='invalid')
+		{
+			$("#usernamemessage").fadeTo(200,0.1,function()
+			{ 
+				$(this).html('No email address provided.').addClass('userboxerror').fadeTo(900,1);
+			});
+		}
+		else if(data=='bademail')
+		{
+			$("#usernamemessage").fadeTo(200,0.1,function()
+			{ 
+				$(this).html('This is not a valid email address.').addClass('userboxerror').fadeTo(900,1);
+			});
+		}
+		else if(data=='no')
+		{
+			$("#usernamemessage").fadeTo(200,0.1,function()
+			{ 
+				$(this).html('This address has already been used.').addClass('userboxerror').fadeTo(900,1);
+			});
+		}
+		else
+		{
+			$("#usernamemessage").fadeTo(200,0.1,function()
+			{ 
+				$(this).html('Valid email address!').addClass('userboxok').fadeTo(900,1);
+			});
+		}
+	}); 
+}
+
+function checkPassword(password) {
+
+	var letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	var numbers = "1234567890";
+	var length = password.length;
+
+	var containsLetters = contains(password, letters);
+	var containsNumbers = contains(password, numbers);
+
+	if(length == 0)
+	{
+
+	}
+	else if(containsLetters==false)
+	{
+		$("#passwordmessage").removeClass().addClass('passwordweak').text('Weak Password').fadeIn(1000);
+	}
+	else if(containsNumbers==false)
+	{
+		$("#passwordmessage").removeClass().addClass('passwordweak').text('Weak Password').fadeIn(1000);
+	}
+	else if(length < 7)
+	{
+		$("#passwordmessage").removeClass().addClass('passwordweak').text('Weak Password').fadeIn(1000);
+	}
+	else if(length > 15)
+	{
+		$("#passwordmessage").removeClass().addClass('passwordweak').text('Invalid Password').fadeIn(1000);
+	}
+	else
+	{
+		$("#passwordmessage").removeClass().addClass('passwordstrong').text('Good Password').fadeIn(1000);
+	}
+
+}
+
+function contains(password, validChars) {
+
+	for (i = 0; i < password.length; i++) {
+		var char = password.charAt(i);
+		if (validChars.indexOf(char) > -1) {
+			return true;
+		}
+	}
+
+	return false;
+}
+
+</script>
+
+<STYLE>
+<!--
+.userboxchecking {
+	position: relative;
+	width: auto;
+	background: #baa633;
+	padding: 5px;
+	font-size: 12px;
+	font-weight: bold;
+	color:#ffffff;
+}
+
+.userboxok {
+	position: relative;
+	width: auto;
+	background: #8bc652;
+	padding: 5px;
+	font-size: 12px;
+	font-weight: bold;
+	color:#ffffff;
+}
+
+.userboxerror {
+	position: relative;
+	width: auto;
+	background: #f26722;
+	padding: 5px;
+	font-size: 12px;
+	font-weight: bold;
+	color:#ffffff;
+}
+
+
+.passwordstrong {
+	position: relative;
+	width: auto;
+	background: #8bc652;
+	padding: 5px;
+	font-size: 12px;
+	font-weight: bold;
+	color:#ffffff;
+}
+.passwordweak {
+	position: relative;
+	width: auto;
+	background: #f26722;
+	padding: 5px;
+	font-size: 12px;
+	font-weight: bold;
+	color:#ffffff;
+}
+//-->
+</STYLE>
+
+<FORM ACTION="https://www.brownpapertickets.com/join.html" NAME="newuser" METHOD=POST accept-charset="utf-8" novalidate>
+<INPUT TYPE="hidden" NAME="final" VALUE="1">
+
+<TABLE CELLPADDING=0 CELLSPACING=0 BORDER=0 WIDTH=100%>
+	<TR>
+		<TD CLASS=newbox>
+			<TABLE CELLPADDING=0 CELLSPACING=0 BORDER=0 WIDTH=100%>
+
+			<TR>
+				<TD CLASS=newboxbottom>
+<TABLE CELLPADDING=0 CELLSPACING=0 BORDER=0 WIDTH=100%>
+	<TR>
+		<TD VALIGN=CENTER STYLE="color: #552502; font-size: 36px; font-weight: bold; font-family: Helvetica, Arial, Sans-serif;">Create An Account</TD>
+	</TR>
+</TABLE>
+<TABLE CELLPADDING=0 CELLSPACING=0 BORDER=0>
+	<TR>
+		<TD VALIGN=TOP WIDTH=500px>
+			<TABLE>
+				<TR>
+					<TD COLSPAN=2 STYLE="color: #777777; padding-top: 30px;"><B>EMAIL ADDRESS</B> </TD></TR>
+				<TR>
+					<TD COLSPAN=2><INPUT TYPE="email" NAME="login" ID="login" VALUE="" AUTOCOMPLETE="off" SIZE=30 CLASS=xl onBlur="checkLogin(this.value)"></TD>
+					<TD COLSPAN=2 WIDTH=300px><div id="usernamemessage" style="display:none"></div></TD></TR>
+				<TR>
+					<TD COLSPAN=4 STYLE="color: #777777; font-size: 10px;">(A confirmation email will be sent to the email address provided.)</TD></TR>
+				<TR>
+					<TD COLSPAN=2 STYLE="color: #777777; padding-top: 10px;"><B>PASSWORD</B> </TD></TR>
+				<TR>
+					<TD COLSPAN=2><INPUT TYPE="password" NAME="password" VALUE="" AUTOCOMPLETE="off" SIZE=30 CLASS=xl onkeyup="checkPassword(this.value);"></TD>
+					<TD COLSPAN=2 WIDTH=300px><div id="passwordmessage" style="display:none"></div></TD></TR>
+				<TR>
+					<TD COLSPAN=4 STYLE="color: #777777; font-size: 10px;">(Password must be between 7 and 15 characters and contain at least one letter and one number.)</TD></TR>
+				<TR>
+					<TD COLSPAN=2 STYLE="color: #777777; padding-top: 10px;"><B>PUBLIC NAME</B></TD></TR>
+				<TR>
+					<TD COLSPAN=2><INPUT TYPE="text" NAME="public_name" VALUE="" AUTOCOMPLETE="off" SIZE=30 CLASS=xl></TD></TR>
+				<TR>
+					<TD COLSPAN=4 STYLE="color: #777777; font-size: 10px;">(This name will be displayed on your public profile page.)</TD></TR>
+				<TR>
+					<TD STYLE="color: #777777; padding-top: 10px;"><B>COUNTRY</B></TD>
+					<TD COLSPAN=2 STYLE="color: #777777; padding-top: 10px; padding-left: 10px;"><B>ZIP/POST CODE</B></TD></TR>
+				<TR>
+					<TD><SELECT NAME="country" AUTOCOMPLETE="off">
+						<OPTION VALUE=""></OPTION>
+<OPTION VALUE="Albania">Albania
+<OPTION VALUE="Algeria">Algeria
+<OPTION VALUE="American Samoa">American Samoa
+<OPTION VALUE="Andorra">Andorra
+<OPTION VALUE="Angola">Angola
+<OPTION VALUE="Anguilla">Anguilla
+<OPTION VALUE="Antarctica">Antarctica
+<OPTION VALUE="Antigua and Barbuda">Antigua and Barbuda
+<OPTION VALUE="Argentina">Argentina
+<OPTION VALUE="Armenia">Armenia
+<OPTION VALUE="Aruba">Aruba
+<OPTION VALUE="Ashmore and Cartier Islands">Ashmore and Cartier Islands
+<OPTION VALUE="Australia">Australia
+<OPTION VALUE="Austria">Austria
+<OPTION VALUE="Azerbaijan">Azerbaijan
+<OPTION VALUE="Bahrain">Bahrain
+<OPTION VALUE="Baker Island">Baker Island
+<OPTION VALUE="Bangladesh">Bangladesh
+<OPTION VALUE="Barbados">Barbados
+<OPTION VALUE="Bassas da India">Bassas da India
+<OPTION VALUE="Belarus">Belarus
+<OPTION VALUE="Belgium">Belgium
+<OPTION VALUE="Belize">Belize
+<OPTION VALUE="Benin">Benin
+<OPTION VALUE="Bermuda">Bermuda
+<OPTION VALUE="Bhutan">Bhutan
+<OPTION VALUE="Bolivia">Bolivia
+<OPTION VALUE="Bosnia and Herzegovina">Bosnia and Herzegovina
+<OPTION VALUE="Botswana">Botswana
+<OPTION VALUE="Bouvet Island">Bouvet Island
+<OPTION VALUE="Brazil">Brazil
+<OPTION VALUE="British Indian Ocean Territory">British Indian Ocean Territory
+<OPTION VALUE="Brunei">Brunei
+<OPTION VALUE="Bulgaria">Bulgaria
+<OPTION VALUE="Burkina Faso">Burkina Faso
+<OPTION VALUE="Burundi">Burundi
+<OPTION VALUE="Cambodia">Cambodia
+<OPTION VALUE="Cameroon">Cameroon
+<OPTION VALUE="Canada">Canada
+<OPTION VALUE="Cape Verde">Cape Verde
+<OPTION VALUE="Cayman Islands">Cayman Islands
+<OPTION VALUE="Central African Republic">Central African Republic
+<OPTION VALUE="Chad">Chad
+<OPTION VALUE="Chile">Chile
+<OPTION VALUE="China">China
+<OPTION VALUE="Christmas Island">Christmas Island
+<OPTION VALUE="Clipperton Island">Clipperton Island
+<OPTION VALUE="Cocos (Keeling) Islands">Cocos (Keeling) Islands
+<OPTION VALUE="Colombia">Colombia
+<OPTION VALUE="Comoros">Comoros
+<OPTION VALUE="Cook Islands">Cook Islands
+<OPTION VALUE="Coral Sea Islands">Coral Sea Islands
+<OPTION VALUE="Costa Rica">Costa Rica
+<OPTION VALUE="Croatia">Croatia
+<OPTION VALUE="Cyprus">Cyprus
+<OPTION VALUE="Czech Republic">Czech Republic
+<OPTION VALUE="Denmark">Denmark
+<OPTION VALUE="Djibouti">Djibouti
+<OPTION VALUE="Dominica">Dominica
+<OPTION VALUE="Dominican Republic">Dominican Republic
+<OPTION VALUE="Ecuador">Ecuador
+<OPTION VALUE="Egypt">Egypt
+<OPTION VALUE="El Salvador">El Salvador
+<OPTION VALUE="Equatorial Guinea">Equatorial Guinea
+<OPTION VALUE="Eritrea">Eritrea
+<OPTION VALUE="Estonia">Estonia
+<OPTION VALUE="Ethiopia">Ethiopia
+<OPTION VALUE="Europa Island">Europa Island
+<OPTION VALUE="Falkland Islands">Falkland Islands
+<OPTION VALUE="Faroe Islands">Faroe Islands
+<OPTION VALUE="Fiji">Fiji
+<OPTION VALUE="Finland">Finland
+<OPTION VALUE="France">France
+<OPTION VALUE="French Guiana">French Guiana
+<OPTION VALUE="French Polynesia">French Polynesia
+<OPTION VALUE="French Southern Lands">French Southern Lands
+<OPTION VALUE="Gabon">Gabon
+<OPTION VALUE="Gaza Strip">Gaza Strip
+<OPTION VALUE="Georgia">Georgia
+<OPTION VALUE="Germany">Germany
+<OPTION VALUE="Ghana">Ghana
+<OPTION VALUE="Gibraltar">Gibraltar
+<OPTION VALUE="Glorioso Islands">Glorioso Islands
+<OPTION VALUE="Greece">Greece
+<OPTION VALUE="Greenland">Greenland
+<OPTION VALUE="Grenada">Grenada
+<OPTION VALUE="Guadeloupe">Guadeloupe
+<OPTION VALUE="Guam">Guam
+<OPTION VALUE="Guatemala">Guatemala
+<OPTION VALUE="Guernsey">Guernsey
+<OPTION VALUE="Guinea">Guinea
+<OPTION VALUE="Guinea-Bissau">Guinea-Bissau
+<OPTION VALUE="Guyana">Guyana
+<OPTION VALUE="Haiti">Haiti
+<OPTION VALUE="Heard and McDonald Islands">Heard and McDonald Islands
+<OPTION VALUE="Honduras">Honduras
+<OPTION VALUE="Hong Kong">Hong Kong
+<OPTION VALUE="Howland Island">Howland Island
+<OPTION VALUE="Hungary">Hungary
+<OPTION VALUE="Iceland">Iceland
+<OPTION VALUE="India">India
+<OPTION VALUE="Indonesia">Indonesia
+<OPTION VALUE="Iraq">Iraq
+<OPTION VALUE="Ireland">Irish Republic
+<OPTION VALUE="Israel">Israel
+<OPTION VALUE="Italy">Italy
+<OPTION VALUE="Jamaica">Jamaica
+<OPTION VALUE="Jan Mayen">Jan Mayen
+<OPTION VALUE="Japan">Japan
+<OPTION VALUE="Jarvis Island">Jarvis Island
+<OPTION VALUE="Jersey">Jersey
+<OPTION VALUE="Johnston Atoll">Johnston Atoll
+<OPTION VALUE="Jordan">Jordan
+<OPTION VALUE="Juan de Nova Island">Juan de Nova Island
+<OPTION VALUE="Kazakstan">Kazakstan
+<OPTION VALUE="Kenya">Kenya
+<OPTION VALUE="Kingman Reef">Kingman Reef
+<OPTION VALUE="Kiribati">Kiribati
+<OPTION VALUE="Korea, South">Korea, South
+<OPTION VALUE="Kuwait">Kuwait
+<OPTION VALUE="Kyrgyzstan">Kyrgyzstan
+<OPTION VALUE="Laos">Laos
+<OPTION VALUE="Latvia">Latvia
+<OPTION VALUE="Lebanon">Lebanon
+<OPTION VALUE="Lesotho">Lesotho
+<OPTION VALUE="Liberia">Liberia
+<OPTION VALUE="Libya">Libya
+<OPTION VALUE="Liechtenstein">Liechtenstein
+<OPTION VALUE="Lithuania">Lithuania
+<OPTION VALUE="Luxembourg">Luxembourg
+<OPTION VALUE="Macau">Macau
+<OPTION VALUE="Macedonia">Macedonia
+<OPTION VALUE="Madagascar">Madagascar
+<OPTION VALUE="Malawi">Malawi
+<OPTION VALUE="Malaysia">Malaysia
+<OPTION VALUE="Maldives">Maldives
+<OPTION VALUE="Mali">Mali
+<OPTION VALUE="Malta">Malta
+<OPTION VALUE="Man, Isle of">Man, Isle of
+<OPTION VALUE="Marshall Islands">Marshall Islands
+<OPTION VALUE="Martinique">Martinique
+<OPTION VALUE="Mauritania">Mauritania
+<OPTION VALUE="Mauritius">Mauritius
+<OPTION VALUE="Mayotte">Mayotte
+<OPTION VALUE="Mexico">Mexico
+<OPTION VALUE="Micronesia">Micronesia
+<OPTION VALUE="Midway Islands">Midway Islands
+<OPTION VALUE="Moldova">Moldova
+<OPTION VALUE="Monaco">Monaco
+<OPTION VALUE="Mongolia">Mongolia
+<OPTION VALUE="Montserrat">Montserrat
+<OPTION VALUE="Morocco">Morocco
+<OPTION VALUE="Mozambique">Mozambique
+<OPTION VALUE="Namibia">Namibia
+<OPTION VALUE="Nauru">Nauru
+<OPTION VALUE="Navassa Island">Navassa Island
+<OPTION VALUE="Nepal">Nepal
+<OPTION VALUE="Netherlands">Netherlands
+<OPTION VALUE="Netherlands Antilles">Netherlands Antilles
+<OPTION VALUE="New Caledonia">New Caledonia
+<OPTION VALUE="New Zealand">New Zealand
+<OPTION VALUE="Nicaragua">Nicaragua
+<OPTION VALUE="Niger">Niger
+<OPTION VALUE="Nigeria">Nigeria
+<OPTION VALUE="Niue">Niue
+<OPTION VALUE="Norfolk Island">Norfolk Island
+<OPTION VALUE="Northern Ireland">Northern Ireland
+<OPTION VALUE="Northern Mariana Islands">Northern Mariana Islands
+<OPTION VALUE="Norway">Norway
+<OPTION VALUE="Oman">Oman
+<OPTION VALUE="Pakistan">Pakistan
+<OPTION VALUE="Palau">Palau
+<OPTION VALUE="Palmyra Atoll">Palmyra Atoll
+<OPTION VALUE="Panama">Panama
+<OPTION VALUE="Papua New Guinea">Papua New Guinea
+<OPTION VALUE="Paracel Islands">Paracel Islands
+<OPTION VALUE="Paraguay">Paraguay
+<OPTION VALUE="Peru">Peru
+<OPTION VALUE="Philippines">Philippines
+<OPTION VALUE="Pitcairn Islands">Pitcairn Islands
+<OPTION VALUE="Poland">Poland
+<OPTION VALUE="Portugal">Portugal
+<OPTION VALUE="Puerto Rico">Puerto Rico
+<OPTION VALUE="Qatar">Qatar
+<OPTION VALUE="Reunion">Reunion
+<OPTION VALUE="Romania">Romania
+<OPTION VALUE="Russian Federation">Russia
+<OPTION VALUE="Rwanda">Rwanda
+<OPTION VALUE="Saint Helena">Saint Helena
+<OPTION VALUE="Saint Kitts and Nevis">Saint Kitts and Nevis
+<OPTION VALUE="Saint Lucia">Saint Lucia
+<OPTION VALUE="Saint Lucia">Saint Lucia
+<OPTION VALUE="Saint Pierre and Miquelon">Saint Pierre and Miquelon
+<OPTION VALUE="San Marino">San Marino
+<OPTION VALUE="Sao Tome and Principe">Sao Tome and Principe
+<OPTION VALUE="Saudi Arabia">Saudi Arabia
+<OPTION VALUE="Senegal">Senegal
+<OPTION VALUE="Serbia and Montenegro">Serbia and Montenegro
+<OPTION VALUE="Seychelles">Seychelles
+<OPTION VALUE="Sierra Leone">Sierra Leone
+<OPTION VALUE="Singapore">Singapore
+<OPTION VALUE="Slovakia">Slovakia
+<OPTION VALUE="Slovenia">Slovenia
+<OPTION VALUE="Solomon Islands">Solomon Islands
+<OPTION VALUE="South Africa">South Africa
+<OPTION VALUE="South Sandwich Islands">South Sandwich Islands
+<OPTION VALUE="Spain">Spain
+<OPTION VALUE="Spratly Islands">Spratly Islands
+<OPTION VALUE="Sri Lanka">Sri Lanka
+<OPTION VALUE="St. Vincent and the Grenadines">St. Vincent and the Grenadines
+<OPTION VALUE="Suriname">Suriname
+<OPTION VALUE="Svalbard">Svalbard
+<OPTION VALUE="Swaziland">Swaziland
+<OPTION VALUE="Sweden">Sweden
+<OPTION VALUE="Switzerland">Switzerland
+<OPTION VALUE="Taiwan">Taiwan
+<OPTION VALUE="Tajikistan">Tajikistan
+<OPTION VALUE="Tanzania">Tanzania
+<OPTION VALUE="Thailand">Thailand
+<OPTION VALUE="The Bahamas">The Bahamas
+<OPTION VALUE="The Gambia">The Gambia
+<OPTION VALUE="Togo">Togo
+<OPTION VALUE="Tokelau">Tokelau
+<OPTION VALUE="Tonga">Tonga
+<OPTION VALUE="Trinidad and Tobago">Trinidad and Tobago
+<OPTION VALUE="Tromelin Island">Tromelin Island
+<OPTION VALUE="Tunisia">Tunisia
+<OPTION VALUE="Turkey">Turkey
+<OPTION VALUE="Turkmenistan">Turkmenistan
+<OPTION VALUE="Turks and Caicos Islands">Turks and Caicos Islands
+<OPTION VALUE="Tuvalu">Tuvalu
+<OPTION VALUE="Uganda">Uganda
+<OPTION VALUE="Ukraine">Ukraine
+<OPTION VALUE="United Arab Emirates">United Arab Emirates
+<OPTION VALUE="United Kingdom">United Kingdom
+<OPTION VALUE="United States">United States
+<OPTION VALUE="Uruguay">Uruguay
+<OPTION VALUE="Uzbekistan">Uzbekistan
+<OPTION VALUE="Vanuatu">Vanuatu
+<OPTION VALUE="Vatican City">Vatican City
+<OPTION VALUE="Vietnam">Vietnam
+<OPTION VALUE="Virgin Islands, British">Virgin Islands, British
+<OPTION VALUE="Virgin Islands, US">Virgin Islands, US
+<OPTION VALUE="Wake Island">Wake Island
+<OPTION VALUE="Wallis and Futuna">Wallis and Futuna
+<OPTION VALUE="West Bank">West Bank
+<OPTION VALUE="Western Sahara">Western Sahara
+<OPTION VALUE="Western Samoa">Western Samoa
+<OPTION VALUE="Yemen">Yemen
+<OPTION VALUE="Zaire">Zaire
+<OPTION VALUE="Zambia">Zambia
+
+
+						</SELECT>
+					</TD>
+					<TD COLSPAN=3 STYLE="padding-left: 10px;"><INPUT TYPE="text" NAME="zip" VALUE="" AUTOCOMPLETE="off" SIZE=10 CLASS=xl></TD></TR>
+				<TR>
+					<TD COLSPAN=4 STYLE="padding-top: 10px; font-size: 12px; color: #777777; font-weight: bold;"><INPUT TYPE="checkbox" NAME="daily_new_events" ID="daily_new_events" VALUE="t"> <LABEL FOR="daily_new_events">I would like to receive daily emails with new events near me.</LABEL></TD></TR>
+				<TR>
+					<TD COLSPAN=4 STYLE="padding-top: 3px; font-size: 12px; color: #777777; font-weight: bold;"><INPUT TYPE="checkbox" NAME="daily_discount_events" ID="daily_discount_events" VALUE="t"> <LABEL FOR="daily_discount_events">I would like to receive daily emails with discounted tickets near me.</LABEL></TD></TR>
+				<TR>
+					<TD COLSPAN=4 STYLE="padding-top: 10px;">
+<div class=bpt_preloaded_images><img src="/g/6/BPT_button_bottom_rollover.png" /></div>
+<table cellpadding=0 cellspacing=0 border=0>
+	<tr>
+		<td NOWRAP><BUTTON TYPE="submit" onClick="document.getElementById('eventform').submit();" CLASS=bpt_orangebutton>Create Account</BUTTON></td>
+	</tr>
+</table>
+</TD></TR>
+			</TABLE>
+		</TD>
+		<TD STYLE="width: 30px;">&nbsp;</TD>
+		<TD VALIGN=TOP>
+			<TABLE>
+				<TR>
+					<TD COLSPAN=3 VALIGN=TOP STYLE="color: #777777; padding-top: 30px;"><B>ACCOUNT TYPE</B>&nbsp;</TD></TR>
+			</TABLE>
+			<TABLE CELLPADDING=0 CELLSPACING=0 BORDER=0>
+				<TR>
+					<TD STYLE="padding-right: 4px; padding-top: 8px;"><INPUT TYPE=radio NAME="account_type" VALUE="basic" ID="basic_account" CHECKED></TD>
+					<TD STYLE="cursor: pointer; color: #baa633; font-weight: bold; font-family: Helvetica, Arial, Sans-serif; padding-top: 8px;" onclick="document.getElementById('basic_account').checked=1;">Basic Account</TD></TR>
+				<TR>
+					<TD>&nbsp;</TD>
+					<TD STYLE="cursor: pointer; font-size: 11px; color: #777777; font-weight: bold; font-family: Helvetica, Arial, Sans-serif;" onclick="document.getElementById('basic_account').checked=1;">Basic accounts can post comments, track purchase histories, and more!</TD></TR>
+				<TR>
+					<TD STYLE="padding-top: 8px; padding-right: 4px;"><INPUT TYPE=radio NAME="account_type" VALUE="producer" ID="producer_account" ></TD>
+					<TD STYLE="cursor: pointer; color: #baa633; font-weight: bold; font-family: Helvetica, Arial, Sans-serif; padding-top: 8px;" onclick="document.getElementById('producer_account').checked=1;">Event Producer</TD></TR>
+				<TR>
+					<TD>&nbsp;</TD>
+					<TD STYLE="cursor: pointer; font-size: 11px; color: #777777; font-weight: bold; font-family: Helvetica, Arial, Sans-serif;" onclick="document.getElementById('producer_account').checked=1;">Use this account type to create events, sell tickets, and register attendees.</TD></TR>
+				<TR>
+					<TD STYLE="padding-top: 8px; padding-right: 4px;"><INPUT TYPE=radio NAME="account_type" VALUE="affiliate" ID="affiliate_account" ></TD>
+					<TD STYLE="cursor: pointer; color: #baa633; font-weight: bold; font-family: Helvetica, Arial, Sans-serif; padding-top: 8px;" onclick="document.getElementById('affiliate_account').checked=1;">Affiliate</TD></TR>
+				<TR>
+					<TD>&nbsp;</TD>
+					<TD STYLE="cursor: pointer; font-size: 11px; color: #777777; font-weight: bold; font-family: Helvetica, Arial, Sans-serif;" onclick="document.getElementById('affiliate_account').checked=1;">Use your Affiliate Account to drive traffic to Brown Paper Tickets and you&#39;ll get paid for the tickets you help us sell.</TD></TR>
+				<TR>
+					<TD STYLE="padding-top: 8px; padding-right: 4px;"><INPUT TYPE=radio NAME="account_type" VALUE="developer" ID="developer_account" ></TD>
+					<TD STYLE="cursor: pointer; color: #baa633; font-weight: bold; font-family: Helvetica, Arial, Sans-serif; padding-top: 8px;" onclick="document.getElementById('developer_account').checked=1;">Developer</TD></TR>
+				<TR>
+					<TD>&nbsp;</TD>
+					<TD STYLE="cursor: pointer; font-size: 11px; color: #777777; font-weight: bold; font-family: Helvetica, Arial, Sans-serif;" onclick="document.getElementById('developer_account').checked=1;">Developer accounts can be used to create applications using the Brown Paper Tickets API.</TD></TR>
+				<TR>
+					<TD STYLE="padding-top: 8px; padding-right: 4px;"><INPUT TYPE=radio NAME="account_type" VALUE="otn" ID="otn_account" ></TD>
+					<TD STYLE="cursor: pointer; color: #baa633; font-weight: bold; font-family: Helvetica, Arial, Sans-serif; padding-top: 8px;" onclick="document.getElementById('otn_account').checked=1;">Open Ticket Network</TD></TR>
+				<TR>
+					<TD>&nbsp;</TD>
+					<TD STYLE="cursor: pointer; font-size: 11px; color: #777777; font-weight: bold; font-family: Helvetica, Arial, Sans-serif;" onclick="document.getElementById('otn_account').checked=1;">Sell tickets through your retail location using our Open Ticket Network.</TD></TR>
+				<TR>
+					<TD STYLE="padding-top: 8px; padding-right: 4px;"><INPUT TYPE=radio NAME="account_type" VALUE="media" ID="media_account" ></TD>
+					<TD STYLE="cursor: pointer; color: #baa633; font-weight: bold; font-family: Helvetica, Arial, Sans-serif; padding-top: 8px;" onclick="document.getElementById('media_account').checked=1;">Media</TD></TR>
+				<TR>
+					<TD>&nbsp;</TD>
+					<TD STYLE="cursor: pointer; font-size: 11px; color: #777777; font-weight: bold; font-family: Helvetica, Arial, Sans-serif;" onclick="document.getElementById('media_account').checked=1;">Members of the media can be the first to find out about new events and receive free tickets.</TD></TR>
+			</TABLE>
+		</TD>
+	</TR>
+</TABLE>
+</FORM>
+</TD></TR>
+			</TABLE>
+	</TD></TR>
+</TABLE>
+
+
+<BR><BR>
+
+<!--Closing the standard header-->
+</TD></TR>
+</TABLE>
+
+
+<div STYLE="position: relative; width: 100%; background: #eceded; padding-top: 10px; padding-bottom: 10px;">
+	<div STYLE="position: relative; width: 980px; margin-left: auto; margin-right: auto;">
+		<TABLE>
+			<TR>
+				<TD VALIGN=CENTER STYLE="padding-left: 10px;"><A HREF="https://www.brownpapertickets.com/verifyssl.html" target="ssl" ONCLICK="window.open('https://www.brownpapertickets.com/verifyssl.html', 'ssl', 'toolbar=no, location=yes, directories=no, status=no, menubar=no, copyhistory=no, scrollbars=yes, resizable=yes, width=550, height=380')" CLASS=plain><IMG SRC="/g/fl/thawte.gif" alt="Thawte secure certificate" width="61" height="60" BORDER=0></A></TD>
+				<TD VALIGN=CENTER STYLE="color: #777777; font-weight: bold; font-family: Helvetica, Arial, Sans-serif; padding-left: 8px;">Information you enter here is protected by a secure, encrypted connection.<div STYLE="height: 8px;"></div><A HREF="https://www.brownpapertickets.com/privacy-policy.html" target="privacy" ONCLICK="window.open('https://www.brownpapertickets.com/privacy-policy.html', 'privacy', 'toolbar=no, location=no, directories=no, status=no, menubar=no, copyhistory=no, scrollbars=yes, resizable=yes, width=640, height=480')">How we safeguard your privacy.</A></TD></TR>
+		</TABLE>
+	</div>
+</div><BR><BR>
+
+<!--Restarting the standard header-->
+<TABLE CELLPADDING=0 CELLSPACING=0 BORDER=0 WIDTH=980px STYLE="margin-left: auto; margin-right: auto;">
+		<TD ALIGN=LEFT VALIGN=TOP STYLE="padding-left: 10px; padding-right: 10px;">
+
+</TD></TR>
+</TABLE>
+</CENTER>
+<div STYLE="border-top: 1px solid #707070; height: 2px; width: 100%;"></div>
+</TD></TR>
+</TABLE>
+</DIV>
+<div STYLE="width: 100%; background: #58585a;">
+<CENTER>
+<TABLE CLASS=footertable>
+	<TR>
+		<TD STYLE="padding: 15px 0px 25px 10px;"><TABLE>
+			<TR>
+				<TD STYLE="font-size: 18px; color: #dd7727; padding-bottom: 10px; border-bottom: dashed #eceded 1px;">Contact us</TD></TR>
+			<TR>
+				<TD STYLE="padding-top: 10px; color: #a7a9ac; line-height: 20px; height: 20px;">Email</TD></TR>
+			<TR>
+				<TD><A HREF="mailto:support@brownpapertickets.com">support@brownpapertickets.com</A></TD></TR>
+			<TR>
+				<TD STYLE="padding-top: 10px; color: #a7a9ac;">24/7 Customer Service</TD></TR>
+			<TR>
+				<TD NOWRAP STYLE="color: #eceded; height: 20px;" VALIGN=CENTER><SPAN STYLE="color: #ffffff;">1-800-838-3006</SPAN> US, Canada, Puerto Rico</TD></TR>
+			<TR>
+				<TD STYLE="font-size: 18px; color: #dd7727; padding-top: 15px; padding-bottom: 10px; border-bottom: dashed #eceded 1px;">Resources</TD></TR>
+			<TR>
+				<TD STYLE="padding-top: 10px;"><a href="/about/careers">Careers</a></TD></TR>
+			<TR>
+				<TD><a href="http://community.brownpapertickets.com/press">Press</a></TD></TR>
+			<TR>
+				<TD><a href="/apidocs/index.html">Developers</a></TD></TR>
+			<TR>
+				<TD><a href="/help">Help</a></TD></TR>
+			</TABLE>
+		</TD>
+		<TD STYLE="padding: 15px 0px 15px 15px;"><TABLE>
+			<TR>
+				<TD STYLE="font-size: 18px; color: #dd7727; padding-bottom: 10px; border-bottom: dashed #eceded 1px;">Ticket Buyers</TD></TR>
+			<TR>
+				<TD STYLE="padding-top: 10px;"><a href="/trackorder.html">Track Your Order</a></TD></TR>
+			<TR>
+				<TD><a href="/browse.html">Browse Events</a></TD></TR>
+			<TR>
+				<TD><a href="/locations.html">Locations</a></TD></TR>
+			<TR>
+				<TD STYLE="font-size: 18px; color: #dd7727; padding-top: 15px; padding-bottom: 10px; border-bottom: dashed #eceded 1px;">Event Producers</TD></TR>
+			<TR>
+				<TD STYLE="padding-top: 10px; color: #552502;"><a href="/createevent.html">Create an Event</a></TD></TR>
+			<TR>
+				<TD><a href="http://www.brownpapertickets.com/pricing.html">Pricing</a></TD></TD></TR>
+			<TR>
+				<TD><a href="http://www.brownpapertickets.com/services.html">Services</a></TD></TD></TR>
+			<TR>
+				<TD><a href="http://www.brownpapertickets.com/bulk/index.html">Buy Pre-Printed Tickets</a></TD></TD></TR>
+			<TR>
+				<TD><a href="http://www.brownpapertickets.com/venues.html">The Venue List</a></TD></TD></TR>
+			</TABLE>
+		</TD>
+		<TD STYLE="padding: 15px 0px 15px 15px;"><FORM ACTION="https://www.brownpapertickets.com/mailinglist.html" METHOD=POST><INPUT TYPE="hidden" NAME="final" VALUE="1"><INPUT TYPE="hidden" NAME="daily" VALUE="d"><INPUT TYPE="hidden" NAME="location" VALUE="z"><INPUT TYPE="hidden" NAME="type" VALUE="n"><TABLE>
+			<TR>
+				<TD COLSPAN=2 STYLE="font-size: 18px; color: #dd7727; padding-bottom: 10px; border-bottom: dashed #eceded 1px;">Join the mailing list</TD></TR>
+			<TR>
+				<TD><TABLE>
+					<TR>
+						<TD STYLE="color: #eceded; padding-top: 10px; max-width: 250px; font-size: 10px; font-weight: normal;">Get spam-free daily notifications of new events in your neighborhood!</TD></TR>
+					<TR>
+						<TD STYLE="padding-top: 20px;"><INPUT TYPE="text" NAME="email" VALUE="Your email address" SIZE=25 STYLE="color: #12b7c6;" onFocus="if (this.value==this.defaultValue) this.value='';" onBlur="if (this.value=='') this.value=this.defaultValue;"></TD></TR>
+					</TABLE>
+					<TABLE CLASS=footermailinglist>
+					<TR>
+						<TD STYLE="padding-top: 5px;"><INPUT TYPE="text" NAME="zip" VALUE="ZIP/Post Code" SIZE=15 STYLE="color: #12b7c6;" onFocus="if (this.value==this.defaultValue) this.value='';" onBlur="if (this.value=='') this.value=this.defaultValue;"></TD>
+				<TD STYLE="padding-top: 5px; padding-left: 5px;">
+<table cellpadding=0 cellspacing=0 border=0>
+	<tr>
+		<td NOWRAP><BUTTON TYPE="submit"  CLASS=bpt_flatorangebutton>Join!</BUTTON></td>
+	</tr>
+</table>
+</TD></TR>
+					</TABLE>
+				</TD>
+			</TR>
+			<TR>
+				<TD STYLE="padding-top: 15px;"><A HREF="/mailinglist.html">Customize your mailing list</A></TD></TR>
+			</TABLE></FORM>
+		</TD>
+		<TD WIDTH=200px ALIGN=RIGHT STYLE="padding: 15px 10px 15px 15px;">
+			<TABLE>
+				<TR>
+					<TD COLSPAN=2 STYLE="font-size: 18px; color: #dd7727; padding: 0 0 10px 0; border-bottom: dashed #eceded 1px;">Connect with us</TD></TR>
+				<TR>
+			</TABLE>
+			<TABLE CLASS=footerconnecttable>
+				<TR>
+					<TD><A HREF="http://www.brownpapertickets.com/followfacebook.html"><IMG SRC="/g/6/BPT_footer_facebook.png"></A></TD>
+					<TD><A HREF="http://www.brownpapertickets.com/followfacebook.html">Friend us on Facebook</A></TD>
+				</TR>
+				<TR>
+					<TD><A HREF="http://www.brownpapertickets.com/followtwitter.html"><IMG SRC="/g/6/BPT_footer_twitter.png"></A></TD>
+					<TD><A HREF="http://www.brownpapertickets.com/followtwitter.html">Follow us on Twitter</A></TD>
+				</TR>
+				<TR>
+					<TD><A HREF="http://www.brownpapertickets.com/followyoutube.html"><IMG SRC="/g/6/BPT_footer_youtube.png"></A></TD>
+					<TD><A HREF="http://www.brownpapertickets.com/followyoutube.html">Watch us on YouTube</A></TD>
+				</TR>
+				<TR>
+					<TD><A HREF="http://community.brownpapertickets.com/wp/"><IMG SRC="/g/6/BPT_footer_rss.png"></A></TD>
+					<TD><A HREF="http://community.brownpapertickets.com/wp/">Read our blog</A></TD>
+				</TR>
+				<TR>
+					<TD><A HREF="http://www.brownpapertickets.com/aboutus.html"><IMG SRC="/g/6/BPT_footer_meet.png"></A></TD>
+					<TD><A HREF="http://www.brownpapertickets.com/aboutus.html">Get to know us</A></TD>
+				</TR>
+				<TR>
+					<TD><A HREF="http://community.brownpapertickets.com/Doers"><IMG SRC="/g/6/BPT_footer_doers.png"></A></TD>
+					<TD><A HREF="http://community.brownpapertickets.com/Doers">Meet the Doers</A></TD>
+				</TR>
+			</TABLE>
+		</TD>
+	</TR>
+</TABLE>
+</CENTER>
+</div>
+<CENTER>
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=980px>
+	<TR>
+		<TD VALIGN=CENTER ALIGN=LEFT STYLE="color: #eceded; padding-left: 10px; height: 40px; font-size: 10px;">Use of Brown Paper Tickets is subject to our <A HREF="/legal.html" target="legal" ONCLICK="window.open(&#39;http://www.brownpapertickets.com/legal.html&#39;, &#39;legal&#39;, &#39;toolbar=no, location=no, directories=no, status=no, menubar=no, copyhistory=no, scrollbars=yes, resizable=yes, width=550, height=400&#39;)" STYLE="font-size: 10px;">Terms &amp; Conditions</A>.  All rights reserved.  &copy; 2000-2015</TD>
+		<TD VALIGN=CENTER ALIGN=RIGHT STYLE="padding-right: 10px;"><A HREF="http://m.bpt.me" STYLE="margin-right: 20px;" CLASS=footerlang>Mobile</A> <A HREF="http://www.brownpapertickets.com/setlanguage.html?language=en_US" CLASS=footerlangsel>EN</A> <A HREF="http://es.brownpapertickets.com" CLASS=footerlang>ES</A> <A HREF="http://fr.brownpapertickets.com" CLASS=footerlang>FR</A></TD></TR>
+</TABLE>
+</CENTER>
+
+<!-- Piwik -->
+<script type="text/javascript">
+var pkBaseURL = (("https:" == document.location.protocol) ? "https://stats.brownpapertickets.com/piwik/" : "http://stats.brownpapertickets.com/piwik/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript">
+try {
+var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 1);
+piwikTracker.trackPageView();
+piwikTracker.enableLinkTracking();
+} catch( err ) {}
+</script><noscript><p><img src="https://stats.brownpapertickets.com/piwik/piwik.php?idsite=1" style="border:0" alt="" /></p></noscript>
+<!-- End Piwik Tracking Code -->
+</body>
+</html>
+

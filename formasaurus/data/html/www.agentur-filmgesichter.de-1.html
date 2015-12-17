@@ -1,0 +1,107 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="stylesheet" href="../format/ie_tfs.css" type="text/css">
+<link rel="stylesheet" href="../styles/format.css" type="text/css">
+<title>Passwort vergessen...</title>
+<style type="text/css">
+<!--
+body {
+	margin-left: 6px;
+	margin-top: 2px;
+}
+-->
+</style></head>
+
+<body>
+
+
+<form id="passvergessen-form" name="form1" method="post" action="passvergessen.php?abgesendet=true" style="background-color: #998675; padding:1em; margin:2em;">
+<h2>Passwort vergessen </h2>
+<p class="text">Sie haben Ihr Passwort vergessen?<br />
+Bitte geben Sie hier Ihre Mailadresse und Ihren Namen ein,<br />
+ein vorläufiges Passwort wird Ihnen dann umgehend zugesandt.<br />
+<strong>Das Passwort ist nur 1 Stunde lang gültig! In dieser Zeit müssen Sie sich einloggen und ein neues Passwort vergeben.</strong></p>
+<p class="text">Sollte die Mail nicht in kurzer Zeit bei Ihnen eintreffen schauen Sie bitte in Ihrem Spamfilter/Papierkorb nach - Absender der Passwort-Mail ist post@filmgesichter.de (Agentur Filmgesichter).</p>
+ 
+                        <table width="350" border="0">
+                          <tr>
+                            <td width="96"><label class="text"><strong>Mailadresse:</strong></label></td>
+                            <td width="144"><input type="text" name="mail" class="eingabezeile" value="" /></td>
+                          </tr>
+                          <tr>
+                            <td><label class="text"><strong>Name:</strong></label>
+                              <strong>
+                              <label class="bez"></label>
+                              </strong></td>
+                            <td><input type="text" name="name"  class="eingabezeile" value=""  /></td>
+                          </tr>
+                          <tr>
+                            <td><label class="text"><strong>Vorname:</strong></label></td>
+                            <td><input type="text" name="vorname"  class="eingabezeile" value=""  /></td>
+                          </tr>
+                          <tr>
+                            <td colspan="2" class="text">
+                            <strong>Bitte beantworten Sie aus Sicherheitsgr&uuml;den und um Missbrauch auszuschlie&szlig;en diese triviale Frage:</strong><br /><br />
+        
+									<div id="captcha_frage_0" style="display:none" class="text" >
+		<input type="hidden" name="captcha_hash0" id="captcha_hash0" value="8edf9a0d18b537e39906efcd1ff1d8bd" />
+		<input type="hidden" name="captcha_id0" id="captcha_id0" value="15" />
+		<input type="hidden" name="captcha_nr0" id="captcha_nr0" value="0" />
+		<span class="question captcha">Geben Sie die zweite Farbe aus folgender Wortkombination ein: rotbraun</span><br />		<label  style="width: 96px">Antwort:</label>
+		<input name="captcha_answer_0" id="captcha_answer_0" value="" class=" captcha" style="float:none;" /> <img src="../img/refresh.png" id="captcha_aktualisieren_0" class="button refresh" alt="Frage aktualisieren" title="Frage aktualisieren" style="vertical-align: middle;" /><br clear="both" />
+	</div>
+		<div id="captcha_frage_1" style="display:none" class="text" >
+		<input type="hidden" name="captcha_hash1" id="captcha_hash1" value="272f0a4ea9d6091918aa892bbbce5691" />
+		<input type="hidden" name="captcha_id1" id="captcha_id1" value="9" />
+		<input type="hidden" name="captcha_nr1" id="captcha_nr1" value="1" />
+		<span class="question captcha">Ergänzen sie den fehlenden Buchstaben: Der Schüler macht Hausaufg_ben.</span><br />		<label  style="width: 96px">Antwort:</label>
+		<input name="captcha_answer_1" id="captcha_answer_1" value="" class=" captcha" style="float:none;" /> <img src="../img/refresh.png" id="captcha_aktualisieren_1" class="button refresh" alt="Frage aktualisieren" title="Frage aktualisieren" style="vertical-align: middle;" /><br clear="both" />
+	</div>
+		<div id="captcha_frage_2" style="display:none" class="text" >
+		<input type="hidden" name="captcha_hash2" id="captcha_hash2" value="ced3876c00b9f5312eca73a909af4c58" />
+		<input type="hidden" name="captcha_id2" id="captcha_id2" value="16" />
+		<input type="hidden" name="captcha_nr2" id="captcha_nr2" value="2" />
+		<span class="question captcha">Geben Sie bitte die folgende Ziffer als Wort ein: 6</span><br />		<label  style="width: 96px">Antwort:</label>
+		<input name="captcha_answer_2" id="captcha_answer_2" value="" class=" captcha" style="float:none;" /> <img src="../img/refresh.png" id="captcha_aktualisieren_2" class="button refresh" alt="Frage aktualisieren" title="Frage aktualisieren" style="vertical-align: middle;" /><br clear="both" />
+	</div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>&nbsp;</td>
+                            <td></td>
+                          </tr>
+                          <tr>
+                            <td class="text"><strong>Absenden:</strong></td>
+                            <td><input type="submit" class="button" value="absenden" name="absenden" style="margin: 0px;"></td>
+                          </tr>
+                        </table>
+                        <br />
+                        Dieses Fenster schlie&szlig;t sich automatisch nach erfolgreichem Absenden.
+</form>
+<script src="../scripts/jquery.min.js"></script>
+<script language="JavaScript" type="text/JavaScript">
+<!--
+
+	$(document).ready(function() {
+												//Captcha wechseln\n".
+												$("img'[id^='captcha_aktualisieren_']").click( function(){ 
+																	var nr=$(this).parent("div").attr('id').substr(14);
+																									if(nr<3){ 	var nrneu=(nr*1)+1;
+																											$('#captcha_frage_'+nr).css('display','none');
+																											$('#captcha_frage_'+nrneu).css('display','block');
+																											if(nrneu==2) { $("#captcha_frage_" + nrneu + " img'[id^='captcha_aktualisieren_']").css('display','none'); }
+																									 }
+												});
+												
+												//INITIALISIEREN: erstes Captcha anzeigen
+												$('#captcha_frage_0').css('display','block');
+	});
+
+//-->
+</script>
+					
+</body>
+</html>

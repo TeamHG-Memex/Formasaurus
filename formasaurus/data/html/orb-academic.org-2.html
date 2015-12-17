@@ -1,0 +1,561 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Search</title>
+	<meta name="description" content="The International Journal of Computer Science: Theory and Application is an open access and peer-reviewed Journal.  Authors are invited to submit  original papers on both applied or/and theoretical aspects of computer science." />
+	<meta name="keywords" content="International Journal of Computer Science; Journal of Computer Science; Call For Papers in Computer Science; Open Access Journal;  Research Papers Publication." />
+	<meta name="generator" content="Journal Systems 2.4.3.0" />
+	<title>International Journal of Computer Science</title>
+<meta name="Description" content="The International Journal of Computer Science: Theory and Application (IJCSTA) is a bi-monthly, open access and peer-reviewed International Journal for academic researchers, industrial professionals, educators, developers and technical managers in the computer science field.  
+The journal covers all areas of computer science, like computer engineering, computer security, database management system Artificial Intelligence, Software Engineering and more. We publish original research papers, state-of-the-art reviews, and high quality technical notes, on both applied and theoretical aspects of computer science.
+">
+<meta name="Keywords" content="Artificial Intelligence;
+Algorithms, Programming language theory, Formal methods;
+Computer architecture, Computer security, Computer graphics,
+Computer Components,  Digital Devices, and Interconnection Networks;
+Computer Organizations and Architectures;
+Data structures, Database theory;
+Operating Systems, Software Systems and engineering, Soft computing, and Communication Protocols;
+Computational Science, Theory of computation;
+Real-time Systems, Distributed Systems and Embedded Systems;
+Specification, Design, Prototyping, and Testing Methods and Tools;
+Human-based computation, Human–computer interaction;
+Reliability, Testability,  Performance and  Security;
+Business intelligence;">
+<meta name="Publisher" content="ORB Acadeic Publisher">
+<meta name="Identifier-Url" content="http://www.orb-academic.org/index.php/journal-of-computer-science">
+	<link rel="icon" href="http://orb-academic.org/public/journals/2/journalFavicon_en_US.png" type="image/png" />	<link rel="stylesheet" href="http://orb-academic.org/lib/pkp/styles/pkp.css" type="text/css" />
+	<link rel="stylesheet" href="http://orb-academic.org/lib/pkp/styles/common.css" type="text/css" />
+	<link rel="stylesheet" href="http://orb-academic.org/styles/common.css" type="text/css" />
+	<link rel="stylesheet" href="http://orb-academic.org/styles/compiled.css" type="text/css" />
+
+	<!-- Base Jquery -->
+	<script type="text/javascript" src="//www.google.com/jsapi"></script>
+		<script type="text/javascript">
+			<!--
+			// Provide a local fallback if the CDN cannot be reached
+			if (typeof google == 'undefined') {
+				document.write(unescape("%3Cscript src='http://orb-academic.org/lib/pkp/js/lib/jquery/jquery.min.js' type='text/javascript'%3E%3C/script%3E"));
+				document.write(unescape("%3Cscript src='http://orb-academic.org/lib/pkp/js/lib/jquery/plugins/jqueryUi.min.js' type='text/javascript'%3E%3C/script%3E"));
+			} else {
+				google.load("jquery", "1.4.4");
+				google.load("jqueryui", "1.8.6");
+			}
+			// -->
+		</script>
+	
+	
+	
+	<link rel="stylesheet" href="http://orb-academic.org/styles/sidebar.css" type="text/css" />		<link rel="stylesheet" href="http://orb-academic.org/styles/rightSidebar.css" type="text/css" />	
+			<link rel="stylesheet" href="http://orb-academic.org/public/site/sitestyle.css" type="text/css" />
+	
+	<!-- Default global locale keys for JavaScript -->
+	
+<script type="text/javascript">
+	jQuery.pkp = jQuery.pkp || { };
+	jQuery.pkp.locale = { };
+			
+				jQuery.pkp.locale.search_noKeywordError = 'You must enter at least one search keyword.';
+	</script>
+	<!-- Compiled scripts -->
+			
+<script type="text/javascript" src="http://orb-academic.org/lib/pkp/js/lib/jquery/plugins/jquery.tag-it.js"></script>
+<script type="text/javascript" src="http://orb-academic.org/lib/pkp/js/lib/jquery/plugins/jquery.cookie.js"></script>
+
+<script type="text/javascript" src="http://orb-academic.org/lib/pkp/js/functions/fontController.js"></script>
+<script type="text/javascript" src="http://orb-academic.org/lib/pkp/js/functions/general.js"></script>
+<script type="text/javascript" src="http://orb-academic.org/lib/pkp/js/functions/jqueryValidatorI18n.js"></script>
+
+<script type="text/javascript" src="http://orb-academic.org/lib/pkp/js/classes/Helper.js"></script>
+<script type="text/javascript" src="http://orb-academic.org/lib/pkp/js/classes/ObjectProxy.js"></script>
+<script type="text/javascript" src="http://orb-academic.org/lib/pkp/js/classes/Handler.js"></script>
+<script type="text/javascript" src="http://orb-academic.org/lib/pkp/js/classes/linkAction/LinkActionRequest.js"></script>
+<script type="text/javascript" src="http://orb-academic.org/lib/pkp/js/classes/features/Feature.js"></script>
+
+<script type="text/javascript" src="http://orb-academic.org/lib/pkp/js/controllers/SiteHandler.js"></script><!-- Included only for namespace definition -->
+<script type="text/javascript" src="http://orb-academic.org/lib/pkp/js/controllers/UrlInDivHandler.js"></script>
+<script type="text/javascript" src="http://orb-academic.org/lib/pkp/js/controllers/AutocompleteHandler.js"></script>
+<script type="text/javascript" src="http://orb-academic.org/lib/pkp/js/controllers/ExtrasOnDemandHandler.js"></script>
+<script type="text/javascript" src="http://orb-academic.org/lib/pkp/js/controllers/form/FormHandler.js"></script>
+<script type="text/javascript" src="http://orb-academic.org/lib/pkp/js/controllers/form/AjaxFormHandler.js"></script>
+<script type="text/javascript" src="http://orb-academic.org/lib/pkp/js/controllers/form/ClientFormHandler.js"></script>
+<script type="text/javascript" src="http://orb-academic.org/lib/pkp/js/controllers/grid/GridHandler.js"></script>
+<script type="text/javascript" src="http://orb-academic.org/lib/pkp/js/controllers/linkAction/LinkActionHandler.js"></script>
+
+<script type="text/javascript" src="http://orb-academic.org/js/pages/search/SearchFormHandler.js"></script>
+<script type="text/javascript" src="http://orb-academic.org/js/statistics/ReportGeneratorFormHandler.js"></script>
+<script type="text/javascript" src="http://orb-academic.org/plugins/generic/lucene/js/LuceneAutocompleteHandler.js"></script>
+
+<script type="text/javascript" src="http://orb-academic.org/lib/pkp/js/lib/jquery/plugins/jquery.pkp.js"></script>	
+	<!-- Add javascript required for font sizer -->
+	<script type="text/javascript">
+		<!--
+		$(function(){
+			fontSize("#sizer", "body", 9, 16, 32, ""); // Initialize the font sizer
+		});
+		// -->
+	</script>
+
+	<!-- Form validation -->
+	<script type="text/javascript" src="http://orb-academic.org/lib/pkp/js/lib/jquery/plugins/validate/jquery.validate.js"></script>
+	<script type="text/javascript">
+		<!--
+		// initialise plugins
+		
+		$(function(){
+			jqueryValidatorI18n("http://orb-academic.org", "en_US"); // include the appropriate validation localization
+			
+			$(".tagit").live('click', function() {
+				$(this).find('input').focus();
+			});
+		});
+		// -->
+		
+	</script>
+
+		
+</head>
+<body>
+<div id="container">
+
+<div id="header">
+<div id="headerTitle">
+<h1>
+    <a href="http://orb-academic.org">
+	<img src="http://orb-academic.org/public/journals/2/pageHeaderTitleImage_en_US.png" width="869" height="98" alt="Page Header" />
+    </a>
+</h1>
+</div>
+
+
+<div id="navbar">
+	<ul class="menu"  id="menuprincipal">
+					<li id="home"><a href="http://orb-academic.org/index.php/journal-of-computer-science/index">Journal Home</a></li>
+			<li id="about"><a href="http://orb-academic.org/index.php/journal-of-computer-science/about">About Journal</a></li>
+			
+   		
+					<li id="login"><a href="http://orb-academic.org/index.php/journal-of-computer-science/login">Login</a></li>
+							<li id="register"><a href="http://orb-academic.org/index.php/journal-of-computer-science/user/register">Register</a></li>
+												<li id="search"><a href="http://orb-academic.org/index.php/journal-of-computer-science/search">Search</a></li>
+		
+		
+					<li id="current"><a href="http://orb-academic.org/index.php/journal-of-computer-science/issue/current">Current</a></li>
+			<li id="archives"><a href="http://orb-academic.org/index.php/journal-of-computer-science/issue/archive">Archives</a></li> 
+
+		
+				
+
+								</ul>
+</div>
+
+<div id="breadcrumb">
+	<div id="breadcrumbint">
+
+	<a href="http://orb-academic.org/index.php/journal-of-computer-science/index">Home</a> &#187;
+			<a href="http://orb-academic.org/index.php/journal-of-computer-science/search" class="current">Search</a></div>
+</div>
+</div>
+
+<div id="body">
+
+	<div id="sidebar">
+							<div id="rightSidebar">
+				 
+ 
+
+ 
+
+
+<div class="block" id="sidebarInformation">
+	<div id="imagePreface" >
+	<table>
+		<tr >
+			<td> 
+			<div > <img src="http://orb-academic.org/public/journals/2/preface.png" width="100px" height="130px"  alt="logo of journal"/> </div>
+		</td>
+		<td>
+			<div id="preface">
+			
+			<table id="tablePreface">
+				<tr>
+				<td>
+				<div id="freq">	
+					Frequency: 6/Year
+				</div>
+				</td>
+				</tr>
+				
+				<tr>
+					<td width="400px"> <div id="freq">	ISSN:
+						
+						2336-0984
+					</div>
+						
+					</td>
+				</tr>
+			</table>	
+		</div>
+	
+		</td>
+		</tr>
+	</table>
+</div>
+	<br>
+       
+	
+        <div class="champsBarDroit" id="home"> &#149; <a href="http://orb-academic.org/index.php/journal-of-computer-science/index">Focus and Scope</a></div>
+		
+		
+		<div class="champsBarDroit" id="editorial"> &#149; <a href="http://orb-academic.org/index.php/journal-of-computer-science/about/editorialTeam">Journal Committee</a></div>      	
+ 		
+ 				<div class="champsBarDroit" id="indexig"> &#149; <a href="http://orb-academic.org/index.php/journal-of-computer-science/information/indexing">Abstracting and Indexing</a></div>
+                <div class="champsBarDroit" id="submission"> &#149; <a href="http://orb-academic.org/index.php/journal-of-computer-science/about/submissions">Submission</a></div>
+	
+        
+		<div class="champsBarDroit" id="peer">&#149; <a href="http://orb-academic.org/index.php/journal-of-computer-science/information/peerReviewProcess">Peer Review Process</a></div>
+
+				<div class="champsBarDroit" id="auteur">&#149; <a href="http://orb-academic.org/index.php/journal-of-computer-science/information/authors">For Authors</a></div>
+
+				<div class="champsBarDroit" id="reviewer">&#149; <a href="http://orb-academic.org/index.php/journal-of-computer-science/information/reviewers">For Reviewers</a></div>		
+
+                <div class="champsBarDroit" id="contactUs">&#149; <a href="http://orb-academic.org/index.php/journal-of-computer-science/about/contact">Contact</a></div>
+		
+        <br>
+        <br>
+        <br>
+        <br>
+		
+		
+	</ul>
+</div>
+
+			</div>
+			</div>
+
+<div id="main">
+
+
+<h2>Search</h2>
+
+
+<div id="content">
+
+
+
+<div id="search">
+	<script type="text/javascript">
+		$(function() {
+			// Attach the form handler.
+			$('#searchForm').pkpHandler('$.pkp.pages.search.SearchFormHandler');
+		});
+	</script>
+	<form method="post" id="searchForm" action="http://orb-academic.org/index.php/journal-of-computer-science/search/search">
+		<table class="data">
+			<tr valign="top">
+				<td class="label"><label for="query">Search for</label></td>
+				<td class="value">
+																<input type="text" id="query" name="query" size="40" maxlength="255" value="" class="textField" />
+										&nbsp;
+					<input type="submit" value="Search" class="button defaultButton" />
+				</td>
+			</tr>
+								</table>
+		<br/>
+								<script type="text/javascript">
+	// Initialise JS handler.
+	$(function() {
+		$('#emptyFilters').pkpHandler(
+			'$.pkp.controllers.ExtrasOnDemandHandler');
+	});
+</script>
+	<div id="emptyFilters" class="pkp_controllers_extrasOnDemand">
+	<div class="toggleExtras">
+		<span class="ui-icon"></span>
+		<span class="toggleExtras-inactive">Additional Search Options <font color="red"> (click to show) </font>
+					</span>
+		<span class="toggleExtras-active">Additional Search Options <font color="red"> (click to hide)</font>
+					</span>
+	</div>
+	<div style="clear:both;"></div>
+	<div class="extrasContainer">
+						<table class="data">
+											<tr valign="top">
+							<td colspan="2" class="label"><h4>Search categories</h4></td>
+						</tr>
+								<tr>
+		<td class="label">
+			<label for="authors">Authors</label>
+		</td>
+		<td class="value">
+																<input type="text" name="authors" id="authors" size="40" maxlength="255" value="" class="textField">
+												</td>
+	</tr>
+								<tr>
+		<td class="label">
+			<label for="title">Title</label>
+		</td>
+		<td class="value">
+																<input type="text" name="title" id="title" size="40" maxlength="255" value="" class="textField">
+												</td>
+	</tr>
+								<tr>
+		<td class="label">
+			<label for="abstract">Abstract</label>
+		</td>
+		<td class="value">
+																<input type="text" name="abstract" id="abstract" size="40" maxlength="255" value="" class="textField">
+												</td>
+	</tr>
+								<tr>
+		<td class="label">
+			<label for="galleyFullText">Full Text</label>
+		</td>
+		<td class="value">
+																<input type="text" name="galleyFullText" id="galleyFullText" size="40" maxlength="255" value="" class="textField">
+												</td>
+	</tr>
+								<tr>
+		<td class="label">
+			<label for="suppFiles">Supplementary File(s)</label>
+		</td>
+		<td class="value">
+																<input type="text" name="suppFiles" id="suppFiles" size="40" maxlength="255" value="" class="textField">
+												</td>
+	</tr>
+																<tr valign="top">
+							<td colspan="2" class="formSubLabel"><h4>Publication Date</h4></td>
+						</tr>
+								<tr>
+		<td class="label">
+			<label for="dateFrom">From</label>
+		</td>
+		<td class="value">
+							<select name="dateFromMonth" class="selectMenu">
+<option label="" value="" selected="selected"></option>
+<option label="January" value="01">January</option>
+<option label="February" value="02">February</option>
+<option label="March" value="03">March</option>
+<option label="April" value="04">April</option>
+<option label="May" value="05">May</option>
+<option label="June" value="06">June</option>
+<option label="July" value="07">July</option>
+<option label="August" value="08">August</option>
+<option label="September" value="09">September</option>
+<option label="October" value="10">October</option>
+<option label="November" value="11">November</option>
+<option label="December" value="12">December</option>
+</select>
+<select name="dateFromDay" class="selectMenu">
+<option label="" value="" selected="selected"></option>
+<option label="01" value="1">01</option>
+<option label="02" value="2">02</option>
+<option label="03" value="3">03</option>
+<option label="04" value="4">04</option>
+<option label="05" value="5">05</option>
+<option label="06" value="6">06</option>
+<option label="07" value="7">07</option>
+<option label="08" value="8">08</option>
+<option label="09" value="9">09</option>
+<option label="10" value="10">10</option>
+<option label="11" value="11">11</option>
+<option label="12" value="12">12</option>
+<option label="13" value="13">13</option>
+<option label="14" value="14">14</option>
+<option label="15" value="15">15</option>
+<option label="16" value="16">16</option>
+<option label="17" value="17">17</option>
+<option label="18" value="18">18</option>
+<option label="19" value="19">19</option>
+<option label="20" value="20">20</option>
+<option label="21" value="21">21</option>
+<option label="22" value="22">22</option>
+<option label="23" value="23">23</option>
+<option label="24" value="24">24</option>
+<option label="25" value="25">25</option>
+<option label="26" value="26">26</option>
+<option label="27" value="27">27</option>
+<option label="28" value="28">28</option>
+<option label="29" value="29">29</option>
+<option label="30" value="30">30</option>
+<option label="31" value="31">31</option>
+</select>
+<select name="dateFromYear" class="selectMenu">
+<option label="" value="" selected="selected"></option>
+<option label="2014" value="2014">2014</option>
+<option label="2015" value="2015">2015</option>
+</select>
+												</td>
+	</tr>
+								<tr>
+		<td class="label">
+			<label for="dateTo">Until</label>
+		</td>
+		<td class="value">
+							<select name="dateToMonth" class="selectMenu">
+<option label="" value="" selected="selected"></option>
+<option label="January" value="01">January</option>
+<option label="February" value="02">February</option>
+<option label="March" value="03">March</option>
+<option label="April" value="04">April</option>
+<option label="May" value="05">May</option>
+<option label="June" value="06">June</option>
+<option label="July" value="07">July</option>
+<option label="August" value="08">August</option>
+<option label="September" value="09">September</option>
+<option label="October" value="10">October</option>
+<option label="November" value="11">November</option>
+<option label="December" value="12">December</option>
+</select>
+<select name="dateToDay" class="selectMenu">
+<option label="" value="" selected="selected"></option>
+<option label="01" value="1">01</option>
+<option label="02" value="2">02</option>
+<option label="03" value="3">03</option>
+<option label="04" value="4">04</option>
+<option label="05" value="5">05</option>
+<option label="06" value="6">06</option>
+<option label="07" value="7">07</option>
+<option label="08" value="8">08</option>
+<option label="09" value="9">09</option>
+<option label="10" value="10">10</option>
+<option label="11" value="11">11</option>
+<option label="12" value="12">12</option>
+<option label="13" value="13">13</option>
+<option label="14" value="14">14</option>
+<option label="15" value="15">15</option>
+<option label="16" value="16">16</option>
+<option label="17" value="17">17</option>
+<option label="18" value="18">18</option>
+<option label="19" value="19">19</option>
+<option label="20" value="20">20</option>
+<option label="21" value="21">21</option>
+<option label="22" value="22">22</option>
+<option label="23" value="23">23</option>
+<option label="24" value="24">24</option>
+<option label="25" value="25">25</option>
+<option label="26" value="26">26</option>
+<option label="27" value="27">27</option>
+<option label="28" value="28">28</option>
+<option label="29" value="29">29</option>
+<option label="30" value="30">30</option>
+<option label="31" value="31">31</option>
+</select>
+<select name="dateToYear" class="selectMenu">
+<option label="" value="" selected="selected"></option>
+<option label="2014" value="2014">2014</option>
+<option label="2015" value="2015">2015</option>
+</select>
+									<input type="hidden" name="dateToHour" value="23" />
+					<input type="hidden" name="dateToMinute" value="59" />
+					<input type="hidden" name="dateToSecond" value="59" />
+												</td>
+	</tr>
+																<tr valign="top">
+							<td colspan="2" class="label"><h4>Index terms</h4></td>
+						</tr>
+								<tr>
+		<td class="label">
+			<label for="discipline">Discipline(s)</label>
+		</td>
+		<td class="value">
+																<input type="text" name="discipline" id="discipline" size="40" maxlength="255" value="" class="textField">
+												</td>
+	</tr>
+								<tr>
+		<td class="label">
+			<label for="subject">Keyword(s)</label>
+		</td>
+		<td class="value">
+																<input type="text" name="subject" id="subject" size="40" maxlength="255" value="" class="textField">
+												</td>
+	</tr>
+								<tr>
+		<td class="label">
+			<label for="type">Type (method/approach)</label>
+		</td>
+		<td class="value">
+																<input type="text" name="type" id="type" size="40" maxlength="255" value="" class="textField">
+												</td>
+	</tr>
+								<tr>
+		<td class="label">
+			<label for="coverage">Coverage</label>
+		</td>
+		<td class="value">
+																<input type="text" name="coverage" id="coverage" size="40" maxlength="255" value="" class="textField">
+												</td>
+	</tr>
+								<tr>
+		<td class="label">
+			<label for="indexTerms">All index term fields</label>
+		</td>
+		<td class="value">
+																<input type="text" name="indexTerms" id="indexTerms" size="40" maxlength="255" value="" class="textField">
+												</td>
+	</tr>
+									</table>
+				<p><input type="submit" value="Search" class="button defaultButton" /></p>
+			
+	</div>
+</div>
+<div style="clear:both"></div>			</form>
+</div>
+<br />
+
+
+
+	
+<div id="results">
+	<table width="100%" class="listing">
+		<tr><td colspan="3" class="headseparator">&nbsp;</td></tr>
+		<tr class="heading" valign="bottom">
+						<td width="40%">Issue</td>
+			<td width="60%" colspan="2">Title</td>
+		</tr>
+		<tr><td colspan="3" class="headseparator">&nbsp;</td></tr>
+
+							<tr>
+				<td colspan="3" class="nodata">
+											No Results
+									</td>
+			</tr>
+			<tr><td colspan="3" class="endseparator">&nbsp;</td></tr>
+			</table>
+
+		<p>
+					Search tips: <ul>
+<li>Search terms are case-insensitive</li>
+<li>Common words are ignored</li>
+<li>By default only articles containing <em>all</em> terms in the query are returned (i.e., <em>AND</em> is implied)</li>
+<li>Combine multiple words with <em>OR</em> to find articles containing either term; e.g., <em>education OR research</em></li>
+<li>Use parentheses to create more complex queries; e.g., <em>archive ((journal OR conference) NOT theses)</em></li>
+<li>Search for an exact phrase by putting it in quotes; e.g., <em>"open access publishing"</em></li>
+<li>Exclude a word by prefixing it with <strong>-</strong> or <em>NOT</em>; e.g. <em>online -politics</em> or <em>online NOT politics</em></li>
+<li>Use <strong>*</strong> in a term as a wildcard to match any sequence of characters; e.g., <em>soci* morality</em> would match documents containing "sociological" or "societal"</li>
+</ul>
+			</p>
+</div>
+
+	<br /><br />
+	ISSN: 2336-0984
+<!-- Google Analytics -->
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-46841413-1";
+urchinTracker();
+</script>
+<!-- /Google Analytics -->
+
+</div><!-- content -->
+</div><!-- main -->
+</div><!-- body -->
+
+
+
+</div><!-- container -->
+</body>
+</html>

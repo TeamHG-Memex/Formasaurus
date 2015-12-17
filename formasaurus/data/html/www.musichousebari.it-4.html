@@ -1,0 +1,517 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Ordina su Music House Bari</title>
+<meta name="Description" content="Compila il modulo sottostante per ordinare il tuo prodotto da Music House." />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="shortcut icon" href="favicon.ico" />
+<link href="css/layout.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="css/domnews.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="css/stampa.css" rel="stylesheet" type="text/css" media="print" />
+<script type="text/javascript" src="script/preferiti.js"></script>
+<script type="text/javascript" src="script/logo.js"></script>
+<script type="text/javascript" src="script/scrollnews.js"></script>
+<style type="text/css">
+fieldset { line-height:2.1em; margin-top:1em}
+.traspar { background-color:#E4E4E4; border:1px solid #E4E4E4; text-align:right; padding-bottom:0px; color:#000000}
+#destdiv { display: none}
+.testopic { font-size:0.85em; line-height:1.2em; padding:0; margin:0}
+.labelspaz { width:170px; float:left; clear:left}
+.iconsped { width:40px; float:left; clear:left}
+</style>
+<script type="text/javascript" src="script/ordina.js"></script>
+<script type="text/javascript">
+function convalida() {
+
+/* spedizione */
+var controllo = false;
+var bottone = document.getElementsByName("spedizione");
+for(var i=0; i<bottone.length; i++) {
+  if(bottone[i].checked) {
+    controllo = true;
+    break;
+  }
+}
+if(!controllo) {
+  alert("Seleziona il tipo di spedizione che desideri effettuare, grazie.");
+  document.getElementById('spedizione_normale').focus();
+  return false;
+}
+
+/*metodo di pagamento */
+var controllo_p = false;
+var bottone_p = document.getElementsByName("pagamento");
+for(var i=0; i<bottone_p.length; i++) {
+  if(bottone_p[i].checked) {
+    controllo_p = true;
+    break;
+  }
+}
+if(!controllo_p) {
+  alert("Seleziona la modalità di pagamento, grazie.");
+  document.getElementById('bonifico').focus();
+  return false;
+}
+
+
+if (document.getElementById('nome').value == "") {
+				alert("Scrivi il tuo nome, grazie");
+				document.getElementById('nome').focus();
+				return false;
+				}			
+if (document.getElementById('cognome').value == "") {
+				alert("Scrivi il tuo cognome, grazie");
+				document.getElementById('cognome').focus();
+				return false;
+				}
+if (document.getElementById('indirizzo').value == "") {
+				alert("Scrivi l'indirizzo al quale desideri ricevere la merce, grazie");
+				document.getElementById('indirizzo').focus();
+				return false;
+				}	
+if (document.getElementById('numero').value == "") {
+				alert("Scrivi il numero civico, grazie");
+				document.getElementById('numero').focus();
+				return false;
+				}					
+if (document.getElementById('cap').value == "") {
+				alert("Scrivi il Codice di Aviamento Postale (CAP), grazie. Ti ricordo che è importante che sia quello del tuo quartiere e non quello generico della tua città");
+				document.getElementById('cap').focus();
+				return false;
+				}	
+if (document.getElementById('provincia').value == "") {
+				alert("Scrivi la sigla della tua provincia");
+				document.getElementById('provincia').focus();
+				return false;
+				}		
+if (document.getElementById('citta').value == "") {
+				alert("Scrivi il nome della tua città o del tuo comune, grazie");
+				document.getElementById('citta').focus();
+				return false;
+				}	
+if (document.getElementById('telefono').value == "") {
+				alert("Scrivi il tuo numero di telefono fisso per eventuali comunicazioni, grazie");
+				document.getElementById('telefono').focus();
+				return false;
+				}	
+if (document.getElementById('email').value == "") {
+				alert("Scrivi il tuo indirizzo e-mail, grazie");
+				document.getElementById('email').focus();
+				return false;
+				}	
+if (document.getElementById('email').value != "") {
+var email = document.getElementById('email').value;
+if (email.indexOf('@', 0) == -1  || email.indexOf('.', 0) == -1 || email.length < 6){ 
+alert("L'e-mail inserita non è valida. Ricontrollala, grazie.");
+document.getElementById('email').focus();
+return false;
+}
+}
+				
+if (document.getElementById('gg').value == "") {
+				alert("Scegli il giorno in cui sei nato");
+				document.getElementById('gg').focus();
+				return false;
+				}
+if (document.getElementById('mm').value == "") {
+				alert("Scegli il mese in cui sei nato");
+				document.getElementById('mm').focus();
+				return false;
+				}
+if (document.getElementById('aaaa').value == "") {
+				alert("Scegli l'anno in cui sei nato, grazie");
+				document.getElementById('aaaa').focus();
+				return false;
+				}
+if (Date()-Date(document.getElementById('aaaa').value,document.getElementById('mm').value,document.getElementById('gg').value)<18) {
+				alert("Devi essere maggiorenne per poter acquistare presso il nostro negozio");
+				return false;
+				}
+if (document.getElementById('codicefiscale').value == "") {
+				alert("Scrivi il tuo codice fiscale, grazie");
+				document.getElementById('codicefiscale').focus();
+				return false;
+				}	
+
+
+
+
+/* condizioni contratto */
+if (!document.getElementById('condizioni').checked) {
+		if(document.getElementById('condizioni').checked==false) 
+			{
+		alert("Devi accettare le condizioni di vendita per effettuare l'acquisto");
+		return false;
+			}
+	}
+	
+/* privacy */
+if (!document.getElementById('privacy').checked) {
+		if(document.getElementById('privacy').checked==false) {
+		alert("Devi dare il tuo consenso al trattamento dei dati personali per effettuare la registrazione");
+		return false;
+			}
+		}
+}
+</script>
+</head>
+
+<body>
+<table border="0" cellpadding="0" cellspacing="0" id="contenuti">
+  <tr id="intestazione">
+    <td colspan="3"><div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/it_IT/all.js#xfbml=1&appId=400152260082510";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div id="menualto">
+  <ul>
+  <li><a href="index.asp">Home page</a></li>
+    <li><a href="orari-negozio-musica-strumenti-musicali-bari.asp">Orari</a></li>
+    <li><a title="Tutte le informazioni sulla ditta Music House e sugli strumenti musicali" href="chi_siamo_new.asp">Chi siamo</a></li>
+    <li><a title="Come raggiungere Music House" href="negozio-strumenti-musicali-bari.asp">Dove siamo</a></li>
+  </ul>
+  </div>
+<object type="application/x-shockwave-flash" data="images/struttura/logo.swf" width="243" height="98">
+<param name="movie" value="images/struttura/logo.swf" /></object><img src="images/struttura/pianoforte.jpg" alt="Pianoforte" width="93" height="98" /><img src="images/struttura/chitarre_classiche_st.jpg" alt="Basso elettrico" width="61" height="28" id="basso" /><img src="images/struttura/bassi_elettrici_sb.jpg" alt="Basso" width="61" height="70" id="basso2" /><img src="images/struttura/bassi_dt.jpg" alt="fgdfgd" width="121" height="28" id="acustica" /><img src="images/struttura/chitarre_acustiche_db.jpg" alt="Chitarra" width="121" height="70" id="chitarra" /><img src="images/struttura/pedaliera.jpg" alt="Pedaliera" width="98" height="70" /><img src="images/struttura/microfoni.jpg" alt="Microfono" width="96" height="70" /><img src="images/struttura/amplificatori.jpg" alt="Amplificatori" width="60" height="70" /></td>
+  </tr>
+  <tr>
+    <td rowspan="2" id="newsletter">  
+<a href="contatti_new.asp"><img src="images/struttura/telefono.gif" alt="Servizio clienti - Telefono: 0805019521" width="160" height="50"  /></a></td>
+    <td id="menucentrale">
+     <form id="serachform" method="post" action="cerca.asp"> 
+	 <label for="serachform"><b><a title="Cerca uno strumento musicale" href="cerca.asp" >Cerca:</a></b></label>
+            <input id="search" name="search" type="text"  onfocus="if(this.value=='Scrivi qui il prodotto che cerchi')this.value='';" value="Scrivi qui il prodotto che cerchi" size="40" /> 
+            
+
+         
+            <input type="submit" name="Submit" value="Vai" id="cercavai" />
+         
+            <a href="http://www.facebook.com/pages/Music-House/251331113012"><img src="images/struttura/facebook.gif" alt="Seguici su Facebook" width="79" height="25" border="0" style="margin-left:30px" /></a>
+     </form>  </td>
+    <td id="recapiti">
+<a href="mailto:info@musichousebari.it"><img src="images/struttura/e-mail.gif" alt="Email: info@musichousebari.it" width="180" height="34"  /></a></td>
+  </tr>
+  <tr>
+    <td colspan="2" id="titrovi">Ti trovi in: <a title="Tutti gli strumenti musicali online" href="strumenti-musicali.asp">Strumenti musicali</a>  &#187; <a title="Amplificazione" href="categoria_strumenti.asp?idcat=6">Amplificazione</a> &#187; <a title="Monitor da Studio" href="strumenti_musicali.asp?idsot=68">Monitor da Studio</a> &#187; Alesis M1Active monitor MK2 coppia di monitor bi amplificati &#187; <b>Acquista</b></td>
+  </tr>
+  <tr>
+    <td class="colonnasinistra"><div class="lineasep"></div><div><ul id="nav">
+<li><a title="Strumenti musicali: Promo e mercatino" href="categoria_strumenti.asp?idcat=20">Promo e mercatino</a></li>
+<li class="lialter" ><a title="Strumenti musicali: Chitarre" href="categoria_strumenti.asp?idcat=19">Chitarre</a></li>
+<li><a title="Strumenti musicali: Bassi" href="categoria_strumenti.asp?idcat=2">Bassi</a></li>
+<li class="lialter" ><a title="Strumenti musicali: Batterie e percussioni" href="categoria_strumenti.asp?idcat=3">Batterie e percussioni</a></li>
+<li><a title="Strumenti musicali: Pianoforti e tastiere" href="categoria_strumenti.asp?idcat=1">Pianoforti e tastiere</a></li>
+<li class="lialter" ><a title="Strumenti musicali: Effetti e Processori" href="categoria_strumenti.asp?idcat=7">Effetti e Processori</a></li>
+<li><a title="Strumenti musicali: Strumenti a corda" href="categoria_strumenti.asp?idcat=5">Strumenti a corda</a></li>
+<li class="lialter" ><a title="Strumenti musicali: Strumenti a fiato" href="categoria_strumenti.asp?idcat=14">Strumenti a fiato</a></li>
+<li><a title="Strumenti musicali: Prodotti per DJ" href="categoria_strumenti.asp?idcat=8">Prodotti per DJ</a></li>
+<li class="lialter" ><a title="Strumenti musicali: Amplificazione" href="categoria_strumenti.asp?idcat=6">Amplificazione</a></li>
+<li><a title="Strumenti musicali: Gadget e regali" href="categoria_strumenti.asp?idcat=11">Gadget e regali</a></li>
+<li class="lialter" ><a title="Strumenti musicali: Edizioni musicali" href="categoria_strumenti.asp?idcat=10">Edizioni musicali</a></li>
+<li><a title="Strumenti musicali: Strumenti didattici" href="categoria_strumenti.asp?idcat=4">Strumenti didattici</a></li>
+<li class="lialter" ><a title="Strumenti musicali: Fisarmoniche" href="categoria_strumenti.asp?idcat=15">Fisarmoniche</a></li>
+<li><a title="Strumenti musicali: Strumenti ad arco" href="categoria_strumenti.asp?idcat=13">Strumenti ad arco</a></li>
+</ul></div>
+<div class="lineasep"></div>
+<div class="tabhome centrato"><b>Alcuni marchi</b></div>
+<div class="box centrato bianco">
+<div id="news"><ul>
+	<li><a title="Tutti gli strumenti Carisch" href="strumenti_musicali.asp?marcap=133"><img src='images/marchi/carisch.gif' alt="Carisch" hspace='4' /></a></li>
+	<li><a title="Tutti gli strumenti Cort Dealer" href="strumenti_musicali.asp?marcap=22"><img src='images/marchi/cort.gif' alt="Cort Dealer" hspace='4' /></a></li>
+		<li><a title="Tutti gli strumenti Eko" href="strumenti_musicali.asp?marcap=51"><img src='images/marchi/Eko.jpg' alt="Eko" hspace='4' /></a></li>
+  <li><a title="Tutti gli strumenti Fender" href="strumenti_musicali.asp?marcap=19"><img src='images/marchi/fender.gif' alt="Fender" hspace='4' /></a></li>
+  	<li><a title="Tutti gli strumenti Gibson" href="strumenti_musicali.asp?marcap=32"><img src='images/marchi/gibson.gif' alt="Gibson" hspace='4' /></a></li>
+  <li><a title="Tutti gli strumenti Ibanez" href="strumenti_musicali.asp?marcap=18"><img src='images/marchi/ibanez.gif' alt="Ibanez" hspace='4' /></a></li>
+	<li><a title="Tutti gli strumenti Marshall" href="strumenti_musicali.asp?marcap=56"><img src='images/marchi/marshall.jpg' alt="Marshall" hspace='4' /></a></li>
+  <li><a title="Tutti gli strumenti Martin" href="strumenti_musicali.asp?marcap=171"><img src='images/marchi/martin.jpg' alt="Martin, USA" hspace='4' /></a></li>
+  <li><a title="Tutti gli strumenti Mesa Boogie" href="strumenti_musicali.asp?marcap=97"><img src='images/marchi/Mesa-Boogie.jpg' alt="Mesa Boogie" hspace='4' /></a></li>
+    <li><a title="Tutti gli strumenti PRS" href="strumenti_musicali.asp?marcap=37"><img src='images/marchi/PRS-Paul-Red-Smith.jpg' alt="PRS Paul Red Smith" hspace='4' /></a></li>
+	<li><a title="Tutti gli strumenti Tama" href="strumenti_musicali.asp?marcap=46"><img src='images/marchi/tama.gif' alt="Tama" hspace='4' /></a></li>
+</ul>
+</div>
+</div>
+<div class="lineasep lineasotto"></div>
+<div class="tabhome centrato"><b>Modalit&agrave; di pagamento</b></div>
+<div class="box centrato"><br />
+  <a href="#" onclick="modpagamenti('modalita_pagamento.asp#contrassegno');">Contrassegno</a><br />
+<br />
+<a href="#" onclick="modpagamenti('modalita_pagamento.asp#bonificoi');">Bonifico per l'Italia</a><br />
+<br />
+<a href="#" onclick="modpagamenti('modalita_pagamento.asp#bonificoe');">Bonifico per l'Estero</a><br />
+<br />
+<a href="#" onclick="modpagamenti('modalita_pagamento.asp#postepay');">Postepay</a><br />
+<br />
+<a href="#" onclick="modpagamenti('modalita_pagamento.asp#info');">Informazioni</a></div>    
+
+
+<div class="lineasep"></div><div class="lineasep lineasotto"></div>
+<!--<div id="novita" class="box bianco centrato"><b class="rosso">Ultime novit&agrave;:</b><br />
+</div><div class="lineasep"></div><div class="lineasep lineasotto"></div><div id="novita" class="box bianco centrato"><b class="rosso">Novit&agrave;: editoriali</b><br />
+</div>
+<div class="lineasep"></div><div class="lineasep lineasotto"></div>!-->
+
+
+
+
+
+</div></td>
+    <td colspan="2" id="centr"><table border="0" cellpadding="0" cellspacing="0" id="tabellacentrale">
+      <tr>
+        <td id="boxinfo"><h1>Acquista</h1>
+          <p>Compila il seguente modulo per acquistare un oggetto dal nostro negozio. Tutti i prezzi  sono IVA inclusa. <b>Le voci  contrassegnate in rosso e dal cancelletto (#) sono obbligatorie. </b></p>
+         
+          <form id="ordine" method="post" action="ordine_inviato.asp" onsubmit="return convalida();">
+		 
+		  <fieldset>
+		  <legend>Carrello</legend>
+		  <table width="100%" border="1" cellpadding="2" cellspacing="0" style="border-collapse:collapse; border-color:#000000">
+  <tr>
+    <th width="5%">Quant.</th>
+    <th width="60%">Prodotto</th>
+    <th width="13%" nowrap="nowrap">Prezzo online </th>
+    <th width="22%" nowrap="nowrap">Prezzo in negozio </th>
+  </tr>
+  <tr>
+    <td align="center" valign="top">1x</td>
+    <td valign="top">Alesis M1Active monitor MK2 coppia di monitor bi amplificati</td>
+    <td align="right" valign="top">&euro; 430,00
+      <input name="prezzo_online" type="hidden" id="prezzo_online" value="430" /></td>
+    <td align="right" valign="top">&euro; 450,00
+      <input name="prezzo_insede2" type="hidden" id="prezzo_insede2" value="450" /></td>
+  </tr>
+</table>
+<input name="prezzo_insede" type="hidden" id="prezzo_insede" value="450" />
+		  </fieldset>
+		  
+			<fieldset>
+			<legend>Disponibile per </legend>
+
+			<p>
+			  <div class="iconsped"><img src="images/struttura/ordina/spedizione.gif" alt="Spedizione normale" width="25" height="16" /></div>
+			  <input name="spedizione" type="radio" id="spedizione_normale" value="1" tabindex="26" onclick="calspedizione('corriere');"  />
+			  <label for="spedizione_normale">Acquista online e ricevi a casa con corriere 
+			  (&euro; 90,00)</label><br />
+<p class="testopic">Nel caso la spedizione &egrave; assicurata, il prodotto viagger&agrave; <b>assicurato</b> per  il suo VALORE EFFETTIVO.</p>
+			
+			  <p>
+			  <div class="iconsped"><img src="images/struttura/ordina/spedizione_prog.gif" alt="Spedizione programmata" width="28" height="17" /></div>
+              <input name="spedizione" type="radio" id="radio" value="3" tabindex="27" onclick="calspedizione('corrierepreprog');"  />
+              <label for="radio">Acquista online e ricevi a casa con corriere  su appuntamento 
+              (&euro; 106,00)
+              </label><br />
+<p class="testopic">Indicare nel campo NOTE  il giorno e l'ora in cui il corriere dovr&agrave; consegnare la merce.</p>
+              <p><div class="iconsped"><img src="images/struttura/ordina/negozio.gif" alt="Ritiro in sede" width="25" height="16" /></div>
+			<input name="spedizione" type="radio" id="in_negozio" value="4" tabindex="30" onclick="calspedizione('pagaeritira');"  />
+			<label for="in_negozio">Acquista e paga online con bonifico anticipato, poi ritira nel nostro negozio di Bari </label> 
+			<br />
+<p class="testopic"> Essendo una vendita online, al prezzo online di &euro; 430,00, il collo verr&agrave; ritirato chiuso e seguir&agrave; le regole di vendita online.
+
+Sarà necessario inviare per mezzo fax o e-mail la ricevuta del pagamento EFFETTUATO soltanto con bonifico bancario ANTICIPATO.
+
+La merce potr&agrave; essere ritirata solo  dopo l'accredito sul nostro conto corrente (da 3 a 8 giorni lavorativi) e il ricevimento di una nostra email di AVVISO  RITIRO PRODOTTO&quot;.</p>
+			<p><div class="iconsped"><img src="images/struttura/ordina/negozio.gif" alt="Ritiro in sede" width="25" height="16" /></div>
+			<input name="spedizione" type="radio" id="in_negozio" value="2" tabindex="30" onclick="calspedizione('negozio');"  />
+			<label for="in_negozio">Prova e acquista (anche a rate) nel nostro negozio di Bari </label> 
+			<br />
+<p class="testopic">Il prezzo in negozio è di &euro; 450,00 Euro.</p>
+
+			
+            <input name="costo_sped" type="hidden" id="costo_sped" value="90" />
+            <input name="costo_sped_proprog" type="hidden" id="costo_sped_proprog" value="106" />
+            <input name="costo_sped_proprog10" type="hidden" id="costo_sped_proprog10" value="115" />
+            <input name="costo_sped_proprog10pre" type="hidden" id="costo_sped_proprog10pre" value="135" />
+            <div class="adestra"><b>Costo spedizione:</b> +
+			<input name="costo_spedizione" type="text" class="traspar" id="costo_spedizione" value="0" size="6" />
+			   Euro</div>
+		
+			<input name="costo_spedizione2" type="hidden" id="costo_spedizione2" value="0" />
+			</fieldset>
+		 <fieldset>
+			<legend>Metodo di pagamento</legend>
+			Scegli la modalit&agrave; di pagamento da te preferita. <br />
+			Per <b>importi superiori ai &euro; 800,00 Euro</b> 
+			&egrave; obbligatorio il bonifico bancario anticipato.
+			<p>
+			<img src="images/struttura/ordina/paypal.gif" alt="Paypal" width="31" height="20" />
+			  <input name="pagamento" type="radio" id="paypal" disabled="disabled" tabindex="23" onclick="calpagamento('pl')" value="pl"  />
+			  <label for="paypal">PayPal o carte di credito</label>
+			  <br />
+			
+			
+			
+			  <img src="images/struttura/ordina/bonifico.gif" alt="Bonifico bancario" width="31" height="20" />
+			  <input name="pagamento" type="radio" id="bonifico" tabindex="23" onclick="calpagamento('bb')" value="bb"  />
+			  <label for="bonifico">Bonifico bancario anticipato* 
+			  </label>
+			  <br />
+		
+
+			
+			<img src="images/struttura/ordina/contrassegno.gif" alt="Contrassegno" width="31" height="20" />
+			<input name="pagamento" type="radio" id="contrassegno" value="cc" tabindex="24" onclick="calpagamento('cc')"   />
+			
+			<label for="contrassegno">Contrassegno** 
+			(&euro; 18,00 Euro) 		</label>
+			<br />
+			<img src="images/struttura/ordina/postepay.gif" alt="PostePay" width="31" height="20" />
+			<input name="pagamento" type="radio" id="postepay" value="pp" tabindex="25" onclick="calpagamento('pp')"  />
+			<label for="postepay">Postepay (&euro; 2,00 Euro)</label> 
+</p>
+			<p class="testopic">
+			<i>*Sar&agrave; necessario inviare per mezzo fax o e-mail  la ricevuta del pagamento con bonifico bancario entro le 48 ore dall'ordine, pena la cancellazione dell'ordine stesso; la merce sar&agrave; spedita dopo l'accredito sul nostro conto corrente (da 1 a 5 giorni lavorativi).</i>.
+			<br />
+			
+			<i>**Pagamento in contanti al corriere alla consegna del pacco (non si
+accettano assegni bancari o circolari). <strong>La merce verr&agrave; spedita solo dopo aver ricevuto in anticipo e per mezzo bonifico bancario il costo del trasporto e del contrassegno. Tale somma &egrave; da considerarsi come  caparra penitenziale: per tanto qualora il corriere fosse impossibilitato a consegnare la merce per colpa del Cliente (ad esempio: assenza del Cliente al momento della consegna), tale caparra non verr&agrave; rimborsata da Music House al Cliente.</strong></i>
+			</p>
+			<input name="costo_bb" type="hidden" id="costo_bb" value="0" />
+            <input name="costo_cc" type="hidden" id="costo_cc" value="18" />
+            <input name="costo_pp" type="hidden" id="costo_pp" value="2" />
+            <div class="adestra"><b>Costo modalit&agrave; di pagamento: </b>+ 
+			  <input name="modalita_pagamento" type="text" class="traspar" id="modalita_pagamento" value="0" size="6" /> 
+			  Euro</div>
+			<input name="modalita_pagamento2" type="hidden" id="modalita_pagamento2" value="0" />
+			</fieldset>
+			
+			<fieldset><legend>Totale</legend>
+			<div class="adestra">
+			<b>TOTALE complessivo  da pagare (IVA inclusa):</b> <b class="rosso">
+			  <input name="totale" type="text" class="traspar rosso" style="font-weight:bold" id="totale" value="0" size="6" /> 
+			  Euro</b>			</div>
+			</fieldset>
+		    <fieldset>
+		  <legend>Dati per la spedizione </legend>
+  
+            <p>
+              <label for="nome" class="rosso labelspaz"># Nome:</label>
+              <input name="nome" type="text" class="bordonero" id="nome" tabindex="1" value="" size="25" maxlength="100" />
+              <br />
+              <label for="cognome" class="rosso labelspaz"># Cognome: </label>
+              <input name="cognome" type="text" class="bordonero" id="cognome" tabindex="2" value="" size="25" maxlength="100" />
+             
+              <br />
+              <label for="indirizzo" class="rosso labelspaz"># Indirizzo:</label>
+              <input name="indirizzo" type="text" class="bordonero" id="indirizzo" tabindex="3" value="" size="25" maxlength="200" />
+       
+              <label for="numero" class="rosso"># N. civico:</label>
+              <input name="numero" type="text" class="bordonero" id="numero" tabindex="4" value="" size="6" />
+
+              <br />
+
+              <label for="cap" class="rosso labelspaz"># CAP:</label>
+              <input name="cap" type="text" class="bordonero" id="cap" tabindex="5" onkeyup="verif_nombre(this);" value="" size="6" maxlength="5" />
+              <label for="provincia" class="rosso"># Provincia: </label>
+              <input name="provincia" type="text" class="bordonero" id="provincia" tabindex="6" value="" size="3" maxlength="2" />
+<br />
+              <label for="citta" class="rosso labelspaz"># Citt&agrave;:</label>
+              <input name="citta" type="text" class="bordonero" id="citta" tabindex="7" value="" size="25" maxlength="100" />
+              <br />
+              <label for="telefono" class="rosso labelspaz"># Telefono fisso:</label>
+              <input name="telefono" type="text" class="bordonero" id="telefono" tabindex="8" value="" size="25" maxlength="100" />
+ <br />
+              <label for="cellulare" class="labelspaz">Telefono cellulare:</label>
+              <input name="cellulare" type="text" class="bordonero" id="cellulare" tabindex="9" value="" size="25" maxlength="100" />
+ <br />
+              <label for="email" class="rosso labelspaz"># E-mail:</label>
+              <input name="email" type="text" class="bordonero" id="email" tabindex="10" value="" size="25" maxlength="150" />
+			 <br />
+              <label class="rosso labelspaz"># Data di nascita:</label>
+              <select id="gg" name="gg"  class="bordonero" tabindex="11" ><option value=""  selected="selected">giorno</option><option value="01">01</option><option value="02">02</option><option value="03">03</option><option value="04">04</option><option value="05">05</option><option value="06">06</option><option value="07">07</option><option value="08">08</option><option value="09">09</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option></select> <select id="mm" name="mm"  class="bordonero" tabindex="12" ><option value="">mese</option><option value="1">Gennaio</option><option value="2">Febbraio</option><option value="3">Marzo</option><option value="4">Aprile</option><option value="5">Maggio</option><option value="6">Giugno</option><option value="7">Luglio</option><option value="8">Agosto</option><option value="9">Settembre</option><option value="10">Ottobre</option><option value="11">Novembre</option><option value="12">Dicembre</option></select> <select id="aaaa" name="aaaa"  class="bordonero" tabindex="13" ><option value="">anno</option><option value="1998">1998</option><option value="1997">1997</option><option value="1996">1996</option><option value="1995">1995</option><option value="1994">1994</option><option value="1993">1993</option><option value="1992">1992</option><option value="1991">1991</option><option value="1990">1990</option><option value="1989">1989</option><option value="1988">1988</option><option value="1987">1987</option><option value="1986">1986</option><option value="1985">1985</option><option value="1984">1984</option><option value="1983">1983</option><option value="1982">1982</option><option value="1981">1981</option><option value="1980">1980</option><option value="1979">1979</option><option value="1978">1978</option><option value="1977">1977</option><option value="1976">1976</option><option value="1975">1975</option><option value="1974">1974</option><option value="1973">1973</option><option value="1972">1972</option><option value="1971">1971</option><option value="1970">1970</option><option value="1969">1969</option><option value="1968">1968</option><option value="1967">1967</option><option value="1966">1966</option><option value="1965">1965</option><option value="1964">1964</option><option value="1963">1963</option><option value="1962">1962</option><option value="1961">1961</option><option value="1960">1960</option><option value="1959">1959</option><option value="1958">1958</option><option value="1957">1957</option><option value="1956">1956</option><option value="1955">1955</option><option value="1954">1954</option><option value="1953">1953</option><option value="1952">1952</option><option value="1951">1951</option><option value="1950">1950</option><option value="1949">1949</option><option value="1948">1948</option><option value="1947">1947</option><option value="1946">1946</option><option value="1945">1945</option><option value="1944">1944</option><option value="1943">1943</option><option value="1942">1942</option><option value="1941">1941</option><option value="1940">1940</option><option value="1939">1939</option><option value="1938">1938</option><option value="1937">1937</option><option value="1936">1936</option><option value="1935">1935</option><option value="1934">1934</option><option value="1933">1933</option><option value="1932">1932</option><option value="1931">1931</option><option value="1930">1930</option><option value="1929">1929</option><option value="1928">1928</option><option value="1927">1927</option><option value="1926">1926</option><option value="1925">1925</option></select> 
+			  <br />
+              <i class="testopic">(Se non hai ancora compiuto i 18 anni,  l'ordine deve essere effettuato dal genitore esercente la tua potest&agrave;)</i><br />
+
+              <label for="codicefiscale" class="rosso labelspaz"># Codice fiscale:</label>
+              <input name="codicefiscale" type="text" class="bordonero" id="codicefiscale" tabindex="14" value="" size="25" maxlength="16" />
+</p>
+		    </fieldset>
+			 <fieldset>
+		  <legend>Destinazione diversa </legend>
+  Se
+            desideri ricevere la merce ad un 
+  indirizzo diverso, <strong><a href="javascript:document.getElementById('destdiv').style.display='block';document.getElementById('destdiv').focus();">clicca qui</a></strong>:
+  <div id="destdiv">
+  <p>
+              <label for="ragione" class="labelspaz">Nome e cognome / Ragione sociale:              </label>
+              <br />
+
+              <input name="ragione" type="text" class="bordonero" id="ragione" tabindex="15" value="" size="40" />
+<br />
+
+              <label for="indirizzo2" class="labelspaz">Indirizzo:</label>
+              <input name="indirizzo2" type="text" class="bordonero" id="label"  tabindex="16" value="" />
+              <label for="numero2">N. civico:</label>
+              <input name="numero2" type="text" class="bordonero" id="label2" tabindex="17" value="" size="6" />
+              <br />
+              <label for="cap2" class="labelspaz">CAP:</label>
+              <input name="cap2" type="text" class="bordonero" id="label3" tabindex="18" onkeyup="verif_nombre(this);" value="" size="6" maxlength="5" />
+              <label for="provincia2">Provincia: </label>
+              <input name="provincia2" type="text" class="bordonero" id="label4" tabindex="19" value="" size="3" maxlength="2" />
+              <br />
+              <label for="citta2" class="labelspaz">Citt&agrave;:</label>
+              <input name="citta2" type="text" class="bordonero" size="40" id="label5" tabindex="20" value="" />
+              <br />
+			  <label for="telefono2" class="labelspaz">Telefono:</label>
+              <input name="telefono2" type="text" class="bordonero" size="40" id="telefono2" tabindex="21" value="" maxlength="100" />
+              <br />
+              <label for="partitaiva" class="labelspaz">Partita IVA:</label>
+              <input name="partitaiva" type="text" class="bordonero" id="partitaiva" tabindex="22" value="" size="40" />
+</p>  </div>
+		  </fieldset>
+		
+			
+			
+			<fieldset>
+			<legend>Informazioni finali</legend>
+			<p>
+			
+	<label for="note">Eventuali prodotti o accessori che vuoi acquistare: </label>
+			<br />
+			  <textarea name="note" cols="90" rows="2" class="bordonero" id="note" tabindex="32"></textarea>
+			</p>
+			<p>
+			  <input name="newsletter" type="checkbox" tabindex="33" value="1" />
+			Voglio iscrivermi alla <b>newsletter</b> e ricevere offerte, sconti e promozioni via e-mail (servizio gratuito);<br />
+			<input name="condizioni" type="checkbox" id="condizioni" value="1" tabindex="34" />
+			  <b class="rosso">#</b> Ho letto ed accetto le <a href="condizioni_vendita.asp" target="_blank"><b class="rosso">condizioni di vendita</b></a>, i tempi e le modalit&agrave; di <a href="spedizioni_new.asp"><strong class="rosso">spedizione</strong></a> e di <a href="pagamenti_new.asp"><strong class="rosso">pagamento</strong></a>;<br />
+			  <input name="privacy" type="checkbox" id="privacy" value="1" tabindex="35"  />
+              <b class="rosso">#</b> Esprimo il consenso al <b class="rosso"> trattamento dei miei dati personali</b> (D. Lgs. 196/2003) così come fa informativa di cui ho preso visione e approvo.</p></fieldset>
+			
+			<fieldset><legend>Concludi l'ordine</legend>
+			<p>Si
+			  prega di ricontrollare tutti i dati inseriti prima di fare click sul bottone sottostante &quot;Acquista&quot;, grazie. </p>
+			<p class="centrato">
+			  <input name="totale2" type="hidden" id="totale2" value="0" />
+			  <input type="submit" name="Submit2" value="Acquista" class="bottone" tabindex="36" />
+			  <input name="id" type="hidden" id="id" value="1093" />
+			</p>
+			</fieldset>
+          </form>          </td>
+        </tr>
+      
+    </table>
+    <div id="sotto"><a href="condizioni_vendita.asp">Condizioni di vendita</a> | <a title="La merce spedita a domicilio è danneggiata?" href="post_vendita.asp">Post vendita</a> | <a title="Cosa &egrave; il diritto di recesso e come funziona" href="diritto_di_recesso.asp">Diritto di recesso</a> | <a href="privacy_new.asp">Privacy</a> | <a title="Le domande più frequenti" href="faq.asp">FAQ</a><br /> 
+ | <a title="Cerchiamo personale qualificato. Maggiori informazioni" href="lavora_con_noi.asp">Lavora con noi</a> | <a title="Se sei un rivenditore clicca qui" href="rivenditori.asp">Sei un rivenditore?</a> |  <a href="link.asp">Link</a> <br />
+ <a title="Area riservata" href="login.asp">Log-in</a></div><div id="piedipagina"><b>Music House Bari - P. IVA: 04718980727</b><br />
+Music House &egrave; in viale Einaudi 12/abc, 70125 BARI (Italy) <br />
+Tel/Fax: 080/5019521<br />
+Tutti i nomi dei prodotti, i logotipi, i marchi ed i simboli sono di propriet&agrave; delle rispettive societ&agrave;.<br />
+&copy; Copyright  
+        2005-2015 <a title="Web Agency Bari" rel="nofollow" href="http://aproweb.it">Aproweb</a>. Tutti i diritti riservati. <br />
+Pagina elaborata in 0,0469 secondi.</div></td>
+  </tr>
+</table>
+
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-1041661-2";
+urchinTracker();
+</script>
+</body>
+</html>

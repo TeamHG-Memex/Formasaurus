@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <title>Hermès - Добро пожаловать на официальный сайт  Hermes.com</title><meta name="description" content="Откройте вселенную Hermès, будьте в центре последних событий, найдите магазины Hermès, совершайте покупки на официальном сайте Hermès, узнайте о событиях Hermès из новостных писем или на страницах марки в социальных сетях.
+"><meta name="keywords" content="">
+<meta property="og:title" content="Hermès - Добро пожаловать на официальный сайт  Hermes.com">
+<meta property="og:type" content="website">
+<meta property="og:description" content="Откройте вселенную Hermès, будьте в центре последних событий, найдите магазины Hermès, совершайте покупки на официальном сайте Hermès, узнайте о событиях Hermès из новостных писем или на страницах марки в социальных сетях.
+">
+<meta property="og:url" content="http://www.hermes.com/index_ru.html">
+<meta property="og:image" content="http://www.hermes.com/var/ombrelle/storage/images/media/images/hermes-official-website/510-2-eng-GB/Hermes-Official-website_reference.png">
+<meta property="og:site_name" content="Hermès">
+<meta property="fb:admins" content="104907696213843">
+
+
+
+<meta itemprop="name" content="Hermès - Добро пожаловать на официальный сайт  Hermes.com">
+<meta itemprop="description" content="Откройте вселенную Hermès, будьте в центре последних событий, найдите магазины Hermès, совершайте покупки на официальном сайте Hermès, узнайте о событиях Hermès из новостных писем или на страницах марки в социальных сетях.
+">
+<meta itemprop="image" content="http://www.hermes.com/var/ombrelle/storage/images/media/images/hermes-official-website/510-2-eng-GB/Hermes-Official-website_reference.png">
+<link rel="publisher" href="https://plus.google.com/105354959353106034623">
+
+
+
+<meta name="google-site-verification" content="SL2gnf3_qex0MHdQYWicPM28Z5-AZPwF4QyyvTERXhI">
+
+
+    
+    <link rel="stylesheet" type="text/css" href="/extension/hermes_ombrelle/design/hermes_ombrelle/stylesheets/main.css" />
+
+
+    <!--[if lte IE 8]>
+    <script>document.documentElement.className+=' IE8'</script>
+    <script src="/extension/hermes_ombrelle/design/hermes_ombrelle/javascript/html5shiv/html5shiv.min.js"></script>
+    <![endif]-->
+    <!--[if IE 9]>
+    <script>document.documentElement.className+=' IE9'</script>
+    <![endif]-->
+</head>
+
+<body class="langRU ">
+
+<script type="text/javascript">
+// Support IE8 
+(function() {
+	 thisisie8=false;
+  if (!Event.prototype.preventDefault) {
+    Event.prototype.preventDefault=function() {
+      this.returnValue=false;
+    };
+  }
+  if (!Event.prototype.stopPropagation) {
+    Event.prototype.stopPropagation=function() {
+      this.cancelBubble=true;
+    };
+  }
+  if (!Element.prototype.addEventListener) {
+    var eventListeners=[];
+    
+    var addEventListener=function(type,listener /*, useCapture (will be ignored) */) {
+      var self=this;
+      var wrapper=function(e) {
+        e.target=e.srcElement;
+        e.currentTarget=self;
+        if (listener.handleEvent) {
+          listener.handleEvent(e);
+        } else {
+          listener.call(self,e);
+        }
+      };
+      if (type=="DOMContentLoaded") {
+        var wrapper2=function(e) {
+          if (document.readyState=="complete") {
+            wrapper(e);
+          }
+        };
+        document.attachEvent("onreadystatechange",wrapper2);
+        eventListeners.push({object:this,type:type,listener:listener,wrapper:wrapper2});
+        
+        if (document.readyState=="complete") {
+          var e=new Event();
+          e.srcElement=window;
+          wrapper2(e);
+        }
+      } else {
+        this.attachEvent("on"+type,wrapper);
+        eventListeners.push({object:this,type:type,listener:listener,wrapper:wrapper});
+      }
+    };
+    var removeEventListener=function(type,listener /*, useCapture (will be ignored) */) {
+      var counter=0;
+      while (counter<eventListeners.length) {
+        var eventListener=eventListeners[counter];
+        if (eventListener.object==this && eventListener.type==type && eventListener.listener==listener) {
+          if (type=="DOMContentLoaded") {
+            this.detachEvent("onreadystatechange",eventListener.wrapper);
+          } else {
+            this.detachEvent("on"+type,eventListener.wrapper);
+          }
+          break;
+        }
+        ++counter;
+      }
+    };
+    Element.prototype.addEventListener=addEventListener;
+    Element.prototype.removeEventListener=removeEventListener;
+    if (HTMLDocument) {
+      HTMLDocument.prototype.addEventListener=addEventListener;
+      HTMLDocument.prototype.removeEventListener=removeEventListener;
+    }
+    if (Window) {
+      Window.prototype.addEventListener=addEventListener;
+      Window.prototype.removeEventListener=removeEventListener;
+    }
+    thisisie8=true;
+  }
+  if (!Array.prototype.forEach) {
+			Array.prototype.forEach = function (fn, scope) {
+			for (var i = 0, len = this.length; i < len; ++i) {
+				fn.call(scope || this, this[i], i, this);
+			}
+		}
+  }
+
+})();
+
+var cookie = (function (){
+	var name =  "infocookie";
+	var value = "accepted";
+	var duration = 86400000;
+	var rg = new RegExp("^(?:.*; )?"+name+"=([^;]+)(?:.*)?$");
+	var localset = (document.cookie.match(rg)||[,null])[1];
+return {
+	name: name , 
+	value : value ,
+	duration : duration , 
+	rg :rg , 
+	localset : localset,
+	stack : new Array(),
+	isset : false,
+	listener : function(Event) {
+
+
+		if( Event.target.tagName == 'A' &&  Event.target.href.match(/Cookies/)){
+			return true;
+		}
+		var req = new XMLHttpRequest();
+		req.open('GET', './cookie/accept', false); 
+		req.send(null);
+	    acceptCookie(); 
+
+  }
+ };
+})();
+
+if ( cookie.localset !== cookie.value){	
+		//createCookie(cookie.name,cookie.value, cookie.duration);
+		Object.defineProperty(document, "cookie", {
+			get : function () {
+				return "custom cookie " + cookie.stack.join("; ");
+			},
+			set : function (val) {
+				cookie.stack.push( val );
+			}
+		}); 
+		document.addEventListener("beforeunload", cookie.listener,false);
+		window.setTimeout( function() {
+			var tab= document.getElementsByTagName('a');
+			for( var i=0; i< tab.length;i++){
+				 tab[i].addEventListener("click", cookie.listener, false );
+				}
+		   }, 1000);
+
+
+}
+
+function acceptCookie() 
+{
+    var el = document.getElementById('cookiebar');
+
+   /* if(!cookie.isset){
+    	createCookie(cookie.name,cookie.value, cookie.duration);
+	}*/
+    el.style.display = 'none';
+    // Si les cookies sont acceptés alors on repositionne ceux en attente.
+    if ( cookie.stack ){
+    	cookie.stack.forEach(function(element, index, array) {
+	    	  document.cookie=element;
+	   	});
+
+    }
+
+    document.removeEventListener("beforeunload", cookie.listener);
+    //document.removeEventListener("click", cookie.listener);
+
+    var tab= document.getElementsByTagName('a');
+	for( var i=0; i< tab.length;i++){
+		 tab[i].removeEventListener("click", cookie.listener );
+	}
+
+	var header = document.getElementById('header-T');
+	var mainContent = document.querySelector('.Layout-topRowContent');
+	if (header) {
+		header.style.margin = '0';
+	}
+	if (mainContent) {
+		mainContent.removeAttribute('style');
+	}
+
+}
+
+function createCookie(name,value,days) {
+	if (days) {
+		var date = new Date();
+		date.setTime(date.getTime()+(days*24*60*60*1000));
+		var expires = "; expires="+date.toGMTString();
+	}
+	else var expires = "";
+	document.cookie = name+"="+value+expires+"; path=/";
+	cookie.isset= true;
+}
+</script>
+
+
+<style>
+	#cookiebar {
+		background-color: #f7f5f4;
+		border-bottom: 1px dashed #d4d0c7;
+		position: fixed;
+		display: block;
+		padding: 4px 0;
+		z-index: 99999;
+		width: 100%;
+		height: auto;
+		font-family: sans-serif;
+		font-size: x-small;
+		font-weight: normal;
+	}
+
+	#cookiebar > div {
+		width: 100%;
+		margin: auto;
+		text-align: center;
+		color: #8e8e8e;
+	}
+
+	#cookiebar > div > p.cookie-message{
+		margin: 0 auto;
+		width: 712px;
+		color: #8e8e8e;
+		line-height: 1.7em;
+	}
+
+	#cookiebar a {
+		color: black;
+		font-weight: normal;
+	}
+
+	#cookiebar a.more {
+		text-decoration: underline;
+	}
+
+	#cookiebar a.close {
+		float: right;
+		margin-right: 20px;
+		padding: 5px;
+		text-decoration: none;
+	}
+
+	#cookiebar a.close > span{
+		color: black;
+		padding-right: 3px;
+	}
+
+	#cookiebar a.close > img{
+		border: 0;
+	}
+
+	@media (max-width: 720px) {
+		#cookiebar > div > p.cookie-message{
+			width: 90%;
+		}
+		#cookiebar a.close{
+			margin: 0;
+			padding: 0 5px;
+		}
+		#cookiebar a.close > span{
+			display: none;
+		}
+	}
+
+
+	/* override des styles du site */
+	/*
+    #cookiebar ~ .header{ top:initial; position: relative;}
+
+    @media (max-height: 600px) {
+        #cookiebar ~ #footer{ bottom:-20px; }
+        #cookiebar ~ #footer.open{ bottom:0px; }
+    }*/
+</style>
+
+	
+		<div id="cookiebar" class="cookiebar" >
+		<div>	  
+			<a class="close" href="#" onclick="acceptCookie();" >
+				<span>close</span>
+				<img src="/extension/ezcookiebar/design/standard/images/close.png" alt="close"/>
+			</a>
+			<p class="cookie-message">
+				
+			</p>
+		</div>
+	</div>
+<svg xmlns="http://www.w3.org/2000/svg" width="80" height="50" style="display:none" aria-hidden="true">
+    <defs>
+        <symbol id="logo-rotated" viewBox="0 0 80 50">
+            <path fill="#FFF" d="M0 0h80v50H0z"/>
+            <path d="M2 29.3l4.5-.6.2 1.6-1.4.2.3 2.8 5.1-.6-.3-2.8-1.4.2-.3-1.6 4.6-.6.2 1.6-1.5.2 1 8.1 1.5-.2.2 1.6-4.6.6-.2-1.6 1.4-.2-.5-3.7-5.1.6.5 3.7 1.5-.1.2 1.6-4.5.6-.2-1.6 1.4-.2-1-8.1-1.4.2m53.7-8.3l9.3-1.1.4 3.2-1.6.2-.2-1.5-4.5.6.3 2.7 3.8-.5.2 1.6-3.8.5.5 3.8 4.4-.5-.3-2.2 1.6-.2.5 3.8-9.3 1.1-.2-1.6 1.5-.2-1-8.1-1.5.2m-40.6 3.2l9.3-1.2.4 3.2-1.6.2-.2-1.5-4.5.6.3 2.7 3.8-.5.2 1.6-3.8.5.5 3.8 4.4-.5-.3-2.2 1.6-.2.5 3.8-9.3 1.1-.2-1.6 1.5-.2-1-8.1-1.5.2m42.9-8.6l3.3-.4.9.9-3.2.4m15.4 3.6c-1.2-.1-2 0-3.2-.2-1.1-.2-1.4-.8-1.4-1.2-.1-.4.2-1.6 1.9-1.8 1.6-.2 2.9.8 3.1 1.7l1.6-.2-.4-3.3-1.6.2.1.7.1.2s-.1-.1-.3-.2c-.5-.3-1.5-.7-2.9-.6-1.7.2-3.5 1.5-3.3 3.5s1.7 2.4 3 2.6c1.2.2 1.8.1 2.9.3 1 .1 1.7.6 1.9 1.6.1.8-.3 2-2.4 2.2-2.1.3-3.1-.8-3.5-2.4l-1.5.2.5 4 1.6-.2-.1-.7-.1-.2s.1.1.3.2c.8.5 2 .8 3.3.7 1.5-.2 4-1.3 3.7-4-.4-2-1.5-2.8-3.3-3.1zm-21.4 7.5l-1-8.1 1.5-.2-.2-1.6-4 .6-1.9 7v.3l-.1-.3-3.5-6.3-4.1.5.2 1.6 1.5-.2 1 8.1-1.5.2.2 1.6 4.6-.6-.2-1.6-1.4.2-1-7.9.2.3 4 7.1.9-.1 2.2-7.9v-.4l.1.4.9 7.5-1.4.2.2 1.6 4.6-.6-.2-1.6m-36.3-9.7l-1.6.2v-.4l1.2-.1s.3.2.4.3zm39.1-4.8c0-.2.1-.3.3-.4l.8-.1v.4l-1.1.1zm-25.7 3.4c-.6.4-1.5.5-2.2.3l-8.1 1c-.7.4-1.6.5-2.4.3l-2.1.3.1.8 41.9-5.1-.1-.8-27.1 3.2zm-9.9.9c.1-.1.4-.4.4-.5l6.3-.8.4.4-7.1.9zm8.8-1.3c1.1-.1 1.9-1.2 1.7-2.2-.1-1.1-1.2-1.9-2.2-1.8-1.1.1-1.9 1.2-1.8 2.2.1 1.1 1.1 2 2.3 1.8v.4c-1.4.2-2.5-.8-2.7-2.1-.2-1.4.8-2.5 2.1-2.7 1.3-.2 2.5.8 2.7 2.1.2 1.3-.8 2.5-2.1 2.7v-.4zm-8.2-1.3c-.2-1.5-1.6-2.5-3-2.4-1.5.2-2.5 1.6-2.4 3 .2 1.5 1.5 2.5 3 2.4 1.6-.2 2.6-1.5 2.4-3l-.4.1c.2 1.3-.8 2.4-2 2.6-1.3.2-2.4-.8-2.6-2-.2-1.3.8-2.4 2-2.5 1.2-.1 2.4.7 2.5 2l.5-.2z"/>
+            <path d="M32.1 20.3l-.9-.8s0-.1.1-.1l1.3.2s.1 0 .1.1v-.3s-.1.1-.2.1l-1.2-.2v-.2l1.1-.6h.1s-.1-.2-.1-.3l-.1.1h.1l-1.2.6s0-.1-.1-.1v-.1l.5-1.1s.1-.1.2-.1c0 0-.2-.1-.3-.1 0 0 .1.1 0 .2l-.6.9h-.2l-.2-1.2c0-.1 0-.2.1-.2h-.3s.1.1.1.2l.2 1.2s-.1 0-.1.1l-.9-.9s-.1-.1-.1-.2l-.2.2s.1 0 .2.1l.9.9-.1.1h-.1l-1.2-.2c-.1 0-.1-.1-.1-.1s-.1.3 0 .3c0 0 .1-.1.2 0l1.2.1v.2l-1.1.6s-.1.1-.1 0c0 0 .1.2.1.3l.1-.1 1.1-.6s.1 0 .1.1l-.6 1.1-.1.1s.2.1.3.1v-.2l.6-1.1h.1l.2 1.2s0 .1-.1.1h.3c-.1 0-.1-.1-.1-.2l-.2-1.2s.1-.1.2-.1l.9.8s.1.1.1.2c0 .3.1.2 0 .1.1.1 0 0 0 0zm-12.2-1.7c1.2-.1 2.3-.2 3 0 .1 0 .1.1 0 .1-.7.2-1.8.5-2.9.6-1.1.2-2.2.3-3 .2-.1 0-.1-.1 0-.1.7-.3 1.7-.6 2.9-.8v-.2c-1.2.2-2.4.6-3.4 1.1-.1.1-.1.1 0 .1 1.2.1 2.4 0 3.6-.2 1.2-.2 2.3-.4 3.4-.9.2-.1.1-.1 0-.1-1.1-.2-2.3-.2-3.6-.1v.3zM32 16.3c-.3.1-.7.3-1 .4-.2 0-1.2.1-1.9.2-1 .2-1 .3-1.1.2-.2-.3-.5-.8-.8-1-1.9.6-3.8.5-5.6.1V16h.3c-.3-.4-.8-.4-1.2-.9-.2-.1-.2-.3-.4-.4.1.4-.2.8-.2 1.2.3.1.6 0 .7 0 .2-.1.4 0 .5.1.1 0 .2.1.4.1v.2c-.2 0-.3-.1-.4-.1-.2.1-.4.1-.4 0h-.6c-.5.1-1.1.3-1.3.8-.1.3 0 .5.1.7.1.1.5.6.8.7l-.6.1c-.5-.4-.9-.7-.9-1.3.1-1.2 1.2-1.2 1.4-1.7.1-.5.1-1.8-.2-2.1-.7-.2-1.6-.4-1.9-1.3-.1-.2 0-.4.2-.5.4-.1.6 0 1 .1.1-.1-.2-.3.1-.4.4 0 .7.6.8.7v.3c-.3-.1-1.2-.4-1.3-.4-.2-.1-.4-.2-.5 0s.1.4.2.6c2.2 1.8 5.1-.7 7.4.4 0-.1 0-.2-.1-.2-1.6-1.2-3.8-.2-5.7-.4V12c2.4.3 5.3-1 6.8 1.4.9 1 2 2.7 3.6 2.5 1.4-.1 2.2-.8 2.7-1.8.7-1.8 1-3.7 2.5-5 .2-.1.2 0 .2 0-.7.9-1.3 2-1.5 2.9.9 2.3 2.2 1.6 2.5 1.5-.2-.8-.4-3.4 1.4-4.2.4-.4 1.7-1.5 3.8-.9-1.3 1.5-1.9 3.6-2 5l-1.5.6c.1-.3 0-.7-.1-1.1-.2.1-.3.2-.6.5-.2.1-.1-.2-.1-.2 0-.1.4-.3.7-.5-.2-.9-.5-2.1.2-3-1.5.7-.7 4-.5 4.4-.4.3-1.1.3-1.1.3l-.1-.6c-.7.3-1.9.3-2.6-1.5-.6 1.4-.9 3.4-2.1 4zm24.3-8.1c-.1-.1-.1-.1-.2-.1V8s.1 0 .2.2z"/>
+            <path d="M20.6 20.7l1 .9c.1.1.1.2.1.2.1-.1.3-.3.3-.4 0 0-.2.1-.2 0l-1.1-.9v-.1l1.3.3c.1.1.2.1.2.2 0-.1.1-.3.1-.4l-.2.1-1.3-.3v-.1l1.3-.4c.2-.1.2 0 .3.1 0-.1-.1-.4-.1-.4s-.1.2-.2.2l-1.3.4s0-.1-.1-.1l.9-1c.1-.1.2-.1.3-.1-.1-.1-.3-.3-.4-.3v.3l-1 .6h-.1l.3-1.3c0-.1.1-.2.2-.2-.1 0-.4-.1-.5-.1 0 0 .1.1.1.3l-.3 1.3h-.1l-.4-1.3c0-.2.1-.3.1-.3-.1 0-.3.1-.4.1 0 0 .2.1.2.2l.4 1.3v.1s-.1 0-.1.1l-1-.9c-.1-.1-.1-.2-.1-.2-.1 0-.3.2-.3.3 0 0 .2 0 .3.1l1 .9-.1.1-1.3-.3c-.1 0-.2-.1-.2-.2-.1.1-.1.4-.1.5 0 0 .2-.1.3-.1l1.3.2v.2l-1.3.4c-.1 0-.3-.1-.3-.1 0 .1.1.4.1.5 0 0 0-.2.2-.2l1.3-.4v.1l-1.1.9c-.1.1-.2.1-.2.1 0 .1.2.3.3.3 0 0 0-.2.1-.3l1-.9.1.1-.3 1.3c0 .1-.1.2-.2.2.1 0 .3.1.5.1-.1 0-.1-.1-.1-.2l.3-1.3h.1l.4 1.3c0 .2-.1.3-.1.3.1 0 .4-.1.4-.2l-.2-.1-.4-1.3c.2-.2.2-.2.3-.2 0-.1 0-.1 0 0zM55.8 8.5c0-.2.1-.2.1-.4-.2-.1-.3-.5-.2-.5.1-.1.5 0 .5 0 .3-.3.4-.5.6-.7.3 0 .9.4.9.7-.1.1-.2.4-.5.8.2.3.2.5 0 .7 0 0-.1 0-.2-.1.1.4.6.6.8.9.1.6.9 1.4.2 2-.2.1-.3.2-.4.4.2.6.5 1.3.7 2l-.8.1c-.1.3-.2.7-.1 1 .1.1.3 1.5.3 1.6 0 .2.1.1.1.4-.1 0-.4.3-.4.4-.2.2-.7.3-.7.3 0-.2.3-.5.4-.7 0-1-.2-2-.9-2.7-.2-.1-.3.2-.4.4.3.6.7 1.2.8 1.9 0 .2.3.5.2.7l-.6.4-2.4.3c-.1-.1-.3-.2-.2-.4l2.1-.3c0-.1.2-.1.4-.4-.1-1-1.3-2.3-1.2-2.8.1-.6.3-1.2.6-2l.2-.1c-.2 1.3-.7 2-.5 2.3.1.2.2.3.3.6l.1.2c.1.1.2.4.3.5.1 0 .2-.1.3-.2 0-.2-.2-.3-.3-.5l-.3.2-.1-.2c.2 0 .4-.2.2-.3.5-.3-.1-.2 0-.3.3-.2.4-.8.4-1.2 0-.1 0-.1.1-.1.3.6.4 1.5.9 2v.2c0 .2 0 .4.1.5.4 0 .3-.1.2-.5h-.3v-.2s.2 0 .2-.1c-.1-.2-.2-.3-.2-.5 0-.1 0-.4.2.1.1 0 .2-1 .2-1.3-.7.3-.1-.7-.7-.7l.2-.5c0-.2-.2-.3-.3-.2l-.2-.2c-.1 0-.3-.2-.4-.3-.1.1-.3.4-.3.6 0 0 .1.1.1 0 .1-.1.2.1.4 0 .1-.1.3-.2.2-.3l.2.2c-.2.1-.1.4-.1.6-.2.6-.2-.3-.5-.2-.2.1-.3-.2-.4-.1l-.2.1c0-.3 0-.6-.1-1 .1-1.4.4-1.4.3-1.8 0-.2.5-.6.5-.7l.1.1c0 .2-.4.3-.3.7.2-.5.9-.5.9-1.1-.2-.3.1-.1.1-.5-.1-.1-.4-.3-.4-.4 0 0 .1-.3-.5-.2 0 0 0 .3-.1.4 0 0-.1.1-.1.2 0 0 .1.1.1.2 0 .2 0 .2.1.3.3.1.6-.1.2.2v.1s-.1-.2-.2-.2c0 0-.3-.1-.2-.3 0 .1 0 0-.1-.1zm-11.2-.2c.1.3-.1.5 0 .8.4.6.2 1.2.3 1.9-.3-.2-.5-.7-.7-1.3-.1-.5 0-.6-.1-1.2l.5-.2zm-.9.3c.1.8 0 1.3.8 2.6-1.5.8-2.7 1.5-4.5 2.2 0-1.3 1-4 2-4.8.9.1 1.7 0 1.7 0z"/>
+            <path d="M40.9 18.7c-.4.2-.4.4-.1.6.2.1.4.3.4.3l-2.6.3c0 .1.1.2.2.4l14.5-1.8c.1-.2-.2-.4-.3-.7-1.1-.2-1.2-1.2-1.4-2.2 0 0-.1-.2-.1-.4-.1-.1-1-1.7-.9-3.1l.2-.5c.2-.3-.1-.4 0-.8l3-.9s0-.2-.1-.2l-2.9.9c.1-.7-.6-.9-.4-1.6.5.4 1.7 1.1 2.3 1.1l.3-.1c-.8-.2-2.2-.9-3.1-1.8-.1 0-.2-.1-.3-.1 0 .1.2.3.2.3s-.4.4-1.4.1c-.2.6-3.2 2.4-3.2 2.4.2.9.7 1.4 1.2 1.8 0 .1-.1-.1 0 0 .7.4 1.5.6 2.4.7.2.5 1 2 1.1 2.2s.2.2.2.2c.1.1.4.6.5.8l.2.8c.1.2.3 0 .4.2l-.1.5.6-.1c-.4-.2-.2-.7-.6-.9-.1-.5-.2-.8-.4-1-.2-.5-.9-1.7-1.4-2.9l.2-.3c-.9.3-1.6.1-2.5-.2-.6-.2-.2 0-.1-.2 1.1.3 1.5.1 2.2 0 .1.1.3.2.3.4l-.2.3c.2-.2.4-.1.5.4.2.5.4.8.6 1.2s.4.9.6 1.2c0 0 .1 0 .2.1.4.9.5 1 .5 1.4.1.3.5 0 .5.4l-10.8 1.3c.1-.7-.4-1.2-.2-1.8-.5-.6-1.6-1-1.5-1.9.4-.7 1.9-1.7 1.5-2.4 1.4-.9 2.3.2 3.6-.1.5-.1 1-.2 1.5-.4-.6-.4-1.2-1-1.6-1.6-2.7 1.6-5.4 2.8-8.4 3.8l-.3-.1c-.3.1-4.8 1.7-4.6 1.9-1.7.3-3.7 1.3-4.1 1.6-.2.1-.2.2 0 .3 1.9.2 3.5-.3 6.2-1.8l-.2-.1c-.1.1-2.4 1.3-3.4 1.5-.8.2-1.7.3-2.1.2-.1 0-.1 0 0-.1 1.8-.9 5.2-2.1 5.8-1.5.3 0 .5.2.7.4s.5.1.7 0c.3-.1.3-.4.3-.7h-.4c-.2 0-.8.2-.9.3-.3-.2-.5-.3-.9-.4.6-.4 1.7-.7 2.2-.8-.5.4-.2.8-.5 1h.4v-.4c.2-1 1.8-1.3 2.5-1.6 0 0-.3.6-.6.7.1 1.3-.2 2.4-.2 3.7.4 0 .4.4.5.6-.1.2-.3 0-.4.1-.6-.2 0-.8-.5-1.2.1-1.1.4-2.1.2-3.2-.2 0-.2.2-.2.3 0 1.1-.2 2-.3 3 .1.1.3.1.3.3-.3.2.1.6 0 .8l-3.7.5-.3.4 5.6-.7v-.2c-.9-.8-.8-2.1-.5-3.2l.8-1.4c.8-.4 1.2-1.5 2-1.9.1.4-.4.7-.7.9-.2.7-1.2.9-1.2 1.7.4.4 1 .6 1.5.9.5.2.4.9.8 1.1.3.8.2 1 .2 1z"/>
+            <path d="M45.3 3.2c-.1.3-.4.5-.2.9-.4.3-.2.6-.1.8-.2.2-.2.6.1.8-.3.4.2.7.3.8-.1.4.1.6.1.6 0 .2-.4.7-.5.8-.2.6.1 1.9.2 2.8 1.1-.7 2.1-1.4 3-2.3-.8-.4-1.6-1.6-2.5-1.4-.2-.9-.7-2.4.3-4.2.2-.1.4-.2.5-.3-.5 0-1.2.4-1.7.2 0 .1.3.5.5.5z"/>
+            <path d="M48 2.4l.2.1.2-.1v-.2h-.2c-.1 0-.2.2-.2.2l-.7-.2.1-.1s.2-.3.3-.3c.1-.1.8-.1 1 0l.4.4c.5.3 1.2.2 1.7.5-.1.1.2.3 0 .4-.1.1-.4 0-.4.1v.2h-.2v-.3c-.1 0-.3-.1-.3 0 0 0 0 .1.1.2 0 .1.2.1.3 0h.4c-.1.2-.1.3-.4.2-.1.2.4.3.5.4 0 .1-.1.2-.4 0 0 0-1.1 1.3-1.7 1.7-.7.4-.1-.2-.1-.2.3-.2 1.6-1.6 1.6-1.7 0-.1-.1-.2-.2-.3-.2-.1-.6.1-.7.3.1.4 1 2.1.9 5l-.1-.1c.1-2.7-.9-4.9-.9-4.9-.4.2-.7.1-.9.2.1 1.7 1.5 1.8 1.3 4-1.5-.1-2.7-1.7-3.5-1.4-.1-.3-.4-.7-.2-1-.1-.2-.2-.5.1-.8-.2-.3-.2-.6.1-.9-.1-.2-.1-.6.3-.8 0-.4.1-.7.4-.8-.4-.1-.5-.5-.5-.5.3.2.6.2 1.2.1l.5.6zM37.8 34.7l-.3-2.2c-.1-.7-.6-1.4-1.3-1.7-.1 0-.3-.1-.5-.1.2 0 .4 0 .6-.1.6-.4 1.2-1.2 1.1-2.6-.1-1-.6-1.8-1.4-2.2-.7-.4-1.6-.4-2.4-.3l-6.3.8.2 1.6 1.4-.2 1 8.1-1.4.2.2 1.6 4.5-.6-.2-1.6-1.4.2-.4-3.6 3.2-.4c1.1-.1 1.6.5 1.6 1.1l.6 3.8 3.1-.4-.2-1.6-1.7.2zM34.3 30l-3.4.4-.4-3 3.2-.4c.4 0 .8-.1 1.1 0 .4.2.8.5.9 1.3.2.9-.5 1.6-1.4 1.7zm-5.7 11.6c1.5-.2 2.2.5 2.3 1.6.1 1-.5 1.9-2 2.1l-1.1.1.3 2.8-1 .1-.8-6.5 2.3-.2zm-.9 3l1.2-.1c.7-.1 1.2-.5 1.1-1.2-.1-.5-.4-1-1.3-.9l-1.3.1.3 2.1zm11.1 2.3l-1 .1-1-1.8-2.8.3-.5 2-1 .1 2.1-6.9.6-.1 3.6 6.3zm-4.6-2.2l2.1-.3-1.4-2.4-.7 2.7zm15.4.9l-1 .1-.8-6.5 1-.1m6.9.6c-.7-.4-1.3-.5-1.8-.4-.6.1-1.1.4-1 .9.2 1.3 3.2.9 3.5 3 .1 1-.6 1.8-1.8 2-.7.1-1.4 0-2-.3l-.1-1.2c.6.5 1.3.8 2 .7.8-.1 1.1-.6 1.1-.9-.2-1.3-3.3-1.1-3.5-2.9-.1-1.1.6-1.8 1.9-2 .6-.1 1.1 0 1.7.2v.9zm-10.2 5.6c-.1-.1-.3-.3-.4-.5-.6-.7-1.1-1.3-1.7-1.6.7-.4 1.1-1 1-1.7-.1-1.1-1.1-1.7-2.5-1.5l-1.7.2.8 6.5 1-.1-.4-2.9h.4c.5-.1.9 0 1.9 1.3l1.1 1.2 1.1-.1-.6-.8zm-3.4-2.5l-.6.1-.3-2 .6-.1c1-.1 1.4.2 1.4.8.2.5 0 1.1-1.1 1.2z"/>
+        </symbol>
+    </defs>
+</svg>
+
+    
+
+<header class="Header" id="header-T">
+    
+
+    <p class="Header-logo">
+        <a class="Header-logoInner"
+           href="#" data-href="#countries" data-popup
+           onclick="return xt_click(this,'C','1','LogoHomepage Link','N')">
+            <svg class="icon" width="80" height="50" viewBox="0 0 80 50" aria-hidden="true">
+                <use xlink:href="#logo-rotated"></use>
+            </svg>
+        </a>
+    </p>
+    <p class="Header-message">
+        Welcome to Hermès
+    </p>
+            <p class="Header-lang">
+            <a class="Link"
+                href="#"
+               data-href="#countries" data-popup
+               onclick="xt_click(this,'C','1','Language Link','N'); return false;">
+                other country / language
+            </a>
+        </p>
+    </header>
+    <div class="Layout">
+        <div class="Layout-topRow">
+            <main class="Layout-topRowContent">
+                
+
+
+
+
+
+
+
+<div class="Content Content--home">
+	
+
+<div class="Banner">
+            <a class="Banner-link"
+            id="tooltip"
+            href="http://hermesistible.hermes.com/?utm_campaign=Hermesistible_Ombrelle_Header_RU_201511&utm_source=Ombrelle&utm_medium=Header&"
+            target="_blank"
+            onclick="return xt_click(this,'C','1','Animation Link','S')"
+            data-title="Hermèsistible"
+        >
+    
+    
+                    
+
+    
+        
+
+                                                                                            <img   src="/var/ombrelle/storage/images/media/images/hermesistible-anglais/59814-1-eng-GB/Hermesistible-ANGLAIS_ombrellehome.gif"  width="1496" height="408"  style="border: 0px  ;" alt="Hermèsistible" title="Hermèsistible" />
+            
+    
+            
+        
+
+    </div>
+
+	<h1 class="Content-homeTitle">Добро пожаловать в Hermès</h1>
+
+	<div class="page_details">
+		</div>
+
+	
+<div class="Content-section">
+    <h2 class="Content-homeTitle2">наши бутики</h2>
+    <ul class="Content-homeLinks Content-homeLinks--big">
+                <li><a class="Link" href="http://stores.hermes.com/" target='_blank' onclick="return xt_click(this,'C','1','CorporateBlock::Store Link','N')">рядом с Вами</a></li>
+    </ul>
+</div>
+<div class="Content-section">
+    <h2 class="Content-homeTitle2">погрузитесь в</h2>
+    <ul class="Content-homeLinks Content-homeLinks--big">
+        <li><a class="Link" href="http://lesailes.hermes.com/ru/ru/" target='_blank' onclick="return xt_click(this,'C','1','CorporateBlock::Discover Link','N')">мир Hermès</a></li>
+    </ul>
+</div>
+
+	
+
+<div class="Content-section">
+    <h2 class="Content-homeTitle2">В этот момент</h2>
+
+    <div class="HomeSlider">
+        <p class="HomeSlider-currentTitle">
+            <a class="HomeSlider-currentLink" href="#0" target="_blank" aria-hidden="true"></a>
+        </p>
+        <ul class="HomeSlider-slides">
+                                                                    
+                    <li>
+                        <a class="HomeSlider-link" href="http://lesailes.hermes.com/ru/ru/christmas_2015?&xtor=AL-87269" target="_blank"
+                           onclick="return xt_click(this,'C','1','EventsBlock::A holiday haven at Hermès','N')">
+                            <span class="HomeSlider-label">A holiday haven at Hermès</span>
+                            
+
+    
+        
+
+                                                                                                                                            <img   src="/var/ombrelle/storage/images/media/images/a-holiday-haven-at-hermes2/60759-1-eng-GB/A-Holiday-haven-at-Hermes_event.jpg" class="HomeSlider-pic" width="448" height="280"  style="border: 0px  ;" alt="A Holiday haven at Hermès" title="A Holiday haven at Hermès" />
+            
+    
+    
+                                                                                                                </a>
+                    </li>
+                                                        
+                    <li>
+                        <a class="HomeSlider-link" href="http://lesailes.hermes.com/ru/ru/gants_ah15?&xtor=AL-87239" target="_blank"
+                           onclick="return xt_click(this,'C','1','EventsBlock::Gloves collection','N')">
+                            <span class="HomeSlider-label">Gloves collection</span>
+                            
+
+    
+        
+
+                                                                                                                                            <img   data-src="/var/ombrelle/storage/images/media/images/gloves-collection2/59848-1-eng-GB/Gloves-collection_event.png" class="HomeSlider-pic" width="448" height="280"  style="border: 0px  ;" alt="Gloves collection" title="Gloves collection" />
+            
+    
+    
+                                                    </a>
+                    </li>
+                                                        
+                    <li>
+                        <a class="HomeSlider-link" href="http://russia.hermes.com/la-maison-des-carres.html/?&xtor=AL-86005" target="_blank"
+                           onclick="return xt_click(this,'C','1','EventsBlock::La Maison des Carrés','N')">
+                            <span class="HomeSlider-label">La Maison des Carrés</span>
+                            
+
+    
+        
+
+                                                                                                                                            <img   data-src="/var/ombrelle/storage/images/media/images/la-maison-des-carres4/57940-1-eng-GB/La-Maison-des-Carres_event.gif" class="HomeSlider-pic" width="448" height="280"  style="border: 0px  ;" alt="La Maison des Carrés" title="La Maison des Carrés" />
+            
+    
+    
+                                                    </a>
+                    </li>
+                                    </ul>
+    </div>
+</div>
+
+
+	<div class="Content-section">
+    <h2 class="Content-homeTitle2">оставайтесь с нами</h2>
+    <ul class="SocialLinks">
+                            
+
+<li><a class="tooltip"
+       href="http://www.youtube.com/user/hermes/home" target="_blank"
+       title="You tube"
+       onclick="return xt_click(this,'C','1','SocialBlock::Social Link You tube','S')" >
+        <img src="/var/ombrelle/storage/images/media/images/you-tube-over/1774-6-eng-GB/You-tube-over_reference.png" alt="You tube">
+</a></li>
+                    
+
+<li><a class="tooltip"
+       href="http://hermes.tumblr.com" target="_blank"
+       title="Tumblr"
+       onclick="return xt_click(this,'C','1','SocialBlock::Social Link Tumblr','S')" >
+        <img src="/var/ombrelle/storage/images/media/images/tumblr-gris/4842-2-eng-GB/Tumblr-gris_reference.png" alt="Tumblr">
+</a></li>
+                    
+
+<li><a class="tooltip"
+       href="https://twitter.com/hermes_paris" target="_blank"
+       title="Twitter"
+       onclick="return xt_click(this,'C','1','SocialBlock::Social Link Twitter','S')" >
+        <img src="/var/ombrelle/storage/images/media/images/twitter-mask/56196-1-eng-GB/twitter-mask_reference.png" alt="Twitter">
+</a></li>
+                    
+
+<li><a class="tooltip"
+       href="https://www.facebook.com/hermes" target="_blank"
+       title="Facebook"
+       onclick="return xt_click(this,'C','1','SocialBlock::Social Link Facebook','S')" >
+        <img src="/var/ombrelle/storage/images/media/images/facebook_over/580-3-eng-GB/facebook_over_reference.png" alt="Facebook">
+</a></li>
+                    
+
+<li><a class="tooltip"
+       href="https://plus.google.com/+hermes/" target="_blank"
+       title="Google+"
+       onclick="return xt_click(this,'C','1','SocialBlock::Social Link Google+','S')" >
+        <img src="/var/ombrelle/storage/images/media/images/google_over/590-3-eng-GB/google_over_reference.png" alt="Google+">
+</a></li>
+                    
+
+<li><a class="tooltip"
+       href="http://pinterest.com/hermesofficial/" target="_blank"
+       title="Pinterest"
+       onclick="return xt_click(this,'C','1','SocialBlock::Social Link Pinterest','S')" >
+        <img src="/var/ombrelle/storage/images/media/images/pinterest_gris/4865-2-eng-GB/Pinterest_gris_reference.png" alt="Pinterest">
+</a></li>
+                    
+
+<li><a class="tooltip"
+       href="http://instagram.com/hermes" target="_blank"
+       title="Instagram"
+       onclick="return xt_click(this,'C','1','SocialBlock::Social Link Instagram','S')" >
+        <img src="/var/ombrelle/storage/images/media/images/instagram-gris/12089-2-eng-GB/Instagram-gris_reference.png" alt="Instagram">
+</a></li>
+                    </ul>
+    <ul class="Content-homeLinks">
+        <li><a class="Link" href="#" data-href="#newsletter" data-popup
+               onclick="return xt_click(this,'C','1','ContactBlock::Newsletter Link','A')">
+                оформите подписку
+        </a></li>
+
+                    </ul>
+</div>
+
+<div>
+
+            </main><!--Layout-topRowContent-->
+        </div><!--Layout-topRow-->
+
+        <div class="Layout-bottomRow">
+            <footer class="Layout-bottomRowContent">
+                                
+
+    <div class="Footer">
+        <p class="Footer-lang">
+            <a class="Link" href="#" data-href="#countries" data-popup>other country/language</a>
+        </p>
+
+                <ul class="Footer-sites">
+
+                                                            <li><a class="Link" target='_blank' 
+                           href="http://en.fondationdentreprisehermes.org/?force=true"
+                           onclick="return xt_click(this,'C','1','LeftFooter::Благотворительный фонд','S')">
+                            Благотворительный фонд
+                    </a></li>
+                                                                            <li><a class="Link" target='_blank' 
+                           href="http://www.hermesemployeur.com/en/?utm_source=hermes_ombrelle&utm_medium=footer&utm_campaign=hermes_employeur_footer_ombrelle"
+                           onclick="return xt_click(this,'C','1','LeftFooter::Hermès Employer','S')">
+                            Hermès Employer
+                    </a></li>
+                                                                            <li><a class="Link" target='_blank' 
+                           href="http://finance.hermes.com/en"
+                           onclick="return xt_click(this,'C','1','LeftFooter::Информация о финансах','S')">
+                            Информация о финансах
+                    </a></li>
+                                                                            <li><a class="Link" target='_blank' 
+                           href="http://www.johnlobb.com/en/#?utm_source=ombrelle&utm_medium=banner&utm_campaign=ombrelle"
+                           onclick="return xt_click(this,'C','1','LeftFooter::John Lobb','S')">
+                            John Lobb
+                    </a></li>
+                                                                            <li><a class="Link" target='_blank' 
+                           href="http://www.puiforcat.com/uk#?utm_source=ombrelle&utm_medium=banner&utm_campaign=ombrelle"
+                           onclick="return xt_click(this,'C','1','LeftFooter::Puiforcat','S')">
+                            Puiforcat
+                    </a></li>
+                                                                            <li><a class="Link" target='_blank' 
+                           href="http://www.saint-louis.com/en/?utm_source=ombrelle&utm_medium=banner&utm_campaign=ombrelle"
+                           onclick="return xt_click(this,'C','1','LeftFooter::Saint-Louis','S')">
+                            Saint-Louis
+                    </a></li>
+                                    </ul>
+        
+        <ul class="Footer-legal">
+
+                                                                                            <li><a class="Link Link--small" target='_blank' 
+                               href="http://www.hermes.com/bcr/Binding-Corporate-Rules-BCRs"
+                               onclick="return xt_click(this,'C','1','RightFooter::','N')">
+                                bcr
+                        </a></li>
+                                                    <li class="Footer-copyright">&copy;&nbsp;Herm&egrave;s&nbsp;2015</li>
+                    </ul>
+    </div>             </footer>
+
+            <div id="countries" class="Popin-box Popin-box--wide mfp-hide">
+                
+<div class="CountryList">
+    <h2 class="CountryList-head">Please choose your country</h2>
+    <div class="CountryList-main">
+        <ul class="CountryList-block">
+                        
+                
+    
+                        <li><a class="Link Link--double" href="/index_at.html">Austria</a></li>            
+                
+    
+                                                                    <li><a class="Link Link--double" href="/index-be-fr.html">Belgique</a> <a href="/index-be-nl.html">België</a></li>            
+                
+    
+                        <li><a class="Link Link--double" href="/index_cz.html">Czech Republic</a></li>            
+                
+    
+                        <li><a class="Link Link--double" href="/index_dk.html">Denmark</a></li>            
+                
+    
+                        <li><a class="Link Link--double" href="/index_de.html">Deutschland</a></li>            
+                
+    
+                        <li><a class="Link Link--double" href="/index_es.html">España</a></li>        </ul>
+        <ul class="CountryList-block">
+                        
+                
+    
+                        <li><a class="Link Link--double" href="/index_fi.html">Finland</a></li>            
+                
+    
+                        <li><a class="Link Link--double" href="/index_fr.html">France</a></li>            
+                
+    
+                        <li><a class="Link Link--double" href="/index_ie.html">Ireland</a></li>            
+                
+    
+                        <li><a class="Link Link--double" href="/index_it.html">Italia</a></li>            
+                
+    
+                        <li><a class="Link Link--double" href="/index_lu.html">Luxembourg</a></li>            
+                
+    
+                        <li><a class="Link Link--double" href="/index_nl.html">Nederland</a></li>        </ul>
+        <ul class="CountryList-block">
+                        
+                
+    
+                        <li><a class="Link Link--double" href="/index_no.html">Norway</a></li>            
+                
+    
+                        <li><a class="Link Link--double" href="/index_pl.html">Poland</a></li>            
+                
+    
+                        <li><a class="Link Link--double" href="/index_pt.html">Portugal</a></li>            
+                
+    
+                                                                    <li><a class="Link Link--double" href="/index-ch-de.html">Schweiz</a> <a href="/index-ch-fr.html">Suisse</a></li>            
+                
+    
+                        <li><a class="Link Link--double" href="/index_se.html">Sweden</a></li>            
+                
+    
+                        <li><a class="Link Link--double" href="/index_uk.html">United Kingdom</a></li>        </ul>
+        <ul class="CountryList-block">
+                        
+                
+    
+                        <li><a class="Link Link--double" href="/index-na-sp.html">America Latina</a></li>            
+                
+    
+                        <li><a class="Link Link--double" href="/index_br.html">Brasil</a></li>            
+                
+    
+                                                                    <li><a class="Link Link--double" href="/index-ca-en.html">Canada English</a> <a href="/index-ca-fr.html">Français</a></li>            
+                
+    
+                        <li><a class="Link Link--double" href="/index_us.html">United States</a></li>        </ul>
+        <ul class="CountryList-block">
+                        
+                
+    
+                        <li><a class="Link Link--double" href="/index_au.html">Australia</a></li>            
+                
+    
+                        <li><a class="Link Link--double" href="/index_ru.html">Россия</a></li>            
+                
+    
+                        <li><a class="Link Link--double" href="/index_jp.html">日本</a></li>            
+                
+    
+                        <li><a class="Link Link--double" href="/index_cn.html">中国</a></li>            
+                
+    
+                        <li class="lang_kr"><a class="Link Link--double" href="/index_kr.html">대한민국</a></li>        </ul>
+    </div>
+    <p class="CountryList-foot">
+                                        <a class="Link Link--double" href="/index_all.html">All other countries</a>
+            </p>
+</div>
+            </div>
+            <div id="newsletter" class="Popin-box Popin-box--narrow mfp-hide">
+                
+<form class="Form" id="nl_form"
+    method="post" action="newsletter/register"
+    onsubmit="newsletterForm.checkSubmit()">
+
+
+    <p class="Form-head">
+        <input type="hidden" id="country" name="country" value="Россия" />
+        <input type="hidden" id="language" name="language" value="rus-RU" />
+        <input type="hidden" id="key" name="key" value="440" />
+        <input type="hidden" id="email_sender" name="email_sender" value="" />
+        <input type="hidden" id="email_title" name="email_title" value="" />
+        <input type="hidden" id="email_content" name="email_content" value="
+" />
+
+        
+
+    
+        
+
+                                                                                                                                            <img width="140" height="75" src="/var/ombrelle/storage/images/media/images/img_nl/649-1-eng-GB/img_nl_large.png"  width="119" height="84"  style="border: 0px  ;" alt="img_nl" title="img_nl" />
+            
+    
+        </p>
+
+    
+    <div class="Form-message js-success">
+        <p>Спасибо. Ваш email адрес добавлен к нашему списку.</p>
+    </div>
+
+
+    <p class="Form-field">
+        <input type="text" id="nl_mail" name="nl_mail"
+               aria-label="эл. почта" placeholder="эл. почта"
+               onblur="newsletterForm.updateEmailError()">
+    </p>
+    <p class="Form-error" id="nl_mail_error" aria-hidden="true"
+       data-message="Пожалуйста, укажите email адрес">
+    </p>
+
+    <p class="Form-field">
+        <select id="nl_civilite" name="nl_civilite" aria-label="Your prefix">
+            <!--<option value="">Your prefix</option>-->
+                        <option value="1">Г-жа</option>
+            <option value="2">Г-н</option>
+        </select>
+    </p>
+    <p class="Form-field">
+        <input type="text" id="nl_firstname" name="nl_firstname"
+               placeholder="имя" aria-label="имя">
+    </p>
+    <p class="Form-field">
+        <input type="text" id="nl_name" name="nl_name"
+               placeholder="фамилия" aria-label="фамилия">
+    </p>
+    <p class="Form-field">
+        <input type="text" id="nl_cp" name="nl_cp"
+               placeholder="почтовый индекс" aria-label="почтовый индекс">
+    </p>
+
+    <p class="Form-field">
+        <select id="nl_pays" name="nl_pays"
+                aria-label="Страна"
+                onchange="newsletterForm.updateOptinText()">
+            <option value="">Страна</option>
+            <option value="AR">Argentina</option>
+            <option value="AU">Australia</option>
+            <option value="AT">Austria</option>
+            <option value="BE">Belgique / België</option>
+            <option value="BZ">Belize</option>
+            <option value="BO">Bolivia</option>
+            <option value="BR">Brasil</option>
+            <option value="CA">Canada</option>
+            <option value="CL">Chile</option>
+            <option value="CN">China / 中国</option>
+            <option value="CO">Colombia</option>
+            <option value="CR">Costa Rica</option>
+			<option value="CZ">Czech Republic</option>
+            <option value="DK">Denmark</option>
+            <option value="DE">Deutschland</option>
+            <option value="EC">Ecuador</option>
+            <option value="SV">El Salvador</option>
+            <option value="ES">España</option>
+            <option value="FI">Finland</option>
+            <option value="FR">France</option>
+            <option value="GT">Guatemala</option>
+            <option value="HN">Honduras</option>
+            <option value="HK">Hong Kong</option>
+            <option value="IE">Ireland</option>
+            <option value="IT">Italia</option>
+            <option value="JP">Japan / 日本</option>
+            <option value="KR">Korea / 대한민국e</option>
+            <option value="LU">Luxembourg</option>
+            <option value="MY">Malaysia</option>
+            <option value="MX">México</option>
+            <option value="NL">Nederland</option>
+            <option value="NI">Nicaragua</option>
+            <option value="NO">Norway</option>
+            <option value="PA">Panamá</option>
+            <option value="PY">Paraguay</option>
+            <option value="PE">Peru</option>
+            <option value="PL">Poland</option>
+            <option value="PT">Portugal</option>
+            <option value="RU">Russia</option>
+            <option value="CH">Schweiz / Suisse</option>
+            <option value="SG">Singapour</option>
+            <option value="SE">Sweden</option>
+            <option value="UY">Uruguay</option>
+            <option value="GB">United Kingdom</option>
+            <option value="US">United States</option>
+            <option value="VE">Venezuela</option>
+        </select>
+    </p>
+
+    <p class="Form-optin">
+        <input id="nl_option" name="nl_option" type="checkbox">
+        <label id="nl_option_label" for="nl_option"
+               data-text-default="Да, я хочу получать новости о Hermès Group и подтверждаю, что мои персональные данные могут быть переданы в компанию Hermès."
+               data-text-canada="Я согласен (согласна) получать электронные письма от Hermes International и Hermes Канада, в том числе новости, информацию, приглашения и другие сообщения по товарам и услугам. Вы можете отказаться от рассылки в любой момент. Ознакомьтесь с Политикой конфиденциальности Hermes Канада самостоятельно или свяжитесь с нами для получения подробной информации по адресу privacyoffice@ca.hermes.com.">
+            Да, я хочу получать новости о Hermès Group и подтверждаю, что мои персональные данные могут быть переданы в компанию Hermès.
+        </label>
+    </p>
+
+    <p class="Form-submit">
+        <button class="Link" id="opt_in" type="submit">зарегистрироваться </button>
+    </p>
+</form>
+            </div>
+        </div><!--Layout-bottomRow-->
+    </div><!--Layout-->
+
+    
+
+    
+    <script type="text/javascript" src="/extension/hermes_ombrelle/design/hermes_ombrelle/javascript/jquery/jquery-1.11.3.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="/extension/hermes_ombrelle/design/hermes_ombrelle/javascript/tooltipster/jquery.tooltipster.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="/extension/hermes_ombrelle/design/hermes_ombrelle/javascript/flexslider/jquery.flexslider-min.js" charset="utf-8"></script>
+<script type="text/javascript" src="/extension/hermes_ombrelle/design/hermes_ombrelle/javascript/magnific-popup/mfp-custom.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="/extension/hermes_ombrelle/design/hermes_ombrelle/javascript/legacy/geolocalisation.js" charset="utf-8"></script>
+<script type="text/javascript" src="/extension/hermes_ombrelle/design/hermes_ombrelle/javascript/xiti/xtcore.js" charset="utf-8"></script>
+<script type="text/javascript" src="/extension/hermes_ombrelle/design/hermes_ombrelle/javascript/homeslider.js" charset="utf-8"></script>
+<script type="text/javascript" src="/extension/hermes_ombrelle/design/hermes_ombrelle/javascript/newsletterform.js" charset="utf-8"></script>
+<script type="text/javascript" src="/extension/hermes_ombrelle/design/hermes_ombrelle/javascript/popups.js" charset="utf-8"></script>
+<script type="text/javascript" src="/extension/hermes_ombrelle/design/hermes_ombrelle/javascript/main.js" charset="utf-8"></script>
+
+
+    
+    
+
+    
+    
+<script>
+   var _gaq = _gaq || [];
+   _gaq.push(['_setAccount', 'UA-25030851-1']);
+   _gaq.push(['_trackPageview']);
+   !function(){        var ga = document.createElement('script');
+        ga.type = 'text/javascript'; ga.async = true;
+        ga.src = 'https://www.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);
+    }();
+</script>
+
+
+<script src="http://tags.hermes.com/ombrelle/all/tags.js"></script>
+
+
+
+<script type="text/javascript">
+    <!--
+    xtnv = document; //parent.document or top.document or document
+    xtsd = "http://logi150";
+    xtsite = "343059";
+    xtn2 = ""; //level 2 site
+    xtpage = ""; //page name (with the use of :: to create chapters)
+    xtdi = ""; //implication degree
+    xt_multc = ""; //customised indicators
+    xt_an = ""; //numeric identifier
+    xt_ac = ""; //category
+    //do not modify below
+    if(window.xtparam!=null)
+        {
+        window.xtparam += "&ac="+xt_ac+"&an="+xt_an+xt_multc;
+        }
+    else
+        {
+        window.xtparam = "&ac="+xt_ac+"&an="+xt_an+xt_multc;
+        };
+    //-->
+</script>
+<script type="text/javascript" src="/extension/hermes_ombrelle/design/hermes_ombrelle/javascript/xiti/xtcore.js"></script>
+<noscript>
+    <img width="1" height="1" alt="" src="http://logi150.xiti.com/hit.xiti?s=343059&amp;s2=&amp;p=&amp;di=&amp;an=&amp;ac=" />
+</noscript>
+
+
+    
+    
+    
+
+</body>
+</html>

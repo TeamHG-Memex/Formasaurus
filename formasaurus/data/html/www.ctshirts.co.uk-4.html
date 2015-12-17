@@ -1,0 +1,513 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-GB" data-useragent="python-requests/2.7.0 CPython/3.4.2 Darwin/15.0.0"> <meta http-equiv="content-language" content="en-GB">
+<head><meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+<!-- NewRelic -->
+<script type="text/javascript">
+    window.NREUM || (NREUM = {}), __nr_require = function (t, e, n) { function r(n) { if (!e[n]) { var o = e[n] = { exports: {} }; t[n][0].call(o.exports, function (e) { var o = t[n][1][e]; return r(o ? o : e) }, o, o.exports) } return e[n].exports } if ("function" == typeof __nr_require) return __nr_require; for (var o = 0; o < n.length; o++) r(n[o]); return r } ({ QJf3ax: [function (t, e) { function n(t) { function e(e, n, a) { t && t(e, n, a), a || (a = {}); for (var c = s(e), f = c.length, u = i(a, o, r), d = 0; f > d; d++) c[d].apply(u, n); return u } function a(t, e) { f[t] = s(t).concat(e) } function s(t) { return f[t] || [] } function c() { return n(e) } var f = {}; return { on: a, emit: e, create: c, listeners: s, _events: f} } function r() { return {} } var o = "nr@context", i = t("gos"); e.exports = n() }, { gos: "7eSDFh"}], ee: [function (t, e) { e.exports = t("QJf3ax") }, {}], 3: [function (t) { function e(t) { try { i.console && console.log(t) } catch (e) { } } var n, r = t("ee"), o = t(1), i = {}; try { n = localStorage.getItem("__nr_flags").split(","), console && "function" == typeof console.log && (i.console = !0, -1 !== n.indexOf("dev") && (i.dev = !0), -1 !== n.indexOf("nr_dev") && (i.nrDev = !0)) } catch (a) { } i.nrDev && r.on("internal-error", function (t) { e(t.stack) }), i.dev && r.on("fn-err", function (t, n, r) { e(r.stack) }), i.dev && (e("NR AGENT IN DEVELOPMENT MODE"), e("flags: " + o(i, function (t) { return t }).join(", "))) }, { 1: 22, ee: "QJf3ax"}], 4: [function (t) { function e(t, e, n, i, s) { try { c ? c -= 1 : r("err", [s || new UncaughtException(t, e, n)]) } catch (f) { try { r("ierr", [f, (new Date).getTime(), !0]) } catch (u) { } } return "function" == typeof a ? a.apply(this, o(arguments)) : !1 } function UncaughtException(t, e, n) { this.message = t || "Uncaught error with no additional information", this.sourceURL = e, this.line = n } function n(t) { r("err", [t, (new Date).getTime()]) } var r = t("handle"), o = t(6), i = t("ee"), a = window.onerror, s = !1, c = 0; t("loader").features.err = !0, t(5), window.onerror = e; try { throw new Error } catch (f) { "stack" in f && (t(1), t(2), "addEventListener" in window && t(3), window.XMLHttpRequest && XMLHttpRequest.prototype && XMLHttpRequest.prototype.addEventListener && window.XMLHttpRequest && XMLHttpRequest.prototype && XMLHttpRequest.prototype.addEventListener && !/CriOS/.test(navigator.userAgent) && t(4), s = !0) } i.on("fn-start", function () { s && (c += 1) }), i.on("fn-err", function (t, e, r) { s && (this.thrown = !0, n(r)) }), i.on("fn-end", function () { s && !this.thrown && c > 0 && (c -= 1) }), i.on("internal-error", function (t) { r("ierr", [t, (new Date).getTime(), !0]) }) }, { 1: 9, 2: 8, 3: 6, 4: 10, 5: 3, 6: 23, ee: "QJf3ax", handle: "D5DuLP", loader: "G9z0Bl"}], 5: [function (t) { function e() { } if (window.performance && window.performance.timing && window.performance.getEntriesByType) { var n = t("ee"), r = t("handle"), o = t(1), i = t(2); t("loader").features.stn = !0, t(3), n.on("fn-start", function (t) { var e = t[0]; e instanceof Event && (this.bstStart = Date.now()) }), n.on("fn-end", function (t, e) { var n = t[0]; n instanceof Event && r("bst", [n, e, this.bstStart, Date.now()]) }), o.on("fn-start", function (t, e, n) { this.bstStart = Date.now(), this.bstType = n }), o.on("fn-end", function (t, e) { r("bstTimer", [e, this.bstStart, Date.now(), this.bstType]) }), i.on("fn-start", function () { this.bstStart = Date.now() }), i.on("fn-end", function (t, e) { r("bstTimer", [e, this.bstStart, Date.now(), "requestAnimationFrame"]) }), n.on("pushState-start", function () { this.time = Date.now(), this.startPath = location.pathname + location.hash }), n.on("pushState-end", function () { r("bstHist", [location.pathname + location.hash, this.startPath, this.time]) }), "addEventListener" in window.performance && (window.performance.addEventListener("webkitresourcetimingbufferfull", function () { r("bstResource", [window.performance.getEntriesByType("resource")]), window.performance.webkitClearResourceTimings() }, !1), window.performance.addEventListener("resourcetimingbufferfull", function () { r("bstResource", [window.performance.getEntriesByType("resource")]), window.performance.clearResourceTimings() }, !1)), document.addEventListener("scroll", e, !1), document.addEventListener("keypress", e, !1), document.addEventListener("click", e, !1) } }, { 1: 9, 2: 8, 3: 7, ee: "QJf3ax", handle: "D5DuLP", loader: "G9z0Bl"}], 6: [function (t, e) { function n(t) { i.inPlace(t, ["addEventListener", "removeEventListener"], "-", r) } function r(t) { return t[1] } var o = (t(1), t("ee").create()), i = t(2)(o), a = t("gos"); if (e.exports = o, n(window), "getPrototypeOf" in Object) { for (var s = document; s && !s.hasOwnProperty("addEventListener"); ) s = Object.getPrototypeOf(s); s && n(s); for (var c = XMLHttpRequest.prototype; c && !c.hasOwnProperty("addEventListener"); ) c = Object.getPrototypeOf(c); c && n(c) } else XMLHttpRequest.prototype.hasOwnProperty("addEventListener") && n(XMLHttpRequest.prototype); o.on("addEventListener-start", function (t) { if (t[1]) { var e = t[1]; "function" == typeof e ? this.wrapped = t[1] = a(e, "nr@wrapped", function () { return i(e, "fn-", null, e.name || "anonymous") }) : "function" == typeof e.handleEvent && i.inPlace(e, ["handleEvent"], "fn-") } }), o.on("removeEventListener-start", function (t) { var e = this.wrapped; e && (t[1] = e) }) }, { 1: 23, 2: 24, ee: "QJf3ax", gos: "7eSDFh"}], 7: [function (t, e) { var n = (t(2), t("ee").create()), r = t(1)(n); e.exports = n, r.inPlace(window.history, ["pushState"], "-") }, { 1: 24, 2: 23, ee: "QJf3ax"}], 8: [function (t, e) { var n = (t(2), t("ee").create()), r = t(1)(n); e.exports = n, r.inPlace(window, ["requestAnimationFrame", "mozRequestAnimationFrame", "webkitRequestAnimationFrame", "msRequestAnimationFrame"], "raf-"), n.on("raf-start", function (t) { t[0] = r(t[0], "fn-") }) }, { 1: 24, 2: 23, ee: "QJf3ax"}], 9: [function (t, e) { function n(t, e, n) { t[0] = o(t[0], "fn-", null, n) } var r = (t(2), t("ee").create()), o = t(1)(r); e.exports = r, o.inPlace(window, ["setTimeout", "setInterval", "setImmediate"], "setTimer-"), r.on("setTimer-start", n) }, { 1: 24, 2: 23, ee: "QJf3ax"}], 10: [function (t, e) { function n() { f.inPlace(this, p, "fn-") } function r(t, e) { f.inPlace(e, ["onreadystatechange"], "fn-") } function o(t, e) { return e } function i(t, e) { for (var n in t) e[n] = t[n]; return e } var a = t("ee").create(), s = t(1), c = t(2), f = c(a), u = c(s), d = window.XMLHttpRequest, p = ["onload", "onerror", "onabort", "onloadstart", "onloadend", "onprogress", "ontimeout"]; e.exports = a, window.XMLHttpRequest = function (t) { var e = new d(t); try { a.emit("new-xhr", [], e), u.inPlace(e, ["addEventListener", "removeEventListener"], "-", o), e.addEventListener("readystatechange", n, !1) } catch (r) { try { a.emit("internal-error", [r]) } catch (i) { } } return e }, i(d, XMLHttpRequest), XMLHttpRequest.prototype = d.prototype, f.inPlace(XMLHttpRequest.prototype, ["open", "send"], "-xhr-", o), a.on("send-xhr-start", r), a.on("open-xhr-start", r) }, { 1: 6, 2: 24, ee: "QJf3ax"}], 11: [function (t) { function e(t) { var e = this.params, r = this.metrics; if (!this.ended) { this.ended = !0; for (var i = 0; c > i; i++) t.removeEventListener(s[i], this.listener, !1); if (!e.aborted) { if (r.duration = (new Date).getTime() - this.startTime, 4 === t.readyState) { e.status = t.status; var a = t.responseType, f = "arraybuffer" === a || "blob" === a || "json" === a ? t.response : t.responseText, u = n(f); if (u && (r.rxSize = u), this.sameOrigin) { var d = t.getResponseHeader("X-NewRelic-App-Data"); d && (e.cat = d.split(", ").pop()) } } else e.status = 0; r.cbTime = this.cbTime, o("xhr", [e, r, this.startTime]) } } } function n(t) { if ("string" == typeof t && t.length) return t.length; if ("object" != typeof t) return void 0; if ("undefined" != typeof ArrayBuffer && t instanceof ArrayBuffer && t.byteLength) return t.byteLength; if ("undefined" != typeof Blob && t instanceof Blob && t.size) return t.size; if ("undefined" != typeof FormData && t instanceof FormData) return void 0; try { return JSON.stringify(t).length } catch (e) { return void 0 } } function r(t, e) { var n = i(e), r = t.params; r.host = n.hostname + ":" + n.port, r.pathname = n.pathname, t.sameOrigin = n.sameOrigin } if (window.XMLHttpRequest && XMLHttpRequest.prototype && XMLHttpRequest.prototype.addEventListener && !/CriOS/.test(navigator.userAgent)) { t("loader").features.xhr = !0; var o = t("handle"), i = t(2), a = t("ee"), s = ["load", "error", "abort", "timeout"], c = s.length, f = t(1); t(4), t(3), a.on("new-xhr", function () { this.totalCbs = 0, this.called = 0, this.cbTime = 0, this.end = e, this.ended = !1, this.xhrGuids = {} }), a.on("open-xhr-start", function (t) { this.params = { method: t[0] }, r(this, t[1]), this.metrics = {} }), a.on("open-xhr-end", function (t, e) { "loader_config" in NREUM && "xpid" in NREUM.loader_config && this.sameOrigin && e.setRequestHeader("X-NewRelic-ID", NREUM.loader_config.xpid) }), a.on("send-xhr-start", function (t, e) { var r = this.metrics, o = t[0], i = this; if (r && o) { var f = n(o); f && (r.txSize = f) } this.startTime = (new Date).getTime(), this.listener = function (t) { try { "abort" === t.type && (i.params.aborted = !0), ("load" !== t.type || i.called === i.totalCbs && (i.onloadCalled || "function" != typeof e.onload)) && i.end(e) } catch (n) { try { a.emit("internal-error", [n]) } catch (r) { } } }; for (var u = 0; c > u; u++) e.addEventListener(s[u], this.listener, !1) }), a.on("xhr-cb-time", function (t, e, n) { this.cbTime += t, e ? this.onloadCalled = !0 : this.called += 1, this.called !== this.totalCbs || !this.onloadCalled && "function" == typeof n.onload || this.end(n) }), a.on("xhr-load-added", function (t, e) { var n = "" + f(t) + !!e; this.xhrGuids && !this.xhrGuids[n] && (this.xhrGuids[n] = !0, this.totalCbs += 1) }), a.on("xhr-load-removed", function (t, e) { var n = "" + f(t) + !!e; this.xhrGuids && this.xhrGuids[n] && (delete this.xhrGuids[n], this.totalCbs -= 1) }), a.on("addEventListener-end", function (t, e) { e instanceof XMLHttpRequest && "load" === t[0] && a.emit("xhr-load-added", [t[1], t[2]], e) }), a.on("removeEventListener-end", function (t, e) { e instanceof XMLHttpRequest && "load" === t[0] && a.emit("xhr-load-removed", [t[1], t[2]], e) }), a.on("fn-start", function (t, e, n) { e instanceof XMLHttpRequest && ("onload" === n && (this.onload = !0), ("load" === (t[0] && t[0].type) || this.onload) && (this.xhrCbStart = (new Date).getTime())) }), a.on("fn-end", function (t, e) { this.xhrCbStart && a.emit("xhr-cb-time", [(new Date).getTime() - this.xhrCbStart, this.onload, e], e) }) } }, { 1: "XL7HBI", 2: 12, 3: 10, 4: 6, ee: "QJf3ax", handle: "D5DuLP", loader: "G9z0Bl"}], 12: [function (t, e) { e.exports = function (t) { var e = document.createElement("a"), n = window.location, r = {}; e.href = t, r.port = e.port; var o = e.href.split("://"); return !r.port && o[1] && (r.port = o[1].split("/")[0].split("@").pop().split(":")[1]), r.port && "0" !== r.port || (r.port = "https" === o[0] ? "443" : "80"), r.hostname = e.hostname || n.hostname, r.pathname = e.pathname, r.protocol = o[0], "/" !== r.pathname.charAt(0) && (r.pathname = "/" + r.pathname), r.sameOrigin = !e.hostname || e.hostname === document.domain && e.port === n.port && e.protocol === n.protocol, r } }, {}], 13: [function (t, e) { function n(t) { return function () { r(t, [(new Date).getTime()].concat(i(arguments))) } } var r = t("handle"), o = t(1), i = t(2); "undefined" == typeof window.newrelic && (newrelic = window.NREUM); var a = ["setPageViewName", "addPageAction", "setCustomAttribute", "finished", "addToTrace", "inlineHit", "noticeError"]; o(a, function (t, e) { window.NREUM[e] = n("api-" + e) }), e.exports = window.NREUM }, { 1: 22, 2: 23, handle: "D5DuLP"}], "7eSDFh": [function (t, e) { function n(t, e, n) { if (r.call(t, e)) return t[e]; var o = n(); if (Object.defineProperty && Object.keys) try { return Object.defineProperty(t, e, { value: o, writable: !0, enumerable: !1 }), o } catch (i) { } return t[e] = o, o } var r = Object.prototype.hasOwnProperty; e.exports = n }, {}], gos: [function (t, e) { e.exports = t("7eSDFh") }, {}], handle: [function (t, e) { e.exports = t("D5DuLP") }, {}], D5DuLP: [function (t, e) { function n(t, e, n) { return r.listeners(t).length ? r.emit(t, e, n) : (o[t] || (o[t] = []), void o[t].push(e)) } var r = t("ee").create(), o = {}; e.exports = n, n.ee = r, r.q = o }, { ee: "QJf3ax"}], id: [function (t, e) { e.exports = t("XL7HBI") }, {}], XL7HBI: [function (t, e) { function n(t) { var e = typeof t; return !t || "object" !== e && "function" !== e ? -1 : t === window ? 0 : i(t, o, function () { return r++ }) } var r = 1, o = "nr@id", i = t("gos"); e.exports = n }, { gos: "7eSDFh"}], G9z0Bl: [function (t, e) { function n() { var t = p.info = NREUM.info, e = f.getElementsByTagName("script")[0]; if (t && t.licenseKey && t.applicationID && e) { s(d, function (e, n) { e in t || (t[e] = n) }); var n = "https" === u.split(":")[0] || t.sslForHttp; p.proto = n ? "https://" : "http://", a("mark", ["onload", i()]); var r = f.createElement("script"); r.src = p.proto + t.agent, e.parentNode.insertBefore(r, e) } } function r() { "complete" === f.readyState && o() } function o() { a("mark", ["domContent", i()]) } function i() { return (new Date).getTime() } var a = t("handle"), s = t(1), c = (t(2), window), f = c.document, u = ("" + location).split("?")[0], d = { beacon: "bam.nr-data.net", errorBeacon: "bam.nr-data.net", agent: "js-agent.newrelic.com/nr-632.min.js" }, p = e.exports = { offset: i(), origin: u, features: {} }; f.addEventListener ? (f.addEventListener("DOMContentLoaded", o, !1), c.addEventListener("load", n, !1)) : (f.attachEvent("onreadystatechange", r), c.attachEvent("onload", n)), a("mark", ["firstbyte", i()]) }, { 1: 22, 2: 13, handle: "D5DuLP"}], loader: [function (t, e) { e.exports = t("G9z0Bl") }, {}], 22: [function (t, e) { function n(t, e) { var n = [], o = "", i = 0; for (o in t) r.call(t, o) && (n[i] = e(o, t[o]), i += 1); return n } var r = Object.prototype.hasOwnProperty; e.exports = n }, {}], 23: [function (t, e) { function n(t, e, n) { e || (e = 0), "undefined" == typeof n && (n = t ? t.length : 0); for (var r = -1, o = n - e || 0, i = Array(0 > o ? 0 : o); ++r < o; ) i[r] = t[e + r]; return i } e.exports = n }, {}], 24: [function (t, e) { function n(t) { return !(t && "function" == typeof t && t.apply && !t[i]) } var r = t("ee"), o = t(1), i = "nr@wrapper", a = Object.prototype.hasOwnProperty; e.exports = function (t) { function e(t, e, r, a) { function nrWrapper() { var n, i, s, f; try { i = this, n = o(arguments), s = r && r(n, i) || {} } catch (d) { u([d, "", [n, i, a], s]) } c(e + "start", [n, i, a], s); try { return f = t.apply(i, n) } catch (p) { throw c(e + "err", [n, i, p], s), p } finally { c(e + "end", [n, i, f], s) } } return n(t) ? t : (e || (e = ""), nrWrapper[i] = !0, f(t, nrWrapper), nrWrapper) } function s(t, r, o, i) { o || (o = ""); var a, s, c, f = "-" === o.charAt(0); for (c = 0; c < r.length; c++) s = r[c], a = t[s], n(a) || (t[s] = e(a, f ? s + o : o, i, s)) } function c(e, n, r) { try { t.emit(e, n, r) } catch (o) { u([o, e, n, r]) } } function f(t, e) { if (Object.defineProperty && Object.keys) try { var n = Object.keys(t); return n.forEach(function (n) { Object.defineProperty(e, n, { get: function () { return t[n] }, set: function (e) { return t[n] = e, e } }) }), e } catch (r) { u([r]) } for (var o in t) a.call(t, o) && (e[o] = t[o]); return e } function u(e) { try { t.emit("internal-error", e) } catch (n) { } } return t || (t = r), e.inPlace = s, e.flag = i, e } }, { 1: 23, ee: "QJf3ax"}] }, {}, ["G9z0Bl", 4, 11, 5]);
+    ; NREUM.info = { beacon: "bam.nr-data.net", errorBeacon: "bam.nr-data.net", licenseKey: "956160311d", applicationID: "6177646", sa: 1, agent: "js-agent.newrelic.com/nr-632.min.js" }
+</script>
+<!-- /NewRelic -->
+
+    <link rel="alternate" hreflang="en-gb" href="http://www.ctshirts.co.uk/" /><link rel="alternate" hreflang="en-us" href="http://www.ctshirts.com/" /><link rel="alternate" hreflang="en-au" href="http://www.ctshirts.com.au/" /><link rel="alternate" hreflang="de" href="http://www.ctshirts.de/" />
+
+    <!-- CT Trac #1028 12/10/2012 - MOBIFY - DO NOT ALTER - PASTE IMMEDIATELY AFTER OPENING HEAD TAG - must be below X-UA-Compatible for IE8 -->
+    <!-- MOBIFY - DO NOT ALTER - PASTE IMMEDIATELY AFTER OPENING HEAD TAG -->
+    <script type="text/javascript">/*<![CDATA[*/(function (a) { function b(a, b) { if (+a) return ~a || (d.cookie = h + "=; path=/"); j = d.createElement(e), k = d.getElementsByTagName(e)[0], j.src = a, b && (j.onload = j.onerror = b), k.parentNode.insertBefore(j, k) } function c() { n.api || b(l.shift() || -1, c) } if (this.Mobify) return; var d = document, e = "script", f = "mobify", g = "." + f + ".com/", h = f + "-path", i = g + "un" + f + ".js", j, k, l = [!1, 1], m, n = this.Mobify = { points: [+(new Date)], tagVersion: [6, 1], ajs: "https://a.mobify.com/charles-tyrwhitt/a.js" }, o = /((; )|#|&|^)mobify-path=([^&;]*)/g.exec(location.hash + "; " + d.cookie); o ? (m = o[3]) && !+(m = o[2] && sessionStorage[h] || m) && (l = [!0, "//preview" + g + escape(m)]) : (l = a() || l, l[0] && l.push("//cdn" + i, "//files01" + i)), l.shift() ? (d.write('<plaintext style="display:none;">'), setTimeout(c)) : b(l[0]) })(function () { if (/ip(hone|od)|android.*(mobile)|blackberry.*applewebkit/i.test(navigator.userAgent)) { return [1, "//cdn.mobify.com/sites/charles-tyrwhitt/production/mobify.js"] } return [0, Mobify.ajs] })/*]]>*/</script>
+    <!-- END MOBIFY -->
+
+    <!-- END MOBIFY --> 
+   
+    <title>
+	 Men's shorts from Charles Tyrwhitt, Jermyn Street, London
+</title><link rel="apple-touch-icon-precomposed" href="/Static/img/branding/apple-favicon.png" /><meta http-equiv="content-type" content="text/html; charset=utf-8" /><meta name="description" content="Buy  Men's shorts from Charles Tyrwhitt of Jermyn Street, London online at ctshirts.co.uk or order our catalogue today" /><meta name="keywords" content="Mens's Shirts, women's shirts, ties, suits, shoes, casual wear, outer wear, accessories, belts, boxer shorts, cufflinks, coats, jackets, underwear, briefs, charles tyrwhitt, ctshirts, tyrwhitt, ct shirts, c t shirts, charles tyrwitt, charles ty, charles thyrwitt, charles tyrwhitt shirts, charlestyrwhitt" /><link rel="canonical" href="http://www.ctshirts.co.uk/mens-casualwear/mens-shorts?q=gbpdefault|||||||||||||||"/><meta name="p:domain_verify" content="f50000edf4746501e80fa4e83cba6b31"/>
+  
+    <script type="text/javascript">
+    //<![CDATA[
+        document.documentElement.className += ' js loading';
+        // ]]>
+    </script>
+    
+    <link href="/static/css/bundle1?v=t5nECVV9lhQ9gSpS0WHN-9-OKv-1VyKqgGpmpJcKr1M1" rel="stylesheet"/>
+<link href="/static/css/bundle2?v=eGF8w6PMZy38bDP-MJlw0gwuAR1GYcWOI8gZv38K2Q01" rel="stylesheet"/>
+
+    
+    <!--[if IE]><link rel="stylesheet" href="/static/css/IE_is.css" type="text/css" media="screen" /><![endif]-->
+    <!--[if lt IE 8]><link rel="stylesheet" href="/static/css/IE_lt8.css" type="text/css" media="screen" /><![endif]-->
+    <!--[if lt IE 7]><link rel="stylesheet" href="/static/css/IE_lt7.css" type="text/css" media="screen" /><![endif]--> 
+    <!--[if lte IE 7]><link rel="stylesheet" href="/static/css/IE_lte7.css" type="text/css" media="screen" /><![endif]--> 
+    <!--[if IE]>
+    <script type="text/javascript" src="/Static/js/libs/PIE.js"></script>
+    <![endif]-->
+
+    <script src="/static/js/bundle?v=T0BUyMzxEaIbJfMRwiVdMOcxd9J6yraXjZAFv0dMxXs1"></script>
+</head>
+
+    <body class='product_list gb' id='shirt'><ul class='accessibility' id='skiplinks'><li><a href='#content'>Jump to main content</a></li><li><a href='#products'>Jump to main navigation</a></li></ul><div id='outer'><div id='page' class='three_up'>
+         
+    <div id="header_container">
+         
+
+<div class="header">
+    <div class="header__links">
+        <ul class="header__links_general">
+            <li class="phone"><span class='icon'></span>0344 482 4000</li>
+            <li class="locator">
+                <span class='icon'></span>
+                <a href="http://www.ctshirts.co.uk/Charles-Tyrwhitt-uk-stores?cnt=uk-stores" target="_self">
+                    Our stores
+                </a>
+            </li>
+            <li class="help">
+                <span class='icon'></span>
+                <a href='http://www.ctshirts.co.uk/RightNow.aspx?t=headerhelplink'>Help</a>
+            </li>
+        </ul>
+        <ul class="header__links_account">
+            
+                <li class="shopping_bag">
+                    <span class='icon'></span>
+                    <h2 class="accessibility">Basket</h2>
+                    <a href='http://www.ctshirts.co.uk/ShoppingBag.aspx' class='bag-txt'>Shopping bag&nbsp;<span id='bagQty' class='meta'></span></a>
+                    <div class="header__basket">
+                        <div class="header__basket_inner">
+                                <div class="header__basket_empty">
+                                    <h2>Your shopping bag is empty</h2>
+                                    <span>Why not give it a purpose and fill it with clothes and accessories!</span>
+                                </div>
+                        </div>
+
+                    </div>
+                    
+
+
+                    
+                </li>
+            
+            <li class="shortlist">
+                <span class='icon'></span>
+                <a href='/shortlist.aspx'>My shortlist</a>
+            </li>
+            
+            <li class="login" id='my_account_login'>
+                <span class='icon'></span>
+                <h2 class="accessibility">Manage your account</h2>
+                <a href='https://www.ctshirts.co.uk/AccountLogin.aspx' style='width:40px'>Log in</a>
+            </li>
+        </ul>
+
+        <div class="header__fixed">
+            <div class="header__bag_popup">
+                <div class="header__bag_inner">
+                    <h3><span class="padlock"></span><span class="header__popup_title"></span></h3>
+                    <div class="header__bag_item_list">
+                        <div class="header__bag_item">
+                            <a href="">
+                                <div class="header__bag_item_image"><img src="" alt="" /></div>
+                                <div class="header__bag_item_info">
+                                    <span class="header__bag_item_name"></span>
+                                    <span class="header__bag_item_quantity"></span>
+                                    <span class="header__bag_item_price"></span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="header__bag_info">
+                        <span class="header__bag_total_items"></span>
+                        <span class="header__bag_total"></span>
+                        <a href='/ShoppingBag.aspx' class='header__basket_checkout'><img src='/static/img/home_redesign/button-checkout.png' alt='checkout' /></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <div id="logo_holder">
+        <a rel='home' href="http://www.ctshirts.co.uk/default.aspx?q=gbpdefault|||||||||||||||"><img src="/static/img/home_redesign/logo.png" width="355" height="52" alt="Charles Tyrwhitt &#8211; Jermyn Street London" /> </a>
+    </div>
+    
+    <div class="nav navbar full-gradient">   <h2 class="accessibility">Browse products by type</h2>   <ul>     <li class="navbar__group"> <a class="navbar__group_header"   href="/mens-shirts?q=gbpdefault|||||||||||||||"><span>Shirts</span></a>       <div class="navbar__group_details">         <div class="navbar__group_inner">           <ul>             <li> <a href="/mens-shirts/mens-formal-shirts?q=gbpdefault|||||||||||||||">Formal shirts</a> </li>             <li> <a href="/mens-shirts/mens-casual-shirts?q=gbpdefault|||||||||||||||">Casual shirts</a> </li>             <li class="navbar__group_last"> <a href="/mens-shirts/view-all?q=gbpdefault|||||||||||||||">View all shirts</a></li>           </ul>           <div class="navbar__group_aside">             <ul>               <li class="navbar__group_first">See also:</li>               <li> <a href="/mens-shirts/view-all?q=gbpdefault|||||||381,||||||||">Classic fit shirts</a> </li>               <li> <a href="/mens-shirts/view-all?q=gbpdefault|||||||406,||||||||">Slim fit shirts</a> </li>               <li> <a href="/mens-shirts/view-all?q=gbpdefault|||||||1861,||||||||">Extra slim fit shirts</a> </li>               <li> <a href="/shirtfinder?q=gbpdefault|||||||||||||||">Formal shirt finder</a> </li>               <li> <a href="/How-to-measure-for-a-shirt?cnt=measure-for-a-shirt">How to measure for a shirt</a> </li>               <li> <a href="/Charles-Tyrwhitt-Monogramme?cnt=monogramming">Shirt monogramming</a> </li>             </ul>             <div class="navbar__group_aside_image"> <a href="/mens-shirts/view-all?q=gbpdefault|||||||4312,1861,406,4829,||||||||" rel="Shop our stretch shirts" title="Shop our stretch shirts">               <!-- ******* SHIRTS: Image on navigation sidebar ****** -->               <img src="/Content/AW15/Hero-Images/UK/A-HI-Stretch-shirts.jpg" alt="Shop our stretch shirts" width="365px" height="210px" />               <!-- ******* SHIRTS: Image on navigation sidebar ****** -->               </a> </div>           </div>         </div>       </div>     </li>     <li class="navbar__group"> <a class="navbar__group_header" href="/mens-ties?q=gbpdefault|||||||||||||||"> <span>Ties</span> </a>       <div class="navbar__group_details">         <div class="navbar__group_inner">           <ul>             <li> <a href="/mens-ties/classic-ties?q=gbpdefault|||||||||||||||">Classic ties</a> </li>             <li> <a href="/mens-ties/luxury-ties?q=gbpdefault|||||||||||||||">Luxury ties</a> </li>             <!--   <li> <a href="/mens-ties/knitted-ties?q=gbpdefault|||||||||||||||">Knitted ties</a> </li> -->             <li class="navbar__group_last"> <a href="/mens-ties/view-all?q=gbpdefault|||||||||||||||">View all ties</a> </li>           </ul>           <div class="navbar__group_aside">             <ul>               <li class="navbar__group_first">See also:</li>               <li> <a href="/mens-ties/view-all?q=gbpdefault|||||||4864,||||||||">Bow ties</a> </li>               <li> <a href="/mens-ties/view-all?q=gbpdefault|||||||,4859,||||||||">Slim ties</a> </li>               <li> <a href="/How-to-tie-a-bowtie?cnt=bowtie">How to tie a bow tie</a> </li>               <li> <a href="/how-to-tie-a-four-in-hand-knot?cnt=four-in-hand">How to tie a four-in-hand knot</a> </li>             </ul>             <div class="navbar__group_aside_image"> <a href="/mens-ties?q=gbpdefault|||||||416,||||||||" rel="Shop classic ties" title="Shop classic ties">               <!-- ******* SHIRTS: Image on navigation sidebar ****** -->               <img src="/Content/AW15/Hero-Images/UK/B-HI-BlueTies.jpg" alt="Shop classic ties" width="365px" height="210px" />               <!-- ******* SHIRTS: Image on navigation sidebar ****** -->               </a> </div>           </div>         </div>       </div>     </li>     <li class="navbar__group"> <a class="navbar__group_header" href="/mens-suits?q=gbpdefault|||||||||||||||"> <span>Suits</span> </a>       <div class="navbar__group_details">         <div class="navbar__group_inner">           <ul>             <li> <a href="/mens-suits/mens-business-suits?q=gbpdefault|||||||||||||||">Work suits</a> </li>             <li> <a href="/mens-suits/mens-occasion-suits?q=gbpdefault|||||||||||||||">Occasion suits</a> </li>             <li class="navbar__group_last"> <a href="/mens-suits/view-all?q=gbpdefault|||||||||||||||">View all suits</a> </li>           </ul>           <div class="navbar__group_aside">             <ul>               <li class="navbar__group_first">See also:</li>               <li> <a href="/mens-suits/view-all?q=gbpdefault|||||||381,||||||||">Classic fit suits</a> </li>               <li> <a href="/mens-suits/view-all?q=gbpdefault|||||||406,||||||||">Slim fit suits</a> </li>               <li> <a href="/mens-outerwear/mens-blazers-%26-jackets?q=gbpdefault|||||||||||||||">Jackets &amp; blazers</a> </li>               <li> <a href="/mens-suits/view-all?q=gbpdefault|||||||2211,||||||||">Formal trousers</a> </li>             </ul>             <div class="navbar__group_aside_image"> <a href="/mens-suits?q=gbpdefault|||||||416,||||||||" rel="Shop blue suits" title="Shop blue suits">               <!-- ******* SHIRTS: Image on navigation sidebar ****** -->               <img src="/Content/AW15/Hero-Images/UK/C-HI-BlueSuits.jpg" alt="Shop blue suits" width="365px" height="210px" />               <!-- ******* SHIRTS: Image on navigation sidebar ****** -->               </a> </div>           </div>         </div>       </div>     </li>     <li class="navbar__group"> <a class="navbar__group_header" href="/mens-shoes?q=gbpdefault|||||||||||||||"> <span>Shoes</span> </a>       <div class="navbar__group_details">         <div class="navbar__group_inner">           <ul>             <li> <a href="/mens-shoes/mens-business-shoes?q=gbpdefault|||||||||||||||">Business shoes</a> </li>             <li> <a href="/mens-shoes/mens-casual-shoes?q=gbpdefault|||||||||||||||">Casual shoes</a> </li>             <li> <a href="/mens-shoes/mens-boots?q=gbpdefault|||||||||||||||">Boots</a> </li>             <li class="navbar__group_last"> <a href="/mens-shoes/view-all?q=gbpdefault|||||||||||||||">View all shoes</a> </li>           </ul>           <div class="navbar__group_aside">             <ul>               <li class="navbar__group_first">See also:</li>               <li> <a href="/mens-shoes/view-all?q=gbpdefault|||||||5044,||||||||">Standard fit shoes</a> </li>               <li> <a href="/mens-shoes/view-all?q=gbpdefault|||||||391,||||||||">Wider G fit shoes</a> </li>               <li> <a href="/mens-accessories/shoe-care?q=gbpdefault|||||||||||||||">Shoe care</a> </li>             </ul>             <div class="navbar__group_aside_image"> <a href="/mens-shoes/view-all?q=gbpdefault|||||||411,||||||||" rel="Shop black shoes" title="Shop black shoes">               <!-- ******* SHIRTS: Image on navigation sidebar ****** -->               <img src="/Content/AW15/Hero-Images/UK/D-HI-Black-shoes.jpg" alt="Shop black shoes" width="365px" height="210px" />               <!-- ******* SHIRTS: Image on navigation sidebar ****** -->               </a> </div>           </div>         </div>       </div>     </li>     <li class="navbar__group"> <a class="navbar__group_header" href="/mens-casualwear?q=gbpdefault|||||||||||||||"> <span>Casualwear</span> </a>       <div class="navbar__group_details">         <div class="navbar__group_inner">           <ul>             <li> <a href="/mens-casualwear/mens-casual-shirts?q=gbpdefault|||||||||||||||">Casual shirts</a> </li>             <li> <a href="/mens-casualwear/mens-polo-shirts?q=gbpdefault|||||||||||||||">Polo &amp; rugby shirts</a> </li>             <li> <a href="/mens-casualwear/mens-knitwear?q=gbpdefault|||||||||||||||">Knitwear</a> </li>             <li> <a href="/mens-casualwear/mens-casual-trousers?q=gbpdefault|||||||||||||||">Trousers</a> </li>             <li> <a href="/mens-casualwear/mens-shorts?q=gbpdefault|||||||||||||||">Shorts</a> </li>             <li> <a href="/mens-casualwear/swim-shorts?q=gbpdefault|||||||||||||||">Swim shorts</a> </li>           </ul>           <ul>             <li> <a href="/mens-casualwear/mens-nightwear?q=gbpdefault|||||||||||||||">T-shirts &amp; pyjamas</a> </li>             <li> <a href="/mens-casualwear/mens-casual-shoes?q=gbpdefault|||||||||||||||">Casual shoes</a> </li>             <li class="navbar__group_last"> <a href="/mens-casualwear/view-all?q=gbpdefault|||||||||||||||">View all casualwear</a> </li>           </ul>           <div class="navbar__group_aside">             <ul>               <li class="navbar__group_first">See also:</li>               <li> <a href="/womenswear/womens-knitwear?q=gbpdefault|||||||||||||||">Women's knitwear</a> </li>             </ul>             <div class="navbar__group_aside_image"> <a href="/mens-casualwear/mens-casual-trousers?q=gbpdefault|||||||4482,||||||||" rel="Shop non-iron chinos" title="Shop non-iron chinos">               <!-- ******* SHIRTS: Image on navigation sidebar ****** -->               <img src="/Content/AW15/Hero-Images/UK/E-HI-NonIron-Chino.jpg" alt="Shop non-iron chinos" width="365px" height="210px" />               <!-- ******* SHIRTS: Image on navigation sidebar ****** -->               </a> </div>           </div>         </div>       </div>     </li>     <li class="navbar__group"> <a class="navbar__group_header" href="/mens-outerwear?q=gbpdefault|||||||||||||||"> <span>Outerwear</span> </a>       <div class="navbar__group_details">         <div class="navbar__group_inner">           <ul>             <li> <a href="/mens-outerwear/mens-coats?q=gbpdefault|||||||||||||||">Coats</a> </li>             <li> <a href="/mens-outerwear/mens-blazers-%26-jackets?q=gbpdefault|||||||||||||||">Jackets &amp; blazers</a> </li>             <!--<li> <a href="/mens-outerwear/mens-gilet/Navy--gilet?q=gbpdefault||jc075nav|||||||||||||">Gilet</a> </li> -->             <li class="navbar__group_last"> <a href="/mens-outerwear/view-all?q=gbpdefault|||||||||||||||">View all outerwear</a> </li>           </ul>           <div class="navbar__group_aside">             <ul>               <li class="navbar__group_first">See also:</li>               <li> <a href="/mens-outerwear/mens-blazers-%26-jackets?q=gbpdefault|||||||381,||||||||">Classic fit jackets &amp; blazers</a> </li>               <li> <a href="/mens-outerwear/mens-blazers-%26-jackets?q=gbpdefault|||||||406,||||||||">Slim fit jackets &amp; blazers</a> </li>             </ul>             <div class="navbar__group_aside_image"> <a href="/mens-outerwear/mens-coats?q=gbpdefault|||||||3356,||||||||" rel="Shop raincoats" title="Shop raincoats">               <!-- ******* SHIRTS: Image on navigation sidebar ****** -->               <img src="/Content/AW15/Hero-Images/UK/F-HI-raincoats.jpg" alt="Shop raincoats" width="365px" height="210px" />               <!-- ******* SHIRTS: Image on navigation sidebar ****** -->               </a> </div>           </div>         </div>       </div>     </li>     <li class="navbar__group"> <a class="navbar__group_header" href="/mens-accessories?q=gbpdefault|||||||||||||||"> <span>Accessories</span> </a>       <div class="navbar__group_details">         <div class="navbar__group_inner">           <ul>             <li> <a href="/mens-accessories/mens-cufflinks?q=gbpdefault|||||||||||||||">Cufflinks</a> </li>             <li> <a href="/mens-accessories/mens-boxer-shorts?q=gbpdefault|||||||||||||||">Boxer shorts</a> </li>             <li> <a href="/mens-accessories/mens-pocket-squares?q=gbpdefault|||||||||||||||">Pocket squares</a> </li>             <li> <a href="/mens-accessories/mens-socks?q=gbpdefault|||||||||||||||">Socks</a> </li>             <li> <a href="/mens-accessories/mens-belts?q=gbpdefault|||||||||||||||">Belts</a> </li>             <li> <a href="/mens-accessories/braces?q=gbpdefault|||||||||||||||">Braces</a> </li>             <li> <a href="/mens-accessories/mens-hats?q=gbpdefault|||||||||||||||">Hats</a> </li>             <li> <a href="/mens-accessories/mens-scarves?q=gbpdefault|||||||||||||||">Scarves</a> </li>           </ul>           <ul>             <li> <a href="/mens-accessories/mens-gloves?q=gbpdefault|||||||||||||||">Gloves</a> </li>             <li> <a href="/mens-accessories/umbrella?q=gbpdefault|||||||||||||||">Umbrellas</a> </li>             <li> <a href="/mens-accessories/mens-evening-accessories?q=gbpdefault|||||||||||||||">Evening accessories</a> </li>             <li> <a href="/mens-accessories/tie-bar?q=gbpdefault|||||||||||||||">Tie bars</a> </li>             <li> <a href="/mens-accessories/shoe-care?q=gbpdefault|||||||||||||||">Shoe care</a> </li>             <li> <a href="/mens-accessories/collar-stiffeners?q=gbpdefault|||||||||||||||">Collar stiffeners</a> </li>             <li class="navbar__group_last"> <a href="/mens-accessories/view-all?q=gbpdefault|||||||||||||||">View all accessories</a> </li>           </ul>           <div class="navbar__group_aside">             <ul>               <li class="navbar__group_first">See also:</li>               <li> <a href="/mens-casualwear/mens-nightwear?q=gbpdefault|||||||||||||||">T-shirts &amp; pyjamas</a> </li>               <li> <a href="/GiftVoucher.aspx?">Gift vouchers</a> </li>             </ul>             <div class="navbar__group_aside_image"> <a href="/mens-accessories/mens-scarves?q=gbpdefault|||||||||||||||" rel="Shop belts" title="Shop belts">               <!-- ******* SHIRTS: Image on navigation sidebar ****** -->               <img src="/Content/AW15/Hero-Images/UK/G-HI-scarves.jpg" alt="Shop belts" width="365px" height="210px" />               <!-- ******* SHIRTS: Image on navigation sidebar ****** -->               </a> </div>           </div>         </div>       </div>     </li>     <li class="navbar__group"> <a class="navbar__group_header" href="/womenswear?q=gbpdefault|||||||||||||||"> <span>Womenswear</span> </a>       <div class="navbar__group_details">         <div class="navbar__group_inner">           <ul>             <li> <a href="/womenswear/womens-shirts?q=gbpdefault|||||||||||||||">Women's shirts</a> </li>             <li> <a href="/womenswear/womens-knitwear?q=gbpdefault|||||||||||||||">Women's knitwear</a> </li>             <li> <a href="/womenswear/womens-jerseywear?q=gbpdefault|||||||||||||||">Women's jerseywear</a> </li>             <li> <a href="/womenswear/womens-coats/Navy--quilted--coat?q=gbpdefault||lq005nav|||||||||||||">Women's coats</a></li>             <li class="navbar__group_last"> <a href="/womenswear/view-all?q=gbpdefault|||||||||||||||">View all womenswear</a></li>           </ul>           <div class="navbar__group_aside_image"> <a href="/womenswear/womens-knitwear?q=gbpdefault|||||||||||||||" rel="Shop women's jersey shirts" title="Shop women's jersey shirts">             <!-- ******* SHIRTS: Image on navigation sidebar ****** -->             <a href="/womenswear/womens-knitwear?q=gbpdefault|||||||||||||||" rel="Shop women's jersey shirts" title="Shop women's jersey shirts"><img src="/Content/AW15/Hero-Images/UK/H-HI-WomensKnits.jpg" alt="Shop women's jersey shirts" width="365px" height="210px" /></a>             <!-- ******* SHIRTS: Image on navigation sidebar ****** -->           </div>         </div>       </div>     </li>     <li class="navbar__group"></li>   <!--  <li class="navbar__group sale "> <a class="navbar__group_header" href="/Sale?q=gbpdefault|||||||||||||||">Clearance</a></li> -->     <li class="navbar__group search">       <div class="navbar__search">         <h2 class="accessibility">Search the site</h2>         <form action="/productlisting.aspx">           <fieldset>             <label for="search_term" style="display: none;">Search</label>             <div class="navbar__group_search_box">               <input type="text" name="search_term" id="search_term" class="toggleVal" />               <input type="hidden" name="search_promotion" id="search_promotion" value="gbpdefault" runat="server" />               <input type="submit" class="submit" id="searchButton" value=" " runat="server" />             </div>           </fieldset>         </form>       </div>     </li>   </ul> </div>
+</div> <!-- / #masthead -->
+
+<script type="text/javascript">
+    $(function () {
+
+        if (navigator.userAgent.match(/Linux x86_64/i)) {
+            $('#search_term:lang(DE)').width(80);
+        }
+
+
+        function handleInGeneral(evt) {
+            $('.navbar__group').removeClass('active');
+            $(evt.currentTarget).addClass('active');
+            var classes = $(evt.currentTarget).attr('class');
+            if (classes && !classes.match('sale') && !classes.match('search')) {
+                $('body').addClass('nav-open');
+            }
+        }
+
+        function handleInTablet(evt) {
+
+            $('.header__links_account .login').removeClass('active');
+            $('.shopping_bag').removeClass('active');
+
+            var classes = $(evt.currentTarget).attr('class');
+            if (classes && !classes.match('sale') && !classes.match('search')) {
+                handleInGeneral(evt);
+                if (!classes.match('active')) {
+                    return false;
+                }
+            }
+
+            handleInGeneral(evt);
+        }
+
+        function handleOut() {
+            $(this).removeClass('active');
+            $('body').removeClass('nav-open');
+        }
+
+        function handleOutTablet() {
+            $('.navbar__group').removeClass('active');
+            $('body').removeClass('nav-open');
+            $('.shopping_bag').removeClass('active');
+            $('.header__links_account .login').removeClass('active');
+        }
+
+        function handleIn() {
+            $(this).addClass('active');
+        }
+
+        if (ct.utils.isMobile()) {
+            $('.body__overlay').height($('body').height());
+            $('.navbar__group').click(handleInTablet);
+            $('.body__overlay,#head_links,#logo_holder,.navbar__group.search, .body__inner_content').click(handleOutTablet);
+
+            $('.bag-txt').click(function (e) {
+                e.preventDefault();
+            });
+
+            $('.shopping_bag').click(function () {
+                $(this).addClass('active');
+                $('body').removeClass('nav-open');
+                $('.header__links_account .login').removeClass('active');
+                $('.navbar__group').removeClass('active');
+            });
+
+            $('.header__links_account .login').click(function (e) {
+                $(this).addClass('active');
+                $('body').removeClass('nav-open');
+                $('.shopping_bag').removeClass('active');
+                $('.navbar__group').removeClass('active');
+            });
+        } else {
+            $('.navbar__group').hover(handleInGeneral, handleOut);
+            $('.shopping_bag').hover(handleIn, handleOut);
+            if(!$('.header__links_account .login').find('a').attr('href').match('AccountLogin'))
+            {
+                $('.header__links_account .login').hover(handleIn, handleOut);
+            }
+        }
+    });
+</script>
+
+    </div>
+        
+         
+        <div class="body__inner_content">
+            <div class="body__overlay"></div>
+            <div class='mode_bar'><div class='inner'><h2><a href='/FAQ?faq=gbpdefault'>Order by 20th Dec to get your gifts in time for Christmas</a></h2><small><a rel='nofollow' href='/FAQ?faq=gbpdefault'>&gt; Offer information</a></small></div></div> <!-- / .mode_bar -->
+            
+    <form name="aspnetForm" method="post" action="ProductListing.aspx?q=gbpdefault%7c%7c%7c%7c%7c%7c%7c%7c%7c%7c%7c%7c%7c%7c%7c" id="aspnetForm">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="ZE55K4MfrA3vuZpJonQr/xxz9NQ5HunojM458VJBXDqfYqpJRoipKJdHRWOKoo0GkO/3euAZB/CZKy39UuiMl6ktNFb1xFmzmcLpc7bLaXmaZFexm0XCYZel4SGWL+EPzEBy8OdG4hVqZvFSGvUF0K9pgXd1zndvQw3cLQZYjhIOj96y3eljmJ+ymyCKYO3q5RrefO3lEf0UUv6mlP5W7HIL3H5HN0b/ghdp7le+C3P1pRjaZr8wFgBdPJret+M7V2awwRPjcBFbn4UF6Z6SyPx+sh8qats9O5uvxpLUe9XvtwBCbGUa4A7L+NlzUPHJQUinsdHPzwiYzUt2g+f6aOQosjRt6NM06RpWAVfgWIfacHMHym71tiq0c7UZuMinFwPhLeYsf+mZniwF5SHkCUinfbvPgcd21fiPxk/8cYe94mTTADEuqUeET0P8k4tvZCH7IXVf+KGVp5CzHpWahg5ExCbzPATwaNYItBdzMeWp7jjzDFI2vY7xpcLxK4DOwpdmM/RMB6/lo+9qedGpJzmD3zdxHyI8keHGv/TXDIPxgU8oqEf4BLqTh8m+hDRwbdMwoRvVXNqRLN07UIOe26l/OTEydPCsAyFG4jEzQxRpXaPbWhmwftzCX5lBahZG9DWxsxIu/fMfr8EoGzyYnnflBYS3BW2j0Muj+gJB4VetjAemmi4X5LlvzxAnvaAQuZUSxsLL3EyvDnLaWLgT0PEgpcDz7wBK9Tg35K7yENAOzsG0nAa22dGZxT/9r2jRXDQr6SscJF+fTdeX9FpJXUmnsGUS0PSRuOuTFt4ssJfcMINOowEeoaT9z9ak23LNZ2naVtkqUagcw0ukpHEfu+n8dRSyytSgHO8Jh9vh+uQT4qmCls4pXsr4cX6ffVc+GI4CcereKdQ8lhCNYp9FIl84DbcGIf0NttgEVekiZLgdsX+AfZJpVtDoSLEj/JQjoYtde44JS4E4sKeGPv+Y3pn56/Yn8hD46+jn/LghygVpAAGwOjWHdvX5x/kSQMKZXpOX5Dlkn6VlcNzky82BlUlyfVqi66cLsx4eezOhmYHHHgG4Te7L/1gdrJ4KcldtEiHTm62IDd6DtSoD05NqL8yYDKpQkthv36K+2rwPfuApbLk/+MGwQw4rjGZ8i3I0hJt2SuqmJUngnfOSdwDmDRbV08b71Re/vsdrNg3MUKyC1/QX8dYQy82tMehScH5RBl9E1e730cvJP0FhxQvqn+6x94vzl1pEBv+5FdZkn6gqAUYk0bJgF3ZE1C57WVlj8x7VWIXhVJVeAhowl5AeV4jy9L8Jtfj0HjYUoGUhKdouF7zDO75kFxAl7RdTuEYQEUdesXpifsi0EONYxYa35cuJVXonv3dsHJJKSiKmk243hjv21BLXvLJxc/VuuOPseABkJc58j+9Fp6vRvLl4cV1fWrZd2NxIotOtqyL4WKU9DHuUjEOae7Xj0CVV5nL0QWTYuFcRXkowSjoLBDQ4WC1Pgej5rjLAey2rQ5ivL8XgJPSDcYidC/psbqej7lLrI1kwQ2WBAMCYDvUaSW5/H8QulOXhI1HxbfTVkNNh6z63kLPVm3fOQAn1pr6nuRCKpO8b01kcUC9vcJ25ut974FUodiS+/HOmMphOGEXnhV3l1+K/BmTyDFhnQokfBADpPzkbRHkOkXU8cDRr+Ae1A9epKl22jUdTbQh5Ss3ebvlXxjWJquGGLdSLwWSFjnYRDtUxUlXjNgEuJawk8CYfhaQ+lgAjCV/e5EjQeFmNuAY+LRjAqhE6HgIOAiN1nXpY38kjC/r8JtKjuwXCC36mzQL9UhvncCQcI6wh+SlBI6lruU4soNqtbOBNIm0WPYvsqaZ+SJr+wW57cEmWI5IKEN04uGmmBIsuC1dY4xwn5Stdd85fJaBZx7EajL4prY+W+wuCqH1A8LT41PdzpS6ho2HptONDPu+5gCMLnw/DypvJuZu4IwzqFZxv6hXhjkrtcTR/9uhc6jCzAcehRO4te/ZCNES7+wMC+uMrMDiNJBSKWbh/jkrAszbkNvhbAQIuawKr8Epbrx6sctHs2TPpXGK2bG1vzYVpWf8MXemZtT0RVNQPv3mH/jDTLiYwzXZvCrlSNUEbQ/uorxrYpLKNyNxObZaXP1tg5TKCD6vQl156qHM9l1tiQySmYvy602LrulwWSKrSfrPIS9pKSwOgoVENarsJajZt31fLgNzzS8wTrf0op1C7ncaPitF0N+vfC7MRBZnUAttL4sqz3bd4vyR2dHjZ95UsybWZSSjTNMW3UJSLKkBAbWZpsD/e8o1aqteouaBIEHGIZ7MA6it/1szvHUjFCVSxYtq9peXhxMDWshjLiXENg9CSl7nfmM/vt7JafMpaS64vrzD2mS3Bj/G5E4vfnFH9AKtGRtaI/VgtZtPn3Q7+QkKaj9Fvu50SDxiKQYbNsexO11H3ExwjhVGdDnaeNzVcp3hqLd1fCSqhRJzKLek3WXGd332qitTJrUwHxal1n1v5ZHDcPrpH16/Fe07A2LDNcZdet2DQiobTSJDfao5U+ATtTdH+daXI23PJ6emO6UXM9IJNAeDRkLeWDPEiXLe2epr0Pmo7eOayDYHJdNJU4ceuiibjcplUgewhKypaB9dWXKo/1nIPdzaCghDV7mdSBL0+hb08mUDMfVvogM04ZVFMuwSugwYCo2htxGqtVpQLDeCvCNuncwNcTapjQDq5t9ZNoE5B1TUB9u94zmnAC2Ad7ELAfMXKIHbKfbvI9YcY+TWgJ5MmQ/qrJP+ZFYXLWWBRug==" />
+
+
+<script src="/ScriptResource.axd?d=5wRzxPV3R2dw0CSQeD7SIF1Wu_GNJFg2jS2fFeVVNt9hEY8jn9DvdScWA8fcU39oSi2sms3KgBI23hMrU1q_DQQkYD68Ytn-1AQc9uV0m0sL7DGRbMk-NCTwo5M_VsXcuVovmDeP_naTMc5_3PMR4ClA2mA1&amp;t=ca758f3" type="text/javascript"></script>
+<script src="/WebServices/CustomerServices.asmx/js" type="text/javascript"></script>
+<script src="/WebServices/ProductServices.asmx/js" type="text/javascript"></script>
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="sm9Vu5urMMe0k+OWdUN0JlWb04pyqsAXbnxexMSAY/SSHIQQkf5LMyjNdkTY9esmLGj9ue7eteHXEDkrpI958xfhwEMrsZziMGUq+tTnlRPrkCQJJMnW0K0Wdxk7yeKfXaw/diyz4ONfkTPw8RGANZvF0TIXntFJNn9TjZZ/DIdzm6TflpI0Y5X877f99SdXZ1fEU+amQd7dRic8gEPyzyzwwe76wHbRCLW4+qS0i4qniFnuNhWnWX3heT/5I8TRKuO8x3KnuvpsyrM1YZ0YkS4rvjHZphj7MyLTRyOFDjVwnWAqBTmeFLST8BZg0h5m3uTNDA7nBBb4Z4IF" />
+    <div id="content" class="section">
+        
+        <div class="first row">
+            
+            <!-- / .grid_5 -->
+        </div>
+        <!-- / .row -->
+        <div class="row">
+            <div class="header">
+                <h1>
+                    Men's casualwear
+                </h1>
+            </div>
+            <div class="column grid_1">
+                <div class="nav" id="local_nav">
+                    <div class="header">
+                        <span id="ctl00_contentBody_spnClear" class="clear" style="display:none;"><a href="#" id="ctl00_contentBody_ClearAll">
+                        </a></span>
+                        <h1 class="not_cufon">
+                            Refine by
+                        </h1>
+                    </div>
+                    
+<!-- left navigation -->
+
+    <div class="facet unfold toggle open"><div class="control unfold_control"><h3><a class='target_link' href='#multibuys'>Multibuys</a></h3></div><div class='bold details' id='multibuys'>
+<ul class="navList"><li class="checkbox"><a title="2 for £60" href="/mens-casualwear/mens-shorts?q=gbpdefault|||||||4899,||||||||"><span class='facet_value'>2 for £60<span class='meta quantity'> (9)</span></span></a></li></ul></div></div><div class="facet unfold toggle open"><div class="control unfold_control"><h3><a class='target_link' href='#casualwear'>Casualwear</a></h3></div><div class='bold details' id='casualwear'>
+<ul class="navList"><li class="radio"><a title="Men&#39;s casual shirts" href="/mens-casualwear/mens-casual-shirts?q=gbpdefault|||||||||||||||"><span class='facet_value'>Casual shirts<span class='meta quantity'> (179)</span></span></a></li><li class="radio"><a title="Men&#39;s polo shirts" href="/mens-casualwear/mens-polo-shirts?q=gbpdefault|||||||||||||||"><span class='facet_value'>Polo & rugby shirts<span class='meta quantity'> (52)</span></span></a></li><li class="radio"><a title="Men&#39;s knitwear" href="/mens-casualwear/mens-knitwear?q=gbpdefault|||||||||||||||"><span class='facet_value'>Knitwear<span class='meta quantity'> (90)</span></span></a></li><li class="radio"><a title="Men&#39;s casual trousers" href="/mens-casualwear/mens-casual-trousers?q=gbpdefault|||||||||||||||"><span class='facet_value'>Trousers<span class='meta quantity'> (110)</span></span></a></li><li class="radio selected"><a title="Men&#39;s shorts" href="/mens-casualwear/mens-shorts?q=gbpdefault|||||||||||||||"><span class='facet_value'>Shorts<span class='meta quantity'> (9)</span></span></a></li><li class="radio"><a title="Men&#39;s casual shoes" href="/mens-casualwear/mens-casual-shoes?q=gbpdefault|||||||||||||||"><span class='facet_value'>Casual shoes<span class='meta quantity'> (21)</span></span></a></li><li class="radio"><a title="Men&#39;s nightwear" href="/mens-casualwear/mens-nightwear?q=gbpdefault|||||||||||||||"><span class='facet_value'>T-shirts & pyjamas<span class='meta quantity'> (9)</span></span></a></li><li class="radio"><a title="Swim shorts" href="/mens-casualwear/swim-shorts?q=gbpdefault|||||||||||||||"><span class='facet_value'>Swim shorts<span class='meta quantity'> (4)</span></span></a></li><li class="radio"><a title="View all" href="/mens-casualwear/view-all?q=gbpdefault|||||||||||||||"><span class='facet_value'>View all<span class='meta quantity'> (470)</span></span></a></li></ul></div></div><div class="facet unfold toggle open"><div class="control unfold_control"><h3><a class='target_link' href='#whats-your-size'>What's your size?</a></h3></div><div class='bold details' id='whats-your-size'>
+<ul class="navList"><li class="checkbox"><a title="30&quot;" href="/mens-casualwear/mens-shorts?q=gbpdefault||||||30,|||||||||"><span class='facet_value'>30"<span class='meta quantity'> (7)</span></span></a></li><li class="checkbox"><a title="32&quot;" href="/mens-casualwear/mens-shorts?q=gbpdefault||||||32,|||||||||"><span class='facet_value'>32"<span class='meta quantity'> (6)</span></span></a></li><li class="checkbox"><a title="34&quot;" href="/mens-casualwear/mens-shorts?q=gbpdefault||||||34,|||||||||"><span class='facet_value'>34"<span class='meta quantity'> (6)</span></span></a></li><li class="checkbox"><a title="36&quot;" href="/mens-casualwear/mens-shorts?q=gbpdefault||||||36,|||||||||"><span class='facet_value'>36"<span class='meta quantity'> (5)</span></span></a></li><li class="checkbox"><a title="38&quot;" href="/mens-casualwear/mens-shorts?q=gbpdefault||||||38,|||||||||"><span class='facet_value'>38"<span class='meta quantity'> (5)</span></span></a></li><li class="checkbox"><a title="40&quot;" href="/mens-casualwear/mens-shorts?q=gbpdefault||||||40,|||||||||"><span class='facet_value'>40"<span class='meta quantity'> (3)</span></span></a></li><li class="checkbox"><a title="42&quot;" href="/mens-casualwear/mens-shorts?q=gbpdefault||||||42,|||||||||"><span class='facet_value'>42"<span class='meta quantity'> (1)</span></span></a></li><li class="checkbox"><a title="44&quot;" href="/mens-casualwear/mens-shorts?q=gbpdefault||||||44,|||||||||"><span class='facet_value'>44"<span class='meta quantity'> (2)</span></span></a></li></ul></div></div><div class="facet unfold toggle open"><div class="control unfold_control"><h3><a class='target_link' href='#colour'>Colour</a></h3></div><div class='bold details' id='colour'>
+<ul class="navList"><li class="checkbox"><a title="Black" title="Black" href="/mens-casualwear/mens-shorts?q=gbpdefault|||||||411,||||||||"><span class='facet_value'>Black<span class='meta quantity'> (1)</span></span></a></li><li class="checkbox"><a title="Blue" title="Blue" href="/mens-casualwear/mens-shorts?q=gbpdefault|||||||416,||||||||"><span class='facet_value'>Blue<span class='meta quantity'> (4)</span></span></a></li><li class="checkbox"><a title="Brown" title="Brown" href="/mens-casualwear/mens-shorts?q=gbpdefault|||||||421,||||||||"><span class='facet_value'>Brown<span class='meta quantity'> (1)</span></span></a></li><li class="checkbox"><a title="Red" title="Red" href="/mens-casualwear/mens-shorts?q=gbpdefault|||||||481,||||||||"><span class='facet_value'>Red<span class='meta quantity'> (2)</span></span></a></li><li class="checkbox"><a title="Yellow" title="Yellow" href="/mens-casualwear/mens-shorts?q=gbpdefault|||||||496,||||||||"><span class='facet_value'>Yellow<span class='meta quantity'> (1)</span></span></a></li></ul></div></div><div class="facet unfold toggle open"><div class="control unfold_control"><h3><a class='target_link' href='#your-shorts-range'>Your shorts range</a></h3></div><div class='bold details' id='your-shorts-range'>
+<ul class="navList"><li class="checkbox"><a title="Shorts" href="/mens-casualwear/mens-shorts?q=gbpdefault|||||||3731,||||||||"><span class='facet_value'>Shorts<span class='meta quantity'> (9)</span></span></a></li></ul></div></div>
+
+                </div>
+            </div>
+            <div class="column grid_4 last_col">
+                <div id="main" class="section">
+                                                          
+                    <!-- department/categories page -->
+                    
+                    <!-- product listing page-->
+                    <div id="ctl00_contentBody_productListContainer" class="productListContainer">
+                        <div class="row">       <div class="column grid_4 last_col">          <div class="header merchandising prod_message left_message" style="height:173px;"> <!-- replace simple_mesage with left_message, and optionally a <p /> inside the .figcaption div  -->           <div class="figure">                   <img src="/Content/img/TIB/Sale/Sale-lrg/TIB-eoss-background_uk_lrg.jpg" width="732" alt="" />                   <div class="figcaption" style="background-image: none;">                     <h2>Shorts from £34.95</h2>                     <p>Buy two pairs of shorts in a multibuy offer and have the best of both worlds: sale reductions and multibuy pricing. You pay the lowest price.</p>                      </div>                                                                            </div>         </div><!-- / .prod_message -->        </div> <!-- / .grid_4.column -->     </div> <!-- / .row -->
+                                               
+                        <div class="last row">
+                            <div class="column grid_4 last_col">
+                                <div class="product_teasers merchandising section">
+                                    <!-- HorizontalFacet -->
+                                    <div class='facet-breadcrumbs'><ul><li>Men's shorts<a href="/mens-casualwear?q=gbpdefault|||||||||||||||"> X </a></li></ul></div>
+                                    <div class="header"> 
+                                        
+
+  <div class="sort form">
+      <label for='Sort'>Sort by</label>
+      <select name="ctl00$contentBody$paging$ddlSortBy" id="ctl00_contentBody_paging_ddlSortBy" name="sort">
+	<option selected="selected" value="Relevance">Relevance</option>
+	<option value="Name (Ascending)">Name (A-Z)</option>
+	<option value="Name (Descending)">Name (Z-A)</option>
+	<option value="Price (Ascending)">Price (lowest)</option>
+	<option value="Price (Descending)">Price (highest)</option>
+
+</select>
+  </div> <!-- / .sort_form -->
+<div class="pagination">
+<p><a id="ctl00_contentBody_paging_previousPage"></a><span id="ctl00_contentBody_paging_lblCurrentlyViewing">Viewing 1 of 1</span>&nbsp;&nbsp;<a id="ctl00_contentBody_paging_nextPage"></a>
+<span class="all"></span></p>
+</div> <!-- pagination -->
+
+ 
+
+<script type="text/javascript">
+    // prevent default in order to WebService call could finish with success
+    $('.pagination .all a').click(function (ev) {
+        ev.preventDefault();
+        var href = $(this);
+
+        setTimeout(function () {
+            window.open(href.attr("href"), "_self");
+        }, 200);
+    });
+</script>
+
+                                    </div>
+                                    <!-- header -->
+                                    <div id="ctl00_contentBody_productListingSection">
+                                    <ul class="teasers"><li class=" first "><span class="prodcontainer" id="hb019stn"><a title="Stone chinos shorts (hb019stn)" class="img" href="/mens-casualwear/mens-shorts/Stone-chinos-shorts?q=gbpdefault||hb019stn|||||||||||||"><img src="//d30fnpgn92mkei.cloudfront.net/hb019stn_16.jpg" border="0" /><img class="offer roundel" alt="2 FOR £60 uk" src="/content/img/roundels/2_for_60_uk_1.png" height="72" width="72" border="0" /></a><h3><a href="/mens-casualwear/mens-shorts/Stone-chinos-shorts?q=gbpdefault||hb019stn|||||||||||||">Stone chinos shorts</a></h3><span class="price"><p class="price"><ins>£34.95</ins></p></span><span class="clearanceIcon"><p class="clearanceIcon"></p></span><input name="sku[]" value="hb019stn" type="hidden"></input><div style="display: none" class="callToActionLinks"><input type="image" class="shortlist_action add" src="/static/img/ui/GB/add-to-shortlist-pl.png"></input><a class="proddetails GB" href="/mens-casualwear/mens-shorts/Stone-chinos-shorts?q=gbpdefault||hb019stn|||||||||||||"></a></div></span></li><li class=""><span class="prodcontainer" id="hb094red"><a title="Red Prince of Wales Classic fit shorts (hb094red)" class="img" href="/mens-casualwear/mens-shorts/Red-Prince-of-Wales-Classic-fit-shorts?q=gbpdefault||hb094red|||||||||||||"><img src="//d30fnpgn92mkei.cloudfront.net/hb094red_16.jpg" border="0" /><img class="offer roundel" alt="2 FOR £60 uk" src="/content/img/roundels/2_for_60_uk_1.png" height="72" width="72" border="0" /></a><h3><a href="/mens-casualwear/mens-shorts/Red-Prince-of-Wales-Classic-fit-shorts?q=gbpdefault||hb094red|||||||||||||">Red Prince of Wales Classic fit shorts</a></h3><span class="price"><p class="price"><ins>£34.95</ins></p></span><span class="clearanceIcon"><p class="clearanceIcon"></p></span><input name="sku[]" value="hb094red" type="hidden"></input><div style="display: none" class="callToActionLinks"><input type="image" class="shortlist_action add" src="/static/img/ui/GB/add-to-shortlist-pl.png"></input><a class="proddetails GB" href="/mens-casualwear/mens-shorts/Red-Prince-of-Wales-Classic-fit-shorts?q=gbpdefault||hb094red|||||||||||||"></a></div></span></li><li class=""><span class="prodcontainer" id="hb021nav"><a title="Navy chinos shorts (hb021nav)" class="img" href="/mens-casualwear/mens-shorts/Navy-chinos-shorts?q=gbpdefault||hb021nav|||||||||||||"><img src="//d30fnpgn92mkei.cloudfront.net/hb021nav_16.jpg" border="0" /><img class="offer roundel" alt="2 FOR £60 uk" src="/content/img/roundels/2_for_60_uk_1.png" height="72" width="72" border="0" /></a><h3><a href="/mens-casualwear/mens-shorts/Navy-chinos-shorts?q=gbpdefault||hb021nav|||||||||||||">Navy chinos shorts</a></h3><span class="price"><p class="price"><ins>£34.95</ins></p></span><span class="clearanceIcon"><p class="clearanceIcon"></p></span><input name="sku[]" value="hb021nav" type="hidden"></input><div style="display: none" class="callToActionLinks"><input type="image" class="shortlist_action add" src="/static/img/ui/GB/add-to-shortlist-pl.png"></input><a class="proddetails GB" href="/mens-casualwear/mens-shorts/Navy-chinos-shorts?q=gbpdefault||hb021nav|||||||||||||"></a></div></span></li></ul><ul class="teasers"><li class=" first "><span class="prodcontainer" id="hb090blu"><a title="Mid blue Classic fit chinos shorts (hb090blu)" class="img" href="/mens-casualwear/mens-shorts/Mid-blue-Classic-fit-chinos-shorts?q=gbpdefault||hb090blu|||||||||||||"><img src="//d30fnpgn92mkei.cloudfront.net/hb090blu_16.jpg" border="0" /><img class="offer roundel" alt="2 FOR £60 uk" src="/content/img/roundels/2_for_60_uk_1.png" height="72" width="72" border="0" /></a><h3><a href="/mens-casualwear/mens-shorts/Mid-blue-Classic-fit-chinos-shorts?q=gbpdefault||hb090blu|||||||||||||">Mid blue Classic fit chinos shorts</a></h3><span class="price"><p class="price"><ins>£34.95</ins></p></span><span class="clearanceIcon"><p class="clearanceIcon"></p></span><input name="sku[]" value="hb090blu" type="hidden"></input><div style="display: none" class="callToActionLinks"><input type="image" class="shortlist_action add" src="/static/img/ui/GB/add-to-shortlist-pl.png"></input><a class="proddetails GB" href="/mens-casualwear/mens-shorts/Mid-blue-Classic-fit-chinos-shorts?q=gbpdefault||hb090blu|||||||||||||"></a></div></span></li><li class=""><span class="prodcontainer" id="hb095blk"><a title="Navy and black seersucker Classic fit shorts (hb095blk)" class="img" href="/mens-casualwear/mens-shorts/Navy-and-black-seersucker-Classic-fit-shorts?q=gbpdefault||hb095blk|||||||||||||"><img src="//d30fnpgn92mkei.cloudfront.net/hb095blk_16.jpg" border="0" /><img class="offer roundel" alt="2 FOR £60 uk" src="/content/img/roundels/2_for_60_uk_1.png" height="72" width="72" border="0" /></a><h3><a href="/mens-casualwear/mens-shorts/Navy-and-black-seersucker-Classic-fit-shorts?q=gbpdefault||hb095blk|||||||||||||">Navy and black seersucker Classic fit shorts</a></h3><span class="price"><p class="price"><ins>£34.95</ins></p></span><span class="clearanceIcon"><p class="clearanceIcon"></p></span><input name="sku[]" value="hb095blk" type="hidden"></input><div style="display: none" class="callToActionLinks"><input type="image" class="shortlist_action add" src="/static/img/ui/GB/add-to-shortlist-pl.png"></input><a class="proddetails GB" href="/mens-casualwear/mens-shorts/Navy-and-black-seersucker-Classic-fit-shorts?q=gbpdefault||hb095blk|||||||||||||"></a></div></span></li><li class=""><span class="prodcontainer" id="hb098red"><a title="Washed red Classic fit chinos shorts (hb098red)" class="img" href="/mens-casualwear/mens-shorts/Washed-red-Classic-fit-chinos-shorts?q=gbpdefault||hb098red|||||||||||||"><img src="//d30fnpgn92mkei.cloudfront.net/hb098red_16.jpg" border="0" /><img class="offer roundel" alt="2 FOR £60 uk" src="/content/img/roundels/2_for_60_uk_1.png" height="72" width="72" border="0" /></a><h3><a href="/mens-casualwear/mens-shorts/Washed-red-Classic-fit-chinos-shorts?q=gbpdefault||hb098red|||||||||||||">Washed red Classic fit chinos shorts</a></h3><span class="price"><p class="price"><ins>£34.95</ins></p></span><span class="clearanceIcon"><p class="clearanceIcon"></p></span><input name="sku[]" value="hb098red" type="hidden"></input><div style="display: none" class="callToActionLinks"><input type="image" class="shortlist_action add" src="/static/img/ui/GB/add-to-shortlist-pl.png"></input><a class="proddetails GB" href="/mens-casualwear/mens-shorts/Washed-red-Classic-fit-chinos-shorts?q=gbpdefault||hb098red|||||||||||||"></a></div></span></li></ul><ul class="teasers"><li class=" first "><span class="prodcontainer" id="hb092ylw"><a title="Corn Classic fit chinos shorts (hb092ylw)" class="img" href="/mens-casualwear/mens-shorts/Corn-Classic-fit-chinos-shorts?q=gbpdefault||hb092ylw|||||||||||||"><img src="//d30fnpgn92mkei.cloudfront.net/hb092ylw_16.jpg" border="0" /><img class="offer roundel" alt="2 FOR £60 uk" src="/content/img/roundels/2_for_60_uk_1.png" height="72" width="72" border="0" /></a><h3><a href="/mens-casualwear/mens-shorts/Corn-Classic-fit-chinos-shorts?q=gbpdefault||hb092ylw|||||||||||||">Corn Classic fit chinos shorts</a></h3><span class="price"><p class="price"><ins>£34.95</ins></p></span><span class="clearanceIcon"><p class="clearanceIcon"></p></span><input name="sku[]" value="hb092ylw" type="hidden"></input><div style="display: none" class="callToActionLinks"><input type="image" class="shortlist_action add" src="/static/img/ui/GB/add-to-shortlist-pl.png"></input><a class="proddetails GB" href="/mens-casualwear/mens-shorts/Corn-Classic-fit-chinos-shorts?q=gbpdefault||hb092ylw|||||||||||||"></a></div></span></li><li class=" sold_out "><span class="prodcontainer" id="hb096blu"><a title="Indigo linen Classic fit shorts (hb096blu)" class="img" href="/mens-casualwear/mens-shorts/Indigo-linen-Classic-fit-shorts?q=gbpdefault||hb096blu|||||||||||||&amp;so=y"><img src="//d30fnpgn92mkei.cloudfront.net/hb096blu_16.jpg" border="0" /><img class="offer roundel" alt="2 FOR £60 uk" src="/content/img/roundels/2_for_60_uk_1.png" height="72" width="72" border="0" /></a><h3><a href="/mens-casualwear/mens-shorts/Indigo-linen-Classic-fit-shorts?q=gbpdefault||hb096blu|||||||||||||&amp;so=y">Indigo linen Classic fit shorts</a></h3><span class="meta availability sold_out" id="product_saving">Out of stock</span><span class="clearanceIcon"><p class="clearanceIcon"></p></span></span></li><li class=" sold_out "><span class="prodcontainer" id="hb093blu"><a title="Blue and white seersucker Classic fit shorts (hb093blu)" class="img" href="/mens-casualwear/mens-shorts/Blue-and-white-seersucker-Classic-fit-shorts?q=gbpdefault||hb093blu|||||||||||||&amp;so=y"><img src="//d30fnpgn92mkei.cloudfront.net/hb093blu_16.jpg" border="0" /><img class="offer roundel" alt="2 FOR £60 uk" src="/content/img/roundels/2_for_60_uk_1.png" height="72" width="72" border="0" /></a><h3><a href="/mens-casualwear/mens-shorts/Blue-and-white-seersucker-Classic-fit-shorts?q=gbpdefault||hb093blu|||||||||||||&amp;so=y">Blue and white seersucker Classic fit shorts</a></h3><span class="meta availability sold_out" id="product_saving">Out of stock</span><span class="clearanceIcon"><p class="clearanceIcon"></p></span></span></li></ul></div>
+                                    <div class="footer">
+                                        
+
+  <div class="sort form">
+      <label for='Sort'>Sort by</label>
+      <select name="ctl00$contentBody$pagingBottom$ddlSortBy" id="ctl00_contentBody_pagingBottom_ddlSortBy" name="sort">
+	<option selected="selected" value="Relevance">Relevance</option>
+	<option value="Name (Ascending)">Name (A-Z)</option>
+	<option value="Name (Descending)">Name (Z-A)</option>
+	<option value="Price (Ascending)">Price (lowest)</option>
+	<option value="Price (Descending)">Price (highest)</option>
+
+</select>
+  </div> <!-- / .sort_form -->
+<div class="pagination">
+<p><a id="ctl00_contentBody_pagingBottom_previousPage"></a><span id="ctl00_contentBody_pagingBottom_lblCurrentlyViewing">Viewing 1 of 1</span>&nbsp;&nbsp;<a id="ctl00_contentBody_pagingBottom_nextPage"></a>
+<span class="all"></span></p>
+</div> <!-- pagination -->
+
+ 
+
+<script type="text/javascript">
+    // prevent default in order to WebService call could finish with success
+    $('.pagination .all a').click(function (ev) {
+        ev.preventDefault();
+        var href = $(this);
+
+        setTimeout(function () {
+            window.open(href.attr("href"), "_self");
+        }, 200);
+    });
+</script>
+
+                                    </div>
+                                    <!-- header -->
+                                </div>
+                                <!-- / .product_teasers.merchandising.section -->
+                            </div>
+                            <!-- / .grid_4.column -->
+                        </div>
+                        <!-- / .row -->
+                    </div>
+                    <!-- / .productListContainer -->
+                </div>
+                <!-- / #main.section -->
+            </div>
+            <!-- / .grid_4 -->
+        </div>
+        <!-- / .row -->
+        
+        
+        
+    </div>
+    </form>
+    <script type="text/javascript">var utag_data = {
+  "site_currency": "GBP",
+  "site_region": "GB",
+  "page_name": "ProductListing",
+  "page_type": 24,
+  "customer_ref": "",
+  "campaign_source": "UK+DIRECT+LOAD",
+  "campaign_url_code": "gbpdefault",
+  "product_sku": [
+    "hb019stn",
+    "hb094red",
+    "hb021nav"
+  ],
+  "customer_logged": "N"
+};</script><script type="text/javascript" src="//tags.tiqcdn.com/utag/ctshirts/main/prod/utag.js"></script>
+
+<script type="text/javascript" src="/OM/GB/s_code.js"></script><script type="text/javascript">//<![CDATA[
+s.visitorID=""
+s.pageName="GB:Men's casualwear Men's shorts"
+s.server="008"
+s.channel=""
+s.pageType=""
+s.prop1="Men's casualwear"
+s.prop2="Men's casualwear Men's shorts"
+s.prop3=""
+s.prop4="listing pages"
+s.prop5="GB"
+s.campaign="gbpdefault"
+s.state=""
+s.zip=""
+s.products=""
+s.purchaseID=""
+s.eVar1=""
+s.eVar2=""
+s.eVar3="browse"
+s.eVar4="Men's casualwear"
+s.eVar5=""
+s.eVar31="gbpdefault"
+s.hier1=""
+function mercado_query_stats(){
+ this.numrecords= "9";
+ this.page_type= "SEARCH+NAV";
+ this.ref1= "E:Browse^^('Y')";
+ this.result_type= "results";
+ this.search_type= "navigation";
+}
+
+/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+s.t()//]]>
+</script>
+
+
+        <script type="text/javascript" src="//ctshirts.peerius.com/tracker/peerius.page" charset="UTF-8"></script>    
+
+
+
+
+
+
+    <script type="text/javascript" src="/Scripts/survey.js"></script>
+
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var productListingJsControl = new ct.ui.productlisting($, ct.common.basket, ct, CTShirts);
+            productListingJsControl.init();
+        });
+
+
+        function SetViewAllAsPref() {
+
+            CTShirts.CustomersService.SetViewAllAsPref();
+
+        }
+
+
+        function SetPagingAsPref() {
+
+            CTShirts.CustomersService.SetPagingAsPref();
+
+        }
+    </script>
+
+        </div>
+        
+           
+<script type="text/javascript">
+
+    function registerEmail() {
+        $('#message').text(''); // clear any error messages
+
+        $.ajax({
+            url: '/Component/EmailSignup',
+            data: JSON.stringify({ email: $('#textTestimonial').val() }),
+            contentType: 'application/json',
+            type: 'POST'
+        }).success(function (response) {
+            $('.footer__error_message').text(response.Text);
+            if (response.Error == true) {
+                $('.footer__error_message').css("color", "Red");
+            } else {
+                $('.footer__error_message').css("color", "#FAFAFA");
+                ct.tracking.sub2.onRegisterEmail();
+                trk.doClickCall("registercustomeremail");
+            }
+            $('.footer__error_message').show();
+        }).error(function (e) {
+            $('.footer__error_message').text('Could not submit your email');
+            $('.footer__error_message').css("color", "Red");
+            $('.footer__error_message').show();
+        });
+    }
+
+    $(function () {
+
+        if (navigator.userAgent.match(/Linux x86_64/i)) {
+            $('.footer__inner_block:lang(DE)').css('margin-left', '18px');
+        }
+
+
+        if (window.PIE) {
+            $('.rounded').each(function () {
+                PIE.attach(this);
+            });
+        }
+    });
+</script>
+
+<div id="footer" class="footer nav_block">   <div class="footer__social_bar full-gradient">     <div class="footer__social_bar_inner">       <div class="footer__social_newsletter">         <div class="footer__social_copy">Don't miss out - sign up for offers, news and updates by email</div>         <div class="footer__social_newsletter_container">           <input type="text" id="textTestimonial" name="textTestimonial" class="footer__newsletter_email" runat="server" maxlength="64" data-keyboard-type="email" placeholder="Enter your email address" />           <input type="submit" class="footer__newsletter_subscribe" value="" onclick="registerEmail()" />         </div>         <span class='footer__error_message'></span> </div>       <div class="footer__social_links"> <a href="http://en-gb.facebook.com/CharlesTyrwhitt?&amp;cm_sp=FT-Facebook" target="_blank" title="Facebook"><span class="footer_social_link facebook"></span></a> <a href="http://twitter.com/ctshirts?&amp;cm_sp=FT-Twitter" target="_blank" title="Twitter"> <span class="footer_social_link twitter"></span> </a> <a href="http://pinterest.com/charlestyrwhitt/?&amp;cm_sp=FT-Pinterest" target="_blank" title="Pinterest"> <span class="footer_social_link pinterest"></span></a> <a href="https://plus.google.com/b/103108423872097361669/103108423872097361669?&amp;cm_sp=FT-Google" target="_blank" title="Google+"> <span class="footer_social_link googleplus"></span></a> <a href="http://instagram.com/charlestyrwhitt?&amp;cm_sp=FT-Instagram" target="_blank" title="Instagram"> <span class="footer_social_link instagram"></span></a> </div>     </div>   </div>   <div class="footer__inner">     <div class="footer__inner_block">       <h3>About Charles Tyrwhitt</h3>       <ul class="navList">         <li> <a href="/About-Charles-Tyrwhitt?cnt=about_us&amp;cm_sp=FT-AboutUs-1st-OurHistory" title="Charles Tyrwhitt history">Our history</a> </li>         <li> <a href="/Charles-Tyrwhitt-London-stores?cnt=london-stores&amp;cm_sp=FT-StoreFinder" title="London stores">Our stores</a> </li>         <li> <a href="/Charles-Tyrwhitt-in-the-news?cnt=in-the-news&amp;cm_sp=FT-InTheNews" title="In the news">In the News</a> </li>         <li> <a href="/careers-page?cnt=careers&amp;cm_sp=FT-Careers" title="Careers">Careers</a> </li>         <li> <a href="/Charles-Tyrwhitt-Affiliate-Programme?cnt=affiliates&amp;cm_sp=FT-AffiliateProgramme" title="Affiliate programme">Affiliate programme</a> </li>         <li> <a href="/RequestCatalogue.aspx?&amp;cm_sp=FT-RequestBrochure" title="Request a brochure">Request a brochure</a> </li>         <!--<li> <a href="/SiteMap.aspx?&amp;cm_sp=FT-SiteMap" title="Site Map">Site Map</a> </li>-->         <!--<li> <a href="/default.aspx?q=ukpreview|||||||||||||||&amp;cm_sp=FT-AW15Preview" title="SS15 Preview">New Season Preview</a> </li>-->       </ul>     </div>     <div class="footer__inner_block">       <h3>Customer Service</h3>       <ul class="navList">         <li> <a href="/rightNow.aspx?&amp;cm_sp=FT-OurGuarantee&progrpcode=gbpdefault&URL=http://ctshirts.custhelp.com/app/answers/detail/a_id/13" title="Our Guarantee">Our guarantee</a> </li>         <!-- Links to RightNow -->         <li> <a href="/rightNow.aspx?&amp;cm_sp=FT-ShippingDetails&progrpcode=gbpdefault&URL=http://ctshirts.custhelp.com/app/answers/detail/a_id/1" title="Delivery Details">Delivery</a> </li>         <!-- Links to RightNow -->         <li> <a href="/rightNow.aspx?&amp;cm_sp=FT-ReturnsPolicy&progrpcode=gbpdefault&URL=http://ctshirts.custhelp.com/app/answers/detail/a_id/17" title="Returns Policy">Returns</a> </li>         <!-- Links to RightNow -->         <!--<li> <a href="/rightNow.aspx?&amp;cm_sp=FT-Monogramming&URL=http://ctshirts.custhelp.com/app/answers/detail/a_id/71" title="Monogramming">Monogramming</a> </li><!-- waiting for content update -->         <li> <a href="/Charles-Tyrwhitt-Monogramming?cnt=Monogramming&amp;cm_sp=FT-Monogramming" title="Monogramming">Monogramming</a> </li>         <!-- Links to Content -->         <li> <a href="/rightNow.aspx?&amp;cm_sp=FT-Help&progrpcode=gbpdefault&URL=http://ctshirts.custhelp.com/app/answers/list" title="Help">Help</a> </li>         <!-- Links to RightNow -->         <li> <a href="/rightNow.aspx?&amp;cm_sp=FT-ContactUs&progrpcode=gbpdefault&URL=http://ctshirts.custhelp.com/app/ask" title="Contact us">Contact us</a> </li>         <!-- Links to RightNow -->         <li> <a href="/personal-shopping?cnt=jermyn-street-personal-shopping&amp;cm_sp=FT-PersonalShopping" title="Personal shopping">Personal shopping</a> </li>         <!-- Links to Content -->       </ul>     </div>     <div class="footer__inner_block">       <h3>Legal</h3>       <ul class="navList">         <li> <a href="/Terms-and-conditions?cnt=terms-and-conditions&amp;cm_sp=FT-TermsAndConditions" title="Terms and conditions">Terms and conditions</a> </li>         <li> <a href="/Charles-Tyrwhitt-privacy-policy?cnt=privacy-policy&amp;cm_sp=FT-PrivacyPolicy" title="Privacy policy">Privacy policy</a> </li>         <li> <a href="/FAQ?faq=gbpdefault&amp;cm_sp=FT-OfferFAQ" title="Offer terms and conditions">Offer terms and conditions</a> </li>         <li> <a href="/Cookies-explained?cnt=cookies&amp;cm_sp=FT-CookiesPolicy" title="Cookies and you">Cookies policy</a> </li>       </ul>     </div>     <div class="footer__inner_block">       <h3>Hints &amp; Tips</h3>       <ul class="navList">         <li> <a href="/Style-tips-and-hints?cnt=article-homepage&amp;cm_sp=FT-StyleHintsAndTips" title="See all hints and tips">Style hints and tips</a> </li>         <li> <a href="/Formal-shirts-sizing-guide?cnt=sizing-guides&amp;cm_sp=FT-SizingGuides" title="Sizing guides">Sizing guides</a> </li>         <li> <a href="/Outfitlisting.aspx?&amp;cm_sp=FT-BuyTheOutfit" title="Buy the outfit">Buy the outfit</a> </li>         <li> <a href="/Shirtfinder?&amp;cm_sp=FT-shirtfinder" title="Formal shirt finder">Formal shirt finder</a> </li>       </ul>     </div>     <div class="footer__inner_block last">       <h3><a class="lightbox" href="/Country/PopupStatic#country-popup" id="ctl00_contentFooter_ctlMegaFooter_ChangeCountry" title="Change Country">Change Country <span class="banner__collection_glyph" style="line-height:0;">&rsaquo;</span></a></h3>       <h3 class="footer__view_mobile"><a href="#" onclick="document.cookie='mobify-path=;expires=Thu, 01 Jan 1970 00:00:01 GMT;path=/';location.reload()" title="Mobile Site">Mobile Site</a> </h3>       <div class="footer__voucher"> <a href="/GiftVoucher.aspx?&amp;cm_sp=FT-GiftVouchers"> <img src="https://trello-attachments.s3.amazonaws.com/544e87ceca40f9233b92f65c/172x70/13f70ba7a92259521c36bc2ad9949853/gift-certificates.jpg" alt="Gift vouchers" /> </a> </div>     </div>     <div class="footer__inner_payment_info">       <ul>         <li>We accept:</li>         <li> <span class="pay-methods-img"></span> </li>         <li class="locker">Shopping is secure with Charles Tyrwhitt.</li>         <li> <span id="security-seal-footer">           <script type="text/javascript" src="https://seal.verisign.com/getseal?host_name=www.ctshirts.com&amp;size=XS&amp;use_flash=NO&amp;use_transparent=YES&amp;lang=en"></script>           </span> </li>       </ul>     </div>     <small>     <p class="footer__inner_copyrights">2015 © copyright <a href="/&amp;cm_sp=FT-CTFooterLink">Charles Tyrwhitt Shirts Limited </a> <span>- Cottons Centre, Cottons Lane, London SE1 2QG - Registered No. 2914928 - UK Vat No. 821 1491 60 - webhelpUK@ctshirts.co.uk</span> </p>     </small>     <script type="text/javascript"> 			if (/mobify/i.test(document.cookie) && /ip(hone|od)|android.*(mobile)|blackberry.*applewebkit|bb1\d.*mobile/i.test(navigator.userAgent)) { 					$('.footer__view_mobile').show(); 			}     </script>   </div> </div>
+
+
+
+
+        
+
+        
+      
+       </div> <!-- / #page --></div> <!-- / #outer --></body>    
+
+       
+    <a id="ctl00_contentFooter_ctlMegaFooter_ChangeCountry_Local" class="lightbox" href="/Country/PopupLocal#country-popup"></a>
+    <input type='hidden' id='hdnShowSaleStyles' value='0' />
+</html>
+<!--ESNTASK  -->

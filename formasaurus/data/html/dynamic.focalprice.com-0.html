@@ -1,0 +1,342 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><script src="http://static.focalprice.com/js/CurrencyUrl.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>www.focalprice.com helpindex</title>
+    <link type="text/css" rel="stylesheet" href="http://static.focalprice.com/Css/global.css" />
+    <link type="text/css" rel="stylesheet" href="http://static.focalprice.com/Css/layout.css" />
+    <link type="text/css" rel="stylesheet" href="http://static.focalprice.com/Css/help.css" />
+    <script type="text/javascript" src="http://static.focalprice.com/Js/jquery-1.4.1.js"></script>
+    <script type="text/javascript" src="http://static.focalprice.com/Js/ZH-CN.js"></script>
+    <link rel="shortcut icon" href="http://static.focalprice.com/favicon.ico" />
+	<script type="text/javascript">
+		$(function(){
+			$(".account").hover(function () {
+				$(this).children(".selMenu").addClass("active");
+				$(this).children(".down_men").show();
+			}, function () {
+				$(this).children(".selMenu").removeClass("active");
+				$(this).children(".down_men").hide();
+			});
+		})
+	</script>
+</head>
+<body>
+<script type="text/javascript" src="http://static.focalprice.com/Js/w.js"></script>
+    <div class="header">
+        
+    <!--topMenu-->
+    <div id="topmenuWrap">
+        <div class="topmenuIner">
+		<div id="topmenu" class="mauto">
+            <ul class="topmenu_l fleft">
+                <li class="fleft home">
+                    <a class="cf50" href="http://www.focalprice.com/">Home</a></li>
+            </ul>
+            <ul class="topmenu_r fright">
+                <li class="fright f11 livechat">
+                    <script type="text/javascript" src="http://livehelp.focalprice.com/image.php?tl=PGEgaHJlZj1cImphdmFzY3JpcHQ6dm9pZCh3aW5kb3cub3BlbignaHR0cDovL2xpdmVoZWxwLmZvY2FscHJpY2UuY29tL2NoYXQucGhwJywnJywnd2lkdGg9NTkwLGhlaWdodD02MTAsbGVmdD0wLHRvcD0wLHJlc2l6YWJsZT15ZXMsbWVudWJhcj1ubyxsb2NhdGlvbj15ZXMsc3RhdHVzPXllcyxzY3JvbGxiYXJzPXllcycpKVwiIDwhLS1jbGFzcy0tPj48IS0tdGV4dC0tPjwvYT4_&tlont=TGl2ZSBDaGF0&tloft=TGl2ZSBDaGF0&tloo=1"></script>
+                </li>
+                <li class="fright line"></li>
+                <li class="fright f11 help">
+                    <a href="/help">Help</a></li>
+                <li class="fright line"></li>
+                <li class="fright account f11">
+                    <a class="selMenu" id="selMenu" href="http://members.focalprice.com/Profile/Default">My Account</a>
+                    <span></span>
+                    <div class="account_menu down_men" style="display: none">
+                        <a id="head_dropshiporderlist" href="http://members.focalprice.com/DropShipOrder/List">Drop-shipping
+                        Order List</a>
+                        <a href="http://members.focalprice.com/FocalOrder/List">Focal Order List </a>
+                        <a href="http://members.focalprice.com/Message/MemberMessage">My Message</a>
+                        <a href="http://members.focalprice.com/Review/PayedNotReview">My Reviews</a>
+                        <a href="http://members.focalprice.com/Point/PointList">My Points & Counpons</a>
+                        <a href="http://members.focalprice.com/Wishes/WishList">Wish List</a>
+                        <a href="http://members.focalprice.com/Profile/MemberProfile">My Profile </a>
+                    </div>
+                </li>
+                <li class="fright line"></li>
+                <li class="fright" style="padding: 0 10px;">
+                    <a href="http://members.focalprice.com/OrderTracking/ShowTracking">Order Tracking</a></li>
+                <li class="fright line"></li>
+                <li class="fright siginin" id="sign_area" style="display: none">
+                    <a class="username fleft mr5" href="http://members.focalprice.com/Account/SignIn">Sign in</a>
+                    <em class="db fleft mr5" id="sign_em_text">or</em>
+                    <a class="cf50 mr5 fleft" href="http://members.focalprice.com/Account/Register">Register</a>
+                    <div class="siginin_menu down_men">
+                        <div class="siginin_menu_l">
+                            <h1>Sign In</h1>
+                            <dl>
+                                <form id="signinForm">
+                                    <dt>Email Address :</dt>
+                                    <dd>
+                                        <input type="text" id="emailAddress" name="emailAddress" class="txt" /></dd>
+                                    <dt>Password :</dt>
+                                    <dd>
+                                        <input type="password" id="password" name="password" class="txt" /></dd>
+                                    <dd class="mt10">
+                                        <input type="submit" class="btn_sign" value="" /></dd>
+                                </form>
+                            </dl>
+                        </div>
+                        <div class="siginin_menu_r f11">
+                            <h1 style="font-size: 13px;">New Customer</h1>
+                            Register with Focalprice, you can<br />
+                            *Easier to checkout<br />
+                            *Gain FP points & coupon<br />
+                            *Tracking the status of your order<br />
+                            *Get personalized recommendations
+                        <a class="Create_an_Account"></a>
+                        </div>
+                    </div>
+                </li>
+                <!--登录后-->
+                <li class="fright pr10" id="after_sign" style="display:none;">
+                    <em class="db fleft mr5">Welcome!</em><a class="username db fleft mr10" href="#" id="nickName">MixSun</a>
+                    <a class="cf50 db fleft" href="#">Sign out</a></li>
+            </ul>
+        </div>
+		</div>
+    </div>
+    <!--topMenu add-->
+    <script type="text/javascript">
+        var cookies = document.cookie;
+        var memberNameexp = /Focalprice_MemberNickName=\S*/;
+        var memberIDexp = /Focalprice_MemberID=\S*/;
+
+        var prefixNickname = "Focalprice_MemberNickName=";
+        var prefixMemberID = "Focalprice_MemberID=";
+
+        var len = prefixNickname.length;
+        var lenid = prefixMemberID.length;
+        if (cookies != null) {
+            var memberidresult = memberIDexp.exec(cookies);
+            var NickNameResult = memberNameexp.exec(cookies);
+
+            if (memberidresult != null) {
+                var memberIDresult = memberidresult[0];
+                var memberid = memberIDresult.replace(/;/, "").substr(lenid);
+
+                if (memberid != "") {
+                    var result = NickNameResult[0];
+                    var nickname = result.substr(len);
+                    $("#nickName").html(nickname.replace(/;/, ""));
+                    $("#after_sign").show();
+                    $("#sign_area").hide();
+                }
+                else {
+                    $("#after_sign").hide();
+                    $("#sign_area").show();
+                }
+            }
+            else {
+                $("#after_sign").hide();
+                $("#sign_area").show();
+            }
+        }
+        else {
+            $("#after_sign").hide();
+            $("#sign_area").show();
+        }
+        //判断live chat
+        $(function () {
+            if ($(".livechat").children("a").length == 0) {
+                $(".livechat").css("display", "none");
+                $(".livechat").next(".line").css("display", "none");
+            }
+        })
+    </script>
+    <script type="text/javascript" src="http://static.focalprice.com/Js/seo.link.js"></script>
+
+        <div class="mauto help_headerin mb10">
+            <div class="logo fleft">
+                <a title="Wellcome to Focalprice!" href="/">Wellcome to Focalprice!</a></div>
+            <div class="search_help fright">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>
+                            </td>
+                            <td>
+                                <input type="text" id="txtSearch" name="txtSearch" onmouseover="this.style.borderColor='#FF5A00'" onkeyup="value=value.replace(/[^\w\.\/]/ig,'')" onmouseout="this.style.borderColor='#CCCCCC'" value="keyword" class="help_input" style="border-color: rgb(204, 204, 204);" />
+                            </td>
+                            <td>
+                            </td>
+                            <td>
+                                <input type="button" id="btnSearch" class="search" value="" name="" />
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="clear">
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $(function () {
+            $("#txtSearch").click(function () {
+                $("#txtSearch").val("");
+            });
+            $("#txtSearch").keydown(function (e) {
+                var curKey = e.which;
+                if (curKey == 13) {
+                    if ($("#txtSearch").val() != "") {
+                        //alert(event.keyCode + $("#txtSearch").val());
+                        window.location.href = "helpsearch?key=" + $("#txtSearch").val();
+
+                    }
+                }
+            });
+            $("#btnSearch").click(function () {
+                if ($("#txtSearch").val() != "") {
+                    window.location.href = "helpsearch?key=" + $("#txtSearch").val();
+                }
+            });
+        });
+    </script>
+    <input type="hidden" id="h_search" value="/helpsearch" />
+    <script type="text/javascript">
+        $(function () {
+            $("#btnSearch").click(function () {
+                if ($("#txtSearch").val() != "") {
+                    window.location.href = $("#h_search").val() + "?key=" + $("#txtSearch").val();
+                }
+            });
+        });
+    </script>
+    <div id="breadcrumb">
+        <a title="Back Home" class="homeico" href="/">Home</a>
+        -&gt;<a title="Back Home" id="helpurl" class="homeico" href="/help">Help</a>
+        -&gt;
+        <span id="keywordnav"></span>
+    </div>
+    <div class="help_body">
+        <div class="HelpCate"><h4><a href="javascript:void(0);" onclick="focal.navigator( this,'L2hlbHBpbmZvP2N1cnJlbnRDYXRlZ29yeUlEPTg=' );return false;">Policy</a></h4><ul><li><a href="javascript:void(0);" onclick="focal.navigator( this,'L2hlbHBpbmZvP2N1cnJlbnRDYXRlZ29yeUlEPTEw' );return false;">Product Warranty</a></li><li><a href="javascript:void(0);" onclick="focal.navigator( this,'L2hlbHBpbmZvP2N1cnJlbnRDYXRlZ29yeUlEPTEx' );return false;">Return Policy</a></li><li><a href="javascript:void(0);" onclick="focal.navigator( this,'L2hlbHBpbmZvP2N1cnJlbnRDYXRlZ29yeUlEPTEy' );return false;">Term of Use</a></li><li><a href="javascript:void(0);" onclick="focal.navigator( this,'L2hlbHBpbmZvP2N1cnJlbnRDYXRlZ29yeUlEPTI0' );return false;">Privacy &amp; Security Policy</a></li></ul><h4><a href="javascript:void(0);" onclick="focal.navigator( this,'L2hlbHBpbmZvP2N1cnJlbnRDYXRlZ29yeUlEPTE0' );return false;">FAQs</a></h4><ul><li><a href="javascript:void(0);" onclick="focal.navigator( this,'L2hlbHBpbmZvP2N1cnJlbnRDYXRlZ29yeUlEPTE1' );return false;">Payment </a></li><li><a href="javascript:void(0);" onclick="focal.navigator( this,'L2hlbHBpbmZvP2N1cnJlbnRDYXRlZ29yeUlEPTE2' );return false;">Shipping </a></li><li><a href="javascript:void(0);" onclick="focal.navigator( this,'L2hlbHBpbmZvP2N1cnJlbnRDYXRlZ29yeUlEPTE3' );return false;">Returns (RMA)</a></li><li><a href="javascript:void(0);" onclick="focal.navigator( this,'L2hlbHBpbmZvP2N1cnJlbnRDYXRlZ29yeUlEPTIx' );return false;">Points,Coupons&amp;Gifts</a></li><li><a href="javascript:void(0);" onclick="focal.navigator( this,'L2hlbHBpbmZvP2N1cnJlbnRDYXRlZ29yeUlEPTIy' );return false;">Products Warranty</a></li><li><a href="javascript:void(0);" onclick="focal.navigator( this,'L2hlbHBpbmZvP2N1cnJlbnRDYXRlZ29yeUlEPTIz' );return false;">Ordering</a></li><li><a href="javascript:void(0);" onclick="focal.navigator( this,'L2hlbHBpbmZvP2N1cnJlbnRDYXRlZ29yeUlEPTM1' );return false;">My Account</a></li></ul><h4><a href="javascript:void(0);" onclick="focal.navigator( this,'L2hlbHBpbmZvP2N1cnJlbnRDYXRlZ29yeUlEPTE4' );return false;">Contact Us</a></h4><ul><li><a href="javascript:void(0);" onclick="focal.navigator( this,'L2hlbHBpbmZvP2N1cnJlbnRDYXRlZ29yeUlEPTI3' );return false;">My Message&amp; RMA </a></li><li><a href="javascript:void(0);" onclick="focal.navigator( this,'L2hlbHBpbmZvP2N1cnJlbnRDYXRlZ29yeUlEPTI4' );return false;">Telephone</a></li><li><a href="javascript:void(0);" onclick="focal.navigator( this,'L2hlbHBpbmZvP2N1cnJlbnRDYXRlZ29yeUlEPTQ2' );return false;">Live Chat</a></li></ul><h4><a href="javascript:void(0);" onclick="focal.navigator( this,'L2hlbHBpbmZvP2N1cnJlbnRDYXRlZ29yeUlEPTI1' );return false;">Business Opportunities</a></h4><ul><li><a href="javascript:void(0);" onclick="focal.navigator( this,'L2hlbHBpbmZvP2N1cnJlbnRDYXRlZ29yeUlEPTI5' );return false;">Advantage</a></li><li><a href="javascript:void(0);" onclick="focal.navigator( this,'L2hlbHBpbmZvP2N1cnJlbnRDYXRlZ29yeUlEPTMx' );return false;">Wholesale</a></li><li><a href="javascript:void(0);" onclick="focal.navigator( this,'L2hlbHBpbmZvP2N1cnJlbnRDYXRlZ29yeUlEPTMy' );return false;">Affiliate Program</a></li></ul><h4><a href="/helpinfo?currentCategoryID=33">Partner Links</a></h4><h4><a href="javascript:void(0);" onclick="focal.navigator( this,'L2hlbHBpbmZvP2N1cnJlbnRDYXRlZ29yeUlEPTM0' );return false;">About Us</a></h4><h4><a href="/helpinfo?currentCategoryID=37">Links</a></h4><h4><a href="javascript:void(0);" onclick="focal.navigator( this,'L2hlbHBpbmZvP2N1cnJlbnRDYXRlZ29yeUlEPTQ0' );return false;">Tags</a></h4><h4><a href="javascript:void(0);" onclick="focal.navigator( this,'L2hlbHBpbmZvP2N1cnJlbnRDYXRlZ29yeUlEPTQ1' );return false;">Legal window</a></h4></div>
+        <div class="HelpNav helpinfo">
+            <h1></h1>
+            <ul>
+                <li>
+                    <a style="color: #036" href="#167">My Message &amp; RMA</a></li>
+            </ul>
+            <div class="helpinfosingle" id="167">
+                <h1>My Message &amp; RMA</h1>
+                <div class="helpinfotxt"><p style="line-height:normal;margin:0cm 0cm 10pt;mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;" class="MsoNormal"><span><strong><span style="font-family:Lucida Sans unicode;font-size:10pt;">My Message:</span></strong></span></p>
+<p style="line-height:normal;margin:0cm 0cm 10pt;mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;" class="MsoNormal"><span style="font-size:12pt;mso-fareast-font-family:&#39;Times New Roman&#39;;mso-bidi-font-family:&#39;Times New Roman&#39;;" lang="EN-US"><span style="font-family:Lucida Sans unicode;font-size:10pt;">For routine inquiries or requests, such as new products, shipping information, Focal Points account, or order change/cancellation, kindly contact us via<u> <a href="http://members.focalprice.com/membermessage" target="_blank">"My Message".</a> </u>Please follow these steps: Log in to "My Account" on www.focalprice.com → "My message" → "Submit a ticket" → "Submit"<?xml:namespace prefix = o /><o:p></o:p></span></span></p>
+<p style="line-height:normal;margin:0cm 0cm 0pt;" class="MsoNormal"><span style="font-size:12pt;mso-fareast-font-family:&#39;Times New Roman&#39;;mso-bidi-font-family:&#39;Times New Roman&#39;;" lang="EN-US"><span style="font-family:Lucida Sans unicode;font-size:10pt;">&nbsp;<o:p></o:p></span></span></p>
+<p style="line-height:normal;margin:0cm 0cm 0pt;" class="MsoNormal"><span><strong><span style="font-family:Lucida Sans unicode;font-size:10pt;">RMA:<o:p></o:p></span></strong></span></p>
+<p style="line-height:normal;margin:0cm 0cm 10pt;mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;" class="MsoNormal"><span style="font-size:12pt;mso-fareast-font-family:&#39;Times New Roman&#39;;mso-bidi-font-family:&#39;Times New Roman&#39;;" lang="EN-US"><span style="font-family:Lucida Sans unicode;font-size:10pt;">For missing/wrong product shipments or damage issues, you can submit&nbsp;an <u><a href="http://members.focalprice.com/rmamessage" target="_blank">RMA request</a></u> via our website. Please follow these steps: Log in to "My Account" on www.focalprice.com→”RMA Request”→”Submit” <o:p></o:p></span></span></p>
+<p style="line-height:normal;margin:0cm 0cm 10pt;mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;" class="MsoNormal"><span style="font-size:12pt;mso-fareast-font-family:&#39;Times New Roman&#39;;mso-bidi-font-family:&#39;Times New Roman&#39;;" lang="EN-US"><o:p><span style="font-family:Lucida Sans unicode;font-size:10pt;">&nbsp;</span></o:p></span></p>
+<p>&nbsp;</p></div>
+            </div>
+        </div>
+    </div>
+
+    <!--zhouxiyao by 2013-10-21 at FP1334 -->
+    
+
+
+<!-- Google Code for dynamic rmkt -->
+
+
+<script type="text/javascript">
+    var google_tag_params = {
+        ecomm_prodid: "['']",
+        ecomm_pagetype: "helpinfo",
+        ecomm_totalvalue: ,
+        ecomm_category:"['']",
+    };
+</script>
+
+
+<script type="text/javascript">
+    /* <![CDATA[ */
+    var google_conversion_id = 1015636384;
+    //var google_conversion_label = "hvFZCNjdmAQQoMOl5AM";
+    var google_custom_params = window.google_tag_params;
+    var google_remarketing_only = true;
+    var google_custom_params = {
+Pname:[],
+Pid:[],
+Pcat:[],
+Qty:[],
+Bvalue:'',
+Ivalue:[],
+Pvalue:'',
+Pagetype:'helpinfo',
+Orderid:'',
+Paymenttype:'',
+Ship:'',
+Currency:'',
+Kword:'',
+};
+    /* ]]> */
+</script>
+
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js"></script>
+
+<noscript>
+    <div style="display: inline;">
+        <img height="1" width="1" style="border-style: none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/1015636384/?value=0&amp;label=hvFZCNjdmAQQoMOl5AM&amp;guid=ON&amp;script=0" />
+    </div>
+</noscript>
+<!--#Rmkt#// <script type="text/javascript">
+    /* <![CDATA[ */
+    var google_conversion_id = FP-Rmkt-Id;
+    var google_conversion_label = "FP-Rmkt-Label";
+    var google_custom_params = window.google_tag_params;
+    var google_remarketing_only = true;
+    var google_custom_params = {
+Pname:[],
+Pid:[],
+Pcat:[],
+Qty:[],
+Bvalue:'',
+Ivalue:[],
+Pvalue:'',
+Pagetype:'helpinfo',
+Orderid:'',
+Paymenttype:'',
+Ship:'',
+Currency:'',
+Kword:'',
+};
+    /* ]]> */
+</script>
+<noscript>
+    <div style="display: inline;">
+        <img height="1" width="1" style="border-style: none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/FP-Rmkt-Id/?value=0&amp;label=FP-Rmkt-Label&amp;guid=ON&amp;script=0" />
+    </div>
+</noscript> #Rmkt#//-->
+
+
+
+
+    <div class="copyright">
+        © 2008-2011 FocalPrice.com. All rights reserved.
+    </div>
+      <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-4806418-4']);
+          _gaq.push(['_setDomainName', '.focalprice.com']);
+          _gaq.push(['_trackPageview']);
+
+          (function () {
+              var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+              ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+              var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+    </script>
+	<script type="text/javascript">
+	    (function (i, s, o, g, r, a, m) {
+	        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+	            (i[r].q = i[r].q || []).push(arguments)
+	        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+	    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+	    ga('create', 'UA-46598330-1', 'focalprice.com');
+	    ga('send', 'pageview');
+    </script>
+</body>
+</html>

@@ -1,0 +1,244 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Интернет магазин корейской косметики</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<!--<base href="http://www.flowersun.ru">-->
+
+
+<script>
+function moveitem(x1,x2,id,direction,duration)
+{
+
+
+ 
+   var start = new Date().getTime();
+   setTimeout(function() {
+var now = (new Date().getTime()) - start; // Текущее время
+var progress = now / duration; // Прогресс анимации
+	    for (i=1;i<=2;i++)
+		{
+		
+		
+		var result =x1+(x2-x1) * progress;
+	    if (direction=='x')
+		document.getElementById(id).style.left = result + "px";
+		if (direction=='-x')
+		document.getElementById(id).style.right = result + "px";
+		if (direction=='y')
+		document.getElementById(id).style.top = result + "px";
+		if (direction=='-y')
+		document.getElementById(id).style.bottom = result + "px";
+		if (direction=='xm')
+		document.getElementById(id).style.marginLeft = result + "px";
+		if (direction=='ym')
+		document.getElementById(id).style.marginTop = result + "px";
+	    }
+	    if (progress < 1) // Если анимация не закончилась, продолжаем
+	        setTimeout(arguments.callee, 10);
+		else 
+		{
+		if (direction=='x')
+		document.getElementById(id).style.left=x2+"px";
+		if (direction=='-x')
+		document.getElementById(id).style.right=x2+"px";		
+		if (direction=='y')
+		document.getElementById(id).style.top=x2+"px";	
+		if (direction=='-y')
+		document.getElementById(id).style.bottom=x2+"px";	
+    	if (direction=='xm')
+		document.getElementById(id).style.marginLeft=x2+"px";	
+		if (direction=='ym')
+		document.getElementById(id).style.marginTop=x2+"px";
+		}
+			
+	}, 10);
+   //document.getElementById('shop1').style.left=document.getElementById('shop1').style.left+'px';
+   
+   
+ 
+}
+function toggle_show(id) {
+    document.getElementById(id).style.display = document.getElementById(id).style.display == 'none' ? 'block' : 'none';
+}
+function toggle_dis(id) {
+    document.getElementById(id).disabled = document.getElementById(id).disabled == false ? true : false;
+}
+</script>
+<script type="text/javascript">
+function toggle_image_show(id) {
+    imgsrc=document.getElementById(id).src;
+	uslovie=imgsrc.indexOf('minus.png');
+	document.getElementById(id).src = uslovie == -1 ? 'images/minus.png' : 'images/plus.png';
+}
+</script>
+<script type="text/javascript">
+function toggle_image_show2(id) {
+	//alert (document.getElementById(id).style.backgroundPosition);
+	if (document.getElementById(id).style.backgroundPosition=='')  document.getElementById(id).style.backgroundPosition='left -23px';
+	else
+	document.getElementById(id).style.backgroundPosition = document.getElementById(id).style.backgroundPosition == 'left top' ? 'left -23px' : 'left top';
+    
+}
+</script>
+<link href="js/nivo-slider.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="js/jquery-1.4.3.min.js"></script>
+
+    <script type="text/javascript" src="js/jquery.nivo.slider.js"></script>
+    <script type="text/javascript">
+    $(window).load(function() {
+        $('#slider').nivoSlider();
+    });
+    </script>
+     <script src="js/jquery.prettyPhoto.js" type="text/javascript"></script>
+    <script type="text/javascript">
+<!--
+$(function(){
+  $("a[rel^='prettyPhoto']").prettyPhoto({
+  	theme: 'light_rounded'
+  });
+});
+-->
+</script>
+
+<!--[if IE 6]>
+<script type="text/javascript" src="ie6fix.js"></script>
+<script type="text/javascript">
+	DD_belatedPNG.fix('.png24');
+</script>
+<![endif]-->
+<link href="css/modules.css" rel="stylesheet" type="text/css">
+<link href="css/preview.css" rel="stylesheet" type="text/css">
+
+<link href="css/vidgets.css" rel="stylesheet" type="text/css" />
+<link href="css/maket.css" rel="stylesheet" type="text/css" />
+<link href="css/slider.css" rel="stylesheet" type="text/css" />
+<link href="css/allviews.css" rel="stylesheet" type="text/css" />
+<link href="css/prettyPhoto.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<center>
+<div id="mainfon">
+<div id="shapkafon">
+<div class="content">
+
+     <div id=lk>
+     <a class=link1 href="#" onClick="toggle_show('log')">Авторизация</a>
+     <a class=link2 href="index.php?razdelID=779&mode=adduser&fase=fiz">Регистрация</a>
+     <a class=link3 href="index.php?razdelID=779&mode=rememberpassword">Напомнить пароль</a>
+     <div class="forgotpassword"></div>
+     
+     <form id="forma_avtor" method=post action="index.php">
+     <p class=avt1>Логин</p>
+     <p><input type="text" class="logfield" name="log" value="логин" onClick="if (this.value=='логин') this.value='';"></p>
+      <p class=avt2>Пароль</p>
+      <p><input type="password" name="pass" class="passfield" value="пароль" class="tahoma" onClick="if (this.value=='пароль') this.value='';"></p>
+     
+     <input type="submit" class=submit name="upload" value="" onMouseover="this.style.backgroundPosition='left -34px'" onMouseout="this.style.backgroundPosition='left top'">
+     </form>
+     </div>
+     
+     
+     
+     <div ID="korzinblock" class="png24"><p class="korzinheader">Корзина</p><p class="korzinitem1">Товаров в корзине <span style="">0 шт.</span></p><p class="korzinitem2">Ваша корзина пуста</span></p><p  class="korzinlinknot">Оформить</p><p class="tokorzinnot">Корзина</p></div>
+</div>
+</div>
+<div id="fonformenu">
+<table width="980" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="322" align="left" valign="top">
+    <div ID="searchform">
+ <form action="index.php" method=get>
+ <input type=hidden name=razdelID value="384">
+<input type=hidden name=filtersoff value="yes">
+<input class="inputlitle" type="text" name="search_string" value="поиск по каталогу" onClick="if (this.value=='поиск по каталогу') this.value='';">
+<input class="submitsearch" type="submit" name="upload" value="" onMouseover="this.style.backgroundPosition='left -31px'" onMouseout="this.style.backgroundPosition='left top'">
+</form>
+</div>
+
+    <p class="section-menu" style="z-index:60"><a href="index.php?razdelID=384">Весь каталог</a></p>
+    <div id="section">
+    <p class="section-menu-selected2" style="z-index:50" id="sectionmenu1"><a href="index.php?razdelID=384&sectionID=1"  >Производители</a><span style="cursor:pointer;" ID="plusminus1" onClick="toggle_show('section1');toggle_image_show2('plusminus1');" class="plusminus2"><img  src="images/spacer.gif" border=0 align=absmiddle></span></p><div ID="section1" style="display:block;padding-bottom:20px;">
+<p class="subsection-menu" style="z-index:50" id="sectionmenu901"><a href="index.php?razdelID=384&sectionID=901"  >TONYMOLY</a></p><p class="subsection-menu" style="z-index:49" id="sectionmenu908"><a href="index.php?razdelID=384&sectionID=908"  >SKIN79</a></p><p class="subsection-menu" style="z-index:48" id="sectionmenu902"><a href="index.php?razdelID=384&sectionID=902"  >Missha</a></p><p class="subsection-menu" style="z-index:47" id="sectionmenu903"><a href="index.php?razdelID=384&sectionID=903"  >SkinFood</a></p><p class="subsection-menu" style="z-index:46" id="sectionmenu904"><a href="index.php?razdelID=384&sectionID=904"  >Etude House</a></p><p class="subsection-menu" style="z-index:45" id="sectionmenu912"><a href="index.php?razdelID=384&sectionID=912"  >The Face Shop</a></p><p class="subsection-menu" style="z-index:44" id="sectionmenu907"><a href="index.php?razdelID=384&sectionID=907"  >Holika Holika</a></p><p class="subsection-menu" style="z-index:43" id="sectionmenu909"><a href="index.php?razdelID=384&sectionID=909"  >Mizon</a></p><p class="subsection-menu" style="z-index:42" id="sectionmenu910"><a href="index.php?razdelID=384&sectionID=910"  >Innisfree</a></p><p class="subsection-menu" style="z-index:41" id="sectionmenu911"><a href="index.php?razdelID=384&sectionID=911"  >FakeFace</a></p><p class="subsection-menu" style="z-index:40" id="sectionmenu913"><a href="index.php?razdelID=384&sectionID=913"  >Secret Key</a></p><p class="subsection-menu" style="z-index:39" id="sectionmenu914"><a href="index.php?razdelID=384&sectionID=914"  >Its Skin</a></p></div>
+
+    </div>
+    <div id="katalog">
+    <p class="section-menu" style="z-index:50" id="sectionmenu1303"><a href="index.php?razdelID=1303"  >BB крем / СС крем</a></p><p class="section-menu2" style="z-index:49" id="sectionmenu1337"><a href="index.php?razdelID=1337"  >НОВИНКИ</a></p><p class="section-menu" style="z-index:48" id="sectionmenu1300"><a href="index.php?razdelID=1300"  >Умывание, очищение кожи</a><span style="cursor:pointer;" ID="plusminus1300" onClick="toggle_show('section1300');toggle_image_show2('plusminus1300');" class="plusminus1"><img  src="images/spacer.gif" border=0 align=absmiddle></span></p><div ID="section1300" style="display:none;padding-bottom:20px;">
+<p class="subsection-menu" style="z-index:50" id="sectionmenu1306"><a href="index.php?razdelID=1306"  >Пенки, гидрофильные масла</a></p><p class="subsection-menu" style="z-index:49" id="sectionmenu1307"><a href="index.php?razdelID=1307"  >Скрабы, пилинги</a></p><p class="subsection-menu" style="z-index:48" id="sectionmenu1319"><a href="index.php?razdelID=1319"  >Другое очищение</a></p></div>
+<p class="section-menu2" style="z-index:47" id="sectionmenu1302"><a href="index.php?razdelID=1302"  >Маски для лица</a></p><p class="section-menu" style="z-index:46" id="sectionmenu1301"><a href="index.php?razdelID=1301"  >Уход за кожей лица</a><span style="cursor:pointer;" ID="plusminus1301" onClick="toggle_show('section1301');toggle_image_show2('plusminus1301');" class="plusminus1"><img  src="images/spacer.gif" border=0 align=absmiddle></span></p><div ID="section1301" style="display:none;padding-bottom:20px;">
+<p class="subsection-menu" style="z-index:50" id="sectionmenu1310"><a href="index.php?razdelID=1310"  >Серия "Улитка"</a></p><p class="subsection-menu" style="z-index:49" id="sectionmenu1316"><a href="index.php?razdelID=1316"  >Для зрелой кожи</a></p><p class="subsection-menu" style="z-index:48" id="sectionmenu1335"><a href="index.php?razdelID=1335"  >Чувствительная кожа</a></p><p class="subsection-menu" style="z-index:47" id="sectionmenu1312"><a href="index.php?razdelID=1312"  >Расширенные поры</a></p><p class="subsection-menu" style="z-index:46" id="sectionmenu1314"><a href="index.php?razdelID=1314"  >Проблемная кожа</a></p><p class="subsection-menu" style="z-index:45" id="sectionmenu1311"><a href="index.php?razdelID=1311"  >Отбеливание</a></p><p class="subsection-menu" style="z-index:44" id="sectionmenu1336"><a href="index.php?razdelID=1336"  >Сухая кожа</a></p><p class="subsection-menu" style="z-index:43" id="sectionmenu1321"><a href="index.php?razdelID=1321"  >Уход за кожей вокруг глаз</a></p><p class="subsection-menu" style="z-index:42" id="sectionmenu1341"><a href="index.php?razdelID=1341"  >Для всех типов кожи</a></p></div>
+<p class="section-menu2" style="z-index:45" id="sectionmenu1317"><a href="index.php?razdelID=1317"  >Уход за телом</a><span style="cursor:pointer;" ID="plusminus1317" onClick="toggle_show('section1317');toggle_image_show2('plusminus1317');" class="plusminus2"><img  src="images/spacer.gif" border=0 align=absmiddle></span></p><div ID="section1317" style="display:none;padding-bottom:20px;">
+<p class="subsection-menu" style="z-index:50" id="sectionmenu1325"><a href="index.php?razdelID=1325"  >Тело</a></p><p class="subsection-menu" style="z-index:49" id="sectionmenu1324"><a href="index.php?razdelID=1324"  >Волосы</a></p><p class="subsection-menu" style="z-index:48" id="sectionmenu1322"><a href="index.php?razdelID=1322"  >Руки </a></p><p class="subsection-menu" style="z-index:47" id="sectionmenu1323"><a href="index.php?razdelID=1323"  >Ноги</a></p><p class="subsection-menu" style="z-index:46" id="sectionmenu1329"><a href="index.php?razdelID=1329"  >Солнцезащитные средства</a></p></div>
+<p class="section-menu" style="z-index:44" id="sectionmenu1338"><a href="index.php?razdelID=1338"  >Для мужчин</a></p><p class="section-menu2" style="z-index:43" id="sectionmenu1318"><a href="index.php?razdelID=1318"  >Декоративная косметика</a><span style="cursor:pointer;" ID="plusminus1318" onClick="toggle_show('section1318');toggle_image_show2('plusminus1318');" class="plusminus2"><img  src="images/spacer.gif" border=0 align=absmiddle></span></p><div ID="section1318" style="display:none;padding-bottom:20px;">
+<p class="subsection-menu" style="z-index:50" id="sectionmenu1328"><a href="index.php?razdelID=1328"  >Для лица</a></p><p class="subsection-menu" style="z-index:49" id="sectionmenu1327"><a href="index.php?razdelID=1327"  >Для губ</a></p><p class="subsection-menu" style="z-index:48" id="sectionmenu1326"><a href="index.php?razdelID=1326"  >Для глаз</a></p><p class="subsection-menu" style="z-index:47" id="sectionmenu1320"><a href="index.php?razdelID=1320"  >Аксессуары</a></p><p class="subsection-menu" style="z-index:46" id="sectionmenu1334"><a href="index.php?razdelID=1334"  >Парфюм</a></p><p class="subsection-menu" style="z-index:45" id="sectionmenu1339"><a href="index.php?razdelID=1339"  >Для ногтей</a></p></div>
+<p class="section-menu" style="z-index:42" id="sectionmenu1342"><a href="index.php?razdelID=1342"  >Другие полезности</a></p>
+    </div>
+
+    </td>
+    <td width="20">
+    <img src="images/spacer.gif" width="20" />    </td>
+    <td align="left" valign="top">
+    <div id="hmenu"><a id="hmenulink1" class="topmenu" href="main" onMouseover="document.getElementById('hmenulinkcircle1').style.backgroundPosition='-36px -52px'" onMouseout="document.getElementById('hmenulinkcircle1').style.backgroundPosition='-36px top'">Главная</a><a id="hmenulink2" class="topmenu" href="deliveryandpayment" onMouseover="document.getElementById('hmenulinkcircle2').style.backgroundPosition='-36px -52px'" onMouseout="document.getElementById('hmenulinkcircle2').style.backgroundPosition='-36px top'">Доставка-оплата</a><a id="hmenulink3" class="topmenu" href="index.php?razdelID=1330&filtersoff=yes" onMouseover="document.getElementById('hmenulinkcircle3').style.backgroundPosition='-36px -52px'" onMouseout="document.getElementById('hmenulinkcircle3').style.backgroundPosition='-36px top'">Скидки</a><a id="hmenulink4" class="topmenu-selected"  href="asc" onMouseover="document.getElementById('hmenulinkcircle4').style.backgroundPosition='-36px -52px'" onMouseout="document.getElementById('hmenulinkcircle4').style.backgroundPosition='-36px top'">Вопрос-ответ</a><a id="hmenulink5" class="topmenu" href="contactinfo" onMouseover="document.getElementById('hmenulinkcircle5').style.backgroundPosition='-36px -52px'" onMouseout="document.getElementById('hmenulinkcircle5').style.backgroundPosition='-36px top'">Контакты</a><a id="hmenulink6" class="topmenu" href="index.php?razdelID=1333&filtersoff=yes" onMouseover="document.getElementById('hmenulinkcircle6').style.backgroundPosition='-36px -52px'" onMouseout="document.getElementById('hmenulinkcircle6').style.backgroundPosition='-36px top'">Отзывы</a></div>
+    <p class="razdelname">Вопрос-ответ</p>
+    <div class="textonsecond"></div>
+    <table align=center><form action=index.php method=post enctype=multipart/form-data><tr><td colspan=2 align=center></td></tr><tr><td colspan=2 align=center></td></tr><tr><td colspan=2 align=center><h2>Вы можете отправить нам сообщение, используя эту форму</h2></td></tr><tr><td width=30%><p class=formheader>Представьтесь, пожалуйста (Ваши ФИО)</p></td><td><input type=text class=allinput name=backname value=></td></tr><tr><td colspan=2><p class=sitemessage>Укажите ваш контакт, телефон или e-mail, чтобы мы могли с Вами связаться</p></td></tr><tr><td width=30%><p class=formheader>Ваш e-mail</p></td><td><input type=text class=allinput name=backsight value=></td></tr><tr><td width=30%><p class=formheader>Ваш номер телефона</p></td><td><input type=text class=allinput name=phone value=></td></tr><tr><td><p class=formheader>Вкратце, суть вашего сообщения</p></td><td><input type=text  class=allinput  name=tema value=""></td></tr><tr><td><p class=formheader>Ваше сообщение</p></td><td><textarea name=info class=textareabig></textarea><br></td></tr><tr><td align=right><p class="formheader" style="text-align:right;">Введите этот текст</p><span style="text-align:right;color:black;font-size:12px;font-weight:normal;">(латинские буквы и цифры)</span></p><img src="dontbebot/?PHPSESSID=d4j7r6smatnlcejg3v3g7bqaq1"></td><td><p><input type=text class=allinput name=ofdefend value=""></p></td></tr><input type=hidden name=razdelID value=754><input type=hidden name=oftime value="1449191579"><tr><td colspan=2 align=center><input type=submit name=upload class="allsubmit" value=Отправить></td></tr></form></table>
+    
+    </td>
+  </tr>
+</table>
+</div>
+
+</div>
+<div class="podval">
+<div class="content">
+<div class="counter">
+<!-- Rating@Mail.ru counter -->
+<script type="text/javascript">//<![CDATA[
+var a='',js=10;try{a+=';r='+escape(document.referrer);}catch(e){}try{a+=';j='+navigator.javaEnabled();js=11;}catch(e){}
+try{s=screen;a+=';s='+s.width+'*'+s.height;a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth);js=12;}catch(e){}
+try{if(typeof((new Array).push('t'))==="number")js=13;}catch(e){}
+try{document.write('<a href="http://top.mail.ru/jump?from=2241647">'+
+'<img src="http://d4.c3.b2.a2.top.mail.ru/counter?id=2241647;t=131;js='+js+a+';rand='+Math.random()+
+'" alt="Рейтинг@Mail.ru" style="border:0;" height="40" width="88" \/><\/a>');}catch(e){}//]]></script>
+<noscript><p><a href="http://top.mail.ru/jump?from=2241647"><img src="http://d4.c3.b2.a2.top.mail.ru/counter?js=na;id=2241647;t=131" 
+style="border:0;" height="40" width="88" alt="Рейтинг@Mail.ru" /></a></p>
+</noscript>
+<!-- //Rating@Mail.ru counter -->
+</div>
+<div class="contacts"><table>
+<tr>
+<td>
+<img src="images/phone.png" border=0>
+</td>
+<td>
++7-908-975-2286
+</td>
+</tr>
+<tr>
+<td>
+<img src="images/email.png" border=0>
+</td>
+<td>
+molypoly@list.ru
+</td>
+<td>
+www.molypoly.ru</div>
+
+</div>
+</div>
+</center>
+<div id="BBTDIV_75">
+</div>
+<script type="text/javascript">
+    if (document.getElementById('BBTDIV_75')) {
+        var BBTSystemDate = new Date();
+        document.write('<scr'+'ipt type="text/javascript" async '
+                +'src="http://code.blablateka.com/75.js?t='+BBTSystemDate.getYear()+BBTSystemDate.getMonth()
+                +BBTSystemDate.getDay()+BBTSystemDate.getHours() + '" charset="utf-8" ></scr'+'ipt>');
+    }
+</script>
+</body>
+</html>

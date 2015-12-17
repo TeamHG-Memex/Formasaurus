@@ -1,0 +1,707 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Calendars.com</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+<script type="text/javascript">var NREUMQ=NREUMQ||[];NREUMQ.push(["mark","firstbyte",new Date().getTime()]);</script><link rel="stylesheet" type="text/css" href="/css/utility.css" />
+<link rel="stylesheet" type="text/css" href="/css/common.css" />
+<link rel="stylesheet" type="text/css" href="/css/cart.css" />
+<link rel="stylesheet" type="text/css" href="/css/checkout.css" />
+<link rel="shortcut icon" href="/img/icons/calendar.ico" />
+<script type="text/javascript" src="/js/avant_sfpc_10629.js"></script>
+<script type="text/javascript" src="/js/jquery.min.js"></script>
+<script type="text/javascript" src="/js/jquery.timer.js"></script>
+<script type='text/javascript' src='/js/common.js'></script>
+<meta name="viewport" content="width=device-width">
+<!-- Begin Monetate tag v6. Place at start of document head. DO NOT ALTER. -->
+<script type="text/javascript">
+var monetateT = new Date().getTime();
+(function()
+{
+var p = document.location.protocol;
+if (p == "http:" || p == "https:")
+{
+var m = document.createElement('script'); m.type = 'text/javascript'; m.async = true; m.src = (p == "https:" ? "https://s" : "http://") + "b.monetate.net/js/1/a-43a801f3/p/calendars.com/" + Math.floor((monetateT + 1084019) / 3600000) + "/g";
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(m, s);
+}
+}
+)();
+</script>
+<!-- End Monetate tag. -->
+<!-- BEGIN CM Header -->
+<script language="javascript1.1" src="//libs.coremetrics.com/eluminate.js" type="text/javascript"></script>
+<script language="javascript1.1" src="/js/coremetrics/cmcustom.js" type="text/javascript"></script>
+<script language="javascript1.1">
+cm_ExplicitReferrer = "''";
+</script>
+<script language="javascript1.1">
+
+cmSetClientID("90084100",false,"www5.calendars.com","calendars.com");
+cmSetupNormalization("jsessionid,dynSessConf-_-jsessionid,dynSessConf");
+cmSetupOther({"cm_TrackImpressions":"S"});
+</script>
+<!-- END CM Header -->
+<!--  Header Pixels are disabled -->
+</head>
+<body>
+<script type="text/javascript">
+var utag_data = {
+page_type:  "Account",
+page_name:  "Calendars.com:Register",
+customer_email:		""
+}
+</script>
+<!-- Unbound Mobile Redirect Start -->
+<script>
+var website    = "www.calendars.com";
+var mobilesite = "m.calendars.com";
+</script>
+<script type="text/javascript" src="//s3.amazonaws.com/mobileredirect/mobileredirector.js"></script>
+<!-- Unbound Mobile Redirect End -->
+<!-- Begin async Tealium Tag -->
+<script type="text/javascript">
+
+(function(a,b,c,d){
+a='//tags.tiqcdn.com/utag/calendars.com/main/prod/utag.js';
+b=document;c='script';d=b.createElement(c);
+d.src=a;d.type='text/java'+c;d.async=true;
+a=b.getElementsByTagName(c)[0];a.parentNode.insertBefore(d,a); })();
+</script>
+<!-- END Tealium Tag -->
+<!--  CoreMetrics Tracking Pixels are disabled -->
+<div id="outerContainer">
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
+<script type='text/javascript' src='/js/jquery.simplemodal.js'></script>
+<link rel='stylesheet' type='text/css' href='/css/confirm.css' />
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<div id="fb-root"></div>
+<script type="text/javascript">
+
+window.fbAsyncInit = function() {
+FB.init({
+appId: 552349438171611,
+status: true,
+cookie: true,
+xfbml: true,
+oauth: true,
+version: 'v2.0'
+});
+};
+(function(d, s, id){
+var js, fjs = d.getElementsByTagName(s)[0];
+if (d.getElementById(id)) {return;}
+js = d.createElement(s); js.id = id;
+js.src = "https://connect.facebook.net/en_US/sdk.js";
+fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+function fblogin() {
+FB.login(function(response){
+if (response.authResponse) {
+
+redirectToFaceBookLoginHandler();
+}else{
+
+}},{scope:'email,public_profile,user_friends,user_likes'});  // calendars needs only few facebook related attributes.Specifying scope to the login call will give access only those features
+
+//window.clearTimeout();
+}
+function redirectToFaceBookLoginHandler(){ 
+document.getElementById("facebookHiddenButton").click();
+}
+
+function calendarsLogout() {
+document.getElementById("logoutFaceBookNoLnk").click();
+}
+/*
+* SimpleModal Confirm Modal Dialog
+* http://www.ericmmartin.com/projects/simplemodal/
+* http://code.google.com/p/simplemodal/
+*
+* Copyright (c) 2009 Eric Martin - http://ericmmartin.com
+*
+* Licensed under the MIT license:
+*   http://www.opensource.org/licenses/mit-license.php
+*
+* Revision: $Id: confirm.js 185 2009-02-09 21:51:12Z emartin24 $
+*
+*/
+$(document).ready(function () {
+$('.needsFaceBookConfirm').click(function (e) {
+e.preventDefault();
+thisHref = $(this).attr("href");
+// example of calling the confirm function
+// you must use a callback function to perform the "yes" action
+confirmFaceBookLogout(function () {
+window.location.href = thisHref;
+});
+});
+});
+function confirmFaceBookLogout(callback) {
+$('#faceBookConfirm').modal({
+close:false,
+position: ["20%",],
+overlayId:'confirmModalOverlay',
+containerId:'confirmModalContainer',
+onShow: function (dialog) {
+// if the user clicks "yes"
+dialog.data.find('.faceBookYes').click(function () {
+document.getElementById("logoutFaceBookYesLnk").click();
+// close the dialog
+$.modal.close();
+});
+// if the user clicks "no"
+dialog.data.find('.faceBookNo').click(function () {
+//logging out from Calendars account only
+calendarsLogout(function () {
+});
+// close the dialog
+$.modal.close();
+});
+}
+});
+}
+</script>
+<div id="topGrey">
+<div>
+<div id="calendarsTab" style="float:left;" class="tabBlue">CALENDARS.COM</div>
+<div id="dogbreedTab" style="float:left;" class="tabGrey" onclick="goto('/dbs/');"><a href="/dbs/" id="dogbreedTabLink">DOGBREEDSTORE.COM</a></div>
+<div id="topPromo" style="float:left;">
+<center><a target="_blank" style=" text-decoration: none;"href="http://www.calendars.com/holiday-shipping-calendar/cat2940001/"><span class="darkblue">
+<font color="#006600">&#127876;</font>
+<font color="red">Holiday Shipping Calendar</font>
+</span></a></center></div>
+<div id="utilityNav" style="float:right;">
+<div style="float:left"><div style="float:left;width:45px;text-align:center;"><a href="/user/login.jsp">LOGIN</a></div>
+<div style="float:left"></div>
+</div>
+<div id='faceBookConfirm' style="display: none;" class="dialogpopup" >
+<a href='#' title='Close' class='modalCloseX simplemodal-close'>x</a>
+<div class='header'><span>Confirm</span></div>
+<p class='message'>Do you also want to Logout from Facebook?</p>
+<div class='buttons'>
+<form action="/index.jsp;jsessionid=52C8CB20D6356DC31EDDB62249E3012D.cal-app-02-p-app1?_DARGS=/common/topTabsCalendars.jsp" method="POST"><input name="_dyncharset" value="ISO-8859-1" type="hidden"></input><input name="_dynSessConf" value="8779558186337686515" type="hidden"></input><div class='faceBookNo'>
+<a id="logoutFaceBookNoLnk" href="/index.jsp;jsessionid=52C8CB20D6356DC31EDDB62249E3012D.cal-app-02-p-app1?_DARGS=/common/topTabsCalendars.jsp.1_A&_DAV=no&_dynSessConf=8779558186337686515&isFaceBookLogOut=no"><img src="/img/buttons/no.png" alt="NO" />
+</a></div>
+<div class='faceBookYes'>
+<a id="logoutFaceBookYesLnk" href="/index.jsp;jsessionid=52C8CB20D6356DC31EDDB62249E3012D.cal-app-02-p-app1?_DARGS=/common/topTabsCalendars.jsp.2_A&_DAV=yes&_dynSessConf=8779558186337686515&accessToken=&isFaceBookLogOut=yes"><img src="/img/buttons/yes.png" alt="YES" />
+</a></div>
+</form></div>
+<br><br><br>
+<p class='facebookLogoutWarning'>*Selecting 'No' will keep you logged in to Facebook in this browser.</p>
+</div>
+<div style="float:left;width:90px;text-align:center;"> <a href="/user/my_profile.jsp">MY ACCOUNT</a></div>
+<div style="float:left;width:110px;text-align:center;"><a href="http://www.calendarholdings.com/locator.asp" onclick="return openWin('http://www.calendarholdings.com/locator.asp');">STORE LOCATOR</a></div>
+<div style="float:left;width:45px;text-align:center;"><a href="http://www.fuzeqna.com/calendars/consumer/kbdetail.asp?kbid=37&ao=t" onclick="return openWin('http://www.fuzeqna.com/calendars/consumer/kbdetail.asp?kbid=37&ao=t');">HELP</a></div>
+<div style="float:left;padding-right:13px;width:45px;text-align:center;">
+<a href="https://livechat.boldchat.com/aid/625495729544981174/bc.chat?cwdid=101624856157664261" target="_blank" onclick="window.open((window.pageViewer &amp;&amp; pageViewer.link || function(link){return link;})(this.href + (this.href.indexOf('?')&gt;=0 ? '&amp;' : '?') + 'url=' + escape(document.location.href)), 'Chat704600354182782643', 'toolbar=0,scrollbars=1,location=0,statusbar=0,menubar=0,resizable=1,width=640,height=480');return false;" style="float: left;"><img src="/img/icons/liveChat.png" alt="Live Chat" style="margin-top:-3px"/></a>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+//<![CDATA[
+(function (HawkSearch, undefined) {
+HawkSearch.BaseUrl = '/searchProxy/';
+HawkSearch.TrackingUrl = 'http://manage.hawksearch.com/sites/calendars';
+if ("https:" == document.location.protocol) {
+HawkSearch.BaseUrl = HawkSearch.BaseUrl.replace("http://", "https://");
+HawkSearch.TrackingUrl = HawkSearch.TrackingUrl.replace("http://", "https://");
+}
+}(window.HawkSearch = window.HawkSearch || {}));
+document.write(unescape("%3Clink rel='stylesheet' type='text/css' href='" + HawkSearch.TrackingUrl + "/includes/hawksearch.css'%3E%3C/link%3E"));
+document.write(unescape("%3Cscript src='" + HawkSearch.TrackingUrl + "/includes/hawksearch.min.js' type='text/javascript'%3E%3C/script%3E"));
+//]]>
+</script>
+<div id="logoArea">
+<div style="clear:both;"></div>
+<div>
+<div id="logo" style="float:left;">
+<div style="padding-top:10px;">
+<a href="/"><img src="/img/common/calendarsLogo.gif" class="floatLeft logoPad" alt="Calendars.com The BEST SELECTION of Calendars in the Known Universe. TM" title="Calendars.com" /></a>
+</div></div>
+<div style="width:60px;float:left;">&nbsp;</div>
+<div id="searchArea">
+<form id="searchForm" name="searchForm" action="/search/advancedSearch.jsp;jsessionid=52C8CB20D6356DC31EDDB62249E3012D.cal-app-02-p-app1?_DARGS=/common/topLogoAndCart.jsp.searchForm" method="POST"><input name="_dyncharset" value="ISO-8859-1" type="hidden"></input><input name="_dynSessConf" value="8779558186337686515" type="hidden"></input><fieldset>
+<input type="text" id="searchBox" name="searchBox" value="Search by Keyword, Topic, or Publisher" onclick="clearBox(this.id);" />
+<input type="image" src="/img/buttons/searchButton.png" value="Search" alt="Search" id="searchButton" onclick="javaScript:searchSubmit();"/>
+<input type="hidden" name="site"  value="cal" />
+<input type="text" style="display:none;"></input>
+</fieldset>
+</form></div>
+<div style="width:20px;float:left;">&nbsp;</div>
+<div style="float:left;">
+<div style="padding-top:35px;" id="popularSearches">
+<a href="#" >Popular Searches</a>
+</div>
+</div>
+<div style="width:30px;float:left;">&nbsp;</div>
+<div id="dynamicMiniCart">
+<!-- CAL-433 Add To Cart issues in IE 8 and lower versions. Rendering image path -->
+<a id="cartAnchorArea" href="/checkout/cart.jsp">
+<div id="cartArea" style="background-image: url('/img/icons/shoppingCartIcon.png'); z-index: 100; position: relative;">
+<div style="padding:9px 0 0px 50px;text-align: center">
+<span style="padding-left:3px;">0 ITEMS</span>
+<br/>
+<span style="padding-left: 3px;">$0.00</span> <!-- Closed the <span> tag properly to fix the issue in IE8 version -->
+</div>
+</div>
+</a>
+<div id="cartFlyout" class="hover" style="z-index: 50;">
+<form action="/user/register.jsp;jsessionid=52C8CB20D6356DC31EDDB62249E3012D.cal-app-02-p-app1?_DARGS=/common/dynamicMiniCart.jsp" method="post"><input name="_dyncharset" value="ISO-8859-1" type="hidden"></input><input name="_dynSessConf" value="8779558186337686515" type="hidden"></input><div id="cartFlyoutDetails">
+Items in your cart:
+<img src="/img/backgrounds/greyLine_10px.gif" alt="" width="230" height="10" />
+</div>
+<div id="cartFlyoutButtonArea">
+<div>
+</div>
+<div style="height:15px;clear:both"></div>
+<div id="cartFlyoutButtons">
+<a href="/checkout/cart.jsp?returnURL=/user/register.jsp"><img src="/img/buttons/viewCartButton.gif" width="89" height="23" alt="View Cart" class="floatLeft" style="padding-right:10px;" /></a>
+<div style="width:30px;"></div>
+<input alt="CHECKOUT" name="checkout" value="Checkout" class="floatLeft" src="/img/buttons/checkoutButton.gif" type="image"><input name="_D:checkout" value=" " type="hidden"><input name="/atg/commerce/order/purchase/CartModifierFormHandler.moveToPurchaseInfoErrorURL" value="/checkout/cart.jsp?returnURL=/user/register.jsp" type="hidden"><input name="_D:/atg/commerce/order/purchase/CartModifierFormHandler.moveToPurchaseInfoErrorURL" value=" " type="hidden"><input name="/atg/commerce/order/purchase/CartModifierFormHandler.moveToPurchaseInfoSuccessURL" value="/checkout/login.jsp" type="hidden"><input name="_D:/atg/commerce/order/purchase/CartModifierFormHandler.moveToPurchaseInfoSuccessURL" value=" " type="hidden"></div>
+<div style="height:5px;clear:both"></div>
+</div>
+<input name="_DARGS" value="/common/dynamicMiniCart.jsp" type="hidden"></input></form></div>
+</div>
+</div>
+</div>
+<div id="popularSearchesOver">
+<div style="background-color:#fff;margin-top:26px;border-left:1px solid #EAE9EE;border-right:1px solid #EAE9EE;border-bottom:1px solid #EAE9EE; word-wrap:break-word;text-align:left !important">
+    <div class="TagCloud">	<span class="TagWeight4" title="Count: 2529"><a href="/searchProxy/?keyword=2016">2016</a></span><span class="TagWeight4" title="Count: 2585"><a href="/searchProxy/?keyword=beaches">beaches</a></span><span class="TagWeight5" title="Count: 1050"><a href="/searchProxy/?keyword=birds">birds</a></span><span class="TagWeight5" title="Count: 2177"><a href="/searchProxy/?keyword=calendar towels">calendar towels</a></span><span class="TagWeight3" title="Count: 3413"><a href="/searchProxy/?keyword=calendar with pocket">calendar with pocket</a></span><span class="TagWeight4" title="Count: 3133"><a href="/searchProxy/?keyword=cars">cars</a></span><span class="TagWeight3" title="Count: 3335"><a href="/searchProxy/?keyword=cats">cats</a></span><span class="TagWeight5" title="Count: 1971"><a href="/searchProxy/?keyword=disney">disney</a></span><span class="TagWeight3" title="Count: 3558"><a href="/searchProxy/?keyword=dogs">dogs</a></span><span class="TagWeight2" title="Count: 4500"><a href="/searchProxy/?keyword=flowers">flowers</a></span><span class="TagWeight4" title="Count: 3133"><a href="/searchProxy/?keyword=france">france</a></span><span class="TagWeight2" title="Count: 4549"><a href="/searchProxy/?keyword=geddes">geddes</a></span><span class="TagWeight5" title="Count: 1703"><a href="/searchProxy/?keyword=gifts">gifts</a></span><span class="TagWeight2" title="Count: 4157"><a href="/searchProxy/?keyword=halloween">halloween</a></span><span class="TagWeight4" title="Count: 3045"><a href="/searchProxy/?keyword=horse">horse</a></span><span class="TagWeight2" title="Count: 4146"><a href="/searchProxy/?keyword=inspirational">inspirational</a></span><span class="TagWeight5" title="Count: 1817"><a href="/searchProxy/?keyword=italy">italy</a></span><span class="TagWeight2" title="Count: 4154"><a href="/searchProxy/?keyword=lang">lang</a></span><span class="TagWeight4" title="Count: 2372"><a href="/searchProxy/?keyword=london">london</a></span><span class="TagWeight3" title="Count: 4050"><a href="/searchProxy/?keyword=magnetic calendars">magnetic calendars</a></span><span class="TagWeight5" title="Count: 1477"><a href="/searchProxy/?keyword=mary engelbreit">mary engelbreit</a></span><span class="TagWeight5" title="Count: 2189"><a href="/searchProxy/?keyword=minecraft">minecraft</a></span><span class="TagWeight5" title="Count: 2327"><a href="/searchProxy/?keyword=national parks">national parks</a></span><span class="TagWeight5" title="Count: 2096"><a href="/searchProxy/?keyword=nature">nature</a></span><span class="TagWeight4" title="Count: 2654"><a href="/searchProxy/?keyword=owl">owl</a></span><span class="TagWeight1" title="Count: 4835"><a href="/searchProxy/?keyword=paris">paris</a></span><span class="TagWeight5" title="Count: 742"><a href="/searchProxy/?keyword=peanuts">peanuts</a></span><span class="TagWeight3" title="Count: 3567"><a href="/searchProxy/?keyword=planners">planners</a></span><span class="TagWeight4" title="Count: 2908"><a href="/searchProxy/?keyword=puzzle">puzzle</a></span><span class="TagWeight4" title="Count: 2943"><a href="/searchProxy/?keyword=shoes">shoes</a></span><span class="TagWeight3" title="Count: 3787"><a href="/searchProxy/?keyword=star wars">star wars</a></span><span class="TagWeight5" title="Count: 767"><a href="/searchProxy/?keyword=susan winget">susan winget</a></span><span class="TagWeight2" title="Count: 4462"><a href="/searchProxy/?keyword=trains">trains</a></span><span class="TagWeight3" title="Count: 3770"><a href="/searchProxy/?keyword=trees">trees</a></span><span class="TagWeight5" title="Count: 2199"><a href="/searchProxy/?keyword=van gogh">van gogh</a></span><span class="TagWeight1" title="Count: 4985"><a href="/searchProxy/?keyword=vintage">vintage</a></span><span class="TagWeight3" title="Count: 3508"><a href="/searchProxy/?keyword=wolves">wolves</a></span><span class="TagWeight1" title="Count: 4757"><a href="/searchProxy/?keyword=zen">zen</a></span></div></div>
+</div>
+<script type="text/javascript">
+function searchSubmit() {
+var keyword = $('input[name="searchBox"]').val();
+$('#searchForm').attr('action', '/searchProxy?keyword='+ keyword);
+document.getElementById("searchForm").submit();
+}
+$(document).ready(function() {
+$("#popularSearches").hover( function () {
+$("#popularSearchesOver").show();
+//IE6 fix
+if($.browser.msie && $.browser.version.substr(0,3)<"7"){
+$("select").hide();
+}
+});
+$("#popularSearches,#popularSearchesOver").click( function () {
+$("#popularSearchesOver").show();
+});
+$("#popularSearches,#popularSearchesOver").mouseout( function () {
+$("#popularSearchesOver").oneTime(100, function() {
+$(this).hide();
+//IE6 fix
+if($.browser.msie && $.browser.version.substr(0,3)<"7"){
+$("select").show();
+}
+});
+});
+$("#popularSearches,#popularSearchesOver").mouseover( function () {
+$("#popularSearchesOver").stopTime();
+});
+});
+</script>
+<div id="topNavContainer">
+<div id="topNavBox" class="floatLeft">
+<!--   <div id="mainNav">
+<a href="/Categories/cat00001/">Categories</a>
+|
+<a href="/Best-Sellers/cat30904/">Best Sellers</a>
+|
+<a href="/Frames/cat30907/">Frames</a>
+|
+<a href="/Gift-Ideas/cat30909/">Gift Ideas</a>
+|
+<a href="/Dog-Breeds/cat00189/">Dogs</a>
+|
+<a href="/Sports/cat00402/">Sports</a>
+|
+<a href="/Art-and-Architecture/cat00002/">Art</a>
+|
+</div>
+<div id="bargains">
+<a href="/Bargains/cat30902/">Bargains</a>
+</div> -->
+<div id="mainNav" style="padding-left:32px;">
+<div style=" float: left; letter-spacing: 2px;">
+<div style="float: left; text-align: center; width: 142px;"><a href="/lp/calendars/?cm_re=MainNavigationTop-_-1-_-AllCalendars">2016 Calendars</a></div>
+
+<div style="float: left; text-align: center; width: 84px;"><a href="/lp/Wall-Calendars?cm_re=MainNavigationTop-_-2-_-Wall">Wall</a></div>
+
+<div style="float: left; text-align: center; width: 80px;"><a href="/lp/Desk-Calendars?cm_re=MainNavigationTop-_-3-_-Desk" style="padding: 2px">Desk</a></div>
+
+<div style="float: left; text-align: center; width: 120px;"><a href="/lp/Planners?cm_re=MainNavigationTop-_-4-_-Planners" style="padding: 2px">Planners</a></div>
+
+<div style=" float: left;">&nbsp;&nbsp; |&nbsp;&nbsp;</div>
+
+<div style="float: left; text-align: center; width: 98px;"><a href="/lp/gifts/?cm_re=MainNavigationTop-_-5-_-Gifts" style="padding: 2px">Gifts</a></div>
+
+<div style="float: left; text-align: center; width: 130px;"><a href="/lp/games-toys?cm_re=MainNavigationTop-_-6-_-Games" style="padding: 2px">Games &amp; Toys</a></div>
+
+<div style="float: left; text-align: center; width: 118px;"><a href="/Jigsaw-Puzzles/cat430022/?seeAll=true&cm_re=MainNavigationTop-_-7-_-Puzzles" style="padding: 2px">Puzzles</a></div>
+
+<div style="float: left; text-align: center; width: 80px;"><a href="/On-Sale/cat30902/?cm_re=MainNavigationTop-_-8-_-On Sale" style="padding: 2px">On Sale</a></div>
+</div>
+</div>
+</div>
+</div>
+<!--  Top Nav Pixels are disabled -->
+<div id="singleColumn">
+<div id="leftColumn5050">
+<div class="checkoutSubHeaderBox">
+<span class="categoryH2 yellowText">Registration</span>
+</div>
+<div id="shippingAddressFormBox">
+<form id="register" action="register.jsp;jsessionid=52C8CB20D6356DC31EDDB62249E3012D.cal-app-02-p-app1?_DARGS=/user/register.jsp" method="POST"><input name="_dyncharset" value="ISO-8859-1" type="hidden"></input><input name="_dynSessConf" value="8779558186337686515" type="hidden"></input><!--Dont assign a new repository id during registration - keep transcient one:
+This is particular crucial because we store this ID in the ownerId field
+of the addresses (see below). -->
+<input name="atg/userprofiling/ProfileFormHandler.createNewUser" value="false" type="hidden"><input name="_D:atg/userprofiling/ProfileFormHandler.createNewUser" value=" " type="hidden"><!-- If registration succeeds, go to my profile page and welcome
+new customer there -->
+<input name="atg/userprofiling/ProfileFormHandler.createSuccessURL" value="my_profile.jsp" type="hidden"><input name="_D:atg/userprofiling/ProfileFormHandler.createSuccessURL" value=" " type="hidden"><input type="hidden" name="first_time" value="yes">
+<!-- User must confirm password when registering -->
+<input name="atg/userprofiling/ProfileFormHandler.confirmPassword" value="true" type="hidden"><input name="_D:atg/userprofiling/ProfileFormHandler.confirmPassword" value=" " type="hidden"><!-- A registered customer is a member -->
+<input name="atg/userprofiling/ProfileFormHandler.value.member" value="true" type="hidden"><input name="_D:atg/userprofiling/ProfileFormHandler.value.member" value=" " type="hidden"><fieldset>
+<legend class="fourteen black bold">Please enter your information:</legend>
+<div class="singleLineFormField">
+<label class="rightAlignedLabel200 bold black upper" for="login">Login Id:<span class="required">*</span></label>
+<input id="login" name="atg/userprofiling/ProfileFormHandler.value.login" value="" class="fieldLong" type="text"><input name="_D:atg/userprofiling/ProfileFormHandler.value.login" value=" " type="hidden"></div>
+<div class="singleLineFormField">
+<label class="rightAlignedLabel200 bold black upper" for="password">password:<span class="required">*</span></label>
+<input id="password" name="atg/userprofiling/ProfileFormHandler.value.password" value="" class="fieldMedium" type="password"><input name="_D:atg/userprofiling/ProfileFormHandler.value.password" value=" " type="hidden"></div>
+<div class="singleLineFormField">
+<label class="rightAlignedLabel200 bold black upper" for="confirmPassword">confirm password:<span class="required">*</span></label>
+<input id="confirmPassword" name="atg/userprofiling/ProfileFormHandler.value.confirmPassword" value="" class="fieldMedium" type="password"><input name="_D:atg/userprofiling/ProfileFormHandler.value.confirmPassword" value=" " type="hidden"></div>
+<div class="singleLineFormField">
+<label class="rightAlignedLabel200 bold black upper" for="email">email address:<span class="required">*</span></label>
+<input id="email" name="atg/userprofiling/ProfileFormHandler.value.email" value="" class="fieldLong" type="text"><input name="_D:atg/userprofiling/ProfileFormHandler.value.email" value=" " type="hidden"></div>
+<div class="singleLineFormField">
+<label class="rightAlignedLabel200 bold black upper" for="firstName">FIRST NAME:<span class="required">*</span></label>
+<input id="firstName" maxlength="18" name="atg/userprofiling/ProfileFormHandler.value.firstName" value="" class="fieldMedium" type="text"><input name="_D:atg/userprofiling/ProfileFormHandler.value.firstName" value=" " type="hidden"></div>
+<div class="singleLineFormField">
+<label class="rightAlignedLabel200 bold black upper" for="lastName">LAST NAME:<span class="required">*</span></label>
+<input id="lastName" name="atg/userprofiling/ProfileFormHandler.value.lastName" value="" class="fieldMedium" type="text"><input name="_D:atg/userprofiling/ProfileFormHandler.value.lastName" value=" " type="hidden"></div>
+<div class="singleLineFormField">
+<label class="bold black">
+<input name="atg/userprofiling/ProfileFormHandler.value.optIn" value="true" type="checkbox" checked><input name="_D:atg/userprofiling/ProfileFormHandler.value.optIn" value=" " type="hidden">Yes, send me exclusive offers, helpful tips, and more via email!
+</label>
+<br/>
+<label class="bold black" style="padding-left: 25px;">
+I can unsubscribe at any time.<a href="http://www.fuzeqna.com/calendars/ext/kbdetail.aspx?kbid=41" onclick="return openWin('http://www.fuzeqna.com/calendars/ext/kbdetail.aspx?kbid=41');" class="underlined">Privacy Policy</a>
+</label>
+</div>
+<div class="singleLineFormField">
+<label class="bold black">
+<input name="atg/userprofiling/ProfileFormHandler.value.termsOfUse" value="true" type="checkbox"><input name="_D:atg/userprofiling/ProfileFormHandler.value.termsOfUse" value=" " type="hidden">I agree to Calendars.com's <a href="http://www.fuzeqna.com/calendars/ext/kbdetail.aspx?kbid=1308" onclick="return openWin('http://www.fuzeqna.com/calendars/ext/kbdetail.aspx?kbid=1308');" class="underlined">Terms of Use</a>
+<br/>
+</label>
+</div>
+<div id="shippingAddressSubmit">
+<input name="atg/userprofiling/ProfileFormHandler.create" value="REGISTER" src="/img/buttons/register.png" type="image"><input name="_D:atg/userprofiling/ProfileFormHandler.create" value=" " type="hidden"></div>
+</fieldset>
+<input name="_DARGS" value="/user/register.jsp" type="hidden"></input></form></div>
+</div>
+<div id="rightColumn5050">
+<div id="checkoutOrderSummary">
+<div class="checkoutSubHeaderBox">
+<span class="categoryH2 darkblue">Support/Help Info</span>
+</div>
+<div id="supportBox">
+<p>
+<span style=" color: #000000;"><b>Register with Calendars.com!</b></span><br />
+<br />
+<a target="_blank"
+href="http://www.fuzeqna.com/calendars/consumer/kbdetail.asp?kbid=11&#38;ao=t"><strong>How do I
+register without ordering?</strong></a><br />
+<br />
+<a target="_blank"
+href="http://www.fuzeqna.com/calendars/consumer/kbdetail.asp?kbid=10&#38;ao=t"><strong>What are
+the benefits of registering?</strong></a><br />
+<br />
+<a target="_blank"
+href="http://www.fuzeqna.com/calendars/consumer/kbdetail.asp?kbid=167&#38;ao=t"><strong>How do
+I contact Customer Service?</strong></a><br />
+<br /></p>
+<ul class="bigListItems">
+<li><a class="darkblue underlined" href="my_profile.jsp;jsessionid=52C8CB20D6356DC31EDDB62249E3012D.cal-app-02-p-app1">Login</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="promoBottom"></div>
+<div style="clear: both; height: 1px;"></div>
+<div id="footer">
+  	<div id="footer" style="width: 960px; margin: 0px auto;">
+
+<div style="color: black; background-color: #E4E4E4; height: 30px; border: none;clear:both; width: 940px">
+<img src="/img/common/Calendarsdotcom.png">
+</div>
+
+<div height="10px"></div>
+<div style="display: inline; padding-bottom: 50px; float: left; width: 960px; margin: 0px 0pt 0pt 31px; padding-top:26px;">
+<ul style="list-style: none outside none; text-align: left; margin-right: 20px; float: left; width: 190px;">
+<li style="padding: 0px 0px 0px 10px; width: 163px;">
+<a target="_blank" href="http://app.calendars.com/prefs/signup.cfm?s=homepage" style="text-decoration: none; color: rgb(90, 91, 94); font-size: 10px;">
+Email Signup
+</a>
+</li>
+
+<li style="padding: 0px 0px 0px 10px; width: 163px;">
+<a target="_blank" href="http://www.fuzeqna.com/calendars/consumer/kbdetail.asp?kbid=6" style="text-decoration: none; color: rgb(90, 91, 94); font-size: 10px;">
+About Us
+</a>
+</li>
+
+<li style="padding: 0px 0px 0px 10px; width: 163px;">
+<a target="_blank" href="http://blog.calendars.com/job-openings/" style="text-decoration: none; color: rgb(90, 91, 94); font-size: 10px;">
+Jobs
+</a>
+</li>
+
+<li style="padding: 0px 0px 0px 10px; width: 163px;">
+<a target="_blank" href="http://www.fuzeqna.com/calendars/consumer/kbdetail.asp?kbid=37&#38;ao=t" style="text-decoration: none; color: rgb(90, 91, 94); font-size: 10px;">
+Customer Service
+</a>
+</li>
+
+<li style="padding: 0px 0px 0px 10px; width: 163px;">
+<a target="_blank" href="http://www.fuzeqna.com/calendars/consumer/kbdetail.asp?kbid=174" style="text-decoration: none; color: rgb(90, 91, 94); font-size: 10px;">
+Site Security
+</a>
+</li>
+
+<li style="padding: 0px 0px 0px 10px; width: 163px;">
+<a target="_blank" href="http://www.fuzeqna.com/calendars/consumer/kbdetail.asp?kbid=2" style="text-decoration: none; color: rgb(90, 91, 94); font-size: 10px;">
+Affiliates
+</a>
+</li>
+<hr width="150px;" style="color:black;padding-top:0px;">
+<li style="padding: 0px 0px 0px 10px; width: 163px;">
+<a href="/user/register.jsp" style="text-decoration: none; color: rgb(90, 91, 94); font-size: 10px;">
+Register
+</a>
+</li>
+
+<li style="padding: 0px 0px 0px 10px; width: 163px;">
+<a href="/checkout/cart.jsp" style="text-decoration: none; color: rgb(90, 91, 94); font-size: 10px;">
+Checkout/Shopping Cart
+</a>
+</li>
+
+<li style="padding: 0px 0px 0px 10px; width: 163px;">
+<a href="/util/CheckStatus.jsp" style="text-decoration: none; color: rgb(90, 91, 94); font-size: 10px;">
+Order Tracking
+</a>
+</li>
+
+<li style="padding: 0px 0px 0px 10px; width: 163px;">
+<a target="_blank" href="http://www.fuzeqna.com/calendars/consumer/kbdetail.asp?kbid=166" style="text-decoration: none; color: rgb(90, 91, 94); font-size: 10px;">
+Domestic Shipping
+</a>
+</li>
+
+<li style="padding: 0px 0px 0px 10px; width: 163px;">
+<a target="_blank" href="http://www.fuzeqna.com/calendars/consumer/kbdetail.asp?kbid=59" style="text-decoration: none; color: rgb(90, 91, 94); font-size: 10px;">
+International Shipping
+</a>
+</li>
+
+<li style="padding: 0px 0px 0px 10px; width: 163px;">
+<a target="_blank" href="http://www.fuzeqna.com/calendars/consumer/kbdetail.asp?kbid=55" style="text-decoration: none; color: rgb(90, 91, 94); font-size: 10px;">
+Return Policy
+</a>
+</li>
+</ul>
+<div>
+<table>
+<tr>
+<td colspan="6">
+<div style="list-style: none outside none; text-align: left; margin-right: 20px; float: left; width: 155px; height:140px">
+<div align="center" style="height:25px; width:155px; background-color: #f8b431; color: #ffffff; font-size: 11px; font-weight: 600; padding-top:6px;">
+SECURE SHOPPING
+</div>
+<div style="background-color: #f8f8f8; height:115px; width: 155px">
+<div align="center" style="padding-top: 8px;">
+<!-- Begin PROD DigiCert/ClickID site seal HTML and JavaScript -->
+<div id="DigiCertClickID_EN3oZzvd" data-language="en_US">
+</div>
+<script type="text/javascript">
+var __dcid = __dcid || [];__dcid.push(["DigiCertClickID_EN3oZzvd", "11", "s", "black", "EN3oZzvd"]);(function(){var cid=document.createElement("script");cid.async=true;cid.src="//seal.digicert.com/seals/cascade/seal.min.js";var s = document.getElementsByTagName("script");var ls = s[(s.length - 1)];ls.parentNode.insertBefore(cid, ls.nextSibling);}());
+</script>
+<!-- End DigiCert/ClickID site seal HTML and JavaScript -->
+
+<div style=" height: 10px;"></div>
+<a href="http://www.bbb.org/central-texas/business-reviews/calendars/calendars-com-in-austin-tx-42060/" target="_blank"><img alt="BBB Accredited Business page for Calendars.com" src="/img/common/imgAccecotedbusiness.png"></a>
+</div>
+</div>
+</div>
+
+<div style="list-style: none outside none; text-align: left; margin-right: 20px; float: left; width: 155px; height:140px">
+<div align="center" style="height:25px; width:155px; background-color: #f8b431; color: #ffffff; font-size: 11px; font-weight: 600; padding-top:6px;">
+CONNECT WITH US
+</div>
+<div style="background-color: #f8f8f8; height:115px; width: 155px">
+<table width="160px" height="110px">
+<tr>
+<td align="right">
+<a href="http://facebook.com/calendarscom/" target="_blank">
+<img src="/img/common/imgFacebook.png">
+</a>
+</td>
+<td align="center">
+<a href="http://twitter.com/calendars/" target="_blank">
+<img src="/img/common/imgTwitter.png">
+</a>
+</td>
+<td align="left">
+<a href="http://pinterest.com/calendarscom/" target="_blank">
+<img src="/img/common/imgpinterest.png">
+</a>
+</td>
+</tr>
+<tr>
+<td align="right">
+<a href="http://instagram.com/calendarscom/" target="_blank">
+<img src="/img/common/insta30x30.jpg">
+</a>
+</td>
+<td align="center">
+<a target="_blank" href="http://youtube.com/user/calendars/">
+<img src="/img/common/imgYoutube.png">
+</a>
+</td>
+<td align="left">
+<a target="_blank" href="http://blog.calendars.com">
+<img src="/img/common/imgblog.png">
+</a>
+</td><td></td>
+</tr>
+</table>
+</div>
+</div>
+
+<div style="list-style: none outside none; text-align: left; margin-right: 20px; float: left; width: 295px; height:140px">
+<div align="center" style="height:25px; width:312px; background-color: #f8b431; color: #ffffff; font-size: 11px; font-weight: 600; padding-top:6px;">
+CUSTOMER SERVICE
+</div>
+<div style="background-color: #f8f8f8; height:115px; width: 312px">
+<table width="310px" height="110px">
+<tr>
+<td style="align: top; padding-right: 16px; ">
+<label style="padding-left: 7px "> <b>SUN - SAT</b>&nbsp;&nbsp; 8am - 7pm CST</label>
+</td>
+<td style="align: bottom">
+<a onclick="window.open((window.pageViewer && pageViewer.link || function(link){return link;})(this.href + (this.href.indexOf('?')>=0 ? '&' : '?') + 'url=' + escape(document.location.href)), 'Chat704600354182782643', 'toolbar=0,scrollbars=1,location=0,statusbar=0,menubar=0,resizable=1,width=640,height=480');return false;"
+target="_blank" href="https://livechat.boldchat.com/aid/625495729544981174/bc.chat?cwdid=101624856157664261">
+<img alt="Live Chat" src="/img/common/LiveChat_blue.png" />
+</a>
+</td>
+</tr>
+<tr>
+<td align="left" colspan="2">
+<label style="padding-left: 7px"> Call <b>1-800-366-3645</b></label>
+</td>
+</tr>
+<tr>
+<td style="align: top; padding-right: 16px; "></td>
+<td align="left">
+<a href="https://www.fuzeqna.com/calendars/consumer/question.asp" target="_blank">
+<img src="/img/common/Emailus_blue.png" />
+</a>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</td>
+</tr>
+
+<tr>
+<td style="padding-top: 55px; padding-right: 90px; font-size: 10px;" colspan="6">
+<div>
+Calendars.com L.L.C. All Rights Reserved. Copyright 1998-2015
+<a href="http://www.fuzeqna.com/calendars/consumer/kbdetail.asp?kbid=1308">Terms of Use</a> |
+<a href="http://www.fuzeqna.com/calendars/consumer/kbdetail.asp?kbid=41">Privacy Policy</a>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+
+<!-- Don't remove this next character -->
+&#160;
+<!-- START ADDTHIS -->
+<script type="text/javascript">
+var addthis_config = {
+username: "calendars",
+data_track_linkback: true
+}
+
+newURL = window.location;
+(window.location.search.substring(1)) ? newURL += '&cm_re=emailafriend-_-addthis-_-productpage-_-1' : newURL += '?cm_re=emailafriend-_-addthis-_-productpage-_-1';
+
+var addthis_share = { email_template: "cal_email", url: newURL}
+
+
+
+</script>
+<script type="text/javascript">
+
+$(document).ready(function(){
+
+var prodname = $(".categoryH1").html();
+
+$('#emailAFriend').replaceWith('<div id="emailAFriend"><div class="addthis_toolbox addthis_default_style"><div class="addthis_custom_images"><a class="addthis_button_email" addthis:title="' + prodname + '"><img src="http://www.calendars.com/img/icons/mail.png" /></a></div></div></div>');
+
+});
+
+</script>
+<script type="text/javascript"
+src="https://s7.addthis.com/js/250/addthis_widget.js#username=calendars"></script>
+<!-- END ADD THIS -->  </div>
+<!-- Bold Software Visitor Monitor HTML v3.50 (Website=- None -,ChatWindow=My Chat Window,ChatInvitation=My Invite Ruleset) -->
+<script type="text/javascript">
+var _bcvma = _bcvma || [];
+_bcvma.push(["setAccountID", "625495729544981174"]);
+_bcvma.push(["setParameter", "ChatWindowDefID", "101624856157664261"]);
+_bcvma.push(["setParameter", "ChatWidth", "640"]);
+_bcvma.push(["setParameter", "ChatHeight", "480"]);
+_bcvma.push(["setParameter", "InvitationDefID", "4946415356038433539"]);
+_bcvma.push(["setParameter", "WindowScheme", "https"]);
+_bcvma.push(["pageViewed"]);
+(function(){
+var vms = document.createElement("script"); vms.type = "text/javascript"; vms.async = true;
+vms.src = ('https:'==document.location.protocol?'https://':'http://') + "vmss.boldchat.com/aid/625495729544981174/bc.vms3/vms.js";
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(vms, s);
+})();
+</script>
+<noscript>
+<a href="http://www.boldchat.com" title="Live Chat" target="_blank"><img alt="Live Chat" src="https://vms.boldchat.com/aid/625495729544981174/bc.vmi" border="0" width="1" height="1" /></a>
+</noscript>
+<!-- /Bold Software Visitor Monitor HTML v3.50 -->
+<!--
+Server Name: cal-app-02-p.sparkred.com:10150
+Order: Order[id:r16496670964; state:INCOMPLETE; transient:true; profileId:568668391; creationDate:2015-12-09 10:15:37.926; lastModifiedDate:2015-12-09 10:15:37.926; submittedDate:null; creationSite:null; site:100001]
+-->
+<!-- Hawk Search - Auto-Suggest -->
+<script type="text/javascript">
+//<![CDATA[
+HawkSearch.initAutoSuggest = function () {
+HawkSearch.suggestInit('#searchBox', {
+lookupUrlPrefix: HawkSearch.TrackingUrl + '/ajax.aspx?f=GetSuggestions&basePath=/img/p/105/&siteName=cal',
+hiddenDivName: '',
+isAutoWidth: true
+});
+};
+if (window.addEventListener) {
+window.addEventListener('load', HawkSearch.initAutoSuggest, false);
+} else if (window.attachEvent) {
+window.attachEvent('onload', HawkSearch.initAutoSuggest);
+}
+//]]>
+</script>
+</div>
+<script type="text/javascript">if (!NREUMQ.f) { NREUMQ.f=function() {NREUMQ.push(["load",new Date().getTime()]);var e=document.createElement("script");e.type="text/javascript";e.src=(("http:"===document.location.protocol)?"http:":"https:") + "//" + "js-agent.newrelic.com/nr-100.js";document.body.appendChild(e);if(NREUMQ.a)NREUMQ.a();};NREUMQ.a=window.onload;window.onload=NREUMQ.f;};NREUMQ.push(["nrfj","bam.nr-data.net","9655ab179e","846764","NVJXMUNRW0FWUxBfXQwYfzZhH0BBUkJLRFcFXkYRVEIbWERA",0,19,new Date().getTime(),"","","","",""]);</script></body>
+</html>

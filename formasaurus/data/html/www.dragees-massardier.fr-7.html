@@ -1,0 +1,85 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+
+<html>
+<head>
+
+<link rel="stylesheet" href="http://www.dragees-massardier.fr/boutique/css_dys_pwb/gabarit62.css" type="text/css" />
+<link rel="stylesheet" href="http://www.dragees-massardier.fr/boutique/css_dys_pwb/mot_de_passe_perdu62.css" type="text/css" />
+
+<base href="http://www.dragees-massardier.fr/boutique/mot_de_passe_perdu.cfm?code_lg=lg_fr" />
+<title>Dragées - mariage, baptême - contenants, boites dragées - Confiserie Massardier</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-15">
+<meta name="description" content="Dragées Massardier : Dragées mariage et contenant baptême ou communion. Nos kits dragées uniques et originales, ballotins, boites et accessoires dragées. Thème dragées mariage, Thème dragées baptême">
+<meta name="keywords" content="dragées,dragées mariage,dragées baptême,dragées communion,boite mariage,dragées chocolat,dragées amandes,dragées avola,contenant dragées,ballotins dragées, kit dragées">
+<meta name="Robots" content="noindex,follow">
+<script type="text/javascript" src="http://www.dragees-massardier.fr/js/ajax.js"></script>
+</head>
+<body>
+
+
+
+<script type="text/javascript" language="JavaScript">
+function mail_controle()
+{
+adresse = document.formulaire.email.value;
+var place = adresse.indexOf("@",1);
+var point = adresse.lastIndexOf(".",adresse.length);
+if ((place > -1)&&(adresse.length >2)&&(point > 1)&&(adresse.length > point+2)&&(adresse.length < point+6))
+{
+document.formulaire.submit();
+}
+else
+{
+alert('Veuillez saisir une adresse email valide.');
+}
+}
+function controle()
+{
+if(document.formulaire.nom.value == '' && document.formulaire.prenom.value == '')
+{alert('Veuillez saisir un nom et un pr&eacute;nom.');}
+else
+{document.formulaire.submit();}
+}
+</SCRIPT>
+<div id="catalogue_pwb">
+
+
+<div id="largeur_de_page_et_bordures" style="width:300px;margin-bottom: 15px;padding-bottom: 50px;">
+<div id="encart_grand_titre_mot_de_passe_perdu">
+<span id="grand_titre_mot_de_passe_perdu">R&eacute;cup&eacute;ration du mot de passe</span>
+</div>
+<form action="trait_mot_de_passe_perdu.cfm?code_lg=lg_fr" method="post" name="formulaire">
+<table width="100%" cellspacing="0" cellpadding="6" border="0">
+<tr>
+<td align="left" colspan="2">
+<span id="titre_recuperation_mot_de_passe_perdu">R&eacute;cup&eacute;ration du mot de passe</span>
+<br><br>
+<span id="texte_saisissez_mot_de_passe_perdu">Saisissez votre adresse email et validez, votre mot de passe vous sera alors envoy&eacute;.</span>
+</td>
+</tr>
+<tr>
+<td>
+<span id="texte_recuperer_password_mot_de_passe_perdu">Email :</span>
+<input type="text" name="email" size="24" id="champ_email_mot_de_passe_perdu">
+</td>
+<td>
+<a href="#" onclick="mail_controle()" id="bouton_texte_valider_mot_de_passe_perdu">
+<span>
+<input type="button" value="Valider" name="aucun" id="habillage_bouton_texte_valider_mot_de_passe_perdu">
+</span>
+</a>
+</td>
+</tr>
+</table>
+</form>
+</div>
+
+
+</div>
+
+
+
+
+<a href="../wtec/welcome_bots.html"></a></body>
+</html>

@@ -1,0 +1,954 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><script src="http://static.focalprice.com/js/CurrencyUrl.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Focalprice-Register</title>
+    <link type="text/css" rel="stylesheet" href="http://static.focalprice.com/Css/global.css" />
+    <link type="text/css" rel="stylesheet" href="http://static.focalprice.com/Css/layout.css" />
+    <link type="text/css" rel="stylesheet" href="http://static.focalprice.com/Css/common.css" />
+    <!--[if IE 6]>
+   	<link type="text/css" rel="stylesheet" href="http://static.focalprice.com/Css/ie6.css" />
+    <![endif]-->
+    <link rel="shortcut icon" href="http://static.focalprice.com/favicon.ico" />
+    <script type="text/javascript" src="http://static.focalprice.com/Js/jquery-1.4.1.js"></script>
+    <script type="text/javascript" src="http://static.focalprice.com/Js/ZH-CN.js"></script>
+    <script type="text/javascript" src="http://static.focalprice.com/Js/common.js"></script>
+
+    <script type="text/javascript" language="javascript">
+        $(document).ready(function () {
+            $("#chkIsTerm").click(function () {
+                if ($(this).attr("checked") == true) {
+                    $("#termsTip").text("");
+                    $(".reg_sub").attr("disabled", false);
+                }
+                else {
+                    $("#termsTip").text(focalPriceTip.Account[0].termsNoChecked);
+                    $(".reg_sub").attr("disabled", true);
+                }
+            });
+            $("#chkIsEmail").click(function () {
+                $(this).val($(this).attr("checked"));
+            });
+        });
+    </script>
+</head>
+<body>
+    <script type="text/javascript" src="http://static.focalprice.com/Js/w.js"></script>
+    
+
+    <link type="text/css" rel="stylesheet" href="http://static.focalprice.com/SmallUpdate/css/supernew.css" />
+
+    <script type="text/javascript" src="http://static.focalprice.com/Js/seo.link.js"></script>
+    <link href="https://plus.google.com/u/0/b/103735247923386475993/103735247923386475993/posts" rel="publisher" />
+    <script type="text/javascript" src="http://static.focalprice.com/Js/artDialog.js"></script>
+    <script type="text/javascript" src="http://static.focalprice.com/Js/library.js"></script>
+    <script type="text/javascript" src="http://static.focalprice.com/Js/authentication.js"></script>
+    <script type="text/javascript" src="http://partner.googleadservices.com/gampad/google_service.js"></script>
+
+
+    <script type="text/javascript">
+        GA_googleFetchAds();
+    </script>
+    <!--HeaderStatusBar.html[Begin]-->
+
+
+    <!--topMenu-->
+    <div id="topmenuWrap">
+        <!--FP_EN_Head_Note-->
+        <div class="NoticeWrap" id="NoticeWrap">
+            <script type="text/javascript">GA_googleFillSlot("FP_EN_Head_Note");</script>
+            <!--script type="text/javascript">
+			function NoticeHide(){document.getElementById('NoticeWrap').style.display = 'none';}
+			document.write('<div class="topNotice">Dear customer, we sincerely invite you to join our customer satisfaction survey to win coupon and surprise gift. <a href="https://www.surveymonkey.com/s/97RVJB2">Click here</a><a class="close" onClick="NoticeHide()"></a></div>');
+			</script-->
+        </div>
+        <div class="topmenuIner">
+            <div id="topmenu" class="mauto">
+                <ul class="topmenu_l fleft">
+                    <li class="fleft language" id="language">
+                        <a id="currentLanguage" class="selMenu" xc_local="local_language">Language</a>
+                        <span></span>
+                        <div class="language_menu down_men" style="display: none">
+                            <a href="" language="en" title="English" xc_local="local_en_language">English</a>
+                            <a href="http://es.focalprice.com" language="es" title="Español" xc_local="local_es_language">Espa&#241;ol</a>
+                            <a href="http://ru.focalprice.com" language="ru" title="Русский" xc_local="local_ru_language">Русский</a>
+                            <a href="http://pt.focalprice.com/" language="pt" title="Portugal" xc_local="local_pt_language">Portugu&#234;s</a>
+                            <a href="http://fr.focalprice.com" language="fr" title="Français" xc_local="local_fr_language">Fran&#231;ais</a>
+                            <a href="http://it.focalprice.com" language="it" title="Italiano" xc_local="local_it_language">Italiano</a>
+                            <a href="http://de.focalprice.com/" language="de" title="Deutsch" xc_local="local_de_language">Deutsch</a>
+                            <a href="http://tr.focalprice.com" language="tr" title="Turkish" xc_local="local_tr_language">Turkish</a>
+                            <a href="http://nl.focalprice.com" language="nl" title="Hollands" xc_local="local_nl_language">Hollands</a>
+                            <a href="http://il.focalprice.com" language="il" title="עברית" xc_local="local_he_language">עברית</a>
+                            <a href="http://pl.focalprice.com" language="pl" title="Polish" xc_local="local_pl_language">Polish</a>
+                            <a href="http://cz.focalprice.com" language="cz" title="České" xc_local="local_cs_language">Česk&#233;</a>
+                            <a href="http://bg.focalprice.com" language="bg" title="Български език" xc_local="local_bg_language">Български език</a>
+                            <a href="http://dk.focalprice.com" language="dk" title="Dansk" xc_local="local_da_language">Dansk</a>
+                            <a href="http://fi.focalprice.com" language="fi" title="Suomi" xc_local="local_fi_language">Suomi</a>
+                            <a href="http://hu.focalprice.com" language="hu" title="A magyar" xc_local="local_hu_language">A magyar</a>
+                            <a href="http://no.focalprice.com" language="no" title="Norske" xc_local="local_no_language">Norske</a>
+                            <a href="http://se.focalprice.com" language="se" title="Swedish" xc_local="local_sv_language">Swedish</a>
+                        </div>
+                    </li>
+
+                    <li class="fleft currency" id="currency">
+                        <a id="currentCurrency" class="selMenu" href="javascript:void(0);" onclick="ChooseCurrency('USD')" title="US$">Currency <em>US$</em></a>
+                        <span></span>
+                        <script type="text/javascript">
+                            function ChooseCurrency(code) {
+                                library.cookie.set("Currency", code);
+                                window.location.href = window.location.pathname;
+                            }
+
+                            $(function () {
+                                var currency = library.cookie.get("Currency");
+                                if (currency != "USD" && currency != "") {
+                                    var currentCurrencyAnchor = $("#currency a[class=" + currency + "]");
+                                    if (currentCurrencyAnchor.length > 0) {
+                                        $("#currentCurrency em").text(currentCurrencyAnchor.attr("title"));
+                                    }
+                                }
+                                else {
+                                    $("#currentCurrency em").text($("#currency a[class=USD]").attr("title"));
+                                }
+                            });
+                        </script>
+                        <div class="currency_menu down_men" style="display: none" xc_local="header_currency">
+                            <a href="javascript:void(0);" title="US$" onclick="ChooseCurrency('USD')" class="USD">US Dollar</a>
+                            <a href="javascript:void(0);" title="€" onclick="ChooseCurrency('EUR')" class="EUR">Euro</a>
+                            <a href="javascript:void(0);" title="£" onclick="ChooseCurrency('GBP')" class="GBP">British Pound</a>
+                            <a href="javascript:void(0);" title="R$" onclick="ChooseCurrency('BRL')" class="BRL">Brazilian Real</a>
+                            <a href="javascript:void(0);" title="CA$" onclick="ChooseCurrency('CAD')" class="CAD">Canadian Dollar</a>
+                            <a href="javascript:void(0);" title="AU$" onclick="ChooseCurrency('AUD')" class="AUD">Australian Dollar</a>
+                            <a href="javascript:void(0);" title="SGD$" onclick="ChooseCurrency('SGD')" class="SGD">Singapore Dollar</a>
+                            <a href="javascript:void(0);" title="NOK$" onclick="ChooseCurrency('NOK')" class="NOK">Norwegian Krone</a>
+                            <a href="javascript:void(0);" title="CHF" onclick="ChooseCurrency('CHF')" class="CHF">Swiss Franc</a>
+                            <a href="javascript:void(0);" title="HK$" onclick="ChooseCurrency('HKD')" class="HKD">Hong Kong Dollar</a>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="topmenu_r fright">
+                    <!--li class="fright f11 help">
+                        <a route-type="dynamic" href="/help">Help</a></li>
+                     -->
+                    <li class="fright account custimer f11">
+                        <a class="selMenu" id="selMenu1" href="javascript:;">Customer Service</a>
+                        <span></span>
+                        <div class="account_menu custimer_menu down_men" style="display: none">
+                            <dl>
+                                <dd>
+                                    <h5><a route-type="dynamic" href="http://dynamic.focalprice.com/help">Help Center</a> -- For new customers</h5>
+                                    Contains FAQs and basic service&amp;website knowledge
+                                </dd>
+                                <dd>
+                                    <h5><a route-type="members" href="http://members.focalprice.com/My/Order/Focal/List">My Orders</a> -- For completed purchases</h5>
+                                    Order cancellation/modification, order status, return merchandise authorization (RMA) and other order-related issues
+                                </dd>
+                                <dd class="nomb">
+                                    <h5><a href="http://static.focalprice.com/ClickChat.htm" target="_blank">Live Chat</a> -- For prospective purchases</h5>
+                                    Product enquiries, check product stock, payment issues, website errors and other purchase-related issues        
+                                </dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <script type="text/javascript">
+                        $(".custimer").hover(function () {
+                            $(this).find("#selMenu1").addClass("active");
+                            $(this).find(".account_menu").show();
+                            //$.ajax({
+                            //    type: "GET",
+                            //    dataType: "html",
+                            //    url: "/Views/Gadgets/help_popup.html?" + Math.random(),
+                            //    beforeSend: function () {
+                            //        $(".custimer .custimer_menu").css("height", 240).html("<div style='line-height:260px; text-align:center;'>loading...</div>");
+                            //    },
+                            //    success: function (htmlData) {
+                            //        $(".custimer .custimer_menu").html(htmlData);
+                            //    }
+                            //})
+                        }, function () {
+                            $(this).find("#selMenu1").removeClass("active");
+                            $(this).find(".account_menu").hide();
+                        })
+                    </script>
+
+                    <li class="fright account f11">
+                        <a class="selMenu" id="selMenu" href="http://members.focalprice.com/My/Account">My Account</a>
+                        <span></span>
+                        <div class="account_menu down_men" style="display: none">
+                            <a href="http://members.focalprice.com/My/Order/Focal/List">Order List </a>
+                            <a href="http://members.focalprice.com/membermessage">Message</a>
+                            <a href="http://members.focalprice.com/My/Account/PayedNotReview">Reviews</a>
+                            <a href="http://members.focalprice.com/My/Point/List">Points &amp; Coupons, Gifts</a>
+                            <a href="http://members.focalprice.com/Wishlist">Wish List</a>
+                            <a href="http://members.focalprice.com/memberprofile">My Profile </a>
+                        </div>
+                    </li>
+
+                    <li class="fright" style="padding: 0 10px;">
+                        <a href="http://members.focalprice.com/Tracking">Order Tracking</a></li>
+
+                    <li class="fright siginin" id="sign_area">
+                        <a class="username fleft mr5 ml10" href="http://members.focalprice.com/signin">Sign
+                    in</a>
+                        <em class="db fleft mr5" id="sign_em_text">or</em>
+                        <a class="cf50 mr5 fleft" href="http://members.focalprice.com/register">Register</a>
+                        <div class="siginin_menu down_men">
+                            <div class="siginin_menu_l">
+                                <h6>Sign In</h6>
+                                <dl>
+                                    <form id="signinForm" method="post">
+                                        <dt>Email Address :</dt>
+                                        <dd>
+                                            <input type="text" id="emailAddress" name="emailAddress" class="txt" /></dd>
+                                        <dt>Password :</dt>
+                                        <dd>
+                                            <input type="password" id="password" name="password" class="txt" /></dd>
+                                        <dd class="mt10">
+                                            <input type="submit" class="btn_sign fleft mr10" value="" />
+                                            <div class="fleft pt5">
+                                                <a href="javascript:void(0);" id="elex_headerlogin" title="Elex" class="elex_login" refer="http://members.focalprice.com/authentication/Elex/callback"></a>
+                                                <a route-type="members" href="javascript:void(0);" id="facebook_headerlogin" title="Facebook" class="facebook_login" refer="http://members.focalprice.com/authentication/facebook/Signin"></a>
+                                                <!--a route-type="members" href="javascript:void(0);" id="twitter_headerlogin" title="Twitter" class="twitter_login" refer></a-->
+                                            </div>
+                                            <div class="clear"></div>
+                                        </dd>
+
+                                    </form>
+                                </dl>
+                                <script type="text/javascript">
+                                    $(function () {
+                                        $("#signinForm").attr("action", library.domainname.members + "signin");
+                                    })
+                                </script>
+                            </div>
+                            <script type="text/javascript">
+                                $("#elex_headerlogin").click(function () {
+                                    var refer = $(this).attr("refer");
+                                    authentication.signin.elex(refer, "_self");
+                                });
+                                $("#facebook_headerlogin").click(function () {
+                                    var refer = $(this).attr("refer");
+                                    authentication.signin.facebook(refer, "_self");
+                                });
+                                //$("#twitter_headerlogin").click(function () {
+                                //    var refer = $(this).attr("refer");
+                                //   authentication.signin.twitter(refer, "_self");
+                                //});
+                            </script>
+                            <div class="siginin_menu_r f11">
+                                <h6 style="font-size: 13px;">New Customer</h6>
+                                Register at FocalPrice, you can:<br />
+                                * Checkout easily;<br />
+                                * Gain FP points &amp; coupons;<br />
+                                * Track order status;<br />
+                                * Get personlized recommendations.<a class="Create_an_Account" href="http://members.focalprice.com/register"></a>
+                            </div>
+                        </div>
+                    </li>
+                    <!--登录后-->
+                    <li class="fright pr10" id="after_sign" style="display: none">
+                        <em class="db fleft mr5">Welcome!</em><a class="username db fleft mr10" id="nickName" href="http://members.focalprice.com/My/Account/Focal">User</a>
+                        <a class="cf50 db fleft" href="http://members.focalprice.com/signout">Sign out</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--topMenu add-->
+    <!--headerin-->
+    <script type="text/javascript">
+        $(function () {
+            if (library.mini.isSignin() == true) {
+                var nickname = library.cookie.get("Focalprice_MemberNickName");
+                $("#nickName").html(decodeURIComponent(nickname));
+                $("#after_sign").show();
+                $("#sign_area").hide();
+            }
+
+            //判断live chat
+            //var get_html = $("#LiveChat_links a").attr("href");
+            //if (get_html != null) {
+            //    var livechat_html = '<li class="fright f11 livechat"><a href="' + get_html + '">LiveChat</a></li><li class="fright line"></li>';
+            //    $(".topmenu_r").prepend(livechat_html);
+            //}
+        });
+    </script>
+    <!--headerin add-->
+    <!--HeaderStatusBar.html[End]-->
+
+    <!--topMenu add-->
+    <!--headerin-->
+    <div class="mauto headerin">
+        <div class="logo fleft">
+            <a title="Welcome to Focalprice!" href="http://www.focalprice.com/"></a>
+        </div>
+        <div class="head_notice fleft">
+            <p>
+                <!-- leave for notice -->
+            </p>
+        </div>
+        <div class="search_warp fleft">
+            <div class="search_left"></div>
+            <div class="search_right"></div>
+            <div class="search_main fleft">
+                <script type="text/javascript">
+                    function DoSearch() {
+                        var keyword = $("#keyword").val();
+                        if (keyword == "" || keyword == focalPriceTip.Search[0].TipsText)
+                            return false;
+                        else {
+                            $("#searchForm").submit();
+                        }
+                    }
+                </script>
+                <form id="searchForm" method="get">
+                    <div class="fleft search_txt">
+                        <input name="keyword" class="headinput" x-webkit-speech id="keyword" value="Search" onclick="clearDefaultText(this, focalPriceTip.Search[0].TipsText)" type="text" autocomplete="off" />
+                    </div>
+                    <input type="hidden" id="searchURL" value="/searchsuggestion" />
+                    <!-- zhouxiyao Modify SmallUpdate 2014-02-24
+                    <input type="hidden" id="categoryid" name="categoryid" value="" />
+                    <ul class="selectPanelWarp">
+                        <li style="position: absolute;" class="selectPanel">
+                            <span class="">All Categories</span>
+                            <ul class="selectPanelList hide">
+                                <li>All Categories</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    -->
+                    <input type="submit" class="btn_search fleft" onclick="return DoSearch();" value="Search" />
+                </form>
+                <script type="text/javascript">
+                    $(function () {
+                        $("#searchForm").attr("action", library.domainname.search + "search");
+                    })
+                </script>
+                <div class="hotkeyword">
+                </div>
+ 		<script language="javascript" type="text/javascript">
+                       //ajax 调用取出热门关键字
+                       $.ajax({
+                           type: 'GET',
+                           url: library.domainname.dynamic + "Home/AjaxGetHotKey",
+                           dataType: "html",
+                           success: function (data) {
+                               $('.hotkeyword').html(data);
+                           }
+                       });
+                </script>
+                <div class="clear">
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+
+        <!-- HomeCart -->
+        <div class="homecart_new mt20">
+            <a id="head_checkout" href="http://shopping.focalprice.com/cart">Cart( <span id="headerCartItemCount" class="orange">0</span> )<span class="triDown"></span></a>
+            <!--By SeanLu-->
+            <!--
+            <div class="homecart_new_list">
+                <h5 class="homecart_title">Recent Purchase</h5>
+                <ul class="homecart_products">
+                    <li class="homecart_product">
+                        <div class="homecart_product_l">
+                            <a class="homecart_product_img fl" href=""><img src="images/side_slide_product.jpg"></a>    
+                        </div>
+                        <div class="homecart_product_r">
+                            <p class="homecart_product_name"><a href="">PC Plastic Nutella Baked Finish Protective Case for iPhone 5</a></p>
+                            <p class="homecart_product_price"><span class="red">$2.74</span> x 1</p>    
+                        </div>
+                    </li>
+                    <li class="homecart_product">
+                        <div class="homecart_product_l">
+                            <a class="homecart_product_img fl" href=""><img src="images/side_slide_product.jpg"></a>    
+                        </div>
+                        <div class="homecart_product_r">
+                            <p class="homecart_product_name"><a href="">PC Plastic Nutella Baked Finish Protective Case for iPhone 5</a></p>
+                            <p class="homecart_product_price"><span class="red">$2.74</span> x 1</p>    
+                        </div>
+                    </li>
+                    <li class="homecart_product">
+                        <div class="homecart_product_l">
+                            <a class="homecart_product_img fl" href=""><img src="images/side_slide_product.jpg"></a>    
+                        </div>
+                        <div class="homecart_product_r">
+                            <p class="homecart_product_name"><a href="">PC Plastic Nutella Baked Finish Protective Case for iPhone 5</a></p>
+                            <p class="homecart_product_price"><span class="red">$2.74</span> x 1</p>    
+                        </div>
+                    </li>
+                </ul>
+                <div class="homecart_totalWrap clearfix">
+                    <p class="homecart_comment"><span id="Span2" class="red fb f14">3</span> products, <span id="headerCartItemAmount" class="red fb f14">$99.99</span> totally </p>
+                    <input type="button" class="homecart_btn" value="Checkout Now" />
+                </div>
+            </div>
+            
+            <script type="text/javascript">
+                (function () {
+                    $('.homecart_new').hover(function () {
+                        $('.homecart_new_list').addClass('block');
+                    }, function () {
+                        $('.homecart_new_list').removeClass('block');
+                    });
+                })();
+            </script>
+             -->
+            <!--By SeanLu End-->
+        </div>
+        <!-- HomeCart End -->
+
+        <div class="clear">
+        </div>
+        <div class="toTop_Feedback">
+            <a class="to_top" id="toTop" title="Back to Top" href="javascript:;"></a>
+            <a class="feedback" title="Feedback" href="javascript:void(0);" target="_blank" onclick="focal.navigator(this,base64encode('http://dynamic.focalprice.com/feedback?url='+window.location.href) );return false;"></a>
+        </div>
+        <script type="text/javascript">
+
+            function ToTop(id) {
+                this.oDiv = document.getElementById(id);
+                this.bSys = true;
+                this.timer = null;
+                this.timer1 = null;
+                this.iSpeed = 0;
+                var self = this;
+                window.onscroll = function () {
+                    self.windowScroll(self);
+                }
+                this.oDiv.onclick = function () {
+                    self.clickToTop(self);
+                }
+            }
+            ToTop.prototype = {
+                windowScroll: function (self) {
+                    if (!self.bSys) {
+                        clearTimeout(self.timer);
+                    }
+                    self.bSys = false;
+                    var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+                    var t = scrollTop + document.documentElement.clientHeight - self.oDiv.offsetHeight;
+                    if (scrollTop > 30) {
+                        this.oDiv.style.display = "block";
+                    } else {
+                        this.oDiv.style.display = "none";
+                    }
+                    self.startMove(parseInt(t), self);
+                },
+                clickToTop: function (self) {
+                    self.timer = setInterval(function () {
+                        var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+                        self.iSpeed = Math.floor(-scrollTop / 8);
+                        self.bSys = true;
+                        document.documentElement.scrollTop = scrollTop + self.iSpeed;
+                        document.body.scrollTop = scrollTop + self.iSpeed;
+                        if (scrollTop == 0) {
+                            clearInterval(self.timer);
+                        }
+                    }, 15);
+                },
+                startMove: function (iTarget, self) {
+                    clearInterval(self.timer1);
+                    self.timer1 = setInterval(function () {
+                        var iSpeed = (iTarget - self.oDiv.offsetTop) / 4;
+                        iSpeed = iSpeed > 0 ? Math.ceil(iSpeed) : Math.floor(iSpeed);
+
+                        if (iTarget == self.oDiv.offsetTop) {
+                            clearInterval(self.timer1);
+                        } else {
+                            self.oDiv.style.top = self.oDiv.offsetTop + iSpeed + "px";
+                        }
+                    }, 30);
+                }
+            }
+
+            new ToTop("toTop");
+        </script>
+    </div>
+    <script type="text/javascript" src="http://static.focalprice.com/Js/jquery.autocomplete.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            if ($("#keyword").val() == "") {
+                $("#keyword").attr("value", focalPriceTip.Search[0].TipsText);
+            }
+            //            $("#keyword").keypress(function () {
+            //                $this = $(this);
+            //                $.getJSON(library.domainname.static + "/Views/Js/Keywords/" + $this.val().substring(0, 1) + ".js", function (json) {
+            //                    $("#keyword").autocomplete(json,
+            //					{
+            //					    dataType: "json",
+            //					    parse: function (data) {
+            //					        return $.map(eval(data), function (row) {
+            //					            return {
+            //					                data: row,
+            //					                value: row.Keyword,
+            //					                result: row.SearchResults
+            //					            }
+            //					        });
+            //					    },
+            //					    formatItem: function (row) {
+            //					        return "<span class='keyname'>" + row.Keyword + "</span><span class='searchProNum'> " + row.SearchResults + " results</span>";
+            //					    },
+            //					    formatMatch: function (row) {
+            //					        return row.Keyword + row.SearchResults;
+            //					    },
+            //					    formatResult: function (row) {
+            //					        return row.Keyword;
+            //					    }
+            //					}).result(function (event, data, formatted) {
+            //					    var selectData = data.Keyword;
+            //					    $("#keyword").val(selectData);
+            //					    $("#searchForm input[type=submit]").click();
+            //					});
+            //                });
+            //            });
+        });
+
+    </script>
+
+    <!--col_main-->
+    <div class="grid_main zindex999">
+        <div class="col_main">
+            <div class="grid_col_main">
+                <div class="grid_main_wrap">
+
+                    <!--menu-->
+                    
+    <ul class="menu">
+        <li class="newarrivals">
+            <a href="http://dynamic.focalprice.com/new-arrivals">New Arrivals</a></li>
+        <li class="mline"></li>
+        <li class="topsellers">
+            <a href="http://dynamic.focalprice.com/topsellers">Top Sellers</a></li>
+            <li class="mline"></li>
+        <li class="deals"><a title="Daily Deal" href="http://dynamic.focalprice.com/deals/dailydeal">Daily Deal</a></li>
+        <li class="mline"></li>
+        <li class="deals"><a title="Gadgets Under $2" href="http://dynamic.focalprice.com/gadgets-under-2">Gadgets Under $2</a><span class="ico_new"></span></li>
+        <li class="mline"></li>
+        <li class="clearance"><a href="http://dynamic.focalprice.com/deals/clearancecenter">Clearance Center</a></li>
+        <li class="mline"></li>
+        <li id="dealMenu">
+            <a href="http://dynamic.focalprice.com/ReviewsList">Community</a>
+			<div id="dealMenuPanle" class="subMenu">
+				<a href="http://dynamic.focalprice.com/ReviewsList">Reviews</a>
+				<a href="http://dynamic.focalprice.com/videos">Videos</a>
+				<a href="javascript:void(0);" onclick="focal.navigator( this,'aHR0cDovL2ZvcnVtcy5mb2NhbHByaWNlLmNvbQ==' );return false;">Forums</a>
+			</div>
+        </li>
+        <li class="mline"></li>
+        <li class="gifts"><a href="http://members.focalprice.com/My/Order/DropShip/Introduce">Drop-shipping</a></li>
+        <li class="christmas"></li>
+		<script type="text/javascript" src="http://static.focalprice.com/Js/xfun.js"></script>
+    </ul>
+    <script type="text/javascript">
+        $(function () {
+           $(".menu li").hover(function(){
+				$(this).children(".subMenu").show();
+		   },function(){
+				$(this).children(".subMenu").hide();
+		   });
+            $(".focal_txt,.reg_txt").focus(function () {
+                $(this).css("border", "1px solid #FFB552");
+            });
+            $(".focal_txt,.reg_txt").blur(function () {
+                $(this).css("border", "1px solid #DDD");
+            });
+        });
+    </script>
+
+                    <!--menu end-->
+
+                </div>
+            </div>
+            <!--sildermenu-->
+            <div class="grid_col_sub">
+                <!--sildermenu-->
+
+                <div id="sidenav">
+  <div class="sidenav_h"> <a id="sitemap" href="http://dynamic.focalprice.com/SiteMap"> All Categories</a> </div>
+  <div class="sidebar_menu hide" id="sitemap_menu" style="position:absolute;">
+  </div>
+</div>
+
+
+                <!--sildermenu end-->
+            </div>
+        </div>
+    </div>
+    <!--col_main end-->
+
+
+    <div id="breadcrumbs" class="f12">
+        <div class="location">
+            <h3><span class="snav_taq">
+                <a class="fb" href="http://www.focalprice.com/">Home</a>
+                <em>&#187;</em>
+                Register</span></h3>
+        </div>
+    </div>
+    <div id="content" class="mauto mt10">
+        <form id="registerForm" method="post" action="/register">
+            <table class="re_table mb45">
+                <thead>
+                    <tr>
+                        <th colspan="4" class="alignL cf50 f20">Register
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="col_l alignR c00">
+                            <em>*</em>Nickname:
+                        </td>
+                        <td class="col_m alignL" colspan="2">
+                            <input type="text" id="nickName" name="nickName" class="reg_txt" maxlength="20" />
+                        </td>
+                        <td width="335">
+                            <div id="nicknameTip" class="cf50">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col_l alignR c00">
+                            <em>*</em>
+                            Email Address:
+                        </td>
+                        <td class="col_m alignL" colspan="2">
+                            <input type="text" id="emailAddress" name="emailAddress" class="reg_txt" maxlength="50" />
+                        </td>
+                        <td>
+                            <div id="emailAddressTip" style="color: #FF5A00; padding-left: 0px;">
+                            </div>
+                            
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col_l alignR c00">
+                            <em>*</em>
+                            Password:
+                        </td>
+                        <td class="col_m alignL" colspan="2">
+                            <input type="password" id="password" name="password" class="reg_txt" maxlength="20" />
+                        </td>
+                        <td>
+                            <div id="passwordTip" class="cf50">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col_l alignR c00">
+                            <em>*</em>
+                            Confirm Password:
+                        </td>
+                        <td class="col_m alignL" width="270" colspan="2">
+                            <input type="password" id="comparePassword" name="comparePassword" class="reg_txt" maxlength="20" />
+                        </td>
+                        <td>
+                            <div id="comparePasswordTip" class="cf50">
+                            </div>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td></td>
+                        <td colspan="3" class="alignL f11" style="padding-top: 15px;">
+                            <input name="chkIsEmail" type="checkbox" id="chkIsEmail" checked="checked" value="true" />
+                            Subscribe for exclusive e-mail offers and discounts
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td colspan="3" class="alignL f11">
+                            <input name="chkIsTerm" type="checkbox" id="chkIsTerm" checked="checked" value="true" />
+                            I agree to Focalprice.com
+                            <a href="http://dynamic.focalprice.com/helpinfo?currentCategoryID=12" class="cf50ulin">Terms of Use</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td id="termsTip" colspan="3" class="alignL f11 cred"></td>
+                    </tr>
+                    <tr>
+                        <td class="col_l alignR"></td>
+                        <td class="col_m alignL" colspan="3" style="padding-top: 15px;" xc_local="Register">
+                            <input type="submit" class="bluebtn" value="Register" />
+                        </td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+    <!--footer-->
+
+    
+    <div id="footer">
+        <div id="siteinfo" class="alignL">
+            <ul>
+                <h3 class="fb c33">Customer Services</h3>
+                <li><a href="http://dynamic.focalprice.com/SiteMap">Shopping Guide</a></li>
+                <li><a href="javascript:void(0);" onclick="focal.navigator( this,'aHR0cDovL2R5bmFtaWMuZm9jYWxwcmljZS5jb20vaGVscGluZm8/Y3VycmVudENhdGVnb3J5SUQ9MTg=' );return false;">Contact Us</a></li>
+                <li><a href="javascript:void(0);" onclick="focal.navigator( this,'aHR0cDovL2R5bmFtaWMuZm9jYWxwcmljZS5jb20vaGVscGluZm8/Y3VycmVudENhdGVnb3J5SUQ9MTQ=' );return false;">FAQ</a>
+                    | <a href="javascript:void(0);" onclick="focal.navigator(this,base64encode('http://dynamic.focalprice.com/feedback?url='+window.location.href) );return false;">Feedback</a>
+                </li>
+                <li><a field="trackOrder" href="javascript:void(0);" onclick="focal.navigator( this,'aHR0cDovL21lbWJlcnMuZm9jYWxwcmljZS5jb20vVHJhY2tpbmc=' );return false;">Track My Order</a></li>
+                <li><a href="javascript:void(0);" onclick="focal.navigator( this,'aHR0cDovL2R5bmFtaWMuZm9jYWxwcmljZS5jb20vaGVscGluZm8/Y3VycmVudENhdGVnb3J5SUQ9MTE=' );return false;">Return Policy</a></li>
+            </ul>
+            <ul>
+                <h3 class="fb c33">My Account</h3>
+                <li><a href="javascript:void(0);" onclick="focal.navigator( this,'aHR0cDovL21lbWJlcnMuZm9jYWxwcmljZS5jb20vc2lnbmlu' );return false;">Sign in</a> | <a href="javascript:void(0);" onclick="focal.navigator( this,'aHR0cDovL21lbWJlcnMuZm9jYWxwcmljZS5jb20vcmVnaXN0ZXI=' );return false;">Register</a></li>
+                <li><a href="javascript:void(0);" onclick="focal.navigator( this,'aHR0cDovL21lbWJlcnMuZm9jYWxwcmljZS5jb20vTXkvT3JkZXIvRm9jYWwvTGlzdA==' );return false;">Order History</a></li>
+                <li><a href="javascript:void(0);" onclick="focal.navigator( this,'aHR0cDovL21lbWJlcnMuZm9jYWxwcmljZS5jb20vbWVtYmVybWVzc2FnZQ==' );return false;">Messages</a></li>
+                <li><a href="javascript:void(0);" onclick="focal.navigator( this,'aHR0cDovL21lbWJlcnMuZm9jYWxwcmljZS5jb20vTXkvUG9pbnQvTGlzdA==' );return false;">Points &amp; Coupons, Gifts</a></li>
+                <li><a href="javascript:void(0);" onclick="focal.navigator( this,'aHR0cDovL2R5bmFtaWMuZm9jYWxwcmljZS5jb20vaGVscGluZm8/Y3VycmVudENhdGVnb3J5SUQ9MTc=' );return false;">RMA Request</a></li>
+            </ul>
+            <ul>
+                <h3 class="fb c33">Company Info</h3>
+                <li><a href="javascript:void(0);" onclick="focal.navigator( this,'aHR0cDovL2R5bmFtaWMuZm9jYWxwcmljZS5jb20vaGVscGluZm8/Y3VycmVudENhdGVnb3J5SUQ9NDU=' );return false;">Legal window</a></li>
+                <li><a class="csteelblue" href="javascript:void(0);" onclick="focal.navigator( this,'aHR0cDovL2R5bmFtaWMuZm9jYWxwcmljZS5jb20vaGVscGluZm8/Y3VycmVudENhdGVnb3J5SUQ9MzQ=' );return false;">About Us</a></li>
+                <li><a href="javascript:void(0);" onclick="focal.navigator( this,'aHR0cDovL2R5bmFtaWMuZm9jYWxwcmljZS5jb20vaGVscGluZm8/Y3VycmVudENhdGVnb3J5SUQ9MzQ=' );return false;">Why Buy From Us</a></li>
+                <li><a href="javascript:void(0);" onclick="focal.navigator( this,'aHR0cDovL2R5bmFtaWMuZm9jYWxwcmljZS5jb20vaGVscGluZm8/Y3VycmVudENhdGVnb3J5SUQ9MjQ=' );return false;">Security &amp; Privacy</a></li>
+                <li><a href="javascript:void(0);" onclick="focal.navigator( this,'aHR0cDovL2R5bmFtaWMuZm9jYWxwcmljZS5jb20vaGVscGluZm8/Y3VycmVudENhdGVnb3J5SUQ9MTI=' );return false;">Terms of Use</a></li>
+            </ul>
+            <ul>
+                <h3 class="fb c33">Partner Program</h3>
+                <li><a href="javascript:void(0);" onclick="focal.navigator( this,'aHR0cDovL2R5bmFtaWMuZm9jYWxwcmljZS5jb20vaGVscGluZm8/Y3VycmVudENhdGVnb3J5SUQ9MzE=' );return false;">Wholesale</a></li>
+                <li><a href="javascript:void(0);" onclick="focal.navigator( this,'aHR0cDovL3N0YXRpYy5mb2NhbHByaWNlLmNvbS9BZmZpbGlhdGUuaHRtbA==' );return false;">Affiliate Program</a></li>
+                <!--li><a href="javascript:void(0);" onclick="focal.navigator( this,'L1BhcnRUaW1lUG9wdWxhcml6ZS9TaG93UmVnaXN0ZXI/dHlwZT0z' );return false;">Partner Program</a></li-->
+                <li><a href="javascript:void(0);" onclick="focal.navigator( this,'aHR0cDovL2R5bmFtaWMuZm9jYWxwcmljZS5jb20vaGVscGluZm8/Y3VycmVudENhdGVnb3J5SUQ9MzM=' );return false;">Partner links</a></li>
+                <li><a href="javascript:void(0);" onclick="focal.navigator( this,'aHR0cDovL21lbWJlcnMuZm9jYWxwcmljZS5jb20vTXkvT3JkZXIvRHJvcFNoaXAvSW50cm9kdWNl' );return false;">Drop-shipping</a></li>
+
+                <li><a href="javascript:void(0);" onclick="focal.navigator( this,'aHR0cDovL3N0YXRpYy5mb2NhbHByaWNlLmNvbS9odG1sL2pvYnMuaHRtbA==' );return false;">Career</a></li>
+                <li><a href="javascript:void(0);" onclick="focal.navigator( this,'aHR0cDovL3N0YXRpYy5mb2NhbHByaWNlLmNvbS9odG1sL1N1cHBsaWVycy5odG1s' );return false;">寻求供应商</a></li>
+            </ul>
+            <ul class="joinlinks">
+                <h3 class="fb c33">Join Our Community</h3>
+                <li class="f"><a href="javascript:void(0);" onclick="focal.navigator( this,'aHR0cDovL3d3dy5mYWNlYm9vay5jb20vcGFnZXMvRm9jYWxQcmljZWNvbS8xNDczODM0ODE5NDA5NTcv' );return false;"></a></li>
+                <li class="b"><a href="javascript:void(0);" onclick="focal.navigator( this,'aHR0cDovL2Jsb2cuZm9jYWxwcmljZS5jb20v' );return false;"></a></li>
+                <li class="t1"><a href="javascript:void(0);" onclick="focal.navigator( this,'aHR0cDovL3R3aXR0ZXIuY29tL0ZvY2FscHJpY2VEZWFscw==' );return false;"></a></li>
+                <li class="y"><a href="javascript:void(0);" onclick="focal.navigator( this,'aHR0cDovL3d3dy55b3V0dWJlLmNvbS91c2VyL1RoZUZvY2FsUHJpY2U=' );return false;"></a></li>
+                <li class="t2"><a href="javascript:void(0);" onclick="focal.navigator( this,'aHR0cHM6Ly9wbHVzLmdvb2dsZS5jb20vdS8wL2IvMTAzNzM1MjQ3OTIzMzg2NDc1OTkzLzEwMzczNTI0NzkyMzM4NjQ3NTk5My9wb3N0cz9wcnNyYz0z' );return false;"></a></li>
+                <div class="clear"></div>
+                <div class="newsletter mt10">
+                    <h6>NewsLetter</h6>
+                    <form id="newsletterForm" method="get" action="http://members.focalprice.com/Newsletters">
+                        <input type="text" name="email" class="lettertxt" />
+                        <input type="submit" value="" class="letterbtn" />
+                        <div class="clear">
+                        </div>
+                    </form>
+                    <!--script type="text/javascript">
+                        $(function () {
+                            $("#newsletterForm").attr("action",library.domainname.members + "Newsletters");
+                        })
+                    </script-->
+                </div>
+            </ul>
+        </div>
+        <div class="copyright f11">
+            <div id="footer_pp">
+                <div class="footer_pa">Paypal</div>
+                <div class="verisign_wrap fright">
+                    <div class="verisign fright">
+                        <table width="100" border="0" cellpadding="2" cellspacing="0" title="Click to Verify - This site chose VeriSign SSL for secure e-commerce and confidential communications.">
+                            <tr>
+                                <td width="100" align="center" valign="top">
+                                    <a href="https://trustsealinfo.verisign.com/splash?form_file=fdf/splash.fdf&dn=www.focalprice.com&lang=en" target="_blank">
+                                        <img width="100" height="58" alt="Click to Verify - This site has chosen an SSL Certificate to improve Web site security" src="http://static.focalprice.com/Images/swf/norton.png" onclick="javascript:window.open(&quot;https://trustsealinfo.verisign.com/splash?form_file=fdf/splash.fdf&amp;dn=www.focalprice.com&amp;lang=en&quot;,&quot;VRSN_Splash&quot;,&quot;location=yes,status=yes,resizable=yes,scrollbars=yes,width=560,height=500&quot;); return false;" />
+                                    </a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="fright pt15">
+                    <a href="http://www.xingcloud.com/">
+                        <img border="0" src="http://static.focalprice.com/Images/xingyun.png" /></a>
+                </div>
+                <div class="fright pt15" style="margin-right: 6px">
+                    <a class="tf_upfront_badge" href="http://www.thefind.com/store/about-focalprice" title="TheFind Upfront">
+                        <img border="0" src="http://static.focalprice.com/Images/theworld.png" width="107" height="36" alt="Focalprice is an Upfront Merchant on TheFind. Click for info." /></a>
+                    <script type="text/javascript">
+                        (function () {
+                            var upfront = document.createElement('SCRIPT'); upfront.type = "text/javascript"; upfront.async = true;
+                            upfront.src = document.location.protocol + "//upfront.thefind.com/scripts/main/utils-init-ajaxlib/upfront-badgeinit.js";
+                            upfront.text = "thefind.upfront.init('tf_upfront_badge', '4377f7e2e2c50b632f0460b262e6c8d4')";
+                            document.getElementsByTagName('HEAD')[0].appendChild(upfront);
+                        })();
+                    </script>
+                    <script type="text/javascript">
+                        $(function () { $("body > .tf_upfront_badge").hide(); })
+                    </script>
+                </div>
+                <div class="clear">
+                </div>
+            </div>
+            <p>
+                &#169; 2008-2016 www.focalprice.com All rights reserved.
+            </p>
+        </div>
+    </div>
+    <!--User Behaviors-->
+    <div id="fb-root" class="hide">
+    </div>
+
+    <!--<script type="text/javascript" src="http://static.focalprice.com/Js/Autocomplete.js"></script>-->
+    <script type="text/javascript" src="http://static.focalprice.com/Js/Header.js"></script>
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-4806418-4']);
+        _gaq.push(['_setDomainName', '.focalprice.com']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+    <!-- Google Code for vist website Remarketing List -->
+    <script type="text/javascript">
+        var google_conversion_id = 1015636384;
+        var google_conversion_language = "en";
+        var google_conversion_format = "3";
+        var google_conversion_color = "666666";
+        var google_conversion_label = "y76NCJCy1AIQoMOl5AM";
+        var google_conversion_value = 0;
+        if (23) {
+            google_conversion_value = 23;
+        }
+    </script>
+    <script type="text/javascript" src="http://www.googleadservices.com/pagead/conversion.js">
+    </script>
+    <noscript>
+        <div style="display: inline;">
+            <img height="1" width="1" style="border-style: none;" alt="" src="http://www.googleadservices.com/pagead/conversion/1015636384/?label=y76NCJCy1AIQoMOl5AM&guid=ON&script=0" />
+        </div>
+    </noscript>
+    <script type="text/javascript">
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-46598330-1', 'focalprice.com');
+        ga('send', 'pageview');
+    </script>
+
+    <!--将以下代码放在Footer文件中-->
+    <script type="text/javascript">
+        window["_BFD"] = window["_BFD"] || {};
+        _BFD.client_id = "Cfocalprice";
+        _BFD.BFD_USER = {
+            "user_id": library.cookie.get("Focalprice_MemberID"),   //网站当前用户id，如果未登录就为0或空字符串
+            "user_cookie": library.cookie.get("Focalprice_MemberNickName")   //网站当前用户的cookie，不管是否登录都需要传
+        };
+        _BFD.script = document.createElement("script");
+        _BFD.script.type = "text/javascript";
+        _BFD.script.async = true;
+        _BFD.script.charset = "utf-8";
+        _BFD.script.src = (('https:' == document.location.protocol ? 'https://ssl-static5' : 'http://static5') + '.bfdcdn.com/service/focalprice/focalprice.js');
+        document.getElementsByTagName("head")[0].appendChild(_BFD.script);
+    </script>
+
+
+
+
+    <!--zhouxiyao by 2013-10-18 at FP1334 -->
+    
+
+
+<script type="text/javascript">
+    var google_tag_params = {
+        ecomm_prodid: [''],
+        ecomm_pagetype: "Register",
+        ecomm_totalvalue: [],
+        ecomm_category:[''],
+    };
+</script>
+
+
+<!-- Google Code for dynamic rmkt -->
+<script type="text/javascript">
+    /* <![CDATA[ */
+    var google_conversion_id = 1015636384;
+    //var google_conversion_label = "hvFZCNjdmAQQoMOl5AM";
+    var google_custom_params = window.google_tag_params;
+    var google_remarketing_only = true;
+    var google_custom_params ={
+Pname:[],
+Pid:[],
+Pcat:[],
+Qty:[],
+Bvalue:'',
+Ivalue:[],
+Pvalue:'',
+Pagetype:'Register',
+Orderid:'',
+Paymenttype:'',
+Ship:'',
+Currency:'',
+Kword:'',
+};
+    /* ]]> */
+</script>
+
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js"></script>
+
+<noscript>
+    <div style="display: inline;">
+        <img height="1" width="1" style="border-style: none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/1015636384/?value=0&amp;label=hvFZCNjdmAQQoMOl5AM&amp;guid=ON&amp;script=0" />
+    </div>
+</noscript>
+<!--#Rmkt#// <script type="text/javascript">
+    /* <![CDATA[ */
+    var google_conversion_id = FP-Rmkt-Id;
+    var google_conversion_label = "FP-Rmkt-Label";
+    var google_custom_params = window.google_tag_params;
+    var google_remarketing_only = true;
+    var google_custom_params ={
+Pname:[],
+Pid:[],
+Pcat:[],
+Qty:[],
+Bvalue:'',
+Ivalue:[],
+Pvalue:'',
+Pagetype:'Register',
+Orderid:'',
+Paymenttype:'',
+Ship:'',
+Currency:'',
+Kword:'',
+};
+    /* ]]> */
+</script>
+<noscript>
+    <div style="display: inline;">
+        <img height="1" width="1" style="border-style: none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/FP-Rmkt-Id/?value=0&amp;label=FP-Rmkt-Label&amp;guid=ON&amp;script=0" />
+    </div>
+</noscript> #Rmkt#//-->
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js"></script>
+
+
+
+      <!-- Google Code for register Remarketing List -->
+    <script type="text/javascript">
+        var google_conversion_id = 1015636384;
+        var google_conversion_language = "en";
+        var google_conversion_format = "3";
+        var google_conversion_color = "666666";
+        var google_conversion_label = "qWAlCJix1AIQoMOl5AM";
+        var google_conversion_value = 0;
+    </script>
+    <script type="text/javascript" src="http://www.googleadservices.com/pagead/conversion.js">
+    </script>
+    <noscript>
+        <div style="display: inline;">
+            <img height="1" width="1" style="border-style: none;" alt="" src="http://www.googleadservices.com/pagead/conversion/1015636384/?label=qWAlCJix1AIQoMOl5AM&guid=ON&script=0" />
+        </div>
+    </noscript>
+      </body>
+</html>

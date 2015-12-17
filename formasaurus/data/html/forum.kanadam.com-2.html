@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-ca">
+<head>
+   <title>Kanadam.com Forum</title>
+<link rel="stylesheet" type="text/css" href="/applications/dashboard/design/style.css?v=2.0.18.3" media="all" />
+<link rel="stylesheet" type="text/css" href="/themes/fb-vanilla/design/custom.css?v=1.0" media="all" />
+<link rel="shortcut icon" href="/themes/fb-vanilla/design/favicon.png" type="image/x-icon" />
+<link rel="canonical" href="http://forum.kanadam.com/dashboard/entry/register" />
+<script src="/js/library/jquery.js?v=2.0.18.3" type="text/javascript"></script>
+<script src="/js/library/jquery.livequery.js?v=2.0.18.3" type="text/javascript"></script>
+<script src="/js/library/jquery.form.js?v=2.0.18.3" type="text/javascript"></script>
+<script src="/js/library/jquery.popup.js?v=2.0.18.3" type="text/javascript"></script>
+<script src="/js/library/jquery.gardenhandleajaxform.js?v=2.0.18.3" type="text/javascript"></script>
+<script src="/js/global.js?v=2.0.18.3" type="text/javascript"></script>
+<script src="/applications/dashboard/js/entry.js?v=2.0.18.3" type="text/javascript"></script><script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-1233216-1']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();
+</script>
+</head>
+<body id="dashboard_entry_register" class="Dashboard Entry register ">
+
+
+	<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/tr_TR/all.js#xfbml=1&appId=168710386581951";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+   <div id="Frame">
+      <div id="Head">
+         <div class="Menu">
+            <div id="logo"><a class="Title" href="http://forum.kanadam.com/"></a></div>
+
+
+
+  			<div class="Search"><form method="get" action="/search">
+<div>
+<input type="text" id="Form_Search" name="Search" value="" class="InputBox" /><input type="submit" id="Form_Ara" value="Ara" class="Button" />
+</div>
+</form>				
+				</div>
+				
+
+            <ul id="Menu"><li><a href="/discussions">Tartışmalar</a></li>
+<li><a href="/post/discussion">Tartışma başlat</a></li>
+<li><a href="/categories/ilanlar">İlanlar</a></li>
+<li><a href="http://kanadam.com">Kanadam.com</a></li>
+<li><a href="/entry/signin?Target=discussions">Giriş Yap</a></li>
+</ul>      
+         </div>
+      </div>
+      <div id="Body">
+         <div id="Content"><h1>Üyelik Başvurusu</h1>
+<div class="Box">
+   <form id="Form_User_Register" method="post" action="/entry/register">
+<div>
+<input type="hidden" id="Form_TransientKey" name="User/TransientKey" value="JI5HMG1PIWEK" /><input type="hidden" id="Form_hpt" name="User/hpt" value="" style="display: none;" /><input type="hidden" id="Form_ClientHour" name="User/ClientHour" value="2015-12-04 01:00" /><input type="hidden" id="Form_Target" name="User/Target" value="/discussions" />   <ul>
+      <li>
+         <label for="Form_Email">E-posta</label>
+<input type="text" id="Form_Email" name="User/Email" value="" class="InputBox" /><span id="EmailUnavailable" class="Incorrect" style="display: none;">Email Unavailable</span>      </li>
+      <li>
+         <label for="Form_Name">Kullanıcı Adı</label>
+<input type="text" id="Form_Name" name="User/Name" value="" class="InputBox" /><span id="NameUnavailable" class="Incorrect" style="display: none;">Kullanıcı adı uygun değil</span>      </li>
+      <li>
+         <label for="Form_Password">Şifre</label>
+<input type="password" id="Form_Password" name="User/Password" value="" class="InputBox" />      </li>
+      <li>
+         <label for="Form_PasswordMatch">Şifreyi Onayla</label>
+<input type="password" id="Form_PasswordMatch" name="User/PasswordMatch" value="" class="InputBox" /><span id="PasswordsDontMatch" class="Incorrect" style="display: none;">Şifreler eşleşmedi</span>      </li>
+      <li class="Gender">
+         <label for="Form_Gender">Cinsiyet</label>
+<label for="Form_Gender" class="RadioLabel"><input type="radio" id="Form_Gender" name="User/Gender" value="m" checked="checked" /> Bay</label><label for="Form_Gender1" class="RadioLabel"><input type="radio" id="Form_Gender1" name="User/Gender" value="f" /> Bayan</label>      </li>
+      <li>
+         <label for="Form_DiscoveryText">Why do you want to join?</label>
+<textarea id="Form_DiscoveryText" name="User/DiscoveryText" rows="6" cols="100" class="TextBox"></textarea>      </li>
+      <li>
+         <label for="Form_TermsOfService" class="CheckBoxLabel"><input type="checkbox" id="Form_TermsOfService" name="User/TermsOfService" value="1" /><input type="hidden" name="Checkboxes[]" value="TermsOfService" /> <a id="TermsOfService" class="Popup" target="terms" href="/dashboard/home/termsofservice">Lisans sözleşmesini</a> kabul ediyorum</label>      </li>
+      <li class="Buttons">
+         <input type="submit" id="Form_ApplyforMembership" name="User/Apply_for_Membership" value="Üyelik Başvurusu" class="Button" />
+      </li>
+   </ul>
+   </div>
+</form></div></div>
+         <div id="Panel">
+
+
+         	<div class="Box GuestBox"  style="display:none;">
+         		<h4>Yeni topluluk duyurusu:</h4>
+         		<p>
+         			<a href="http://www.yurtdisina.com/" title="Yurtdışı hakkında deneyim paylaşımlari ve forum">
+         				<img width="200px" height="36px"  src="http://www.yurtdisina.com/static/img/logo.png">
+         			</a>
+         			Kanada'da şehir tavsiyelerine, soru & cevaplarına göz atın.
+         			<br/><a href="http://www.yurtdisina.com">www.yurtdisina.com</a>
+
+         			<div class="P"><a href="http://www.yurtdisina.com" class="Button">Yeni topluluğa katılın!</a>
+         			</div> 
+         		</div>
+
+    	<div style="display:none;">
+         			<a target="_blank" href="http://www.kanadagunleri.com/" title="Kanada Günleri 2013">
+         				<img width="250px" height="208px"  src="http://kanadam.com/wp-content/uploads/2013/09/kanada-gunleri-ad-2013.jpg
+">
+         			</a>
+         		
+         		</div>
+                
+      <div style="display:none;">
+                    <a href="http://www.kanadagunleri.com" title="Kanada Günleri 2015">
+                        <img width="250px" height="208px"  src="http://kanadam.com/wp-content/uploads/2015/02/kanada_gunleri.jpg">
+                    </a>
+                </div>
+                
+      <div style="display:none;">
+                    <a href="http://bit.ly/mansette" title="Manşette iPhone">
+                        <img width="250px" height="125px"  src="http://forum.kanadam.com/themes/fb-vanilla/design/mansette.jpg">
+                    </a>
+                </div>
+
+
+
+<div style="display:none;"  class="fb-like-box" data-href="http://www.facebook.com/kanadamcom" data-width="255" data-show-faces="true" data-stream="false" data-header="true"></div>
+
+	
+
+<a  style="display:none;" href="http://www.kanadam.com/iletisim/" class="BigButton NewDiscussion">Kanadam.com'a danışın!
+	<br/><small>24 saat içinde yanıt alın</small>
+	</a>
+
+
+
+				</div>
+
+
+
+      </div>
+      <div id="Foot">
+			<!-- Various definitions for Javascript //-->
+<div id="Definitions" style="display: none;">
+<input type="hidden" id="TransportError" value="A fatal error occurred while processing the request.&lt;br /&gt;The server returned the following response: %s" />
+<input type="hidden" id="TransientKey" value="OAJ4DEO8N80B" />
+<input type="hidden" id="WebRoot" value="http://forum.kanadam.com/" />
+<input type="hidden" id="UrlFormat" value="/{Path}" />
+<input type="hidden" id="Path" value="entry/register" />
+<input type="hidden" id="SignedIn" value="0" />
+<input type="hidden" id="ConfirmHeading" value="Onayla" />
+<input type="hidden" id="ConfirmText" value="Bunu yapmak istediğinizden emin misiniz?" />
+<input type="hidden" id="Okay" value="Evet" />
+<input type="hidden" id="Cancel" value="İptal" />
+<input type="hidden" id="Search" value="Arama" />
+</div>
+		</div>
+   </div>
+	</body>
+</html>

@@ -1,0 +1,316 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="ru" xml:lang="ru">
+<head>
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta http-equiv="content-style-type" content="text/css" />
+<meta http-equiv="content-language" content="ru" />
+<meta http-equiv="imagetoolbar" content="no" />
+<meta name="resource-type" content="document" />
+<meta name="distribution" content="global" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+
+<title>Форум spinkat.ru &bull; Поиск</title>
+
+<link rel="alternate" type="application/atom+xml" title="Канал - Форум spinkat.ru" href="http://www.spinkat.ru/forum/feed.php" /><link rel="alternate" type="application/atom+xml" title="Канал - Новые темы" href="http://www.spinkat.ru/forum/feed.php?mode=topics" />
+
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+
+<script type="text/javascript">
+// <![CDATA[
+	var jump_page = 'Введите номер страницы, на которую хотите перейти:';
+	var on_page = '';
+	var per_page = '';
+	var base_url = '';
+	var style_cookie = 'phpBBstyle';
+	var style_cookie_settings = '; path=/forum; domain=spinkat.ru';
+	var onload_functions = new Array();
+	var onunload_functions = new Array();
+
+	
+
+	/**
+	* Find a member
+	*/
+	function find_username(url)
+	{
+		popup(url, 760, 570, '_usersearch');
+		return false;
+	}
+
+	/**
+	* New function for handling multiple calls to window.onload and window.unload by pentapenguin
+	*/
+	window.onload = function()
+	{
+		for (var i = 0; i < onload_functions.length; i++)
+		{
+			eval(onload_functions[i]);
+		}
+	};
+
+	window.onunload = function()
+	{
+		for (var i = 0; i < onunload_functions.length; i++)
+		{
+			eval(onunload_functions[i]);
+		}
+	};
+
+// ]]>
+</script>
+<script type="text/javascript" src="./styles/prosilver/template/styleswitcher.js"></script>
+<script type="text/javascript" src="./styles/prosilver/template/forum_fn.js"></script>
+
+<script type="text/javascript" src="./highslide/highslide-full.js"></script>
+<link href="./highslide/highslide.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+// <![CDATA[
+hs.graphicsDir = './highslide/graphics/';
+hs.align = 'center';
+hs.transitions = ['expand', 'crossfade'];
+hs.outlineType = 'rounded-white';
+hs.fadeInOut = true;
+//hs.dimmingOpacity = 0.75;
+
+// Add the controlbar
+hs.addSlideshow({
+	//slideshowGroup: 'group1',
+	interval: 5000,
+	repeat: false,
+	useControls: true,
+	fixedControls: 'fit',
+	overlayOptions: {
+		opacity: 0.75,
+		position: 'bottom center',
+		hideOnMouseOut: true
+	}
+});
+// ]]>
+</script>
+
+<link href="./styles/prosilver/theme/print.css" rel="stylesheet" type="text/css" media="print" title="printonly" />
+<link href="./styles/prosilver/theme/stylesheet.css" rel="stylesheet" type="text/css" media="screen, projection" />
+
+<link href="./styles/prosilver/theme/normal.css" rel="stylesheet" type="text/css" title="A" />
+<link href="./styles/prosilver/theme/medium.css" rel="alternate stylesheet" type="text/css" title="A+" />
+<link href="./styles/prosilver/theme/large.css" rel="alternate stylesheet" type="text/css" title="A++" />
+
+
+<link rel="stylesheet" type="text/css" href="/css/screen_forum.css" media="all" />
+
+<script type="text/javascript">
+// <![CDATA[
+	window.onload = resizeimg;
+	function resizeimg()
+	{
+		if (document.getElementsByTagName)
+		{
+			var resClass = document.getElementsByTagName('span');
+			for (var i = 0; i < resClass.length; i++)
+			{
+				if (resClass[i].className == "image-resize")
+				{
+					var img = resClass[i].getElementsByTagName("img");
+					if (img[0].width > 400)
+					{
+						resClass[i].innerHTML = '<a href="' + img[0].src + '" class="highslide" onclick="return hs.expand(this)"><img src="' + img[0].src + '" width="400" alt=""></a>';
+					}
+				}
+			}
+		}
+	}
+// ]]>
+</script>
+
+</head>
+
+<body id="phpbb" class="section-search ltr">
+
+<div id="wrap">
+	<a id="top" name="top" accesskey="t"></a>
+	<div id="page-header">
+		
+    
+    <div id="wrapper">
+        <div id="header">
+            <div class="logo"><a href="/"><img src="/img/logo_new.png" alt="Спининги & Катушки - Интернет-магазин по продаже профессиональных спиннингов и катушек" /></a></div>
+            <div class="name"><b>Форум</b>Все о рыбалке и снастях</div>
+            <div class="search">
+                <div>
+                    <form action="./search.php?sid=9aabe9de2915e7c1fcaa2af65b44c723" method="get" id="search">
+                        <input title="Найти" type="submit" value="" />
+                        <input type="text"  name="keywords" id="keywords" title="Ключевые слова" value="Поиск…" onclick="if(this.value=='Поиск…')this.value='';" onblur="if(this.value=='')this.value='Поиск…';"  />
+                    </form>
+                </div>
+                       <a href="./search.php?sid=9aabe9de2915e7c1fcaa2af65b44c723" title="Параметры расширенного поиска">Расширенный поиск</a> <input type="hidden" name="sid" value="9aabe9de2915e7c1fcaa2af65b44c723" />
+
+            </div>
+        </div>
+    </div>
+
+
+		<div class="navbar">
+			<div class="inner"><span class="corners-top"><span></span></span>
+
+			<ul class="linklist navlinks">
+				<li class="icon-home"><a href="./index.php?sid=9aabe9de2915e7c1fcaa2af65b44c723" accesskey="h">Список форумов</a> </li>
+
+				<li class="rightside"><a href="#" onclick="fontsizeup(); return false;" onkeypress="return fontsizeup(event);" class="fontsize" title="Изменить размер шрифта">Изменить размер шрифта</a></li>
+
+				
+			</ul>
+
+			
+
+			<ul class="linklist rightside">
+				<li class="icon-faq"><a href="./faq.php?sid=9aabe9de2915e7c1fcaa2af65b44c723" title="Часто задаваемые вопросы">FAQ</a></li>
+				<li class="icon-members"><a href="./memberlist.php?sid=9aabe9de2915e7c1fcaa2af65b44c723" title="Просмотр всего списка пользователей">Пользователи</a></li><li class="icon-register"><a href="./ucp.php?mode=register&amp;sid=9aabe9de2915e7c1fcaa2af65b44c723">Регистрация</a></li>
+					<li class="icon-logout"><a href="./ucp.php?mode=login&amp;sid=9aabe9de2915e7c1fcaa2af65b44c723" title="Вход" accesskey="x">Вход</a></li>
+				
+			</ul>
+
+			<span class="corners-bottom"><span></span></span></div>
+		</div>
+
+	</div>
+
+	<a name="start_here"></a>
+	<div id="page-body">
+		
+
+<script type="text/javascript">
+// <![CDATA[
+	onload_functions.push('document.getElementById("keywords").focus();');
+// ]]>
+</script>
+
+<h2 class="solo">Поиск</h2>
+
+<form method="get" action="./search.php">
+
+<div class="panel">
+	<div class="inner"><span class="corners-top"><span></span></span>
+	<h3>Запрос</h3>
+
+	<fieldset>
+	<dl>
+		<dt><label for="keywords">Ключевые слова:</label><br /><span>Вы можете использовать <strong>+</strong>, чтобы определить слова, которые должны быть в результатах, и <strong>-</strong> для слов, которых в результатах быть не должно. Вы можете разделить слова символом <strong>|</strong> для поиска любого слова из списка. Используйте <strong>*</strong> в качестве шаблона для частичного совпадения.</span></dt>
+		<dd><input type="text" class="inputbox" name="keywords" id="keywords" size="40" title="Ключевые слова" /></dd>
+		<dd><label for="terms1"><input type="radio" name="terms" id="terms1" value="all" checked="checked" /> Искать все слова</label></dd>
+		<dd><label for="terms2"><input type="radio" name="terms" id="terms2" value="any" /> Искать любое слово/поиск с языком запросов</label></dd>
+	</dl>
+	<dl>
+		<dt><label for="author">Поиск по автору:</label><br /><span>Используйте * в качестве шаблона.</span></dt>
+		<dd><input type="text" class="inputbox" name="author" id="author" size="40" title="Поиск по автору" /></dd>
+	</dl>
+	</fieldset>
+
+	<span class="corners-bottom"><span></span></span></div>
+</div>
+
+<div class="panel bg2">
+	<div class="inner"><span class="corners-top"><span></span></span>
+
+	<h3>Параметры запроса</h3>
+
+	<fieldset>
+	<dl>
+		<dt><label for="search_forum">Искать в форумах:</label><br /><span>Выберите форум или форумы, в которых будет произведён поиск. Поиск в подфорумах производится автоматически, если вы не отключили соответствующую опцию ниже.</span></dt>
+		<dd><select name="fid[]" id="search_forum" multiple="multiple" size="8" title="Искать в форумах"><option value="40">Вопросы экспертам</option><option value="41">&nbsp; &nbsp;Вопросы к Илье Бабакову</option><option value="42">&nbsp; &nbsp;Вопросы к Денису Вихрову</option><option value="43">&nbsp; &nbsp;Вопросы к Сергею Жданову</option><option value="44">&nbsp; &nbsp;Вопросы к Владимиру Щукину</option><option value="66">&nbsp; &nbsp;Вопросы к Александру Гребенникову</option><option value="67">&nbsp; &nbsp;Вопросы к Александру Дьяченко</option><option value="71">&nbsp; &nbsp;Вопросы к Константин Кудинов</option><option value="72">&nbsp; &nbsp;Вопросы к Олегу Маракушеву</option><option value="6">Всё о спиннинговой ловле</option><option value="73">&nbsp; &nbsp;Dr.Depth, AutoCart, ReefMaster</option><option value="74">&nbsp; &nbsp;Профессиональное обучение спиннинговой ловле</option><option value="65">&nbsp; &nbsp;Советы экспертов по подбору снастей</option><option value="7">&nbsp; &nbsp;Отчёты о рыбалке</option><option value="8">&nbsp; &nbsp;Техника и тактика, особенности ловли разных хищных рыб</option><option value="32">&nbsp; &nbsp;&nbsp; &nbsp;Ловля на воблер</option><option value="29">&nbsp; &nbsp;&nbsp; &nbsp;Ловля на джиг</option><option value="30">&nbsp; &nbsp;&nbsp; &nbsp;Ловля на микроджиг</option><option value="31">&nbsp; &nbsp;&nbsp; &nbsp;Ловля на поводковые остнастки (отводной, каролина, техас, дроп шот)</option><option value="33">&nbsp; &nbsp;&nbsp; &nbsp;Ловля на блесну</option><option value="9">&nbsp; &nbsp;&nbsp; &nbsp;Щука</option><option value="10">&nbsp; &nbsp;&nbsp; &nbsp;Судак</option><option value="11">&nbsp; &nbsp;&nbsp; &nbsp;Окунь</option><option value="12">&nbsp; &nbsp;&nbsp; &nbsp;Белый хищник</option><option value="13">&nbsp; &nbsp;Приманки</option><option value="14">&nbsp; &nbsp;&nbsp; &nbsp;Воблеры</option><option value="15">&nbsp; &nbsp;&nbsp; &nbsp;Силиконовые приманки</option><option value="17">&nbsp; &nbsp;&nbsp; &nbsp;Железо</option><option value="36">&nbsp; &nbsp;&nbsp; &nbsp;Самоделки</option><option value="47">Рыболовный спорт</option><option value="48">&nbsp; &nbsp;Рыболовный спорт</option><option value="1">Обсуждение снастей</option><option value="2">&nbsp; &nbsp;Спиннинговые удилища</option><option value="50">&nbsp; &nbsp;&nbsp; &nbsp;Graphiteleader</option><option value="51">&nbsp; &nbsp;&nbsp; &nbsp;DAIWA</option><option value="52">&nbsp; &nbsp;&nbsp; &nbsp;Major Craft</option><option value="53">&nbsp; &nbsp;&nbsp; &nbsp;Hearty Rise</option><option value="54">&nbsp; &nbsp;&nbsp; &nbsp;St.Croix</option><option value="55">&nbsp; &nbsp;&nbsp; &nbsp;Kola Salmon</option><option value="56">&nbsp; &nbsp;&nbsp; &nbsp;Norstream</option><option value="57">&nbsp; &nbsp;&nbsp; &nbsp;Talon</option><option value="58">&nbsp; &nbsp;&nbsp; &nbsp;Palms</option><option value="3">&nbsp; &nbsp;Спиннинговые катушки</option><option value="59">&nbsp; &nbsp;&nbsp; &nbsp;DAIWA</option><option value="60">&nbsp; &nbsp;&nbsp; &nbsp;Shimano</option><option value="61">&nbsp; &nbsp;&nbsp; &nbsp;Kola Salmon</option><option value="4">&nbsp; &nbsp;Спиннинговые комплекты</option><option value="45">Конкурсы</option><option value="46">&nbsp; &nbsp;Конкурс &quot;Самый активный посетитель&quot;</option><option value="49">FAQ WWW.SPINKAT.RU</option><option value="62">&nbsp; &nbsp;Сервисный центр SPINKAT.RU</option><option value="63">&nbsp; &nbsp;Гарантия магазина SPINKAT.RU</option><option value="64">&nbsp; &nbsp;Акции и спецпредложения магазина SPINKAT.RU</option><option value="27">Вопросы и предложения по форуму</option><option value="28">&nbsp; &nbsp;Вопросы и предложения по форуму</option></select></dd>
+	</dl>
+	<dl>
+		<dt><label for="search_child1">Искать в подфорумах:</label></dt>
+		<dd>
+			<label for="search_child1"><input type="radio" name="sc" id="search_child1" value="1" checked="checked" /> Да</label>
+			<label for="search_child2"><input type="radio" name="sc" id="search_child2" value="0" /> Нет</label>
+		</dd>
+	</dl>
+	<dl>
+		<dt><label for="sf1">Искать:</label></dt>
+		<dd><label for="sf1"><input type="radio" name="sf" id="sf1" value="all" checked="checked" /> В названиях тем и текстах сообщений</label></dd>
+		<dd><label for="sf2"><input type="radio" name="sf" id="sf2" value="msgonly" /> Только в текстах сообщений</label></dd>
+		<dd><label for="sf3"><input type="radio" name="sf" id="sf3" value="titleonly" /> Только по названию темы</label></dd>
+		<dd><label for="sf4"><input type="radio" name="sf" id="sf4" value="firstpost" /> Только в первом сообщении темы</label></dd>
+	</dl>
+
+	<hr class="dashed" />
+
+	<dl>
+		<dt><label for="show_results1">Показывать результаты как:</label></dt>
+		<dd>
+			<label for="show_results1"><input type="radio" name="sr" id="show_results1" value="posts" checked="checked" /> Сообщения</label>
+			<label for="show_results2"><input type="radio" name="sr" id="show_results2" value="topics" /> Темы</label>
+		</dd>
+	</dl>
+	<dl>
+		<dt><label for="sd">Поле сортировки:</label></dt>
+		<dd><select name="sk" id="sk"><option value="a">Автор</option><option value="t" selected="selected">Время размещения</option><option value="f">Форум</option><option value="i">Название темы</option><option value="s">Заголовок сообщения</option></select>&nbsp;
+			<label for="sa"><input type="radio" name="sd" id="sa" value="a" /> по возрастанию</label>
+			<label for="sd"><input type="radio" name="sd" id="sd" value="d" checked="checked" /> по убыванию</label>
+		</dd>
+	</dl>
+	<dl>
+		<dt><label>Искать сообщения за:</label></dt>
+		<dd><select name="st" id="st"><option value="0" selected="selected">Все дни</option><option value="1">1 день</option><option value="7">7 дней</option><option value="14">2 недели</option><option value="30">1 месяц</option><option value="90">3 месяца</option><option value="180">6 месяцев</option><option value="365">1 год</option></select></dd>
+	</dl>
+	<dl>
+		<dt><label>Показывать первые:</label></dt>
+		<dd><select name="ch" title="Показывать первые"><option value="-1">Все имеющиеся</option><option value="0">0</option><option value="25">25</option><option value="50">50</option><option value="100">100</option><option value="200">200</option><option value="300" selected="selected">300</option><option value="400">400</option><option value="500">500</option><option value="600">600</option><option value="700">700</option><option value="800">800</option><option value="900">900</option><option value="1000">1000</option></select> символов сообщений</dd>
+	</dl>
+	</fieldset>
+
+	<span class="corners-bottom"><span></span></span></div>
+</div>
+
+<div class="panel bg3">
+	<div class="inner"><span class="corners-top"><span></span></span>
+
+	<fieldset class="submit-buttons">
+		<input type="hidden" name="t" value="0" />
+<input type="hidden" name="sid" value="9aabe9de2915e7c1fcaa2af65b44c723" />
+<input type="reset" value="Вернуть" name="reset" class="button2" />&nbsp;
+		<input type="submit" name="submit" value="Поиск" class="button1" />
+	</fieldset>
+
+	<span class="corners-bottom"><span></span></span></div>
+</div>
+
+</form>
+
+</div>
+
+<div id="page-footer">
+
+	<div class="navbar">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<ul class="linklist">
+			<li class="icon-home"><a href="./index.php?sid=9aabe9de2915e7c1fcaa2af65b44c723" accesskey="h">Список форумов</a></li>
+				
+			<li class="rightside"><a href="./memberlist.php?mode=leaders&amp;sid=9aabe9de2915e7c1fcaa2af65b44c723">Наша команда</a> &bull; <a href="./ucp.php?mode=delete_cookies&amp;sid=9aabe9de2915e7c1fcaa2af65b44c723">Удалить cookies конференции</a> &bull; Часовой пояс: UTC + 4 часа </li>
+		</ul>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<div class="copyright">Создано на основе <a href="https://www.phpbb.com/">phpBB</a>&reg; Forum Software &copy; phpBB Group
+		<br /><a href='http://www.phpbbguru.net/'>Русская поддержка phpBB</a>
+	</div>
+</div>
+
+</div>
+
+<div>
+	<a id="bottom" name="bottom" accesskey="z"></a>
+	
+</div>
+
+</body>
+</html>

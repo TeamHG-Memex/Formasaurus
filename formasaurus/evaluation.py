@@ -12,8 +12,6 @@ import sklearn
 from sklearn.cross_validation import cross_val_score
 from sklearn.metrics import classification_report, confusion_matrix
 
-from .storage import FORM_TYPES_INV
-
 
 SKLEARN_VERSION = LooseVersion(sklearn.__version__)
 
@@ -25,7 +23,7 @@ def print_sparsity(clf):
     """
     n_classes, n_features = clf.coef_.shape
     n_active = (clf.coef_ != 0).sum()
-    n_possible = n_features*n_classes
+    n_possible = n_features * n_classes
     print("Active features: %d out of possible %d" % (n_active, n_possible))
 
 
@@ -62,11 +60,6 @@ def print_classification_report(y_train,y_test, y_pred, class_labels=None):
     print(classification_report(y_test, y_pred, target_names=class_labels))
 
 
-def get_class_labels(clf):
-    """ Return full names of labels the classifier uses """
-    return [FORM_TYPES_INV[c] for c in clf.classes_]
-
-
 def df_confusion_matrix(y_test, y_pred, class_labels=None):
     """
     Return the confusion matrix as pandas.DataFrame.
@@ -90,10 +83,14 @@ def print_confusion_matrix(y_test, y_pred, class_labels=None, ipython=False):
 
 
 def print_metrics(model, X, y, X_train, X_test, y_train, y_test,
-                  ipython=False, cv=10, short_matrix=False):
+                  ipython=False, cv=10, short_matrix=False, class_map=None):
     clf = model.steps[-1][1]
     y_pred = fit_and_predict(model, X_train, X_test, y_train)
-    class_labels = get_class_labels(clf)
+
+    if class_map is not None:
+        class_labels = [class_map[c] for c in clf.classes_]
+    else:
+        class_labels = clf.classes_
 
     print_classification_report(y_train, y_test, y_pred, class_labels)
     print_sparsity(clf)
@@ -138,12 +135,15 @@ def get_informative_features(vectorizers, clf, class_labels, N):
     return features_by_class
 
 
-def print_informative_features(features, clf, top, classes=None):
+def print_informative_features(features, clf, top, classes=None, class_map=None):
     vectorizers = [(name, vec) for (name, fe, vec) in features]
     feat_info = get_informative_features(vectorizers, clf, clf.classes_, top)
     for cls, report in feat_info:
         if classes is not None and cls not in classes:
             continue
-        print(FORM_TYPES_INV[cls])
+        if class_map is not None:
+            print(class_map[cls])
+        else:
+            print(cls)
         print(report)
         print("-"*80)

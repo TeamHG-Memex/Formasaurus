@@ -1,0 +1,354 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Zone Concours - Actualit&eacute; du jeu concours</title>
+<link href="../css/zoneconcours.css" rel="stylesheet" type="text/css" />
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+<link rel="shortcut icon" type="image/png" href="/favicon.png" />
+<link href="http://www.zone-concours.com/rss/flux.xml" title="Derniers jeux concours gratuits" type="application/rss+xml" rel="alternate" />
+<script language="javascript" type="text/javascript" src="/fonctions/javascript/search.js"></script>
+<!--[if lt IE 7]>
+<link href="/css/lt-ie7.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<script type="text/javascript" language="javascript">
+	
+	window.onload = function () {
+		document.getElementById("popup").style.display = 'block';
+		document.getElementById("fondCache").style.display = 'block';
+	} 
+	
+	function popupChampsClear() {
+		var cible = document.getElementById("popupEmail");
+		cible.value = '';
+		cible.style.color = '#006600';
+	}
+	function popupClose() {
+		document.getElementById("fondCache").style.display = 'none';
+		document.getElementById("popup").style.display = 'none';
+	}
+	
+</script>
+
+<script language="JavaScript" type="text/javascript">
+function VerifForm (formulaire){
+	
+	var VerifMail = ControlChamp(formulaire.elements['email'],'email');
+	if ((!VerifMail)) {
+	alert ('Vous n\'avez pas rempli correctement le formulaire');
+	return false;
+	}
+	else {
+	formulaire.submit();
+	}
+}
+
+function ControlChamp(obj,typ){
+switch (typ){
+case 'email':
+var Regex = new RegExp('^[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([\.\-]?[a-zA-Z0-9]+)*)\.([A-Za-z]{2,})$');
+break;
+case 'date':
+var Regex = new RegExp('^(([1-9]|0[1-9]|[1-2][0-9]|3[0-1])\/(0[1-9]|1[0-2])\/([0-9][0-9]|[0-9][0-9][0-9][0-9]))?$');
+break;
+}
+var Result = Regex.test(obj.value);
+return Result;
+}
+</script>
+<!-- Begin Cookie Consent plugin by Silktide - http://silktide.com/cookieconsent -->
+<script type="text/javascript">
+    window.cookieconsent_options = {"message":"Notre site utilise des cookies pour vous apporter des contenus et services de qualité.","dismiss":"J'ai compris","learnMore":"More info","link":null,"theme":"light-floating"};
+</script>
+
+<script type="text/javascript" src="/fonctions/javascript/cookieconsent.js"></script>
+<!-- End Cookie Consent plugin --></head>
+<body>
+<div id="general">
+	<div id="haut">
+	<a href="/"><img src="/images/zoneconcours.jpg" alt="Zone Concours - Jeux concours gratuits" name="img" width="410" height="90" border="0" id="img"/></a>
+  <div id="haut-droit"><img src="/images/interface/euro.gif" alt="Concours" width="11" height="13" align="top" />&nbsp;242.316 &euro; de lots !</div>
+<!--<div id="recherche">
+    <input name="mot" type="text" id="mot" value="Recherche..." onclick="this.value=''" maxlength="35" />
+    &nbsp;&nbsp;<a href="#"><img src="/images/interface/search.gif" alt="Rechercher des jeux concours" width="16" height="16" border="0" align="absbottom" onclick="javascript:rechercher();" /></a>
+</div>-->
+</div>    
+	<div id="centre">
+	<div id="centre-gauche">
+			<div class="menu">
+			 <ul class="liensMenu">
+			  <li class="titreMenu">Rubriques</li>
+              <li class="standard"><a href="/jeux-concours/favoris.html">Meilleurs jeux concours</a></li><li class="standard">
+              <a href="/jeux-concours/ce-jour.html">Nouveaux jeux concours</a></li><li class="standard">
+              <a href="/jeux-concours/populaires.html">Les plus populaires</a></li><li class="standard">
+              <a href="/jeux-concours/lots.html">Les plus beaux lots</a></li><li class="standard">
+              <a href="/jeux-concours/fin.html">Bientôt terminés</a></li><li class="standardDernier">
+              <a href="/jeux-concours/quotidiens.html">Jeux quotidiens</a></li>
+			  </ul>
+              <div class="basMenu"></div>
+			</div>
+			<div class="menu">
+				<ul class="liensMenu">
+					<li class="titreMenu">Class&eacute;s par lots</li>
+			<li class="standard"> 
+<a href="/concours/argent.html">Argent et ch&egrave;ques</a></li><li class="standard"> 
+<a href="/concours/bijoux.html">Bijoux</a></li><li class="standard"> 
+<a href="/concours/bons-achat.html">Bons d'achat</a></li><li class="standard"> 
+<a href="/concours/cuisine-gastronomie.html">Cuisine et gastronomie</a></li><li class="standard"> 
+<a href="/concours/cd-dvd.html">DVD, Blu-ray, VOD, CD</a></li><li class="standard"> 
+<a href="/concours/decoration-maison.html">D&eacute;coration et maison</a></li><li class="standard"> 
+<a href="/concours/electromenager.html">Electrom&eacute;nager</a></li><li class="standard"> 
+<a href="/concours/informatique.html">Informatique</a></li><li class="standard"> 
+<a href="/concours/invitations.html">Invitations et loisirs</a></li><li class="standard"> 
+<a href="/concours/consoles-jeux.html">Jeux, jouets et consoles</a></li><li class="standard"> 
+<a href="/concours/livres-bd.html">Livres, BD et magazines</a></li><li class="standard"> 
+<a href="/concours/divers.html">Lots divers</a></li><li class="standard"> 
+<a href="/concours/sport.html">Mat&eacute;riels de sport</a></li><li class="standard"> 
+<a href="/concours/hifi-mp3.html">Mat&eacute;riels hifi et MP3</a></li><li class="standard"> 
+<a href="/concours/vetements.html">Mode et v&ecirc;tements</a></li><li class="standard"> 
+<a href="/concours/apn-photo-cameras.html">Photo et vid&eacute;o</a></li><li class="standard"> 
+<a href="/concours/voyages.html">S&eacute;jours et voyages</a></li><li class="standard"> 
+<a href="/concours/beaute-soins.html">Soins et beaut&eacute;</a></li><li class="standard"> 
+<a href="/concours/telephones.html">T&eacute;l&eacute;phones</a></li><li class="standard"> 
+<a href="/concours/high-tech.html">TV et High-Tech</a></li><li class="standardDernier">
+<a href="/concours/voitures.html">Voitures et v&eacute;hicules</a></li></ul><div class="basMenu"></div>
+
+			</div>
+              			
+			<div class="menu">
+			 <ul class="liensMenu">
+			  <li class="titreMenu">Par types</li>
+              <li class="standard"><a href="/concours-gratuits/tirages.html">Tirages au sort</a></li><li class="standard">
+			  <a href="/concours-gratuits/instants-gagnants.html">Instants gagnants</a></li><li class="standard">
+              <a href="/concours-gratuits/quiz.html">Quiz</a></li><li class="standard">
+              <a href="/concours-gratuits/creatifs.html">Concours cr&eacute;atifs</a></li><li class="standard">
+              <a href="/concours-gratuits/defis-points.html">Défis ou jeux à points</a></li><li class="standard">
+              <a href="/concours-gratuits/facebook.html">Concours Facebook</a></li><li class="standardDernier">
+			  <a href="/concours-gratuits/autres.html">Autres types</a></li>
+			  </ul>
+              <div class="basMenu"></div>
+			</div>
+            <div class="menu">
+			 <ul class="liensMenu">
+			  <li class="titreMenu">Par pays</li>
+              <li class="standard"><a href="/concours/france/">Concours France</a></li><li class="standard">
+			  <a href="/concours/belgique/">Concours Belgique</a></li><li class="standard">
+              <a href="/concours/luxembourg/">Concours Luxembourg</a></li><li class="standardDernier">
+              <a href="/concours/suisse/">Concours Suisse</a></li>
+			  </ul>
+              <div class="basMenu"></div>
+			</div>
+            		
+                			<div class="menu">
+				<ul class="liensMenu">
+					<li class="titreMenu">A d&eacute;couvrir</li>
+ 					<li class="standard">
+                    <a href="http://www.benefsnet.com/" target="_blank" title="Benefsnet.com" rel="nofollow">Jeux et bons plans</a></li><li class="standard">
+                    <a href="http://www.enviedegains.com/" target="_blank" title="Enviedegains.com" rel="nofollow">Astuces pour gagner</a></li>
+<li class="standardDernier">
+					<a href="http://www.alertepromo.net/" target="_blank" title="Alertepromo.net" rel="nofollow">Bons plans par e-mail</a>
+</li>
+        <div class="basMenu"></div>
+			</div>
+                       
+       <div id="rss">
+        RSS <br />
+        <a href="/rss/flux-favoris.xml" target="_blank"><img src="/images/interface/bigrss.jpg" alt="RSS" width="64" height="64" border="0" /></a>
+       </div>
+		</div> 
+		<div id="centre-droit">
+         <div id="suivez"> <img src="/images/interface/suivez-nous.jpg" width="115" height="30" alt="Suivez Zone Concours" /><br /><a href="http://www.facebook.com/Zone.Concours" target="_blank"><img src="/images/interface/social/facebook.png" alt="Fan Page Facebook" width="32" height="32" border="0" /></a>&nbsp;&nbsp;&nbsp;<a href="http://twitter.com/zoneconcours" target="_blank"><img src="/images/interface/social/twitter.png" alt="Page Twitter" width="32" height="32" border="0" /></a>&nbsp;&nbsp;&nbsp;<a href="/rss/flux-favoris.xml" target="_blank"><img src="/images/interface/social/rss.png" alt="Flux RSS des meilleurs jeux concours" width="32" height="32" border="0" /></a><div id="facebook"><iframe src="http://www.facebook.com/plugins/like.php?app_id=124564827623809&amp;href=http%3A%2F%2Fwww.facebook.com%2Fpages%2FZone-Concours-Atoowin%2F179368122092300&amp;send=false&amp;layout=button_count&amp;width=450&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font=arial&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:111px; height:21px;" allowTransparency="true"></iframe></div></div>
+			            <div class="menu">
+				<ul class="liensMenu">
+					<li class="titreMenu">Newsletter</li>
+					<li class="standardNL">
+					  <div class="infosNL">Les meilleurs jeux concours par e-mail <strong>(service gratuit)</strong></div>
+                      <form NAME='AbonnementDOLIST' METHOD='post' action='/newsletter/_inscription.php' accept-charset='UTF-8' onsubmit="VerifForm(this); return false;" id="espaceNL">Votre e-mail :<br />
+                         <input type="text" id="email" name="email" size="22" maxlength="100" />
+					     <div style="height:10px;"></div>
+					     <input type='submit' class="boutonM" value="Je m'inscris" />
+                     </form>
+			  </li></ul>
+			  <div class="basMenu"></div>
+				</div>
+               <a href="/proposer-concours.php" class="btProposition" title="Proposer un concours"></a>
+			<a href="/forum/" class="btForum" title="Rejoignez-nous sur le forum"></a>
+			  <div class="menu">
+				<ul class="liensMenu">
+				  <li class="titreMenu">Zone Concours</li>
+				  <li class="standard"><a href="/inscription.php">Inscription</a></li><li class="standard">
+                  <a href="/ident.php">S'identifier</a></li><li class="standard">
+                  <a href="/forum/">Forum du concouriste</a></li><li class="standard">
+                  <a href="/forum/temoignages-f26.html">T&eacute;moignages</a></li><li class="standard">
+                  <a href="/newsletter/inscription.php">Newsletter</a></li><li class="standard">
+                  <a href="http://www.facebook.com/Zone.Concours" target="_blank">Fan Page Facebook</a></li><li class="standardDernier">
+                  <a href="http://twitter.com/#!/zoneconcours" target="_blank">Page Twitter</a></li>
+			  	</li></ul>
+			  	<div class="basMenu"></div>
+           </div>
+           <div class="menu">
+                <ul class="liensMenu">
+                  <li class="titreMenu">Organisateurs</li>
+				 <li class="standard">
+                  <a href="/proposer-concours.php" style="word-spacing: -1.3px;">Proposer un jeu concours</a></li><li class="standard">
+                  <a href="http://www.reglementdejeu.com/" target="_blank" title="Notre site Reglementdejeu.com à découvrir !" rel="nofollow">Dépôt de règlements</a></li><li class="standardDernier">
+           		  <a href="/nous-contacter.html" target="_blank" rel="nofollow">Nous contacter</a></li></ul>
+               <div class="basMenu"></div>
+           </div>     
+          
+                           <div class="menu">
+				<ul class="liensMenu">
+				<li class="titreMenu">Sociétés</li>
+			 <li class="standard"><a href="/jeux-concours/societe-4696.html">Casanis</a></li><li class="standard"><a href="/jeux-concours/societe-1589.html">Wild Side</a></li><li class="standard"><a href="/jeux-concours/societe-1229.html">Edolone</a></li><li class="standard"><a href="/jeux-concours/societe-3802.html">Comparer.fr</a></li><li class="standard"><a href="/jeux-concours/societe-393.html">Jennyfer</a></li><li class="standard"><a href="/jeux-concours/societe-4553.html">Inwood Hotels Paris</a></li><li class="standardDernier">
+             	  <a href="/jeux-concours/societes.html">Autres soci&eacute;t&eacute;s</a></li>
+			  </ul>
+			  <div class="basMenu"></div>
+		  </div>
+                        <!--<div class="menu">
+				<ul class="liensMenu">
+				<li class="titreMenu">Recherches</li>
+			 			  </ul>
+			  <div class="basMenu"></div>
+		  </div>-->
+                      <div class="menu">
+              <ul class="liensMenu">
+                  <li class="titreMenu">A propos</li>
+                  <li class="standard"><a href="/zone-concours.html">Zone Concours</a></li><li class="standard">
+                  <a href="/promotion.html">Faire un lien</a></li><li class="standard">
+                  <a href="/jeux-concours/dossiers.html">Nos dossiers</a></li><li class="standard">
+                  <a href="/jeux-concours/archives.html">Nos archives</a></li><li class="standardDernier">
+                  <a href="/jeux-concours/breves.html">Nos br&egrave;ves</a></li>
+              </ul>
+              <div class="basMenu"></div>
+              </div>
+			</div>		<div id="centre-milieu">
+			<div class="contenu1"><div id="contenu1gauche"></div><div id="contenu1droite"></div>Zone Concours - Actualit&eacute; des jeux concours</div>
+			<div class="contenu2">
+				<div id="ligneFil">
+					<strong>Vous &ecirc;tes ici :</strong> <a href="/">Zone Concours</a>	-	<a href="/inscription.php">Inscription</a></div>
+<div class="titre">
+					<img src="/images/puce.jpg" width="10" height="10" /> Inscription gratuite, 100% gagnante !</div>
+			  <div class="textContenu" style="margin-bottom:50px;">
+				<div style="text-align:center;">
+				  <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="100%" height="80" title="Jeux concours">
+                    <param name="movie" value="../images/interface/zoneconc.swf" />
+
+                    <param name="quality" value="high" />
+                    <embed src="../images/interface/zoneconc.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="100%" height="80"></embed>
+			      </object>
+			    </div>
+	
+<form name='abonnement' METHOD='post' id="subscribe-form" action='_inscription.php' accept-charset='UTF-8' onsubmit="VerifForm(this); return false;">
+<fieldset>
+	<legend>Inscription &agrave; la newsletter</legend>
+    
+    <div style="height:1px;"></div>
+	Gr&acirc;ce &agrave; Zone Concours, recevez régulièrement les informations sur les meilleurs jeux concours gratuits du moment.
+    <br />
+	<br />
+<table width="100%" border=0>
+<tr>
+<td height="52" align="right">Adresse e-mail : </td>
+<td><input name="email" type="Text" id="email" size="35" maxlength="100"></td>
+</tr>
+<tr>
+<td align=right>&nbsp;</td>
+<td><input type='submit' class="boutonM" value="Je m'inscris" /></td>
+</tr>
+</table>
+</fieldset>
+</form>
+
+			  </div>
+          <div class="titre">
+					<img src="/images/puce.jpg" width="10" height="10" /> Ce qu'il faut savoir concernant notre politique anti-spam</div>
+				<div class="textContenu">
+				  <ul id="politique">
+                    <li>Aucun spam ne vous sera envoy&eacute;. La  fr&eacute;quence d'envoi de la newsletter est d'une &agrave; deux  par semaine. </li>
+                    <li>Aucune information r&eacute;colt&eacute;e sur la zone ne sera c&eacute;d&eacute;e &agrave; des tiers.</li>
+
+                    <li>La d&eacute;sinscription de la newsletter sera possible en permanence, en 1 clic.</li>
+                    <li>En cas de questions/r&eacute;clamations &agrave; ce propos, vous pouvez <a href="/contact.php">nous contacter</a> &agrave; tout moment.</li>
+                  </ul>
+		      </div>
+
+		  </div>
+			<div class="contenuBas"><div id="contenuBasGauche"></div><div id="contenuBasDroite"></div>Jeux concours gratuits sur internet</div>
+	</div>
+
+       <div style="clear:both;"></div>
+</div>
+<div id="bas">
+			Création / Gestion : <a href='#' title='Agence Evoclic' onclick='window.open("http://agence.evoclic.com/gestion.html","evoclic","menubar=no, status=no, scrollbars=no, menubar=no, width=300, height=170");' rel='nofollow' style='color:#A7CE9B'>Evoclic</a> - Copyright &copy; 2007 - 2015  - Tous droits r&eacute;serv&eacute;s</div>
+            
+            
+        
+        	<div id="fondCache" onclick="javascript:popupClose();"></div>
+			<div id="popup">
+            	<a id="popupBtClose" href="javascript:popupClose();">X</a>
+            	<div id="popupTexte">
+                	Nous sélectionnons les meilleurs jeux concours sur internet.<br />
+                    A la clef :	des cadeaux gratuits et la découverte de sociétés organisatrices.
+                </div>
+                <div id="blocGauche">
+                	<div id="blocGaucheTitre">Par e-mail :</div>
+                    <form name='abonnement' method='post' action='/newsletter/_inscription.php' accept-charset='UTF-8' onsubmit="VerifForm(this); return false;">
+                        <input name="email" type="Text" id="popupEmail" size="22" maxlength="100" class="champs" style="width:157px;" value="Mon adresse e-mail" onfocus="popupChampsClear();">
+                        <div id="blogGaucheSubmit">
+                        	<input type="submit" name="Submit" value="Je m'inscris" class="submit"/>
+                        </div>
+                    </form>
+                </div>
+                <div id="blocDroite">
+                	<div id="blocDroiteTitre">Suivez-nous :</div>
+                    <ul>
+                    	<li>
+                            <a href="https://www.facebook.com/Zone.Concours" target="_blank">
+                                <img src="/images/social/facebook.png" alt="sur Facebook" border="0" height="32" width="32"> sur Facebook
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/zoneconcours" target="_blank">
+                                <img src="/images/social/twitter.png" alt="sur Twitter" border="0" height="32" width="32"> sur Twitter
+                            </a>
+                    	</li>
+                    </ul>
+                </div>
+            </div>
+            
+		            
+            
+            
+            
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-12691364-4', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<!-- Google Code for Concours Remarketing List -->
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1069986076;
+var google_conversion_language = "en";
+var google_conversion_format = "3";
+var google_conversion_color = "666666";
+var google_conversion_label = "p5MtCIjq4wEQnOKa_gM";
+var google_conversion_value = 0;
+/* ]]> */
+</script>
+<script type="text/javascript" src="http://www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="http://www.googleadservices.com/pagead/conversion/1069986076/?label=p5MtCIjq4wEQnOKa_gM&amp;guid=ON&amp;script=0"/>
+</div>
+</noscript>
+</div>
+</body>
+</html>

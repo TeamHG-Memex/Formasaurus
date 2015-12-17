@@ -1,0 +1,280 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="ru" xml:lang="ru">
+<head>
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta http-equiv="content-style-type" content="text/css" />
+<meta http-equiv="content-language" content="ru" />
+<meta http-equiv="imagetoolbar" content="no" />
+<meta name="resource-type" content="document" />
+<meta name="distribution" content="global" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+
+<title>Форум spinkat.ru &bull; Личный раздел &bull; Вход</title>
+
+<link rel="alternate" type="application/atom+xml" title="Канал - Форум spinkat.ru" href="http://www.spinkat.ru/forum/feed.php" /><link rel="alternate" type="application/atom+xml" title="Канал - Новые темы" href="http://www.spinkat.ru/forum/feed.php?mode=topics" />
+
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+
+<script type="text/javascript">
+// <![CDATA[
+	var jump_page = 'Введите номер страницы, на которую хотите перейти:';
+	var on_page = '';
+	var per_page = '';
+	var base_url = '';
+	var style_cookie = 'phpBBstyle';
+	var style_cookie_settings = '; path=/forum; domain=spinkat.ru';
+	var onload_functions = new Array();
+	var onunload_functions = new Array();
+
+	
+
+	/**
+	* Find a member
+	*/
+	function find_username(url)
+	{
+		popup(url, 760, 570, '_usersearch');
+		return false;
+	}
+
+	/**
+	* New function for handling multiple calls to window.onload and window.unload by pentapenguin
+	*/
+	window.onload = function()
+	{
+		for (var i = 0; i < onload_functions.length; i++)
+		{
+			eval(onload_functions[i]);
+		}
+	};
+
+	window.onunload = function()
+	{
+		for (var i = 0; i < onunload_functions.length; i++)
+		{
+			eval(onunload_functions[i]);
+		}
+	};
+
+// ]]>
+</script>
+<script type="text/javascript" src="./styles/prosilver/template/styleswitcher.js"></script>
+<script type="text/javascript" src="./styles/prosilver/template/forum_fn.js"></script>
+
+<script type="text/javascript" src="./highslide/highslide-full.js"></script>
+<link href="./highslide/highslide.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+// <![CDATA[
+hs.graphicsDir = './highslide/graphics/';
+hs.align = 'center';
+hs.transitions = ['expand', 'crossfade'];
+hs.outlineType = 'rounded-white';
+hs.fadeInOut = true;
+//hs.dimmingOpacity = 0.75;
+
+// Add the controlbar
+hs.addSlideshow({
+	//slideshowGroup: 'group1',
+	interval: 5000,
+	repeat: false,
+	useControls: true,
+	fixedControls: 'fit',
+	overlayOptions: {
+		opacity: 0.75,
+		position: 'bottom center',
+		hideOnMouseOut: true
+	}
+});
+// ]]>
+</script>
+
+<link href="./styles/prosilver/theme/print.css" rel="stylesheet" type="text/css" media="print" title="printonly" />
+<link href="./styles/prosilver/theme/stylesheet.css" rel="stylesheet" type="text/css" media="screen, projection" />
+
+<link href="./styles/prosilver/theme/normal.css" rel="stylesheet" type="text/css" title="A" />
+<link href="./styles/prosilver/theme/medium.css" rel="alternate stylesheet" type="text/css" title="A+" />
+<link href="./styles/prosilver/theme/large.css" rel="alternate stylesheet" type="text/css" title="A++" />
+
+
+<link rel="stylesheet" type="text/css" href="/css/screen_forum.css" media="all" />
+
+<script type="text/javascript">
+// <![CDATA[
+	window.onload = resizeimg;
+	function resizeimg()
+	{
+		if (document.getElementsByTagName)
+		{
+			var resClass = document.getElementsByTagName('span');
+			for (var i = 0; i < resClass.length; i++)
+			{
+				if (resClass[i].className == "image-resize")
+				{
+					var img = resClass[i].getElementsByTagName("img");
+					if (img[0].width > 400)
+					{
+						resClass[i].innerHTML = '<a href="' + img[0].src + '" class="highslide" onclick="return hs.expand(this)"><img src="' + img[0].src + '" width="400" alt=""></a>';
+					}
+				}
+			}
+		}
+	}
+// ]]>
+</script>
+
+</head>
+
+<body id="phpbb" class="section-ucp ltr">
+
+<div id="wrap">
+	<a id="top" name="top" accesskey="t"></a>
+	<div id="page-header">
+		
+    
+    <div id="wrapper">
+        <div id="header">
+            <div class="logo"><a href="/"><img src="/img/logo_new.png" alt="Спининги & Катушки - Интернет-магазин по продаже профессиональных спиннингов и катушек" /></a></div>
+            <div class="name"><b>Форум</b>Все о рыбалке и снастях</div>
+            <div class="search">
+                <div>
+                    <form action="./search.php?sid=ca5f74f21a7ec0c992ab4c8a3f034067" method="get" id="search">
+                        <input title="Найти" type="submit" value="" />
+                        <input type="text"  name="keywords" id="keywords" title="Ключевые слова" value="Поиск…" onclick="if(this.value=='Поиск…')this.value='';" onblur="if(this.value=='')this.value='Поиск…';"  />
+                    </form>
+                </div>
+                       <a href="./search.php?sid=ca5f74f21a7ec0c992ab4c8a3f034067" title="Параметры расширенного поиска">Расширенный поиск</a> <input type="hidden" name="sid" value="ca5f74f21a7ec0c992ab4c8a3f034067" />
+
+            </div>
+        </div>
+    </div>
+
+
+		<div class="navbar">
+			<div class="inner"><span class="corners-top"><span></span></span>
+
+			<ul class="linklist navlinks">
+				<li class="icon-home"><a href="./index.php?sid=ca5f74f21a7ec0c992ab4c8a3f034067" accesskey="h">Список форумов</a> </li>
+
+				<li class="rightside"><a href="#" onclick="fontsizeup(); return false;" onkeypress="return fontsizeup(event);" class="fontsize" title="Изменить размер шрифта">Изменить размер шрифта</a></li>
+
+				
+			</ul>
+
+			
+
+			<ul class="linklist rightside">
+				<li class="icon-faq"><a href="./faq.php?sid=ca5f74f21a7ec0c992ab4c8a3f034067" title="Часто задаваемые вопросы">FAQ</a></li>
+				<li class="icon-members"><a href="./memberlist.php?sid=ca5f74f21a7ec0c992ab4c8a3f034067" title="Просмотр всего списка пользователей">Пользователи</a></li><li class="icon-register"><a href="./ucp.php?mode=register&amp;sid=ca5f74f21a7ec0c992ab4c8a3f034067">Регистрация</a></li>
+					<li class="icon-logout"><a href="./ucp.php?mode=login&amp;sid=ca5f74f21a7ec0c992ab4c8a3f034067" title="Вход" accesskey="x">Вход</a></li>
+				
+			</ul>
+
+			<span class="corners-bottom"><span></span></span></div>
+		</div>
+
+	</div>
+
+	<a name="start_here"></a>
+	<div id="page-body">
+		
+
+<script type="text/javascript">
+// <![CDATA[
+	onload_functions.push('document.getElementById("username").focus();');
+// ]]>
+</script>
+
+<form action="./ucp.php?mode=login&amp;sid=ca5f74f21a7ec0c992ab4c8a3f034067" method="post" id="login">
+<div class="panel">
+	<div class="inner"><span class="corners-top"><span></span></span>
+
+	<div class="content">
+		<h2>Вход</h2>
+
+		<fieldset class="fields1">
+		
+		<dl>
+			<dt><label for="username">Имя пользователя:</label></dt>
+			<dd><input type="text" tabindex="1" name="username" id="username" size="25" value="" class="inputbox autowidth" /></dd>
+		</dl>
+		<dl>
+			<dt><label for="password">Пароль:</label></dt>
+			<dd><input type="password" tabindex="2" id="password" name="password" size="25" class="inputbox autowidth" /></dd>
+			<dd><a href="./ucp.php?mode=sendpassword&amp;sid=ca5f74f21a7ec0c992ab4c8a3f034067">Забыли пароль?</a></dd>
+		</dl>
+		
+		<dl>
+			<dd><label for="autologin"><input type="checkbox" name="autologin" id="autologin" tabindex="4" /> Автоматически входить при каждом посещении</label></dd>
+			<dd><label for="viewonline"><input type="checkbox" name="viewonline" id="viewonline" tabindex="5" /> Скрыть моё пребывание на конференции в этот раз</label></dd>
+		</dl>
+		
+
+		<input type="hidden" name="redirect" value="./ucp.php?mode=login&amp;sid=ca5f74f21a7ec0c992ab4c8a3f034067" />
+
+		<dl>
+			<dt>&nbsp;</dt>
+			<dd><input type="hidden" name="sid" value="ca5f74f21a7ec0c992ab4c8a3f034067" />
+<input type="hidden" name="redirect" value="index.php" />
+<input type="submit" name="login" tabindex="6" value="Вход" class="button1" /></dd>
+		</dl>
+		</fieldset>
+	</div>
+	<span class="corners-bottom"><span></span></span></div>
+</div>
+
+
+
+	<div class="panel">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="content">
+			<h3>Регистрация</h3>
+			<p>Для входа на конференцию вы должны быть зарегистрированы. Регистрация занимает всего несколько минут, но предоставляет вам более широкие возможности. Администратором конференции могут быть установлены также дополнительные привилегии для зарегистрированных пользователей. Прежде чем зарегистрироваться, вам следует ознакомиться с правилами и политикой, принятыми на конференции. Помните, что ваше присутствие на форумах означает согласие со <strong>всеми</strong> правилами.</p>
+			<p><strong><a href="./ucp.php?mode=terms&amp;sid=ca5f74f21a7ec0c992ab4c8a3f034067">Общие правила</a> | <a href="./ucp.php?mode=privacy&amp;sid=ca5f74f21a7ec0c992ab4c8a3f034067">Соглашение о конфиденциальности</a></strong></p>
+			<hr class="dashed" />
+			<p><a href="./ucp.php?mode=register&amp;sid=ca5f74f21a7ec0c992ab4c8a3f034067" class="button2">Регистрация</a></p>
+		</div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+
+</form>
+
+</div>
+
+<div id="page-footer">
+
+	<div class="navbar">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<ul class="linklist">
+			<li class="icon-home"><a href="./index.php?sid=ca5f74f21a7ec0c992ab4c8a3f034067" accesskey="h">Список форумов</a></li>
+				
+			<li class="rightside"><a href="./memberlist.php?mode=leaders&amp;sid=ca5f74f21a7ec0c992ab4c8a3f034067">Наша команда</a> &bull; <a href="./ucp.php?mode=delete_cookies&amp;sid=ca5f74f21a7ec0c992ab4c8a3f034067">Удалить cookies конференции</a> &bull; Часовой пояс: UTC + 4 часа </li>
+		</ul>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<div class="copyright">Создано на основе <a href="https://www.phpbb.com/">phpBB</a>&reg; Forum Software &copy; phpBB Group
+		<br /><a href='http://www.phpbbguru.net/'>Русская поддержка phpBB</a>
+	</div>
+</div>
+
+</div>
+
+<div>
+	<a id="bottom" name="bottom" accesskey="z"></a>
+	
+</div>
+
+</body>
+</html>

@@ -7,7 +7,7 @@ import os
 def get_version():
     fn = os.path.join(os.path.dirname(__file__), "formasaurus", "__init__.py")
     with open(fn) as f:
-        return re.findall("__version__ = '([\d\.]+)'", f.read())[0]
+        return re.findall("__version__ = '([\d\.\w]+)'", f.read())[0]
 
 
 setup(
@@ -21,12 +21,28 @@ setup(
     url='https://github.com/TeamHG-Memex/Formasaurus',
     zip_safe=False,
     packages=['formasaurus'],
-    install_requires=["tqdm >= 2.0", "tldextract", "docopt", "six"],
+    install_requires=[
+        "tqdm >= 2.0",
+        "tldextract",
+        "docopt",
+        "six",
+        "requests",
+    ],
     package_data={
         'formasaurus': ['data/index.json', 'data/html/*.html'],
     },
     extras_require={
-        'with-deps': ['scikit-learn >= 0.15', 'scipy', 'pandas', 'lxml']
+        'with-deps': [
+            'scikit-learn >= 0.17',
+            'scipy',
+            'pandas',
+            'lxml',
+            'sklearn-crfsuite >= 0.2',
+        ],
+        'annotation': [
+            'ipython[notebook] >= 4.0',
+            'ipywidgets'
+        ],
     },
     entry_points={
         'console_scripts': ['formasaurus = formasaurus.__main__:main']
@@ -43,5 +59,6 @@ setup(
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.3',
         'Programming Language :: Python :: 3.4',
+        'Programming Language :: Python :: 3.5',
     ],
 )

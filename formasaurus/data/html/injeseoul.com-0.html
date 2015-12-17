@@ -1,0 +1,289 @@
+31e6
+<!--
+ZeroBoard에 대한 라이센스 명시입니다.
+
+아래 라이센스에 동의하시는 분만 제로보드를 사용할수 있습니다.
+    
+프로그램명 : Zeroboard
+배포버젼 : 4.1 pl 4 (2003. 8. 7)
+개발자 : zero 
+Homepage : http://zeroboard.com
+
+1. 제로보드의 배포권은 ZEROBOARD.COM에서 허용한 곳에만 있습니다.
+   (허락 맡지 않은 재배포는 허용하지 않습니다.)
+
+2. 제로보드는 저작권을 아래 3번항목에 의해 표기하는 한도내에서
+   개인홈페이지 및 학교나 교회등의 비영리단체, 기업이나 기타 영리단체에서 사용할수 있습니다.
+   (반국가 단체나 불법 싸이트에서의 사용은 금지합니다)
+
+3. 제로보드 사용시 저작권 명시부분을 훼손하면 안됩니다.
+   프로그램 소스, html소스상의 라이센스 및 웹상 출력물 하단에 있는 카피라이트와 링크를 수정하지 마십시요.
+   (저작권 표시는 게시판 배포시 작성된 형식만을 허용합니다. 임의 수정은 금지합니다)
+
+4. 단, 정식 등록버젼은 저작권 표시를 삭제할수 있습니다.
+   정식 등록버젼에 대한 문의는 http://zeroboard.com 에서 문의 방법을 찾아주시기 바랍니다.
+
+5. 링크서비스등의 기본 용도에 맞지 않는 사용은 금지합니다.
+
+6. 제로보드의 사용으로 인한 데이타 손실 및 기타 손해등 어떠한 사고나 문제에 대해서 ZEROBOARD.COM은 절대 책임을 지지 않습니다.
+
+7. 제로보드에 대해 ZEROBOARD.COM은 유지/ 보수의 의무가 없습니다.
+
+8. 제로보드 소스는 개인적으로 사용시 수정하여 사용할수 있지만 수정된 프로그램의 재배포는 금지합니다.
+   (저작권 관련 부분은 수정금지입니다)
+
+9. 제로보드에 쓰인 스킨의 저작권은 스킨 제작자에게 있으며 제작자의 동의하에 수정배포가 가능합니다.
+
+10. 기타 의문사항은 http://zeroboard.com 을 이용해 주시기 바랍니다.
+    (질문등에 대한 내용은 메일로 받지 않습니다)
+
+-->
+<html>
+<head>
+	<meta http-equiv=Content-Type content=text/html; charset=EUC-KR>
+	<link rel=StyleSheet HREF=style.css type=text/css title=style>
+	</head>
+<body topmargin='0'  leftmargin='0' marginwidth='0' marginheight='0' >
+			<div align=center><br>
+<script>
+ function address_popup(num)
+ {
+  window.open('zipcode/search_zipcode.php?num='+num,'searchaddress','width=440,height=230,scrollbars=yes');
+ }
+
+ function check_submit()
+ {
+
+
+  if(!write.user_id.value) {alert("아이디를 입력하여 주십시요.");write.user_id.focus(); return false;}
+
+
+  // ID Check
+  if(write.user_id.value.length<4||write.user_id.value.length>40) {
+    alert("아이디는 4자 이상, 40자 이하여야 합니다.");
+    write.user_id.focus();
+    return false;
+  }
+  var valid = "abcdefghijklmnopqrstuvwxyz0123456789_"; 
+  var startChar = "abcdefghijklmnopqrstuvwxyz"; 
+  var temp; 
+  write.user_id.value = write.user_id.value.toLowerCase(); 
+  temp = write.user_id.value.substring(0,1); 
+  if (startChar.indexOf(temp) == "-1") {
+    alert("아이디의 첫 글자는 영문이어야 합니다.");
+    write.user_id.value = ""; 
+    write.user_id.focus(); 
+    return false;
+  }
+  for (var i=0; i<write.user_id.value.length; i++) { 
+    temp = "" + write.user_id.value.substring(i, i+1); 
+    if (valid.indexOf(temp) == "-1") { 
+      alert("아이디는 영문과 숫자, _ 로만 이루어질수 있습니다.");
+      write.user_id.value = ""; 
+      write.user_id.focus(); 
+      return false;
+    }
+  } 
+
+  if(!write.password.value) {alert("비밀번호를 입력하여 주십시요.");write.password.focus(); return false;}
+  if(!write.password1.value) {alert("비밀번호 확인을 입력하여 주십시요.");write.password1.focus(); return false;}
+  if(write.password.value!=write.password1.value) {alert("패스워드가 일치하지 않습니다.");write.password.value="";write.password1.value=""; write.password.focus(); return false;}
+  if(!write.name.value) { alert("이름을 입력하세요"); write.name.focus(); return false; }
+
+
+    if ( write.birth_1.value < 1000 || write.birth_1.value <= 0 )  {
+         alert('생년이 잘못입력되었습니다.');
+         write.birth_1.value='';
+         write.birth_1.focus();
+        return false;
+    }
+    if ( write.birth_2.value > 12 || write.birth_2.value <= 0 ) {
+         alert('생월이 잘못입력되었습니다.');
+         write.birth_2.value='';
+         write.birth_2.focus();
+        return false;
+    }
+    if ( write.birth_3.value > 31 || write.birth_3.value <= 0 )  {
+         alert('생일이 잘못입력되었습니다.');
+         write.birth_3.value='';
+         write.birth_3.focus();
+        return false;
+    }
+  if(!write.email.value) {alert("E-Mail을 입력하여 주십시요.");write.email.focus(); return false;}
+
+   if(!write.jumin1.value) {alert("주민등록번호를 입력하여 주십시요");write.jumin1.focus(); return false;}
+   if(!write.jumin2.value) {alert("주민등록번호를 입력하여 주십시요");write.jumin2.focus(); return false;}
+
+  return true;
+  }
+
+  function check_id(id)
+  {
+   if(!id)
+   {
+    alert('아이디를 입력하여 주십시요');
+   }
+   else
+   {
+    window.open('check_user_id.php?user_id='+id,'check_user_id','width=200,height=100,toolbar=no,status=no,resizable=no');
+   }
+  }
+
+  function check_accept() {
+	return confirm("위의 가입 약관을 모두 보았으며, 동의하십니까?");
+  }
+
+</script>
+<table border=0 cellspacing=1 cellpadding=0 width=540>
+<form name=write method=post action=member_join_ok.php enctype=multipart/form-data onsubmit="return check_submit();"><input type="hidden" name="PHPSESSID" value="7a72b79f6557566ffd07f3a9576ae4be" />
+<input type=hidden name=id value=>
+<input type=hidden name=referer value="">
+<input type=hidden name=group_no value="1">
+<input type=hidden name=mode value="">
+
+  <tr><td colspan=2><img src=images/member_joinin.gif><br><br></td></tr>
+
+        <tr>
+          <td colspan="5" bgcolor="#EBD9D9" align="center"><img src="images/t.gif" width="10" height="3"></td>
+        </tr>
+  <tr align=right>
+     <td width=25% style=font-family:Tahoma;font-size:8pt;><b>ID&nbsp;</td>
+     <td align=left>&nbsp;<input type=text name=user_id size=20 maxlength=20 style=border-color:#d8b3b3 class=input> <input type=button value='Check ID' style=color:#000000;border-color:#dfb8b8;background-color:#f0f0f0;font-size:8pt;font-family:Tahoma;height:20px; onclick=check_id(write.user_id.value)><br><img src=images/t.gif border=0 height=4><br>&nbsp;(영문,숫자,_로만 아이디를 작성하세요)</td>
+  </tr>
+        <tr>
+          <td colspan="5" bgcolor="#EBD9D9" align="center"><img src="images/t.gif" width="10" height="1"></td>
+        </tr>
+  <tr align=right height=28>
+     <td style=font-family:Tahoma;font-size:8pt;><B>Password&nbsp;</td>
+     <td align=left>&nbsp;<input type=password name=password size=20 maxlength=20 style=border-color:#d8b3b3 class=input> 확인 : <input type=password name=password1 size=20 maxlength=20 style=border-color:#d8b3b3 class=input></td>
+  </tr>
+        <tr>
+          <td colspan="5" bgcolor="#EBD9D9" align="center"><img src="images/t.gif" width="10" height="1"></td>
+        </tr>
+  <tr align=right height=28>
+     <td style=font-family:Tahoma;font-size:8pt;><b>Name&nbsp;</td>
+     <td align=left>&nbsp;<input type=text name=name size=20 maxlength=20 value="" style=border-color:#d8b3b3 class=input></td>
+  </tr>
+        <tr>
+          <td colspan="5" bgcolor="#EBD9D9" align="center"><img src="images/t.gif" width="10" height="1"></td>
+        </tr>
+  <tr align=right height=28>
+     <td style=font-family:Tahoma;font-size:8pt;><b>Birthday&nbsp;</td>
+     <td align=left>&nbsp;<input type=text name=birth_1 size=4 maxlength=4 style=border-color:#d8b3b3 class=input> 년 
+                    &nbsp;<input type=text name=birth_2 size=2 maxlength=2 style=border-color:#d8b3b3 class=input> 월
+                    &nbsp;<input type=text name=birth_3 size=2 maxlength=2 style=border-color:#d8b3b3 class=input> 일 
+          <input type=checkbox value=1 checked name=open_birth> 공개
+  </tr>        <tr>
+          <td colspan="5" bgcolor="#EBD9D9" align="center"><img src="images/t.gif" width="10" height="1"></td>
+        </tr>
+
+  <tr align=right height=28>
+     <td style=font-family:Tahoma;font-size:8pt;><b>E-mail&nbsp;</td>
+     <td align=left>&nbsp;<input type=text name=email size=50 maxlength=255 value="" style=border-color:#d8b3b3 class=input>
+                          <input type=checkbox value=1 name=open_email checked> 공개
+                          </td>
+  </tr>        <tr>
+          <td colspan="5" bgcolor="#EBD9D9" align="center"><img src="images/t.gif" width="10" height="1"></td>
+        </tr>
+  <tr align=right height=28>
+     <td style=font-family:Tahoma;font-size:8pt;>Homepage&nbsp;</td>
+     <td align=left>&nbsp;<input type=text name=homepage size=50 maxlength=255 value="" style=border-color:#d8b3b3 class=input>
+                          <input type=checkbox value=1 name=open_homepage checked> 공개</td>
+  </tr>        <tr>
+          <td colspan="5" bgcolor="#EBD9D9" align="center"><img src="images/t.gif" width="10" height="1"></td>
+        </tr>
+
+
+
+  <tr align=right height=28>
+     <td style=font-family:Tahoma;font-size:8pt;>MSN&nbsp;</td>
+     <td align=left>&nbsp;<input type=text name=msn size=20 maxlength=250 value="" style=border-color:#d8b3b3 class=input>
+                          <input type=checkbox value=1 name=open_msn checked> 공개</td>
+  </tr>        <tr>
+          <td colspan="5" bgcolor="#EBD9D9" align="center"><img src="images/t.gif" width="10" height="1"></td>
+        </tr>
+
+  <tr align=right height=28>
+     <td style=font-family:Tahoma;font-size:8pt; valign=top><table border=0 cellspacing=0 cellpadding=0 height=4><tr><td></td></tr></table><b>주민등록번호 &nbsp;</td>
+     <td align=left>&nbsp<input type=text name=jumin1 size=6 maxlength=6 style=border-color:#d8b3b3 class=input>-<input type=text name=jumin2 size=7 maxlength=7 style=border-color:#d8b3b3 class=input> <br>* 주민등록번호는 암호화되어 저장이 되므로 관리자도 알수 없습니다<br>
+     &nbsp; (회원 중복가입을 막기 위한 검사수단으로만 사용이 됩니다)</td>
+  </tr>        <tr>
+          <td colspan="5" bgcolor="#EBD9D9" align="center"><img src="images/t.gif" width="10" height="1"></td>
+        </tr>
+
+
+
+ 
+  <tr align=right height=28>
+     <td style=font-family:Tahoma;font-size:8pt;>Home Address&nbsp;</td>
+     <td align=left>&nbsp;<input type=text name=home_address size=40 maxlength=255 value="" style=border-color:#d8b3b3 class=input><input type=button value='검색' class=input style=border-color:#d8b3b3 onclick=address_popup(1)>
+                          <input type=checkbox value=1 name=open_home_address checked> 공개</td>
+  </tr>        <tr>
+          <td colspan="5" bgcolor="#EBD9D9" align="center"><img src="images/t.gif" width="10" height="1"></td>
+        </tr>
+
+  <tr align=right height=28>
+     <td style=font-family:Tahoma;font-size:8pt;>Home Phone&nbsp;</td>
+     <td align=left>&nbsp;<input type=text name=home_tel size=20 maxlength=20 value="" style=border-color:#d8b3b3 class=input>
+                          <input type=checkbox value=1 name=open_home_tel checked> 공개</td>
+  </tr>        <tr>
+          <td colspan="5" bgcolor="#EBD9D9" align="center"><img src="images/t.gif" width="10" height="1"></td>
+        </tr>
+
+
+
+  <tr align=right height=28>
+     <td style=font-family:Tahoma;font-size:8pt;>Cellular&nbsp;</td>
+     <td align=left>&nbsp;<input type=text name=handphone size=20 maxlength=20 value="" style=border-color:#d8b3b3 class=input>
+                          <input type=checkbox value=1 name=open_handphone checked> 공개</td>
+  </tr>        <tr>
+          <td colspan="5" bgcolor="#EBD9D9" align="center"><img src="images/t.gif" width="10" height="1"></td>
+        </tr>
+
+  <tr align=right height=28>
+     <td style=font-family:Tahoma;font-size:8pt;><b>Mailling List&nbsp;</td>
+     <td align=left>&nbsp;<input type=checkbox name=mailing value=1 checked> 메일링 가입</td>
+  </tr>        <tr>
+          <td colspan="5" bgcolor="#EBD9D9" align="center"><img src="images/t.gif" width="10" height="1"></td>
+        </tr>
+
+
+  <tr align=right height=28>
+     <td style=font-family:Tahoma;font-size:8pt;>자기 소개서</td>
+     <td align=left>&nbsp;<textarea cols=50 rows=4 name=comment style=border-color:#d8b3b3 class=textarea></textarea><br>&nbsp;<input type=checkbox value=1 name=open_comment checked> 공개</td>
+
+  </tr>        <tr>
+          <td colspan="5" bgcolor="#EBD9D9" align="center"><img src="images/t.gif" width="10" height="1"></td>
+        </tr>
+
+  <tr align=right height=28>
+     <td style=font-family:Tahoma;font-size:8pt;><b>개인정보 공개</td>
+     <td align=left>&nbsp;<input type=checkbox name=openinfo value=1 checked> 정보 공개</td>
+  </tr>        <tr>
+          <td colspan="5" bgcolor="#EBD9D9" align="center"><img src="images/t.gif" width="10" height="1"></td>
+        </tr>
+
+<tr height=30 bgcolor=#ffffff>
+   <td  colspan=2 align=right ><img src=images/t.gif height=5><br>
+   <input type=image border=0 src=images/button_join.gif?PHPSESSID=7a72b79f6557566ffd07f3a9576ae4be> &nbsp;
+   <img src=images/memo_close.gif border=0 onClick=window.close() style=cursor:hand>&nbsp;&nbsp;&nbsp;
+   </td>
+</tr>
+
+  </form>
+</table>
+
+
+			</body>
+			</html>
+			
+
+<!--
+ Session Excuted  : 0.0001
+ Connect Checked  : 0.0003
+ PHP Excuted  : 0.001
+ Total Excuted Time : 0.002
+-->
+
+0
+

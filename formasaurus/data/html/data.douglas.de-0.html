@@ -1,0 +1,358 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="no-NO" lang="no-NO"><head>
+<title>Douglas.no Hjelp og kundeservice</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<link rel="stylesheet" href="lib/css/screen.css" type="text/css" media="screen, print">
+<link rel="stylesheet" href="lib/css/languages/de.css" type="text/css" media="screen, print">
+<!--[[ start seitenspezifische css-libs ]]-->
+<link rel="stylesheet" href="lib/css/screen/popup.css" type="text/css" media="screen, print">
+<!--[[ ende seitenspezifische css-libs ]]-->
+<!--[if lt IE 7]>
+<link rel="stylesheet" href="lib/css/hacks/ie56.css" type="text/css" media="screen, print" />
+<![endif]-->
+<!--[if IE 7]>
+<link rel="stylesheet" href="lib/css/hacks/ie7.css" type="text/css" media="screen, print" />
+<![endif]-->
+<!--[if IE 6]>
+<script type="text/javascript" src="lib/js/hacks/ie6.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="lib/css/print.css" type="text/css" media="print">
+
+<script type="text/javascript">
+/*<![CDATA[*/
+if (typeof hacks != "undefined" && hacks.length>0){
+	document.writeln('<link rel="stylesheet" href="lib/css/hacks/'+hacks+'.css" type="text/css" media="screen, print" />');
+}
+/*]]>*/
+</script>
+
+<script language="JavaScript" type="text/javascript">
+<!--
+function link(URL)
+{
+window.opener.location.href=URL
+}
+
+function show_service(service){
+	document.getElementById("dk_service").style.display = "none";
+	document.getElementById("gk_service").style.display = "none";
+	
+	document.getElementById(service).style.display = "block";
+	
+	if(service == "gk_service"){
+		document.getElementById("kopf").style.backgroundImage = "url(img/kopf_02.gif)";
+	}else{		
+		document.getElementById("kopf").style.backgroundImage = "url(//media.douglas.de/hybr/img/r3brush/hilfeseiten/basics/kopf_01.gif)";
+		}
+	
+	}
+
+function show_box(box){
+	
+	for(i=0;i<=3;i++){
+		document.getElementById("box"+[i]+"").style.display = "none";
+		document.getElementById("radio"+[i]+"").checked = false;
+		
+		document.getElementById("box4").style.display = "none";
+		document.getElementById("box5").style.display = "none";
+		document.getElementById("box6").style.display = "none";
+		}
+	
+	document.getElementById("box"+box+"").style.display = "block";
+	document.getElementById("radio"+box+"").checked = true;
+
+	}
+
+
+function check_input(ref)
+{
+    var ergebnis=true;  // Annahme: Alle Angaben sind korrekt
+	var at_pos;
+// eMail darf nicht leer sein, au&szlig;erdem plausibel
+   if (ref.name.value=="")
+   {
+	 alert("Bitte geben Sie Ihren Namen ein.");
+	 ref.name.focus();
+	 return false;
+   }
+	else if(ref.fromemail.value=="")
+   {
+	 alert("Bitte geben Sie Ihre E-Mail-Adresse ein.");
+	 ref.fromemail.focus();
+	 return false;
+   }
+   	else if(ref.betreff.value=="")
+   {
+	 alert("Bitte geben Sie ein Thema ein.");
+	 ref.betreff.focus();
+	 return false;
+   }
+   	else if(ref.text.value=="")
+   {
+	 alert("Bitte geben Sie Ihre Nachricht ein.");
+	 ref.text.focus();
+	 return false;
+   }
+	else
+	{
+		// E-Mail Adresse pr&uuml;fen
+       	email = ref.fromemail.value;
+		(email=="") ? at_pos = -1 : at_pos = email.indexOf("@");
+        if ((at_pos < 0)&&(email!=""))
+        {
+                alert("Bitte geben Sie eine korrekte E-Mail-Adresse ein.");
+                ref.fromemail.focus();
+        		return false;
+        }
+        else
+        if (email.lastIndexOf("@") != at_pos)
+        {
+                alert("Bitte geben Sie eine korrekte E-Mail-Adresse ein.");
+                ref.fromemail.focus();
+                return false;
+        }
+	}
+	
+}
+//-->
+
+</script>
+</head>
+<body>
+
+<div id="page-wrap" class="pop-up">
+	<div id="contentbox">
+		<div class="contentbox-shadow-top"></div>
+
+
+<div class="content clearfix">
+<a id="closelink" href="javascript:window.close()"><img src="//media.douglas.de/hybr/img/r3brush/hilfeseiten/basics/btn_overlay_close.gif" alt="Lukk vindu"></a>
+			<h1>Kontakt</h1>
+			<div class="hr"></div>
+
+<div class="col-left">
+			
+				<div class="shadowbox box-196">
+					<div class="box-top"></div>
+					<div class="box-content">
+						<h3>Meny</h3>
+						<ul class="std">
+                           <li><a href="hilfe_faq.htm">Spørsmål og svar</a></li>
+							<li><a href="hilfe_ebd.htm">Handle på douglas.no</a></li>
+							<li><a href="hilfe_ev.htm">Fordelsprogram</a></li>
+							<li><a href="hilfe_bs.htm">Din bestilling</a></li>
+							<li><a href="hilfe_md.htm">Min Douglas</a></li>
+							<li><a href="hilfe_bs.htm">Betaling</a></li>
+							<li><a href="hilfe_vl.htm">Frakt og levering</a></li>
+							<li><a href="hilfe_ds.htm">Personvern</a></li>
+							<li><a href="hilfe_ga.htm">Rabatter og tilbud</a></li>
+							<!-- <li><a href="hilfe_dc.htm">Douglas Card</a></li> -->
+							<li><a href="hilfe_ud.htm">Om Douglas</a></li>
+							<li><a href="hilfe_agb.htm">Vilkår og betingelser</a></li>
+							<li><a href="hilfe_ip.htm">Impressum</a></li>
+							<li class="act"><em>Kontakt</em></li>
+						</ul>
+					</div>
+					<div class="box-bottom"></div>
+				</div>
+			</div>
+
+
+
+<div class="col-main scrollbox">
+				<h4>Kontakt<a name="back2top" href=""></a></h4>
+                <p>
+                    Finner du ikke svar på spørsmålet ditt? Vi hjelper deg gjerne. Kontakt vår kundeservice.  
+                </p>
+				
+				<p class="toc">
+					<a href="#ServiceHotline">Kundeservice</a>
+					<a href="#Kontaktformular">Kontaktskjema</a>
+				</p>
+				
+				<div class="hr"></div>
+				
+				<h4 id="ServiceHotline">Kundeservice</h4>
+				<h5>Våre åpningstider er:</h5>
+				<p>
+                    Mandag - Fredag 10.00 - 19.00<br>
+                    Lørdag 10.00 - 18.00
+                </p>
+                
+                <h5>Kontakt Kundeservie:</h5>
+                <p>
+                    Du treffer oss om du fyller inn <a href="#Kontaktformular">Kontaktskjema</a> eller skriver en e-post, inkludert ordrenummer, kundenummer og ditt telefonnummer direkte til:<br>
+                    <a href="mailto:kundeservice@douglas.no">kundeservice@douglas.no</a>
+                </p>
+                <p>Du kan også nå Kundeservice på tlf.: <strong>815 24 711</strong></p>
+				<a href="#back2top" class="back2top">Til toppen</a>
+				
+				<div class="hr"></div>
+				
+				<h4 id="Kontaktformular">Kontaktskjema</h4>
+				<p>
+                    Sender du inn et spørsmål utenfor åpningstidene vil vi svare deg i løpet av førstkommende arbeidsdag.
+                </p>
+				
+<script language="JavaScript">
+self.onerror=null;
+<!--
+function check_input(ref)
+{
+    var ergebnis=true;  // Annahme: Alle Angaben sind korrekt
+	var at_pos;
+// eMail darf nicht leer sein, ausserdem plausibel
+   if (ref.name.value=="")
+   {
+	 alert("Skriv inn ditt navn.");
+	 ref.name.focus();
+	 return false;
+   }
+	else if(ref.fromemail.value=="")
+   {
+	 alert("Skriv inn e-post adressen din.");
+	 ref.fromemail.focus();
+	 return false;
+   }
+   	else if(ref.betreff.value=="")
+   {
+	 alert("Fyll ut emnefeltet.");
+	 ref.betreff.focus();
+	 return false;
+   }
+   	else if(ref.text.value=="")
+   {
+	 alert("Hva gjelder din henvendelse? Skriv en kort melding.");
+	 ref.text.focus();
+	 return false;
+   }
+	else
+	{
+		// E-Mail Adresse pr&uuml;fen
+       	email = ref.fromemail.value;
+		(email=="") ? at_pos = -1 : at_pos = email.indexOf("@");
+        if ((at_pos < 0)&&(email!=""))
+        {
+                alert("Vennligst oppgi en gyldig e-post adresse.");
+                ref.fromemail.focus();
+        		return false;
+        }
+        else
+        if (email.lastIndexOf("@") != at_pos)
+        {
+                alert("Vennligst oppgi en gyldig e-post adresse.");
+                ref.fromemail.focus();
+                return false;
+        }
+	}
+	
+}
+//-->
+</script>
+
+<form action="php/shopmail.php" method="POST" accept-charset="iso-8859-1" onsubmit="return check_input(this);">
+<input type="hidden" name="quelle" value="kontaktmail">
+<input type="hidden" name="location" value="../hilfe_kt_ok.htm">
+
+                    <p>
+                        <label class="mandatory" for="name">Navn</label><br>
+                        <input class="text size-xl" type="text" id="name" name="name" value="">
+                    </p>
+                    <p>
+                        <label class="mandatory" for="email">E-post</label><br>
+                        <input class="text size-xl" type="text" id="email" name="fromemail" value="">
+                    </p>
+                    <p>
+                        <label class="mandatory" for="subject">Emne</label><br>
+                        <input class="text size-xl" type="text" id="subject" name="betreff" value="">
+                    </p>
+                    <p>
+                        <label class="mandatory" for="message">Din melding</label><br>
+                        <textarea cols="56" rows="7" id="message" name="text"></textarea>
+                    </p>
+                    <p>
+                        <input type="image" alt="Absenden" src="//media.douglas.de/hybr/img/r3brush/buttons/no/btn_absenden.png">
+                    </p>
+                </form>
+				<a href="#back2top" class="back2top">Til toppen</a>
+				
+				<div class="hr"></div>
+
+				
+			</div>
+
+		</div>
+		<!-- // content-ende // -->
+
+
+
+
+		<div class="contentbox-shadow-divider"></div>
+		<hr class="skip">
+
+
+
+		<!-- // contentfooter-start // -->
+		<div class="content clearfix" id="contentfooter">
+			<div class="fl buttons">
+                                <a href="javascript:history.back();"><img src="img/basics/zurueck.jpg"></a>
+				<a href="hilfe_index.htm"><img src="img/languages/no/btn_back_overview.gif"></a>
+			</div>
+			<div class="fr buttons">
+				<a onclick="print();" href="javascript:void(0);"><img src="img/languages/no/btn_print_page.gif" alt="Seite drucken"></a>
+			</div>
+		</div>
+		<!-- // contentfooter-ende // -->
+
+
+		<div class="contentbox-shadow-bottom"></div>
+	</div>		
+		
+		
+	
+	<hr class="skip">
+
+</div>
+<!-- // pagewrap-ende // -->
+
+<script type="text/javascript" src="//www.douglas.de/douglas/lib/js/webtrekk.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+ 
+        var webtrekk = {
+               contentId : "",
+               linkTrack : "link",
+               heatmap : "",
+               form : ""
+        };
+  
+        var wt1 = new webtrekkV3(webtrekk);
+     
+        wt1.contentId = "Home.Hilfe.Kontakt";
+      
+		wt1.contentGroup = {
+				1 : "DE", 
+				2 : "Home",
+				3 : "Hilfe"
+				};
+	
+	
+        wt1.mediaCode="trac";
+         
+        wt1.trackId="354284739376300";
+        wt1.sendinfo();
+ 
+      
+/* ]]> */
+</script>
+ 
+<noscript>
+               &lt;img src="//douglas01.webtrekk.net/354284739376300/wt?p=314,Home.Hilfe.Kontakt,1,0,0,1,0,http%3A%2F%2Fwww.douglas.de%2Fdouglas%2F,0,1&amp;amp;la=&amp;amp;ov=&amp;amp;cr=&amp;amp;oi=&amp;amp;ba=&amp;amp;co=&amp;amp;qn=&amp;amp;ca=&amp;amp;st=&amp;amp;cd=&amp;amp;is=&amp;amp;mcv=&amp;amp;mc=&amp;amp;mcd=&amp;amp;lp=&amp;amp;cp1=&amp;amp;cs1=&amp;amp;ck1=&amp;amp;cb1=&amp;amp;cg1=&amp;amp" height="1" width="1" alt=""&gt;
+        
+</noscript>
+
+
+
+
+</body></html>

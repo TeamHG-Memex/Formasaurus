@@ -1,0 +1,305 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Login</title>
+	<meta name="description" content="The International Journal of Computer Science: Theory and Application is an open access and peer-reviewed Journal.  Authors are invited to submit  original papers on both applied or/and theoretical aspects of computer science." />
+	<meta name="keywords" content="International Journal of Computer Science; Journal of Computer Science; Call For Papers in Computer Science; Open Access Journal;  Research Papers Publication." />
+	<meta name="generator" content="Journal Systems 2.4.3.0" />
+	<title>International Journal of Computer Science</title>
+<meta name="Description" content="The International Journal of Computer Science: Theory and Application (IJCSTA) is a bi-monthly, open access and peer-reviewed International Journal for academic researchers, industrial professionals, educators, developers and technical managers in the computer science field.  
+The journal covers all areas of computer science, like computer engineering, computer security, database management system Artificial Intelligence, Software Engineering and more. We publish original research papers, state-of-the-art reviews, and high quality technical notes, on both applied and theoretical aspects of computer science.
+">
+<meta name="Keywords" content="Artificial Intelligence;
+Algorithms, Programming language theory, Formal methods;
+Computer architecture, Computer security, Computer graphics,
+Computer Components,  Digital Devices, and Interconnection Networks;
+Computer Organizations and Architectures;
+Data structures, Database theory;
+Operating Systems, Software Systems and engineering, Soft computing, and Communication Protocols;
+Computational Science, Theory of computation;
+Real-time Systems, Distributed Systems and Embedded Systems;
+Specification, Design, Prototyping, and Testing Methods and Tools;
+Human-based computation, Human–computer interaction;
+Reliability, Testability,  Performance and  Security;
+Business intelligence;">
+<meta name="Publisher" content="ORB Acadeic Publisher">
+<meta name="Identifier-Url" content="http://www.orb-academic.org/index.php/journal-of-computer-science">
+	<link rel="icon" href="http://orb-academic.org/public/journals/2/journalFavicon_en_US.png" type="image/png" />	<link rel="stylesheet" href="http://orb-academic.org/lib/pkp/styles/pkp.css" type="text/css" />
+	<link rel="stylesheet" href="http://orb-academic.org/lib/pkp/styles/common.css" type="text/css" />
+	<link rel="stylesheet" href="http://orb-academic.org/styles/common.css" type="text/css" />
+	<link rel="stylesheet" href="http://orb-academic.org/styles/compiled.css" type="text/css" />
+
+	<!-- Base Jquery -->
+	<script type="text/javascript" src="//www.google.com/jsapi"></script>
+		<script type="text/javascript">
+			<!--
+			// Provide a local fallback if the CDN cannot be reached
+			if (typeof google == 'undefined') {
+				document.write(unescape("%3Cscript src='http://orb-academic.org/lib/pkp/js/lib/jquery/jquery.min.js' type='text/javascript'%3E%3C/script%3E"));
+				document.write(unescape("%3Cscript src='http://orb-academic.org/lib/pkp/js/lib/jquery/plugins/jqueryUi.min.js' type='text/javascript'%3E%3C/script%3E"));
+			} else {
+				google.load("jquery", "1.4.4");
+				google.load("jqueryui", "1.8.6");
+			}
+			// -->
+		</script>
+	
+	
+	
+	<link rel="stylesheet" href="http://orb-academic.org/styles/sidebar.css" type="text/css" />		<link rel="stylesheet" href="http://orb-academic.org/styles/rightSidebar.css" type="text/css" />	
+			<link rel="stylesheet" href="http://orb-academic.org/public/site/sitestyle.css" type="text/css" />
+	
+	<!-- Default global locale keys for JavaScript -->
+	
+<script type="text/javascript">
+	jQuery.pkp = jQuery.pkp || { };
+	jQuery.pkp.locale = { };
+			
+				jQuery.pkp.locale.form_dataHasChanged = 'The data on this form has changed. Continue anyway?';
+	</script>
+	<!-- Compiled scripts -->
+			
+<script type="text/javascript" src="http://orb-academic.org/lib/pkp/js/lib/jquery/plugins/jquery.tag-it.js"></script>
+<script type="text/javascript" src="http://orb-academic.org/lib/pkp/js/lib/jquery/plugins/jquery.cookie.js"></script>
+
+<script type="text/javascript" src="http://orb-academic.org/lib/pkp/js/functions/fontController.js"></script>
+<script type="text/javascript" src="http://orb-academic.org/lib/pkp/js/functions/general.js"></script>
+<script type="text/javascript" src="http://orb-academic.org/lib/pkp/js/functions/jqueryValidatorI18n.js"></script>
+
+<script type="text/javascript" src="http://orb-academic.org/lib/pkp/js/classes/Helper.js"></script>
+<script type="text/javascript" src="http://orb-academic.org/lib/pkp/js/classes/ObjectProxy.js"></script>
+<script type="text/javascript" src="http://orb-academic.org/lib/pkp/js/classes/Handler.js"></script>
+<script type="text/javascript" src="http://orb-academic.org/lib/pkp/js/classes/linkAction/LinkActionRequest.js"></script>
+<script type="text/javascript" src="http://orb-academic.org/lib/pkp/js/classes/features/Feature.js"></script>
+
+<script type="text/javascript" src="http://orb-academic.org/lib/pkp/js/controllers/SiteHandler.js"></script><!-- Included only for namespace definition -->
+<script type="text/javascript" src="http://orb-academic.org/lib/pkp/js/controllers/UrlInDivHandler.js"></script>
+<script type="text/javascript" src="http://orb-academic.org/lib/pkp/js/controllers/AutocompleteHandler.js"></script>
+<script type="text/javascript" src="http://orb-academic.org/lib/pkp/js/controllers/ExtrasOnDemandHandler.js"></script>
+<script type="text/javascript" src="http://orb-academic.org/lib/pkp/js/controllers/form/FormHandler.js"></script>
+<script type="text/javascript" src="http://orb-academic.org/lib/pkp/js/controllers/form/AjaxFormHandler.js"></script>
+<script type="text/javascript" src="http://orb-academic.org/lib/pkp/js/controllers/form/ClientFormHandler.js"></script>
+<script type="text/javascript" src="http://orb-academic.org/lib/pkp/js/controllers/grid/GridHandler.js"></script>
+<script type="text/javascript" src="http://orb-academic.org/lib/pkp/js/controllers/linkAction/LinkActionHandler.js"></script>
+
+<script type="text/javascript" src="http://orb-academic.org/js/pages/search/SearchFormHandler.js"></script>
+<script type="text/javascript" src="http://orb-academic.org/js/statistics/ReportGeneratorFormHandler.js"></script>
+<script type="text/javascript" src="http://orb-academic.org/plugins/generic/lucene/js/LuceneAutocompleteHandler.js"></script>
+
+<script type="text/javascript" src="http://orb-academic.org/lib/pkp/js/lib/jquery/plugins/jquery.pkp.js"></script>	
+	<!-- Add javascript required for font sizer -->
+	<script type="text/javascript">
+		<!--
+		$(function(){
+			fontSize("#sizer", "body", 9, 16, 32, ""); // Initialize the font sizer
+		});
+		// -->
+	</script>
+
+	<!-- Form validation -->
+	<script type="text/javascript" src="http://orb-academic.org/lib/pkp/js/lib/jquery/plugins/validate/jquery.validate.js"></script>
+	<script type="text/javascript">
+		<!--
+		// initialise plugins
+		
+		$(function(){
+			jqueryValidatorI18n("http://orb-academic.org", "en_US"); // include the appropriate validation localization
+			
+			$(".tagit").live('click', function() {
+				$(this).find('input').focus();
+			});
+		});
+		// -->
+		
+	</script>
+
+		
+</head>
+<body>
+<div id="container">
+
+<div id="header">
+<div id="headerTitle">
+<h1>
+    <a href="http://orb-academic.org">
+	<img src="http://orb-academic.org/public/journals/2/pageHeaderTitleImage_en_US.png" width="869" height="98" alt="Page Header" />
+    </a>
+</h1>
+</div>
+
+
+<div id="navbar">
+	<ul class="menu"  id="menuprincipal">
+					<li id="home"><a href="http://orb-academic.org/index.php/journal-of-computer-science/index">Journal Home</a></li>
+			<li id="about"><a href="http://orb-academic.org/index.php/journal-of-computer-science/about">About Journal</a></li>
+			
+   		
+					<li id="login"><a href="http://orb-academic.org/index.php/journal-of-computer-science/login">Login</a></li>
+							<li id="register"><a href="http://orb-academic.org/index.php/journal-of-computer-science/user/register">Register</a></li>
+												<li id="search"><a href="http://orb-academic.org/index.php/journal-of-computer-science/search">Search</a></li>
+		
+		
+					<li id="current"><a href="http://orb-academic.org/index.php/journal-of-computer-science/issue/current">Current</a></li>
+			<li id="archives"><a href="http://orb-academic.org/index.php/journal-of-computer-science/issue/archive">Archives</a></li> 
+
+		
+				
+
+								</ul>
+</div>
+
+<div id="breadcrumb">
+	<div id="breadcrumbint">
+
+	<a href="http://orb-academic.org/index.php/journal-of-computer-science/index">Home</a> &#187;
+			<a href="http://orb-academic.org/index.php/journal-of-computer-science/login" class="current">Login</a></div>
+</div>
+</div>
+
+<div id="body">
+
+	<div id="sidebar">
+							<div id="rightSidebar">
+				 
+ 
+
+ 
+
+
+<div class="block" id="sidebarInformation">
+	<div id="imagePreface" >
+	<table>
+		<tr >
+			<td> 
+			<div > <img src="http://orb-academic.org/public/journals/2/preface.png" width="100px" height="130px"  alt="logo of journal"/> </div>
+		</td>
+		<td>
+			<div id="preface">
+			
+			<table id="tablePreface">
+				<tr>
+				<td>
+				<div id="freq">	
+					Frequency: 6/Year
+				</div>
+				</td>
+				</tr>
+				
+				<tr>
+					<td width="400px"> <div id="freq">	ISSN:
+						
+						2336-0984
+					</div>
+						
+					</td>
+				</tr>
+			</table>	
+		</div>
+	
+		</td>
+		</tr>
+	</table>
+</div>
+	<br>
+       
+	
+        <div class="champsBarDroit" id="home"> &#149; <a href="http://orb-academic.org/index.php/journal-of-computer-science/index">Focus and Scope</a></div>
+		
+		
+		<div class="champsBarDroit" id="editorial"> &#149; <a href="http://orb-academic.org/index.php/journal-of-computer-science/about/editorialTeam">Journal Committee</a></div>      	
+ 		
+ 				<div class="champsBarDroit" id="indexig"> &#149; <a href="http://orb-academic.org/index.php/journal-of-computer-science/information/indexing">Abstracting and Indexing</a></div>
+                <div class="champsBarDroit" id="submission"> &#149; <a href="http://orb-academic.org/index.php/journal-of-computer-science/about/submissions">Submission</a></div>
+	
+        
+		<div class="champsBarDroit" id="peer">&#149; <a href="http://orb-academic.org/index.php/journal-of-computer-science/information/peerReviewProcess">Peer Review Process</a></div>
+
+				<div class="champsBarDroit" id="auteur">&#149; <a href="http://orb-academic.org/index.php/journal-of-computer-science/information/authors">For Authors</a></div>
+
+				<div class="champsBarDroit" id="reviewer">&#149; <a href="http://orb-academic.org/index.php/journal-of-computer-science/information/reviewers">For Reviewers</a></div>		
+
+                <div class="champsBarDroit" id="contactUs">&#149; <a href="http://orb-academic.org/index.php/journal-of-computer-science/about/contact">Contact</a></div>
+		
+        <br>
+        <br>
+        <br>
+        <br>
+		
+		
+	</ul>
+</div>
+
+			</div>
+			</div>
+
+<div id="main">
+
+
+<h2>Login</h2>
+
+
+<div id="content">
+
+
+
+
+
+	<form id="signinForm" method="post" action="http://orb-academic.org/index.php/journal-of-computer-science/login/signIn">
+
+
+<input type="hidden" name="source" value="" />
+
+	<table id="signinTable" class="data" width="50%" align="center">
+	<tr>
+		<td class="label-log"><label for="loginUsername">Username</label></td> </tr>
+		<tr>
+		<td class="value"><input type="text" id="loginUsername" name="username" value=""  size="20" maxlength="32" class="login-input-user"/></td>
+	</tr>
+	<tr>
+		<td class="label-log"><label for="loginPassword">Password</label></td> </tr>
+		<tr>
+		<td class="value"><input type="password" id="loginPassword" name="password" value="" size="20" maxlength="32" class="pw-input-user" /></td>
+	</tr>
+		<tr valign="middle">
+		
+		<td class="label-log"><input type="checkbox" id="loginRemember" name="remember" value="1" /> <label for="loginRemember">Remember my username and password</label></td>
+	</tr>
+		<tr>
+		
+		<td><input type="submit" value="Login" class="buttonpers" /></td>
+	</tr>
+
+	 <tr> <td> &#187; <a href="http://orb-academic.org/index.php/journal-of-computer-science/user/register">Not a user? Register with this site</a> </td></tr> 	<tr> <td> &#187; <a href="http://orb-academic.org/index.php/journal-of-computer-science/login/lostPassword">Forgot your password?</a> </td> </tr>
+	</table>
+
+<script type="text/javascript">
+<!--
+	document.getElementById('loginUsername').focus();
+// -->
+</script>
+</form>
+
+	<br /><br />
+	ISSN: 2336-0984
+<!-- Google Analytics -->
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-46841413-1";
+urchinTracker();
+</script>
+<!-- /Google Analytics -->
+
+</div><!-- content -->
+</div><!-- main -->
+</div><!-- body -->
+
+
+
+</div><!-- container -->
+</body>
+</html>
+
