@@ -46,6 +46,10 @@ scorer = make_scorer(flat_f1_score, average='weighted')
 """ Default scorer for grid search. We're optimizing for F1. """
 
 
+_PRECISE_C1_C2 = 0.1655, 0.0236  # values found by randomized search
+_REALISTIC_C1_C2 = 0.247, 0.032  # values found by randomized search
+
+
 def train(annotations,
           use_precise_formtypes=True,
           optimize_hyperparameters_iters=0,
@@ -67,7 +71,7 @@ def train(annotations,
         else:
             form_types = np.asarray([a.type for a in annotations])
         # c1, c2 = 0.0223, 0.0033  # values found by randomized search
-        c1, c2 = 0.1655, 0.0236  # values found by randomized search
+        c1, c2 = _PRECISE_C1_C2
     else:
         log("Computing realistic form types")
         form_types = get_realistic_form_labels(
@@ -75,7 +79,7 @@ def train(annotations,
             n_folds=10,
             full_type_names=full_form_type_names
         )
-        c1, c2 = 0.247, 0.032  # values found by randomized search
+        c1, c2 = _REALISTIC_C1_C2
 
     log("Extracting features")
     X, y = get_Xy(
