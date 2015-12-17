@@ -36,6 +36,7 @@ MOCK_MODULES = [
     'sklearn.grid_search', 'sklearn.cross_validation',
     'tqdm', 'tabulate', 'numpy', 'scipy', 'scipy.stats',
     'pycrfsuite', 'sklearn_crfsuite', 'sklearn_crfsuite.metrics',
+    'lxml', 'lxml.html', 'lxml.html.clean',
 ]
 
 sys.modules.update((mod_name, Mock()) for mod_name in MOCK_MODULES)
