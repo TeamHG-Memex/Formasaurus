@@ -13,58 +13,47 @@ from formasaurus.utils import dependencies_string, at_root, thresholded
 DEFAULT_DATA_PATH = at_root('data')
 
 
-class FormClassifier(object):
+def extract_forms(tree_or_html, proba=False, threshold=0.05):
     """
-    Convenience wrapper for scikit-learn based form type detection model.
+    Given a lxml tree or HTML source code, return a list of
+    ``(form_elem, form_info)`` tuples. ``form_info`` dicts contain results
+    of :meth:`FormFieldClassifier.classify` or
+    :meth:`FormFieldClassifier.classify_proba` calls, depending on
+    ``proba`` parameter.
     """
-    def __init__(self, form_model=None, full_type_names=True):
-        self.model = form_model
-        self.full_type_names = full_type_names
+    return instance().extract_forms(tree_or_html,
+                                    proba=proba, threshold=threshold)
 
-    def classify(self, form):
-        """
-        Return form class.
-        ``form`` should be an lxml HTML <form> element.
-        """
-        return self.model.predict([form])[0]
 
-    def classify_proba(self, form, threshold=0.0):
-        """
-        Return form class.
-        ``form`` should be an lxml HTML <form> element.
-        """
-        probs = self.model.predict_proba([form])[0]
-        return self._probs2dict(probs, threshold)
+def classify(form):
+    """
+    Return ``{'form': 'type', 'fields': {'name': 'type', ...}}``
+    dict with form type and types of its visible submittable fields.
+    """
+    return instance().classify(form)
 
-    def train(self, annotations):
-        """ Train FormExtractor on a list of FormAnnotation objects. """
-        self.model = formtype_model.train(
-            annotations=annotations,
-            full_type_names=self.full_type_names,
-        )
 
-    def extract_forms(self, tree_or_html, proba=False, threshold=0.05):
-        """
-        Given a lxml tree or HTML source code, return a list of
-        ``(form_elem, form_info)`` tuples. ``form_info`` dicts contain results
-        of :meth:`classify` or :meth:`classify_proba`` calls, depending on
-        ``proba`` parameter.
-        """
-        forms = get_forms(load_html(tree_or_html))
-        if proba:
-            return [(form, self.classify_proba(form, threshold))
-                    for form in forms]
-        else:
-            return [(form, self.classify(form)) for form in forms]
+def classify_proba(form, threshold=0.0):
+    """
+    Return dict with probabilities of ``form`` and its fields belonging
+    to various form and field classes::
 
-    @property
-    def classes(self):
-        if self.model is None:
-            raise ValueError("FormExtractor is not trained")
-        return self.model.steps[-1][1].classes_
+        {
+            'form': {'type1': prob1, 'type2': prob2, ...},
+            'fields': {
+                'name': {'type1': prob1, 'type2': prob2, ...},
+                ...
+            }
+        }
 
-    def _probs2dict(self, probs, threshold):
-        return thresholded(dict(zip(self.classes, probs)), threshold)
+    ``form`` should be an lxml HTML <form> element.
+    Only classes with probability >= ``threshold`` are preserved.
+
+    """
+    return instance().classify_proba(
+        form=form,
+        threshold=threshold,
+    )
 
 
 class FormFieldClassifier(object):
@@ -164,7 +153,7 @@ class FormFieldClassifier(object):
                 }
             }
 
-         ``form`` should be an lxml HTML <form> element.
+        ``form`` should be an lxml HTML <form> element.
         Only classes with probability >= ``threshold`` are preserved.
         """
         form_types_proba = self.form_classifier.classify_proba(form, threshold)
@@ -208,45 +197,59 @@ class FormFieldClassifier(object):
         return at_root(path)
 
 
-def extract_forms(tree_or_html, proba=False, threshold=0.05):
+class FormClassifier(object):
     """
-    Given a lxml tree or HTML source code, return a list of
-    ``(form_elem, form_info)`` tuples. ``form_info`` dicts contain results
-    of :meth:`classify` or :meth:`classify_proba`` calls, depending on
-    ``proba`` parameter.
+    Convenience wrapper for scikit-learn based form type detection model.
     """
-    return instance().extract_forms(tree_or_html,
-                                    proba=proba, threshold=threshold)
+    def __init__(self, form_model=None, full_type_names=True):
+        self.model = form_model
+        self.full_type_names = full_type_names
 
+    def classify(self, form):
+        """
+        Return form class.
+        ``form`` should be an lxml HTML <form> element.
+        """
+        return self.model.predict([form])[0]
 
-def classify(form):
-    """
-    Return ``{'form': 'type', 'fields': {'name': 'type', ...}}``
-    dict with form type and types of its visible submittable fields.
-    """
-    return instance().classify(form)
+    def classify_proba(self, form, threshold=0.0):
+        """
+        Return form class.
+        ``form`` should be an lxml HTML <form> element.
+        """
+        probs = self.model.predict_proba([form])[0]
+        return self._probs2dict(probs, threshold)
 
+    def train(self, annotations):
+        """ Train FormExtractor on a list of FormAnnotation objects. """
+        self.model = formtype_model.train(
+            annotations=annotations,
+            full_type_names=self.full_type_names,
+        )
 
-def classify_proba(form, threshold=0.0):
-    """
-    Return dict with probabilities of ``form`` and its fields belonging
-    to various form and field classes::
+    def extract_forms(self, tree_or_html, proba=False, threshold=0.05):
+        """
+        Given a lxml tree or HTML source code, return a list of
+        ``(form_elem, form_info)`` tuples. ``form_info`` dicts contain results
+        of :meth:`classify` or :meth:`classify_proba`` calls, depending on
+        ``proba`` parameter.
+        """
+        forms = get_forms(load_html(tree_or_html))
+        if proba:
+            return [(form, self.classify_proba(form, threshold))
+                    for form in forms]
+        else:
+            return [(form, self.classify(form)) for form in forms]
 
-        {
-            'form': {'type1': prob1, 'type2': prob2, ...},
-            'fields': {
-                'name': {'type1': prob1, 'type2': prob2, ...},
-                ...
-            }
-        }
+    @property
+    def classes(self):
+        if self.model is None:
+            raise ValueError("FormExtractor is not trained")
+        return self.model.steps[-1][1].classes_
 
-     ``form`` should be an lxml HTML <form> element.
-    Only classes with probability >= ``threshold`` are preserved.
-    """
-    return instance().classify_proba(
-        form=form,
-        threshold=threshold,
-    )
+    def _probs2dict(self, probs, threshold):
+        return thresholded(dict(zip(self.classes, probs)), threshold)
+
 
 
 _form_field_classifier = None

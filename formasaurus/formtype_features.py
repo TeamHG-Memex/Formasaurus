@@ -11,7 +11,14 @@ import collections
 from six.moves.urllib import parse as urlparse
 
 import lxml.html
-from sklearn.base import BaseEstimator, TransformerMixin
+
+try:
+    from sklearn.base import BaseEstimator, TransformerMixin
+except ImportError:
+    # for docs
+    class BaseEstimator(object): pass
+    class TransformerMixin(object): pass
+
 
 from .utils import add_scheme_if_missing
 
@@ -57,7 +64,10 @@ class FormElements(BaseFormFeatureExtractor):
 
 
 class Bias(BaseFormFeatureExtractor):
-    """ The same as clf.intercept_ """
+    """
+    The same as ``clf.intercept_``, but with regularization applied.
+    Used mostly for debugging.
+    """
     def get_form_features(self, form):
         return {'bias': 1}
 

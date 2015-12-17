@@ -1,4 +1,3 @@
-===========
 Formasaurus
 ===========
 
@@ -18,7 +17,6 @@ Formasaurus
    :target: http://formasaurus.readthedocs.org/en/latest/?badge=latest
    :alt: Documentation
 
-
 Formasaurus is a Python package that tells you the type of an HTML form
 and its fields using machine learning.
 
@@ -28,4 +26,20 @@ is a password field and which is a search query, etc.
 
 License is MIT.
 
-Check `docs <http://formasaurus.readthedocs.org/>`_ for more.
+.. toctree::
+   :maxdepth: 2
+
+   install
+   usage
+   howitworks
+   api
+   contributing
+   changes
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
+

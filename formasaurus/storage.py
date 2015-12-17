@@ -32,6 +32,7 @@ _FormAnnotation = collections.namedtuple(
 )
 
 class FormAnnotation(_FormAnnotation):
+    """ Annotated HTML form """
     @property
     def url(self):
         return self.info['url']
@@ -182,7 +183,7 @@ class Storage(object):
 
     def get_field_schema(self):
         """
-        Return AnnotationSchema instance. `r.types` is an
+        Return :class:`AnnotationSchema` instance. `r.types` is an
         OrderedDict with field type names {full_name: short_name};
         `r.types_inv` is a {short_name: full_name} dict;
         `r.na_value` is a short name of type name used for unannotated fields.
@@ -191,7 +192,7 @@ class Storage(object):
 
     def get_form_schema(self):
         """
-        Return AnnotationSchema instance. `r.types` is an
+        Return :class:`AnnotationSchema` instance. `r.types` is an
         OrderedDict with form type names {full_name: short_name};
         `r.types_inv` is a {short_name: full_name} dict;
         `r.na_value` is a short name of type name used for unannotated forms;

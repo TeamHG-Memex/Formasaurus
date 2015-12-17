@@ -30,7 +30,7 @@ parser = lxml.html.HTMLParser(encoding='utf8')
 def load_html(tree_or_html, base_url=None):
     """
     Parse HTML data to a lxml tree.
-     ``tree_or_html`` must be either unicode or utf8-encoded
+    ``tree_or_html`` must be either unicode or utf8-encoded
     (even if original page declares a different encoding).
 
     If ``tree_or_html`` is not a string then it is returned as-is.

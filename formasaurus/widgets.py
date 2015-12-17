@@ -5,7 +5,6 @@ IPython widgets for data annotation.
 from ipywidgets import widgets
 from IPython.display import display
 
-from formasaurus import annotation
 from formasaurus.html import (
     get_cleaned_form_html,
     html_escape,
@@ -14,7 +13,122 @@ from formasaurus.html import (
     get_field_names,
     get_fields_to_annotate
 )
-from formasaurus.utils import inverse_mapping
+from formasaurus.utils import inverse_mapping, download
+
+
+def AddPageWidget(storage):
+    """
+    Widget used to add a new web page to dataset.
+    """
+    url_field = widgets.Text(description='URL:', value='')
+    fetch_btn = widgets.Button(description='Add')
+
+    def on_submit(_):
+        url = url_field.value
+        html = download(url)
+        path = storage.add_result(html, url, add_empty=False)
+        if path is None:
+            print("No forms at ", url)
+        else:
+            print("Added:", path, url)
+        url_field.value = ""
+
+    fetch_btn.on_click(on_submit)
+    url_field.on_submit(on_submit)
+    box = widgets.HBox([url_field, fetch_btn], padding=4)
+    display(box)
+
+
+def MultiFormAnnotator(annotations, form_types, field_types,
+                       annotate_fields=True, annotate_types=True,
+                       save_func=None):
+    """
+    A widget with a paginator for annotating multiple forms.
+    """
+    back, forward, slider = get_pager_elements(0, len(annotations) - 1)
+    rendered = {}
+
+    def render(i):
+        widget = FormAnnotator(
+            ann=annotations[i],
+            form_types=form_types,
+            field_types=field_types,
+            annotate_fields=annotate_fields,
+            annotate_types=annotate_types,
+        )
+        return widgets.VBox([
+            widgets.HBox([back, forward, slider]),
+            widget
+        ])
+
+    def on_change(name, value):
+        for i in rendered:
+            rendered[i].close()
+
+        if value not in rendered:
+            rendered[value] = render(value)
+        else:
+            rendered[value].open()
+
+        if save_func:
+            save_func()
+
+        display(rendered[value])
+
+    slider.on_trait_change(on_change, 'value')
+    on_change('value', slider.value)
+
+
+def FormAnnotator(ann, form_types, field_types, annotate_fields=True,
+                  annotate_types=True, max_fields=80):
+    """
+    Widget for annotating a single HTML form.
+    """
+    assert annotate_fields or annotate_types
+    form_types_inv = inverse_mapping(form_types)
+
+    children = []
+
+    if annotate_types:
+        children += [FormTypeSelect(ann, form_types)]
+
+    tpl = """
+    <h4>
+        {tp} <a href='{url}'>{url}</a>
+        <small>{key} #{index}</small>
+    </h4>
+    """
+    header = widgets.HTML(tpl.format(
+        url=ann.info['url'],
+        index=ann.index,
+        key=ann.key,
+        tp=form_types_inv.get(ann.type, '?')
+    ))
+    children += [header]
+
+    if annotate_fields:
+        pages = []
+        names = get_field_names(get_fields_to_annotate(ann.form))
+        if len(names) > max_fields:
+            children += [
+                widgets.HTML("<h4>Too many fields ({})</h4>".format(len(names)))
+            ]
+        else:
+            for name in names:
+                field_type_select = FieldTypeSelect(ann, name, field_types)
+                html_view = HtmlView(ann.form, name)
+                page = widgets.Box(children=[field_type_select, html_view])
+                pages.append(page)
+
+            field_tabs = widgets.Tab(children=pages, padding=4)
+            for idx, name in enumerate(names):
+                field_tabs.set_title(idx, name)
+
+            children += [field_tabs]
+    else:
+        children += [HtmlView(ann.form)]
+
+    return widgets.VBox(children, padding=8)
 
 
 def FormTypeSelect(ann, form_types):
@@ -100,58 +214,6 @@ def HtmlView(form, field_name=None):
     return widgets.VBox([form_display, form_raw])
 
 
-def FormAnnotator(ann, form_types, field_types, annotate_fields=True,
-                  annotate_types=True, max_fields=80):
-    """
-    Widget for annotating an HTML form.
-    """
-    assert annotate_fields or annotate_types
-    form_types_inv = inverse_mapping(form_types)
-
-    children = []
-
-    if annotate_types:
-        children += [FormTypeSelect(ann, form_types)]
-
-    tpl = """
-    <h4>
-        {tp} <a href='{url}'>{url}</a>
-        <small>{key} #{index}</small>
-    </h4>
-    """
-    header = widgets.HTML(tpl.format(
-        url=ann.info['url'],
-        index=ann.index,
-        key=ann.key,
-        tp=form_types_inv.get(ann.type, '?')
-    ))
-    children += [header]
-
-    if annotate_fields:
-        pages = []
-        names = get_field_names(get_fields_to_annotate(ann.form))
-        if len(names) > max_fields:
-            children += [
-                widgets.HTML("<h4>Too many fields ({})</h4>".format(len(names)))
-            ]
-        else:
-            for name in names:
-                field_type_select = FieldTypeSelect(ann, name, field_types)
-                html_view = HtmlView(ann.form, name)
-                page = widgets.Box(children=[field_type_select, html_view])
-                pages.append(page)
-
-            field_tabs = widgets.Tab(children=pages, padding=4)
-            for idx, name in enumerate(names):
-                field_tabs.set_title(idx, name)
-
-            children += [field_tabs]
-    else:
-        children += [HtmlView(ann.form)]
-
-    return widgets.VBox(children, padding=8)
-
-
 def get_pager_elements(min, max):
     """
     Return (back, forward, slider) widgets.
@@ -173,65 +235,3 @@ def get_pager_elements(min, max):
 
     return back, forward, slider
 
-
-def MultiFormAnnotator(annotations, form_types, field_types,
-                       annotate_fields=True, annotate_types=True,
-                       save_func=None):
-    """
-    A widget with a paginator for annotating multiple forms.
-    """
-    back, forward, slider = get_pager_elements(0, len(annotations) - 1)
-    rendered = {}
-
-    def render(i):
-        widget = FormAnnotator(
-            ann=annotations[i],
-            form_types=form_types,
-            field_types=field_types,
-            annotate_fields=annotate_fields,
-            annotate_types=annotate_types,
-        )
-        return widgets.VBox([
-            widgets.HBox([back, forward, slider]),
-            widget
-        ])
-
-    def on_change(name, value):
-        for i in rendered:
-            rendered[i].close()
-
-        if value not in rendered:
-            rendered[value] = render(value)
-        else:
-            rendered[value].open()
-
-        if save_func:
-            save_func()
-
-        display(rendered[value])
-
-    slider.on_trait_change(on_change, 'value')
-    on_change('value', slider.value)
-
-
-def AddPageWidget(storage):
-    """
-    Widget used to add a new web page to dataset.
-    """
-    url_field = widgets.Text(description='URL:', value='')
-    fetch_btn = widgets.Button(description='Add')
-
-    def on_submit(_):
-        url = url_field.value
-        html = annotation.download(url)
-        path = storage.add_result(html, url, add_empty=False)
-        if path is None:
-            print("No forms at ", url)
-        else:
-            print("Added:", path, url)
-        url_field.value = ""
-
-    fetch_btn.on_click(on_submit)
-    url_field.on_submit(on_submit)
-    box = widgets.HBox([url_field, fetch_btn], padding=4)
-    display(box)

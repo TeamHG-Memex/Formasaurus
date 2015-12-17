@@ -10,4 +10,5 @@ htmlcov
 .coverage
 .joblib
 .cache
+docs/_build
 

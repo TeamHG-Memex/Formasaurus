@@ -1,0 +1,6 @@
+# requirements file for readthedocs.org
+tqdm >= 2.0
+tabulate >= 0.7.5
+docopt
+tldextract
+requests
