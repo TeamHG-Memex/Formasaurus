@@ -26,15 +26,23 @@ setup(
         "tldextract",
         "docopt",
         "six",
-        "sklearn-crfsuite >= 0.2",
         "requests",
     ],
     package_data={
         'formasaurus': ['data/index.json', 'data/html/*.html'],
     },
     extras_require={
-        'with-deps': ['scikit-learn >= 0.17', 'scipy', 'pandas', 'lxml'],
-        'annotation': ['ipython[notebook] >= 4.0', 'ipywidgets'],
+        'with-deps': [
+            'scikit-learn >= 0.17',
+            'scipy',
+            'pandas',
+            'lxml',
+            'sklearn-crfsuite >= 0.2',
+        ],
+        'annotation': [
+            'ipython[notebook] >= 4.0',
+            'ipywidgets'
+        ],
     },
     entry_points={
         'console_scripts': ['formasaurus = formasaurus.__main__:main']
