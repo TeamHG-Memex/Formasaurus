@@ -226,6 +226,8 @@ def get_model(use_precise_form_types=True):
 def print_classification_report(annotations, n_folds=10, model=None):
     """ Evaluate model, print classification report """
     if model is None:
+        # FIXME: we're overfitting on hyperparameters - they should be chosen
+        # using inner cross-validation, not set to fixed values beforehand.
         model = get_model(use_precise_form_types=True)
 
     annotations = [a for a in annotations if a.fields_annotated]
@@ -258,4 +260,3 @@ def print_classification_report(annotations, n_folds=10, model=None):
             sequence_accuracy_score(y, y_pred) * 100
         )
     )
-

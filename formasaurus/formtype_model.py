@@ -162,6 +162,8 @@ def get_realistic_form_labels(annotations, n_folds=10, model=None,
 def print_classification_report(annotations, n_folds=10, model=None):
     """ Evaluate model, print classification report """
     if model is None:
+        # FIXME: we're overfitting on hyperparameters - they should be chosen
+        # using inner cross-validation, not set to fixed values beforehand.
         model = get_model()
 
     X, y = get_Xy(annotations, full_type_names=True)
