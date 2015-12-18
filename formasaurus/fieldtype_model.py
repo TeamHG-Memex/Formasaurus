@@ -31,6 +31,7 @@ import scipy.stats
 import numpy as np
 from sklearn.grid_search import RandomizedSearchCV
 from sklearn.metrics import make_scorer
+from sklearn.cross_validation import cross_val_predict
 from sklearn_crfsuite import CRF
 from sklearn_crfsuite.metrics import flat_f1_score
 
@@ -38,7 +39,6 @@ from formasaurus import formtype_model
 from formasaurus.html import get_fields_to_annotate, get_text_around_elems
 from formasaurus.text import (normalize, tokenize, ngrams, number_pattern,
     token_ngrams)
-from formasaurus.utils import select_by_index
 from formasaurus.annotation import get_annotation_folds
 
 
@@ -152,15 +152,8 @@ def get_realistic_form_labels(annotations, n_folds=10, model=None,
     else:
         y = np.asarray([a.type for a in annotations])
 
-    y_pred = np.empty(len(annotations), dtype=object)
-
-    for idx_train, idx_test in get_annotation_folds(annotations, n_folds):
-        X_train = select_by_index(X, idx_train)
-        X_test = select_by_index(X, idx_test)
-        model.fit(X_train, y[idx_train])
-        y_pred[idx_test] = model.predict(X_test)
-
-    return y_pred
+    folds = get_annotation_folds(annotations, n_folds)
+    return cross_val_predict(model, X, y, cv=folds)
 
 
 def get_form_features(form, form_type, field_elems=None):

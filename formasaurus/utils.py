@@ -60,17 +60,6 @@ def inverse_mapping(dct):
     return {v:k for k,v in dct.items()}
 
 
-def select_by_index(arr, index):
-    """
-    Like numpy indexing, but for lists. This is for cases
-    conversion to numpy array is problematic.
-
-    >>> select_by_index(['a', 'b', 'c', 'd'], [0, 3])
-    ['a', 'd']
-    """
-    return [arr[i] for i in index]
-
-
 def at_root(*args):
     """ Return path relative to formasaurus source code """
     return os.path.join(os.path.dirname(__file__), *args)
