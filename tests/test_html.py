@@ -21,19 +21,22 @@ from formasaurus.html import (
 
 FORM1 = """
 <form>
-    <input name='foo'/>
-    <input type='text' value='hello'>
-    <input type='text' value='spam' name=''>
-    <select name='bar'>
-        <option value='hi'>hi</option>
-    </select>
-    <input type='radio' name='ch' value='v1'>
-    <input type='radio' name='ch' value='v2'>
-    <textarea name='baz'></textarea>
-    <input type='submit' name='go'>
-    <input type='button' name='cancel'>
-    <input type='hidden' name='spam' value='123'>
-    <input type='HIDDEN' name='spam2' value='123'>
+    <script>document.write("hello");</script>
+    <div class="form">
+        <input name='foo'/>
+        <input type='text' value='hello' style="width:300px">
+        <input type='text' value='spam' name=''>
+        <select name='bar'>
+            <option value='hi'>hi</option>
+        </select>
+        <input type='radio' name='ch' value='v1'>
+        <input type='radio' name='ch' value='v2'>
+        <textarea name='baz'></textarea>
+        <input type='submit' name='go'>
+        <input type='button' name='cancel'>
+        <input type='hidden' name='spam' value='123'>
+        <input type='HIDDEN' name='spam2' value='123'>
+    </div>
 </form>
 """
 
@@ -126,3 +129,28 @@ def test_get_text_around_elems():
     assert after[email] == '* Thanks!'
 
     get_text_around_elems(tree, []) == {}, {}
+
+
+def test_get_cleaned_form_html():
+    form = load_html(FORM1)
+    html = get_cleaned_form_html(form, human_readable=False)
+    assert 'style' not in html
+    assert 'script' not in html
+    assert 'div' in html
+
+    old_fields = [(f.name, f.value) for f in get_fields_to_annotate(form)]
+    new_fields = [(f.name, f.value)
+                  for f in get_fields_to_annotate(load_html(html))]
+    assert old_fields == new_fields
+
+def test_get_cleaned_form_html_human_readable():
+    form = load_html(FORM1)
+    html = get_cleaned_form_html(form, human_readable=True)
+    assert 'style' not in html
+    assert 'script' not in html
+    assert 'div' not in html
+
+    old_fields = [(f.name, f.value) for f in get_fields_to_annotate(form)]
+    new_fields = [(f.name, f.value)
+                  for f in get_fields_to_annotate(load_html(html))]
+    assert old_fields == new_fields
