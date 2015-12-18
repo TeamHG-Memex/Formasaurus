@@ -298,16 +298,6 @@ class Storage(object):
 
         return errors
 
-    def get_fingerprints(self, verbose=True, leave=False):
-        """ Return a dict with all fingerprints of the existing forms """
-        schema = self.get_form_schema()
-        annotations = self.iter_annotations(verbose=verbose, leave=leave)
-        return {
-            self.get_fingerprint(ann.form): ann.type
-            for ann in annotations
-            if ann.type != schema.na_value
-        }
-
     def get_fingerprint(self, form):
         """
         Return form fingerprint (a string that can be used for deduplication).
