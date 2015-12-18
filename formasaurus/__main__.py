@@ -26,18 +26,15 @@ To check the estimated quality of the default form and form fields model
 use "evaluate" command.
 """
 from __future__ import absolute_import, print_function
+import sys
 from collections import Counter
 
 import docopt
 
 import formasaurus
-from formasaurus.annotation import (
-    check_annotated_data,
-    print_form_html
-)
 from formasaurus.utils import download
 from formasaurus.storage import Storage
-from formasaurus.html import load_html
+from formasaurus.html import load_html, get_cleaned_form_html
 from formasaurus import formtype_model, fieldtype_model
 from formasaurus.classifiers import DEFAULT_DATA_PATH
 
@@ -45,16 +42,22 @@ from formasaurus.classifiers import DEFAULT_DATA_PATH
 def main():
     args = docopt.docopt(__doc__, version=formasaurus.__version__)
 
-    if args['--data-folder'] is None:
-        args['--data-folder'] = DEFAULT_DATA_PATH
+    data_folder = args['--data-folder']
+    if data_folder is None:
+        data_folder = DEFAULT_DATA_PATH
+
+    storage = Storage(data_folder)
 
     if args['check-data']:
-        check_annotated_data(args['--data-folder'])
+        errors = storage.check()
+        storage.print_form_type_counts(simplify=False)
+        storage.print_form_type_counts(simplify=True)
+        print("Errors:", errors)
+        if errors:
+            sys.exit(1)
 
     elif args['train']:
-        ex = formasaurus.FormFieldClassifier.trained_on(
-            data_folder=args["--data-folder"],
-        )
+        ex = formasaurus.FormFieldClassifier.trained_on(data_folder)
         ex.save(args["<modelfile>"])
 
     elif args['run']:
@@ -72,7 +75,7 @@ def main():
 
         for form, probs in result:
             print("-"*40)
-            print_form_html(form)
+            print(get_cleaned_form_html(form))
             print("")
             for tp, prob in Counter(probs).most_common():
                 tp_full = ex.form_types_inv[tp]
@@ -82,11 +85,10 @@ def main():
 
     elif args['evaluate']:
         n_folds = int(args["--cv"])
-        store = Storage(args["--data-folder"])
         annotations = list(
-            store.iter_annotations(verbose=True, leave=True,
-                                   simplify_form_types=True,
-                                   simplify_field_types=True)
+            storage.iter_annotations(verbose=True, leave=True,
+                                     simplify_form_types=True,
+                                     simplify_field_types=True)
         )
 
         if args['forms'] or args['all']:
