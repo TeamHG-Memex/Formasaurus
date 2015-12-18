@@ -29,7 +29,10 @@ setup(
         "requests",
     ],
     package_data={
-        'formasaurus': ['data/index.json', 'data/html/*.html'],
+        'formasaurus': [
+            'data/*.json',
+            'data/html/*.html'
+        ],
     },
     extras_require={
         'with-deps': [
