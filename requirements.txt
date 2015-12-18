@@ -7,7 +7,3 @@ sklearn-crfsuite >= 0.3.1
 
 # 0.17 is need for LabelKFold
 scikit-learn >= 0.17
-
-# "formtype/tool.py evaluate" command uses pandas for pretty printing;
-# if you don't plan to contribute to formtype library pandas is not needed.
-pandas

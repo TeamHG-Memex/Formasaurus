@@ -38,13 +38,12 @@ setup(
         'with-deps': [
             'scikit-learn >= 0.17',
             'scipy',
-            'pandas',
             'lxml',
             'sklearn-crfsuite >= 0.3.1',
         ],
         'annotation': [
             'ipython[notebook] >= 4.0',
-            'ipywidgets'
+            'ipywidgets',
         ],
     },
     entry_points={
