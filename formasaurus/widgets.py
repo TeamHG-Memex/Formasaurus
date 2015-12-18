@@ -206,8 +206,8 @@ def HtmlCode(form_html, field_name=None, max_height=None, **kwargs):
 
 def HtmlView(form, field_name=None):
     """ Show both rendered HTML and its simplified source code """
-    html_source = get_cleaned_form_html(form, for_source=True)
-    html_cleaned = get_cleaned_form_html(form, for_source=False)
+    html_source = get_cleaned_form_html(form, human_readable=True)
+    html_cleaned = get_cleaned_form_html(form, human_readable=False)
 
     form_display = RawHtml(html_cleaned, field_name, max_height=600)
     form_raw = HtmlCode(html_source, field_name, max_height=None)

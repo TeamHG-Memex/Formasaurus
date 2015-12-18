@@ -52,11 +52,11 @@ def get_forms(tree):
     return tree.xpath("//form")
 
 
-def get_cleaned_form_html(form, for_source=True):
+def get_cleaned_form_html(form, human_readable=True):
     """
     Return a cleaned up version of <form> HTML contents.
-    If `for_source` is True, HTML is cleaned to make
-    source code more readable; otherwise it is cleaned to make
+    If ``human_readable`` is True, HTML is cleaned to make
+    source code more readable for humans; otherwise it is cleaned to make
     rendered form more safe to render.
     """
     params = dict(
@@ -66,7 +66,7 @@ def get_cleaned_form_html(form, for_source=True):
         remove_unknown_tags=False,
     )
 
-    if for_source:
+    if human_readable:
         params.update(
             style=True,
             allow_tags={'form', 'input', 'textarea', 'label', 'option',
@@ -78,7 +78,7 @@ def get_cleaned_form_html(form, for_source=True):
     cleaner = Cleaner(**params)
     raw_html = lxml.html.tostring(form, pretty_print=True, encoding="unicode")
     html = cleaner.clean_html(raw_html)
-    if for_source:
+    if human_readable:
         lines = [line.strip() for line in html.splitlines(False) if line.strip()]
         html = "\n".join(lines)
     return html
