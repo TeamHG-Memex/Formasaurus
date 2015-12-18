@@ -39,7 +39,7 @@ def AddPageWidget(storage):
     display(box)
 
 
-def MultiFormAnnotator(annotations, form_types, field_types,
+def MultiFormAnnotator(annotations,
                        annotate_fields=True, annotate_types=True,
                        save_func=None):
     """
@@ -51,8 +51,6 @@ def MultiFormAnnotator(annotations, form_types, field_types,
     def render(i):
         widget = FormAnnotator(
             ann=annotations[i],
-            form_types=form_types,
-            field_types=field_types,
             annotate_fields=annotate_fields,
             annotate_types=annotate_types,
         )
@@ -79,18 +77,17 @@ def MultiFormAnnotator(annotations, form_types, field_types,
     on_change('value', slider.value)
 
 
-def FormAnnotator(ann, form_types, field_types, annotate_fields=True,
-                  annotate_types=True, max_fields=80):
+def FormAnnotator(ann, annotate_fields=True, annotate_types=True, max_fields=80):
     """
     Widget for annotating a single HTML form.
     """
     assert annotate_fields or annotate_types
-    form_types_inv = inverse_mapping(form_types)
+    form_types_inv = ann.form_schema.types_inv
 
     children = []
 
     if annotate_types:
-        children += [FormTypeSelect(ann, form_types)]
+        children += [FormTypeSelect(ann)]
 
     tpl = """
     <h4>
@@ -99,7 +96,7 @@ def FormAnnotator(ann, form_types, field_types, annotate_fields=True,
     </h4>
     """
     header = widgets.HTML(tpl.format(
-        url=ann.info['url'],
+        url=ann.url,
         index=ann.index,
         key=ann.key,
         tp=form_types_inv.get(ann.type, '?')
@@ -115,7 +112,7 @@ def FormAnnotator(ann, form_types, field_types, annotate_fields=True,
             ]
         else:
             for name in names:
-                field_type_select = FieldTypeSelect(ann, name, field_types)
+                field_type_select = FieldTypeSelect(ann, name)
                 html_view = HtmlView(ann.form, name)
                 page = widgets.Box(children=[field_type_select, html_view])
                 pages.append(page)
@@ -131,13 +128,14 @@ def FormAnnotator(ann, form_types, field_types, annotate_fields=True,
     return widgets.VBox(children, padding=8)
 
 
-def FormTypeSelect(ann, form_types):
+def FormTypeSelect(ann):
     """ Form type edit widget """
-    form_types_inv = inverse_mapping(form_types)
+
+    form_types = ann.form_schema.types
     tp = ann.info['forms'][ann.index]
     type_select = widgets.ToggleButtons(
         options=list(form_types.keys()),
-        value=form_types_inv[tp],
+        value=ann.form_schema.types_inv[tp],
         padding=4,
         description='form type:',
     )
@@ -149,17 +147,18 @@ def FormTypeSelect(ann, form_types):
     return type_select
 
 
-def FieldTypeSelect(ann, field_name, field_types):
+def FieldTypeSelect(ann, field_name):
     """ Form field type edit widget """
-    tp = ann.info['visible_html_fields'][ann.index][field_name]
-    field_types_inv = inverse_mapping(field_types)
+    field_types = ann.field_schema.types
+    field_types_inv = ann.field_schema.types_inv
+    tp = ann.fields[field_name]
     type_select = widgets.ToggleButtons(
         options=list(field_types.keys()),
         value=field_types_inv[tp],
     )
 
     def on_change(name, value):
-        ann.info['visible_html_fields'][ann.index][field_name] = field_types[value]
+        ann.fields[field_name] = field_types[value]
 
     type_select.on_trait_change(on_change, 'value')
     return type_select

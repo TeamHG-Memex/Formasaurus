@@ -18630,14 +18630,14 @@
     "html/yadman.net-1.html": {
         "url": "http://yadman.net/DefaultEn.aspx",
         "forms": [
-            "X"
+            "l"
         ],
         "visible_html_fields": [
             {
                 "cboVorod": "OS",
                 "chkRemember": "XX",
                 "cmdAzhansLogin": "XX",
-                "imgChange": "XX",
+                "imgChange": "Bs",
                 "mgPackage1": "XX",
                 "mgPackage2": "XX",
                 "mgPackage3": "XX",
