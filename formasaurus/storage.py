@@ -326,23 +326,6 @@ class Storage(object):
         with open(os.path.join(self.folder, path), "rb") as f:
             return load_html(f.read(), info["url"])
 
-    def get_Xy(self, drop_duplicates=True, verbose=False, leave=False,
-               simplify_form_types=True):
-        """
-        Return X, y with formtype training data.
-        """
-        return self.annotations_to_Xy(self.iter_annotations(
-            drop_duplicates=drop_duplicates,
-            verbose=verbose,
-            leave=leave,
-            simplify_form_types=simplify_form_types,
-        ))
-
-    @classmethod
-    def annotations_to_Xy(cls, annotations):
-        X, y, _, _, _, _, _ = zip(*annotations)
-        return X, y
-
     def check(self):
         """
         Check that items in storage are correct; print the problems found.
