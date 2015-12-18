@@ -7,12 +7,11 @@ from __future__ import absolute_import, division
 
 import numpy as np
 from formasaurus.annotation import get_annotation_folds
-from formasaurus.evaluation import print_confusion_matrix
 from sklearn.cross_validation import cross_val_predict
 
 from sklearn.feature_extraction import DictVectorizer
 from sklearn.feature_extraction.text import CountVectorizer, TfidfVectorizer
-from sklearn.metrics import f1_score, classification_report, accuracy_score
+from sklearn.metrics import classification_report, accuracy_score
 from sklearn.pipeline import make_pipeline, make_union
 from sklearn.linear_model import SGDClassifier, LogisticRegression
 from sklearn.svm import LinearSVC

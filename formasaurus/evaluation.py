@@ -3,17 +3,9 @@
 This module provides helper functions for evaluating formasaurus quality.
 """
 from __future__ import absolute_import, print_function
-from distutils.version import LooseVersion
-import sys
 
-import six
 import numpy as np
-import sklearn
-from sklearn.cross_validation import cross_val_score
-from sklearn.metrics import classification_report, confusion_matrix
-
-
-SKLEARN_VERSION = LooseVersion(sklearn.__version__)
+from sklearn.metrics import confusion_matrix
 
 
 def print_sparsity(clf):
@@ -47,50 +39,3 @@ def print_confusion_matrix(y_test, y_pred, class_labels=None, ipython=False):
         display(df)
     else:
         print(df)
-
-
-
-def get_informative_features(vectorizers, clf, class_labels, N):
-    """
-    Return text with features with the highest absolute coefficient
-    values, per class.
-    """
-    feature_names = []
-    for vec_name, vec in vectorizers:
-        feature_names.extend(
-            "%30s  %s" % (vec_name, name) for name in vec.get_feature_names()
-        )
-    features_by_class = []
-    for i, class_label in enumerate(class_labels):
-        topN = np.argsort(clf.coef_[i])[-N:]
-        bottomN = np.argsort(clf.coef_[i])[:N]
-        res = []
-
-        for j in reversed(topN):
-            coef = clf.coef_[i][j]
-            if coef > 0:
-                res.append("+%0.4f: %s" % (coef, feature_names[j]))
-
-        if (len(topN) >= N) or (len(bottomN) >= N):
-            res.append("   ...")
-
-        for j in reversed(bottomN):
-            coef = clf.coef_[i][j]
-            if coef < 0:
-                res.append("%0.4f: %s" % (coef, feature_names[j]))
-        features_by_class.append((class_label, '\n'.join(res)))
-    return features_by_class
-
-
-def print_informative_features(features, clf, top, classes=None, class_map=None):
-    vectorizers = [(name, vec) for (name, fe, vec) in features]
-    feat_info = get_informative_features(vectorizers, clf, clf.classes_, top)
-    for cls, report in feat_info:
-        if classes is not None and cls not in classes:
-            continue
-        if class_map is not None:
-            print(class_map[cls])
-        else:
-            print(cls)
-        print(report)
-        print("-"*80)
