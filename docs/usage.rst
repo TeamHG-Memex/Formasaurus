@@ -98,16 +98,29 @@ have the tree loaded (e.g. with Scrapy).
 Form Types
 ----------
 
-By default, Formasaurus detects these form types:
+Formasaurus detects these form types::
 
-* ``search``
-* ``login``
-* ``registration``
-* ``password/login recovery``
-* ``contact/comment``
-* ``join mailing list``
-* ``order/add to cart``
-* all other forms are classified as ``other``.
+                             precision    recall  f1-score   support
+
+                     search       0.91      0.96      0.94       364
+                      login       0.96      0.96      0.96       221
+               registration       0.97      0.86      0.91       153
+    password/login recovery       0.88      0.88      0.88        95
+            contact/comment       0.87      0.93      0.90       120
+          join mailing list       0.90      0.89      0.90       107
+          order/add to cart       0.95      0.66      0.78        62
+                      other       0.67      0.70      0.69       122
+
+                avg / total       0.90      0.90      0.89      1244
+
+    89.5% forms are classified correctly.
+
+Quality is estimated based on cross-validation results:
+all annotated data is split into 20 folds, then model is trained on 19 folds
+and tries to predict form types in the remaining fold. This is repeated to get
+predictions for the whole dataset.
+
+See also: https://en.wikipedia.org/wiki/Precision_and_recall
 
 Field Types
 -----------
@@ -164,3 +177,61 @@ By deafult, Formasaurus detects these field types:
 * ``other number``
 * ``other read-only`` - field with information user shouldn't change
 * all other fields are classified as ``other``.
+
+Quality estimates (based on 20-fold cross-validation)::
+
+                                  precision    recall  f1-score   support
+
+                        username       0.81      0.91      0.85       187
+                        password       0.99      0.99      0.99       338
+           password confirmation       0.96      0.99      0.97        97
+                           email       0.94      0.97      0.95       544
+              email confirmation       0.96      0.85      0.90        26
+               username or email       0.82      0.41      0.55        34
+                         captcha       0.84      0.82      0.83        83
+                        honeypot       0.17      0.06      0.08        18
+                TOS confirmation       0.81      0.50      0.62        84
+     receive emails confirmation       0.36      0.59      0.45        83
+            remember me checkbox       0.94      1.00      0.97       117
+                   submit button       0.96      0.97      0.96       334
+                   cancel button       0.86      0.60      0.71        10
+              reset/clear button       1.00      0.83      0.91        12
+                      first name       0.92      0.86      0.89        95
+                       last name       0.88      0.85      0.86        93
+                     middle name       1.00      0.67      0.80         6
+                       full name       0.74      0.82      0.78       120
+               organization name       0.81      0.43      0.57        30
+                          gender       0.98      0.80      0.88        75
+                       time zone       1.00      0.71      0.83         7
+                             DST       1.00      1.00      1.00         5
+                         country       0.85      0.72      0.78        47
+                            city       0.95      0.68      0.79        53
+                           state       1.00      0.63      0.77        38
+                         address       0.75      0.64      0.69        84
+                     postal code       0.95      0.79      0.87        78
+                           phone       0.83      0.85      0.84       102
+                             fax       1.00      1.00      1.00         8
+                             url       0.88      0.66      0.75        32
+                          OpenID       1.00      0.75      0.86         4
+                   about me text       0.50      0.33      0.40        12
+                    comment text       0.86      0.93      0.89       121
+        comment title or subject       0.67      0.45      0.53       121
+               security question       1.00      0.44      0.62         9
+     answer to security question       0.80      0.57      0.67         7
+                    search query       0.89      0.95      0.92       350
+    search category / refinement       0.91      0.87      0.89       376
+                product quantity       0.98      0.84      0.90        55
+                    style select       0.93      1.00      0.97        14
+                  sorting option       0.87      0.50      0.63        26
+                    other number       0.27      0.15      0.19        27
+                       full date       0.47      0.35      0.40        20
+                             day       0.96      0.88      0.92        25
+                           month       0.96      0.89      0.92        27
+                            year       0.97      0.88      0.92        34
+                 other read-only       1.00      0.42      0.59        24
+                           other       0.65      0.78      0.71       710
+
+                     avg / total       0.85      0.84      0.83      4802
+
+    83.7% fields are classified correctly.
+    All fields are classified correctly in 75.3% forms.
