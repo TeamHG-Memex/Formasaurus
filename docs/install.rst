@@ -22,9 +22,8 @@ its other dependencies run
 
     pip install formasaurus[with-deps]
 
-These packages may require extra steps to install, so the command above
-may fail. In this case install dependencies manually, on by one
-(follow their install instructions),
-then run::
+These packages may require extra steps to install, so the command above may
+fail. In this case install dependencies manually, on by one (follow their
+install instructions), then run::
 
     pip install formasaurus

@@ -23,8 +23,15 @@ def test_check_data():
 
 
 def test_evaluate():
-    out = subprocess.check_output('formasaurus evaluate --cv 3', shell=True)
-    m = re.search(b"cross-validation F1: (\d.\d+)", out)
+    out = subprocess.check_output('formasaurus evaluate all --cv 3', shell=True)
+    m = re.search(b"(\d+.\d+)% forms are classified correctly", out)
     assert m
-    assert float(m.group(1)) > 0.8
+    assert float(m.group(1)) > 80
 
+    m = re.search(b"(\d+.\d+)% fields are classified correctly", out)
+    assert m
+    assert float(m.group(1)) > 70
+
+    m = re.search(b"All fields are classified correctly in (\d+.\d+)% forms", out)
+    assert m
+    assert float(m.group(1)) > 60

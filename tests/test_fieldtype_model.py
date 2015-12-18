@@ -2,24 +2,14 @@
 from __future__ import absolute_import, division
 
 import numpy as np
-from sklearn.metrics import accuracy_score
 from sklearn_crfsuite.metrics import flat_accuracy_score
 
 from formasaurus.fieldtype_model import (
-    get_realistic_form_labels,
     train,
     _PRECISE_C1_C2,
     _REALISTIC_C1_C2,
     get_Xy,
 )
-
-
-def test_get_realistic_formtypes(storage):
-    annotations = list(storage.iter_annotations())
-    y_true = [a.type_full for a in annotations]
-    y_pred = get_realistic_form_labels(annotations, n_folds=5)
-    score = accuracy_score(y_true, y_pred)
-    assert 0.7 < score < 0.98
 
 
 def test_training(storage, capsys):
@@ -31,7 +21,7 @@ def test_training(storage, capsys):
 
     crf = train(
         annotations=annotations,
-        use_precise_formtypes=False,
+        use_precise_form_types=False,
         optimize_hyperparameters_iters=10,
         full_form_type_names=False,
         full_field_type_names=False

@@ -69,7 +69,7 @@ Based on held-out dataset it looks like (1) produces better results.
 We need noisy form type labels anyways, to check prediction quality.
 To get these 'realistic' noisy form type labels we split data into 10 folds,
 and then for each fold we predict its labels using form type detector
-trained on the rest 9 folds - see :func:`~.get_realistic_form_labels`.
+trained on the rest 9 folds.
 
 .. _Conditional Random Field: https://en.wikipedia.org/wiki/Conditional_random_field
 

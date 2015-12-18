@@ -22,7 +22,7 @@ Based on held-out dataset it looks like (1) produces better results.
 We need noisy form type labels anyways, to check prediction quality.
 To get these 'realistic' noisy form type labels we split data into 10 folds,
 and then for each fold we predict its labels using form type detector
-trained on the rest 9 folds - see :func:`get_realistic_form_labels`.
+trained on the rest 9 folds.
 """
 from __future__ import absolute_import, division
 import warnings
@@ -33,7 +33,13 @@ from sklearn.grid_search import RandomizedSearchCV
 from sklearn.metrics import make_scorer
 from sklearn.cross_validation import cross_val_predict
 from sklearn_crfsuite import CRF
-from sklearn_crfsuite.metrics import flat_f1_score
+from sklearn_crfsuite.metrics import (
+    flat_f1_score,
+    flat_accuracy_score,
+    flat_classification_report,
+    sequence_accuracy_score
+)
+from sklearn_crfsuite.utils import flatten
 
 from formasaurus import formtype_model
 from formasaurus.html import get_fields_to_annotate, get_text_around_elems
@@ -42,16 +48,12 @@ from formasaurus.text import (normalize, tokenize, ngrams, number_pattern,
 from formasaurus.annotation import get_annotation_folds
 
 
-scorer = make_scorer(flat_f1_score, average='weighted')
-""" Default scorer for grid search. We're optimizing for F1. """
-
-
-_PRECISE_C1_C2 = 0.1655, 0.0236  # values found by randomized search
-_REALISTIC_C1_C2 = 0.247, 0.032  # values found by randomized search
+scorer = make_scorer(flat_f1_score, average='micro')
+""" Default scorer for grid search. We're optimizing for micro-averaged F1. """
 
 
 def train(annotations,
-          use_precise_formtypes=True,
+          use_precise_form_types=True,
           optimize_hyperparameters_iters=0,
           full_form_type_names=False,
           full_field_type_names=True,
@@ -64,22 +66,19 @@ def train(annotations,
     annotations = [a for a in annotations if a.fields_annotated]
     log("Training on {} forms".format(len(annotations)))
 
-    if use_precise_formtypes:
+    if use_precise_form_types:
         log("Using precise form types")
         if full_form_type_names:
             form_types = np.asarray([a.type_full for a in annotations])
         else:
             form_types = np.asarray([a.type for a in annotations])
-        # c1, c2 = 0.0223, 0.0033  # values found by randomized search
-        c1, c2 = _PRECISE_C1_C2
     else:
         log("Computing realistic form types")
-        form_types = get_realistic_form_labels(
+        form_types = formtype_model.get_realistic_form_labels(
             annotations=annotations,
             n_folds=10,
             full_type_names=full_form_type_names
         )
-        c1, c2 = _REALISTIC_C1_C2
 
     log("Extracting features")
     X, y = get_Xy(
@@ -88,7 +87,7 @@ def train(annotations,
         full_type_names=full_field_type_names,
     )
 
-    crf = CRF(all_possible_transitions=True, max_iterations=100, c1=c1, c2=c2)
+    crf = get_model(use_precise_form_types)
 
     if optimize_hyperparameters_iters != 0:
         if optimize_hyperparameters_iters < 50:
@@ -134,26 +133,6 @@ def get_Xy(annotations, form_types, full_type_names=False):
     else:
         y = [a.field_types for a in annotations]
     return X, y
-
-
-def get_realistic_form_labels(annotations, n_folds=10, model=None,
-                              full_type_names=True):
-    """
-    Return form type labels which form type detection model
-    is likely to produce.
-    """
-    if model is None:
-        model = formtype_model.get_model()
-
-    X = [a.form for a in annotations]
-
-    if full_type_names:
-        y = np.asarray([a.type_full for a in annotations])
-    else:
-        y = np.asarray([a.type for a in annotations])
-
-    folds = get_annotation_folds(annotations, n_folds)
-    return cross_val_predict(model, X, y, cv=folds)
 
 
 def get_form_features(form, form_type, field_elems=None):
@@ -227,3 +206,56 @@ def _elem_features(elem):
 
 def _elem_attr(elem, attr):
     return normalize(elem.get(attr, ''))
+
+
+_PRECISE_C1_C2 = 0.1655, 0.0236  # values found by randomized search
+_REALISTIC_C1_C2 = 0.247, 0.032  # values found by randomized search
+
+
+def get_model(use_precise_form_types=True):
+    """ Return default CRF model """
+    c1, c2 = _PRECISE_C1_C2 if use_precise_form_types else _REALISTIC_C1_C2
+    return CRF(
+        all_possible_transitions=True,
+        max_iterations=100,
+        c1=c1,
+        c2=c2
+    )
+
+
+def print_classification_report(annotations, n_folds=10, model=None):
+    """ Evaluate model, print classification report """
+    if model is None:
+        model = get_model(use_precise_form_types=True)
+
+    annotations = [a for a in annotations if a.fields_annotated]
+    form_types = formtype_model.get_realistic_form_labels(
+        annotations=annotations,
+        n_folds=n_folds,
+        full_type_names=False
+    )
+
+    X, y = get_Xy(
+        annotations=annotations,
+        form_types=form_types,
+        full_type_names=True,
+    )
+    cv = get_annotation_folds(annotations, n_folds=n_folds)
+    y_pred = cross_val_predict(model, X, y, cv=cv, n_jobs=-1)
+
+    all_labels = list(annotations[0].field_schema.types.keys())
+    labels = sorted(set(flatten(y_pred)), key=lambda k: all_labels.index(k))
+    print(flat_classification_report(y, y_pred, digits=2,
+                                     labels=labels, target_names=labels))
+
+    print(
+        "{:0.1f}% fields are classified correctly.".format(
+            flat_accuracy_score(y, y_pred) * 100
+        )
+    )
+    print(
+        "All fields are classified correctly in {:0.1f}% forms.".format(
+            sequence_accuracy_score(y, y_pred) * 100
+        )
+    )
+

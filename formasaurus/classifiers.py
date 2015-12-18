@@ -117,7 +117,7 @@ class FormFieldClassifier(object):
         print("Training field type detector...")
         self._field_model = fieldtype_model.train(
             annotations=annotations,
-            use_precise_formtypes=True,
+            use_precise_form_types=True,
             full_field_type_names=True,
             full_form_type_names=self.form_classifier.full_type_names,
             verbose=True,

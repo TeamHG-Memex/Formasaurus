@@ -5,8 +5,14 @@ form type detection model uses.
 """
 from __future__ import absolute_import, division
 
+import numpy as np
+from formasaurus.annotation import get_annotation_folds
+from formasaurus.evaluation import print_confusion_matrix
+from sklearn.cross_validation import cross_val_predict
+
 from sklearn.feature_extraction import DictVectorizer
 from sklearn.feature_extraction.text import CountVectorizer, TfidfVectorizer
+from sklearn.metrics import f1_score, classification_report, accuracy_score
 from sklearn.pipeline import make_pipeline, make_union
 from sklearn.linear_model import SGDClassifier, LogisticRegression
 from sklearn.svm import LinearSVC
@@ -125,9 +131,50 @@ def train(annotations, model=None, full_type_names=False):
     """ Train form type detection model on annotation data """
     if model is None:
         model = get_model()
-    X = [ann.form for ann in annotations]
-    if full_type_names:
-        y = [ann.type_full for ann in annotations]
-    else:
-        y = [ann.type for ann in annotations]
+    X, y = get_Xy(annotations, full_type_names)
     return model.fit(X, y)
+
+
+def get_Xy(annotations, full_type_names):
+    X = [a.form for a in annotations]
+
+    if full_type_names:
+        y = np.asarray([a.type_full for a in annotations])
+    else:
+        y = np.asarray([a.type for a in annotations])
+
+    return X, y
+
+
+def get_realistic_form_labels(annotations, n_folds=10, model=None,
+                              full_type_names=True):
+    """
+    Return form type labels which form type detection model
+    is likely to produce.
+    """
+    if model is None:
+        model = get_model()
+
+    X, y = get_Xy(annotations, full_type_names)
+    folds = get_annotation_folds(annotations, n_folds)
+    return cross_val_predict(model, X, y, cv=folds)
+
+
+def print_classification_report(annotations, n_folds=10, model=None):
+    """ Evaluate model, print classification report """
+    if model is None:
+        model = get_model()
+
+    X, y = get_Xy(annotations, full_type_names=True)
+    folds = get_annotation_folds(annotations, n_folds)
+    y_pred = cross_val_predict(model, X, y, cv=folds)
+
+    # hack to format report nicely
+    all_labels = list(annotations[0].form_schema.types.keys())
+    labels = sorted(set(y_pred), key=lambda k: all_labels.index(k))
+    print(classification_report(y, y_pred, digits=2,
+                                labels=labels, target_names=labels))
+
+    print("{:0.1f}% forms are classified correctly.".format(
+        accuracy_score(y, y_pred) * 100
+    ))

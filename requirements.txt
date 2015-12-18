@@ -3,7 +3,7 @@ docopt
 tqdm >= 2.0
 tldextract
 requests
-sklearn-crfsuite >= 0.2
+sklearn-crfsuite >= 0.3.1
 
 # 0.17 is need for LabelKFold
 scikit-learn >= 0.17

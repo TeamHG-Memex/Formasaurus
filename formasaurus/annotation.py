@@ -30,14 +30,6 @@ def print_form_html(form):
     print(get_cleaned_form_html(form))
 
 
-
-def print_form_types(form_types):
-    print("\nAllowed form types and their shortcuts:")
-    for full_name, shortcuts in form_types.items():
-        print("  %s %s" % (shortcuts, full_name))
-    print("")
-
-
 def get_annotation_folds(annotations, n_folds):
     """
     Return (train_indices, test_indices) folds iterator.
@@ -48,17 +40,3 @@ def get_annotation_folds(annotations, n_folds):
         labels=[get_domain(ann.url) for ann in annotations],
         n_folds=n_folds
     )
-
-
-def get_annotation_train_test_indices(annotations, n_folds=4):
-    """
-    Split annotations into train and test parts, return train and test indices.
-    The size of test part is approximately ``len(annotations)/n_folds``.
-    it is guaranteed forms from the same website can't be both
-    in train and test parts.
-    """
-    for idx_train, idx_test in get_annotation_folds(annotations, n_folds):
-        break
-    return idx_train, idx_test
-
-

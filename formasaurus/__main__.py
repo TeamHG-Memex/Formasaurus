@@ -7,14 +7,13 @@ Usage:
     formasaurus train <modelfile> [--data-folder <path>]
     formasaurus run <modelfile> <url> [--threshold <probability>]
     formasaurus check-data [--data-folder <path>]
-    formasaurus evaluate [--test-size <ratio>] [--cv <n_folds>] [--data-folder <path>]
+    formasaurus evaluate (forms|fields|all) [--cv <n_folds>] [--data-folder <path>]
     formasaurus -h | --help
     formasaurus --version
 
 Options:
     --data-folder <path>       path to the data folder
-    --test-size <ratio>        ratio of data to use for evaluation, from 0 to 1.0 [default: 0.25]
-    --cv <n_folds>             use <n_folds> for cross-validation [default: 10]
+    --cv <n_folds>             use <n_folds> for cross-validation [default: 20]
     --threshold <probability>  don't display predictions with probability below this threshold [default: 0.01]
 
 To train an extractor for HTML form classification use "train" command.
@@ -23,11 +22,10 @@ To classify forms from an URL using a saved extractor use "run" command.
 
 To check the storage for consistency and print some stats use "check-data" command.
 
-To check the expected quality of the default model trained on the
-training data provided use "evaluate" command.
+To check the estimated quality of the default form and form fields model
+use "evaluate" command.
 """
 from __future__ import absolute_import, print_function
-import os
 from collections import Counter
 
 import docopt
@@ -40,15 +38,15 @@ from formasaurus.annotation import (
 from formasaurus.utils import download
 from formasaurus.storage import Storage
 from formasaurus.html import load_html
-from formasaurus import evaluation, formtype_model
+from formasaurus import formtype_model, fieldtype_model
+from formasaurus.classifiers import DEFAULT_DATA_PATH
 
 
 def main():
     args = docopt.docopt(__doc__, version=formasaurus.__version__)
 
     if args['--data-folder'] is None:
-        # by default, use 'data' folder relative to this file
-        args['--data-folder'] = os.path.join(os.path.dirname(__file__), 'data')
+        args['--data-folder'] = DEFAULT_DATA_PATH
 
     if args['check-data']:
         check_annotated_data(args['--data-folder'])
@@ -84,24 +82,23 @@ def main():
 
     elif args['evaluate']:
         n_folds = int(args["--cv"])
-        ratio = float(args['--test-size'])
-
         store = Storage(args["--data-folder"])
-        schema = store.get_form_schema()
-        model = formtype_model.get_model()
+        annotations = list(
+            store.iter_annotations(verbose=True, leave=True,
+                                   simplify_form_types=True,
+                                   simplify_field_types=True)
+        )
 
-        annotations = store.iter_annotations(verbose=True, leave=True,
-                                             simplify_form_types=True)
-        X, y = zip(*((a.form, a.type) for a in annotations))
+        if args['forms'] or args['all']:
+            print("Evaluating form classifier...")
+            formtype_model.print_classification_report(annotations,
+                                                       n_folds=n_folds)
+            print("")
 
-        test_size = int(len(y) * ratio)
-        train_size = len(y) - test_size
-        X_train, X_test = X[:train_size], X[train_size:]
-        y_train, y_test = y[:train_size], y[train_size:]
-
-        evaluation.print_metrics(model, X, y, X_train, X_test, y_train, y_test,
-                                 ipython=False, cv=n_folds, short_matrix=True,
-                                 class_map=schema.types_inv)
+        if args['fields'] or args['all']:
+            print("Evaluating form field classifier...")
+            fieldtype_model.print_classification_report(annotations,
+                                                        n_folds=n_folds)
 
 
 if __name__ == '__main__':

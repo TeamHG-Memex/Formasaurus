@@ -37,7 +37,7 @@ setup(
             'scipy',
             'pandas',
             'lxml',
-            'sklearn-crfsuite >= 0.2',
+            'sklearn-crfsuite >= 0.3.1',
         ],
         'annotation': [
             'ipython[notebook] >= 4.0',
