@@ -35,6 +35,7 @@ MOCK_MODULES = [
     'sklearn.grid_search', 'sklearn.cross_validation',
     'tqdm', 'tabulate', 'numpy', 'scipy', 'scipy.stats',
     'pycrfsuite', 'sklearn_crfsuite', 'sklearn_crfsuite.metrics',
+    'sklearn_crfsuite.utils',
     'lxml', 'lxml.html', 'lxml.html.clean',
     'ipywidgets', 'IPython', 'IPython.display',
 ]
