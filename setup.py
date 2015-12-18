@@ -17,7 +17,7 @@ setup(
     author_email='kmike84@gmail.com',
     license='MIT license',
     long_description=open('README.rst').read() + "\n\n" + open('CHANGES.rst').read(),
-    description="HTML form type detector",
+    description="Formasaurus tells you the types of HTML forms and their fields using machine learning",
     url='https://github.com/TeamHG-Memex/Formasaurus',
     zip_safe=False,
     packages=['formasaurus'],
@@ -51,7 +51,7 @@ setup(
     },
 
     classifiers=[
-        'Development Status :: 3 - Alpha',
+        'Development Status :: 4 - Beta',
         'License :: OSI Approved :: MIT License',
         'Intended Audience :: Developers',
         'Operating System :: OS Independent',
