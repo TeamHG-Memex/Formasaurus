@@ -5,7 +5,7 @@ Formasaurus command-line utility.
 
 Usage:
     formasaurus train <modelfile> [--data-folder <path>]
-    formasaurus run <modelfile> <url> [--threshold <probability>]
+    formasaurus run <url> [modelfile] [--threshold <probability>]
     formasaurus check-data [--data-folder <path>]
     formasaurus evaluate (forms|fields|all) [--cv <n_folds>] [--data-folder <path>]
     formasaurus -h | --help
@@ -14,7 +14,7 @@ Usage:
 Options:
     --data-folder <path>       path to the data folder
     --cv <n_folds>             use <n_folds> for cross-validation [default: 20]
-    --threshold <probability>  don't display predictions with probability below this threshold [default: 0.01]
+    --threshold <probability>  don't display predictions with probability below this threshold [default: 0.05]
 
 To train an extractor for HTML form classification use "train" command.
 
@@ -73,13 +73,21 @@ def main():
             print("No forms found.")
             return
 
-        for form, probs in result:
-            print("-"*40)
+        for form, info in result:
+            print("\n")
+            print("="*60)
             print(get_cleaned_form_html(form))
-            print("")
-            for tp, prob in Counter(probs).most_common():
-                tp_full = ex.form_types_inv[tp]
-                print("%s %0.1f%%" % (tp_full, prob * 100), end='    ')
+            print("-"*60)
+            print("Form type:    ", end="")
+            for form_tp, prob in Counter(info['form']).most_common():
+                print("%s %0.1f%%" % (form_tp, prob * 100), end='    ')
+
+            print("\n\nField types:")
+            for field_name, probs in info['fields'].items():
+                print(field_name, end=':  ')
+                for field_tp, prob in Counter(probs).most_common():
+                    print("%s %0.1f%%" % (field_tp, prob * 100), end='  ')
+                print("")
 
             print("")
 
@@ -92,13 +100,13 @@ def main():
         )
 
         if args['forms'] or args['all']:
-            print("Evaluating form classifier...")
+            print("Evaluating form classifier...\n")
             formtype_model.print_classification_report(annotations,
                                                        n_folds=n_folds)
             print("")
 
         if args['fields'] or args['all']:
-            print("Evaluating form field classifier...")
+            print("Evaluating form field classifier...\n")
             fieldtype_model.print_classification_report(annotations,
                                                         n_folds=n_folds)
 

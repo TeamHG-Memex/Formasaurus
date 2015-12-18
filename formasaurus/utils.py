@@ -86,4 +86,5 @@ def download(url):
     """
     Download a web page from url, return its content as unicode.
     """
+    url = add_scheme_if_missing(url)
     return requests.get(url).text
