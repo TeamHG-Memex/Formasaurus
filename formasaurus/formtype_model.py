@@ -23,11 +23,6 @@ from formasaurus import formtype_features as features
 # (feature_name, form_transformer, vectorizer)
 FEATURES = [
     (
-        "bias",
-        features.Bias(),
-        DictVectorizer(),
-    ),
-    (
         "form elements",
         features.FormElements(),
         DictVectorizer()
@@ -118,9 +113,9 @@ def get_model(prob=True):
         #     random_state=0,
         #     fit_intercept=False,
         # )
-        clf = LogisticRegression(penalty='l2', C=5, fit_intercept=False)
+        clf = LogisticRegression(penalty='l2', C=5, fit_intercept=True)
     else:
-        clf = LinearSVC(C=0.5, random_state=0, fit_intercept=False)
+        clf = LinearSVC(C=0.5, random_state=0, fit_intercept=True)
 
     fe = _create_feature_union(FEATURES)
     return make_pipeline(fe, clf)
