@@ -13,27 +13,36 @@ from formasaurus.utils import dependencies_string, at_root, thresholded
 DEFAULT_DATA_PATH = at_root('data')
 
 
-def extract_forms(tree_or_html, proba=False, threshold=0.05):
+def extract_forms(tree_or_html, proba=False, threshold=0.05, fields=True):
     """
     Given a lxml tree or HTML source code, return a list of
-    ``(form_elem, form_info)`` tuples. ``form_info`` dicts contain results
-    of :meth:`FormFieldClassifier.classify` or
-    :meth:`FormFieldClassifier.classify_proba` calls, depending on
-    ``proba`` parameter.
+    ``(form_elem, form_info)`` tuples.
+
+    ``form_info`` dicts contain results of :meth:`classify` or
+    :meth:`classify_proba`` calls, depending on ``proba`` parameter.
+
+    When ``fields`` is False, field type information is not computed.
     """
-    return get_instance().extract_forms(tree_or_html,
-                                        proba=proba, threshold=threshold)
+    return get_instance().extract_forms(
+        tree_or_html=tree_or_html,
+        proba=proba,
+        threshold=threshold,
+        fields=fields,
+    )
 
 
-def classify(form):
+def classify(form, fields=True):
     """
     Return ``{'form': 'type', 'fields': {'name': 'type', ...}}``
     dict with form type and types of its visible submittable fields.
+
+    If ``fields`` argument is False, only information about form type is
+    returned: ``{'form': 'type'}``.
     """
-    return get_instance().classify(form)
+    return get_instance().classify(form, fields=fields)
 
 
-def classify_proba(form, threshold=0.0):
+def classify_proba(form, threshold=0.0, fields=True):
     """
     Return dict with probabilities of ``form`` and its fields belonging
     to various form and field classes::
@@ -49,10 +58,17 @@ def classify_proba(form, threshold=0.0):
     ``form`` should be an lxml HTML <form> element.
     Only classes with probability >= ``threshold`` are preserved.
 
+    If ``fields`` is False, only information about the form is returned::
+
+        {
+            'form': {'type1': prob1, 'type2': prob2, ...}
+        }
+
     """
     return get_instance().classify_proba(
         form=form,
         threshold=threshold,
+        fields=fields,
     )
 
 
@@ -123,24 +139,27 @@ class FormFieldClassifier(object):
             verbose=True,
         )
 
-    def classify(self, form):
+    def classify(self, form, fields=True):
         """
         Return ``{'form': 'type', 'fields': {'name': 'type', ...}}``
         dict with form type and types of its visible submittable fields.
+
+        If ``fields`` argument is False, only information about form type is
+        returned: ``{'form': 'type'}``.
         """
         form_type = self.form_classifier.classify(form)
-        field_elems = get_fields_to_annotate(form)
-        xseq = fieldtype_model.get_form_features(form, form_type, field_elems)
-        yseq = self._field_model.predict_single(xseq)
-        return {
-            'form': form_type,
-            'fields': {
+        res = {'form': form_type}
+        if fields:
+            field_elems = get_fields_to_annotate(form)
+            xseq = fieldtype_model.get_form_features(form, form_type, field_elems)
+            yseq = self._field_model.predict_single(xseq)
+            res['fields'] = {
                 elem.name: cls
                 for elem, cls in zip(field_elems, yseq)
             }
-        }
+        return res
 
-    def classify_proba(self, form, threshold=0.0):
+    def classify_proba(self, form, threshold=0.0, fields=True):
         """
         Return dict with probabilities of ``form`` and its fields belonging
         to various form and field classes::
@@ -155,27 +174,39 @@ class FormFieldClassifier(object):
 
         ``form`` should be an lxml HTML <form> element.
         Only classes with probability >= ``threshold`` are preserved.
+
+        If ``fields`` is False, only information about the form is returned::
+
+            {
+                'form': {'type1': prob1, 'type2': prob2, ...}
+            }
+
         """
         form_types_proba = self.form_classifier.classify_proba(form, threshold)
-        form_type = max(form_types_proba, key=lambda p: form_types_proba[p])
-        field_elems = get_fields_to_annotate(form)
-        xseq = fieldtype_model.get_form_features(form, form_type, field_elems)
-        yseq = self._field_model.predict_marginals_single(xseq)
+        res = {'form': form_types_proba}
 
-        return {
-            'form': form_types_proba,
-            'fields': {
+        if fields:
+            form_type = max(form_types_proba, key=lambda p: form_types_proba[p])
+            field_elems = get_fields_to_annotate(form)
+            xseq = fieldtype_model.get_form_features(form, form_type, field_elems)
+            yseq = self._field_model.predict_marginals_single(xseq)
+            res['fields'] = {
                 elem.name: thresholded(probs, threshold)
                 for elem, probs in zip(field_elems, yseq)
-            },
-        }
+            }
 
-    def extract_forms(self, tree_or_html, proba=False, threshold=0.05):
+        return res
+
+    def extract_forms(self, tree_or_html, proba=False, threshold=0.05,
+                      fields=True):
         """
         Given a lxml tree or HTML source code, return a list of
-        ``(form_elem, form_info)`` tuples. ``form_info`` dicts contain results
-        of :meth:`classify` or :meth:`classify_proba`` calls, depending on
-        ``proba`` parameter.
+        ``(form_elem, form_info)`` tuples.
+
+        ``form_info`` dicts contain results of :meth:`classify` or
+        :meth:`classify_proba`` calls, depending on ``proba`` parameter.
+
+        When ``fields`` is False, field type information is not computed.
         """
         if isinstance(tree_or_html, (six.string_types, bytes)):
             tree = load_html(tree_or_html)
@@ -183,10 +214,10 @@ class FormFieldClassifier(object):
             tree = tree_or_html
         forms = get_forms(tree)
         if proba:
-            return [(form, self.classify_proba(form, threshold))
+            return [(form, self.classify_proba(form, threshold, fields))
                     for form in forms]
         else:
-            return [(form, self.classify(form)) for form in forms]
+            return [(form, self.classify(form, fields)) for form in forms]
 
     @classmethod
     def _cached_model_path(cls):

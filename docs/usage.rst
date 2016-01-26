@@ -68,7 +68,16 @@ also looks similar to a login form (12%).
 we used 0.05 in this example. To get probabilities of all classes use
 ``threshold=0``.
 
-To classify individual forms use
+If field types are not needed you can speed up processing using
+``fields=False`` option. In this case `'fields'` results won't be computed:
+
+    >>> formasaurus.extract_forms(html, fields=False)
+    [(<Element form at 0x1150ba0e8>,
+      {'form': 'search'}),
+     (<Element form at 0x1150ba138>,
+      {'form': 'registration'})]
+
+To extract form and field types from individual form elements use
 :func:`formasaurus.classify <formasaurus.classifiers.classify>`
 or :func:`formasaurus.classify_proba <formasaurus.classifiers.classify_proba>`.
 They accept lxml <form> Elements. Let's load an HTML file using lxml:
@@ -91,9 +100,15 @@ and then classify the first form on this page:
       'q': {'search query': 0.9959819637966439}},
      'form': {'search': 0.98794025545508202}}
 
+``fields=False`` arguments works here as well:
+
+    >>> formasaurus.classify_proba(form, threshold=0.1, fields=False)
+    {'form': {'search': 0.98794025545508202}}
+
 In this example the data is loaded from an URL; of course, data may be
 loaded from a local file or from an in-memory object, or you may already
 have the tree loaded (e.g. with Scrapy).
+
 
 Form Types
 ----------
