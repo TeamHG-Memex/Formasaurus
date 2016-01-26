@@ -16,7 +16,7 @@ def test_extract_forms(tree):
 
 
 def test_extract_forms_only(tree):
-    ex = classifiers.instance()
+    ex = classifiers.get_instance()
     forms = ex.form_classifier.extract_forms(tree)
     assert len(forms) == 1
     assert forms[0][1] == 'login'

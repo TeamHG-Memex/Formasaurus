@@ -21,8 +21,8 @@ def extract_forms(tree_or_html, proba=False, threshold=0.05):
     :meth:`FormFieldClassifier.classify_proba` calls, depending on
     ``proba`` parameter.
     """
-    return instance().extract_forms(tree_or_html,
-                                    proba=proba, threshold=threshold)
+    return get_instance().extract_forms(tree_or_html,
+                                        proba=proba, threshold=threshold)
 
 
 def classify(form):
@@ -30,7 +30,7 @@ def classify(form):
     Return ``{'form': 'type', 'fields': {'name': 'type', ...}}``
     dict with form type and types of its visible submittable fields.
     """
-    return instance().classify(form)
+    return get_instance().classify(form)
 
 
 def classify_proba(form, threshold=0.0):
@@ -50,7 +50,7 @@ def classify_proba(form, threshold=0.0):
     Only classes with probability >= ``threshold`` are preserved.
 
     """
-    return instance().classify_proba(
+    return get_instance().classify_proba(
         form=form,
         threshold=threshold,
     )
@@ -254,7 +254,7 @@ class FormClassifier(object):
 
 _form_field_classifier = None
 
-def instance():
+def get_instance():
     """ Return a shared FormFieldClassifier instance """
     global _form_field_classifier
     if _form_field_classifier is None:
