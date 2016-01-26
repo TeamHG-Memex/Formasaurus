@@ -23,7 +23,7 @@ addons:
 install:
     - pip install -U pip tox codecov
 
-script: travis_wait 40 tox
+script: tox
 
 after_success:
     - codecov
