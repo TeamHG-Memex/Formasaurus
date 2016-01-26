@@ -6,8 +6,8 @@ Changes
 
 * ``fields=False`` argument is supported in ``formasaurus.extract_forms``,
   ``formasaurus.classify``, ``formasaurus.classify_proba`` functions and
-   in related ``FormFieldClassifier`` methods. It allows to avoid predicting
-   form field types if they are not needed.
+  in related ``FormFieldClassifier`` methods. It allows to avoid predicting
+  form field types if they are not needed.
 * ``formasaurus.classifiers.instance()`` is renamed to
   ``formasaurus.classifiers.get_instance()``.
 * Bias is no longer regularized for form type classifier.
