@@ -24,7 +24,7 @@ def AddPageWidget(storage):
     fetch_btn = widgets.Button(description='Add')
 
     def on_submit(_):
-        url = url_field.value
+        url = url_field.value.strip()
         html = download(url)
         path = storage.add_result(html, url, add_empty=False)
         if path is None:
