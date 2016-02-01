@@ -10,7 +10,7 @@
 <link rel="stylesheet" type="text/css" href="lib/css/style.css" />
 <link rel="shortcut icon" href="../images/favicon.ico" />
 
-<title>¾îº£½ºÆ® | ·Î±×ÀÎ</title>
+<title>어베스트 | 로그인</title>
 
 <!-- jQuery -->
 	<script type='text/javascript' src="lib/js/jquery-1.11.1.min.js"></script>
@@ -20,27 +20,27 @@
 			$('#Mail').focus();
 			$('#sendNum').click(function(e){
 				var adr = $('#Mail').val();
-				var num = 802719		//jQuery¿¡¼­ ¼­¹ö¿¡¼­ ÀúÀåÇÏ°í ÀÖ´Â key°ª ºÒ·¯¿À±â
+				var num = 902324		//jQuery에서 서버에서 저장하고 있는 key값 불러오기
 				var filter1 = /^(\w+)@(\w+)[.](\w+)$/;
 				var filter2 = /^(\w+)@(\w+)[.](\w+)[.](\w+)$/;
 				var filter3 = /^[a-z\d][\w\d_\.-]+@[a-z\d][\w\d-]+\.[a-z\.]{2,6}$/;
 			
 				if(adr.length<=0){
-					alert("ÀÌ¸ÞÀÏÀ» ÀÔ·ÂÇØÁÖ¼¼¿ä");
+					alert("이메일을 입력해주세요");
 					return false;
 				}
 				if(filter1.test(adr)!=true && filter2.test(adr)!=true &&  filter3.test(adr)!=true)	{
-					alert('ÀÌ¸ÞÀÏ Çü½Ä¿¡ ¸ÂÁö ¾Ê½À´Ï´Ù');
+					alert('이메일 형식에 맞지 않습니다');
 					return false;
 				}
 				
-				//jQueryÀÇ ajax¸¦ ÀÌ¿ëÇÏ¿© ÀÎÁõ ¹øÈ£ °ªÀ» ¼­¹ö¿¡ Àü¼Û.
+				//jQuery의 ajax를 이용하여 인증 번호 값을 서버에 전송.
 					$.ajax({
 						type: 'get',
 						url:'sendmail.asp',
 						data:{address:adr, key:num},
 						success: function(data){
-							alert("ÀÌ¸ÞÀÏ·Î ÀÎÁõ¹øÈ£¸¦ º¸³Â½À´Ï´Ù.");
+							alert("이메일로 인증번호를 보냈습니다.");
 					}
 				});
 			});	
@@ -49,28 +49,28 @@
 function infocheck() {
 	var email = document.user.Mail.value; 
 	var num = document.user.i_num.value;
-	var key = 802719
+	var key = 902324
 
 	if ( email.search(/(\S+)@(\S+)\.(\S+)/) == -1 ) {
-        	alert("E-mail Çü½ÄÀº 'account@[µµ¸ÞÀÎ.com]'°ú °°ÀÌ ÀÔ·ÂÇÏ¼¼¿ä."); 
+        	alert("E-mail 형식은 'account@[도메인.com]'과 같이 입력하세요."); 
         	document.user.Mail.focus(); 
         	return false;
 	}
-	//ÀÎÁõ¹øÈ£ 6ÀÚ¸® ÀÌÇÏÀÏ¶§ °æ°íÃ¢ÀÌ ¶ã ¼ö ÀÖµµ·Ï ±¸Çö.
+	//인증번호 6자리 이하일때 경고창이 뜰 수 있도록 구현.
 	if(num.length<6) {
-		alert("ÀÎÁõ ¹øÈ£ 6ÀÚ¸®¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä");
+		alert("인증 번호 6자리를 입력해주세요");
 		document.user.i_num.focus();
 		return false;
 	}
 	
 	if (document.user.Name.value.length < 2) {
-	 	alert("¼ºÇÔÀ» Á¤È®È÷ ÀÔ·ÂÇØ ÁÖ¼¼¿ä.");
+	 	alert("성함을 정확히 입력해 주세요.");
 	 	document.user.Name.focus();
 	  	return false;
 	}
 
 	if (document.user.Name.value.length > 30) {
-	  	alert("¼ºÇÔÀ» ÇÑ±Û 7ÀÚ ÀÌ³»·Î Àû¾î ÁÖ¼¼¿ä.");
+	  	alert("성함을 한글 7자 이내로 적어 주세요.");
 	  	document.user.Name.focus();
 	  	return false;
 	}
@@ -78,21 +78,21 @@ function infocheck() {
 	var eng_check =  /[`~!@#$%^&*|\\\'\";:\/?]/gi;
 	if (document.user.Name.value.search(eng_check)>=0)
 	{
-	alert("Æ¯¼ö¹®ÀÚ ¹× ¼ýÀÚ°¡ Æ÷ÇÔµÇ¾î ÀÖ½À´Ï´Ù.");
+	alert("특수문자 및 숫자가 포함되어 있습니다.");
 		return false;
 	}
 }
 
-/*ÀÌ ÇÔ¼ö´Â textbox¿¡¼­ °ªÀ» ¹ÞÀ» ¶§ ¼ýÀÚ¸¸ ¹Þ±â À§ÇÑ ÇÔ¼ö·Î windowÀÇ keyCode°ªÀ¸·Î ±¸ÇöÇÏ¿´´Ù.*/
+/*이 함수는 textbox에서 값을 받을 때 숫자만 받기 위한 함수로 window의 keyCode값으로 구현하였다.*/
 
 	function checkNum() {
 			var num = document.user.i_num.value;
-			var evCode = (window.netscape) ? Ev.which : event.keyCode;			// 8Àº ¡ç(¹é½ºÆäÀÌ½º), 9´Â TAB, 13Àº ENTER, 17Àº CTRL, 86Àº v, 33~40±îÁö´Â ¿· º¸Á¶ ¼ýÀÚÅ° 
+			var evCode = (window.netscape) ? Ev.which : event.keyCode;			// 8은 ←(백스페이스), 9는 TAB, 13은 ENTER, 17은 CTRL, 86은 v, 33~40까지는 옆 보조 숫자키 
 			if((evCode < 48 || evCode > 57) && (evCode < 96 || evCode > 105) && evCode !=8 && evCode!=9 && evCode!=13 && evCode!=17 && evCode!=86 && (evCode < 37 || evCode > 40)) {
 				if(window.netscape) {
 					Ev.preventDefault();
 				}else {
-					alert("¼ýÀÚ¸¸ ÀÔ·ÂÇÏ¼¼¿ä");
+					alert("숫자만 입력하세요");
 					num="";
 					document.user.i_num.focus();
 					event.returnValue = false;
@@ -116,7 +116,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
 
-<!--- ¾îº£½ºÆ® ¸ÞÀÎ ¸Þ´º¸¦ À§ÇÑ °÷ --->
+<!--- 어베스트 메인 메뉴를 위한 곳 --->
 <link	rel="stylesheet" type="text/css"  href="/common/css/menu_styles.css" />
 <script src="/common/js/menu_common.js" type="text/javascript"></script>
 
@@ -132,7 +132,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
 
-<!--·Ñ¿À¹ö ¿©±â¼­ ½ÃÀÛ -->
+<!--롤오버 여기서 시작 -->
 <script type="text/javascript">
 <!--
 function MM_swapImgRestore() { //v3.0
@@ -162,13 +162,13 @@ function MM_swapImage() { //v3.0
 
 
 
-<!--- ¾îº£½ºÆ® ¸ÞÀÎ ¸Þ´º¸¦ À§ÇÑ °÷ --->
+<!--- 어베스트 메인 메뉴를 위한 곳 --->
 <script type="text/javascript" src="/common/js/jquery.js"></script>
 <script type="text/javascript">
 	$(document).ready(function(){
 		var currentPosition = parseInt($("#slidemenu").css("top"));
 		$(window).scroll(function() {
-			var position = $(window).scrollTop(); // ÇöÀç ½ºÅ©·Ñ¹ÙÀÇ À§Ä¡°ªÀ» ¹ÝÈ¯ÇÕ´Ï´Ù.
+			var position = $(window).scrollTop(); // 현재 스크롤바의 위치값을 반환합니다.
 			$("#slidemenu").stop().animate({"top":position+currentPosition+"px"},1000);
 		});
 	});
@@ -180,7 +180,7 @@ function MM_swapImage() { //v3.0
 
 
 
-<!-- ·Ñ¿À¹ö ¿©±â±îÁö -->
+<!-- 롤오버 여기까지 -->
 
 <center>
 <table width=100% border=0 cellpadding=0 cellspacing=0><tr><td height=3 bgcolor=#ffffff></td></tr></table>
@@ -189,7 +189,7 @@ function MM_swapImage() { //v3.0
 	<td align=center>
 		<table width=960 cellpadding=0 cellspacing=0 border=0>
 		<tr>
-			<TD width=200 align=left><a href="http://www.avastkorea.com"><img src="/images/logo.png" alt="avast! ¾ÈÆ¼¹ÙÀÌ·¯½º"></a><br>
+			<TD width=200 align=left><a href="http://www.avastkorea.com"><img src="/images/logo.png" alt="avast! 안티바이러스"></a><br>
 			<!--shop.avastkorea.com-->
 			</TD>
 			<TD width=10></TD>
@@ -200,11 +200,11 @@ function MM_swapImage() { //v3.0
 					<td align=right>
 
 				
-					&nbsp;<a href="http://shop.avastkorea.com/login/"><span style="color:#f26522">·Î±×ÀÎ</span></a>&nbsp; | 
+					&nbsp;<a href="http://shop.avastkorea.com/login/"><span style="color:#f26522">로그인</span></a>&nbsp; | 
 				
 				<!--
-					<a style="FONT-SIZE: 8pt; FONT-FAMILY: ¸¼Àº °íµñ, µ¸À½, Vernada, Arial; COLOR:#000000" href="#" onclick="add_HomePage(this); return false;">½ÃÀÛÆäÀÌÁö</a> | 
-					<a style="FONT-SIZE: 8pt; FONT-FAMILY: ¸¼Àº °íµñ, µ¸À½, Vernada, Arial; COLOR:#000000" href="#" onclick="add_Favorites(this); return false;">Áñ°ÜÃ£±â</a>
+					<a style="FONT-SIZE: 8pt; FONT-FAMILY: 맑은 고딕, 돋음, Vernada, Arial; COLOR:#000000" href="#" onclick="add_HomePage(this); return false;">시작페이지</a> | 
+					<a style="FONT-SIZE: 8pt; FONT-FAMILY: 맑은 고딕, 돋음, Vernada, Arial; COLOR:#000000" href="#" onclick="add_Favorites(this); return false;">즐겨찾기</a>
 				-->
 				
 
@@ -218,16 +218,16 @@ function MM_swapImage() { //v3.0
 				<table border=0 cellpadding=2 cellspacing=1 style="FONT-SIZE: 17px; FONT-FAMILY: Nanum Gothic, serif; font-weight:700; COLOR:#898989;">
 				<tr>
 					<td width=70 align=center valign=middle>
-						<a href="http://www.avastkorea.com/home-user/">°³ÀÎ¿ë</a>
+						<a href="http://www.avastkorea.com/home-user/">개인용</a>
 					</td>
 					<td width=70 align=center valign=middle>
-						<a href="http://www.avastkorea.com/business/">¾÷¹«¿ë</a>
+						<a href="http://www.avastkorea.com/business/">업무용</a>
 					</td>
 					<td width=80 align=center valign=middle>
-						<a href="http://www.avastkorea.com/support/">°í°´Áö¿ø</a>
+						<a href="http://www.avastkorea.com/support/">고객지원</a>
 					</td>
 					<td width=80 align=center valign=middle>
-						<a href="http://shop.avastkorea.com/">Á¦Ç°±¸¸Å</a>
+						<a href="http://shop.avastkorea.com/">제품구매</a>
 					</td>
 				</tr>
 				</table>	
@@ -244,11 +244,11 @@ function MM_swapImage() { //v3.0
 
 <s_t3>
 <div id="container">
-<!---------------- º» ¹® ½ÃÀÛ ----------------------->
+<!---------------- 본 문 시작 ----------------------->
 
 
 	<center>
-		<table bgcolor="#efefef" border="0" cellpadding="0" cellspacing="0" width="100%" style="font-size: 11pt; color:#000000; font-family: ¸¼Àº °íµñ, Verdana">
+		<table bgcolor="#efefef" border="0" cellpadding="0" cellspacing="0" width="100%" style="font-size: 11pt; color:#000000; font-family: 맑은 고딕, Verdana">
 			<tr bgcolor="#ffffff" height="110">
 				<td width="230" align="left" valign="top">
 					<script language="javascript">
@@ -263,13 +263,13 @@ function moveRemote() {
 	<td bgcolor=#FFFFFF align=left valign=top>
 
 		
-			¼Õ´ÔÀ¸·Î Á¢¼ÓÇÏ¼Ì½À´Ï´Ù.
+			손님으로 접속하셨습니다.
 		
 		<br>
 
 		
-			<a href="/login/">È¸¿ø ·Î±×ÀÎ</a><br>
-			<a href="/login/my_regist.asp">È¸¿ø °¡ÀÔ</a><br>
+			<a href="/login/">회원 로그인</a><br>
+			<a href="/login/my_regist.asp">회원 가입</a><br>
 		
 
 
@@ -285,7 +285,7 @@ function moveRemote() {
 				<td align="left" valign="top" >
 
 					 <table id="login_container" class="login-table">
-					<thead>     <!-- ·Î±×ÀÎ ·Î°í ÀÌ¹ÌÁö -->
+					<thead>     <!-- 로그인 로고 이미지 -->
 						<tr>
 							<th><img src="lib/images/login_top.jpg"/></th>
 						</tr>
@@ -301,13 +301,13 @@ function moveRemote() {
 										<td class="td1"><img src="lib/images/login_email.jpg"/></td>
 										<td class="td2">
 											<input id="Mail" name="Mail" class="email-input"/>&nbsp;
-											<!-- ÀÎÁõ¹øÈ£ Àü¼Û ¹öÆ°-->
-												<input type="button" id="sendNum" value=" ÀÎÁõ¹øÈ£Àü¼Û " class="sdn-btn"/>
+											<!-- 인증번호 전송 버튼-->
+												<input type="button" id="sendNum" value=" 인증번호전송 " class="sdn-btn"/>
 										</td>
 									   
 									</tr>
 									<tr>
-										<td class="td1"><img src="lib/images/login_number.jpg"/><input type="hidden" id="i_key" name="i_key" value="802719" /></td>
+										<td class="td1"><img src="lib/images/login_number.jpg"/><input type="hidden" id="i_key" name="i_key" value="902324" /></td>
 										
 										<td class="td2">
 											
@@ -319,7 +319,7 @@ function moveRemote() {
 										<td class="td1"><img src="lib/images/login_name.jpg"/></td>
 										<td class="td2">
 											<input type="text" id="Name" name="Name" class="input-text" />&nbsp;
-											 <input type="submit" id="login_next" name="Next"  class="next-btn" value="·Î±×ÀÎ"/>
+											 <input type="submit" id="login_next" name="Next"  class="next-btn" value="로그인"/>
 										</td>
 									</tr>
 									<tr height=20px><td colspan=2></td></tr>
@@ -338,7 +338,7 @@ function moveRemote() {
 
 
 
-<!---------------- º» ¹® ½ÃÀÛ ----------------------->
+<!---------------- 본 문 시작 ----------------------->
 
 </div>
 </s_t3>	
@@ -350,12 +350,12 @@ function moveRemote() {
 <table width=960 border=0 cellpadding=0 cellspacing=0 bgcolor=#FFFFFF>
 <tr height=40>
 	<td width=110 align=right>
-		<a href="http://blog.avastkorea.com" title="ºí·Î±×" target="sns"><IMG width=30 SRC="/images/shop_images/shop_blog-icon.jpg" border=0 alt="avast! ºí·Î±×"></a>  
-		<a href="http://cafe.naver.com/avastkorea"	title="Ä«Æä"  target="sns"><IMG width=30 SRC="/images/shop_images/shop_cafe-icon.jpg" border=0 alt="avast! Ä«Æä"></a>  
-		<a href="http://www.facebook.com/avast0"	title="ÆäÀÌ½ººÏ"  target="sns"><IMG width=30 SRC="/images/shop_images/shop_facebook-icon.jpg" border=0 alt="avast! ÆäÀÌ½ººÏ"></a>
-		<a href="http://twitter.com/avastkorea"		title="Æ®À§ÅÍ"  target="sns"><IMG width=30 SRC="/images/shop_images/shop_twitter-icon.jpg" border=0 alt="avast! Æ®À§ÅÍ"></a> 
-		<a href="http://www.youtube.com/avastkorea"		title="avast! À¯Åõºê"  target="sns"><img src="/images/shop_images/shop_youtube-icon.jpg" border=0 height=30></a>
-		<!-- <a href="https://plus.google.com/118349175655520578146/posts?hl=ko"	title="avast! ±¸±Û+"  target="sns"><IMG width=30 SRC="/images/sns/google.gif" border=0 alt="avast! ±¸±Û+"></a> -->
+		<a href="http://blog.avastkorea.com" title="블로그" target="sns"><IMG width=30 SRC="/images/shop_images/shop_blog-icon.jpg" border=0 alt="avast! 블로그"></a>  
+		<a href="http://cafe.naver.com/avastkorea"	title="카페"  target="sns"><IMG width=30 SRC="/images/shop_images/shop_cafe-icon.jpg" border=0 alt="avast! 카페"></a>  
+		<a href="http://www.facebook.com/avast0"	title="페이스북"  target="sns"><IMG width=30 SRC="/images/shop_images/shop_facebook-icon.jpg" border=0 alt="avast! 페이스북"></a>
+		<a href="http://twitter.com/avastkorea"		title="트위터"  target="sns"><IMG width=30 SRC="/images/shop_images/shop_twitter-icon.jpg" border=0 alt="avast! 트위터"></a> 
+		<a href="http://www.youtube.com/avastkorea"		title="avast! 유투브"  target="sns"><img src="/images/shop_images/shop_youtube-icon.jpg" border=0 height=30></a>
+		<!-- <a href="https://plus.google.com/118349175655520578146/posts?hl=ko"	title="avast! 구글+"  target="sns"><IMG width=30 SRC="/images/sns/google.gif" border=0 alt="avast! 구글+"></a> -->
 	</td>
 </tr>
 </table>
@@ -389,26 +389,26 @@ function moveRemote() {
 		<tr height=40>
 			<TD width=200></TD>
 			<TD align=center>
-				<div style="font-family: ¸¼Àº °íµñ; font-size:11px; color:#FFFFFF;">
-				 <a style="FONT-SIZE: 9pt; COLOR:#FFFFFF; FONT-FAMILY: ¸¼Àº °íµñ, Verdana" href="/login/my_news_unsubscribe.asp">´º½º¼ö½ÅÇØÁö</a> |
-				 <a style="FONT-SIZE: 9pt; COLOR:#FFFFFF; FONT-FAMILY: ¸¼Àº °íµñ, Verdana" href="http://www.avastkorea.com/company/agreement.asp">»ç¿ë¾à°ü</a> |
-				 <a style="FONT-SIZE: 9pt; COLOR:#FFFFFF; FONT-FAMILY: ¸¼Àº °íµñ, Verdana" href="http://www.avastkorea.com/company/privacy.asp">°³ÀÎÁ¤º¸Ãë±Þ¹æÄ§</a> |
-				 <a style="FONT-SIZE: 9pt; COLOR:#FFFFFF; FONT-FAMILY: ¸¼Àº °íµñ, Verdana" href="http://www.avastkorea.com/company/contacts.asp">¿¬¶ôÃ³</a> |
-				 <a style="FONT-SIZE: 9pt; COLOR:#FFFFFF; FONT-FAMILY: ¸¼Àº °íµñ, Verdana" href="http://www.avastkorea.com/partners/">ÆÄÆ®³Ê</a> |
-				 <a style="FONT-SIZE: 9pt; COLOR:#FFFFFF; FONT-FAMILY: ¸¼Àº °íµñ, Verdana" href="http://shop.avastkorea.com/">¼îÇÎ¸ô</a>
+				<div style="font-family: 맑은 고딕; font-size:11px; color:#FFFFFF;">
+				 <a style="FONT-SIZE: 9pt; COLOR:#FFFFFF; FONT-FAMILY: 맑은 고딕, Verdana" href="/login/my_news_unsubscribe.asp">뉴스수신해지</a> |
+				 <a style="FONT-SIZE: 9pt; COLOR:#FFFFFF; FONT-FAMILY: 맑은 고딕, Verdana" href="http://www.avastkorea.com/company/agreement.asp">사용약관</a> |
+				 <a style="FONT-SIZE: 9pt; COLOR:#FFFFFF; FONT-FAMILY: 맑은 고딕, Verdana" href="http://www.avastkorea.com/company/privacy.asp">개인정보취급방침</a> |
+				 <a style="FONT-SIZE: 9pt; COLOR:#FFFFFF; FONT-FAMILY: 맑은 고딕, Verdana" href="http://www.avastkorea.com/company/contacts.asp">연락처</a> |
+				 <a style="FONT-SIZE: 9pt; COLOR:#FFFFFF; FONT-FAMILY: 맑은 고딕, Verdana" href="http://www.avastkorea.com/partners/">파트너</a> |
+				 <a style="FONT-SIZE: 9pt; COLOR:#FFFFFF; FONT-FAMILY: 맑은 고딕, Verdana" href="http://shop.avastkorea.com/">쇼핑몰</a>
 				</div>
 			</td>
 			<TD width=200 align=right>
 			
-				<div id="Layer_family" style="font-family: ¸¼Àº °íµñ;">
+				<div id="Layer_family" style="font-family: 맑은 고딕;">
 				<!--position:absolute; left: 10px; z-index:1; top:5px;"-->
-				<select name="select" onChange='if(this.selectedIndex) { this.blur(); window.open(options[selectedIndex].value); }' style="font-family: ¸¼Àº °íµñ;width:230px;">
-				<option value="" selected>ÆÐ¹Ð¸® »çÀÌÆ® ¹Ù·Î°¡±â</option>
-				<option value="http://www.icewarp.co.kr">¸ÞÀÏ¼Ö·ç¼Ç | IceWarp ¸ÞÀÏ¼­¹ö</option>
-				<option value="http://www.spamblock.co.kr">¸ÞÀÏ¼Ö·ç¼Ç | ½ºÆÔºí·Ï ½ºÆÔ¸ÞÀÏÂ÷´Ü</option>
-				<option value="http://www.malwarebytes.co.kr">º¸¾È¼Ö·ç¼Ç | ¸Ö¿þ¾î¹ÙÀÌÆ® ¾Ç¼ºÄÚµå Áø´Ü</option>
-				<option value="http://www.avastkorea.com">º¸¾È¼Ö·ç¼Ç | ¾îº£½ºÆ® ¾ÈÆ¼¹ÙÀÌ·¯½º</option>
-				<option value="http://www.secureline.co.kr">º¸¾È¼Ö·ç¼Ç | ¾îº£½ºÆ® ½ÃÅ¥¾î¶óÀÎ VPN</option>
+				<select name="select" onChange='if(this.selectedIndex) { this.blur(); window.open(options[selectedIndex].value); }' style="font-family: 맑은 고딕;width:230px;">
+				<option value="" selected>패밀리 사이트 바로가기</option>
+				<option value="http://www.icewarp.co.kr">메일솔루션 | IceWarp 메일서버</option>
+				<option value="http://www.spamblock.co.kr">메일솔루션 | 스팸블록 스팸메일차단</option>
+				<option value="http://www.malwarebytes.co.kr">보안솔루션 | 멀웨어바이트 악성코드 진단</option>
+				<option value="http://www.avastkorea.com">보안솔루션 | 어베스트 안티바이러스</option>
+				<option value="http://www.secureline.co.kr">보안솔루션 | 어베스트 시큐어라인 VPN</option>
 				</select>
 				</div>			
 				
@@ -429,10 +429,10 @@ function moveRemote() {
 			<TD width=150 align=left><a href="http://www.avastkorea.com"><img src="/images/shop_images/shop_copy_logo.jpg"></a><br><br></TD>
 			<TD align=left>
 				<br>
-				<div style="font-family: ¸¼Àº °íµñ, µ¸À½, Arial; font-size:11px; color:#FFFFFF;">
-				(ÁÖ)¼ÒÇÁÆ®¸ÞÀÏ, »ç¾÷ÀÚ¹øÈ£ 214-87-14889 | Åë½ÅÆÇ¸Å¾÷½Å°í¹øÈ£ ±¸·ÎÁ¦0716È£<br>
-				´ëÇ¥ÀÌ»ç ¿ÀºÀ±Ù |  ( 08389 ) ¼­¿ï½Ã ±¸·Î±¸ µðÁöÅÐ·Î 272 ÇÑ½ÅITÅ¸¿ö 1305È£<br>
-				´ëÇ¥ÀüÈ­ 1661-9331 ÆÑ½º 02-3486-9331<br>
+				<div style="font-family: 맑은 고딕, 돋음, Arial; font-size:11px; color:#FFFFFF;">
+				(주)소프트메일, 사업자번호 214-87-14889 | 통신판매업신고번호 구로제0716호<br>
+				대표이사 오봉근 |  ( 08389 ) 서울시 구로구 디지털로 272 한신IT타워 1305호<br>
+				대표전화 1661-9331 팩스 02-3486-9331<br>
 				avast! is a registered trademark of AVAST Software a.s. and is used in www.softmail.co.kr (avastkorea.com) under non-exclusive license from AVAST Software a.s. 
 				</div>
 				<br>

@@ -9,28 +9,28 @@
 <meta http-equiv="X-UA-Compatible" content="IE=Edage"/>
 <meta http-equiv="X-UA-Compatible" content="IE=Edage"/>
 <link rel="stylesheet" href="/common/css/DB_banner4.css" type="text/css"></link>
-<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.min.js"></script><!--jquery¶óÀÌºê·¯¸®-->
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.min.js"></script><!--jquery라이브러리-->
 <script type="text/javascript" src="/common/js/jquery.DB_slideStepBanner.min.js"></script>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
 <script type="text/javascript" src="/common/js/jquery.banner.js"></script>
 <script type="text/javascript">
 <!--
 $(function() {
-	$("#image_list_1").jQBanner({	//·Ñ¸µÀ» ÇÒ ¿µ¿ªÀÇ ID °ª
-		nWidth:420,					//¿µ¿ªÀÇ width
-		nHeight:140,				//¿µ¿ªÀÇ height
-		nCount:3,					//µ¹¾Æ°¥ ÀÌ¹ÌÁö °³¼ö
-		isActType:"up",				//¿òÁ÷ÀÏ ¹æÇâ (left, right, up, down)
-		nOrderNo:1,					//ÃÊ±â ÀÌ¹ÌÁö
-		nDelay:6000					//·Ñ¸µ ½Ã°£ Å¸ÀÓ (1000 = 1ÃÊ)
-		/*isBtnType:"li"*/			//¶óº§(¹öÆ° Å¸ÀÔ) - ¿©±â´Â ¾È¾²ÀÓ
+	$("#image_list_1").jQBanner({	//롤링을 할 영역의 ID 값
+		nWidth:420,					//영역의 width
+		nHeight:140,				//영역의 height
+		nCount:3,					//돌아갈 이미지 개수
+		isActType:"up",				//움직일 방향 (left, right, up, down)
+		nOrderNo:1,					//초기 이미지
+		nDelay:6000					//롤링 시간 타임 (1000 = 1초)
+		/*isBtnType:"li"*/			//라벨(버튼 타입) - 여기는 안쓰임
 		}
 	);
 	
 });
 //-->
 </script>
-<title>¾îº£½ºÆ® ÄÚ¸®¾Æ < avast! korea ></title>
+<title>어베스트 코리아 < avast! korea ></title>
 
 <script language='javascript' type='text/javascript'>
 
@@ -52,33 +52,33 @@ function ViewLayer(obj,onoff) {
 
 $(function()
 {
-    var f_nBnrCnt = 0; // jQBanner¸¦ »ç¿ëÇØ¼­ È­¸é¿¡ Ãâ·ÂµÇ´Â º£³Ê¼ö
+    var f_nBnrCnt = 0; // jQBanner를 사용해서 화면에 출력되는 베너수
 
     $.f_varBanner = {
         defaults: {
-            /* ³»ºÎÀûÀ¸·Î ¾²ÀÌ´Â º¯¼ö */
-            objScr: null,    // ½ºÅ©¸° ¿µ¿ª
-            objBtn: null, // ¹öÆ° ¿µ¿ª
-            objTimer: null, // Å¸ÀÌ¸Ó
-            nOrderNo: 999, // ÇöÀç ¼±ÅÃµÈ ·¹ÀÌ¾î
-            nOrderNoBtn: -1, // ¹öÆ° ¼±ÅÃ½Ã ·¹ÀÌ¾î
+            /* 내부적으로 쓰이는 변수 */
+            objScr: null,    // 스크린 영역
+            objBtn: null, // 버튼 영역
+            objTimer: null, // 타이머
+            nOrderNo: 999, // 현재 선택된 레이어
+            nOrderNoBtn: -1, // 버튼 선택시 레이어
 
-            /* ÃÊ±â¼¼ÆÃÀÌ °¡´ÉÇÑ  ÇÊ¼ö º¯¼ö */
-            nWidth: 0, // º£³Ê ½ºÅ©¸° ¿µ¿ª Æø
-            nHeight: 0, // º£³Ê ½ºÅ©¸° ¿µ¿ª ³ôÀÌ
-            nCount: 0, // º£³Ê ½ºÅ©¸° ¿µ¿ª¿¡ ¼ÓÇØÀÖ´Â ·¹ÀÌ¾îÀÇ ¼ö
-            isActType: "none",    // º£³Ê ¾×¼Ç Å¸ÀÔ none,left,right,up,down,fade,page
+            /* 초기세팅이 가능한  필수 변수 */
+            nWidth: 0, // 베너 스크린 영역 폭
+            nHeight: 0, // 베너 스크린 영역 높이
+            nCount: 0, // 베너 스크린 영역에 속해있는 레이어의 수
+            isActType: "none",    // 베너 액션 타입 none,left,right,up,down,fade,page
 
-            /* ÃÊ±â¼¼ÆÃÀÌ °¡´ÉÇÑ  ¿É¼Ç º¯¼ö */
-            isShuffle: "N", // º£³Ê ·¹ÀÌ¾îµéÀÇ ¼ÅÇÃ ¿©ºÎ Y:¼ÅÇÃ,N:¼øÂ÷Àû
-            isBtnAct: "mouseover",    // ¹öÆ° ÀÛµ¿¹æ½Ä mouseover,click
-            isBtnType: "img", // ¹öÆ° Å¸ÀÔ img,li
-            nStartUp: 300, // ½ºÅ¸Æ® ½Ã Ã¹ ·¹ÀÌ¾îÀÇ FadeIn ¼Óµµ
-            nDelay: 5000, // µô·¹ÀÌ
-            nSpeed: 500, // ¾×¼Ç½ÃÀÇ ¼Óµµ
-            nSpeedFade: 300, // ÆäÀÌµå °ü·Ã ¾×¼Ç¿¡¼­ ¹öÆ° ÀÛµ¿½Ã ¼ÓµµÀÇ ±³Á¤°ª [µÇµµ·Ï °íÁ¤]
-            isStartFade:"Y", // ½ºÅ¸Æ® FadeIn È¿°ú ¿©ºÎ [ÇÁ·Î±×·¥À¸·Î ½ºÅ©¸°À» Display:block Ã³¸®ÇÒ °æ¿ì »ç¿ë]
-            isStartDelay:"N" // ½ºÅ¸Æ®½Ã µô·¹ÀÌ¸¦ °¡Áö°í ½ÇÇà [¹«°Å¿î ÆäÀÌÁöÀÇ °æ¿ì µô·¹ÀÌ¸¦ °¡Áö°í ÃÊ±âÈ­]
+            /* 초기세팅이 가능한  옵션 변수 */
+            isShuffle: "N", // 베너 레이어들의 셔플 여부 Y:셔플,N:순차적
+            isBtnAct: "mouseover",    // 버튼 작동방식 mouseover,click
+            isBtnType: "img", // 버튼 타입 img,li
+            nStartUp: 300, // 스타트 시 첫 레이어의 FadeIn 속도
+            nDelay: 5000, // 딜레이
+            nSpeed: 500, // 액션시의 속도
+            nSpeedFade: 300, // 페이드 관련 액션에서 버튼 작동시 속도의 교정값 [되도록 고정]
+            isStartFade:"Y", // 스타트 FadeIn 효과 여부 [프로그램으로 스크린을 Display:block 처리할 경우 사용]
+            isStartDelay:"N" // 스타트시 딜레이를 가지고 실행 [무거운 페이지의 경우 딜레이를 가지고 초기화]
         }
     };
 
@@ -90,7 +90,7 @@ $(function()
         config.objBtn = "#"+this.attr("id")+" .clsBannerButton";
 
         if (config.isStartDelay=="Y" && isIEChk==true) {
-            /* ½ºÅ¸Æ® µô·¹ÀÌ Ã³¸® */
+            /* 스타트 딜레이 처리 */
             if (f_nBnrCnt>=0 && f_nBnrCnt<=3) {
                 setTimeout( function(){jsBanInit(config)}, f_nBnrCnt*100);
             } else if (f_nBnrCnt>3 && f_nBnrCnt<=6) {
@@ -111,13 +111,13 @@ $(function()
     function jsBanInit(config) {
         var nPosFix;
 
-        /* º£³Ê ½ºÅ©¸° CSS ¼³Á¤ */
+        /* 베너 스크린 CSS 설정 */
         $(config.objScr).css({'position':'relative','height':config.nHeight+'px','width':config.nWidth+'px','overflow':'hidden'});
 
-        /* Ã¹ ·¹ÀÌ¾î ¼±ÅÃ */
+        /* 첫 레이어 선택 */
         config.nOrderNo = (config.nOrderNo==999) ? Math.floor(Math.random() * config.nCount):config.nOrderNo-1;
 
-        /* ¾×¼Ç Å¸ÀÔ¿¡ µû¸¥ ÃÊ±â ¼¼ÆÃ */
+        /* 액션 타입에 따른 초기 세팅 */
         if (config.isActType == "left") {
             $(config.objScr+" div").each(function(i){
                 nPosFix = (config.nOrderNo==i)?0:config.nWidth;
@@ -191,38 +191,38 @@ $(function()
             });
         }
 
-        /* ¹öÆ° ¼ø¹ø ¼³Á¤ */
+        /* 버튼 순번 설정 */
         $(config.objBtn+" "+config.isBtnType).each(function(i){ $(this).attr("btnno",i); $(this).css("cursor","hand") });
 
-        /* ¹öÆ° ¹ÙÀÎµå */
+        /* 버튼 바인드 */
         jsBanBtnBind(config);
 
-        /* ½ºÅ©¸° pause ¹ÙÀÎµå */
+        /* 스크린 pause 바인드 */
         jsScrPauseBind(config);
 
-        /* º£³Ê Å¸ÀÌ¸Ó µî·Ï ¹× ¾×¼Ç ½ÃÀÛ!!!! */
+        /* 베너 타이머 등록 및 액션 시작!!!! */
         if (config.isActType != "none" && config.isActType != "page") {
             config.objTimer = setTimeout( function(){jsBanTimer(config)}, config.nDelay);
         }
     };
 
-    /* ¹è³Ê Å¸ÀÌ¸Ó */
+    /* 배너 타이머 */
     function jsBanTimer(config) {
-        /* ¹öÆ° ¾×¼Ç ¼ø¹øÀÇ ÃÊ±âÈ­ */
+        /* 버튼 액션 순번의 초기화 */
         config.nOrderNoBtn = -1;
 
         jsBanAction(config);
         config.objTimer = setTimeout( function(){jsBanTimer(config)}, config.nDelay);
     };
 
-    /* ¹è³Ê ¾×¼Ç Ã³¸® */
+    /* 배너 액션 처리 */
     function jsBanAction(config) {
         var nPageSel;
         var nSpeed = config.nSpeed;
         var nDivNoSel = config.nOrderNo;
         var nOrderNext = (config.nOrderNo+1)%(config.nCount);
 
-        /* 'page' ¾×¼ÇÀÏ °æ¿ì ¼±ÅÃÆäÀÌÁö ÃßÃâ */
+        /* 'page' 액션일 경우 선택페이지 추출 */
         if (config.isActType == "page") {
             var nOrderMinus = config.nOrderNoBtn-config.nOrderNo;
             nPageSel = (nOrderMinus==1 || (nOrderMinus==(config.nCount-1)*-1)) ? 1 : 0;
@@ -241,12 +241,12 @@ $(function()
         var objSelObj = $(config.objScr+" div[divno='"+nDivNoSel+"']");
         var objNextObj = $(config.objScr+" div[divno='"+nDivNoNext+"']");
 
-        /* ¾×¼Ç¿¡ ÀÇÇÑ ¹öÆ° ¼±ÅÃ */
+        /* 액션에 의한 버튼 선택 */
         if (config.isActType != "page") {
             jsBanBtnRO(config,nOrderNext);
         }
 
-        /* ½ÇÁ¦ ½ºÅ©¸° ·¹ÀÌ¾îµéÀÇ µ¿ÀÛ Ã³¸® */
+        /* 실제 스크린 레이어들의 동작 처리 */
         if (config.isActType == "left") {
             objNextObj.css('left',(config.nWidth)+'px');
             objSelObj.animate({'left':(-1*config.nWidth)+'px'},nSpeed);
@@ -284,9 +284,9 @@ $(function()
         }
     }
 
-    /* ½ºÅ©¸° pause ¹ÙÀÎµå */
+    /* 스크린 pause 바인드 */
     function jsScrPauseBind(config) {
-        /* ½ºÅ©¸°¿¡ ´ëÇÑ Ã³¸® */
+        /* 스크린에 대한 처리 */
         $(config.objScr+" div").mouseover(function(){
             clearTimeout(config.objTimer);
         });
@@ -297,16 +297,16 @@ $(function()
         });
     }
 
-    /* ¹öÆ° ¹ÙÀÎµå */
+    /* 버튼 바인드 */
     function jsBanBtnBind(config) {
-        /* ÃÊ±â ¹öÆ° ¼³Á¤ */
+        /* 초기 버튼 설정 */
         if (config.isActType != "page") {
             jsBanBtnRO(config,config.nOrderNo);
         }
 
-        /* ¹öÆ°¿¡ ´ëÇØ ¸¶¿ì½º ¿À¹öÀÏ °æ¿ì Ã³¸® */
+        /* 버튼에 대해 마우스 오버일 경우 처리 */
         if (config.isBtnAct=="mouseover") {
-            /* ¹öÆ°¿¡ ´ëÇÑ Ã³¸® */
+            /* 버튼에 대한 처리 */
             $(config.objBtn+" "+config.isBtnType).mouseover(function(){
                 var nImgNo = $(this).attr("btnno");
 
@@ -333,7 +333,7 @@ $(function()
                 }
             });
 
-        /* ¹öÆ°¿¡ ´ëÇØ Å¬¸¯ÀÏ °æ¿ì Ã³¸® */
+        /* 버튼에 대해 클릭일 경우 처리 */
         } else if (config.isBtnAct=="click") {
             $(config.objBtn+" "+config.isBtnType).click(function(){
                 var nImgNo = $(this).attr("btnno");
@@ -362,7 +362,7 @@ $(function()
         }
     };
 
-    /* ¹öÆ° ·Ñ¿À¹ö Ã³¸® */
+    /* 버튼 롤오버 처리 */
     function jsBanBtnRO (config,nSel) {
         if (config.isBtnType=="img") {
             $(config.objBtn+" img").each(function(i){
@@ -385,16 +385,16 @@ $(function()
         }
     }
 
-    /* IE Ã¼Å© */
+    /* IE 체크 */
     function jsBrowserCheck() {
         appname = navigator.appName;
         useragent = navigator.userAgent;
 
         if(appname == "Microsoft Internet Explorer") appname = "IE";
-        IE55 = (useragent.indexOf('MSIE 5.5')>-1);  //5.5 ¹öÀü
-        IE6 = (useragent.indexOf('MSIE 6')>-1);     //6.0 ¹öÀü
-        IE7 = (useragent.indexOf('MSIE 7')>-1);     //7.0 ¹öÀü
-        IE8 = (useragent.indexOf('MSIE 8')>-1);     //8.0 ¹öÀü
+        IE55 = (useragent.indexOf('MSIE 5.5')>-1);  //5.5 버전
+        IE6 = (useragent.indexOf('MSIE 6')>-1);     //6.0 버전
+        IE7 = (useragent.indexOf('MSIE 7')>-1);     //7.0 버전
+        IE8 = (useragent.indexOf('MSIE 8')>-1);     //8.0 버전
 		IE9 = (useragent.indexOf('MSIE 9')>-1);
 		IE10 = (useragent.indexOf('MSIE 10')>-1);
 
@@ -407,7 +407,7 @@ $(function()
     }
 });
 
-//¹è³Ê Ãß°¡½Ã Å¸ÀÌ¸Ó ¼ÂÆÃÀ» À§ÇØ nCount¿¡¼­ °¹¼ö Á¶Á¤_ ¼öÁ¤
+//배너 추가시 타이머 셋팅을 위해 nCount에서 갯수 조정_ 수정
 $(function() {
     $('#divHanger').jQBanner({nWidth:960,nHeight:347,nCount:2,isActType:'left',nOrderNo:1,isStartAct:'N',isStartDelay:'Y',nDelay:5000,isBtnType:'li'});
 });
@@ -425,10 +425,10 @@ $(function() {
 .clsBannerScreen {z-index:1}
 .clsBannerScreen div {display:none}
 
-.clsHangerOut1 {font-family:dotum, '³ª´®°íµñ, ¸¼Àº °íµñ';font-size: 10px;list-style:none;float:left; width:480px; height:20px; padding-top:0px; color:#FFFFFF; background-color:#444e5a; text-align:center; text-decoration: none;}
-.clsHangerOut2 {font-family:dotum, '³ª´®°íµñ, ¸¼Àº °íµñ';font-size: 10px;list-style:none;float:left; width:480px; height:20px; padding-top:0px; color:#FFFFFF; background-color:#444e5a; text-align:center; text-decoration: none;}
-.clsHangerOver {font-family:dotum, '³ª´®°íµñ, ¸¼Àº °íµñ';font-size: 10px;list-style:none;float:left; width:480px; height:20px; padding-top:0px; color:#FFFFFF; background-color:#ff9900; text-align:center; text-decoration: none;}
-/* ¹è³Ê Ãß°¡·Î ÀÎÇØ ¹öÆ° width¸¦ 480px -> 320px·Î Á¶Á¤ÇÏ¿´°í ÇÑ ¶óÀÎ¿¡ ¼¼ ¹öÆ°À¸·Î ¸¸µé¾î ³õÀ½ */
+.clsHangerOut1 {font-family:dotum, '나눔고딕, 맑은 고딕';font-size: 10px;list-style:none;float:left; width:480px; height:20px; padding-top:0px; color:#FFFFFF; background-color:#444e5a; text-align:center; text-decoration: none;}
+.clsHangerOut2 {font-family:dotum, '나눔고딕, 맑은 고딕';font-size: 10px;list-style:none;float:left; width:480px; height:20px; padding-top:0px; color:#FFFFFF; background-color:#444e5a; text-align:center; text-decoration: none;}
+.clsHangerOver {font-family:dotum, '나눔고딕, 맑은 고딕';font-size: 10px;list-style:none;float:left; width:480px; height:20px; padding-top:0px; color:#FFFFFF; background-color:#ff9900; text-align:center; text-decoration: none;}
+/* 배너 추가로 인해 버튼 width를 480px -> 320px로 조정하였고 한 라인에 세 버튼으로 만들어 놓음 */
 -->
 </style><!-- Google Tag Manager -->
 <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PD9V8F"
@@ -441,7 +441,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager -->
 
 
-<!--- ¾îº£½ºÆ® ¸ÞÀÎ ¸Þ´º¸¦ À§ÇÑ °÷ --->
+<!--- 어베스트 메인 메뉴를 위한 곳 --->
 <link rel="stylesheet" type="text/css"  href="/common/css/menu_styles.css" />
 <link rel="stylesheet" type="text/css"  href="/common/css/header_styles.css" />
 <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
@@ -456,7 +456,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
-<!--·Ñ¿À¹ö ¿©±â¼­ ½ÃÀÛ -->
+<!--롤오버 여기서 시작 -->
 <script type="text/javascript">
 <!--
 function MM_swapImgRestore() { //v3.0
@@ -491,13 +491,13 @@ function MM_swapImage() { //v3.0
 			<div class='top'>
 				<p class='left'><a href="/"><img src='/image/logo.jpg'></a></p>
 				<div class='right top_m'>
-					<span><a href="http://shop.avastkorea.com/login/?_ga=1.207413395.1888870844.1450053701">·Î±×ÀÎ</a></span><img src='/image/top_m_line.gif'>
-					<span><a href="http://shop.avastkorea.com/login/my_regist.asp">È¸¿ø°¡ÀÔ</a></span><img src='/image/top_m_line.gif'>
+					<span><a href="http://shop.avastkorea.com/login/?_ga=1.207413395.1888870844.1450053701">로그인</a></span><img src='/image/top_m_line.gif'>
+					<span><a href="http://shop.avastkorea.com/login/my_regist.asp">회원가입</a></span><img src='/image/top_m_line.gif'>
 					
 					<span>VPS :16020100</span> 
 
 						<select class='site_select' onChange='if(this.selectedIndex) { this.blur(); window.open(options[selectedIndex].value); }' style='margin-left:30px;'>
-							<option value="" selected>ÇÑ±¹¾î</option>
+							<option value="" selected>한국어</option>
 							<option value="http://www.avastshop.com">English</option>
 							<option value="http://www.softmail.jp">Japan</option>
 						</select>
@@ -614,7 +614,7 @@ function MM_swapImage() { //v3.0
 					<div class="gnb2depth">
 						<ul><!--dep01_01 ::start-->
 							<li class="tempTopLi00">
-								<a href="http://www.avastkorea.com/home-user/cloud.asp" style="font-size:17px;color:#000;">¿ùÁ¤¾×</a>
+								<a href="http://www.avastkorea.com/home-user/cloud.asp" style="font-size:17px;color:#000;">월정액</a>
 									<div class="dep01_01" style="display:none;">
 										<div class="w1000" style="height:180px; overflow:hidden;">
 											<div style="height:180px; padding-left:0px;">
@@ -623,10 +623,10 @@ function MM_swapImage() { //v3.0
 														<td><br></td>
 													</tr>
 													<tr>
-														<td class="123">°³ÀÎ¿ë</td>
+														<td class="123">개인용</td>
 													</tr>
 													<tr>
-														<td><a href="http://www.avastkorea.com/home-user/cloud.asp">¿ùÁ¤¾× ÇÁ¸®¹Ì¾ö ¼­ºñ½º</a></td>
+														<td><a href="http://www.avastkorea.com/home-user/cloud.asp">월정액 프리미엄 서비스</a></td>
 													</tr>
 												</table>
 
@@ -635,16 +635,16 @@ function MM_swapImage() { //v3.0
 														<td><br></td>
 													</tr>
 													<tr>
-														<td class="123">¾÷¹«¿ë</td>
+														<td class="123">업무용</td>
 													</tr>
 													<tr>
-														<td><a href="http://www.avastkorea.com/business/cloud.asp">¿ùÁ¤¾× ¼­ºñ½º (PC¿ë)</a></td>
+														<td><a href="http://www.avastkorea.com/business/cloud.asp">월정액 서비스 (PC용)</a></td>
 													</tr>
 													<tr>
-														<td><a href="http://www.avastkorea.com/business/managed.asp">¿ùÁ¤¾× ¼­ºñ½º (¼­¹ö¿ë)</a></td>
+														<td><a href="http://www.avastkorea.com/business/managed.asp">월정액 서비스 (서버용)</a></td>
 													</tr>
 													<tr>
-														<td><a href="http://www.avastkorea.com/business/solution.asp">Æ÷·»½Ä APTÂ÷´Ü ¼­ºñ½º (ÁØºñ Áß)</a></td>
+														<td><a href="http://www.avastkorea.com/business/solution.asp">포렌식 APT차단 서비스 (준비 중)</a></td>
 													</tr>
 												</table-->
 
@@ -653,7 +653,7 @@ function MM_swapImage() { //v3.0
 														<td><br></td>
 													</tr>
 													<tr>
-														<td><a href="http://www.avastkorea.com/home-user/cloud_how.asp">¿ùÁ¤¾× ¼­ºñ½º GUIDE</a></td>
+														<td><a href="http://www.avastkorea.com/home-user/cloud_how.asp">월정액 서비스 GUIDE</a></td>
 													</tr>
 												</table>
 
@@ -662,7 +662,7 @@ function MM_swapImage() { //v3.0
 														<th><a href=""></a></th>
 													</tr>
 													<tr>
-														<td class="123">°í°´Áö¿ø : 1661-9331</td>
+														<td class="123">고객지원 : 1661-9331</td>
 													</tr>
 													<tr>
 														<td height="100px"></td>
@@ -676,7 +676,7 @@ function MM_swapImage() { //v3.0
 
 							<!--dep01_02 ::start-->
 							<li class="tempTopLi01">
-								<a href="http://www.avastkorea.com/home-user/default.asp" style="font-size:17px;color:#000;">°³ÀÎ¿ë</a>
+								<a href="http://www.avastkorea.com/home-user/default.asp" style="font-size:17px;color:#000;">개인용</a>
 									<div class="dep01_02" style="display:none;">
 										<div class="w1000" style="height:180px; overflow:hidden;">
 											<div style="height:180px; padding-left:0px;">
@@ -685,10 +685,10 @@ function MM_swapImage() { //v3.0
 														<td><br></td>
 													</tr>
 													<tr>
-														<td><a href="http://www.avastkorea.com/home-user/default.asp">°³ÀÎ¿ë ¶óÀÌ¼±½º</a></td>
+														<td><a href="http://www.avastkorea.com/home-user/default.asp">개인용 라이선스</a></td>
 													</tr>
 													<tr>
-														<td><a href="http://www.avastkorea.com/home-user/cloud.asp">¿ùÁ¤¾× ÇÁ¸®¹Ì¾ö ¼­ºñ½º</a></td>
+														<td><a href="http://www.avastkorea.com/home-user/cloud.asp">월정액 프리미엄 서비스</a></td>
 													</tr>
 												</table>
 
@@ -697,16 +697,16 @@ function MM_swapImage() { //v3.0
 														<td><br></td>
 													</tr>
 													<tr>
-														<td><a href="http://www.avastkorea.com/home-user/secureline.asp">¾îº£½ºÆ® ½ÃÅ¥¾î¶óÀÎ VPN</a></td>
+														<td><a href="http://www.avastkorea.com/home-user/secureline.asp">어베스트 시큐어라인 VPN</a></td>
 													</tr>
 													<tr>
-														<td><a href="http://www.avastkorea.com/home-user/cleanup.asp">¾îº£½ºÆ® Å¬¸°¾÷</a></td>
+														<td><a href="http://www.avastkorea.com/home-user/cleanup.asp">어베스트 클린업</a></td>
 													</tr>
 													<tr>
-														<td><a href="http://www.avastkorea.com/home-user/password.asp">¾îº£½ºÆ® ÆÐ½º¿öµå</a></td>
+														<td><a href="http://www.avastkorea.com/home-user/password.asp">어베스트 패스워드</a></td>
 													</tr>
 													<tr>
-														<td><a href="http://www.avastkorea.com/home-user/wisecare.asp">¿ÍÀÌÁîÄÉ¾î (PCÆ©´× À¯Æ¿¸®Æ¼)</a></td>
+														<td><a href="http://www.avastkorea.com/home-user/wisecare.asp">와이즈케어 (PC튜닝 유틸리티)</a></td>
 													</tr>
 												</table>
 
@@ -715,10 +715,10 @@ function MM_swapImage() { //v3.0
 														<td><br></td>
 													</tr>
 													<tr>
-														<td><a href="http://cafe.naver.com/avastkorea">°³ÀÎ¿ë Á¦Ç° ±â¼úÁö¿ø Q&A</a></td>
+														<td><a href="http://cafe.naver.com/avastkorea">개인용 제품 기술지원 Q&A</a></td>
 													</tr>
 													<tr>
-														<td><a href="http://939.co.kr/ezHelpClient.exe" style='color:#f69021; font-weight: bold;'>¿ø°ÝÁö¿ø ¹Ù·Î°¡±â</a></td>
+														<td><a href="http://939.co.kr/ezHelpClient.exe" style='color:#f69021; font-weight: bold;'>원격지원 바로가기</a></td>
 													</tr>
 												</table>
 												<table class='m_table gsm_sub_list4'>
@@ -726,14 +726,14 @@ function MM_swapImage() { //v3.0
 														<th><a href=""></a></th>
 													</tr>
 													<tr>
-														<td class="123">°í°´Áö¿ø : 1661-9331</td>
+														<td class="123">고객지원 : 1661-9331</td>
 													</tr>
 													<tr>
 														<td>
-															°³ÀÎ¿ë Á¦Ç° ¹«ÅëÀå°èÁÂ<br>
+															개인용 제품 무통장계좌<br>
 															<div class='bank_box' style="width:265px;">
-																<img style='vertical-align:middle;' src='/image/kb_logo.gif'><strong style='color:#f69021;font-size:16px;'>±¹¹ÎÀºÇà</strong> 453801-01-072861<br>
-																¿¹±ÝÁÖ : (ÁÖ)¼ÒÇÁÆ®¸ÞÀÏ
+																<img style='vertical-align:middle;' src='/image/kb_logo.gif'><strong style='color:#f69021;font-size:16px;'>국민은행</strong> 453801-01-072861<br>
+																예금주 : (주)소프트메일
 															</div>
 														</td>
 													</tr>
@@ -744,7 +744,7 @@ function MM_swapImage() { //v3.0
 							</li>
 							<!--dep01_02 ::end-->
 							<!--dep01_03 ::start-->
-							<li class="tempTopLi02"><a href="http://www.avastkorea.com/business/endpoint.asp" style="font-size:17px;color:#000;">¾÷¹«¿ë</a>
+							<li class="tempTopLi02"><a href="http://www.avastkorea.com/business/endpoint.asp" style="font-size:17px;color:#000;">업무용</a>
 								<div class="dep01_03" style="display:none">
 									<div class="w1000" style="height:180px; overflow:hidden;">
 										<div style="height:180px; padding-left:0px;">
@@ -753,10 +753,10 @@ function MM_swapImage() { //v3.0
 													<td><br></td>
 												</tr>
 												<tr>
-													<td><a href="http://www.avastkorea.com/business/endpoint.asp">¾îº£½ºÆ® ¿£µåÆ÷ÀÎÆ®</a></td>
+													<td><a href="http://www.avastkorea.com/business/endpoint.asp">어베스트 엔드포인트</a></td>
 												</tr>
 												<tr>
-													<td><a href="http://www.avastkorea.com/business/server-security.asp">¾îº£½ºÆ® ¼­¹ö¿ë ¹é½Å</a></td>
+													<td><a href="http://www.avastkorea.com/business/server-security.asp">어베스트 서버용 백신</a></td>
 												</tr>
 											</table>
 
@@ -765,13 +765,13 @@ function MM_swapImage() { //v3.0
 													<td><br></td>
 												</tr>
 												<tr>
-													<td><a href="http://www.avastkorea.com/business/cloud.asp">¿ùÁ¤¾× ¼­ºñ½º (PC¿ë)</a></td>
+													<td><a href="http://www.avastkorea.com/business/cloud.asp">월정액 서비스 (PC용)</a></td>
 												</tr>
 												<tr>
-													<td><a href="http://www.avastkorea.com/business/managed.asp">¿ùÁ¤¾× ¼­ºñ½º (¼­¹ö¿ë)</a></td>
+													<td><a href="http://www.avastkorea.com/business/managed.asp">월정액 서비스 (서버용)</a></td>
 												</tr>
 												<tr>
-													<td><a href="http://www.avastkorea.com/business/solution.asp">Æ÷·»½Ä APTÂ÷´Ü ¼­ºñ½º</a></td>
+													<td><a href="http://www.avastkorea.com/business/solution.asp">포렌식 APT차단 서비스</a></td>
 												</tr>
 											</table>
 
@@ -780,16 +780,16 @@ function MM_swapImage() { //v3.0
 													<td><br></td>
 												</tr>
 												<tr>
-													<td><a href="http://www.avastkorea.com/business/quote.asp" style='color:#f69021; font-weight: bold;'>°ßÀû ¿äÃ»</a></td>
+													<td><a href="http://www.avastkorea.com/business/quote.asp" style='color:#f69021; font-weight: bold;'>견적 요청</a></td>
 												</tr>
 												<tr>
-													<td><a href="http://www.avastkorea.com/partners/">ÆÄÆ®³Ê ¹× ¸®¼¿·¯</a></td>
+													<td><a href="http://www.avastkorea.com/partners/">파트너 및 리셀러</a></td>
 												</tr>
 												<tr>
-													<td><a href="http://www.avastkorea.com/business/reference.asp" >´ëÇ¥ ·¡ÆÛ·±½º</a></td>
+													<td><a href="http://www.avastkorea.com/business/reference.asp" >대표 래퍼런스</a></td>
 												</tr>
 												<tr>
-													<td><a href="mailto:support@avastkorea.com">¾÷¹« Á¦Ç° ±â¼úÁö¿ø E-mail</a></td>
+													<td><a href="mailto:support@avastkorea.com">업무 제품 기술지원 E-mail</a></td>
 												</tr>
 											</table>
 
@@ -800,13 +800,13 @@ function MM_swapImage() { //v3.0
 													<td><br></td>
 												</tr>
 												<tr>
-													<td class="123">°í°´Áö¿ø : 1661-9331</td>
+													<td class="123">고객지원 : 1661-9331</td>
 												</tr>
 												<tr>
-													<td class="123">¾÷¹«¿ë Á¦Ç° ¹«ÅëÀå°èÁÂ
+													<td class="123">업무용 제품 무통장계좌
 													<div class='bank_box'>
-														<img style='vertical-align:middle;' src='/image/woori_logo.gif'><strong style='color:#0183ce;font-size:16px;'>¿ì¸®ÀºÇà</strong> 1005-801-570661<br>
-														¿¹±ÝÁÖ : (ÁÖ)¼ÒÇÁÆ®¸ÞÀÏ
+														<img style='vertical-align:middle;' src='/image/woori_logo.gif'><strong style='color:#0183ce;font-size:16px;'>우리은행</strong> 1005-801-570661<br>
+														예금주 : (주)소프트메일
 													</div>
 													</td>
 												</tr>
@@ -817,7 +817,7 @@ function MM_swapImage() { //v3.0
 							</li>
 							<!--dep01_03 ::end-->
 							<!--dep01_04 ::start-->
-							<li class="tempTopLi03"><a href="http://www.avastkorea.com/support/virus.asp" style='font-size:17px;color:#000;'>°í°´Áö¿ø</a>
+							<li class="tempTopLi03"><a href="http://www.avastkorea.com/support/virus.asp" style='font-size:17px;color:#000;'>고객지원</a>
 								<div class="dep01_04" style="display:none">
 									<div class="w1000" style=" height:180px; overflow:hidden; background:url(/hpmenu/img/imglayer.png) no-repeat top left;">
 										<div style="height:180px; padding-left:300px;">
@@ -827,19 +827,19 @@ function MM_swapImage() { //v3.0
 												<td><br></td>
 											</tr>
 											<tr>
-												<td class="123">°í°´Áö¿ø</td>
+												<td class="123">고객지원</td>
 											</tr>
 											<tr>
-												<td><a href="http://www.avastkorea.com/support/virus.asp">¹ÙÀÌ·¯½º ¹× ¿ÀÁø ½Å°í</a></td>
+												<td><a href="http://www.avastkorea.com/support/virus.asp">바이러스 및 오진 신고</a></td>
 											</tr>
 											<tr>
-												<td><a href="http://www.avastkorea.com/support/remote_support.asp">¿ø°Ý °í°´Áö¿ø</a></td>
+												<td><a href="http://www.avastkorea.com/support/remote_support.asp">원격 고객지원</a></td>
 											</tr>
 											<tr>
-												<td><a href="http://www.avastkorea.com/support/awards.asp">¼ö»ó ½ÇÀû</a></td>
+												<td><a href="http://www.avastkorea.com/support/awards.asp">수상 실적</a></td>
 											</tr>
 											<tr>
-												<td><a href="http://www.avastkorea.com/support/ad.asp">±¤°í »ç·Ê</a></td>
+												<td><a href="http://www.avastkorea.com/support/ad.asp">광고 사례</a></td>
 											</tr>
 											
 										</table>
@@ -849,16 +849,16 @@ function MM_swapImage() { //v3.0
 												<td><br></td>
 											</tr>
 											<tr>
-												<td><a href="http://www.avastkorea.com/login/my_news_unsubscribe.asp">´º½º¼ö½ÅÇØÁö</a></td>
+												<td><a href="http://www.avastkorea.com/login/my_news_unsubscribe.asp">뉴스수신해지</a></td>
 											</tr>
 											<tr>
 												<td><a href="http://www.avastkorea.com/support/FAQs.asp">FAQs</a></td>
 											</tr>
 											<tr>
-												<td><a href="http://www.avastkorea.com/support/return_refund.asp">È¯ºÒ ¹× ¹ÝÇ°Á¤Ã¥</a></td>
+												<td><a href="http://www.avastkorea.com/support/return_refund.asp">환불 및 반품정책</a></td>
 											</tr>
 											<tr>
-												<td><a href="http://www.avastkorea.com/support/facebook.asp">ÆäÀÌ½ººÏ À¯Àú</a></td>
+												<td><a href="http://www.avastkorea.com/support/facebook.asp">페이스북 유저</a></td>
 											</tr>
 											
 										</table>
@@ -868,19 +868,19 @@ function MM_swapImage() { //v3.0
 												<td></td>
 											</tr>
 											<tr>
-												<td class="123">´Ù¿î·Îµå</td>
+												<td class="123">다운로드</td>
 											</tr>
 											<tr>
-												<td><a href="http://www.avastkorea.com/download">°³ÀÎ¿ë ¼³Ä¡ÆÄÀÏ</a></td>
+												<td><a href="http://www.avastkorea.com/download">개인용 설치파일</a></td>
 											</tr>
 											<tr>
-												<td><a href="http://www.avastkorea.com/support/documents.asp">avast! ¹®¼­</a></td>
+												<td><a href="http://www.avastkorea.com/support/documents.asp">avast! 문서</a></td>
 											</tr>
 											<tr>
-												<td><a href="http://www.avastkorea.com/support/tools.asp">avast µµ±¸ ÇÁ·Î±×·¥</a></td>
+												<td><a href="http://www.avastkorea.com/support/tools.asp">avast 도구 프로그램</a></td>
 											</tr>
 											<tr>
-												<td><a href="http://www.avastkorea.com/support/wallpapers.asp">¹è°æÈ­¸é</a></td>
+												<td><a href="http://www.avastkorea.com/support/wallpapers.asp">배경화면</a></td>
 											</tr>
 										</table>
 
@@ -891,7 +891,7 @@ function MM_swapImage() { //v3.0
 							</li>
 							<!--dep01_04 ::end-->
 							<!--dep01_05 ::start-->
-							<li class="tempTopLi04"><a href="http://shop.avastkorea.com" style='font-size:17px;color:#000;'>Á¦Ç°±¸¸Å</a>
+							<li class="tempTopLi04"><a href="http://shop.avastkorea.com" style='font-size:17px;color:#000;'>제품구매</a>
 								<div class="dep01_05" style="display:none">
 									<div class="w1000" style=" height:180px; overflow:hidden; background:url(/hpmenu/img/imglayer.png) no-repeat top left;">
 										<div style="height:180px; padding-left:300px;">
@@ -901,7 +901,7 @@ function MM_swapImage() { //v3.0
 												<td ><a href="http://shop.avastkorea.com"><img src="http://www.avastkorea.com/image/avast_shop_b.jpg"><br></a></td>
 											</tr>
 											<!--tr>
-												<td><a href="http://shop.avastkorea.com">¾îº£½ºÆ®¼¥</a></td>
+												<td><a href="http://shop.avastkorea.com">어베스트샵</a></td>
 											</tr-->
 										</table>
 
@@ -1188,30 +1188,30 @@ ul, li {list-style:none; margin:0; padding:0; font-size:10pt; }
 
 <div class="cloud" >
 	<div class="prod_info"  style="margin-top: 45px; ">
-		»ç¿ë±â°£¿¡ ºÎ´ã¾øÀÌ<br>
-		<span class="prod_name">¿ùÁ¤¾× ÇÁ¸®¹Ì¾ö</span><br>
-		<span style="color:#ccc; font-size:17px; margin-top:19px;">1PC / ¿ù</span><br>
-		<div class="prod_info" style="color:#fff; margin-top:0px; line-height:25px;"><span class="prod-price" style="color:#fff;">3,000</span>¿ø</div>
+		사용기간에 부담없이<br>
+		<span class="prod_name">월정액 프리미엄</span><br>
+		<span style="color:#ccc; font-size:17px; margin-top:19px;">1PC / 월</span><br>
+		<div class="prod_info" style="color:#fff; margin-top:0px; line-height:25px;"><span class="prod-price" style="color:#fff;">3,000</span>원</div>
 	
 		<div valign="bottom"><br>
 				
 				<form action="/home-user/cloud_selection.asp" method="post" name="frm" align="center" id="frm" style="text-align:center;">
 				<input name="a_PRODUCT" value="CLOUD" type="hidden" checked>
-				<input name="a_TYPE" value="CARD" type="hidden" checked>  <!--<font color=#FFFFFF>	½Å¿ëÄ«µå</font>&nbsp;-->
-				<!---<input name="a_TYPE" value="MOBILE" type="radio"> <font color=#FFFFFF>	ÈÞ´ëÆù</font><br><br>--->
+				<input name="a_TYPE" value="CARD" type="hidden" checked>  <!--<font color=#FFFFFF>	신용카드</font>&nbsp;-->
+				<!---<input name="a_TYPE" value="MOBILE" type="radio"> <font color=#FFFFFF>	휴대폰</font><br><br>--->
 				<br>
 
 				<select name="a_USER" size="1" style="width:60px; height:30px; margin-top: -20px;">
 				
-						<option value="1">1°³</option>
+						<option value="1">1개</option>
 				
-						<option value="2">2°³</option>
+						<option value="2">2개</option>
 				
-						<option value="3">3°³</option>
+						<option value="3">3개</option>
 				
-						<option value="4">4°³</option>
+						<option value="4">4개</option>
 				
-						<option value="5">5°³</option>
+						<option value="5">5개</option>
 				
 				</select><br>
 				<button type="submit" class="buy-btn" ><font class="txt">BUY</font></button>
@@ -1224,40 +1224,40 @@ ul, li {list-style:none; margin:0; padding:0; font-size:10pt; }
 
 <div class="is_1">
 	<div class="prod_info" style="margin-top: 45px;">
-		ÃÖ°í ¼º´ÉÀÇ ¾îº£½ºÆ® º£½ºÆ®¼¿·¯<br>
-		<span class="prod_name">ÀÎÅÍ³Ý ½ÃÅ¥¸®Æ¼</span><br>
-		<span style="color:#ccc; font-size:17px; margin-top:19px;">1PC / 1³â</span><br>
-		<div class="prod_info" style="color:#fff; margin-top:0px; line-height:25px;"><strike>50,000¿ø</strike><br><span class="prod-price" style="color:#fff;">18,000</span>¿ø</div>
+		최고 성능의 어베스트 베스트셀러<br>
+		<span class="prod_name">인터넷 시큐리티</span><br>
+		<span style="color:#ccc; font-size:17px; margin-top:19px;">1PC / 1년</span><br>
+		<div class="prod_info" style="color:#fff; margin-top:0px; line-height:25px;"><strike>50,000원</strike><br><span class="prod-price" style="color:#fff;">18,000</span>원</div>
 	
 				
 				<form action="https://shop.avastkorea.com/order_lg/activation_payreq.asp" method="post" name="frm" id="frm" style="text-align:left; margin-left:50px; margin-top:23px;">
 				<input name="a_acti" value="IS1PC1YR_TIME" type="hidden" checked>		
 				<input type="hidden" name="a_MAINT"	value="1">
-				<input type=checkbox name="a_ADDON_CLEANUP"	value="CLEAN1PC1YR_TIME" checked style="width:16px;height:16px; border: 0px; vertical-align:middle"><span class="check_info" style="margin-top:5px"> ¾îº£½ºÆ® Å¬¸°¾÷ : 30,000¿ø</span><br>
-				<!---<input type=checkbox name="a_ADDON_PASSWORD" value="PASSWORD1PC1YR_TIME" checked style="width:16px;height:16px; border: 0px; vertical-align:middle"><span class="check_info" style="margin-top:5px">¾îº£½ºÆ® ºñ¹Ð¹øÈ£ : 7,800¿ø</span><br>-->
-				<input type=checkbox name="a_ADDON"	value="WISECARE1PC1YR_TIME" checked style="width:16px;height:16px; border: 0px; vertical-align:middle""><span class="check_info" style="margin-top:5px"> ¿ÍÀÌÁîÄÉ¾î : 9,000¿ø</span><br>
+				<input type=checkbox name="a_ADDON_CLEANUP"	value="CLEAN1PC1YR_TIME" checked style="width:16px;height:16px; border: 0px; vertical-align:middle"><span class="check_info" style="margin-top:5px"> 어베스트 클린업 : 30,000원</span><br>
+				<!---<input type=checkbox name="a_ADDON_PASSWORD" value="PASSWORD1PC1YR_TIME" checked style="width:16px;height:16px; border: 0px; vertical-align:middle"><span class="check_info" style="margin-top:5px">어베스트 비밀번호 : 7,800원</span><br>-->
+				<input type=checkbox name="a_ADDON"	value="WISECARE1PC1YR_TIME" checked style="width:16px;height:16px; border: 0px; vertical-align:middle""><span class="check_info" style="margin-top:5px"> 와이즈케어 : 9,000원</span><br>
 				
 				<select name="a_COUNT" size="1" style="width:60px; height:30px; margin-left:60px; margin-top: 10px;">
 				
-						<option value="1">1°³</option>
+						<option value="1">1개</option>
 				
-						<option value="2">2°³</option>
+						<option value="2">2개</option>
 				
-						<option value="3">3°³</option>
+						<option value="3">3개</option>
 				
-						<option value="4">4°³</option>
+						<option value="4">4개</option>
 				
-						<option value="5">5°³</option>
+						<option value="5">5개</option>
 				
-						<option value="6">6°³</option>
+						<option value="6">6개</option>
 				
-						<option value="7">7°³</option>
+						<option value="7">7개</option>
 				
-						<option value="8">8°³</option>
+						<option value="8">8개</option>
 				
-						<option value="9">9°³</option>
+						<option value="9">9개</option>
 				
-						<option value="10">10°³</option>
+						<option value="10">10개</option>
 				
 				</select><br>
 				<button type="submit" class="buy-btn" ><font class="txt">BUY</font></button>
@@ -1271,18 +1271,18 @@ ul, li {list-style:none; margin:0; padding:0; font-size:10pt; }
 
 <div class="is_2">
 	<div class="prod_info" style="margin-top: 45px;">
-		¿À·£½Ã°£ Ä£±¸Ã³·³ ÇÔ²² ÇÒ<br>
-		<span class="prod_name" style="color:#f7941d">ÀÎÅÍ³Ý ½ÃÅ¥¸®Æ¼</span><br>
-		<span style=" color:#f7941d; font-size:17px; margin-top:5px;">3PC / 3³â</span><br>
-		<div class="prod_info" style="color:#f7941d; margin-top:0px; line-height:25px;"><strike>140,000¿ø</strike><br><span class="prod-price" style="color:#f7941d;">90,000</span>¿ø<br><span style="font-size:17px;">È¸¿ø: 80,000¿ø</span></div>
+		오랜시간 친구처럼 함께 할<br>
+		<span class="prod_name" style="color:#f7941d">인터넷 시큐리티</span><br>
+		<span style=" color:#f7941d; font-size:17px; margin-top:5px;">3PC / 3년</span><br>
+		<div class="prod_info" style="color:#f7941d; margin-top:0px; line-height:25px;"><strike>140,000원</strike><br><span class="prod-price" style="color:#f7941d;">90,000</span>원<br><span style="font-size:17px;">회원: 80,000원</span></div>
 
 				<form action="https://shop.avastkorea.com/order_lg/payreq.asp" method="post" name="frm" id="frm" style="text-align:left; margin-left: 80px; margin-top:15px;">
 				<input type="hidden" name="a_IS"  value = "3">
 				<input type="hidden" name="a_MAINT" value="3">
-				<input type=checkbox name="a_ADDON_CLEANUP" value="CLEANUP_ADDON"><span class="check_info" style="margin-top:5px"> ¾îº£½ºÆ® Å¬¸°¾÷<br>
-				<!--input type=checkbox name="a_ADDON_PASSWORD" value="PASSWORD_ADDON" checked style="width:16px;height:16px; border: 0px; vertical-align:middle"><span class="check_info" style="margin-top:5px">¾îº£½ºÆ®  ºñ¹Ð¹øÈ£<br> 
-				<!--input type=checkbox name="a_ADDON1" value="SECURELINE1PC1YR_ADDON" style="width:16px;height:16px; border: 0px; vertical-align:middle"><span class="check_info" style="margin-top:5px">½ÃÅ¥¾î¶óÀÎ VPN<br>
-				<input type=checkbox name="a_ADDON" value="WISECARE1PC1YR_ADDON" checked style="width:16px;height:16px; border: 0px; vertical-align:middle"><span class="check_info" style="margin-top:5px">¿ÍÀÌÁîÄÉ¾î<br--> 
+				<input type=checkbox name="a_ADDON_CLEANUP" value="CLEANUP_ADDON"><span class="check_info" style="margin-top:5px"> 어베스트 클린업<br>
+				<!--input type=checkbox name="a_ADDON_PASSWORD" value="PASSWORD_ADDON" checked style="width:16px;height:16px; border: 0px; vertical-align:middle"><span class="check_info" style="margin-top:5px">어베스트  비밀번호<br> 
+				<!--input type=checkbox name="a_ADDON1" value="SECURELINE1PC1YR_ADDON" style="width:16px;height:16px; border: 0px; vertical-align:middle"><span class="check_info" style="margin-top:5px">시큐어라인 VPN<br>
+				<input type=checkbox name="a_ADDON" value="WISECARE1PC1YR_ADDON" checked style="width:16px;height:16px; border: 0px; vertical-align:middle"><span class="check_info" style="margin-top:5px">와이즈케어<br--> 
 				<button type="submit" class="buy-btn" ><font class="txt">BUY</font></button>
 				</form>
 		</div>
@@ -1301,7 +1301,7 @@ ul, li {list-style:none; margin:0; padding:0; font-size:10pt; }
 <div class="blog" style="background-color:#f4f5f6; padding-top:120px; width:100%; float:center;">
 <table width="1024px"  border=0 cellpadding=0 cellspacing=0 align="center">
 <tr>
-<td width="200px"  style="background-color:#ccc; text-align:center;" title="¾îº£½ºÆ® °øÁö»çÇ×" alt="¾îº£½ºÆ® °øÁö»çÇ×"><font style="font-size:40px; color:#fff;">News</font></td>
+<td width="200px"  style="background-color:#ccc; text-align:center;" title="어베스트 공지사항" alt="어베스트 공지사항"><font style="font-size:40px; color:#fff;">News</font></td>
 	<td width="824px">
 		<table width="670"  border="0" cellpadding="0" cellspacing="0" style="margin-left:40px; text-align:left;">
 		<tr>
@@ -1309,7 +1309,7 @@ ul, li {list-style:none; margin:0; padding:0; font-size:10pt; }
 		
 		
 <div id="blog_news">
-<img src='/images/ic_dot01.gif' style='vertical-align:middle;'>&nbsp;&nbsp;&nbsp;<a class='font-family: 'Nanum Gothic, sans-serif; font-size:20px; line-height:28px; letter-spacing:-0.03em;' href="http://blog.avastkorea.com/1084">°ø°ø ¿ÍÀÌÆÄÀÌ¿¡¼­ ¾ÆÀÌÆù À¯ÀúµéÀ» º¸È£ÇØ ÁÖ´Â ¹«·á¾Û Avast SecureMe</font><br><img src='/images/ic_dot01.gif' style='vertical-align:middle;'>&nbsp;&nbsp;&nbsp;<a class='font-family: 'Nanum Gothic, sans-serif; font-size:20px; line-height:28px; letter-spacing:-0.03em;' href="http://blog.avastkorea.com/1083">WINDOWS 10 È£È¯ ¿£µåÆ÷ÀÎÆ® Á¦Ç°±º Á¤½Ä ¹öÀü Ãâ½Ã</font><br><img src='/images/ic_dot01.gif' style='vertical-align:middle;'>&nbsp;&nbsp;&nbsp;<a class='font-family: 'Nanum Gothic, sans-serif; font-size:20px; line-height:28px; letter-spacing:-0.03em;' href="http://blog.avastkorea.com/1082">¾îº£½ºÆ®´Â ¸Ó½Å ÇÐ½À¿¡ ±â¹ÝÀ» µÐ À§Çù Å½Áö ±â¼ú Àû¿ë</font><br><img src='/images/ic_dot01.gif' style='vertical-align:middle;'>&nbsp;&nbsp;&nbsp;<a class='font-family: 'Nanum Gothic, sans-serif; font-size:20px; line-height:28px; letter-spacing:-0.03em;' href="http://blog.avastkorea.com/1081">¸®´ª½º À¥¼­¹ö¸¦ °¨¿°½ÃÅ°´Â »õ·Î¿î ·£¼¶¿þ¾î º¯Á¾ ÃâÇö, ¾ÕÀ¸·Î ±â¾÷ÀÇ À¥»çÀÌÆ®¸¦ ÀÎÁú·Î »ïÀ» µí...</font><br><img src='/images/ic_dot01.gif' style='vertical-align:middle;'>&nbsp;&nbsp;&nbsp;<a class='font-family: 'Nanum Gothic, sans-serif; font-size:20px; line-height:28px; letter-spacing:-0.03em;' href="http://blog.avastkorea.com/1080">·£¼¶¿þ¾î¿¡ ´ëÀÀÇÏ±â À§ÇÑ ¾îº£½ºÆ® ¼³Á¤ ¹æ¹ý</font><br>
+<img src='/images/ic_dot01.gif' style='vertical-align:middle;'>&nbsp;&nbsp;&nbsp;<a class='font-family: 'Nanum Gothic, sans-serif; font-size:20px; line-height:28px; letter-spacing:-0.03em;' href="http://blog.avastkorea.com/1084">공공 와이파이에서 아이폰 유저들을 보호해 주는 무료앱 Avast SecureMe</font><br><img src='/images/ic_dot01.gif' style='vertical-align:middle;'>&nbsp;&nbsp;&nbsp;<a class='font-family: 'Nanum Gothic, sans-serif; font-size:20px; line-height:28px; letter-spacing:-0.03em;' href="http://blog.avastkorea.com/1083">WINDOWS 10 호환 엔드포인트 제품군 정식 버전 출시</font><br><img src='/images/ic_dot01.gif' style='vertical-align:middle;'>&nbsp;&nbsp;&nbsp;<a class='font-family: 'Nanum Gothic, sans-serif; font-size:20px; line-height:28px; letter-spacing:-0.03em;' href="http://blog.avastkorea.com/1082">어베스트는 머신 학습에 기반을 둔 위협 탐지 기술 적용</font><br><img src='/images/ic_dot01.gif' style='vertical-align:middle;'>&nbsp;&nbsp;&nbsp;<a class='font-family: 'Nanum Gothic, sans-serif; font-size:20px; line-height:28px; letter-spacing:-0.03em;' href="http://blog.avastkorea.com/1081">리눅스 웹서버를 감염시키는 새로운 랜섬웨어 변종 출현, 앞으로 기업의 웹사이트를 인질로 삼을 듯...</font><br><img src='/images/ic_dot01.gif' style='vertical-align:middle;'>&nbsp;&nbsp;&nbsp;<a class='font-family: 'Nanum Gothic, sans-serif; font-size:20px; line-height:28px; letter-spacing:-0.03em;' href="http://blog.avastkorea.com/1080">랜섬웨어에 대응하기 위한 어베스트 설정 방법</font><br>
 </div>
 
 			</td>
@@ -1331,10 +1331,10 @@ ul, li {list-style:none; margin:0; padding:0; font-size:10pt; }
 	<table>
 		<tr>
 		<td><ul>
-				<li style="text-align:center; font-weight: 700; line-height: 15px;"><a href="http://www.avastkorea.com/company/contacts.asp"><img src="/image/main/icon1.png"><br><br><span style="margin-left:8px";>°í°´Áö¿ø</a></span></li>
-				<li style="text-align:center; font-weight: 700; line-height: 15px;"><a href="http://www.avastkorea.com/support/virus.asp"><img src="/image/main/icon2.png" style="margin-left:20px;"><br><br><span style="margin-left:20px";>½Å°íÇÏ±â</span></li>
-				<li style="text-align:center; font-weight: 700; line-height: 15px;"><a href="http://www.avastkorea.com/business/quote.asp"><img src="/image/main/icon3.png" style="margin-left:20px;"><br><br><span style="margin-left:20px";>°ßÀû¿äÃ»</span></a></li>
-				<li style="text-align:center; font-weight: 700; line-height: 15px;"><a href="http://cafe.naver.com/avastkorea" target="sns"><img src="/image/main/icon4.png" style="margin-left:20px;"><br><br><span style="margin-left:20px";>ÁúÀÇÀÀ´ä</span></a></li>
+				<li style="text-align:center; font-weight: 700; line-height: 15px;"><a href="http://www.avastkorea.com/company/contacts.asp"><img src="/image/main/icon1.png"><br><br><span style="margin-left:8px";>고객지원</a></span></li>
+				<li style="text-align:center; font-weight: 700; line-height: 15px;"><a href="http://www.avastkorea.com/support/virus.asp"><img src="/image/main/icon2.png" style="margin-left:20px;"><br><br><span style="margin-left:20px";>신고하기</span></li>
+				<li style="text-align:center; font-weight: 700; line-height: 15px;"><a href="http://www.avastkorea.com/business/quote.asp"><img src="/image/main/icon3.png" style="margin-left:20px;"><br><br><span style="margin-left:20px";>견적요청</span></a></li>
+				<li style="text-align:center; font-weight: 700; line-height: 15px;"><a href="http://cafe.naver.com/avastkorea" target="sns"><img src="/image/main/icon4.png" style="margin-left:20px;"><br><br><span style="margin-left:20px";>질의응답</span></a></li>
 		</ul></td></tr></table>
 		</td>
 		<td width="50%" align="right">
@@ -1358,10 +1358,10 @@ ul, li {list-style:none; margin:0; padding:0; font-size:10pt; }
 
 <script type="text/javascript">
 		$('.DB_banner4').DB_slideStepBanner({
-			key:'b28551',        //¶óÀÌ¼¾½ºÅ°	
-			moveSpeed:300,                  //ÀÌµ¿¼Óµµ
-			dir:'next',                     //ÁøÇà¹æÇâ('next','prev')
-			autoRollingTime:5000            //ÀÚµ¿·Ñ¸µ½Ã°£(¹Ð¸®ÃÊ)
+			key:'b28551',        //라이센스키	
+			moveSpeed:300,                  //이동속도
+			dir:'next',                     //진행방향('next','prev')
+			autoRollingTime:5000            //자동롤링시간(밀리초)
 		})
 </script>
 
@@ -1384,9 +1384,9 @@ ul, li {list-style:none; margin:0; padding:0; font-size:10pt; }
 <center>
 
 		
-<!--- ±¤°í
+<!--- 광고
 <a href="http://shop.avastkorea.com/order_lg/payreq.asp?a_IS=3&a_MAINT=3"><img src="http://shop.avastkorea.com/images/banner/buy_is33.png" border=0></a><br><br>
- ±¤°í --->
+ 광고 --->
 
 		<!---<center><a href="http://shop.avastkorea.com/order_lg/payreq.asp?a_IS=3&a_MAINT=3"><img src="http://shop.avastkorea.com/images/banner/email_banner_is33.jpg" width=689  border=0></a></center>-->
 		<br><br>
@@ -1397,8 +1397,8 @@ ul, li {list-style:none; margin:0; padding:0; font-size:10pt; }
 
 
 		<!---
-		LGÀ¯ÇÃ·¯½º PG(Çö´ëÄ«µå 5¸¸¿ø ÀÌ»ó ±¸¸Å½Ã 2-3°³¿ù ¹«ÀÌÀÚÇÒºÎ), <b>È¯ºÒ±ÔÁ¤</b> : 30ÀÏ ¸Ó´Ï¹é °³·±Æ¼(´Ü, °øµ¿±¸¸Å´Â ¶óÀÌ¼±½º¹ß±ÞÀÌÀü)<br> 
-		¾îº£½ºÆ® °³ÀÎÁ¤º¸´Â ´ç»çÀÇ HALON SX¹æÈ­º®, Æ®¸´¼¾Æ®¸® À¥¹æÈ­º®, ¾îº£½ºÆ® ¼­¹ö¿ë ¹é½Å, SPG½ºÆÔ¸ÞÀÏ Â÷´Ü½Ã½ºÅÛÀ¸·Î º¸È£µÇ°í ÀÖ½À´Ï´Ù.<br>
+		LG유플러스 PG(현대카드 5만원 이상 구매시 2-3개월 무이자할부), <b>환불규정</b> : 30일 머니백 개런티(단, 공동구매는 라이선스발급이전)<br> 
+		어베스트 개인정보는 당사의 HALON SX방화벽, 트릿센트리 웹방화벽, 어베스트 서버용 백신, SPG스팸메일 차단시스템으로 보호되고 있습니다.<br>
 		--->
 
 
@@ -1410,99 +1410,99 @@ ul, li {list-style:none; margin:0; padding:0; font-size:10pt; }
 <div id='tail' style="text-align:left; background:#2e3740; ">
 	<div class='tail_inner' style="background:#2e3740; ">
 
-<!-- ÇªÅÍ »çÀÌÆ® ¸Ê ½ÃÀÛ -->
+<!-- 푸터 사이트 맵 시작 -->
 		<div class='t_m'>
-			<h3>¿ùÁ¤¾×</h3>
+			<h3>월정액</h3>
 				<div class='tail_menu'>
-					<a href="http://www.avastkorea.com/home-user/cloud.asp">°³ÀÎ¿ë ÇÁ¸®¹Ì¾ö ¿ùÁ¤¾× ¼­ºñ½º</a><br>
-					<a href="http://www.avastkorea.com/business/cloud.asp">¾÷¹«¿ë ¿ùÁ¤¾× ¼­ºñ½º (PC¿ë)</a><br>
-					<a href="http://www.avastkorea.com/business/managed.asp">¾÷¹«¿ë ¿ùÁ¤¾× ¼­ºñ½º (¼­¹ö¿ë)</a><br>
-					<a href="http://www.avastkorea.com/business/solution.asp">¾÷¹«¿ë Æ÷·»½Ä APTÂ÷´Ü ¼­ºñ½º (ÁØºñ Áß)</a>
-					<a href="http://www.avastkorea.com/home-user/cloud_how.asp">¿ùÁ¤¾× ¼­ºñ½º GUIDE</a>
+					<a href="http://www.avastkorea.com/home-user/cloud.asp">개인용 프리미엄 월정액 서비스</a><br>
+					<a href="http://www.avastkorea.com/business/cloud.asp">업무용 월정액 서비스 (PC용)</a><br>
+					<a href="http://www.avastkorea.com/business/managed.asp">업무용 월정액 서비스 (서버용)</a><br>
+					<a href="http://www.avastkorea.com/business/solution.asp">업무용 포렌식 APT차단 서비스 (준비 중)</a>
+					<a href="http://www.avastkorea.com/home-user/cloud_how.asp">월정액 서비스 GUIDE</a>
 				</div><br>
-			<h3>°³ÀÎ¿ë</h3>
+			<h3>개인용</h3>
 				<div class='tail_menu'>
-					<a href="http://www.avastkorea.com/home-user/default.asp">avast! °³ÀÎ¿ë ¶óÀÌ¼±½º</a><br>
-					<a href="http://www.avastkorea.com/home-user/cloud.asp">avast! ¿ùÁ¤¾× ¼­ºñ½º</a><br>
-					<a href="http://www.avastkorea.com/home-user/secureline.asp">avast! ½ÃÅ¥¾î¶óÀÎ VPN</a><br>
-					<a href="http://www.avastkorea.com/home-user/wisecare.asp">¿ÍÀÌÁîÄÉ¾î ( PC Æ©´× À¯Æ¿¸®Æ¼ )</a>
+					<a href="http://www.avastkorea.com/home-user/default.asp">avast! 개인용 라이선스</a><br>
+					<a href="http://www.avastkorea.com/home-user/cloud.asp">avast! 월정액 서비스</a><br>
+					<a href="http://www.avastkorea.com/home-user/secureline.asp">avast! 시큐어라인 VPN</a><br>
+					<a href="http://www.avastkorea.com/home-user/wisecare.asp">와이즈케어 ( PC 튜닝 유틸리티 )</a>
 				</div>
 		</div>
 
 		<div class='t_m'>
-			<h3>¾÷¹«¿ë</h3>
+			<h3>업무용</h3>
 				<div class='tail_menu'>
-					<a href="http://www.avastkorea.com/business/endpoint.asp">avast! ¿£µåÆ÷ÀÎÆ®</a><br>
-					<a href="http://www.avastkorea.com/business/server-security.asp">avast! ¼­¹ö¿ë ¹é½Å</a><br>
-					<a href="http://www.avastkorea.com/business/cloud.asp">avast! ¿ùÁ¤¾× ¼­ºñ½º</a><br>
-					<a href="http://www.avastkorea.com/business/solution.asp">·£¼¶¿þ¾î¤ýAPTÂ÷´Ü, Æ÷·»½Ä ¼­ºñ½º</a><br>
-					<a href="http://www.avastkorea.com/business/quote.asp">avast! °ßÀû ¿äÃ»</a><br>
-					<a href="http://www.avastkorea.com/business/reference.asp">´ëÇ¥ ·¡ÆÛ·±½º</a><br>
-					<a href="http://www.avastkorea.com/partners/">ÆÄÆ®³Ê ¹× ¸®¼¿·¯</a><br>
+					<a href="http://www.avastkorea.com/business/endpoint.asp">avast! 엔드포인트</a><br>
+					<a href="http://www.avastkorea.com/business/server-security.asp">avast! 서버용 백신</a><br>
+					<a href="http://www.avastkorea.com/business/cloud.asp">avast! 월정액 서비스</a><br>
+					<a href="http://www.avastkorea.com/business/solution.asp">랜섬웨어ㆍAPT차단, 포렌식 서비스</a><br>
+					<a href="http://www.avastkorea.com/business/quote.asp">avast! 견적 요청</a><br>
+					<a href="http://www.avastkorea.com/business/reference.asp">대표 래퍼런스</a><br>
+					<a href="http://www.avastkorea.com/partners/">파트너 및 리셀러</a><br>
 				</div>
 		</div>
 
 		<div class='t_m'>
-			<h3>°í°´Áö¿ø</h3>
+			<h3>고객지원</h3>
 				<div class='tail_menu'>
-					<a href="http://www.avastkorea.com/support/virus.asp">¹ÙÀÌ·¯½º ¹× ¿ÀÁø ½Å°í</a><br>
-					<a href="http://www.avastkorea.com/support/remote_support.asp">¿ø°Ý °í°´Áö¿ø</a><br>
-					<a href="http://www.avastkorea.com/support/awards.asp">¼ö»ó ½ÇÀû</a><br>
-					<a href="http://www.avastkorea.com/support/ad.asp">±¤°í »ç·Ê</a><br>
-					<a href="http://www.avastkorea.com/login/my_news_unsubscribe.asp">´º½º¼ö½ÅÇØÁö</a><br>
+					<a href="http://www.avastkorea.com/support/virus.asp">바이러스 및 오진 신고</a><br>
+					<a href="http://www.avastkorea.com/support/remote_support.asp">원격 고객지원</a><br>
+					<a href="http://www.avastkorea.com/support/awards.asp">수상 실적</a><br>
+					<a href="http://www.avastkorea.com/support/ad.asp">광고 사례</a><br>
+					<a href="http://www.avastkorea.com/login/my_news_unsubscribe.asp">뉴스수신해지</a><br>
 					<a href="http://www.avastkorea.com/support/FAQs.asp">FAQs</a><br>
-					<a href="http://www.avastkorea.com/support/return_refund.asp">È¯ºÒ ¹× ¹ÝÇ° Á¤Ã¥</a><br>
-					<a href="http://www.avastkorea.com/support/facebook.asp">ÆäÀÌ½ººÏ À¯Àú</a>
+					<a href="http://www.avastkorea.com/support/return_refund.asp">환불 및 반품 정책</a><br>
+					<a href="http://www.avastkorea.com/support/facebook.asp">페이스북 유저</a>
 				</div><br>
 		</div>
 
 		<div class='t_m'>
-			<h3>´Ù¿î·Îµå</h3>
+			<h3>다운로드</h3>
 				<div class='tail_menu'>
-					<a href="http://www.avastkorea.com/download">°³ÀÎ¿ë ¼³Ä¡ ÆÄÀÏ</a><br>
-					<a href="http://www.avastkorea.com/support/documents.asp">avast! ¹®¼­</a><br>
-					<a href="http://www.avastkorea.com/support/tools.asp">avast! µµ±¸ ÇÁ·Î±×·¥</a><br>
-					<a href="http://www.avastkorea.com/support/wallpapers.asp">avast! ¹è°æÈ­¸é</a><br><br>
+					<a href="http://www.avastkorea.com/download">개인용 설치 파일</a><br>
+					<a href="http://www.avastkorea.com/support/documents.asp">avast! 문서</a><br>
+					<a href="http://www.avastkorea.com/support/tools.asp">avast! 도구 프로그램</a><br>
+					<a href="http://www.avastkorea.com/support/wallpapers.asp">avast! 배경화면</a><br><br>
 				</div>
 		<div><br>
-			<h3>Á¦Ç°±¸¸Å</h3>
+			<h3>제품구매</h3>
 				<div class='tail_menu'>
-					<a href="http://shop.avastkorea.com">¾îº£½ºÆ®¼¥</a><br>
+					<a href="http://shop.avastkorea.com">어베스트샵</a><br>
 				</div>
 		</div>
 	</div>
-<!-- ÇªÅÍ »çÀÌÆ® ¸Ê ³¡ -->
+<!-- 푸터 사이트 맵 끝 -->
 
 
-<!-- »ç¿ë¾à°ü ¿Ü ¼Ò¼È ¾ÆÀÌÄÜ ½ÃÀÛ -->
+<!-- 사용약관 외 소셜 아이콘 시작 -->
 	<div class='cl'></div>
 		<div style="background:#2e3740;">
 			<div class='left tail_menu2' style="background:#2e3740; margin-top:5px;">
-				<a href="http://www.softmail.co.kr/page1.asp">È¸»ç¼Ò°³</a><img src='/image/tail_menu2_line.gif'>
-				<a href="http://www.avastkorea.com/company/agreement.asp">»ç¿ë¾à°ü</a><img src='/image/tail_menu2_line.gif'>
-				<a href="http://www.avastkorea.com/company/privacy.asp">°³ÀÎÁ¤º¸Ãë±Þ¹æÄ§</a><img src='/image/tail_menu2_line.gif'>
-				<a href="http://www.avastkorea.com/login/my_news_unsubscribe.asp">´º½º¼ö½ÅÇØÁö</a>
+				<a href="http://www.softmail.co.kr/page1.asp">회사소개</a><img src='/image/tail_menu2_line.gif'>
+				<a href="http://www.avastkorea.com/company/agreement.asp">사용약관</a><img src='/image/tail_menu2_line.gif'>
+				<a href="http://www.avastkorea.com/company/privacy.asp">개인정보취급방침</a><img src='/image/tail_menu2_line.gif'>
+				<a href="http://www.avastkorea.com/login/my_news_unsubscribe.asp">뉴스수신해지</a>
 			</div>		
 			<div class='left' style='padding:45px 0 0 220px;background:#2e3740; margin-top:5px;'>
-				<a href="http://blog.avastkorea.com" title="ºí·Î±×" target="sns"><img src='/image/link1.jpg'></a>
-				<a href="http://cafe.naver.com/avastkorea" title="Ä«Æä"  target="sns"><img src='/image/link2.jpg'></a>
-				<a href="https://www.facebook.com/avast0" title="ÆäÀÌ½ººÏ"  target="sns"><img src='/image/link3.jpg'></a>
-				<a href="http://twitter.com/avastkorea" title="Æ®À§ÅÍ"  target="sns"><img src='/image/link4.jpg'></a>
-				<a href="https://www.youtube.com/user/AVASTKOREA" title="avast! À¯Æ©ºê"  target="sns"><img src='/image/link5.jpg'></a>			
+				<a href="http://blog.avastkorea.com" title="블로그" target="sns"><img src='/image/link1.jpg'></a>
+				<a href="http://cafe.naver.com/avastkorea" title="카페"  target="sns"><img src='/image/link2.jpg'></a>
+				<a href="https://www.facebook.com/avast0" title="페이스북"  target="sns"><img src='/image/link3.jpg'></a>
+				<a href="http://twitter.com/avastkorea" title="트위터"  target="sns"><img src='/image/link4.jpg'></a>
+				<a href="https://www.youtube.com/user/AVASTKOREA" title="avast! 유튜브"  target="sns"><img src='/image/link5.jpg'></a>			
 			</div>	
 			<div class='right' style='padding-top:50px;background:#2e3740;'>
 				<select class='site_select2' onChange='if(this.selectedIndex) { this.blur(); window.open(options[selectedIndex].value); }' style="font-family: Nanum Gothic, serif; font-size: 13px;width:230px; height:30px; margin-left:3px;">
 					<option>FAMILY SITE</option>
-					<option style='font-size:13px;' value="http://www.softmail.co.kr"><a href="">(ÁÖ)¼ÒÇÁÆ®¸ÞÀÏ</a></option>
-					<option style='font-size:13px;' value="http://www.icewarp.co.kr"><a href="">¸ÞÀÏ¼Ö·ç¼Ç | IceWarp ¸ÞÀÏ¼­¹ö</a></option>
-					<option style='font-size:13px;' value="http://www.spamblock.co.kr"><a href="">¸ÞÀÏ¼Ö·ç¼Ç | ½ºÆÔºí·Ï ½ºÆÔ¸ÞÀÏÂ÷´Ü</a></option>
-					<option style='font-size:13px;' value="http://www.malwarebytes.co.kr"><a href="">º¸¾È¼Ö·ç¼Ç | ¸Ö¿þ¾î¹ÙÀÌÆ® ¾Ç¼ºÄÚµå Áø´Ü</a></option>
-					<option style='font-size:13px;' value="http://www.avastkorea.com"><a href="">º¸¾È¼Ö·ç¼Ç | ¾îº£½ºÆ® ¾ÈÆ¼¹ÙÀÌ·¯½º</a></option>
-					<option style='font-size:13px;' value="http://www.secureline.co.kr"><a href="">º¸¾È¼Ö·ç¼Ç | ¾îº£½ºÆ® ½ÃÅ¥¾î¶óÀÎ VPN</a></option>
+					<option style='font-size:13px;' value="http://www.softmail.co.kr"><a href="">(주)소프트메일</a></option>
+					<option style='font-size:13px;' value="http://www.icewarp.co.kr"><a href="">메일솔루션 | IceWarp 메일서버</a></option>
+					<option style='font-size:13px;' value="http://www.spamblock.co.kr"><a href="">메일솔루션 | 스팸블록 스팸메일차단</a></option>
+					<option style='font-size:13px;' value="http://www.malwarebytes.co.kr"><a href="">보안솔루션 | 멀웨어바이트 악성코드 진단</a></option>
+					<option style='font-size:13px;' value="http://www.avastkorea.com"><a href="">보안솔루션 | 어베스트 안티바이러스</a></option>
+					<option style='font-size:13px;' value="http://www.secureline.co.kr"><a href="">보안솔루션 | 어베스트 시큐어라인 VPN</a></option>
 				</select>
 			</div>	
 	</div>
-<!-- »ç¿ë¾à°ü ¿Ü ¼Ò¼È ¾ÆÀÌÄÜ ³¡ -->
+<!-- 사용약관 외 소셜 아이콘 끝 -->
 	
 <!-- tail_inner-->
 </div>
@@ -1513,8 +1513,8 @@ ul, li {list-style:none; margin:0; padding:0; font-size:10pt; }
 		<div class='address_inner'>
 			<p style='padding-bottom:0px; margin-top:30px;'><a href="http://www.softmail.co.kr" target="_blank"><img src='/image/t_logo.jpg' ></a></p>
 				<address>
-					(ÁÖ)¼ÒÇÁÆ®¸ÞÀÏ&nbsp : »ç¾÷ÀÚµî·Ï¹øÈ£ : 214-87-14889&nbsp Åë½ÅÆÇ¸Å¾÷½Å°í¹øÈ£ : ±¸·ÎÁ¦0716È£<br>
-					´ëÇ¥ÀÌ»ç : ¿ÀºÀ±Ù ¦¢ ( 08389 ) ¼­¿ï½Ã ±¸·Î±¸ µðÁöÅÐ·Î 272 ÇÑ½ÅITÅ¸¿ö 1305È£ ¦¢ ´ëÇ¥ÀüÈ­ : 1661-9331 ¦¢ ÆÑ½º : 02-3486-9331<br>  
+					(주)소프트메일&nbsp : 사업자등록번호 : 214-87-14889&nbsp 통신판매업신고번호 : 구로제0716호<br>
+					대표이사 : 오봉근 │ ( 08389 ) 서울시 구로구 디지털로 272 한신IT타워 1305호 │ 대표전화 : 1661-9331 │ 팩스 : 02-3486-9331<br>  
 					avast! is registered trademark of AVAST Software a.s. and is used in www.softmail.co.kr under non-exclusive license from AVAST Software a.s.
 				</address>
 			<img style="margin-left:2px; margin-top:10px;" width=120 src="/images/banner_left_side/kt_m.jpg"><img style="margin-top:12px;" width=120 src="/images/banner_left_side/s1_m.jpg">
