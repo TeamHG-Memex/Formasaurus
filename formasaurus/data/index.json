@@ -2243,7 +2243,7 @@
         "forms": [
             "X",
             "X",
-            "X"
+            "N"
         ],
         "visible_html_fields": [
             {
@@ -2256,7 +2256,7 @@
                 "keywords": "XX"
             },
             {
-                "f": "XX"
+                "f": "nv"
             }
         ]
     },
@@ -5799,17 +5799,17 @@
     "html/sanlameerhotel.com-1.html": {
         "url": "http://sanlameerhotel.com/contact/",
         "forms": [
-            "X",
+            "c",
             "-"
         ],
         "visible_html_fields": [
             {
-                "avia_avia_age_1": "XX",
-                "avia_avia_username_1": "XX",
-                "avia_e-mail_1": "XX",
-                "avia_message_1": "XX",
-                "avia_name_1": "XX",
-                "avia_subject_1": "XX"
+                "avia_avia_age_1": "ca",
+                "avia_avia_username_1": "hp",
+                "avia_e-mail_1": "e1",
+                "avia_message_1": "CC",
+                "avia_name_1": "nf",
+                "avia_subject_1": "CT"
             },
             {
                 "EMAIL": "XX",
@@ -6937,11 +6937,11 @@
     "html/toulouse-game-show.fr-0.html": {
         "url": "http://toulouse-game-show.fr/content/gillian-anderson",
         "forms": [
-            "X"
+            "m"
         ],
         "visible_html_fields": [
             {
-                "email": "XX"
+                "email": "e1"
             }
         ]
     },
@@ -6960,19 +6960,19 @@
         "url": "http://toulouse-game-show.fr/contact",
         "forms": [
             "X",
-            "X"
+            "c"
         ],
         "visible_html_fields": [
             {
                 "email": "XX"
             },
             {
-                "cid": "XX",
-                "mail": "XX",
-                "message": "XX",
-                "name": "XX",
-                "op": "XX",
-                "subject": "XX"
+                "cid": "CT",
+                "mail": "e1",
+                "message": "CC",
+                "name": "nf",
+                "op": "Bs",
+                "subject": "CT"
             }
         ]
     },
@@ -7190,56 +7190,56 @@
     "html/vorespuls.dk-0.html": {
         "url": "http://vorespuls.dk/sektion/svoemning",
         "forms": [
-            "X",
-            "X",
-            "X",
-            "X",
-            "X"
+            "l",
+            "s",
+            "m",
+            "s",
+            "l"
         ],
         "visible_html_fields": [
             {
-                "name": "XX",
-                "op": "XX",
-                "pass": "XX"
+                "name": "us",
+                "op": "Bs",
+                "pass": "p1"
             },
             {
-                "op": "XX",
-                "search_theme_form": "XX"
+                "op": "Bs",
+                "search_theme_form": "qq"
             },
             {
-                "email": "XX",
-                "name": "XX",
-                "op": "XX",
-                "second-name": "XX"
+                "email": "e1",
+                "name": "nf",
+                "op": "Bs",
+                "second-name": "hp"
             },
             {
-                "date[value][date]": "XX",
-                "term_node_tid_depth[]": "XX"
+                "date[value][date]": "OD",
+                "term_node_tid_depth[]": "qc"
             },
             {
-                "op": "XX",
-                "second-name": "XX"
+                "op": "Bs",
+                "second-name": "hp"
             }
         ]
     },
     "html/vorespuls.dk-1.html": {
         "url": "http://vorespuls.dk/",
         "forms": [
+            "l",
+            "s",
+            "-",
             "X",
-            "X",
-            "X",
-            "X",
-            "X"
+            "-"
         ],
         "visible_html_fields": [
             {
-                "name": "XX",
-                "op": "XX",
-                "pass": "XX"
+                "name": "us",
+                "op": "Bs",
+                "pass": "p1"
             },
             {
                 "op": "XX",
-                "search_theme_form": "XX"
+                "search_theme_form": "qq"
             },
             {
                 "email": "XX",
@@ -7265,10 +7265,10 @@
     "html/vorespuls.dk-2.html": {
         "url": "http://vorespuls.dk/user/register",
         "forms": [
-            "X",
-            "X",
-            "X",
-            "X"
+            "-",
+            "-",
+            "r",
+            "-"
         ],
         "visible_html_fields": [
             {
@@ -7281,16 +7281,16 @@
                 "search_theme_form": "XX"
             },
             {
-                "captcha_response": "XX",
-                "field_address_point[0][value][address][country]": "XX",
-                "field_address_point[0][value][search][query]": "XX",
-                "mail": "XX",
-                "name": "XX",
-                "op": "XX",
-                "pass[pass1]": "XX",
-                "pass[pass2]": "XX",
-                "second-name": "XX",
-                "title": "XX"
+                "captcha_response": "ca",
+                "field_address_point[0][value][address][country]": "Co",
+                "field_address_point[0][value][search][query]": "Ad",
+                "mail": "e1",
+                "name": "us",
+                "op": "Bs",
+                "pass[pass1]": "p1",
+                "pass[pass2]": "p2",
+                "second-name": "hp",
+                "title": "nf"
             },
             {
                 "op": "XX",
@@ -7301,10 +7301,10 @@
     "html/vorespuls.dk-3.html": {
         "url": "http://vorespuls.dk/user/password",
         "forms": [
-            "X",
-            "X",
-            "X",
-            "X"
+            "-",
+            "-",
+            "p",
+            "-"
         ],
         "visible_html_fields": [
             {
@@ -7317,9 +7317,9 @@
                 "search_theme_form": "XX"
             },
             {
-                "name": "XX",
-                "op": "XX",
-                "second-name": "XX"
+                "name": "ue",
+                "op": "Bs",
+                "second-name": "hp"
             },
             {
                 "op": "XX",
@@ -7330,10 +7330,10 @@
     "html/vorespuls.dk-4.html": {
         "url": "http://vorespuls.dk/contact",
         "forms": [
-            "X",
-            "X",
-            "X",
-            "X"
+            "-",
+            "-",
+            "c",
+            "-"
         ],
         "visible_html_fields": [
             {
@@ -7346,12 +7346,12 @@
                 "search_theme_form": "XX"
             },
             {
-                "mail": "XX",
-                "message": "XX",
-                "name": "XX",
-                "op": "XX",
-                "second-name": "XX",
-                "subject": "XX"
+                "mail": "e1",
+                "message": "CC",
+                "name": "nf",
+                "op": "Bs",
+                "second-name": "hp",
+                "subject": "CT"
             },
             {
                 "op": "XX",
@@ -19218,18 +19218,18 @@
     "html/www.sidneyphillips.co.uk-0.html": {
         "url": "http://www.sidneyphillips.co.uk/fulldetails.php?prn=36993",
         "forms": [
-            "X",
-            "X",
+            "s",
+            "s",
             "X"
         ],
         "visible_html_fields": [
             {
-                "GO": "XX",
-                "keyword": "XX"
+                "GO": "Bs",
+                "keyword": "qq"
             },
             {
-                "GO": "XX",
-                "refnum": "XX"
+                "GO": "Bs",
+                "refnum": "qq"
             },
             {
                 "freehold": "XX",
@@ -19315,7 +19315,7 @@
         "forms": [
             "X",
             "X",
-            "X"
+            "l"
         ],
         "visible_html_fields": [
             {
@@ -19327,9 +19327,9 @@
                 "refnum": "XX"
             },
             {
-                "password": "XX",
-                "submit": "XX",
-                "username": "XX"
+                "password": "p1",
+                "submit": "Bs",
+                "username": "e1"
             }
         ]
     },
@@ -19951,36 +19951,36 @@
         "url": "http://www.sumka-style.ru/catalog/zhenskie-sumki/khozyaystvennye-sumki/",
         "forms": [
             "X",
-            "X",
-            "X",
-            "X",
-            "X",
-            "X"
+            "s",
+            "s",
+            "b",
+            "-",
+            "-"
         ],
         "visible_html_fields": [
             {
-                "Login": "XX",
-                "USER_LOGIN": "XX",
-                "USER_PASSWORD": "XX"
+                "Login": "Bs",
+                "USER_LOGIN": "e1",
+                "USER_PASSWORD": "p1"
             },
             {
-                "q": "XX"
+                "q": "qq"
             },
             {
-                "ORDER_BY[PRICE]": "XX",
-                "arrCatalogFilter_43_2944839123": "XX",
-                "arrCatalogFilter_51_2712511838": "XX",
-                "arrCatalogFilter_52_3314631429": "XX",
-                "arrCatalogFilter_52_960890342": "XX",
-                "arrCatalogFilter_53_841265288": "XX",
-                "season[all]": "XX",
-                "season[\u0432\u0441\u0435 \u0441\u0435\u0437\u043e\u043d\u044b]": "XX",
-                "size[M]": "XX",
-                "size[all]": "XX"
+                "ORDER_BY[PRICE]": "sp",
+                "arrCatalogFilter_43_2944839123": "qc",
+                "arrCatalogFilter_51_2712511838": "qc",
+                "arrCatalogFilter_52_3314631429": "qc",
+                "arrCatalogFilter_52_960890342": "qc",
+                "arrCatalogFilter_53_841265288": "qc",
+                "season[all]": "qc",
+                "season[\u0432\u0441\u0435 \u0441\u0435\u0437\u043e\u043d\u044b]": "qc",
+                "size[M]": "qc",
+                "size[all]": "qc"
             },
             {
-                "actionADD2BASKET": "XX",
-                "quantity": "XX"
+                "actionADD2BASKET": "Bs",
+                "quantity": "qt"
             },
             {
                 "actionADD2BASKET": "XX",
@@ -20014,7 +20014,7 @@
         "forms": [
             "X",
             "X",
-            "X"
+            "r"
         ],
         "visible_html_fields": [
             {
@@ -20026,19 +20026,19 @@
                 "q": "XX"
             },
             {
-                "REGISTER[CONFIRM_PASSWORD]": "XX",
-                "REGISTER[EMAIL]": "XX",
-                "REGISTER[LAST_NAME]": "XX",
-                "REGISTER[NAME]": "XX",
-                "REGISTER[PASSWORD]": "XX",
-                "REGISTER[PERSONAL_PHONE]": "XX",
-                "REGISTER[SECOND_NAME]": "XX",
-                "REGISTER[UF_FACE_TYPE]": "XX",
-                "REGISTER[UF_INN]": "XX",
-                "REGISTER[UF_RIGHT_FORM]": "XX",
-                "REGISTER[WORK_COMPANY]": "XX",
-                "captcha_word": "XX",
-                "register_submit_button": "XX"
+                "REGISTER[CONFIRM_PASSWORD]": "p2",
+                "REGISTER[EMAIL]": "e1",
+                "REGISTER[LAST_NAME]": "n3",
+                "REGISTER[NAME]": "n1",
+                "REGISTER[PASSWORD]": "p1",
+                "REGISTER[PERSONAL_PHONE]": "ph",
+                "REGISTER[SECOND_NAME]": "n2",
+                "REGISTER[UF_FACE_TYPE]": "OS",
+                "REGISTER[UF_INN]": "OT",
+                "REGISTER[UF_RIGHT_FORM]": "OS",
+                "REGISTER[WORK_COMPANY]": "no",
+                "captcha_word": "ca",
+                "register_submit_button": "Bs"
             }
         ]
     },
@@ -20047,7 +20047,7 @@
         "forms": [
             "X",
             "X",
-            "X"
+            "l"
         ],
         "visible_html_fields": [
             {
@@ -20059,9 +20059,9 @@
                 "q": "XX"
             },
             {
-                "Login": "XX",
-                "USER_LOGIN": "XX",
-                "USER_PASSWORD": "XX"
+                "Login": "Bs",
+                "USER_LOGIN": "e1",
+                "USER_PASSWORD": "p1"
             }
         ]
     },
@@ -20901,15 +20901,15 @@
     "html/www.unfuckyourhabitat.com-0.html": {
         "url": "http://www.unfuckyourhabitat.com/category/tips/",
         "forms": [
-            "X",
-            "X"
+            "s",
+            "b"
         ],
         "visible_html_fields": [
             {
-                "s": "XX"
+                "s": "qq"
             },
             {
-                "submit": "XX"
+                "submit": "Bs"
             }
         ]
     },
@@ -21516,60 +21516,60 @@
     "html/www.zeiri4.com-0.html": {
         "url": "https://www.zeiri4.com/p_mie/",
         "forms": [
+            "s",
             "X",
-            "X",
-            "X",
-            "X",
-            "X",
-            "X",
-            "X"
+            "s",
+            "s",
+            "s",
+            "s",
+            "s"
         ],
         "visible_html_fields": [
             {
-                "FirmSearchForm[Autonomy_id][]": "XX"
+                "FirmSearchForm[Autonomy_id][]": "qc"
             },
             {},
             {
-                "FirmSearchForm[Industry_id][]": "XX"
+                "FirmSearchForm[Industry_id][]": "qc"
             },
             {
-                "FirmSearchForm[AccountingSoftware_id][]": "XX"
+                "FirmSearchForm[AccountingSoftware_id][]": "qc"
             },
             {
-                "FirmSearchForm[Feature_id][]": "XX"
+                "FirmSearchForm[Feature_id][]": "qc"
             },
             {
-                "FirmSearchForm[members][]": "XX"
+                "FirmSearchForm[members][]": "qc"
             },
             {
-                "TrainLineSearchForm[Prefecture_id]": "XX",
-                "TrainLineSearchForm[TrainCompany_id]": "XX",
-                "TrainLineSearchForm[TrainLine_id]": "XX"
+                "TrainLineSearchForm[Prefecture_id]": "qc",
+                "TrainLineSearchForm[TrainCompany_id]": "qc",
+                "TrainLineSearchForm[TrainLine_id]": "qc"
             }
         ]
     },
     "html/www.zeiri4.com-1.html": {
         "url": "https://www.zeiri4.com/login/",
         "forms": [
-            "X"
+            "l"
         ],
         "visible_html_fields": [
             {
-                "LoginForm[password]": "XX",
-                "LoginForm[username]": "XX",
-                "yt0": "XX"
+                "LoginForm[password]": "p1",
+                "LoginForm[username]": "us",
+                "yt0": "Bs"
             }
         ]
     },
     "html/www.zeiri4.com-2.html": {
         "url": "https://www.zeiri4.com/register/",
         "forms": [
-            "X"
+            "r"
         ],
         "visible_html_fields": [
             {
-                "CustomerRegisterForm[login_id]": "XX",
-                "yt0": "XX"
+                "CustomerRegisterForm[login_id]": "e1",
+                "yt0": "Bs"
             }
         ]
     },
@@ -21619,13 +21619,13 @@
     "html/www.zone-concours.com-2.html": {
         "url": "http://www.zone-concours.com/forum/temoignages-f26.html",
         "forms": [
+            "s",
             "X",
-            "X",
-            "X"
+            "N"
         ],
         "visible_html_fields": [
             {
-                "keywords": "XX"
+                "keywords": "qq"
             },
             {
                 "sd": "XX",
@@ -21634,7 +21634,7 @@
                 "st": "XX"
             },
             {
-                "f": "XX"
+                "f": "nv"
             }
         ]
     },
