@@ -100,7 +100,7 @@ def response2unicode(resp):
     """
     enc, html = html_to_unicode(
         content_type_header=resp.headers.get('Content-Type'),
-        html_body_str=p.content,
+        html_body_str=resp.content,
         auto_detect_fun=_autodetect_encoding
     )
     return html
