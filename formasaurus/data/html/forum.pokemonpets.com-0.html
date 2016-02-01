@@ -1,0 +1,1380 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><!-- start: index -->
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>PokemonPets Official Forum  </title>
+<!-- start: headerinclude -->
+<link rel="alternate" type="application/rss+xml" title="Latest Threads (RSS 2.0)" href="http://forum.pokemonpets.com/syndication.php" />
+<link rel="alternate" type="application/atom+xml" title="Latest Threads (Atom 1.0)" href="http://forum.pokemonpets.com/syndication.php?type=atom1.0" />
+   <link rel="shortcut icon" href="pokemon-favicon.ico?2" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<script type="text/javascript" src="http://forum.pokemonpets.com/jscripts/prototype.js?ver=1603"></script>
+<script type="text/javascript" src="http://forum.pokemonpets.com/jscripts/general.js?ver=1603"></script>
+<script type="text/javascript" src="http://forum.pokemonpets.com/jscripts/popup_menu.js?ver=1600"></script>
+<link type="text/css" rel="stylesheet" href="http://forum.pokemonpets.com/cache/themes/theme4/css3.css" />
+<link type="text/css" rel="stylesheet" href="http://forum.pokemonpets.com/cache/themes/theme4/global.css" />
+
+<script type="text/javascript">
+<!--
+	var cookieDomain = ".forum.pokemonpets.com";
+	var cookiePath = "/";
+	var cookiePrefix = "";
+	var deleteevent_confirm = "Are you sure you want to delete this event?";
+	var removeattach_confirm = "Are you sure you want to remove the selected attachment from this post?";
+	var loading_text = 'Loading. <br />Please Wait..';
+	var saving_changes = 'Saving changes..';
+	var use_xmlhttprequest = "1";
+	var my_post_key = "bfe3140e881032c17a2e9429b79fb769";
+	var imagepath = "images/1";
+// -->
+</script>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-11860273-9', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<!-- end: headerinclude -->
+<script type="text/javascript" src="jscripts/overview.js"></script>
+
+<script type="text/javascript">
+<!--
+	lang.no_new_posts = "Forum Contains No New Posts";
+	lang.click_mark_read = "Click to mark this forum as read";
+// -->
+</script>
+<style>
+
+.PostButtons
+{
+	position: relative;
+	cursor:pointer;
+	opacity: 1;
+        display:inline-block;
+}
+
+.PostButtons span
+{
+	opacity: 0;
+	-webkit-transition: opacity 0.8s;
+	-moz-transition:    opacity 0.8s;
+	-o-transition:      opacity 0.8s;
+        transition: opacity 0.8s;	position: absolute;
+	top:0;
+	left:0;
+}
+
+
+.PostButtons span:hover
+{
+
+opacity: 1;
+
+}
+
+#newPosts{
+	height:106px;
+	width:296px;
+	background:url(http://forum.pokemonpets.com/NewPosts_1.png) top center;
+}
+
+
+#newPosts span{
+
+	height:106px;
+	width:296px;	
+        background:url(http://forum.pokemonpets.com/NewPosts_2.png) bottom center;
+
+}
+
+#lastDayPosts{
+	height:105px;
+	width:296px;
+	background:url(http://forum.pokemonpets.com/LastDayPosts_1.png) top center;
+}
+
+
+#lastDayPosts span{
+
+	height:105px;
+	width:296px;	
+        background:url(http://forum.pokemonpets.com/LastDayPosts_2.png) bottom center;
+
+}
+
+#unreadPosts{
+	height:105px;
+	width:296px;
+	background:url(http://forum.pokemonpets.com/UnreadPosts_1.png) top center;
+}
+
+
+#unreadPosts span{
+
+	height:105px;
+	width:296px;	
+        background:url(http://forum.pokemonpets.com/UnreadPosts_2.png) bottom center;
+
+}
+
+</style>
+</head>
+<body onload="overview_request(1);">
+<!-- start: header -->
+<div id="container">
+		<a name="top" id="top"></a>
+
+		<div id="header">
+			<div id="logo">
+				<div class="wrapper" >
+					<a href="http://forum.pokemonpets.com/index.php"><img src="http://forum.pokemonpets.com/images/1/logo.png" alt="PokemonPets Official Forum  " title="PokemonPets Official Forum  " /></a> 
+				</div>
+			</div>
+
+			<div id="panel">
+				<div class="upper"><!-- This div(class="upper") is closed in the header_welcomeblock_member and header_welcomeblock_guest templates -->
+					<div class="wrapper">
+						<ul class="menu top_links">
+							<li><a href="http://forum.pokemonpets.com/search.php" class="search">Search</a></li>
+							<li><a href="http://forum.pokemonpets.com/memberlist.php" class="memberlist">Member List</a></li>
+							<li><a href="http://forum.pokemonpets.com/calendar.php" class="calendar">Calendar</a></li>
+						
+			<li>
+				<a href="search.php?action=unread&my&all">
+					<img src="images/search.png" alt="" title="See your Unread Replies" />
+						View Unread Replies
+				</a>
+			</li></ul>
+						<!-- start: header_welcomeblock_guest -->
+<script type="text/javascript">
+<!--
+	lang.username = "Username";
+	lang.password = "Password";
+	lang.login = "Login";
+	lang.lost_password = "<a href=\"http://forum.pokemonpets.com/member.php?action=lostpw\" class=\"lost_password\">Lost Password?<\/a>";
+	lang.register_url = "<a href=\"http://forum.pokemonpets.com/member.php?action=register\" class=\"register\">Register<\/a>";
+	lang.remember_me = "Remember me";
+// -->
+</script>
+<!-- Continuation of div(class="upper") as opened in the header template -->
+	<span class="welcome" id="quick_login">Hello There, Guest! <a href="http://forum.pokemonpets.com/member.php?action=login" onclick="MyBB.quickLogin(); return false;" class="login">Login</a> <a href="http://forum.pokemonpets.com/member.php?action=register" class="register">Register</a></span>
+	</div>
+</div>
+<!-- end: header_welcomeblock_guest -->
+			</div>
+		</div>
+		<div id="content">
+			<div class="wrapper">
+				
+				
+				
+				
+				
+				<!-- start: nav -->
+
+<div class="navigation">
+<!-- start: nav_bit_active -->
+<span class="active">PokemonPets Official Forum <a target="_blank" href="http://www.pokemonpets.com/"><img style="vertical-align:middle;"  src="http://forum.pokemonpets.com/PlayGameForForum_en.png"/></a> <a target="_blank" href="http://www.monstermmorpg.com/"><img style="vertical-align:middle;"  src="http://forum.monstermmorpg.com/PlayGameForForum_en.png"/></a></span>
+<!-- end: nav_bit_active -->
+</div>
+<!-- end: nav -->
+				<br />
+<!-- end: header -->
+
+<a id="newPosts" class="PostButtons" href="http://forum.pokemonpets.com/search.php?action=getnew"><span></span></a> 
+<a id="lastDayPosts" class="PostButtons" href="http://forum.pokemonpets.com/search.php?action=getdaily&days=1"><span></span></a> 
+<a id="unreadPosts" class="PostButtons" href="http://forum.pokemonpets.com/search.php?action=unreads"><span></span></a> 
+<!-- start: forumbit_depth1_cat -->
+<table border="0" cellspacing="0" cellpadding="5" class="tborder">
+<thead>
+<tr>
+<td class="thead" colspan="6">
+<div class="expcolimage"><img src="images/1/collapse.gif" id="cat_49_img" class="expander" alt="[-]" title="[-]" /></div>
+<div><strong><a href="Forum-Official-Forums">Official Forums</a></strong><br /><div class="smalltext"></div></div>
+</td>
+</tr>
+</thead>
+<tbody style="" id="cat_49_e">
+<tr>
+<td class="tcat" colspan="3"><span class="smalltext"><strong>Forum</strong></span></td>
+<td class="tcat" width="85" align="center" style="white-space: nowrap"><span class="smalltext"><strong>Threads</strong></span></td>
+<td class="tcat" width="85" align="center" style="white-space: nowrap"><span class="smalltext"><strong>Posts</strong></span></td>
+<td class="tcat" width="200" align="center"><span class="smalltext"><strong>Last Post</strong></span></td>
+</tr>
+<!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow1" align="center" valign="top" width="1"><img src="images/1/on.gif" alt="Forum Contains New Posts" title="Forum Contains New Posts" class="ajax_mark_read" id="mark_read_177" /></td><td class="trow1" align="center" valign="top" width="1"><img src="Forum_Icons/Test Server.png" alt="Test Server" /></td>
+<td class="trow1" valign="top">
+<strong><a href="Forum-Test-Server">Test Server</a></strong><div class="smalltext">Information, Discussions And News About Test Server<!-- start: forumbit_subforums -->
+<br /><strong>Sub Forums:</strong> <img src="images/1/minioff.gif" alt="Forum Contains No New Posts" title="Forum Contains No New Posts" class="subforumicon ajax_mark_read" id="mark_read_178" /><a href="Forum-Test-server-version-change-logs" title="">Test server version change logs</a>, <img src="images/1/minioff.gif" alt="Forum Contains No New Posts" title="Forum Contains No New Posts" class="subforumicon ajax_mark_read" id="mark_read_179" /><a href="Forum-Hotfixes" title="">Hotfixes</a>
+<!-- end: forumbit_subforums --></div>
+</td>
+<td class="trow1" valign="top" align="center" style="white-space: nowrap">1</td>
+<td class="trow1" valign="top" align="center" style="white-space: nowrap">6</td>
+<td class="trow1" valign="top" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost -->
+<span class="smalltext">
+<a href="Thread-hey-is-testserver-there?action=lastpost" title="hey is testserver there"><strong>hey is testserver there</strong></a>
+<br />07-21-2015 01:04 AM<br />by <a href="http://forum.pokemonpets.com/User-pratham">pratham</a></span>
+
+<!-- end: forumbit_depth2_forum_lastpost --></td>
+</tr>
+<!-- end: forumbit_depth2_forum --><!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow2" align="center" valign="top" width="1"><img src="images/1/on.gif" alt="Forum Contains New Posts" title="Forum Contains New Posts" class="ajax_mark_read" id="mark_read_4" /></td><td class="trow2" align="center" valign="top" width="1"><img src="Forum_Icons/Announcements.png" alt="Announcements" /></td>
+<td class="trow2" valign="top">
+<strong><a href="Forum-Announcements">Announcements</a></strong><div class="smalltext">All announcements about the game and forum.<!-- start: forumbit_subforums -->
+<br /><strong>Sub Forums:</strong> <img src="images/1/minion.gif" alt="Forum Contains New Posts" title="Forum Contains New Posts" class="subforumicon ajax_mark_read" id="mark_read_35" /><a href="Forum-Events" title="">Events</a>
+<!-- end: forumbit_subforums --></div>
+</td>
+<td class="trow2" valign="top" align="center" style="white-space: nowrap">11</td>
+<td class="trow2" valign="top" align="center" style="white-space: nowrap">111</td>
+<td class="trow2" valign="top" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost -->
+<span class="smalltext">
+<a href="Thread-More-than-30-days-inactive-authority-players-authority-taken-back-CM-SCM-etc?action=lastpost" title="More than 30 days inactive authority players authority taken back - CM - SCM , etc"><strong>More than 30 days inactiv...</strong></a>
+<br />10-26-2015 11:44 AM<br />by <a href="http://forum.pokemonpets.com/User-Cpt-Obvious"><span style="color: #017E7E;"><strong>Cpt. Obvious</strong></span></a></span>
+
+<!-- end: forumbit_depth2_forum_lastpost --></td>
+</tr>
+<!-- end: forumbit_depth2_forum --><!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow1" align="center" valign="top" width="1"><img src="images/1/on.gif" alt="Forum Contains New Posts" title="Forum Contains New Posts" class="ajax_mark_read" id="mark_read_5" /></td><td class="trow1" align="center" valign="top" width="1"><img src="Forum_Icons/Version Records.png" alt="Version Records" /></td>
+<td class="trow1" valign="top">
+<strong><a href="Forum-Version-Records">Version Records</a></strong><div class="smalltext">Game's Update Records List. Shows all the different versions of the game here.</div>
+</td>
+<td class="trow1" valign="top" align="center" style="white-space: nowrap">30</td>
+<td class="trow1" valign="top" align="center" style="white-space: nowrap">635</td>
+<td class="trow1" valign="top" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost -->
+<span class="smalltext">
+<a href="Thread-Version-2-2-4?action=lastpost" title="Version 2.2.4"><strong>Version 2.2.4</strong></a>
+<br />01-29-2016 07:40 AM<br />by <a href="http://forum.pokemonpets.com/User-Jules">Jules</a></span>
+
+<!-- end: forumbit_depth2_forum_lastpost --></td>
+</tr>
+<!-- end: forumbit_depth2_forum --><!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow2" align="center" valign="top" width="1"><img src="images/1/on.gif" alt="Forum Contains New Posts" title="Forum Contains New Posts" class="ajax_mark_read" id="mark_read_16" /></td><td class="trow2" align="center" valign="top" width="1"><img src="Forum_Icons/FAQ.png" alt="FAQ" /></td>
+<td class="trow2" valign="top">
+<strong><a href="Forum-FAQ">FAQ</a></strong><div class="smalltext">Frequently Asked Questions</div>
+</td>
+<td class="trow2" valign="top" align="center" style="white-space: nowrap">23</td>
+<td class="trow2" valign="top" align="center" style="white-space: nowrap">318</td>
+<td class="trow2" valign="top" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost -->
+<span class="smalltext">
+<a href="Thread-Daily-Rewards-System?action=lastpost" title="Daily Rewards System"><strong>Daily Rewards System</strong></a>
+<br />Today 05:27 PM<br />by <a href="http://forum.pokemonpets.com/User-Daeva13">Daeva13</a></span>
+
+<!-- end: forumbit_depth2_forum_lastpost --></td>
+</tr>
+<!-- end: forumbit_depth2_forum --><!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow1" align="center" valign="top" width="1"><img src="images/1/on.gif" alt="Forum Contains New Posts" title="Forum Contains New Posts" class="ajax_mark_read" id="mark_read_46" /></td><td class="trow1" align="center" valign="top" width="1"><img src="Forum_Icons/Rules.png" alt="Rules" /></td>
+<td class="trow1" valign="top">
+<strong><a href="Forum-Rules">Rules</a></strong><div class="smalltext">Forum rules, Chat rules, General Rules.</div>
+</td>
+<td class="trow1" valign="top" align="center" style="white-space: nowrap">3</td>
+<td class="trow1" valign="top" align="center" style="white-space: nowrap">3</td>
+<td class="trow1" valign="top" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost -->
+<span class="smalltext">
+<a href="Thread-Signature-Rules?action=lastpost" title="Signature Rules"><strong>Signature Rules</strong></a>
+<br />07-03-2014 04:42 AM<br />by <a href="http://forum.pokemonpets.com/User-Dark-Zero"><span style="color: #017E7E;"><strong>Dark.Zero</strong></span></a></span>
+
+<!-- end: forumbit_depth2_forum_lastpost --></td>
+</tr>
+<!-- end: forumbit_depth2_forum --><!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow2" align="center" valign="top" width="1"><img src="images/1/on.gif" alt="Forum Contains New Posts" title="Forum Contains New Posts" class="ajax_mark_read" id="mark_read_50" /></td><td class="trow2" align="center" valign="top" width="1"><img src="Forum_Icons/Forum Suggestions.png" alt="Forum Suggestions" /></td>
+<td class="trow2" valign="top">
+<strong><a href="Forum-Forum-Suggestions">Forum Suggestions</a></strong><div class="smalltext"></div>
+</td>
+<td class="trow2" valign="top" align="center" style="white-space: nowrap">2</td>
+<td class="trow2" valign="top" align="center" style="white-space: nowrap">16</td>
+<td class="trow2" valign="top" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost -->
+<span class="smalltext">
+<a href="Thread-Lets-know-more?action=lastpost" title="Lets know more"><strong>Lets know more</strong></a>
+<br />08-31-2015 05:07 PM<br />by <a href="http://forum.pokemonpets.com/User-CeFurkan"><span style="color: #E60000;"><strong><em>CeFurkan</em></strong></span></a></span>
+
+<!-- end: forumbit_depth2_forum_lastpost --></td>
+</tr>
+<!-- end: forumbit_depth2_forum --><!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow1" align="center" valign="top" width="1"><img src="images/1/on.gif" alt="Forum Contains New Posts" title="Forum Contains New Posts" class="ajax_mark_read" id="mark_read_174" /></td><td class="trow1" align="center" valign="top" width="1"><img src="Forum_Icons/Idea Development.png" alt="Idea Development" /></td>
+<td class="trow1" valign="top">
+<strong><a href="Forum-Idea-Development">Idea Development</a></strong><div class="smalltext"></div>
+</td>
+<td class="trow1" valign="top" align="center" style="white-space: nowrap">49</td>
+<td class="trow1" valign="top" align="center" style="white-space: nowrap">356</td>
+<td class="trow1" valign="top" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost -->
+<span class="smalltext">
+<a href="Thread-Weekly-Challenge-System?action=lastpost" title="Weekly Challenge System"><strong>Weekly Challenge System</strong></a>
+<br />01-27-2016 02:44 AM<br />by <a href="http://forum.pokemonpets.com/User-staff">staff</a></span>
+
+<!-- end: forumbit_depth2_forum_lastpost --></td>
+</tr>
+<!-- end: forumbit_depth2_forum --><!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow2" align="center" valign="top" width="1"><img src="images/1/on.gif" alt="Forum Contains New Posts" title="Forum Contains New Posts" class="ajax_mark_read" id="mark_read_51" /></td><td class="trow2" align="center" valign="top" width="1"><img src="Forum_Icons/World News.png" alt="World News" /></td>
+<td class="trow2" valign="top">
+<strong><a href="Forum-World-News">World News</a></strong><div class="smalltext">News about the world can be posted here.</div>
+</td>
+<td class="trow2" valign="top" align="center" style="white-space: nowrap">13</td>
+<td class="trow2" valign="top" align="center" style="white-space: nowrap">74</td>
+<td class="trow2" valign="top" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost -->
+<span class="smalltext">
+<a href="Thread-the-world-in-darkness-for-fifteen-days?action=lastpost" title="the world in darkness for fifteen days"><strong>the world in darkness for...</strong></a>
+<br />11-21-2015 09:53 PM<br />by <a href="http://forum.pokemonpets.com/User-ash-ketchum-11">ash ketchum 11</a></span>
+
+<!-- end: forumbit_depth2_forum_lastpost --></td>
+</tr>
+<!-- end: forumbit_depth2_forum --><!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow1" align="center" valign="top" width="1"><img src="images/1/on.gif" alt="Forum Contains New Posts" title="Forum Contains New Posts" class="ajax_mark_read" id="mark_read_135" /></td><td class="trow1" align="center" valign="top" width="1"><img src="Forum_Icons/Screenshots.png" alt="Screenshots" /></td>
+<td class="trow1" valign="top">
+<strong><a href="Forum-Screenshots">Screenshots</a></strong><div class="smalltext">Post your game screenshots here.</div>
+</td>
+<td class="trow1" valign="top" align="center" style="white-space: nowrap">22</td>
+<td class="trow1" valign="top" align="center" style="white-space: nowrap">122</td>
+<td class="trow1" valign="top" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost -->
+<span class="smalltext">
+<a href="Thread-Can-t-Catch-that-Hoopa?action=lastpost" title="Can't Catch that Hoopa"><strong>Can't Catch that Hoopa</strong></a>
+<br />01-12-2016 04:38 AM<br />by <a href="http://forum.pokemonpets.com/User-Riako">Riako</a></span>
+
+<!-- end: forumbit_depth2_forum_lastpost --></td>
+</tr>
+<!-- end: forumbit_depth2_forum -->
+</tbody>
+</table>
+<br />
+<!-- end: forumbit_depth1_cat --><!-- start: forumbit_depth1_cat -->
+<table border="0" cellspacing="0" cellpadding="5" class="tborder">
+<thead>
+<tr>
+<td class="thead" colspan="6">
+<div class="expcolimage"><img src="images/1/collapse.gif" id="cat_6_img" class="expander" alt="[-]" title="[-]" /></div>
+<div><strong><a href="Forum-Pokemon-Pets">Pokemon Pets</a></strong><br /><div class="smalltext">Information about the game and anything related to it.</div></div>
+</td>
+</tr>
+</thead>
+<tbody style="" id="cat_6_e">
+<tr>
+<td class="tcat" colspan="3"><span class="smalltext"><strong>Forum</strong></span></td>
+<td class="tcat" width="85" align="center" style="white-space: nowrap"><span class="smalltext"><strong>Threads</strong></span></td>
+<td class="tcat" width="85" align="center" style="white-space: nowrap"><span class="smalltext"><strong>Posts</strong></span></td>
+<td class="tcat" width="200" align="center"><span class="smalltext"><strong>Last Post</strong></span></td>
+</tr>
+<!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow1" align="center" valign="top" width="1"><img src="images/1/on.gif" alt="Forum Contains New Posts" title="Forum Contains New Posts" class="ajax_mark_read" id="mark_read_7" /></td><td class="trow1" align="center" valign="top" width="1"><img src="Forum_Icons/General Discussions.png" alt="General Discussions" /></td>
+<td class="trow1" valign="top">
+<strong><a href="Forum-General-Discussions">General Discussions</a></strong><div class="smalltext">Game related discussions are here.<!-- start: forumbit_subforums -->
+<br /><strong>Sub Forums:</strong> <img src="images/1/minion.gif" alt="Forum Contains New Posts" title="Forum Contains New Posts" class="subforumicon ajax_mark_read" id="mark_read_137" /><a href="Forum-Pokemon-Pets-Ads" title="">Pokemon Pets Ads</a>, <img src="images/1/minion.gif" alt="Forum Contains New Posts" title="Forum Contains New Posts" class="subforumicon ajax_mark_read" id="mark_read_52" /><a href="Forum-Polls-Voting" title="">Polls/Voting</a>
+<!-- end: forumbit_subforums --></div>
+</td>
+<td class="trow1" valign="top" align="center" style="white-space: nowrap">98</td>
+<td class="trow1" valign="top" align="center" style="white-space: nowrap">1,449</td>
+<td class="trow1" valign="top" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost -->
+<span class="smalltext">
+<a href="Thread-Major-Implementation-20th-Zone?action=lastpost" title="Major Implementation - 20th Zone"><strong>Major Implementation - 20...</strong></a>
+<br />Yesterday 07:05 AM<br />by <a href="http://forum.pokemonpets.com/User-Blau"><span style="color: #006600;"><strong>Blau</strong></span></a></span>
+
+<!-- end: forumbit_depth2_forum_lastpost --></td>
+</tr>
+<!-- end: forumbit_depth2_forum --><!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow2" align="center" valign="top" width="1"><img src="images/1/on.gif" alt="Forum Contains New Posts" title="Forum Contains New Posts" class="ajax_mark_read" id="mark_read_9" /></td><td class="trow2" align="center" valign="top" width="1"><img src="Forum_Icons/In-Game Suggestions.png" alt="In-Game Suggestions" /></td>
+<td class="trow2" valign="top">
+<strong><a href="Forum-In-Game-Suggestions">In-Game Suggestions</a></strong><div class="smalltext">Have a suggestion that could improve gaming? Show it here.<!-- start: forumbit_subforums -->
+<br /><strong>Sub Forums:</strong> <img src="images/1/minioff.gif" alt="Forum Contains No New Posts" title="Forum Contains No New Posts" class="subforumicon ajax_mark_read" id="mark_read_54" /><a href="Forum-Implemented-Suggestions-Locked" title="">Implemented Suggestions (Locked)</a>
+<!-- end: forumbit_subforums --></div>
+</td>
+<td class="trow2" valign="top" align="center" style="white-space: nowrap">166</td>
+<td class="trow2" valign="top" align="center" style="white-space: nowrap">1,352</td>
+<td class="trow2" valign="top" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost -->
+<span class="smalltext">
+<a href="Thread-pokemon-championship?action=lastpost" title="pokemon championship"><strong>pokemon championship</strong></a>
+<br />01-28-2016 07:33 AM<br />by <a href="http://forum.pokemonpets.com/User-cyni">cyni</a></span>
+
+<!-- end: forumbit_depth2_forum_lastpost --></td>
+</tr>
+<!-- end: forumbit_depth2_forum --><!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow1" align="center" valign="top" width="1"><img src="images/1/on.gif" alt="Forum Contains New Posts" title="Forum Contains New Posts" class="ajax_mark_read" id="mark_read_136" /></td><td class="trow1" align="center" valign="top" width="1"><img src="Forum_Icons/Monster Requests From Artists.png" alt="Pokémon Requests From Artists" /></td>
+<td class="trow1" valign="top">
+<strong><a href="Forum-Pokemon-Requests-From-Artists">Pokémon Requests From Artists</a></strong><div class="smalltext">Post your requests for new Pokémon or Pokémon that need to be redrawn here.</div>
+</td>
+<td class="trow1" valign="top" align="center" style="white-space: nowrap">10</td>
+<td class="trow1" valign="top" align="center" style="white-space: nowrap">63</td>
+<td class="trow1" valign="top" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost -->
+<span class="smalltext">
+<a href="Thread-shiny-rayquaza?action=lastpost" title="shiny rayquaza"><strong>shiny rayquaza</strong></a>
+<br />12-29-2015 02:01 AM<br />by <a href="http://forum.pokemonpets.com/User-naxion199">naxion199</a></span>
+
+<!-- end: forumbit_depth2_forum_lastpost --></td>
+</tr>
+<!-- end: forumbit_depth2_forum --><!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow2" align="center" valign="top" width="1"><img src="images/1/on.gif" alt="Forum Contains New Posts" title="Forum Contains New Posts" class="ajax_mark_read" id="mark_read_10" /></td><td class="trow2" align="center" valign="top" width="1"><img src="Forum_Icons/Questions About the Game.png" alt="Questions About the Game" /></td>
+<td class="trow2" valign="top">
+<strong><a href="Forum-Questions-About-the-Game">Questions About the Game</a></strong><div class="smalltext">If you have a question about how to play, ask us here.</div>
+</td>
+<td class="trow2" valign="top" align="center" style="white-space: nowrap">23</td>
+<td class="trow2" valign="top" align="center" style="white-space: nowrap">282</td>
+<td class="trow2" valign="top" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost -->
+<span class="smalltext">
+<a href="Thread-evolving?action=lastpost" title="evolving"><strong>evolving</strong></a>
+<br />01-28-2016 02:59 AM<br />by <a href="http://forum.pokemonpets.com/User-CeFurkan"><span style="color: #E60000;"><strong><em>CeFurkan</em></strong></span></a></span>
+
+<!-- end: forumbit_depth2_forum_lastpost --></td>
+</tr>
+<!-- end: forumbit_depth2_forum --><!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow1" align="center" valign="top" width="1"><img src="images/1/on.gif" alt="Forum Contains New Posts" title="Forum Contains New Posts" class="ajax_mark_read" id="mark_read_55" /></td><td class="trow1" align="center" valign="top" width="1"><img src="Forum_Icons/Introductions and Farewells.png" alt="Introductions and Farewells" /></td>
+<td class="trow1" valign="top">
+<strong><a href="Forum-Introductions-and-Farewells">Introductions and Farewells</a></strong><div class="smalltext">New to the game or leaving the game for a while? Tell us here.<!-- start: forumbit_subforums -->
+<br /><strong>Sub Forums:</strong> <img src="images/1/minioff.gif" alt="Forum Contains No New Posts" title="Forum Contains No New Posts" class="subforumicon ajax_mark_read" id="mark_read_56" /><a href="Forum-Holidays" title="">Holidays</a>, <img src="images/1/minion.gif" alt="Forum Contains New Posts" title="Forum Contains New Posts" class="subforumicon ajax_mark_read" id="mark_read_57" /><a href="Forum-Birthdays" title="">Birthdays</a>, <img src="images/1/minion.gif" alt="Forum Contains New Posts" title="Forum Contains New Posts" class="subforumicon ajax_mark_read" id="mark_read_58" /><a href="Forum-Personal-Events" title="">Personal Events</a>
+<!-- end: forumbit_subforums --></div>
+</td>
+<td class="trow1" valign="top" align="center" style="white-space: nowrap">19</td>
+<td class="trow1" valign="top" align="center" style="white-space: nowrap">173</td>
+<td class="trow1" valign="top" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost -->
+<span class="smalltext">
+<a href="Thread-Quitting?action=lastpost" title="Quitting"><strong>Quitting</strong></a>
+<br />01-14-2016 01:19 PM<br />by <a href="http://forum.pokemonpets.com/User-servine">servine</a></span>
+
+<!-- end: forumbit_depth2_forum_lastpost --></td>
+</tr>
+<!-- end: forumbit_depth2_forum --><!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow2" align="center" valign="top" width="1"><img src="images/1/on.gif" alt="Forum Contains New Posts" title="Forum Contains New Posts" class="ajax_mark_read" id="mark_read_30" /></td><td class="trow2" align="center" valign="top" width="1"><img src="Forum_Icons/Report A User.png" alt="Report A User" /></td>
+<td class="trow2" valign="top">
+<strong><a href="Forum-Report-A-User">Report A User</a></strong><div class="smalltext">Reports about any rule violators can be posted here.<!-- start: forumbit_subforums -->
+<br /><strong>Sub Forums:</strong> <img src="images/1/minioff.gif" alt="Forum Contains No New Posts" title="Forum Contains No New Posts" class="subforumicon ajax_mark_read" id="mark_read_53" /><a href="Forum-Handled-Reports-Locked" title="">Handled Reports (Locked)</a>
+<!-- end: forumbit_subforums --></div>
+</td>
+<td class="trow2" valign="top" align="center" style="white-space: nowrap">27</td>
+<td class="trow2" valign="top" align="center" style="white-space: nowrap">155</td>
+<td class="trow2" valign="top" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost -->
+<span class="smalltext">
+<a href="Thread-Electrivire?action=lastpost" title="Electrivire"><strong>Electrivire</strong></a>
+<br />12-29-2015 01:53 AM<br />by <a href="http://forum.pokemonpets.com/User-Cpt-Obvious"><span style="color: #017E7E;"><strong>Cpt. Obvious</strong></span></a></span>
+
+<!-- end: forumbit_depth2_forum_lastpost --></td>
+</tr>
+<!-- end: forumbit_depth2_forum -->
+</tbody>
+</table>
+<br />
+<!-- end: forumbit_depth1_cat --><!-- start: forumbit_depth1_cat -->
+<table border="0" cellspacing="0" cellpadding="5" class="tborder">
+<thead>
+<tr>
+<td class="thead" colspan="6">
+<div class="expcolimage"><img src="images/1/collapse.gif" id="cat_59_img" class="expander" alt="[-]" title="[-]" /></div>
+<div><strong><a href="Forum-In-Game-Error-Reports">In-Game Error Reports</a></strong><br /><div class="smalltext">If you find any errors inside the game, show them here so we can fix them.</div></div>
+</td>
+</tr>
+</thead>
+<tbody style="" id="cat_59_e">
+<tr>
+<td class="tcat" colspan="3"><span class="smalltext"><strong>Forum</strong></span></td>
+<td class="tcat" width="85" align="center" style="white-space: nowrap"><span class="smalltext"><strong>Threads</strong></span></td>
+<td class="tcat" width="85" align="center" style="white-space: nowrap"><span class="smalltext"><strong>Posts</strong></span></td>
+<td class="tcat" width="200" align="center"><span class="smalltext"><strong>Last Post</strong></span></td>
+</tr>
+<!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow2" align="center" valign="top" width="1"><img src="images/1/on.gif" alt="Forum Contains New Posts" title="Forum Contains New Posts" class="ajax_mark_read" id="mark_read_60" /></td><td class="trow2" align="center" valign="top" width="1"><img src="Forum_Icons/Grammar Issues.png" alt="Grammar Issues" /></td>
+<td class="trow2" valign="top">
+<strong><a href="Forum-Grammar-Issues">Grammar Issues</a></strong><div class="smalltext">If you find any grammar errors, post here.</div>
+</td>
+<td class="trow2" valign="top" align="center" style="white-space: nowrap">4</td>
+<td class="trow2" valign="top" align="center" style="white-space: nowrap">13</td>
+<td class="trow2" valign="top" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost -->
+<span class="smalltext">
+<a href="Thread-wrong-spelling?action=lastpost" title="wrong spelling"><strong>wrong spelling</strong></a>
+<br />04-15-2015 11:56 AM<br />by <a href="http://forum.pokemonpets.com/User-mailmeharry2008"><s>mailmeharry2008</s></a></span>
+
+<!-- end: forumbit_depth2_forum_lastpost --></td>
+</tr>
+<!-- end: forumbit_depth2_forum --><!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow1" align="center" valign="top" width="1"><img src="images/1/on.gif" alt="Forum Contains New Posts" title="Forum Contains New Posts" class="ajax_mark_read" id="mark_read_61" /></td><td class="trow1" align="center" valign="top" width="1"><img src="Forum_Icons/Glitches.png" alt="Glitches" /></td>
+<td class="trow1" valign="top">
+<strong><a href="Forum-Glitches">Glitches</a></strong><div class="smalltext">Something weird happening in the game? Provide a screenshot.</div>
+</td>
+<td class="trow1" valign="top" align="center" style="white-space: nowrap">102</td>
+<td class="trow1" valign="top" align="center" style="white-space: nowrap">544</td>
+<td class="trow1" valign="top" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost -->
+<span class="smalltext">
+<a href="Thread-Poke-Ball-list-in-battle?action=lastpost" title="Poke Ball list in battle"><strong>Poke Ball list in battle</strong></a>
+<br />01-28-2016 01:55 PM<br />by <a href="http://forum.pokemonpets.com/User-Dyx">Dyx</a></span>
+
+<!-- end: forumbit_depth2_forum_lastpost --></td>
+</tr>
+<!-- end: forumbit_depth2_forum --><!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow2" align="center" valign="top" width="1"><img src="images/1/on.gif" alt="Forum Contains New Posts" title="Forum Contains New Posts" class="ajax_mark_read" id="mark_read_62" /></td><td class="trow2" align="center" valign="top" width="1"><img src="Forum_Icons/Lag.png" alt="Lag" /></td>
+<td class="trow2" valign="top">
+<strong><a href="Forum-Lag">Lag</a></strong><div class="smalltext">Any lagging issues?</div>
+</td>
+<td class="trow2" valign="top" align="center" style="white-space: nowrap">3</td>
+<td class="trow2" valign="top" align="center" style="white-space: nowrap">27</td>
+<td class="trow2" valign="top" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost -->
+<span class="smalltext">
+<a href="Thread-Lagging-since-new-update?action=lastpost" title="Lagging since new update"><strong>Lagging since new update</strong></a>
+<br />07-18-2015 10:32 AM<br />by <a href="http://forum.pokemonpets.com/User-ch17175"><span style="color: #017E7E;"><strong>ch17175</strong></span></a></span>
+
+<!-- end: forumbit_depth2_forum_lastpost --></td>
+</tr>
+<!-- end: forumbit_depth2_forum --><!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow1" align="center" valign="top" width="1"><img src="images/1/on.gif" alt="Forum Contains New Posts" title="Forum Contains New Posts" class="ajax_mark_read" id="mark_read_63" /></td><td class="trow1" align="center" valign="top" width="1"><img src="Forum_Icons/Player vs. Player - PvP.png" alt="Player vs. Player - PvP" /></td>
+<td class="trow1" valign="top">
+<strong><a href="Forum-Player-vs-Player-PvP">Player vs. Player - PvP</a></strong><div class="smalltext">Have a problem with the PVP system? Submit them here.</div>
+</td>
+<td class="trow1" valign="top" align="center" style="white-space: nowrap">1</td>
+<td class="trow1" valign="top" align="center" style="white-space: nowrap">2</td>
+<td class="trow1" valign="top" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost -->
+<span class="smalltext">
+<a href="Thread-PVP--6387?action=lastpost" title="PVP"><strong>PVP</strong></a>
+<br />03-25-2015 11:04 AM<br />by <a href="http://forum.pokemonpets.com/User-CeFurkan"><span style="color: #E60000;"><strong><em>CeFurkan</em></strong></span></a></span>
+
+<!-- end: forumbit_depth2_forum_lastpost --></td>
+</tr>
+<!-- end: forumbit_depth2_forum --><!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow2" align="center" valign="top" width="1"><img src="images/1/on.gif" alt="Forum Contains New Posts" title="Forum Contains New Posts" class="ajax_mark_read" id="mark_read_64" /></td><td class="trow2" align="center" valign="top" width="1"><img src="Forum_Icons/Mechanical Errors.png" alt="Mechanical Errors" /></td>
+<td class="trow2" valign="top">
+<strong><a href="Forum-Mechanical-Errors">Mechanical Errors</a></strong><div class="smalltext">If there is a problem with moves, stats, or anything else, this is the place for it.<!-- start: forumbit_subforums -->
+<br /><strong>Sub Forums:</strong> <img src="images/1/minion.gif" alt="Forum Contains New Posts" title="Forum Contains New Posts" class="subforumicon ajax_mark_read" id="mark_read_65" /><a href="Forum-Move-list--65" title="">Move list</a>, <img src="images/1/minion.gif" alt="Forum Contains New Posts" title="Forum Contains New Posts" class="subforumicon ajax_mark_read" id="mark_read_66" /><a href="Forum-Stat-issue" title="">Stat issue</a>, <img src="images/1/minion.gif" alt="Forum Contains New Posts" title="Forum Contains New Posts" class="subforumicon ajax_mark_read" id="mark_read_67" /><a href="Forum-Items--67" title="">Items</a>, <img src="images/1/minion.gif" alt="Forum Contains New Posts" title="Forum Contains New Posts" class="subforumicon ajax_mark_read" id="mark_read_68" /><a href="Forum-Abilities--68" title="">Abilities</a>, <img src="images/1/minion.gif" alt="Forum Contains New Posts" title="Forum Contains New Posts" class="subforumicon ajax_mark_read" id="mark_read_69" /><a href="Forum-Maps--69" title="">Maps</a>, <img src="images/1/minioff.gif" alt="Forum Contains No New Posts" title="Forum Contains No New Posts" class="subforumicon ajax_mark_read" id="mark_read_70" /><a href="Forum-Natures" title="">Natures</a>
+<!-- end: forumbit_subforums --></div>
+</td>
+<td class="trow2" valign="top" align="center" style="white-space: nowrap">43</td>
+<td class="trow2" valign="top" align="center" style="white-space: nowrap">177</td>
+<td class="trow2" valign="top" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost -->
+<span class="smalltext">
+<a href="Thread-Luna-gem-used-on-Eevee?action=lastpost" title="Luna gem used on Eevee"><strong>Luna gem used on Eevee</strong></a>
+<br />01-27-2016 08:51 AM<br />by <a href="http://forum.pokemonpets.com/User-CeFurkan"><span style="color: #E60000;"><strong><em>CeFurkan</em></strong></span></a></span>
+
+<!-- end: forumbit_depth2_forum_lastpost --></td>
+</tr>
+<!-- end: forumbit_depth2_forum --><!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow1" align="center" valign="top" width="1"><img src="images/1/off.gif" alt="Forum Contains No New Posts" title="Forum Contains No New Posts" class="ajax_mark_read" id="mark_read_8" /></td><td class="trow1" align="center" valign="top" width="1"><img src="Forum_Icons/Bug Errors.png" alt="Bugs &amp; Errors Reports - Old Category - Locked For New Threads" /></td>
+<td class="trow1" valign="top">
+<strong><a href="Forum-Bugs-Errors-Reports-Old-Category-Locked-For-New-Threads">Bugs &amp; Errors Reports - Old Category - Locked For New Threads</a></strong><div class="smalltext">Bugs &amp; Errors Reports - Old Category - Locked For New Threads</div>
+</td>
+<td class="trow1" valign="top" align="center" style="white-space: nowrap">0</td>
+<td class="trow1" valign="top" align="center" style="white-space: nowrap">0</td>
+<td class="trow1" valign="top" align="right" style="white-space: nowrap"><div style="text-align: center;">Never</div></td>
+</tr>
+<!-- end: forumbit_depth2_forum -->
+</tbody>
+</table>
+<br />
+<!-- end: forumbit_depth1_cat --><!-- start: forumbit_depth1_cat -->
+<table border="0" cellspacing="0" cellpadding="5" class="tborder">
+<thead>
+<tr>
+<td class="thead" colspan="6">
+<div class="expcolimage"><img src="images/1/collapse.gif" id="cat_71_img" class="expander" alt="[-]" title="[-]" /></div>
+<div><strong><a href="Forum-Community-Zone">Community Zone</a></strong><br /><div class="smalltext">This is where tournaments, guilds, tips, etc. are hosted.</div></div>
+</td>
+</tr>
+</thead>
+<tbody style="" id="cat_71_e">
+<tr>
+<td class="tcat" colspan="3"><span class="smalltext"><strong>Forum</strong></span></td>
+<td class="tcat" width="85" align="center" style="white-space: nowrap"><span class="smalltext"><strong>Threads</strong></span></td>
+<td class="tcat" width="85" align="center" style="white-space: nowrap"><span class="smalltext"><strong>Posts</strong></span></td>
+<td class="tcat" width="200" align="center"><span class="smalltext"><strong>Last Post</strong></span></td>
+</tr>
+<!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow1" align="center" valign="top" width="1"><img src="images/1/on.gif" alt="Forum Contains New Posts" title="Forum Contains New Posts" class="ajax_mark_read" id="mark_read_29" /></td><td class="trow1" align="center" valign="top" width="1"><img src="Forum_Icons/Clans Guilds Teamwork.png" alt="Clans/Guilds/Teamwork" /></td>
+<td class="trow1" valign="top">
+<strong><a href="Forum-Clans-Guilds-Teamwork">Clans/Guilds/Teamwork</a></strong><div class="smalltext">You are free to host teams for the game.</div>
+</td>
+<td class="trow1" valign="top" align="center" style="white-space: nowrap">12</td>
+<td class="trow1" valign="top" align="center" style="white-space: nowrap">217</td>
+<td class="trow1" valign="top" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost -->
+<span class="smalltext">
+<a href="Thread-Sgt-s-Army?action=lastpost" title="Sgt's Army"><strong>Sgt's Army</strong></a>
+<br />12-24-2015 06:11 AM<br />by <a href="http://forum.pokemonpets.com/User-M-Blaze99">M.Blaze99</a></span>
+
+<!-- end: forumbit_depth2_forum_lastpost --></td>
+</tr>
+<!-- end: forumbit_depth2_forum --><!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow2" align="center" valign="top" width="1"><img src="images/1/on.gif" alt="Forum Contains New Posts" title="Forum Contains New Posts" class="ajax_mark_read" id="mark_read_73" /></td><td class="trow2" align="center" valign="top" width="1"><img src="Forum_Icons/Tournaments Competitions.png" alt="Tournaments/Competitions" /></td>
+<td class="trow2" valign="top">
+<strong><a href="Forum-Tournaments-Competitions">Tournaments/Competitions</a></strong><div class="smalltext">Money, prizes, pvp battles!</div>
+</td>
+<td class="trow2" valign="top" align="center" style="white-space: nowrap">17</td>
+<td class="trow2" valign="top" align="center" style="white-space: nowrap">375</td>
+<td class="trow2" valign="top" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost -->
+<span class="smalltext">
+<a href="Thread-The-Diamond-League?action=lastpost" title="The Diamond League"><strong>The Diamond League</strong></a>
+<br />11-20-2015 07:18 PM<br />by <a href="http://forum.pokemonpets.com/User-Atharvaa898">Atharvaa898</a></span>
+
+<!-- end: forumbit_depth2_forum_lastpost --></td>
+</tr>
+<!-- end: forumbit_depth2_forum --><!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow1" align="center" valign="top" width="1"><img src="images/1/on.gif" alt="Forum Contains New Posts" title="Forum Contains New Posts" class="ajax_mark_read" id="mark_read_74" /></td><td class="trow1" align="center" valign="top" width="1"><img src="Forum_Icons/Trainer Tips.png" alt="Trainer Tips" /></td>
+<td class="trow1" valign="top">
+<strong><a href="Forum-Trainer-Tips">Trainer Tips</a></strong><div class="smalltext">Have any tips to share? Well hurry up and share them.<!-- start: forumbit_subforums -->
+<br /><strong>Sub Forums:</strong> <img src="images/1/minion.gif" alt="Forum Contains New Posts" title="Forum Contains New Posts" class="subforumicon ajax_mark_read" id="mark_read_75" /><a href="Forum-Guides" title="">Guides</a>, <img src="images/1/minioff.gif" alt="Forum Contains No New Posts" title="Forum Contains No New Posts" class="subforumicon ajax_mark_read" id="mark_read_140" /><a href="Forum-Competitive-Strategies" title="">Competitive Strategies</a>
+<!-- end: forumbit_subforums --></div>
+</td>
+<td class="trow1" valign="top" align="center" style="white-space: nowrap">66</td>
+<td class="trow1" valign="top" align="center" style="white-space: nowrap">564</td>
+<td class="trow1" valign="top" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost -->
+<span class="smalltext">
+<a href="Thread-Shop-part-2-how-can-sell-any-item-at-NPC?action=lastpost" title="Shop part 2 how can sell any item at NPC?"><strong>Shop part 2 how can sell ...</strong></a>
+<br />01-30-2016 01:13 AM<br />by <a href="http://forum.pokemonpets.com/User-GurvinderS1666">GurvinderS1666</a></span>
+
+<!-- end: forumbit_depth2_forum_lastpost --></td>
+</tr>
+<!-- end: forumbit_depth2_forum --><!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow2" align="center" valign="top" width="1"><img src="images/1/on.gif" alt="Forum Contains New Posts" title="Forum Contains New Posts" class="ajax_mark_read" id="mark_read_76" /></td><td class="trow2" align="center" valign="top" width="1"><img src="Forum_Icons/PVP Matches.png" alt="PVP Matches" /></td>
+<td class="trow2" valign="top">
+<strong><a href="Forum-PVP-Matches">PVP Matches</a></strong><div class="smalltext">Everyone can host matches against each other or see who is better.</div>
+</td>
+<td class="trow2" valign="top" align="center" style="white-space: nowrap">2</td>
+<td class="trow2" valign="top" align="center" style="white-space: nowrap">15</td>
+<td class="trow2" valign="top" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost -->
+<span class="smalltext">
+<a href="Thread-Lets-Gather?action=lastpost" title="Lets Gather"><strong>Lets Gather</strong></a>
+<br />11-15-2015 04:19 AM<br />by <a href="http://forum.pokemonpets.com/User-Sgt-Redhawk">Sgt_Redhawk</a></span>
+
+<!-- end: forumbit_depth2_forum_lastpost --></td>
+</tr>
+<!-- end: forumbit_depth2_forum --><!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow1" align="center" valign="top" width="1"><img src="images/1/on.gif" alt="Forum Contains New Posts" title="Forum Contains New Posts" class="ajax_mark_read" id="mark_read_77" /></td><td class="trow1" align="center" valign="top" width="1"><img src="Forum_Icons/General Chat.png" alt="General Chat" /></td>
+<td class="trow1" valign="top">
+<strong><a href="Forum-General-Chat">General Chat</a></strong><div class="smalltext">Tired of the in-game chat? You can use this space to chat.</div>
+</td>
+<td class="trow1" valign="top" align="center" style="white-space: nowrap">31</td>
+<td class="trow1" valign="top" align="center" style="white-space: nowrap">180</td>
+<td class="trow1" valign="top" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost -->
+<span class="smalltext">
+<a href="Thread-Announcement?action=lastpost" title="Announcement"><strong>Announcement</strong></a>
+<br />01-24-2016 12:33 AM<br />by <a href="http://forum.pokemonpets.com/User-Jules">Jules</a></span>
+
+<!-- end: forumbit_depth2_forum_lastpost --></td>
+</tr>
+<!-- end: forumbit_depth2_forum --><!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow2" align="center" valign="top" width="1"><img src="images/1/on.gif" alt="Forum Contains New Posts" title="Forum Contains New Posts" class="ajax_mark_read" id="mark_read_78" /></td><td class="trow2" align="center" valign="top" width="1"><img src="Forum_Icons/Monster Ratings.png" alt="Pokémon Ratings" /></td>
+<td class="trow2" valign="top">
+<strong><a href="Forum-Pokemon-Ratings">Pokémon Ratings</a></strong><div class="smalltext">If you want to have ratings on your Pokémon, post here.</div>
+</td>
+<td class="trow2" valign="top" align="center" style="white-space: nowrap">3</td>
+<td class="trow2" valign="top" align="center" style="white-space: nowrap">14</td>
+<td class="trow2" valign="top" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost -->
+<span class="smalltext">
+<a href="Thread-THIS-IS-GOOD?action=lastpost" title="THIS IS GOOD?"><strong>THIS IS GOOD?</strong></a>
+<br />10-30-2015 09:30 AM<br />by <a href="http://forum.pokemonpets.com/User-misterdoorknob">misterdoorknob</a></span>
+
+<!-- end: forumbit_depth2_forum_lastpost --></td>
+</tr>
+<!-- end: forumbit_depth2_forum -->
+</tbody>
+</table>
+<br />
+<!-- end: forumbit_depth1_cat --><!-- start: forumbit_depth1_cat -->
+<table border="0" cellspacing="0" cellpadding="5" class="tborder">
+<thead>
+<tr>
+<td class="thead" colspan="6">
+<div class="expcolimage"><img src="images/1/collapse.gif" id="cat_25_img" class="expander" alt="[-]" title="[-]" /></div>
+<div><strong><a href="Forum-The-Market">The Market</a></strong><br /><div class="smalltext">Advertise what you have in the market.</div></div>
+</td>
+</tr>
+</thead>
+<tbody style="" id="cat_25_e">
+<tr>
+<td class="tcat" colspan="3"><span class="smalltext"><strong>Forum</strong></span></td>
+<td class="tcat" width="85" align="center" style="white-space: nowrap"><span class="smalltext"><strong>Threads</strong></span></td>
+<td class="tcat" width="85" align="center" style="white-space: nowrap"><span class="smalltext"><strong>Posts</strong></span></td>
+<td class="tcat" width="200" align="center"><span class="smalltext"><strong>Last Post</strong></span></td>
+</tr>
+<!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow2" align="center" valign="top" width="1"><img src="images/1/on.gif" alt="Forum Contains New Posts" title="Forum Contains New Posts" class="ajax_mark_read" id="mark_read_26" /></td><td class="trow2" align="center" valign="top" width="1"><img src="Forum_Icons/Monster Bazaar.png" alt="Pokémon Bazaar" /></td>
+<td class="trow2" valign="top">
+<strong><a href="Forum-Pokemon-Bazaar">Pokémon Bazaar</a></strong><div class="smalltext">Advertise your sales or ask to buy Pokémon.</div>
+</td>
+<td class="trow2" valign="top" align="center" style="white-space: nowrap">12</td>
+<td class="trow2" valign="top" align="center" style="white-space: nowrap">47</td>
+<td class="trow2" valign="top" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost -->
+<span class="smalltext">
+<a href="Thread-ch17175-s-Bazaar?action=lastpost" title="ch17175's Bazaar"><strong>ch17175's Bazaar</strong></a>
+<br />01-30-2016 10:57 PM<br />by <a href="http://forum.pokemonpets.com/User-ch17175"><span style="color: #017E7E;"><strong>ch17175</strong></span></a></span>
+
+<!-- end: forumbit_depth2_forum_lastpost --></td>
+</tr>
+<!-- end: forumbit_depth2_forum --><!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow1" align="center" valign="top" width="1"><img src="images/1/on.gif" alt="Forum Contains New Posts" title="Forum Contains New Posts" class="ajax_mark_read" id="mark_read_27" /></td><td class="trow1" align="center" valign="top" width="1"><img src="Forum_Icons/Trading.png" alt="Trading" /></td>
+<td class="trow1" valign="top">
+<strong><a href="Forum-Trading">Trading</a></strong><div class="smalltext">Looking for a specific Pokémon? Ask here.</div>
+</td>
+<td class="trow1" valign="top" align="center" style="white-space: nowrap">12</td>
+<td class="trow1" valign="top" align="center" style="white-space: nowrap">45</td>
+<td class="trow1" valign="top" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost -->
+<span class="smalltext">
+<a href="Thread-starter--7138?action=lastpost" title="starter"><strong>starter</strong></a>
+<br />12-27-2015 01:02 AM<br />by <a href="http://forum.pokemonpets.com/User-M-Blaze99">M.Blaze99</a></span>
+
+<!-- end: forumbit_depth2_forum_lastpost --></td>
+</tr>
+<!-- end: forumbit_depth2_forum --><!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow2" align="center" valign="top" width="1"><img src="images/1/on.gif" alt="Forum Contains New Posts" title="Forum Contains New Posts" class="ajax_mark_read" id="mark_read_28" /></td><td class="trow2" align="center" valign="top" width="1"><img src="Forum_Icons/Item Bazaar.png" alt="Item Bazaar" /></td>
+<td class="trow2" valign="top">
+<strong><a href="Forum-Item-Bazaar">Item Bazaar</a></strong><div class="smalltext">Advertise your sales or ask to buy items.</div>
+</td>
+<td class="trow2" valign="top" align="center" style="white-space: nowrap">1</td>
+<td class="trow2" valign="top" align="center" style="white-space: nowrap">1</td>
+<td class="trow2" valign="top" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost -->
+<span class="smalltext">
+<a href="Thread-Iteam-Bazzar?action=lastpost" title="Iteam Bazzar"><strong>Iteam Bazzar</strong></a>
+<br />10-16-2015 09:40 AM<br />by <a href="http://forum.pokemonpets.com/User-MikeDevil">MikeDevil</a></span>
+
+<!-- end: forumbit_depth2_forum_lastpost --></td>
+</tr>
+<!-- end: forumbit_depth2_forum --><!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow1" align="center" valign="top" width="1"><img src="images/1/on.gif" alt="Forum Contains New Posts" title="Forum Contains New Posts" class="ajax_mark_read" id="mark_read_83" /></td><td class="trow1" align="center" valign="top" width="1"><img src="Forum_Icons/Auction House.png" alt="Auction House" /></td>
+<td class="trow1" valign="top">
+<strong><a href="Forum-Auction-House">Auction House</a></strong><div class="smalltext">Place your bids on Pokémon.</div>
+</td>
+<td class="trow1" valign="top" align="center" style="white-space: nowrap">7</td>
+<td class="trow1" valign="top" align="center" style="white-space: nowrap">70</td>
+<td class="trow1" valign="top" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost -->
+<span class="smalltext">
+<a href="Thread-HUNTS?action=lastpost" title="HUNTS"><strong>HUNTS</strong></a>
+<br />12-07-2015 06:51 AM<br />by <a href="http://forum.pokemonpets.com/User-EeveeGirl360">EeveeGirl360</a></span>
+
+<!-- end: forumbit_depth2_forum_lastpost --></td>
+</tr>
+<!-- end: forumbit_depth2_forum --><!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow2" align="center" valign="top" width="1"><img src="images/1/on.gif" alt="Forum Contains New Posts" title="Forum Contains New Posts" class="ajax_mark_read" id="mark_read_184" /></td><td class="trow2" align="center" valign="top" width="1"><img src="Forum_Icons/icon.gif" alt="Services" /></td>
+<td class="trow2" valign="top">
+<strong><a href="Forum-Services">Services</a></strong><div class="smalltext">User Services</div>
+</td>
+<td class="trow2" valign="top" align="center" style="white-space: nowrap">23</td>
+<td class="trow2" valign="top" align="center" style="white-space: nowrap">178</td>
+<td class="trow2" valign="top" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost -->
+<span class="smalltext">
+<a href="Thread-Limited-EV-Training-Services?action=lastpost" title="Limited EV Training Services"><strong>Limited EV Training Servi...</strong></a>
+<br />01-27-2016 01:43 AM<br />by <a href="http://forum.pokemonpets.com/User-jecklin">jecklin</a></span>
+
+<!-- end: forumbit_depth2_forum_lastpost --></td>
+</tr>
+<!-- end: forumbit_depth2_forum -->
+</tbody>
+</table>
+<br />
+<!-- end: forumbit_depth1_cat --><!-- start: forumbit_depth1_cat -->
+<table border="0" cellspacing="0" cellpadding="5" class="tborder">
+<thead>
+<tr>
+<td class="thead" colspan="6">
+<div class="expcolimage"><img src="images/1/collapse.gif" id="cat_11_img" class="expander" alt="[-]" title="[-]" /></div>
+<div><strong><a href="Forum-Game-Mechanics">Game Mechanics</a></strong><br /><div class="smalltext">Information about the game mechanics are here.</div></div>
+</td>
+</tr>
+</thead>
+<tbody style="" id="cat_11_e">
+<tr>
+<td class="tcat" colspan="3"><span class="smalltext"><strong>Forum</strong></span></td>
+<td class="tcat" width="85" align="center" style="white-space: nowrap"><span class="smalltext"><strong>Threads</strong></span></td>
+<td class="tcat" width="85" align="center" style="white-space: nowrap"><span class="smalltext"><strong>Posts</strong></span></td>
+<td class="tcat" width="200" align="center"><span class="smalltext"><strong>Last Post</strong></span></td>
+</tr>
+<!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow2" align="center" valign="top" width="1"><img src="images/1/on.gif" alt="Forum Contains New Posts" title="Forum Contains New Posts" class="ajax_mark_read" id="mark_read_12" /></td><td class="trow2" align="center" valign="top" width="1"><img src="Forum_Icons/Move List.png" alt="Move List" /></td>
+<td class="trow2" valign="top">
+<strong><a href="Forum-Move-List">Move List</a></strong><div class="smalltext"></div>
+</td>
+<td class="trow2" valign="top" align="center" style="white-space: nowrap">3</td>
+<td class="trow2" valign="top" align="center" style="white-space: nowrap">16</td>
+<td class="trow2" valign="top" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost -->
+<span class="smalltext">
+<a href="Thread-bulbasaur?action=lastpost" title="bulbasaur"><strong>bulbasaur</strong></a>
+<br />09-24-2015 11:35 AM<br />by <a href="http://forum.pokemonpets.com/User-subject-zero">subject zero</a></span>
+
+<!-- end: forumbit_depth2_forum_lastpost --></td>
+</tr>
+<!-- end: forumbit_depth2_forum --><!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow1" align="center" valign="top" width="1"><img src="images/1/on.gif" alt="Forum Contains New Posts" title="Forum Contains New Posts" class="ajax_mark_read" id="mark_read_17" /></td><td class="trow1" align="center" valign="top" width="1"><img src="Forum_Icons/Maps.png" alt="Maps" /></td>
+<td class="trow1" valign="top">
+<strong><a href="Forum-Maps">Maps</a></strong><div class="smalltext"></div>
+</td>
+<td class="trow1" valign="top" align="center" style="white-space: nowrap">1</td>
+<td class="trow1" valign="top" align="center" style="white-space: nowrap">3</td>
+<td class="trow1" valign="top" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost -->
+<span class="smalltext">
+<a href="Thread-MAPS?action=lastpost" title="MAPS"><strong>MAPS</strong></a>
+<br />07-15-2015 01:43 AM<br />by <a href="http://forum.pokemonpets.com/User-CeFurkan"><span style="color: #E60000;"><strong><em>CeFurkan</em></strong></span></a></span>
+
+<!-- end: forumbit_depth2_forum_lastpost --></td>
+</tr>
+<!-- end: forumbit_depth2_forum --><!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow2" align="center" valign="top" width="1"><img src="images/1/on.gif" alt="Forum Contains New Posts" title="Forum Contains New Posts" class="ajax_mark_read" id="mark_read_84" /></td><td class="trow2" align="center" valign="top" width="1"><img src="Forum_Icons/Trainer Points or Unique Values.png" alt="EV Points or IV Points" /></td>
+<td class="trow2" valign="top">
+<strong><a href="Forum-EV-Points-or-IV-Points">EV Points or IV Points</a></strong><div class="smalltext">Effort Values , Individual Values systems</div>
+</td>
+<td class="trow2" valign="top" align="center" style="white-space: nowrap">1</td>
+<td class="trow2" valign="top" align="center" style="white-space: nowrap">3</td>
+<td class="trow2" valign="top" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost -->
+<span class="smalltext">
+<a href="Thread-ev-points?action=lastpost" title="ev points"><strong>ev points</strong></a>
+<br />01-12-2016 04:48 AM<br />by <a href="http://forum.pokemonpets.com/User-Riako">Riako</a></span>
+
+<!-- end: forumbit_depth2_forum_lastpost --></td>
+</tr>
+<!-- end: forumbit_depth2_forum --><!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow1" align="center" valign="top" width="1"><img src="images/1/on.gif" alt="Forum Contains New Posts" title="Forum Contains New Posts" class="ajax_mark_read" id="mark_read_85" /></td><td class="trow1" align="center" valign="top" width="1"><img src="Forum_Icons/Natures.png" alt="Natures" /></td>
+<td class="trow1" valign="top">
+<strong><a href="Forum-Natures--85">Natures</a></strong><div class="smalltext"></div>
+</td>
+<td class="trow1" valign="top" align="center" style="white-space: nowrap">2</td>
+<td class="trow1" valign="top" align="center" style="white-space: nowrap">6</td>
+<td class="trow1" valign="top" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost -->
+<span class="smalltext">
+<a href="Thread-LIST-OF-THE-NATURES?action=lastpost" title="LIST OF THE NATURES"><strong>LIST OF THE NATURES</strong></a>
+<br />07-15-2015 01:49 AM<br />by <a href="http://forum.pokemonpets.com/User-CeFurkan"><span style="color: #E60000;"><strong><em>CeFurkan</em></strong></span></a></span>
+
+<!-- end: forumbit_depth2_forum_lastpost --></td>
+</tr>
+<!-- end: forumbit_depth2_forum --><!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow2" align="center" valign="top" width="1"><img src="images/1/on.gif" alt="Forum Contains New Posts" title="Forum Contains New Posts" class="ajax_mark_read" id="mark_read_20" /></td><td class="trow2" align="center" valign="top" width="1"><img src="Forum_Icons/Items.png" alt="Items" /></td>
+<td class="trow2" valign="top">
+<strong><a href="Forum-Items">Items</a></strong><div class="smalltext"></div>
+</td>
+<td class="trow2" valign="top" align="center" style="white-space: nowrap">1</td>
+<td class="trow2" valign="top" align="center" style="white-space: nowrap">2</td>
+<td class="trow2" valign="top" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost -->
+<span class="smalltext">
+<a href="Thread-UNHAPPINESS-POTION?action=lastpost" title="UNHAPPINESS POTION"><strong>UNHAPPINESS POTION</strong></a>
+<br />07-27-2015 12:16 AM<br />by <a href="http://forum.pokemonpets.com/User-Jules">Jules</a></span>
+
+<!-- end: forumbit_depth2_forum_lastpost --></td>
+</tr>
+<!-- end: forumbit_depth2_forum --><!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow1" align="center" valign="top" width="1"><img src="images/1/on.gif" alt="Forum Contains New Posts" title="Forum Contains New Posts" class="ajax_mark_read" id="mark_read_13" /></td><td class="trow1" align="center" valign="top" width="1"><img src="Forum_Icons/Monsters.png" alt="Pokémon" /></td>
+<td class="trow1" valign="top">
+<strong><a href="Forum-Pokemon">Pokémon</a></strong><div class="smalltext"></div>
+</td>
+<td class="trow1" valign="top" align="center" style="white-space: nowrap">4</td>
+<td class="trow1" valign="top" align="center" style="white-space: nowrap">13</td>
+<td class="trow1" valign="top" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost -->
+<span class="smalltext">
+<a href="Thread-Re-suggested-Suggestion-for-Holiday-Event?action=lastpost" title="Re suggested Suggestion for Holiday Event"><strong>Re suggested Suggestion f...</strong></a>
+<br />10-11-2015 09:17 PM<br />by <a href="http://forum.pokemonpets.com/User-Glaceon">Glaceon</a></span>
+
+<!-- end: forumbit_depth2_forum_lastpost --></td>
+</tr>
+<!-- end: forumbit_depth2_forum --><!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow2" align="center" valign="top" width="1"><img src="images/1/on.gif" alt="Forum Contains New Posts" title="Forum Contains New Posts" class="ajax_mark_read" id="mark_read_15" /></td><td class="trow2" align="center" valign="top" width="1"><img src="Forum_Icons/Abilities.png" alt="Abilities" /></td>
+<td class="trow2" valign="top">
+<strong><a href="Forum-Abilities">Abilities</a></strong><div class="smalltext"></div>
+</td>
+<td class="trow2" valign="top" align="center" style="white-space: nowrap">2</td>
+<td class="trow2" valign="top" align="center" style="white-space: nowrap">26</td>
+<td class="trow2" valign="top" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost -->
+<span class="smalltext">
+<a href="Thread-crazy-abilies-and-madness-plez-fix-it-or-explain-it?action=lastpost" title="crazy abilies and madness plez fix it or explain it"><strong>crazy abilies and madness...</strong></a>
+<br />08-08-2015 01:39 AM<br />by <a href="http://forum.pokemonpets.com/User-Magic--94248">Magic..</a></span>
+
+<!-- end: forumbit_depth2_forum_lastpost --></td>
+</tr>
+<!-- end: forumbit_depth2_forum -->
+</tbody>
+</table>
+<br />
+<!-- end: forumbit_depth1_cat --><!-- start: forumbit_depth1_cat -->
+<table border="0" cellspacing="0" cellpadding="5" class="tborder">
+<thead>
+<tr>
+<td class="thead" colspan="6">
+<div class="expcolimage"><img src="images/1/collapse.gif" id="cat_21_img" class="expander" alt="[-]" title="[-]" /></div>
+<div><strong><a href="Forum-Off-Topic-Discussions">Off-Topic Discussions</a></strong><br /><div class="smalltext"></div></div>
+</td>
+</tr>
+</thead>
+<tbody style="" id="cat_21_e">
+<tr>
+<td class="tcat" colspan="3"><span class="smalltext"><strong>Forum</strong></span></td>
+<td class="tcat" width="85" align="center" style="white-space: nowrap"><span class="smalltext"><strong>Threads</strong></span></td>
+<td class="tcat" width="85" align="center" style="white-space: nowrap"><span class="smalltext"><strong>Posts</strong></span></td>
+<td class="tcat" width="200" align="center"><span class="smalltext"><strong>Last Post</strong></span></td>
+</tr>
+<!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow2" align="center" valign="top" width="1"><img src="images/1/on.gif" alt="Forum Contains New Posts" title="Forum Contains New Posts" class="ajax_mark_read" id="mark_read_95" /></td><td class="trow2" align="center" valign="top" width="1"><img src="Forum_Icons/Pokemon Discussions.png" alt="Pokemon Discussions" /></td>
+<td class="trow2" valign="top">
+<strong><a href="Forum-Pokemon-Discussions">Pokemon Discussions</a></strong><div class="smalltext">Feel free to talk about Pokemon here.<!-- start: forumbit_subforums -->
+<br /><strong>Sub Forums:</strong> <img src="images/1/minion.gif" alt="Forum Contains New Posts" title="Forum Contains New Posts" class="subforumicon ajax_mark_read" id="mark_read_86" /><a href="Forum-Official-Pokemon-Games" title="">Official Pokemon Games</a>, <img src="images/1/minion.gif" alt="Forum Contains New Posts" title="Forum Contains New Posts" class="subforumicon ajax_mark_read" id="mark_read_107" /><a href="Forum-Friend-Codes" title="">Friend Codes</a>, <img src="images/1/minion.gif" alt="Forum Contains New Posts" title="Forum Contains New Posts" class="subforumicon ajax_mark_read" id="mark_read_108" /><a href="Forum-Discussions" title="">Discussions</a>, <img src="images/1/minion.gif" alt="Forum Contains New Posts" title="Forum Contains New Posts" class="subforumicon ajax_mark_read" id="mark_read_110" /><a href="Forum-Movies-Episodes" title="">Movies/Episodes</a>
+<!-- end: forumbit_subforums --></div>
+</td>
+<td class="trow2" valign="top" align="center" style="white-space: nowrap">18</td>
+<td class="trow2" valign="top" align="center" style="white-space: nowrap">123</td>
+<td class="trow2" valign="top" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost -->
+<span class="smalltext">
+<a href="Thread-facts-you-may-or-may-not-know?action=lastpost" title="facts you may or may not know"><strong>facts you may or may not ...</strong></a>
+<br />12-09-2015 03:41 PM<br />by <a href="http://forum.pokemonpets.com/User-staff">staff</a></span>
+
+<!-- end: forumbit_depth2_forum_lastpost --></td>
+</tr>
+<!-- end: forumbit_depth2_forum --><!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow1" align="center" valign="top" width="1"><img src="images/1/on.gif" alt="Forum Contains New Posts" title="Forum Contains New Posts" class="ajax_mark_read" id="mark_read_111" /></td><td class="trow1" align="center" valign="top" width="1"><img src="Forum_Icons/Nintendo Discussions.png" alt="Nintendo Discussions" /></td>
+<td class="trow1" valign="top">
+<strong><a href="Forum-Nintendo-Discussions">Nintendo Discussions</a></strong><div class="smalltext">Feel free to talk about Nintendo's features or products.<!-- start: forumbit_subforums -->
+<br /><strong>Sub Forums:</strong> <img src="images/1/minioff.gif" alt="Forum Contains No New Posts" title="Forum Contains No New Posts" class="subforumicon ajax_mark_read" id="mark_read_112" /><a href="Forum-WIFI" title="">WIFI</a>, <img src="images/1/minioff.gif" alt="Forum Contains No New Posts" title="Forum Contains No New Posts" class="subforumicon ajax_mark_read" id="mark_read_113" /><a href="Forum-Systems-Games" title="">Systems/Games</a>, <img src="images/1/minioff.gif" alt="Forum Contains No New Posts" title="Forum Contains No New Posts" class="subforumicon ajax_mark_read" id="mark_read_114" /><a href="Forum-Discussions--114" title="">Discussions</a>, <img src="images/1/minioff.gif" alt="Forum Contains No New Posts" title="Forum Contains No New Posts" class="subforumicon ajax_mark_read" id="mark_read_115" /><a href="Forum-Arguments--115" title="">Arguments</a>
+<!-- end: forumbit_subforums --></div>
+</td>
+<td class="trow1" valign="top" align="center" style="white-space: nowrap">1</td>
+<td class="trow1" valign="top" align="center" style="white-space: nowrap">3</td>
+<td class="trow1" valign="top" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost -->
+<span class="smalltext">
+<a href="Thread-3ds-friends?action=lastpost" title="3ds friends"><strong>3ds friends</strong></a>
+<br />06-29-2015 05:46 AM<br />by <a href="http://forum.pokemonpets.com/User-Karnine">Karnine</a></span>
+
+<!-- end: forumbit_depth2_forum_lastpost --></td>
+</tr>
+<!-- end: forumbit_depth2_forum --><!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow2" align="center" valign="top" width="1"><img src="images/1/on.gif" alt="Forum Contains New Posts" title="Forum Contains New Posts" class="ajax_mark_read" id="mark_read_22" /></td><td class="trow2" align="center" valign="top" width="1"><img src="Forum_Icons/Off-Topic General Chat.png" alt="Off-Topic General Chat" /></td>
+<td class="trow2" valign="top">
+<strong><a href="Forum-Off-Topic-General-Chat">Off-Topic General Chat</a></strong><div class="smalltext">Chat about anything that is non-related game material here.<!-- start: forumbit_subforums -->
+<br /><strong>Sub Forums:</strong> <img src="images/1/minioff.gif" alt="Forum Contains No New Posts" title="Forum Contains No New Posts" class="subforumicon ajax_mark_read" id="mark_read_118" /><a href="Forum-Music" title="">Music</a>, <img src="images/1/minioff.gif" alt="Forum Contains No New Posts" title="Forum Contains No New Posts" class="subforumicon ajax_mark_read" id="mark_read_119" /><a href="Forum-Sports" title="">Sports</a>
+<!-- end: forumbit_subforums --></div>
+</td>
+<td class="trow2" valign="top" align="center" style="white-space: nowrap">8</td>
+<td class="trow2" valign="top" align="center" style="white-space: nowrap">46</td>
+<td class="trow2" valign="top" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost -->
+<span class="smalltext">
+<a href="Thread-pokemon-masters?action=lastpost" title="pokemon masters"><strong>pokemon masters</strong></a>
+<br />01-05-2016 11:41 PM<br />by <a href="http://forum.pokemonpets.com/User-Glaceon">Glaceon</a></span>
+
+<!-- end: forumbit_depth2_forum_lastpost --></td>
+</tr>
+<!-- end: forumbit_depth2_forum --><!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow1" align="center" valign="top" width="1"><img src="images/1/on.gif" alt="Forum Contains New Posts" title="Forum Contains New Posts" class="ajax_mark_read" id="mark_read_116" /></td><td class="trow1" align="center" valign="top" width="1"><img src="Forum_Icons/Youtube.png" alt="Youtube" /></td>
+<td class="trow1" valign="top">
+<strong><a href="Forum-Youtube">Youtube</a></strong><div class="smalltext">If you want to share a youtube video, this is the place.</div>
+</td>
+<td class="trow1" valign="top" align="center" style="white-space: nowrap">9</td>
+<td class="trow1" valign="top" align="center" style="white-space: nowrap">55</td>
+<td class="trow1" valign="top" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost -->
+<span class="smalltext">
+<a href="Thread-My-Favorite-Song-Right-Now?action=lastpost" title="My Favorite Song Right Now"><strong>My Favorite Song Right No...</strong></a>
+<br />01-15-2016 02:37 AM<br />by <a href="http://forum.pokemonpets.com/User-DarkmagePrince">DarkmagePrince</a></span>
+
+<!-- end: forumbit_depth2_forum_lastpost --></td>
+</tr>
+<!-- end: forumbit_depth2_forum --><!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow2" align="center" valign="top" width="1"><img src="images/1/on.gif" alt="Forum Contains New Posts" title="Forum Contains New Posts" class="ajax_mark_read" id="mark_read_141" /></td><td class="trow2" align="center" valign="top" width="1"><img src="Forum_Icons/Television Shows.png" alt="Television Shows" /></td>
+<td class="trow2" valign="top">
+<strong><a href="Forum-Television-Shows">Television Shows</a></strong><div class="smalltext"><!-- start: forumbit_subforums -->
+<br /><strong>Sub Forums:</strong> <img src="images/1/minioff.gif" alt="Forum Contains No New Posts" title="Forum Contains No New Posts" class="subforumicon ajax_mark_read" id="mark_read_142" /><a href="Forum-Comedies-and-Sitcoms" title="">Comedies and Sitcoms</a>, <img src="images/1/minioff.gif" alt="Forum Contains No New Posts" title="Forum Contains No New Posts" class="subforumicon ajax_mark_read" id="mark_read_143" /><a href="Forum-Reality-TV" title="">Reality TV</a>, <img src="images/1/minioff.gif" alt="Forum Contains No New Posts" title="Forum Contains No New Posts" class="subforumicon ajax_mark_read" id="mark_read_144" /><a href="Forum-Competitions-and-Games-shows" title="">Competitions and Games shows</a>, <img src="images/1/minion.gif" alt="Forum Contains New Posts" title="Forum Contains New Posts" class="subforumicon ajax_mark_read" id="mark_read_117" /><a href="Forum-Anime" title="">Anime</a>, <img src="images/1/minioff.gif" alt="Forum Contains No New Posts" title="Forum Contains No New Posts" class="subforumicon ajax_mark_read" id="mark_read_145" /><a href="Forum-Culinary-Shows" title="">Culinary Shows</a>, <img src="images/1/minioff.gif" alt="Forum Contains No New Posts" title="Forum Contains No New Posts" class="subforumicon ajax_mark_read" id="mark_read_146" /><a href="Forum-Documentaries" title="">Documentaries</a>, <img src="images/1/minioff.gif" alt="Forum Contains No New Posts" title="Forum Contains No New Posts" class="subforumicon ajax_mark_read" id="mark_read_147" /><a href="Forum-HBO-Showtime" title="">HBO/Showtime</a>, <img src="images/1/minioff.gif" alt="Forum Contains No New Posts" title="Forum Contains No New Posts" class="subforumicon ajax_mark_read" id="mark_read_162" /><a href="Forum-Crime-Shows" title="">Crime Shows</a>
+<!-- end: forumbit_subforums --></div>
+</td>
+<td class="trow2" valign="top" align="center" style="white-space: nowrap">1</td>
+<td class="trow2" valign="top" align="center" style="white-space: nowrap">7</td>
+<td class="trow2" valign="top" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost -->
+<span class="smalltext">
+<a href="Thread-The-Dere-Thread-For-Anime?action=lastpost" title="The Dere Thread (For Anime)"><strong>The Dere Thread (For Anim...</strong></a>
+<br />01-25-2016 06:40 PM<br />by <a href="http://forum.pokemonpets.com/User-2008harry">2008harry</a></span>
+
+<!-- end: forumbit_depth2_forum_lastpost --></td>
+</tr>
+<!-- end: forumbit_depth2_forum --><!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow1" align="center" valign="top" width="1"><img src="images/1/on.gif" alt="Forum Contains New Posts" title="Forum Contains New Posts" class="ajax_mark_read" id="mark_read_148" /></td><td class="trow1" align="center" valign="top" width="1"><img src="Forum_Icons/Books.png" alt="Books" /></td>
+<td class="trow1" valign="top">
+<strong><a href="Forum-Books">Books</a></strong><div class="smalltext"><!-- start: forumbit_subforums -->
+<br /><strong>Sub Forums:</strong> <img src="images/1/minion.gif" alt="Forum Contains New Posts" title="Forum Contains New Posts" class="subforumicon ajax_mark_read" id="mark_read_149" /><a href="Forum-Fantasy" title="">Fantasy</a>, <img src="images/1/minioff.gif" alt="Forum Contains No New Posts" title="Forum Contains No New Posts" class="subforumicon ajax_mark_read" id="mark_read_150" /><a href="Forum-Horror" title="">Horror</a>, <img src="images/1/minioff.gif" alt="Forum Contains No New Posts" title="Forum Contains No New Posts" class="subforumicon ajax_mark_read" id="mark_read_151" /><a href="Forum-Thrillers" title="">Thrillers</a>, <img src="images/1/minioff.gif" alt="Forum Contains No New Posts" title="Forum Contains No New Posts" class="subforumicon ajax_mark_read" id="mark_read_152" /><a href="Forum-Comedy" title="">Comedy</a>, <img src="images/1/minioff.gif" alt="Forum Contains No New Posts" title="Forum Contains No New Posts" class="subforumicon ajax_mark_read" id="mark_read_153" /><a href="Forum-Biographies" title="">Biographies</a>, <img src="images/1/minioff.gif" alt="Forum Contains No New Posts" title="Forum Contains No New Posts" class="subforumicon ajax_mark_read" id="mark_read_154" /><a href="Forum-Histories" title="">Histories</a>, <img src="images/1/minioff.gif" alt="Forum Contains No New Posts" title="Forum Contains No New Posts" class="subforumicon ajax_mark_read" id="mark_read_156" /><a href="Forum-Short-Stories" title="">Short Stories</a>, <img src="images/1/minioff.gif" alt="Forum Contains No New Posts" title="Forum Contains No New Posts" class="subforumicon ajax_mark_read" id="mark_read_157" /><a href="Forum-Children-s-Stories" title="">Children's Stories</a>, <img src="images/1/minion.gif" alt="Forum Contains New Posts" title="Forum Contains New Posts" class="subforumicon ajax_mark_read" id="mark_read_158" /><a href="Forum-User-penned-Stories" title="">User penned Stories</a>, <img src="images/1/minioff.gif" alt="Forum Contains No New Posts" title="Forum Contains No New Posts" class="subforumicon ajax_mark_read" id="mark_read_159" /><a href="Forum-Poems-and-Prose-Work" title="">Poems and Prose Work</a>, <img src="images/1/minion.gif" alt="Forum Contains New Posts" title="Forum Contains New Posts" class="subforumicon ajax_mark_read" id="mark_read_185" /><a href="Forum-Sci-Fi" title="">Sci-Fi</a>
+<!-- end: forumbit_subforums --></div>
+</td>
+<td class="trow1" valign="top" align="center" style="white-space: nowrap">4</td>
+<td class="trow1" valign="top" align="center" style="white-space: nowrap">10</td>
+<td class="trow1" valign="top" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost -->
+<span class="smalltext">
+<a href="Thread-Jack-s-Journey?action=lastpost" title="Jack's Journey"><strong>Jack's Journey</strong></a>
+<br />10-23-2015 06:18 AM<br />by <a href="http://forum.pokemonpets.com/User-MKerogazov">MKerogazov</a></span>
+
+<!-- end: forumbit_depth2_forum_lastpost --></td>
+</tr>
+<!-- end: forumbit_depth2_forum --><!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow2" align="center" valign="top" width="1"><img src="images/1/on.gif" alt="Forum Contains New Posts" title="Forum Contains New Posts" class="ajax_mark_read" id="mark_read_163" /></td><td class="trow2" align="center" valign="top" width="1"><img src="Forum_Icons/Movies.png" alt="Movies" /></td>
+<td class="trow2" valign="top">
+<strong><a href="Forum-Movies">Movies</a></strong><div class="smalltext"><!-- start: forumbit_subforums -->
+<br /><strong>Sub Forums:</strong> <img src="images/1/minioff.gif" alt="Forum Contains No New Posts" title="Forum Contains No New Posts" class="subforumicon ajax_mark_read" id="mark_read_164" /><a href="Forum-Horror--164" title="">Horror</a>, <img src="images/1/minion.gif" alt="Forum Contains New Posts" title="Forum Contains New Posts" class="subforumicon ajax_mark_read" id="mark_read_165" /><a href="Forum-Science-Fiction" title="">Science Fiction</a>, <img src="images/1/minioff.gif" alt="Forum Contains No New Posts" title="Forum Contains No New Posts" class="subforumicon ajax_mark_read" id="mark_read_166" /><a href="Forum-Comedies" title="">Comedies</a>, <img src="images/1/minioff.gif" alt="Forum Contains No New Posts" title="Forum Contains No New Posts" class="subforumicon ajax_mark_read" id="mark_read_167" /><a href="Forum-Romantic-Comedies" title="">Romantic Comedies</a>, <img src="images/1/minioff.gif" alt="Forum Contains No New Posts" title="Forum Contains No New Posts" class="subforumicon ajax_mark_read" id="mark_read_168" /><a href="Forum-Thrillers--168" title="">Thrillers</a>, <img src="images/1/minioff.gif" alt="Forum Contains No New Posts" title="Forum Contains No New Posts" class="subforumicon ajax_mark_read" id="mark_read_169" /><a href="Forum-War-Films" title="">War Films</a>, <img src="images/1/minioff.gif" alt="Forum Contains No New Posts" title="Forum Contains No New Posts" class="subforumicon ajax_mark_read" id="mark_read_170" /><a href="Forum-Crime-Movies" title="">Crime Movies</a>, <img src="images/1/minioff.gif" alt="Forum Contains No New Posts" title="Forum Contains No New Posts" class="subforumicon ajax_mark_read" id="mark_read_171" /><a href="Forum-Anime-Movies" title="">Anime Movies</a>, <img src="images/1/minioff.gif" alt="Forum Contains No New Posts" title="Forum Contains No New Posts" class="subforumicon ajax_mark_read" id="mark_read_172" /><a href="Forum-Romance-Movies" title="">Romance Movies</a>
+<!-- end: forumbit_subforums --></div>
+</td>
+<td class="trow2" valign="top" align="center" style="white-space: nowrap">2</td>
+<td class="trow2" valign="top" align="center" style="white-space: nowrap">4</td>
+<td class="trow2" valign="top" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost -->
+<span class="smalltext">
+<a href="Thread-Shiny-Vs-Shiny?action=lastpost" title="Shiny Vs Shiny"><strong>Shiny Vs Shiny</strong></a>
+<br />10-16-2015 06:19 PM<br />by <a href="http://forum.pokemonpets.com/User-hendy-sakti">hendy sakti</a></span>
+
+<!-- end: forumbit_depth2_forum_lastpost --></td>
+</tr>
+<!-- end: forumbit_depth2_forum -->
+</tbody>
+</table>
+<br />
+<!-- end: forumbit_depth1_cat --><!-- start: forumbit_depth1_cat -->
+<table border="0" cellspacing="0" cellpadding="5" class="tborder">
+<thead>
+<tr>
+<td class="thead" colspan="6">
+<div class="expcolimage"><img src="images/1/collapse.gif" id="cat_120_img" class="expander" alt="[-]" title="[-]" /></div>
+<div><strong><a href="Forum-Forum-Games">Forum Games</a></strong><br /><div class="smalltext">Games that aren't related to Pokemon Pets can be hosted here.</div></div>
+</td>
+</tr>
+</thead>
+<tbody style="" id="cat_120_e">
+<tr>
+<td class="tcat" colspan="3"><span class="smalltext"><strong>Forum</strong></span></td>
+<td class="tcat" width="85" align="center" style="white-space: nowrap"><span class="smalltext"><strong>Threads</strong></span></td>
+<td class="tcat" width="85" align="center" style="white-space: nowrap"><span class="smalltext"><strong>Posts</strong></span></td>
+<td class="tcat" width="200" align="center"><span class="smalltext"><strong>Last Post</strong></span></td>
+</tr>
+<!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow2" align="center" valign="top" width="1"><img src="images/1/on.gif" alt="Forum Contains New Posts" title="Forum Contains New Posts" class="ajax_mark_read" id="mark_read_121" /></td><td class="trow2" align="center" valign="top" width="1"><img src="Forum_Icons/Random Games.png" alt="Random Games" /></td>
+<td class="trow2" valign="top">
+<strong><a href="Forum-Random-Games">Random Games</a></strong><div class="smalltext">Random games to ease your boredom.</div>
+</td>
+<td class="trow2" valign="top" align="center" style="white-space: nowrap">4</td>
+<td class="trow2" valign="top" align="center" style="white-space: nowrap">66</td>
+<td class="trow2" valign="top" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost -->
+<span class="smalltext">
+<a href="Thread-Pokemon-Rap-Battle?action=lastpost" title="Pokemon Rap Battle"><strong>Pokemon Rap Battle</strong></a>
+<br />12-31-2015 09:42 PM<br />by <a href="http://forum.pokemonpets.com/User-Glaceon">Glaceon</a></span>
+
+<!-- end: forumbit_depth2_forum_lastpost --></td>
+</tr>
+<!-- end: forumbit_depth2_forum --><!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow1" align="center" valign="top" width="1"><img src="images/1/on.gif" alt="Forum Contains New Posts" title="Forum Contains New Posts" class="ajax_mark_read" id="mark_read_23" /></td><td class="trow1" align="center" valign="top" width="1"><img src="Forum_Icons/Roleplaying.png" alt="Roleplaying" /></td>
+<td class="trow1" valign="top">
+<strong><a href="Forum-Roleplaying">Roleplaying</a></strong><div class="smalltext">A fan of roleplaying? Enjoy it here.</div>
+</td>
+<td class="trow1" valign="top" align="center" style="white-space: nowrap">3</td>
+<td class="trow1" valign="top" align="center" style="white-space: nowrap">33</td>
+<td class="trow1" valign="top" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost -->
+<span class="smalltext">
+<a href="Thread-Malachi-s-Life-Story?action=lastpost" title="Malachi's Life Story"><strong>Malachi's Life Story</strong></a>
+<br />01-15-2016 11:08 AM<br />by <a href="http://forum.pokemonpets.com/User-ch17175"><span style="color: #017E7E;"><strong>ch17175</strong></span></a></span>
+
+<!-- end: forumbit_depth2_forum_lastpost --></td>
+</tr>
+<!-- end: forumbit_depth2_forum --><!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow2" align="center" valign="top" width="1"><img src="images/1/off.gif" alt="Forum Contains No New Posts" title="Forum Contains No New Posts" class="ajax_mark_read" id="mark_read_122" /></td><td class="trow2" align="center" valign="top" width="1"><img src="Forum_Icons/Monster MMORPG Games.png" alt="Pokemon Pets Games" /></td>
+<td class="trow2" valign="top">
+<strong><a href="Forum-Pokemon-Pets-Games">Pokemon Pets Games</a></strong><div class="smalltext">Anything related to the game can be played here.</div>
+</td>
+<td class="trow2" valign="top" align="center" style="white-space: nowrap">0</td>
+<td class="trow2" valign="top" align="center" style="white-space: nowrap">0</td>
+<td class="trow2" valign="top" align="right" style="white-space: nowrap"><div style="text-align: center;">Never</div></td>
+</tr>
+<!-- end: forumbit_depth2_forum --><!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow1" align="center" valign="top" width="1"><img src="images/1/on.gif" alt="Forum Contains New Posts" title="Forum Contains New Posts" class="ajax_mark_read" id="mark_read_123" /></td><td class="trow1" align="center" valign="top" width="1"><img src="Forum_Icons/Video Games.png" alt="Video Games" /></td>
+<td class="trow1" valign="top">
+<strong><a href="Forum-Video-Games">Video Games</a></strong><div class="smalltext">If you want to talk about video games or reenact them here.</div>
+</td>
+<td class="trow1" valign="top" align="center" style="white-space: nowrap">2</td>
+<td class="trow1" valign="top" align="center" style="white-space: nowrap">11</td>
+<td class="trow1" valign="top" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost -->
+<span class="smalltext">
+<a href="Thread-pokemon-fr-lg-reveiw-no-after-game-spoilers?action=lastpost" title="pokemon fr/lg reveiw (no after game spoilers)"><strong>pokemon fr/lg reveiw (no ...</strong></a>
+<br />12-02-2015 04:09 AM<br />by <a href="http://forum.pokemonpets.com/User-Pokemon-Master-K">Pokemon Master K</a></span>
+
+<!-- end: forumbit_depth2_forum_lastpost --></td>
+</tr>
+<!-- end: forumbit_depth2_forum -->
+</tbody>
+</table>
+<br />
+<!-- end: forumbit_depth1_cat --><!-- start: forumbit_depth1_cat -->
+<table border="0" cellspacing="0" cellpadding="5" class="tborder">
+<thead>
+<tr>
+<td class="thead" colspan="6">
+<div class="expcolimage"><img src="images/1/collapse.gif" id="cat_124_img" class="expander" alt="[-]" title="[-]" /></div>
+<div><strong><a href="Forum-Media">Media</a></strong><br /><div class="smalltext"></div></div>
+</td>
+</tr>
+</thead>
+<tbody style="" id="cat_124_e">
+<tr>
+<td class="tcat" colspan="3"><span class="smalltext"><strong>Forum</strong></span></td>
+<td class="tcat" width="85" align="center" style="white-space: nowrap"><span class="smalltext"><strong>Threads</strong></span></td>
+<td class="tcat" width="85" align="center" style="white-space: nowrap"><span class="smalltext"><strong>Posts</strong></span></td>
+<td class="tcat" width="200" align="center"><span class="smalltext"><strong>Last Post</strong></span></td>
+</tr>
+<!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow1" align="center" valign="top" width="1"><img src="images/1/on.gif" alt="Forum Contains New Posts" title="Forum Contains New Posts" class="ajax_mark_read" id="mark_read_24" /></td><td class="trow1" align="center" valign="top" width="1"><img src="Forum_Icons/Graphics Showcase.png" alt="Graphics Showcase" /></td>
+<td class="trow1" valign="top">
+<strong><a href="Forum-Graphics-Showcase">Graphics Showcase</a></strong><div class="smalltext">Anything related to graphic arts.<!-- start: forumbit_subforums -->
+<br /><strong>Sub Forums:</strong> <img src="images/1/minioff.gif" alt="Forum Contains No New Posts" title="Forum Contains No New Posts" class="subforumicon ajax_mark_read" id="mark_read_125" /><a href="Forum-Graphics-Tutorials" title="">Graphics Tutorials</a>
+<!-- end: forumbit_subforums --></div>
+</td>
+<td class="trow1" valign="top" align="center" style="white-space: nowrap">18</td>
+<td class="trow1" valign="top" align="center" style="white-space: nowrap">306</td>
+<td class="trow1" valign="top" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost -->
+<span class="smalltext">
+<a href="Thread-Shiny-Pokemons-by-Aladdin?action=lastpost" title="Shiny-Pokemons by Aladdin"><strong>Shiny-Pokemons by Aladdin</strong></a>
+<br />11-16-2015 03:36 AM<br />by <a href="http://forum.pokemonpets.com/User-Aladdin"><span style="color: #7B00B8;"><strong><em>Aladdin</em></strong></span></a></span>
+
+<!-- end: forumbit_depth2_forum_lastpost --></td>
+</tr>
+<!-- end: forumbit_depth2_forum --><!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow2" align="center" valign="top" width="1"><img src="images/1/on.gif" alt="Forum Contains New Posts" title="Forum Contains New Posts" class="ajax_mark_read" id="mark_read_34" /></td><td class="trow2" align="center" valign="top" width="1"><img src="Forum_Icons/Fanfiction.png" alt="Fanfiction" /></td>
+<td class="trow2" valign="top">
+<strong><a href="Forum-Fanfiction">Fanfiction</a></strong><div class="smalltext">Writing Art.<!-- start: forumbit_subforums -->
+<br /><strong>Sub Forums:</strong> <img src="images/1/minioff.gif" alt="Forum Contains No New Posts" title="Forum Contains No New Posts" class="subforumicon ajax_mark_read" id="mark_read_126" /><a href="Forum-Alternate-Fanfiction" title="">Alternate Fanfiction</a>, <img src="images/1/minioff.gif" alt="Forum Contains No New Posts" title="Forum Contains No New Posts" class="subforumicon ajax_mark_read" id="mark_read_127" /><a href="Forum-Feedback" title="">Feedback</a>
+<!-- end: forumbit_subforums --></div>
+</td>
+<td class="trow2" valign="top" align="center" style="white-space: nowrap">20</td>
+<td class="trow2" valign="top" align="center" style="white-space: nowrap">349</td>
+<td class="trow2" valign="top" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost -->
+<span class="smalltext">
+<a href="Thread-Max-Journey?action=lastpost" title="Max Journey"><strong>Max Journey</strong></a>
+<br />Yesterday 01:32 PM<br />by <a href="http://forum.pokemonpets.com/User-Glaceon">Glaceon</a></span>
+
+<!-- end: forumbit_depth2_forum_lastpost --></td>
+</tr>
+<!-- end: forumbit_depth2_forum --><!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow1" align="center" valign="top" width="1"><img src="images/1/on.gif" alt="Forum Contains New Posts" title="Forum Contains New Posts" class="ajax_mark_read" id="mark_read_19" /></td><td class="trow1" align="center" valign="top" width="1"><img src="Forum_Icons/Drawings.png" alt="Drawings" /></td>
+<td class="trow1" valign="top">
+<strong><a href="Forum-Drawings">Drawings</a></strong><div class="smalltext">Present your drawings here.<!-- start: forumbit_subforums -->
+<br /><strong>Sub Forums:</strong> <img src="images/1/minion.gif" alt="Forum Contains New Posts" title="Forum Contains New Posts" class="subforumicon ajax_mark_read" id="mark_read_130" /><a href="Forum-Pokemon-Drawings" title="">Pokémon Drawings</a>, <img src="images/1/minion.gif" alt="Forum Contains New Posts" title="Forum Contains New Posts" class="subforumicon ajax_mark_read" id="mark_read_131" /><a href="Forum-Random-Drawings" title="">Random Drawings</a>
+<!-- end: forumbit_subforums --></div>
+</td>
+<td class="trow1" valign="top" align="center" style="white-space: nowrap">6</td>
+<td class="trow1" valign="top" align="center" style="white-space: nowrap">132</td>
+<td class="trow1" valign="top" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost -->
+<span class="smalltext">
+<a href="Thread-The-Megas?action=lastpost" title="The Megas"><strong>The Megas</strong></a>
+<br />Yesterday 10:44 AM<br />by <a href="http://forum.pokemonpets.com/User-Glaceon">Glaceon</a></span>
+
+<!-- end: forumbit_depth2_forum_lastpost --></td>
+</tr>
+<!-- end: forumbit_depth2_forum --><!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow2" align="center" valign="top" width="1"><img src="images/1/on.gif" alt="Forum Contains New Posts" title="Forum Contains New Posts" class="ajax_mark_read" id="mark_read_161" /></td><td class="trow2" align="center" valign="top" width="1"><img src="Forum_Icons/Creative Arts Section.png" alt="Creative Arts Section" /></td>
+<td class="trow2" valign="top">
+<strong><a href="Forum-Creative-Arts-Section">Creative Arts Section</a></strong><div class="smalltext">Members can open up a shop and make avatars, signatures and banners asked for by other members</div>
+</td>
+<td class="trow2" valign="top" align="center" style="white-space: nowrap">2</td>
+<td class="trow2" valign="top" align="center" style="white-space: nowrap">63</td>
+<td class="trow2" valign="top" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost -->
+<span class="smalltext">
+<a href="Thread-Aladdin-s-Art-Collection-Shop-An-Art-Never-Rusts?action=lastpost" title="[Aladdin's Art Collection+Shop!] ~ An Art Never Rusts !!"><strong>[Aladdin's Art Collection...</strong></a>
+<br />01-13-2016 12:20 PM<br />by <a href="http://forum.pokemonpets.com/User-Aladdin"><span style="color: #7B00B8;"><strong><em>Aladdin</em></strong></span></a></span>
+
+<!-- end: forumbit_depth2_forum_lastpost --></td>
+</tr>
+<!-- end: forumbit_depth2_forum --><!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow1" align="center" valign="top" width="1"><img src="images/1/on.gif" alt="Forum Contains New Posts" title="Forum Contains New Posts" class="ajax_mark_read" id="mark_read_132" /></td><td class="trow1" align="center" valign="top" width="1"><img src="Forum_Icons/Media-Youtube.png" alt="Youtube" /></td>
+<td class="trow1" valign="top">
+<strong><a href="Forum-Youtube--132">Youtube</a></strong><div class="smalltext">If you created youtube videos here, share them with us.<!-- start: forumbit_subforums -->
+<br /><strong>Sub Forums:</strong> <img src="images/1/minioff.gif" alt="Forum Contains No New Posts" title="Forum Contains No New Posts" class="subforumicon ajax_mark_read" id="mark_read_133" /><a href="Forum-Subscriptions" title="">Subscriptions</a>
+<!-- end: forumbit_subforums --></div>
+</td>
+<td class="trow1" valign="top" align="center" style="white-space: nowrap">5</td>
+<td class="trow1" valign="top" align="center" style="white-space: nowrap">31</td>
+<td class="trow1" valign="top" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost -->
+<span class="smalltext">
+<a href="Thread-Helping-Youtubers?action=lastpost" title="Helping Youtubers"><strong>Helping Youtubers</strong></a>
+<br />11-30-2015 09:41 AM<br />by <a href="http://forum.pokemonpets.com/User-Glaceon">Glaceon</a></span>
+
+<!-- end: forumbit_depth2_forum_lastpost --></td>
+</tr>
+<!-- end: forumbit_depth2_forum -->
+</tbody>
+</table>
+<br />
+<!-- end: forumbit_depth1_cat -->
+<a id="newPosts" class="PostButtons" href="http://forum.pokemonpets.com/search.php?action=getnew"><span></span></a> 
+<a id="lastDayPosts" class="PostButtons" href="http://forum.pokemonpets.com/search.php?action=getdaily&days=1"><span></span></a> 
+<a id="unreadPosts" class="PostButtons" href="http://forum.pokemonpets.com/search.php?action=unreads"><span></span></a> 
+<span id="overview_load"></span>
+<div id="overview"></div>
+<!-- start: index_boardstats -->
+<table border="0" cellspacing="0" cellpadding="5" class="tborder">
+<thead>
+<tr>
+<td class="thead">
+<div class="expcolimage"><img src="images/1/collapse.gif" id="boardstats_img" class="expander" alt="[-]" title="[-]" /></div>
+<div><strong>Board Statistics</strong></div>
+</td>
+</tr>
+</thead>
+<tbody style="" id="boardstats_e">
+<!-- start: index_whosonline -->
+<tr>
+<td class="tcat"><span class="smalltext"><strong>Who's Online</strong> [<a href="online.php">Complete List</a>]</span></td>
+</tr>
+<tr>
+<td class="trow1"><span class="smalltext">1 user active in the past 60 minutes (1 member, 0 of whom are invisible, and 0 guests).<br /><a href="http://forum.pokemonpets.com/User-Daeva13">Daeva13</a></span></td>
+</tr>
+<!-- end: index_whosonline -->
+<!-- start: online_today_index -->
+<tr>
+	<td class="tcat"><strong>Who has been online today</strong> [<a href="online.php?action=today">Complete List</a>]</td>
+</tr>
+<tr>
+	<td class="trow1"><span class="smalltext">991 users active in the past 24 hours (19 members, 1 of whom is invisible, and 972 guests).<br /><a href="http://forum.pokemonpets.com/User-ag175008">ag175008</a>, <a href="http://forum.pokemonpets.com/User-Aladdin"><span style="color: #7B00B8;"><strong><em>Aladdin</em></strong></span></a>, <a href="http://forum.pokemonpets.com/User-Atharvaa898">Atharvaa898</a>, <a href="http://forum.pokemonpets.com/User-Blau"><span style="color: #006600;"><strong>Blau</strong></span></a>, <a href="http://forum.pokemonpets.com/User-ch17175"><span style="color: #017E7E;"><strong>ch17175</strong></span></a>, <a href="http://forum.pokemonpets.com/User-cyni">cyni</a>, <a href="http://forum.pokemonpets.com/User-Daeva13">Daeva13</a>, <a href="http://forum.pokemonpets.com/User-Delphox">Delphox</a>, <a href="http://forum.pokemonpets.com/User-Glaceon">Glaceon</a>, <a href="http://forum.pokemonpets.com/User-GurvinderS1666">GurvinderS1666</a>, <a href="http://forum.pokemonpets.com/User-haseeo55">haseeo55</a>, <a href="http://forum.pokemonpets.com/User-Jules">Jules</a>, <a href="http://forum.pokemonpets.com/User-Kevin-Coffe">Kevin Coffe</a>, <a href="http://forum.pokemonpets.com/User-Mapledodo">Mapledodo</a>, <a href="http://forum.pokemonpets.com/User-qistina">qistina</a>, <a href="http://forum.pokemonpets.com/User-russ3344">russ3344</a>, <a href="http://forum.pokemonpets.com/User-servine">servine</a>, <a href="http://forum.pokemonpets.com/User-Sgt-Redhawk">Sgt_Redhawk</a></span></td>
+</tr>
+<!-- end: online_today_index -->
+
+<!-- start: index_stats -->
+<tr><td class="tcat"><span class="smalltext"><strong>Board Statistics</strong></span></td></tr>
+<tr>
+<td class="trow1"><span class="smalltext">
+Our members have made a total of 8,891 posts in 953 threads.<br />
+We currently have 9,379 members registered.<br />
+Please welcome our newest member, <b><a href="http://forum.pokemonpets.com/User-DanielEl">DanielEl</a></b><br />
+The most users online at one time was 348 on 09-01-2011 at 12:38 AM
+</span>
+</td>
+</tr>
+<!-- end: index_stats -->
+<tr>
+	<td class="tfoot" style="text-align: right">
+		<span class="smalltext">
+			
+			<a href="misc.php?action=markread">Mark All Forums Read</a> |
+			<a href="showteam.php">Forum Team</a> |
+			<a href="stats.php">Forum Statistics</a>
+		</span>
+	</td>
+</tr>
+</tbody>
+</table>
+<br />
+<!-- end: index_boardstats -->
+
+
+<dl class="forum_legend smalltext">
+	<dt><img src="images/1/on.gif" alt="Forum Contains New Posts" title="Forum Contains New Posts" style="vertical-align: middle; padding-bottom: 4px;" /></dt>
+	<dd>Forum Contains New Posts</dd>
+
+	<dt><img src="images/1/off.gif" alt="Forum Contains No New Posts" title="Forum Contains No New Posts" style="vertical-align: middle; padding-bottom: 4px;" /></dt>
+	<dd>Forum Contains No New Posts</dd>
+
+	<dt><img src="images/1/offlock.gif" alt="Forum is Locked" title="Forum is Locked" style="vertical-align: middle;" /></dt>
+	<dd>Forum is Locked</dd>
+</dl>
+<br style="clear: both" />
+<!-- start: footer -->
+<div id="debug"></div>
+	</div>
+</div>
+<div id="footer">
+	<div class="upper">
+		<div class="wrapper">
+			<!-- start: footer_languageselect -->
+<div class="language">
+<form method="get" action="/index.php" id="lang_select">
+	
+	<select name="language" onchange="MyBB.changeLanguage();">
+		<optgroup label="Quick Language Select">
+			<option value="english" selected="selected">&nbsp;&nbsp;&nbsp;English (American)</option>
+
+		</optgroup>
+	</select>
+	<!-- start: gobutton -->
+<input type="submit" class="button" value="Go" />
+<!-- end: gobutton -->
+</form>
+</div>
+<!-- end: footer_languageselect -->
+			<ul class="menu bottom_links">
+				<li><a href="mailto:admin@pokemonpets.com">Contact Us</a></li>
+				<li><a href="http://www.pokemonpets.com">Pokemon</a></li>
+<li><a href="http://www.pokemonpets.com/Pokedex">Pokedex</a></li>
+				<li><a href="#top">Return to Top</a></li>
+				<li><a href="http://forum.pokemonpets.com/archive/index.php">Lite (Archive) Mode</a></li>
+				<li><a href="http://forum.pokemonpets.com/misc.php?action=syndication">RSS Syndication</a></li>
+				<li><a href="http://forum.pokemonpets.com/misc.php?action=help" class="help">Help</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="lower">
+		<div class="wrapper">
+			<span id="current_time"><strong>Current time:</strong> 02-01-2016, 10:27 PM</span>
+			<span id="copyright">
+				<!-- MyBB is free software developed and maintained by a volunteer community. 
+					It would be much appreciated by the MyBB Group if you left the full copyright and "powered by" notice intact, 
+					to show your support for MyBB.  If you choose to remove or modify the copyright below, 
+					you may be refused support on the MyBB Community Forums.
+				 
+					This is free software, support us and we'll support you. -->
+				Powered By <a href="http://www.mybboard.net" rel="nofollow" target="_blank">MyBB</a>, &copy; 2002-2016 <a rel="nofollow" href="http://www.mybboard.net" target="_blank">MyBB Group</a>.
+				<!-- End powered by -->
+			</span>
+			<span id="theme">
+				<!-- Apart is a series of twelve simple, beautiful themes released completely free of charge.
+					You love Apart - that's why you're using it - so why prevent others from finding Apart
+					by removing this short, simple created by statement? If you make changes to this theme,
+					feel free to modify the created by statement, as long as the originial credit remains
+					intact. Furthermore, if you remove or unjustly modify this simple statement, you will
+					be refused support for the theme.
+	
+					Thanks for your consideration, and best of luck with your forum.
+					- Justin S., bellomandesign.com
+				-->
+				Theme created by <a href="http://bellomandesign.com/" rel="nofollow" target="_blank">Justin S.</a>
+				<!-- End theme created by statement -->
+			</span>
+		</div>
+	</div>
+</div>
+<!-- The following piece of code allows MyBB to run scheduled tasks. DO NOT REMOVE --><img src="http://forum.pokemonpets.com/task.php" border="0" width="1" height="1" alt="" /><!-- End task image code -->
+
+</div>
+<!-- end: footer -->
+
+<script type="text/javascript">
+setInterval('overview_request(1)', 60000);
+</script>
+</body>
+</html>
+<!-- end: index -->

@@ -1,0 +1,1001 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="ctl00_Head1"><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="shortcut icon" href="pokemon-favicon.ico?2" /><link href="https://plus.google.com/113372404593294986514" rel="publisher" /><link href="/CSS/Styles?v=mO0W98eOMyYulvbqZmz1xBm5VBe4Err3_IuH5kaptyQ1" rel="stylesheet"/>
+<script src="/Scripts/MasterScripts?v=T-gT419MDQCVtRiVFwhs8VsmaR1giH6qDitoHqTXAkg1"></script>
+<meta name="author" content="The Pokemon Pets Company International" /><meta name="copy write" content="The Pokemon Pets Company International" /><meta property="fb:app_id" content="1600361943563474" /><meta property="og:site_name" content="Pokemon Pets" />
+<script type="text/javascript">
+function disableMusic(PostData) {
+jQuery.ajax({
+type: "POST",
+url: "AutoCompleteName.asmx/SetMusicOpenOff",
+data: '{"srValue":"' + PostData + '"}',
+async: true,
+contentType: "application/json; charset=utf-8",
+dataType: "json",
+success: function (data) {
+location.reload();
+}
+});
+}
+</script>
+<link rel="canonical" href="http://www.pokemonpets.com/Register" />
+<title>Pokemon Pets Registration - No Download Or Plugin Required - PokemonPets, Free Online Pokémon MMO RPG Browser Game</title>
+<meta name="description" content="Pokemon Pets is a free online browser based RPG MMO Pokémon game that you can play without any downloads or plugin. You can registers/singup at this page and start playing immediately." />
+<link href="//static.pokemonpets.com/cssfiles/RegisterPage5.css" rel="stylesheet"
+type="text/css" />
+<style type="text/css">
+.MonsterImageSize6560 {
+width: 65px;
+height: 60px;
+}
+#RegisteredMembercount {
+-moz-box-shadow: inset 0px 1px 0px 0px #caefab;
+-webkit-box-shadow: inset 0px 1px 0px 0px #caefab;
+box-shadow: inset 0px 1px 0px 0px #caefab;
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #77d42a), color-stop(1, #5cb811));
+background: -moz-linear-gradient(top, #77d42a 5%, #5cb811 100%);
+background: -webkit-linear-gradient(top, #77d42a 5%, #5cb811 100%);
+background: -o-linear-gradient(top, #77d42a 5%, #5cb811 100%);
+background: -ms-linear-gradient(top, #77d42a 5%, #5cb811 100%);
+background: linear-gradient(to bottom, #77d42a 5%, #5cb811 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#77d42a', endColorstr='#5cb811',GradientType=0);
+background-color: #77d42a;
+-moz-border-radius: 6px;
+-webkit-border-radius: 6px;
+border-radius: 6px;
+border: 1px solid #268a16;
+color: #306108;
+text-decoration: none;
+text-shadow: 0px 1px 0px #aade7c;
+}
+</style>
+<script type="text/javascript">
+function getUserCount() {
+jQuery.ajax({
+type: "POST",
+url: "AutoCompleteName.asmx/GetRegisteredMembersCount",
+contentType: "application/json; charset=utf-8",
+dataType: "json",
+success: function (response) {
+$("#RegMemText").fadeOut(function () {
+$(this).html(response.d).fadeIn();
+});
+},
+failure: function (msg) {
+}
+});
+}
+setInterval(function () {
+getUserCount();
+}, 10000);
+function ExecuteRegisterScripts() {
+$(document).ready(function () {
+getUserCount();
+$(document).keypress(function (e) {
+if (e.which == 13) {
+$("#btnRegister").click();
+}
+});
+$(".RadioButtonUserImages").change(function () {
+srValue = $(".RadioButtonUserImages input:checked").val().replace("RdButtonUserImage", "");
+$("#hdfWhichOverworldTrainer").val(srValue);
+});
+$(".RdButtonStarterMonster").change(function () {
+srValue = $(".RdButtonStarterMonster input:checked").val().replace("RdButtonStarterMonster", "");
+$("#hdfWhichStarterMonster").val(srValue);
+});
+var CharValue = $("#hdfWhichOverworldTrainer").val();
+if (CharValue != null)
+if (CharValue > 0) {
+$('#RdButtonUserImage' + CharValue).attr('checked', true);
+}
+var StarValue = $("#hdfWhichStarterMonster").val();
+if (StarValue != null)
+if (StarValue > 0) {
+$('#RdButtonStarterMonster' + StarValue).attr('checked', true);
+}
+var value = $("#hdfUserNameError").val();
+if (value == "1") {
+$("#ErrorUserName").show('600');
+$("#ErrorUserName").focus();
+}
+else {
+$("#ErrorUserName").hide();
+}
+value = $("#hdfPasswordError").val();
+if (value == "1") {
+$("#ErrorPassword").show('600');
+$("#ErrorPassword").focus();
+}
+else {
+$("#ErrorPassword").hide();
+}
+value = $("#hdfEmailError").val();
+if (value == "1") {
+$("#ErrorEmail").show('600');
+$("#ErrorEmail").focus();
+}
+else {
+$("#ErrorEmail").hide();
+}
+});
+}
+ExecuteRegisterScripts();
+</script>
+<style type="text/css">
+.CompleteRegister {
+width: 202px;
+height: 44px;
+display: block;
+background: url(//static.pokemonpets.com/images/register/Register_en.png?2) no-repeat top left;
+border-style: none;
+border-width: 0px;
+cursor: pointer;
+margin: auto;
+}
+.CompleteRegister:hover {
+background: url(//static.pokemonpets.com/images/register/Register_en.png?2) no-repeat bottom right;
+}
+.CheckUserName {
+width: 201px;
+height: 39px;
+display: block;
+background: url(//static.pokemonpets.com/images/register/CheckAvailable_en.png?2) no-repeat top left;
+border-style: none;
+border-width: 0px;
+cursor: pointer;
+margin: auto;
+}
+.CheckUserName:hover {
+background: url(//static.pokemonpets.com/images/register/CheckAvailable_en.png?2) no-repeat bottom right;
+}
+</style>
+<script src="Scripts/googleAnalytics.js"></script>
+</head>
+<body>
+<form method="post" action="Register" id="aspnetForm">
+<div class="aspNetHidden">
+<input type="hidden" name="ctl00_ContentPlaceHolder_SC1_HiddenField" id="ctl00_ContentPlaceHolder_SC1_HiddenField" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+</div>
+<script src="/ScriptResource.axd?d=x6wALODbMJK5e0eRC_p1LREFJABMZMg6GSG9N6wGFAoUBziFlQluHw3dy-4mmKgEfnXFP-ej20D7RXlPKVwdIys4kZDY5gfZuEvDN5c7GlPgUoUSPHAxQoV4ZkJWt47k0&amp;t=fffffffff2b1ef38" type="text/javascript"></script>
+<div class="TopBarMasterPage" style="background: #D1D1D1 url(//static.pokemonpets.com/images/backgrounds/pokemon-pets-main-header-pokemon-mmo-game-rpg.png) no-repeat;"
+title="Return To Home Page">
+<a href="//www.pokemonpets.com"></a>
+<div title="Close Music Player" style="z-index: -11; position: relative; cursor: pointer; display: inline-block; margin-left: 1110px; width: 22px; height: 22px; background-image: url('//static.pokemonpets.com/images/masterPage/CloseMusic.png')"
+onclick="disableMusic('1');">
+</div>
+<div id="MainRight" style="z-index: -11; position: relative; display: block; margin-left: 1005px; width: 130px; margin-top: -26px;">
+</div>
+<div class="GooglePlusMain">
+<div class="g-plusone"></div>
+</div>
+<div id="IconSet" style="position: absolute; top: 2px; left: 720px; width: 280px; height: 36px;">
+<a id="DeviantArtIcon" href="http://monstermmorpg.deviantart.com" rel="nofollow" target="_blank" title="Monster MMORPG On Deviant Art - Please Watch Our Channel"></a>
+<a id="FbIcon" href="http://www.facebook.com/PokemonPetsRPG" rel="nofollow" target="_blank" title="Official Facebook Page Of Pokemon Pets - Please Like To Get News And Events"></a>
+<a id="GplusIcon" href="https://plus.google.com/+Pokemonpets" rel="nofollow" target="_blank" title="Pokemon Pets On Google Plust - Add Circles To Follow News"></a>
+<a id="LinkedInIcon" href="http://www.linkedin.com/company/monster-mmorpg" rel="nofollow" target="_blank" title="Monster MMORPG On LinkedIn Company List - Follow Us"></a>
+<a id="twitterIcon" href="https://twitter.com/PokemonPets" rel="nofollow" target="_blank" title="Official Twitter Channel Of Pokemon Pets - Subscribe To Hear News"></a>
+<a id="youtubeIcon" href="http://www.youtube.com/PokemonPets" rel="nofollow" target="_blank" title="Subscribe And Watch Official Gameplay And Tutorial Videos On Monster MMORPG Youtube Channel"></a>
+<a id="MonsterMMORPGIcon" href="http://www.monstermmorpg.com" rel="nofollow" target="_blank" title="Best Pokemon style official game Monster MMORPG"></a>
+</div>
+</div>
+<script type="text/javascript">
+(function () {
+var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+po.src = 'https://apis.google.com/js/plusone.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+})();
+</script>
+<div id="NAV" class="MenuBarMasterPage">
+<ul id="mainMenuYes" class="mainMenuYes sf-menu">
+<li class="current">
+<a class="M_homepageN" title="Return To Home Page" href="//www.pokemonpets.com">
+<span></span>
+</a>
+</li>
+<li>
+<a class="M_forumN" title="For Learning How To Play Game And Many Useful Tips About Game Please Visit Forum And For Knowing News Please Keep Following Forum"
+href="Forum">
+<span></span>
+</a>
+</li>
+<li>
+<a class="M_mapsN" href="Maps" title="PokemonPets Maps - Maps Detailed Info - Which Pokémon Appear At Which Maps And Appear Ratio">
+<span></span>
+</a>
+<div class="sf-mega">
+<div class="sf-mega-section">
+<ul>
+<li class="menuitem">
+<a href="Maps" title="PokemonPets Maps - Maps Detailed Info - Which Pokémon Appears At Which Map And Appear Ratio">
+<img src="//static.pokemonpets.com/images/HomePage/game_maps_icon.png" />
+Game Maps List                                                                                                                                                
+</a>
+</li>
+</ul>
+</div>
+<div class="sf-mega-section">
+<ul>
+<li class="menuitem">
+<a href="Game-Maps" title="Search for any map that you are looking for with using advanced searching filters">
+<img src="//static.pokemonpets.com/images/HomePage/search_map_icon.png" />
+Search Map - Find Which Pokémon Where                                                                                                                                                
+</a>
+</li>
+<li class="menuitem">
+<a href="http://forum.pokemonpets.com/Forum-FAQ" title="Frequently Asked Questions please read all threads">
+<img src="//static.pokemonpets.com/images/HomePage/faq_threads.png" />
+Frequently Asked Questions (FAQ)                                                                                                            
+</a>
+</li>
+</ul>
+</div>
+<div class="sf-mega-section">
+<ul>
+<li class="menuitem">
+<a href="How-To-Play" title="How To Play The Game">
+<img src="//static.pokemonpets.com/images/HomePage/how_to_play_icon.png" />
+How To Play The Game                                                                                                            
+</a>
+</li>
+</ul>
+</div>
+</div>
+</li>
+<li>
+<a class="M_gamevideosN" href="Media" title="Pokemon Pets Media - Gameplay Videos - Game Screenshots - Game Banners - How To Play The Game">
+<span></span>
+</a>
+<div class="sf-mega">
+<div class="sf-mega-section">
+<ul>
+<li class="menuitem">
+<a href="How-To-Play" title="How To Play The Game">
+<img src="//static.pokemonpets.com/images/HomePage/how_to_play_icon.png" />
+How To Play The Game                                                                                                            
+</a>
+</li>
+<li class="menuitem">
+<a href="Videos" title="Gameplay Videos - Learn How To Play The Game">
+<img src="//static.pokemonpets.com/images/HomePage/game_videos_icon.png" />
+Gameplay Videos                                                                                                            
+</a>
+</li>
+<li class="menuitem">
+<a href="http://forum.pokemonpets.com/Forum-FAQ" title="Frequently Asked Questions please read all threads">
+<img src="//static.pokemonpets.com/images/HomePage/faq_threads.png" />
+Frequently Asked Questions (FAQ)                                                                                                            
+</a>
+</li>
+</ul>
+</div>
+<div class="sf-mega-section">
+<ul>
+<li class="menuitem">
+<a href="Screenshots" title="Actual Gameplay Screenshots">
+<img src="//static.pokemonpets.com/images/HomePage/game_screen_shots.png" />
+Actual Gameplay Screenshots                                                                                                            
+</a>
+</li>
+<li class="menuitem">
+<a href="Wallpapers" title="Full HD Game Wallpapers">
+<img src="//static.pokemonpets.com/images/HomePage/game_wall_papers.png" />
+Game HD Wallpapers                                                                                                            
+</a>
+</li>
+</ul>
+</div>
+<div class="sf-mega-section">
+<ul>
+<li class="menuitem">
+<a href="Banners" title="Game's Official Banners - Free To Use">
+<img src="//static.pokemonpets.com/images/HomePage/game_banners.png" />
+Game's Official Banners                                                                                                            
+</a>
+</li>
+<li class="menuitem">
+<a href="Avatars" title="Very High Quality Game's Profile Avatars">
+<img src="//static.pokemonpets.com/images/HomePage/game_avatars.png" />
+Game's Profile Avatars                                                                                                            
+</a>
+</li>
+</ul>
+</div>
+</div>
+</li>
+<li>
+<a class="M_monsterdexN" href="Pokedex" title="All Pokémon List - Where To Catch Pokémon - How To Transform Pokémon - Pokémon' Details">
+<span></span>
+</a>
+<div class="sf-mega">
+<div class="sf-mega-section">
+<ul>
+<li class="menuitem">
+<a href="Stat-Calculator" title="Calculate Any Pokémon's stats with any custom abilities and natures. Very detailed Pokémon stats calculator">
+<img src="//static.pokemonpets.com/images/HomePage/stat_calculator_icon.png" />
+Stats Calculator                                                                                                            
+</a>
+</li>
+<li class="menuitem">
+<a href="PokemonList" title="All Pokémon Pets Pokémon list with bigger thumbnails and filterings">
+<img src="//static.pokemonpets.com/images/HomePage/all_monsters_icon.png" />
+All Pokémon List                                                                                                            
+</a>
+</li>
+<li class="menuitem">
+<a href="How-To-Play" title="How To Play The Game">
+<img src="//static.pokemonpets.com/images/HomePage/how_to_play_icon.png" />
+How To Play The Game                                                                                                            
+</a>
+</li>
+</ul>
+</div>
+<div class="sf-mega-section">
+<ul>
+<li class="menuitem">
+<a href="Natures" title="All Pokémon Natures List">
+<img src="//static.pokemonpets.com/images/HomePage/nature_list.png" />
+Natures List                                                                                                         
+</a>
+</li>
+<li class="menuitem">
+<a href="Abilities" title="All Pokémon Abilities List">
+<img src="//static.pokemonpets.com/images/HomePage/ability_list.png" />
+Abilities List                                                                                                            
+</a>
+</li>
+<li class="menuitem">
+<a href="AttackDex" title="Attack List, AttackDex of all Pokemon">
+<img src="//static.pokemonpets.com/images/HomePage/attack_list.png" />
+Pokemon Attack List
+</a>
+</li>
+</ul>
+</div>
+<div class="sf-mega-section">
+<ul>
+<li class="menuitem">
+<a href="Type-Chart" title="Damage Type Chart According To The Types - Type Chart">
+<img src="//static.pokemonpets.com/images/HomePage/type_chart.png" />
+Damage Ratios According To The Types
+<br />
+Types Chart 
+<img src="//static.pokemonpets.com/images/HomePage/type_chart.png" />
+</a>
+</li>
+<li class="menuitem">
+<a href="http://forum.pokemonpets.com/Forum-FAQ" title="Frequently Asked Questions please read all threads">
+<img src="//static.pokemonpets.com/images/HomePage/faq_threads.png" />
+Frequently Asked Questions (FAQ)                                                                                                            
+</a>
+</li>
+</ul>
+</div>
+</div>
+</li>
+<li>
+<a class="M_loginN" title="You Have To Login For Accessing All Features - Registration Is Free"
+href="Login">
+<span></span>
+</a>
+</li>
+<li>
+<a class="M_registerN" title="Join This Fantastic Adventure Now - Free To Register - Free To Play - Instant Activation"
+href="Register">
+<span></span>
+</a>
+</li>
+<li>
+<a class="M_turkceN" title="Dili Türkçe Yap" href="ChangeLanguage.aspx">
+<span></span>
+</a>
+</li>
+</ul>
+</div>
+<div class="ShortCutsMasterPage">
+<div style="position: absolute; left: 881px; top: 4px; height: 16px; font-size: 13px; line-height: 16px; width: 100px; text-align: center;"
+class="NiceText">
+<span id="ctl00_lblDonate"><a target="_blank" title="Version 2.2.4 ChangeLogs" rel="nofollow"  href="http://forum.pokemonpets.com/Thread-Version-2-2-4">Version 2.2.4</a></span>
+</div>
+<div style="position: absolute; color: #FF795E; left: 864px; top: 32px; height: 16px; font-size: 12px; line-height: 16px; width: 136px; text-align: center; font-weight: bold;">
+<span id="clockSpan">
+12:27</span><span id="ctl00_lblTime"> PM (Day)</span>
+</div>
+<div style="position: absolute; left: 864px; top: 48px; height: 16px; font-size: 13px; line-height: 16px; width: 136px; text-align: center;"
+class="NiceGreenText">
+<span id="ctl00_lblLoggedUserName"></span>
+</div>
+<div style="position: absolute; left: 864px; top: 65px; height: 32px; font-size: 13px; line-height: 16px; width: 136px; text-align: center;">
+<span id="ctl00_lblNewMessages"></span>
+</div>
+<div style="position: absolute; left: 0; top: 2px; height: 16px; font-size: 13px; line-height: 16px; width: 136px; text-align: center;">
+<span id="ctl00_lblFAQLink"><a rel="nofollow" title="How to play Pokemon Pets" href="http://forum.pokemonpets.com/Forum-FAQ" class="linkMsg" target="_blank">FAQ-Threads</a></span>
+</div>
+<div style="position: absolute; left: 0; top: 18px; height: 16px; font-size: 13px; line-height: 16px; width: 136px; text-align: center;">
+<span id="ctl00_lblNewMaps"><a target="_blank" title="Pokémon Natures" class="linkMsg" href="Natures">Natures List</a></span>
+</div>
+<div style="position: absolute; left: 0; top: 34px; height: 16px; font-size: 13px; line-height: 16px; width: 136px; text-align: center;">
+<span id="ctl00_lblNewMonsters"><a href="How-To-Play" title="How To Play Pokémon MMORPG Game Pokemon Pets" class="linkMsg" target="_blank">How To Play</a></span>
+</div>
+<div style="position: absolute; left: 0; top: 50px; height: 16px; font-size: 13px; line-height: 16px; width: 136px; text-align: center;">
+<span id="ctl00_lblAvailabileMapsLink"><a href="Maps" title="Pokémon Games Maps" class="linkMsg" target="_blank">Game Maps</a></span>
+</div>
+<div style="position: absolute; left: 0; top: 66px; height: 16px; font-size: 13px; line-height: 16px; width: 136px; text-align: center;">
+<span id="ctl00_lblTopPlayersLink"><a rel="nofollow" title="Pokémon Complete Ability List" href="Abilities" class="linkMsg" target="_blank">Abilities List</a></span>
+</div>
+<div style="position: absolute; left: 0; top: 82px; height: 16px; font-size: 13px; line-height: 16px; width: 136px; text-align: center;">
+<a href="Pokedex" title="Pokémon Pokédex" class="linkMsg" target="_blank">Pokédex</a>
+</div>
+<div id="AdsTop" style="position: absolute; top: 5px; left: 136px; height: 90px; width: 728px; overflow: hidden;">
+<a href="Register" class="NoChange" title="Click To Register">
+<img style="border-width: 0px;" alt="Pokemon Pets Pokémon MMORPG" src="//static.pokemonpets.com/images/backgrounds/Pokemon-MMORPG.png" /></a>
+</div>
+</div>
+<div id="ContentMasterPage" class="ContentMasterPage" style=" height:1550px; ">
+<div class="LeftMonsterImages">
+<table>
+<tr>
+<td class="permonster">
+<a  target="_blank" title="Pokédex #4716 Xerneas-Neutral" href="Xerneas-Neutral-Pokemon-Pokedex-4716"><div class="MonsterImagePos" style="background:url(//static.pokemonpets.com/images/monsters-images-120-120/4716-Xerneas-Neutral.png) no-repeat center center;"></div></a>
+</td>
+</tr>
+<tr>
+<td class="permonster">
+<a  target="_blank" title="Pokédex #150 Mewtwo" href="Mewtwo-Pokemon-Pokedex-150"><div class="MonsterImagePos" style="background:url(//static.pokemonpets.com/images/monsters-images-120-120/150-Mewtwo.png) no-repeat center center;"></div></a>
+</td>
+</tr>
+<tr>
+<td class="permonster">
+<a  target="_blank" title="Pokédex #63 Abra" href="Abra-Pokemon-Pokedex-63"><div class="MonsterImagePos" style="background:url(//static.pokemonpets.com/images/monsters-images-120-120/63-Abra.png) no-repeat center center;"></div></a>
+</td>
+</tr>
+<tr>
+<td class="permonster">
+<a  target="_blank" title="Pokédex #4001 Deoxys-Attack" href="Deoxys-Attack-Pokemon-Pokedex-4001"><div class="MonsterImagePos" style="background:url(//static.pokemonpets.com/images/monsters-images-120-120/4001-Deoxys-Attack.png) no-repeat center center;"></div></a>
+</td>
+</tr>
+<tr>
+<td class="permonster">
+<a  target="_blank" title="Pokédex #144 Articuno" href="Articuno-Pokemon-Pokedex-144"><div class="MonsterImagePos" style="background:url(//static.pokemonpets.com/images/monsters-images-120-120/144-Articuno.png) no-repeat center center;"></div></a>
+</td>
+</tr>
+<tr>
+<td class="permonster">
+<a  target="_blank" title="Pokédex #4499 Arceus-Flying" href="Arceus-Flying-Pokemon-Pokedex-4499"><div class="MonsterImagePos" style="background:url(//static.pokemonpets.com/images/monsters-images-120-120/4499-Arceus-Flying.png) no-repeat center center;"></div></a>
+</td>
+</tr>
+<tr>
+<td class="permonster">
+<a  target="_blank" title="Pokédex #498 Tepig" href="Tepig-Pokemon-Pokedex-498"><div class="MonsterImagePos" style="background:url(//static.pokemonpets.com/images/monsters-images-120-120/498-Tepig.png) no-repeat center center;"></div></a>
+</td>
+</tr>
+</table>
+</div>
+<div class="RightMonsterImages">
+<table>
+<tr>
+<td class="permonster">
+<a  target="_blank" title="Pokédex #135 Jolteon" href="Jolteon-Pokemon-Pokedex-135"><div class="MonsterImagePos" style="background:url(//static.pokemonpets.com/images/monsters-images-120-120/135-Jolteon.png) no-repeat center center;"></div></a>
+</td>
+</tr>
+<tr>
+<td class="permonster">
+<a  target="_blank" title="Pokédex #717 Yveltal" href="Yveltal-Pokemon-Pokedex-717"><div class="MonsterImagePos" style="background:url(//static.pokemonpets.com/images/monsters-images-120-120/717-Yveltal.png) no-repeat center center;"></div></a>
+</td>
+</tr>
+<tr>
+<td class="permonster">
+<a  target="_blank" title="Pokédex #373 Salamence" href="Salamence-Pokemon-Pokedex-373"><div class="MonsterImagePos" style="background:url(//static.pokemonpets.com/images/monsters-images-120-120/373-Salamence.png) no-repeat center center;"></div></a>
+</td>
+</tr>
+<tr>
+<td class="permonster">
+<a  target="_blank" title="Pokédex #349 Feebas" href="Feebas-Pokemon-Pokedex-349"><div class="MonsterImagePos" style="background:url(//static.pokemonpets.com/images/monsters-images-120-120/349-Feebas.png) no-repeat center center;"></div></a>
+</td>
+</tr>
+<tr>
+<td class="permonster">
+<a  target="_blank" title="Pokédex #4782 Furfrou-Lareine" href="Furfrou-Lareine-Pokemon-Pokedex-4782"><div class="MonsterImagePos" style="background:url(//static.pokemonpets.com/images/monsters-images-120-120/4782-Furfrou-Lareine.png) no-repeat center center;"></div></a>
+</td>
+</tr>
+<tr>
+<td class="permonster">
+<a  target="_blank" title="Pokédex #12005 Deoxsreg" href="Deoxsreg-Pokemon-Pokedex-12005"><div class="MonsterImagePos" style="background:url(//static.pokemonpets.com/images/monsters-images-120-120/12005-Deoxsreg.png) no-repeat center center;"></div></a>
+</td>
+</tr>
+</table>
+</div>
+<script type="text/javascript">
+var prm = Sys.WebForms.PageRequestManager.getInstance();
+prm.add_initializeRequest(InitializeRequest);
+prm.add_endRequest(EndRequest);
+function InitializeRequest(sender, e) {
+$("input[type=submit]").attr("disabled", "disabled");
+$("input[type=image]").attr("disabled", "disabled");
+}
+function EndRequest(sender, e) {
+$("input[type=submit]").removeAttr("disabled");
+$("input[type=image]").removeAttr("disabled");
+}
+</script>
+<div id="ctl00_ContentPlaceHolder_UpdatePanel1">
+<script type="text/javascript">
+Sys.Application.add_load(ExecuteRegisterScripts);
+</script>
+<input type="hidden" name="ctl00$ContentPlaceHolder$hdfWhichOverworldTrainer" id="hdfWhichOverworldTrainer" value="2" />
+<input type="hidden" name="ctl00$ContentPlaceHolder$hdfWhichStarterMonster" id="hdfWhichStarterMonster" value="258" />
+<input type="hidden" name="ctl00$ContentPlaceHolder$hdfUserNameError" id="hdfUserNameError" value="0" />
+<input type="hidden" name="ctl00$ContentPlaceHolder$hdfPasswordError" id="hdfPasswordError" value="0" />
+<input type="hidden" name="ctl00$ContentPlaceHolder$hdfEmailError" id="hdfEmailError" value="0" />
+<div class="RegisterMainPanel">
+<div class="RegisterTitle">
+<h1>
+Welcome To F2P Browser Based Online Pokémon Game Pokemon Pets Register Page</h1>
+</div>
+<div class="UsernamePanel">
+<table width="100%">
+<tr>
+<td class="UsernameText" style="width: 30%">
+Username: 
+</td>
+<td>
+<input name="ctl00$ContentPlaceHolder$txtUserName" type="text" maxlength="16" id="ctl00_ContentPlaceHolder_txtUserName" style="width:200px;text-align: center" />
+</td>
+<td>
+<input type="submit" name="ctl00$ContentPlaceHolder$btnCheckUserName" value="" id="btnCheckUserName" class="CheckUserName button_transition_0_25_sec" />
+</td>
+</tr>
+</table>
+<table>
+<tr>
+<td class="DescriptionText" style="width: 65%">
+The valid letter set for username are: (a-Z) (0-9) ( . ) ( _ ) ( )
+<br />
+User name has to start with character: (a-Z)
+</td>
+<td id="ErrorUserName">
+</td>
+</tr>
+</table>
+</div>
+<div class="UsernamePanel">
+<table width="100%">
+<tr>
+<td class="UsernameText" style="width: 30%">
+Password: 
+</td>
+<td>
+<input name="ctl00$ContentPlaceHolder$txtPassword" type="password" maxlength="16" id="ctl00_ContentPlaceHolder_txtPassword" style="width:200px;text-align: center" />
+</td>
+<td rowspan="2" id="ErrorPassword">
+</td>
+</tr>
+<tr>
+<td class="UsernameText" style="width: 30%">
+Confirm Password: 
+</td>
+<td>
+<input name="ctl00$ContentPlaceHolder$txtPasswordRetype" type="password" maxlength="16" id="ctl00_ContentPlaceHolder_txtPasswordRetype" style="width:200px;text-align: center" />
+</td>
+</tr>
+<tr>
+<td colspan="2" class="DescriptionText">
+The valid letter set for password are: (a-Z) (0-9) ( . ) ( _ ) ( $ ) ( )
+</td>
+</tr>
+</table>
+</div>
+<div class="UsernamePanel">
+<table width="100%">
+<tr>
+<td class="UsernameText" style="width: 30%">
+Email Address:
+</td>
+<td>
+<input name="ctl00$ContentPlaceHolder$txtEmail" type="text" maxlength="80" id="ctl00_ContentPlaceHolder_txtEmail" style="width:200px;" />
+</td>
+<td rowspan="2" id="ErrorEmail">
+</td>
+</tr>
+<tr>
+<td class="UsernameText" style="width: 30%">
+Confirm Email Address: 
+</td>
+<td>
+<input name="ctl00$ContentPlaceHolder$txtEmailConfirm" type="text" maxlength="80" id="ctl00_ContentPlaceHolder_txtEmailConfirm" style="width:200px;" />
+</td>
+</tr>
+<tr>
+<td colspan="2" class="DescriptionText">
+Be sure that you have entered a working email address. Without a working email address your account won't be safe!
+</td>
+</tr>
+</table>
+</div>
+<div class="OverworldPanel">
+<div class="SelecTrainerTitle">
+Select Your Overworld Trainer Image
+</div>
+<div style="float: left; width: 34px; height: 40px; text-align: center; vertical-align: middle; margin-bottom: 10px; margin-top: 10px;">
+<span class="RadioButtonUserImages"><input id="RdButtonUserImage1" type="radio" name="ctl00$ContentPlaceHolder$RdButtonUserImage1" value="RdButtonUserImage1" /></span>
+<div id="trainer1down"></div>
+</div>
+<div style="float: left; width: 34px; height: 40px; text-align: center; vertical-align: middle; margin-bottom: 10px; margin-top: 10px;">
+<span class="RadioButtonUserImages"><input id="RdButtonUserImage2" type="radio" name="ctl00$ContentPlaceHolder$RdButtonUserImage1" value="RdButtonUserImage2" /></span>
+<div id="trainer2down"></div>
+</div>
+<div style="float: left; width: 34px; height: 40px; text-align: center; vertical-align: middle; margin-bottom: 10px; margin-top: 10px;">
+<span class="RadioButtonUserImages"><input id="RdButtonUserImage3" type="radio" name="ctl00$ContentPlaceHolder$RdButtonUserImage1" value="RdButtonUserImage3" /></span>
+<div id="trainer3down"></div>
+</div>
+<div style="float: left; width: 34px; height: 40px; text-align: center; vertical-align: middle; margin-bottom: 10px; margin-top: 10px;">
+<span class="RadioButtonUserImages"><input id="RdButtonUserImage4" type="radio" name="ctl00$ContentPlaceHolder$RdButtonUserImage1" value="RdButtonUserImage4" /></span>
+<div id="trainer4down"></div>
+</div>
+<div style="float: left; width: 34px; height: 40px; text-align: center; vertical-align: middle; margin-bottom: 10px; margin-top: 10px;">
+<span class="RadioButtonUserImages"><input id="RdButtonUserImage5" type="radio" name="ctl00$ContentPlaceHolder$RdButtonUserImage1" value="RdButtonUserImage5" /></span>
+<div id="trainer5down"></div>
+</div>
+<div style="float: left; width: 34px; height: 40px; text-align: center; vertical-align: middle; margin-bottom: 10px; margin-top: 10px;">
+<span class="RadioButtonUserImages"><input id="RdButtonUserImage6" type="radio" name="ctl00$ContentPlaceHolder$RdButtonUserImage1" value="RdButtonUserImage6" /></span>
+<div id="trainer6down"></div>
+</div>
+<div style="float: left; width: 34px; height: 40px; text-align: center; vertical-align: middle; margin-bottom: 10px; margin-top: 10px;">
+<span class="RadioButtonUserImages"><input id="RdButtonUserImage7" type="radio" name="ctl00$ContentPlaceHolder$RdButtonUserImage1" value="RdButtonUserImage7" /></span>
+<div id="trainer7down"></div>
+</div>
+<div style="float: left; width: 34px; height: 40px; text-align: center; vertical-align: middle; margin-bottom: 10px; margin-top: 10px;">
+<span class="RadioButtonUserImages"><input id="RdButtonUserImage8" type="radio" name="ctl00$ContentPlaceHolder$RdButtonUserImage1" value="RdButtonUserImage8" /></span>
+<div id="trainer8down"></div>
+</div>
+<div style="float: left; width: 34px; height: 40px; text-align: center; vertical-align: middle; margin-bottom: 10px; margin-top: 10px;">
+<span class="RadioButtonUserImages"><input id="RdButtonUserImage9" type="radio" name="ctl00$ContentPlaceHolder$RdButtonUserImage1" value="RdButtonUserImage9" /></span>
+<div id="trainer9down"></div>
+</div>
+<div style="float: left; width: 34px; height: 40px; text-align: center; vertical-align: middle; margin-bottom: 10px; margin-top: 10px;">
+<span class="RadioButtonUserImages"><input id="RdButtonUserImage10" type="radio" name="ctl00$ContentPlaceHolder$RdButtonUserImage1" value="RdButtonUserImage10" /></span>
+<div id="trainer10down"></div>
+</div>
+<div style="float: left; width: 34px; height: 40px; text-align: center; vertical-align: middle; margin-bottom: 10px; margin-top: 10px;">
+<span class="RadioButtonUserImages"><input id="RdButtonUserImage11" type="radio" name="ctl00$ContentPlaceHolder$RdButtonUserImage1" value="RdButtonUserImage11" /></span>
+<div id="trainer11down"></div>
+</div>
+<div style="float: left; width: 34px; height: 40px; text-align: center; vertical-align: middle; margin-bottom: 10px; margin-top: 10px;">
+<span class="RadioButtonUserImages"><input id="RdButtonUserImage12" type="radio" name="ctl00$ContentPlaceHolder$RdButtonUserImage1" value="RdButtonUserImage12" /></span>
+<div id="trainer12down"></div>
+</div>
+<div style="float: left; width: 34px; height: 40px; text-align: center; vertical-align: middle; margin-bottom: 10px; margin-top: 10px;">
+<span class="RadioButtonUserImages"><input id="RdButtonUserImage13" type="radio" name="ctl00$ContentPlaceHolder$RdButtonUserImage1" value="RdButtonUserImage13" /></span>
+<div id="trainer13down"></div>
+</div>
+<div style="float: left; width: 34px; height: 40px; text-align: center; vertical-align: middle; margin-bottom: 10px; margin-top: 10px;">
+<span class="RadioButtonUserImages"><input id="RdButtonUserImage14" type="radio" name="ctl00$ContentPlaceHolder$RdButtonUserImage1" value="RdButtonUserImage14" /></span>
+<div id="trainer14down"></div>
+</div>
+<div style="float: left; width: 34px; height: 40px; text-align: center; vertical-align: middle; margin-bottom: 10px; margin-top: 10px;">
+<span class="RadioButtonUserImages"><input id="RdButtonUserImage15" type="radio" name="ctl00$ContentPlaceHolder$RdButtonUserImage1" value="RdButtonUserImage15" /></span>
+<div id="trainer15down"></div>
+</div>
+<div style="float: left; width: 34px; height: 40px; text-align: center; vertical-align: middle; margin-bottom: 10px; margin-top: 10px;">
+<span class="RadioButtonUserImages"><input id="RdButtonUserImage16" type="radio" name="ctl00$ContentPlaceHolder$RdButtonUserImage1" value="RdButtonUserImage16" /></span>
+<div id="trainer16down"></div>
+</div>
+<div style="float: left; width: 34px; height: 40px; text-align: center; vertical-align: middle; margin-bottom: 10px; margin-top: 10px;">
+<span class="RadioButtonUserImages"><input id="RdButtonUserImage17" type="radio" name="ctl00$ContentPlaceHolder$RdButtonUserImage1" value="RdButtonUserImage17" /></span>
+<div id="trainer17down"></div>
+</div>
+<div style="float: left; width: 34px; height: 40px; text-align: center; vertical-align: middle; margin-bottom: 10px; margin-top: 10px;">
+<span class="RadioButtonUserImages"><input id="RdButtonUserImage18" type="radio" name="ctl00$ContentPlaceHolder$RdButtonUserImage1" value="RdButtonUserImage18" /></span>
+<div id="trainer18down"></div>
+</div>
+<div style="float: left; width: 34px; height: 40px; text-align: center; vertical-align: middle; margin-bottom: 10px; margin-top: 10px;">
+<span class="RadioButtonUserImages"><input id="RdButtonUserImage19" type="radio" name="ctl00$ContentPlaceHolder$RdButtonUserImage1" value="RdButtonUserImage19" /></span>
+<div id="trainer19down"></div>
+</div>
+<div style="float: left; width: 34px; height: 40px; text-align: center; vertical-align: middle; margin-bottom: 10px; margin-top: 10px;">
+<span class="RadioButtonUserImages"><input id="RdButtonUserImage20" type="radio" name="ctl00$ContentPlaceHolder$RdButtonUserImage1" value="RdButtonUserImage20" /></span>
+<div id="trainer20down"></div>
+</div>
+<div style="float: left; width: 34px; height: 40px; text-align: center; vertical-align: middle; margin-bottom: 10px; margin-top: 10px;">
+<span class="RadioButtonUserImages"><input id="RdButtonUserImage21" type="radio" name="ctl00$ContentPlaceHolder$RdButtonUserImage1" value="RdButtonUserImage21" /></span>
+<div id="trainer21down"></div>
+</div>
+<div style="float: left; width: 34px; height: 40px; text-align: center; vertical-align: middle; margin-bottom: 10px; margin-top: 10px;">
+<span class="RadioButtonUserImages"><input id="RdButtonUserImage22" type="radio" name="ctl00$ContentPlaceHolder$RdButtonUserImage1" value="RdButtonUserImage22" /></span>
+<div id="trainer22down"></div>
+</div>
+<div style="float: left; width: 34px; height: 40px; text-align: center; vertical-align: middle; margin-bottom: 10px; margin-top: 10px;">
+<span class="RadioButtonUserImages"><input id="RdButtonUserImage23" type="radio" name="ctl00$ContentPlaceHolder$RdButtonUserImage1" value="RdButtonUserImage23" /></span>
+<div id="trainer23down"></div>
+</div>
+<div style="float: left; width: 34px; height: 40px; text-align: center; vertical-align: middle; margin-bottom: 10px; margin-top: 10px;">
+<span class="RadioButtonUserImages"><input id="RdButtonUserImage24" type="radio" name="ctl00$ContentPlaceHolder$RdButtonUserImage1" value="RdButtonUserImage24" /></span>
+<div id="trainer24down"></div>
+</div>
+<div style="float: left; width: 34px; height: 40px; text-align: center; vertical-align: middle; margin-bottom: 10px; margin-top: 10px;">
+<span class="RadioButtonUserImages"><input id="RdButtonUserImage25" type="radio" name="ctl00$ContentPlaceHolder$RdButtonUserImage1" value="RdButtonUserImage25" /></span>
+<div id="trainer25down"></div>
+</div>
+<div style="float: left; width: 34px; height: 40px; text-align: center; vertical-align: middle; margin-bottom: 10px; margin-top: 10px;">
+<span class="RadioButtonUserImages"><input id="RdButtonUserImage26" type="radio" name="ctl00$ContentPlaceHolder$RdButtonUserImage1" value="RdButtonUserImage26" /></span>
+<div id="trainer26down"></div>
+</div>
+<div style="float: left; width: 34px; height: 40px; text-align: center; vertical-align: middle; margin-bottom: 10px; margin-top: 10px;">
+<span class="RadioButtonUserImages"><input id="RdButtonUserImage27" type="radio" name="ctl00$ContentPlaceHolder$RdButtonUserImage1" value="RdButtonUserImage27" /></span>
+<div id="trainer27down"></div>
+</div>
+<div style="float: left; width: 34px; height: 40px; text-align: center; vertical-align: middle; margin-bottom: 10px; margin-top: 10px;">
+<span class="RadioButtonUserImages"><input id="RdButtonUserImage28" type="radio" name="ctl00$ContentPlaceHolder$RdButtonUserImage1" value="RdButtonUserImage28" /></span>
+<div id="trainer28down"></div>
+</div>
+<div style="float: left; width: 34px; height: 40px; text-align: center; vertical-align: middle; margin-bottom: 10px; margin-top: 10px;">
+<span class="RadioButtonUserImages"><input id="RdButtonUserImage29" type="radio" name="ctl00$ContentPlaceHolder$RdButtonUserImage1" value="RdButtonUserImage29" /></span>
+<div id="trainer29down"></div>
+</div>
+<div style="float: left; width: 34px; height: 40px; text-align: center; vertical-align: middle; margin-bottom: 10px; margin-top: 10px;">
+<span class="RadioButtonUserImages"><input id="RdButtonUserImage30" type="radio" name="ctl00$ContentPlaceHolder$RdButtonUserImage1" value="RdButtonUserImage30" /></span>
+<div id="trainer30down"></div>
+</div>
+<div style="float: left; width: 34px; height: 40px; text-align: center; vertical-align: middle; margin-bottom: 10px; margin-top: 10px;">
+<span class="RadioButtonUserImages"><input id="RdButtonUserImage31" type="radio" name="ctl00$ContentPlaceHolder$RdButtonUserImage1" value="RdButtonUserImage31" /></span>
+<div id="trainer31down"></div>
+</div>
+<div style="float: left; width: 34px; height: 40px; text-align: center; vertical-align: middle; margin-bottom: 10px; margin-top: 10px;">
+<span class="RadioButtonUserImages"><input id="RdButtonUserImage32" type="radio" name="ctl00$ContentPlaceHolder$RdButtonUserImage1" value="RdButtonUserImage32" /></span>
+<div id="trainer32down"></div>
+</div>
+<div style="float: left; width: 34px; height: 40px; text-align: center; vertical-align: middle; margin-bottom: 10px; margin-top: 10px;">
+<span class="RadioButtonUserImages"><input id="RdButtonUserImage33" type="radio" name="ctl00$ContentPlaceHolder$RdButtonUserImage1" value="RdButtonUserImage33" /></span>
+<div id="trainer33down"></div>
+</div>
+<div style="float: left; width: 34px; height: 40px; text-align: center; vertical-align: middle; margin-bottom: 10px; margin-top: 10px;">
+<span class="RadioButtonUserImages"><input id="RdButtonUserImage34" type="radio" name="ctl00$ContentPlaceHolder$RdButtonUserImage1" value="RdButtonUserImage34" /></span>
+<div id="trainer34down"></div>
+</div>
+<div style="float: left; width: 34px; height: 40px; text-align: center; vertical-align: middle; margin-bottom: 10px; margin-top: 10px;">
+<span class="RadioButtonUserImages"><input id="RdButtonUserImage35" type="radio" name="ctl00$ContentPlaceHolder$RdButtonUserImage1" value="RdButtonUserImage35" /></span>
+<div id="trainer35down"></div>
+</div>
+<div style="float: left; width: 34px; height: 40px; text-align: center; vertical-align: middle; margin-bottom: 10px; margin-top: 10px;">
+<span class="RadioButtonUserImages"><input id="RdButtonUserImage36" type="radio" name="ctl00$ContentPlaceHolder$RdButtonUserImage1" value="RdButtonUserImage36" /></span>
+<div id="trainer36down"></div>
+</div>
+<div style="float: left; width: 34px; height: 40px; text-align: center; vertical-align: middle; margin-bottom: 10px; margin-top: 10px;">
+<span class="RadioButtonUserImages"><input id="RdButtonUserImage37" type="radio" name="ctl00$ContentPlaceHolder$RdButtonUserImage1" value="RdButtonUserImage37" /></span>
+<div id="trainer37down"></div>
+</div>
+<div style="float: left; width: 34px; height: 40px; text-align: center; vertical-align: middle; margin-bottom: 10px; margin-top: 10px;">
+<span class="RadioButtonUserImages"><input id="RdButtonUserImage38" type="radio" name="ctl00$ContentPlaceHolder$RdButtonUserImage1" value="RdButtonUserImage38" /></span>
+<div id="trainer38down"></div>
+</div>
+</div>
+<div class="StarterMonster">
+<div class="SelecTrainerTitle">
+Select Your Starting Pokémon
+</div>
+<div style="float: left; text-align: center; vertical-align: middle; margin: 10px;">
+<span class="RdButtonStarterMonster"><input id="RdButtonStarterMonster1" type="radio" name="ctl00$ContentPlaceHolder$RdButtonStarterMonster1" value="RdButtonStarterMonster1" /><label for="RdButtonStarterMonster1">Bulbasaur</label></span>
+<div class="startermonster">
+<a target="_blank" title="ID: 1 Bulbasaur - Type: grass" href="Bulbasaur-Pokemon-Pokedex-1"><div class="MonsterImageSize6560" style="background:url(//static.pokemonpets.com/images/monsters-images-60-60/1-Bulbasaur.png) no-repeat center center;"></div></a>
+</div>
+</div>
+<div style="float: left; text-align: center; vertical-align: middle; margin: 10px;">
+<span class="RdButtonStarterMonster"><input id="RdButtonStarterMonster4" type="radio" name="ctl00$ContentPlaceHolder$RdButtonStarterMonster1" value="RdButtonStarterMonster4" /><label for="RdButtonStarterMonster4">Charmander</label></span>
+<div class="startermonster">
+<a target="_blank" title="ID: 4 Charmander - Type: fire" href="Charmander-Pokemon-Pokedex-4"><div class="MonsterImageSize6560" style="background:url(//static.pokemonpets.com/images/monsters-images-60-60/4-Charmander.png) no-repeat center center;"></div></a>
+</div>
+</div>
+<div style="float: left; text-align: center; vertical-align: middle; margin: 10px;">
+<span class="RdButtonStarterMonster"><input id="RdButtonStarterMonster7" type="radio" name="ctl00$ContentPlaceHolder$RdButtonStarterMonster1" value="RdButtonStarterMonster7" /><label for="RdButtonStarterMonster7">Squirtle</label></span>
+<div class="startermonster">
+<a target="_blank" title="ID: 7 Squirtle - Type: water" href="Squirtle-Pokemon-Pokedex-7"><div class="MonsterImageSize6560" style="background:url(//static.pokemonpets.com/images/monsters-images-60-60/7-Squirtle.png) no-repeat center center;"></div></a>
+</div>
+</div>
+<div style="float: left; text-align: center; vertical-align: middle; margin: 10px;">
+<span class="RdButtonStarterMonster"><input id="RdButtonStarterMonster152" type="radio" name="ctl00$ContentPlaceHolder$RdButtonStarterMonster1" value="RdButtonStarterMonster152" /><label for="RdButtonStarterMonster152">Chikorita</label></span>
+<div class="startermonster">
+<a target="_blank" title="ID: 152 Chikorita - Type: grass" href="Chikorita-Pokemon-Pokedex-152"><div class="MonsterImageSize6560" style="background:url(//static.pokemonpets.com/images/monsters-images-60-60/152-Chikorita.png) no-repeat center center;"></div></a>
+</div>
+</div>
+<div style="float: left; text-align: center; vertical-align: middle; margin: 10px;">
+<span class="RdButtonStarterMonster"><input id="RdButtonStarterMonster155" type="radio" name="ctl00$ContentPlaceHolder$RdButtonStarterMonster1" value="RdButtonStarterMonster155" /><label for="RdButtonStarterMonster155">Cyndaquil</label></span>
+<div class="startermonster">
+<a target="_blank" title="ID: 155 Cyndaquil - Type: fire" href="Cyndaquil-Pokemon-Pokedex-155"><div class="MonsterImageSize6560" style="background:url(//static.pokemonpets.com/images/monsters-images-60-60/155-Cyndaquil.png) no-repeat center center;"></div></a>
+</div>
+</div>
+<div style="float: left; text-align: center; vertical-align: middle; margin: 10px;">
+<span class="RdButtonStarterMonster"><input id="RdButtonStarterMonster158" type="radio" name="ctl00$ContentPlaceHolder$RdButtonStarterMonster1" value="RdButtonStarterMonster158" /><label for="RdButtonStarterMonster158">Totodile</label></span>
+<div class="startermonster">
+<a target="_blank" title="ID: 158 Totodile - Type: water" href="Totodile-Pokemon-Pokedex-158"><div class="MonsterImageSize6560" style="background:url(//static.pokemonpets.com/images/monsters-images-60-60/158-Totodile.png) no-repeat center center;"></div></a>
+</div>
+</div>
+<div style="float: left; text-align: center; vertical-align: middle; margin: 10px;">
+<span class="RdButtonStarterMonster"><input id="RdButtonStarterMonster252" type="radio" name="ctl00$ContentPlaceHolder$RdButtonStarterMonster1" value="RdButtonStarterMonster252" /><label for="RdButtonStarterMonster252">Treecko</label></span>
+<div class="startermonster">
+<a target="_blank" title="ID: 252 Treecko - Type: grass" href="Treecko-Pokemon-Pokedex-252"><div class="MonsterImageSize6560" style="background:url(//static.pokemonpets.com/images/monsters-images-60-60/252-Treecko.png) no-repeat center center;"></div></a>
+</div>
+</div>
+<div style="float: left; text-align: center; vertical-align: middle; margin: 10px;">
+<span class="RdButtonStarterMonster"><input id="RdButtonStarterMonster255" type="radio" name="ctl00$ContentPlaceHolder$RdButtonStarterMonster1" value="RdButtonStarterMonster255" /><label for="RdButtonStarterMonster255">Torchic</label></span>
+<div class="startermonster">
+<a target="_blank" title="ID: 255 Torchic - Type: fire" href="Torchic-Pokemon-Pokedex-255"><div class="MonsterImageSize6560" style="background:url(//static.pokemonpets.com/images/monsters-images-60-60/255-Torchic.png) no-repeat center center;"></div></a>
+</div>
+</div>
+<div style="float: left; text-align: center; vertical-align: middle; margin: 10px;">
+<span class="RdButtonStarterMonster"><input id="RdButtonStarterMonster258" type="radio" name="ctl00$ContentPlaceHolder$RdButtonStarterMonster1" value="RdButtonStarterMonster258" /><label for="RdButtonStarterMonster258">Mudkip</label></span>
+<div class="startermonster">
+<a target="_blank" title="ID: 258 Mudkip - Type: water" href="Mudkip-Pokemon-Pokedex-258"><div class="MonsterImageSize6560" style="background:url(//static.pokemonpets.com/images/monsters-images-60-60/258-Mudkip.png) no-repeat center center;"></div></a>
+</div>
+</div>
+<div style="float: left; text-align: center; vertical-align: middle; margin: 10px;">
+<span class="RdButtonStarterMonster"><input id="RdButtonStarterMonster387" type="radio" name="ctl00$ContentPlaceHolder$RdButtonStarterMonster1" value="RdButtonStarterMonster387" /><label for="RdButtonStarterMonster387">Turtwig</label></span>
+<div class="startermonster">
+<a target="_blank" title="ID: 387 Turtwig - Type: grass" href="Turtwig-Pokemon-Pokedex-387"><div class="MonsterImageSize6560" style="background:url(//static.pokemonpets.com/images/monsters-images-60-60/387-Turtwig.png) no-repeat center center;"></div></a>
+</div>
+</div>
+<div style="float: left; text-align: center; vertical-align: middle; margin: 10px;">
+<span class="RdButtonStarterMonster"><input id="RdButtonStarterMonster390" type="radio" name="ctl00$ContentPlaceHolder$RdButtonStarterMonster1" value="RdButtonStarterMonster390" /><label for="RdButtonStarterMonster390">Chimchar</label></span>
+<div class="startermonster">
+<a target="_blank" title="ID: 390 Chimchar - Type: fire" href="Chimchar-Pokemon-Pokedex-390"><div class="MonsterImageSize6560" style="background:url(//static.pokemonpets.com/images/monsters-images-60-60/390-Chimchar.png) no-repeat center center;"></div></a>
+</div>
+</div>
+<div style="float: left; text-align: center; vertical-align: middle; margin: 10px;">
+<span class="RdButtonStarterMonster"><input id="RdButtonStarterMonster393" type="radio" name="ctl00$ContentPlaceHolder$RdButtonStarterMonster1" value="RdButtonStarterMonster393" /><label for="RdButtonStarterMonster393">Piplup</label></span>
+<div class="startermonster">
+<a target="_blank" title="ID: 393 Piplup - Type: water" href="Piplup-Pokemon-Pokedex-393"><div class="MonsterImageSize6560" style="background:url(//static.pokemonpets.com/images/monsters-images-60-60/393-Piplup.png) no-repeat center center;"></div></a>
+</div>
+</div>
+<div style="float: left; text-align: center; vertical-align: middle; margin: 10px;">
+<span class="RdButtonStarterMonster"><input id="RdButtonStarterMonster495" type="radio" name="ctl00$ContentPlaceHolder$RdButtonStarterMonster1" value="RdButtonStarterMonster495" /><label for="RdButtonStarterMonster495">Snivy</label></span>
+<div class="startermonster">
+<a target="_blank" title="ID: 495 Snivy - Type: grass" href="Snivy-Pokemon-Pokedex-495"><div class="MonsterImageSize6560" style="background:url(//static.pokemonpets.com/images/monsters-images-60-60/495-Snivy.png) no-repeat center center;"></div></a>
+</div>
+</div>
+<div style="float: left; text-align: center; vertical-align: middle; margin: 10px;">
+<span class="RdButtonStarterMonster"><input id="RdButtonStarterMonster498" type="radio" name="ctl00$ContentPlaceHolder$RdButtonStarterMonster1" value="RdButtonStarterMonster498" /><label for="RdButtonStarterMonster498">Tepig</label></span>
+<div class="startermonster">
+<a target="_blank" title="ID: 498 Tepig - Type: fire" href="Tepig-Pokemon-Pokedex-498"><div class="MonsterImageSize6560" style="background:url(//static.pokemonpets.com/images/monsters-images-60-60/498-Tepig.png) no-repeat center center;"></div></a>
+</div>
+</div>
+<div style="float: left; text-align: center; vertical-align: middle; margin: 10px;">
+<span class="RdButtonStarterMonster"><input id="RdButtonStarterMonster501" type="radio" name="ctl00$ContentPlaceHolder$RdButtonStarterMonster1" value="RdButtonStarterMonster501" /><label for="RdButtonStarterMonster501">Oshawott</label></span>
+<div class="startermonster">
+<a target="_blank" title="ID: 501 Oshawott - Type: water" href="Oshawott-Pokemon-Pokedex-501"><div class="MonsterImageSize6560" style="background:url(//static.pokemonpets.com/images/monsters-images-60-60/501-Oshawott.png) no-repeat center center;"></div></a>
+</div>
+</div>
+<div style="float: left; text-align: center; vertical-align: middle; margin: 10px;">
+<span class="RdButtonStarterMonster"><input id="RdButtonStarterMonster650" type="radio" name="ctl00$ContentPlaceHolder$RdButtonStarterMonster1" value="RdButtonStarterMonster650" /><label for="RdButtonStarterMonster650">Chespin</label></span>
+<div class="startermonster">
+<a target="_blank" title="ID: 650 Chespin - Type: grass" href="Chespin-Pokemon-Pokedex-650"><div class="MonsterImageSize6560" style="background:url(//static.pokemonpets.com/images/monsters-images-60-60/650-Chespin.png) no-repeat center center;"></div></a>
+</div>
+</div>
+<div style="float: left; text-align: center; vertical-align: middle; margin: 10px;">
+<span class="RdButtonStarterMonster"><input id="RdButtonStarterMonster653" type="radio" name="ctl00$ContentPlaceHolder$RdButtonStarterMonster1" value="RdButtonStarterMonster653" /><label for="RdButtonStarterMonster653">Fennekin</label></span>
+<div class="startermonster">
+<a target="_blank" title="ID: 653 Fennekin - Type: fire" href="Fennekin-Pokemon-Pokedex-653"><div class="MonsterImageSize6560" style="background:url(//static.pokemonpets.com/images/monsters-images-60-60/653-Fennekin.png) no-repeat center center;"></div></a>
+</div>
+</div>
+<div style="float: left; text-align: center; vertical-align: middle; margin: 10px;">
+<span class="RdButtonStarterMonster"><input id="RdButtonStarterMonster656" type="radio" name="ctl00$ContentPlaceHolder$RdButtonStarterMonster1" value="RdButtonStarterMonster656" /><label for="RdButtonStarterMonster656">Froakie</label></span>
+<div class="startermonster">
+<a target="_blank" title="ID: 656 Froakie - Type: water" href="Froakie-Pokemon-Pokedex-656"><div class="MonsterImageSize6560" style="background:url(//static.pokemonpets.com/images/monsters-images-60-60/656-Froakie.png) no-repeat center center;"></div></a>
+</div>
+</div>
+<div style="float: left; text-align: center; vertical-align: middle; margin: 10px;">
+<span class="RdButtonStarterMonster"><input id="RdButtonStarterMonster4006" type="radio" name="ctl00$ContentPlaceHolder$RdButtonStarterMonster1" value="RdButtonStarterMonster4006" /><label for="RdButtonStarterMonster4006">Charizard-Bony</label></span>
+<div class="startermonster">
+<a target="_blank" title="ID: 4006 Charizard-Bony - Type: fire" href="Charizard-Bony-Pokemon-Pokedex-4006"><div class="MonsterImageSize6560" style="background:url(//static.pokemonpets.com/images/monsters-images-60-60/4006-Charizard-Bony.png) no-repeat center center;"></div></a>
+</div>
+</div>
+</div>
+<div class="UsernamePanel">
+<table width="100%">
+<tr>
+<td class="UsernameText" style="width: 50%">
+Terms And Conditions
+</td>
+</tr>
+<tr>
+<td>
+<a class="linkMsg4" href="PrivacyPolicy.aspx" target="_blank">Click to read Terms and Conditions!</a>
+</td>
+</tr>
+<tr>
+<td>
+I have read, and agree to abide by the pokemonpets.com rules.
+<input id="ctl00_ContentPlaceHolder_chkBoxTerms" type="checkbox" name="ctl00$ContentPlaceHolder$chkBoxTerms" checked="checked" />
+</td>
+</tr>
+<tr>
+<td colspan="3" class="RegisterButton">
+<input type="submit" name="ctl00$ContentPlaceHolder$btnRegister" value="" id="btnRegister" class="CompleteRegister button_transition_0_25_sec" />
+<div id="ctl00_ContentPlaceHolder_UpdateProgress1" style="display:none;">
+<img id="ctl00_ContentPlaceHolder_imgAjaxLoader" src="//static.pokemonpets.com/images/backgrounds/Loading.gif" />
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div id="BottomBarMasterPage" class="BottomBarMasterPage" style=" top:1734px; ">
+<div style="color: #FFFFFF; position: absolute; left: 136px; top: 2px; height: 64px; overflow: hidden; font-size: 11px; line-height: 16px; width: 728px; text-align: center;">
+© Copyright Since 2014 9th July - Pokemon Pets | All rights reserved | <a class="LinkContact"
+href="Contact">Contact - About</a><br />
+<a target="_blank" rel="nofollow" class="LinkContact" href="http://www.pokemon.com">Pokémon</a> and respective character names/images are trademarks and copyrights of their respective owners.
+<br />
+We are not affiliated with  <a target="_blank" rel="nofollow" class="LinkContact" href="http://www.nintendo.com">Nintendo</a>, <a target="_blank" rel="nofollow" class="LinkContact" href="http://www.creatures.co.jp">The Pokémon Company Creatures Inc.</a> or <a target="_blank" rel="nofollow" class="LinkContact" href="http://www.gamefreak.co.jp">Game Freak</a>. 
+<br />
+<span style="color: #E67300">Version 2.2.4</span> - Last Update 28 January 2016 | <a href="PrivacyPolicy.aspx" class="linkMsg3">
+<span id="ctl00_lblPrivacyPolicy">Privacy Policy and TOS</span></a> | <a rel="nofollow"
+href="http://www.alexa.com/siteinfo/http://www.pokemonpets.com" class="linkMsg3"
+target="_blank">Alexa Rank</a>
+</div>
+<div style="position: absolute; left: 136px; top: 72px; width: 728px; height: 90px; overflow: hidden;">
+<SCRIPT language="Javascript">
+var cpmstar_rnd=Math.round(Math.random()*999999);
+var cpmstar_pid=24463;
+document.writeln("<SCR"+"IPT language='Javascript' src='//server.cpmstar.com/view.aspx?poolid="+cpmstar_pid+"&script=1&rnd="+cpmstar_rnd+"'></SCR"+"IPT>");
+</SCRIPT>
+</div>
+<div style="position: absolute; left: 2px; top: 2px; font-size: 11px; line-height: 14px; width: 132px; text-align: center; color: #D3FFCC;">
+<a class="linkMsg2" title="One of the few browser mmorpg game that is suitable for all age children" href="ForParents.aspx">For Parents</a><br />
+<a class="linkMsg2" title="Complete Pokémon List" href="PokemonList">Complete Pokémon List</a><br />
+<a class="linkMsg2" title="All Pokémon Games Maps" href="Maps">Game Maps</a>
+<br />
+<a class="linkMsg2" title="Pokémon Pokédex" href="Pokedex">Pokédex</a><br />
+<a class="linkMsg2" title="Pokémon Avatars" href="Avatars">Avatars</a><br />
+<a class="linkMsg2" title="Pokémon Type Chart" href="Type-Chart">Type Chart</a><br />
+<a class="LinkContact" title="Pokémon Type Chart" href="How-To-Play">How To Play Game</a>
+<a class="linkMsg2" href="https://plus.google.com/113372404593294986514" rel="publisher">Google+</a>
+</div>
+<div style="position: absolute; left: 866px; top: 2px; font-size: 11px; line-height: 14px; width: 132px; text-align: center; color: #D3FFCC;">
+<a class="linkMsg2" title="Pokémon Forum" href="Forum">Forum Community</a><br />
+<a class="linkMsg2" title="Play Pokémon Online" href="Register">Register Free</a><br />
+<a class="linkMsg2" title="Pokémon Videos" href="Videos">Game Videos</a>
+<br />
+<a class="linkMsg2" title="Pokémon Oyun Forumu" href="http://forumturkce.pokemonpets.com">Resmi Türkçe Forum</a>
+<br />
+<a class="linkMsg2" href="http://forum.pokemonpets.com">Official PokemonPets Forum</a>
+<br />
+<a class="LinkContact" title="Awesome Artists & Contributors List Of Pokemon Pets" href="Credits">Credits</a>
+</div>
+</div>
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="799CC77D" />
+</div>
+<script type="text/javascript">
+//<![CDATA[
+(function() {var fn = function() {$get("ctl00_ContentPlaceHolder_SC1_HiddenField").value = '';Sys.Application.remove_init(fn);};Sys.Application.add_init(fn);})();//]]>
+</script>
+</form>
+<script type="text/javascript">
+callMenusToolTip();
+callContentToolTip();
+</script>
+<script type="text/javascript">
+_qevents.push({ qacct: "p-50jqbHp0pDD7o" });
+</script>
+<noscript>
+<div style="display: none;">
+<img src="//pixel.quantserve.com/pixel/p-50jqbHp0pDD7o.gif" height="1" width="1" alt="Quantcast" />
+</div>
+</noscript>
+<script type="text/javascript">
+clockTick(44852);
+isIframe();
+</script>
+<script type="text/javascript">
+$(window).load(function () {
+$('#MainRight').ttwMusicPlayer(myPlaylist, {
+autoPlay: false,
+jPlayer: {
+swfPath: '//static.pokemonpets.com/musicplayer/plugin/jquery-jplayer' //You need to override the default swf path any time the directory structure changes
+}
+});
+});
+</script>
+</body>
+</html>

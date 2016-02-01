@@ -1,0 +1,664 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Zone Concours - Actualit&eacute; du jeu concours</title>
+<link href="css/zoneconcours.css" rel="stylesheet" type="text/css" />
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+<link rel="shortcut icon" type="image/png" href="/favicon.png" />
+<link href="http://www.zone-concours.com/rss/flux.xml" title="Derniers jeux concours gratuits" type="application/rss+xml" rel="alternate" />
+<script language="javascript" type="text/javascript" src="/fonctions/javascript/search.js"></script>
+<!--[if lt IE 7]>
+<link href="/css/lt-ie7.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<script type="text/javascript" language="javascript">
+	
+	window.onload = function () {
+		document.getElementById("popup").style.display = 'block';
+		document.getElementById("fondCache").style.display = 'block';
+	} 
+	
+	function popupChampsClear() {
+		var cible = document.getElementById("popupEmail");
+		cible.value = '';
+		cible.style.color = '#006600';
+	}
+	function popupClose() {
+		document.getElementById("fondCache").style.display = 'none';
+		document.getElementById("popup").style.display = 'none';
+	}
+	
+</script>
+
+<script language="JavaScript" type="text/javascript">
+function VerifForm (formulaire){
+	
+	var VerifMail = ControlChamp(formulaire.elements['email'],'email');
+	if ((!VerifMail)) {
+	alert ('Vous n\'avez pas rempli correctement le formulaire');
+	return false;
+	}
+	else {
+	formulaire.submit();
+	}
+}
+
+function ControlChamp(obj,typ){
+switch (typ){
+case 'email':
+var Regex = new RegExp('^[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([\.\-]?[a-zA-Z0-9]+)*)\.([A-Za-z]{2,})$');
+break;
+case 'date':
+var Regex = new RegExp('^(([1-9]|0[1-9]|[1-2][0-9]|3[0-1])\/(0[1-9]|1[0-2])\/([0-9][0-9]|[0-9][0-9][0-9][0-9]))?$');
+break;
+}
+var Result = Regex.test(obj.value);
+return Result;
+}
+</script>
+<!-- Begin Cookie Consent plugin by Silktide - http://silktide.com/cookieconsent -->
+<script type="text/javascript">
+    window.cookieconsent_options = {"message":"Notre site utilise des cookies pour vous apporter des contenus et services de qualité.","dismiss":"J'ai compris","learnMore":"More info","link":null,"theme":"light-floating"};
+</script>
+
+<script type="text/javascript" src="/fonctions/javascript/cookieconsent.js"></script>
+<!-- End Cookie Consent plugin -->
+</head>
+<body>
+<div id="general">
+	<div id="haut">
+	<a href="/"><img src="/images/zoneconcours.jpg" alt="Zone Concours - Jeux concours gratuits" name="img" width="410" height="90" border="0" id="img"/></a>
+  <div id="haut-droit"><img src="/images/interface/euro.gif" alt="Concours" width="11" height="13" align="top" />&nbsp;154.633 &euro; de lots !</div>
+<!--<div id="recherche">
+    <input name="mot" type="text" id="mot" value="Recherche..." onclick="this.value=''" maxlength="35" />
+    &nbsp;&nbsp;<a href="#"><img src="/images/interface/search.gif" alt="Rechercher des jeux concours" width="16" height="16" border="0" align="absbottom" onclick="javascript:rechercher();" /></a>
+</div>-->
+</div>    
+	<div id="centre">
+	<div id="centre-gauche">
+			<div class="menu">
+			 <ul class="liensMenu">
+			  <li class="titreMenu">Rubriques</li>
+              <li class="standard"><a href="/jeux-concours/favoris.html">Meilleurs jeux concours</a></li><li class="standard">
+              <a href="/jeux-concours/ce-jour.html">Nouveaux jeux concours</a></li><li class="standard">
+              <a href="/jeux-concours/populaires.html">Les plus populaires</a></li><li class="standard">
+              <a href="/jeux-concours/lots.html">Les plus beaux lots</a></li><li class="standard">
+              <a href="/jeux-concours/fin.html">Bientôt terminés</a></li><li class="standardDernier">
+              <a href="/jeux-concours/quotidiens.html">Jeux quotidiens</a></li>
+			  </ul>
+              <div class="basMenu"></div>
+			</div>
+			<div class="menu">
+				<ul class="liensMenu">
+					<li class="titreMenu">Class&eacute;s par lots</li>
+			<li class="standard"> 
+<a href="/concours/argent.html">Argent et ch&egrave;ques</a></li><li class="standard"> 
+<a href="/concours/bijoux.html">Bijoux</a></li><li class="standard"> 
+<a href="/concours/bons-achat.html">Bons d'achat</a></li><li class="standard"> 
+<a href="/concours/cuisine-gastronomie.html">Cuisine et gastronomie</a></li><li class="standard"> 
+<a href="/concours/cd-dvd.html">DVD, Blu-ray, VOD, CD</a></li><li class="standard"> 
+<a href="/concours/decoration-maison.html">D&eacute;coration et maison</a></li><li class="standard"> 
+<a href="/concours/electromenager.html">Electrom&eacute;nager</a></li><li class="standard"> 
+<a href="/concours/informatique.html">Informatique</a></li><li class="standard"> 
+<a href="/concours/invitations.html">Invitations et loisirs</a></li><li class="standard"> 
+<a href="/concours/consoles-jeux.html">Jeux, jouets et consoles</a></li><li class="standard"> 
+<a href="/concours/livres-bd.html">Livres, BD et magazines</a></li><li class="standard"> 
+<a href="/concours/divers.html">Lots divers</a></li><li class="standard"> 
+<a href="/concours/sport.html">Mat&eacute;riels de sport</a></li><li class="standard"> 
+<a href="/concours/hifi-mp3.html">Mat&eacute;riels hifi et MP3</a></li><li class="standard"> 
+<a href="/concours/vetements.html">Mode et v&ecirc;tements</a></li><li class="standard"> 
+<a href="/concours/apn-photo-cameras.html">Photo et vid&eacute;o</a></li><li class="standard"> 
+<a href="/concours/voyages.html">S&eacute;jours et voyages</a></li><li class="standard"> 
+<a href="/concours/beaute-soins.html">Soins et beaut&eacute;</a></li><li class="standard"> 
+<a href="/concours/telephones.html">T&eacute;l&eacute;phones</a></li><li class="standard"> 
+<a href="/concours/high-tech.html">TV et High-Tech</a></li><li class="standardDernier">
+<a href="/concours/voitures.html">Voitures et v&eacute;hicules</a></li></ul><div class="basMenu"></div>
+
+			</div>
+              			
+			<div class="menu">
+			 <ul class="liensMenu">
+			  <li class="titreMenu">Par types</li>
+              <li class="standard"><a href="/concours-gratuits/tirages.html">Tirages au sort</a></li><li class="standard">
+			  <a href="/concours-gratuits/instants-gagnants.html">Instants gagnants</a></li><li class="standard">
+              <a href="/concours-gratuits/quiz.html">Quiz</a></li><li class="standard">
+              <a href="/concours-gratuits/creatifs.html">Concours cr&eacute;atifs</a></li><li class="standard">
+              <a href="/concours-gratuits/defis-points.html">Défis ou jeux à points</a></li><li class="standard">
+              <a href="/concours-gratuits/facebook.html">Concours Facebook</a></li><li class="standardDernier">
+			  <a href="/concours-gratuits/autres.html">Autres types</a></li>
+			  </ul>
+              <div class="basMenu"></div>
+			</div>
+            <div class="menu">
+			 <ul class="liensMenu">
+			  <li class="titreMenu">Par pays</li>
+              <li class="standard"><a href="/concours/france/">Concours France</a></li><li class="standard">
+			  <a href="/concours/belgique/">Concours Belgique</a></li><li class="standard">
+              <a href="/concours/luxembourg/">Concours Luxembourg</a></li><li class="standardDernier">
+              <a href="/concours/suisse/">Concours Suisse</a></li>
+			  </ul>
+              <div class="basMenu"></div>
+			</div>
+            		
+                			<div class="menu">
+				<ul class="liensMenu">
+					<li class="titreMenu">A d&eacute;couvrir</li>
+ 					<li class="standard">
+                    <a href="http://www.benefsnet.com/" target="_blank" title="Benefsnet.com" rel="nofollow">Jeux et bons plans</a></li><li class="standard">
+                    <a href="http://www.enviedegains.com/" target="_blank" title="Enviedegains.com" rel="nofollow">Astuces pour gagner</a></li>
+<li class="standardDernier">
+					<a href="http://www.alertepromo.net/" target="_blank" title="Alertepromo.net" rel="nofollow">Bons plans par e-mail</a>
+</li>
+        <div class="basMenu"></div>
+			</div>
+                       
+       <div id="rss">
+        RSS <br />
+        <a href="/rss/flux-favoris.xml" target="_blank"><img src="/images/interface/bigrss.jpg" alt="RSS" width="64" height="64" border="0" /></a>
+       </div>
+		</div> 
+		<div id="centre-droit">
+         <div id="suivez"> <img src="/images/interface/suivez-nous.jpg" width="115" height="30" alt="Suivez Zone Concours" /><br /><a href="http://www.facebook.com/Zone.Concours" target="_blank"><img src="/images/interface/social/facebook.png" alt="Fan Page Facebook" width="32" height="32" border="0" /></a>&nbsp;&nbsp;&nbsp;<a href="http://twitter.com/zoneconcours" target="_blank"><img src="/images/interface/social/twitter.png" alt="Page Twitter" width="32" height="32" border="0" /></a>&nbsp;&nbsp;&nbsp;<a href="/rss/flux-favoris.xml" target="_blank"><img src="/images/interface/social/rss.png" alt="Flux RSS des meilleurs jeux concours" width="32" height="32" border="0" /></a><div id="facebook"><iframe src="http://www.facebook.com/plugins/like.php?app_id=124564827623809&amp;href=http%3A%2F%2Fwww.facebook.com%2Fpages%2FZone-Concours-Atoowin%2F179368122092300&amp;send=false&amp;layout=button_count&amp;width=450&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font=arial&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:111px; height:21px;" allowTransparency="true"></iframe></div></div>
+			            <div class="menu">
+				<ul class="liensMenu">
+					<li class="titreMenu">Newsletter</li>
+					<li class="standardNL">
+					  <div class="infosNL">Les meilleurs jeux concours par e-mail <strong>(service gratuit)</strong></div>
+                      <form NAME='AbonnementDOLIST' METHOD='post' action='/newsletter/_inscription.php' accept-charset='UTF-8' onsubmit="VerifForm(this); return false;" id="espaceNL">Votre e-mail :<br />
+                         <input type="text" id="email" name="email" size="22" maxlength="100" />
+					     <div style="height:10px;"></div>
+					     <input type='submit' class="boutonM" value="Je m'inscris" />
+                     </form>
+			  </li></ul>
+			  <div class="basMenu"></div>
+				</div>
+               <a href="/proposer-concours.php" class="btProposition" title="Proposer un concours"></a>
+			<a href="/forum/" class="btForum" title="Rejoignez-nous sur le forum"></a>
+			  <div class="menu">
+				<ul class="liensMenu">
+				  <li class="titreMenu">Zone Concours</li>
+				  <li class="standard"><a href="/inscription.php">Inscription</a></li><li class="standard">
+                  <a href="/ident.php">S'identifier</a></li><li class="standard">
+                  <a href="/forum/">Forum du concouriste</a></li><li class="standard">
+                  <a href="/forum/temoignages-f26.html">T&eacute;moignages</a></li><li class="standard">
+                  <a href="/newsletter/inscription.php">Newsletter</a></li><li class="standard">
+                  <a href="http://www.facebook.com/Zone.Concours" target="_blank">Fan Page Facebook</a></li><li class="standardDernier">
+                  <a href="http://twitter.com/#!/zoneconcours" target="_blank">Page Twitter</a></li>
+			  	</li></ul>
+			  	<div class="basMenu"></div>
+           </div>
+           <div class="menu">
+                <ul class="liensMenu">
+                  <li class="titreMenu">Organisateurs</li>
+				 <li class="standard">
+                  <a href="/proposer-concours.php" style="word-spacing: -1.3px;">Proposer un jeu concours</a></li><li class="standard">
+                  <a href="http://www.reglementdejeu.com/" target="_blank" title="Notre site Reglementdejeu.com à découvrir !" rel="nofollow">Dépôt de règlements</a></li><li class="standardDernier">
+           		  <a href="/nous-contacter.html" target="_blank" rel="nofollow">Nous contacter</a></li></ul>
+               <div class="basMenu"></div>
+           </div>     
+          
+                           <div class="menu">
+				<ul class="liensMenu">
+				<li class="titreMenu">Sociétés</li>
+			 <li class="standard"><a href="/jeux-concours/societe-1695.html">Vieux Papes</a></li><li class="standard"><a href="/jeux-concours/societe-4853.html">BaissonsLesPrix</a></li><li class="standard"><a href="/jeux-concours/societe-823.html">La Dinde</a></li><li class="standard"><a href="/jeux-concours/societe-1469.html">Costa Croisières</a></li><li class="standard"><a href="/jeux-concours/societe-123.html">Nivea</a></li><li class="standard"><a href="/jeux-concours/societe-4789.html">Sans Complexe</a></li><li class="standardDernier">
+             	  <a href="/jeux-concours/societes.html">Autres soci&eacute;t&eacute;s</a></li>
+			  </ul>
+			  <div class="basMenu"></div>
+		  </div>
+                        <!--<div class="menu">
+				<ul class="liensMenu">
+				<li class="titreMenu">Recherches</li>
+			 			  </ul>
+			  <div class="basMenu"></div>
+		  </div>-->
+                      <div class="menu">
+              <ul class="liensMenu">
+                  <li class="titreMenu">A propos</li>
+                  <li class="standard"><a href="/zone-concours.html">Zone Concours</a></li><li class="standard">
+                  <a href="/promotion.html">Faire un lien</a></li><li class="standard">
+                  <a href="/jeux-concours/dossiers.html">Nos dossiers</a></li><li class="standard">
+                  <a href="/jeux-concours/archives.html">Nos archives</a></li><li class="standardDernier">
+                  <a href="/jeux-concours/breves.html">Nos br&egrave;ves</a></li>
+              </ul>
+              <div class="basMenu"></div>
+              </div>
+			</div>		<div id="centre-milieu">
+			<div class="contenu1"><div id="contenu1gauche"></div><div id="contenu1droite"></div>Zone Concours - Actualit&eacute; des jeux concours</div>
+			<div class="contenu2">
+				<div id="ligneFil">
+					<strong>Vous &ecirc;tes ici :</strong> <a href="/">Zone Concours</a>	-	<a href="/inscription.php">Inscription</a></div>
+<div class="titre">
+					<img src="images/puce.jpg" width="10" height="10" /> S'inscrire sur la zone</div>
+			  <div class="textContenu">
+				<div style="text-align:center;">
+				  <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="100%" height="80" title="Jeux concours">
+                    <param name="movie" value="images/interface/zoneconc.swf" />
+                    <param name="quality" value="high" />
+                    <embed src="images/interface/zoneconc.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="100%" height="80"></embed>
+			      </object>
+			    </div>
+                <form id="inscriptionM" name="inscriptionM" method="post" action="_inscription.php">
+                  <table width="510" border="0" align="center" cellpadding="0" cellspacing="0" id="inscription">
+                    <tr id="inscaccroche">
+                      <td colspan="3"><img src="images/puce2.gif" alt="Inscription" width="10" height="10" /> Inscrivez vous gratuitement pour profiter de nombreux avantages !</td>
+                    </tr>
+                     <tr id="inscaccroche2">
+                       <td colspan="3"><p><img src="images/interface/fleche.gif" alt="Inscription" width="12" height="11" /> Suivi et statistiques de vos participations aux jeux-concours<br />
+                         <img src="images/interface/fleche.gif" alt="Inscription" width="12" height="11" /> Vous pourrez participer au <a href="/forum/" target="_blank" style="text-decoration:underline;">forum de discussions</a><br />
+                         <img src="images/interface/fleche.gif" alt="Inscription" width="12" height="11" /> Vous recevrez les jeux-concours par e-mail avec la newsletter<br />
+                       </p>
+                                              </td>
+                     </tr>
+                    <tr class="headInsc">
+                      <td colspan="3">Choisissez les informations sur votre compte</td>
+                    </tr>
+                    <tr class="spacer">
+                      <td width="225"></td>
+                      <td></td>
+                      <td width="259"></td>
+                    </tr>
+                    <tr class="insc">
+                      <td class="inscGauche">Votre pseudo :</td>
+                      <td width="26" rowspan="10">&nbsp;</td>
+                      <td><input name="pseudo" type="text" size="40" maxlength="25" /></td>
+                    </tr>
+                    <tr class="spacer">
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                    </tr>
+                    <tr class="insc">
+                      <td class="inscGauche">Mot de passe :</td>
+                      <td><label>
+                        <input name="mdp" type="password" size="40" maxlength="40" />
+                      </label></td>
+                    </tr>
+                    <tr class="spacer">
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                    </tr>
+                    <tr class="insc">
+                      <td class="inscGauche">Confirmation du mot de passe :</td>
+                      <td><input name="mdp2" type="password" size="40" maxlength="40" /></td>
+                    </tr>
+                    <tr class="spacer">
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                    </tr>
+                    <tr class="insc">
+                      <td class="inscGauche">E-mail :</td>
+                      <td><input name="email" type="text" size="40" maxlength="45" /></td>
+                    </tr>
+                    <tr class="spacer">
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                    </tr>
+                    <tr class="insc">
+                      <td class="inscGauche">Confirmation de votre e-mail :</td>
+                      <td><input name="email2" type="text" size="40" maxlength="45" /></td>
+                    </tr>
+                    <tr class="spacer">
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                    </tr>
+                    <tr class="headInsc">
+                      <td colspan="3">Votre profil </td>
+                    </tr>
+                    <tr class="spacer">
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td class="inscGauche">Votre civilit&eacute; :</td>
+                      <td rowspan="5">&nbsp;</td>
+                      <td><select name="sexe">
+                        <option value="0">Choisir votre civilit&eacute;</option>
+                          <option value="1" >Monsieur</option>
+                          <option value="2" >Madame</option>
+                          <option value="3" >Mademoiselle</option>
+                      </select></td>
+                    </tr>
+                    <tr class="spacer">
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                    </tr>
+                    <tr class="insc">
+                      <td class="inscGauche">Ann&eacute;e de naissance :</td>
+                      <td><select name="age">
+                          <option value="0">Choisir votre ann&eacute;e de naissance</option>
+                           	  <option value="1910" >1910</option>
+                              <option value="1911" >1911</option>
+                              <option value="1912" >1912</option>
+                              <option value="1913" >1913</option>
+                              <option value="1914" >1914</option>
+                              <option value="1915" >1915</option>
+                              <option value="1916" >1916</option>
+                              <option value="1917" >1917</option>
+                              <option value="1918" >1918</option>
+                              <option value="1919" >1919</option>
+                              <option value="1920" >1920</option>
+                              <option value="1921" >1921</option>
+                              <option value="1922" >1922</option>
+                              <option value="1923" >1923</option>
+                              <option value="1924" >1924</option>
+                              <option value="1925" >1925</option>
+                              <option value="1926" >1926</option>
+                              <option value="1927" >1927</option>
+                              <option value="1928" >1928</option>
+                              <option value="1929" >1929</option>
+                              <option value="1930" >1930</option>
+                              <option value="1931" >1931</option>
+                              <option value="1932" >1932</option>
+                              <option value="1933" >1933</option>
+                              <option value="1934" >1934</option>
+                              <option value="1935" >1935</option>
+                              <option value="1936" >1936</option>
+                              <option value="1937" >1937</option>
+                              <option value="1938" >1938</option>
+                              <option value="1939" >1939</option>
+                              <option value="1940" >1940</option>
+                              <option value="1941" >1941</option>
+                              <option value="1942" >1942</option>
+                              <option value="1943" >1943</option>
+                              <option value="1944" >1944</option>
+                              <option value="1945" >1945</option>
+                              <option value="1946" >1946</option>
+                              <option value="1947" >1947</option>
+                              <option value="1948" >1948</option>
+                              <option value="1949" >1949</option>
+                              <option value="1950" >1950</option>
+                              <option value="1951" >1951</option>
+                              <option value="1952" >1952</option>
+                              <option value="1953" >1953</option>
+                              <option value="1954" >1954</option>
+                              <option value="1955" >1955</option>
+                              <option value="1956" >1956</option>
+                              <option value="1957" >1957</option>
+                              <option value="1958" >1958</option>
+                              <option value="1959" >1959</option>
+                              <option value="1960" >1960</option>
+                              <option value="1961" >1961</option>
+                              <option value="1962" >1962</option>
+                              <option value="1963" >1963</option>
+                              <option value="1964" >1964</option>
+                              <option value="1965" >1965</option>
+                              <option value="1966" >1966</option>
+                              <option value="1967" >1967</option>
+                              <option value="1968" >1968</option>
+                              <option value="1969" >1969</option>
+                              <option value="1970" >1970</option>
+                              <option value="1971" >1971</option>
+                              <option value="1972" >1972</option>
+                              <option value="1973" >1973</option>
+                              <option value="1974" >1974</option>
+                              <option value="1975" >1975</option>
+                              <option value="1976" >1976</option>
+                              <option value="1977" >1977</option>
+                              <option value="1978" >1978</option>
+                              <option value="1979" >1979</option>
+                              <option value="1980" >1980</option>
+                              <option value="1981" >1981</option>
+                              <option value="1982" >1982</option>
+                              <option value="1983" >1983</option>
+                              <option value="1984" >1984</option>
+                              <option value="1985" >1985</option>
+                              <option value="1986" >1986</option>
+                              <option value="1987" >1987</option>
+                              <option value="1988" >1988</option>
+                              <option value="1989" >1989</option>
+                              <option value="1990" >1990</option>
+                              <option value="1991" >1991</option>
+                              <option value="1992" >1992</option>
+                              <option value="1993" >1993</option>
+                              <option value="1994" >1994</option>
+                              <option value="1995" >1995</option>
+                              <option value="1996" >1996</option>
+                              <option value="1997" >1997</option>
+                              <option value="1998" >1998</option>
+                              <option value="1999" >1999</option>
+                              <option value="2000" >2000</option>
+                              <option value="2001" >2001</option>
+                              <option value="2002" >2002</option>
+                              <option value="2003" >2003</option>
+                              <option value="2004" >2004</option>
+                              <option value="2005" >2005</option>     
+                      </select></td>
+                    </tr>
+                    <tr class="spacer">
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                    </tr>
+                    <tr class="insc">
+                      <td class="inscGauche">D&eacute;partement :</td>
+                      <td><select name="cp">
+                          <option value="0" selected="selected">Choisir votre d&eacute;partement</option>
+                          <option value="1" >Ain (1)</option>
+                          <option value="2" >Aisne (2)</option>
+                          <option value="3" >Allier (3)</option>
+                          <option value="4" >Alpes de Hautes Provence (4)</option>
+                          <option value="6" >Alpes Maritimes (6)</option>
+                          <option value="7" >Ard&egrave;che (7)</option>
+                          <option value="8" >Ardennes (8)</option>
+                          <option value="9" >Ari&egrave;ge (9)</option>
+                          <option value="10" >Aube (10)</option>
+                          <option value="11" >Aude (11)</option>
+                          <option value="12" >Aveyron (12)</option>
+                          <option value="67" >Bas Rhin (67)</option>
+                          <option value="13" >Bouches du Rh&ocirc;ne (13)</option>
+                          <option value="14" >Calvados (14)</option>
+                          <option value="15" >Cantal (15)</option>
+                          <option value="16" >Charente (16)</option>
+                          <option value="17" >Charente Maritime (17)</option>
+                          <option value="18" >Cher (18)</option>
+                          <option value="19" >Corr&egrave;ze (19)</option>
+                          <option value="20" >Corse (20)</option>
+                          <option value="21" >C&ocirc;te d'Or (21)</option>
+                          <option value="22" >C&ocirc;tes d'Armor (22)</option>
+                          <option value="23" >Creuse (23)</option>
+                          <option value="79" >Deux S&egrave;vres (79)</option>
+                          <option value="24" >Dordogne (24)</option>
+                          <option value="25" >Doubs (25)</option>
+                          <option value="26" >Dr&ocirc;me (26)</option>
+                          <option value="91" >Essonne (91)</option>
+                          <option value="27" >Eure (27)</option>
+                          <option value="28" >Eure et Loir (28)</option>
+                          <option value="29" >Finist&egrave;re (29)</option>
+                          <option value="30" >Gard (30)</option>
+                          <option value="32" >Gers (32)</option>
+                          <option value="33" >Gironde (33)</option>
+                          <option value="96" >Guadeloupe (96)</option>
+                          <option value="98" >Guyane fran&ccedil;aise (98)</option>
+                          <option value="68" >Haut Rhin (68)</option>
+                          <option value="31" >Haute Garonne (31)</option>
+                          <option value="43" >Haute Loire (43)</option>
+                          <option value="52" >Haute Marne (52)</option>
+                          <option value="65" >Haute Pyr&eacute;n&eacute;es (65)</option>
+                          <option value="70" >Haute Sa&ocirc;ne (70)</option>
+                          <option value="74" >Haute Savoie (74)</option>
+                          <option value="87" >Haute Vienne (87)</option>
+                          <option value="5" >Hautes Alpes (5)</option>
+                          <option value="92" >Hauts de Seine (92)</option>
+                          <option value="34" >H&eacute;rault (34)</option>
+                          <option value="35" >Ille et Vilaine (35)</option>
+                          <option value="36" >Indre (36)</option>
+                          <option value="37" >Indre et Loire (37)</option>
+                          <option value="38" >Is&egrave;re (38)</option>
+                          <option value="39" >Jura (39)</option>
+                          <option value="40" >Landes (40)</option>
+                          <option value="41" >Loir et Cher (41)</option>
+                          <option value="42" >Loire (42)</option>
+                          <option value="44" >Loire Atlantique (44)</option>
+                          <option value="45" >Loiret (45)</option>
+                          <option value="46" >Lot (46)</option>
+                          <option value="47" >Lot et Garonne (47)</option>
+                          <option value="48" >Loz&egrave;re (48)</option>
+                          <option value="49" >Maine et Loire (49)</option>
+                          <option value="50" >Manche (50)</option>
+                          <option value="51" >Marne (51)</option>
+                          <option value="97" >Martinique (97)</option>
+                          <option value="53" >Mayenne (53)</option>
+                          <option value="54" >Meurthe et Moselle (54)</option>
+                          <option value="55" >Meuse (55)</option>
+                          <option value="56" >Morbihan (56)</option>
+                          <option value="57" >Moselle (57)</option>
+                          <option value="58" >Ni&egrave;vre (58)</option>
+                          <option value="59" >Nord (59)</option>
+                          <option value="60" >Oise (60)</option>
+                          <option value="61" >Orne (61)</option>
+                          <option value="75" >Paris (75)</option>
+                          <option value="62" >Pas de Calais (62)</option>
+                          <option value="63" >Puy de D&ocirc;me (63)</option>
+                          <option value="64" >Pyr&eacute;n&eacute;es Atlantiques (64)</option>
+                          <option value="66" >Pyr&eacute;n&eacute;es Orientales (66)</option>
+                          <option value="99" >R&eacute;union (99)</option>
+                          <option value="69" >Rh&ocirc;ne (69)</option>
+                          <option value="71" >Sa&ocirc;ne et Loire (71)</option>
+                          <option value="72" >Sarthe (72)</option>
+                          <option value="73" >Savoie (73)</option>
+                          <option value="77" >Seine et Marne (77)</option>
+                          <option value="76" >Seine Maritime (76)</option>
+                          <option value="93" >Seine St Denis (93)</option>
+                          <option value="80" >Somme (80)</option>
+                          <option value="81" >Tarn (81)</option>
+                          <option value="82" >Tarn et Garonne (82)</option>
+                          <option value="90" >Territoire de Belfort (90)</option>
+                          <option value="94" >Val de Marne (94)</option>
+                          <option value="95" >Val d'Oise (95)</option>
+                          <option value="83" >Var (83)</option>
+                          <option value="84" >Vaucluse (84)</option>
+                          <option value="85" >Vend&eacute;e (85)</option>
+                          <option value="86" >Vienne (86)</option>
+                          <option value="88" >Vosges (88)</option>
+                          <option value="89" >Yonne (89)</option>
+                          <option value="78" >Yvelines (78)</option>
+                          <option value="">----------</option>
+                          <option value="101" >Belgique</option>
+                          <option value="102" >Suisse</option>
+                          <option value="103" >Canada</option>
+                          <option value="">----------</option>
+                          <option value="105" >Autre pays</option>
+                          <option value="">----------</option>
+                          <option value="107" >Dom / Tom</option>
+                      </select></td>
+                    </tr>
+                    <tr style="height:15px;">
+                      <td colspan="3">&nbsp;</td>
+                    </tr>
+                    <tr style="height:30px;">
+                      <td colspan="3"><label><input name="newsletter" type="checkbox" id="newsletter" value="1" checked="checked" style="border:0;" /> 
+                      Je souhaite recevoir  la newsletter de Zone Concours</label></td>
+                    </tr>
+                    <tr style="height:15px;">
+                      <td colspan="3"></td>
+                    </tr>
+                    <tr style="height:30px;">
+                      <td><strong>Recopiez&nbsp;
+<img id='cryptogram' src='fonctions/php/crypt/cryptographp.php?cfg=0&PHPSESSID=fjn9c0jubrb7vsgb84p3n9ipb3' align='absmiddle'>                      </strong></td>
+                      <td colspan="2">&nbsp;&nbsp;
+                      <input name="code" type="text"/></td>
+                    </tr>
+                    <tr style="height:30px;">
+                      <td colspan="3">&nbsp;</td>
+                    </tr>
+                    <tr>
+                      <td colspan="3" align="center">
+                        <input name="valider" type="submit" class="boutonM" value="Valider mon inscription &agrave; la zone" />
+                        <input name="provenance" type="hidden" value="1" />
+                                                    
+                            	<input name="forum" type="hidden" value="1" />
+                                
+						                       </td>
+                    </tr>
+                  </table>
+                </form>
+		      </div>
+          <div class="titre" style="margin-top:60px;">
+					<img src="/images/puce.jpg" width="10" height="10" /> Ce qu'il faut savoir concernant notre politique anti-spam</div>
+				<div class="textContenu" style="height:150px;">
+				  <ul id="politique">
+                  	<li>Une demande de confirmation de l'inscription est envoy&eacute;e par e-mail.</li>
+				    <li>Aucun spam ne vous sera envoy&eacute;. La  fr&eacute;quence d'envoi de la newsletter est d'une &agrave; deux  par semaine. </li>
+				    <li>Aucune information r&eacute;colt&eacute;e sur la zone ne sera c&eacute;d&eacute;e &agrave; des tiers.</li>
+				    <li>La d&eacute;sinscription de la newsletter sera possible en permanence, en 1 clic.</li>
+				    <li>En cas de questions/r&eacute;clamations &agrave; ce propos, vous pouvez  <a href="/contact.php">nous contacter</a> &agrave; tout moment.</li>
+				  </ul>
+		          </div>              
+		  </div>
+			<div class="emboiteBas"><div class="emboiteBasGauche"></div><div class="emboiteBasDroite"></div></div>
+	</div>
+       <div style="clear:both;"></div>
+</div>
+<div id="bas">
+			Création / Gestion : <a href='#' title='Agence Evoclic' onclick='window.open("http://agence.evoclic.com/gestion.html","evoclic","menubar=no, status=no, scrollbars=no, menubar=no, width=300, height=170");' rel='nofollow' style='color:#A7CE9B'>Evoclic</a> - Copyright &copy; 2007 - 2016  - Tous droits r&eacute;serv&eacute;s</div>
+            
+            
+        
+        	<div id="fondCache" onclick="javascript:popupClose();"></div>
+			<div id="popup">
+            	<a id="popupBtClose" href="javascript:popupClose();">X</a>
+            	<div id="popupTexte">
+                	Nous sélectionnons les meilleurs jeux concours sur internet.<br />
+                    A la clef :	des cadeaux gratuits et la découverte de sociétés organisatrices.
+                </div>
+                <div id="blocGauche">
+                	<div id="blocGaucheTitre">Par e-mail :</div>
+                    <form name='abonnement' method='post' action='/newsletter/_inscription.php' accept-charset='UTF-8' onsubmit="VerifForm(this); return false;">
+                        <input name="email" type="Text" id="popupEmail" size="22" maxlength="100" class="champs" style="width:157px;" value="Mon adresse e-mail" onfocus="popupChampsClear();">
+                        <div id="blogGaucheSubmit">
+                        	<input type="submit" name="Submit" value="Je m'inscris" class="submit"/>
+                        </div>
+                    </form>
+                </div>
+                <div id="blocDroite">
+                	<div id="blocDroiteTitre">Suivez-nous :</div>
+                    <ul>
+                    	<li>
+                            <a href="https://www.facebook.com/Zone.Concours" target="_blank">
+                                <img src="/images/social/facebook.png" alt="sur Facebook" border="0" height="32" width="32"> sur Facebook
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/zoneconcours" target="_blank">
+                                <img src="/images/social/twitter.png" alt="sur Twitter" border="0" height="32" width="32"> sur Twitter
+                            </a>
+                    	</li>
+                    </ul>
+                </div>
+            </div>
+            
+		            
+            
+            
+            
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-12691364-4', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<!-- Google Code for Concours Remarketing List -->
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1069986076;
+var google_conversion_language = "en";
+var google_conversion_format = "3";
+var google_conversion_color = "666666";
+var google_conversion_label = "p5MtCIjq4wEQnOKa_gM";
+var google_conversion_value = 0;
+/* ]]> */
+</script>
+<script type="text/javascript" src="http://www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="http://www.googleadservices.com/pagead/conversion/1069986076/?label=p5MtCIjq4wEQnOKa_gM&amp;guid=ON&amp;script=0"/>
+</div>
+</noscript>
+</div>
+</body>
+</html>

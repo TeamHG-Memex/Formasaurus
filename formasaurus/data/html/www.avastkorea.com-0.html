@@ -1,0 +1,1527 @@
+ 
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta charset="EUC-KR" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edage"/>
+<meta http-equiv="X-UA-Compatible" content="IE=Edage"/>
+<link rel="stylesheet" href="/common/css/DB_banner4.css" type="text/css"></link>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.min.js"></script><!--jquery¶óÀÌºê·¯¸®-->
+<script type="text/javascript" src="/common/js/jquery.DB_slideStepBanner.min.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+<script type="text/javascript" src="/common/js/jquery.banner.js"></script>
+<script type="text/javascript">
+<!--
+$(function() {
+	$("#image_list_1").jQBanner({	//·Ñ¸µÀ» ÇÒ ¿µ¿ªÀÇ ID °ª
+		nWidth:420,					//¿µ¿ªÀÇ width
+		nHeight:140,				//¿µ¿ªÀÇ height
+		nCount:3,					//µ¹¾Æ°¥ ÀÌ¹ÌÁö °³¼ö
+		isActType:"up",				//¿òÁ÷ÀÏ ¹æÇâ (left, right, up, down)
+		nOrderNo:1,					//ÃÊ±â ÀÌ¹ÌÁö
+		nDelay:6000					//·Ñ¸µ ½Ã°£ Å¸ÀÓ (1000 = 1ÃÊ)
+		/*isBtnType:"li"*/			//¶óº§(¹öÆ° Å¸ÀÔ) - ¿©±â´Â ¾È¾²ÀÓ
+		}
+	);
+	
+});
+//-->
+</script>
+<title>¾îº£½ºÆ® ÄÚ¸®¾Æ < avast! korea ></title>
+
+<script language='javascript' type='text/javascript'>
+
+
+
+
+
+function ViewLayer(obj,onoff) {
+	if (onoff=="on") {
+		$("#" + obj + "").css("display","");
+	} else {
+		$("#" + obj + "").css("display","none");
+
+	}
+}
+
+
+
+
+$(function()
+{
+    var f_nBnrCnt = 0; // jQBanner¸¦ »ç¿ëÇØ¼­ È­¸é¿¡ Ãâ·ÂµÇ´Â º£³Ê¼ö
+
+    $.f_varBanner = {
+        defaults: {
+            /* ³»ºÎÀûÀ¸·Î ¾²ÀÌ´Â º¯¼ö */
+            objScr: null,    // ½ºÅ©¸° ¿µ¿ª
+            objBtn: null, // ¹öÆ° ¿µ¿ª
+            objTimer: null, // Å¸ÀÌ¸Ó
+            nOrderNo: 999, // ÇöÀç ¼±ÅÃµÈ ·¹ÀÌ¾î
+            nOrderNoBtn: -1, // ¹öÆ° ¼±ÅÃ½Ã ·¹ÀÌ¾î
+
+            /* ÃÊ±â¼¼ÆÃÀÌ °¡´ÉÇÑ  ÇÊ¼ö º¯¼ö */
+            nWidth: 0, // º£³Ê ½ºÅ©¸° ¿µ¿ª Æø
+            nHeight: 0, // º£³Ê ½ºÅ©¸° ¿µ¿ª ³ôÀÌ
+            nCount: 0, // º£³Ê ½ºÅ©¸° ¿µ¿ª¿¡ ¼ÓÇØÀÖ´Â ·¹ÀÌ¾îÀÇ ¼ö
+            isActType: "none",    // º£³Ê ¾×¼Ç Å¸ÀÔ none,left,right,up,down,fade,page
+
+            /* ÃÊ±â¼¼ÆÃÀÌ °¡´ÉÇÑ  ¿É¼Ç º¯¼ö */
+            isShuffle: "N", // º£³Ê ·¹ÀÌ¾îµéÀÇ ¼ÅÇÃ ¿©ºÎ Y:¼ÅÇÃ,N:¼øÂ÷Àû
+            isBtnAct: "mouseover",    // ¹öÆ° ÀÛµ¿¹æ½Ä mouseover,click
+            isBtnType: "img", // ¹öÆ° Å¸ÀÔ img,li
+            nStartUp: 300, // ½ºÅ¸Æ® ½Ã Ã¹ ·¹ÀÌ¾îÀÇ FadeIn ¼Óµµ
+            nDelay: 5000, // µô·¹ÀÌ
+            nSpeed: 500, // ¾×¼Ç½ÃÀÇ ¼Óµµ
+            nSpeedFade: 300, // ÆäÀÌµå °ü·Ã ¾×¼Ç¿¡¼­ ¹öÆ° ÀÛµ¿½Ã ¼ÓµµÀÇ ±³Á¤°ª [µÇµµ·Ï °íÁ¤]
+            isStartFade:"Y", // ½ºÅ¸Æ® FadeIn È¿°ú ¿©ºÎ [ÇÁ·Î±×·¥À¸·Î ½ºÅ©¸°À» Display:block Ã³¸®ÇÒ °æ¿ì »ç¿ë]
+            isStartDelay:"N" // ½ºÅ¸Æ®½Ã µô·¹ÀÌ¸¦ °¡Áö°í ½ÇÇà [¹«°Å¿î ÆäÀÌÁöÀÇ °æ¿ì µô·¹ÀÌ¸¦ °¡Áö°í ÃÊ±âÈ­]
+        }
+    };
+
+    $.fn.jQBanner = function(defaults){
+        var config = $.extend({}, $.f_varBanner.defaults, defaults);
+        var isIEChk = jsBrowserCheck();
+
+        config.objScr = "#"+this.attr("id")+" .clsBannerScreen";
+        config.objBtn = "#"+this.attr("id")+" .clsBannerButton";
+
+        if (config.isStartDelay=="Y" && isIEChk==true) {
+            /* ½ºÅ¸Æ® µô·¹ÀÌ Ã³¸® */
+            if (f_nBnrCnt>=0 && f_nBnrCnt<=3) {
+                setTimeout( function(){jsBanInit(config)}, f_nBnrCnt*100);
+            } else if (f_nBnrCnt>3 && f_nBnrCnt<=6) {
+                setTimeout( function(){jsBanInit(config)}, f_nBnrCnt*200);
+            } else if (f_nBnrCnt>6 && f_nBnrCnt<=10) {
+                setTimeout( function(){jsBanInit(config)}, f_nBnrCnt*300);
+            } else if (f_nBnrCnt>10) {
+                setTimeout( function(){jsBanInit(config)}, 400);
+            }
+            f_nBnrCnt++;
+        } else {
+            jsBanInit(config);
+        }
+
+        return this;
+    };
+
+    function jsBanInit(config) {
+        var nPosFix;
+
+        /* º£³Ê ½ºÅ©¸° CSS ¼³Á¤ */
+        $(config.objScr).css({'position':'relative','height':config.nHeight+'px','width':config.nWidth+'px','overflow':'hidden'});
+
+        /* Ã¹ ·¹ÀÌ¾î ¼±ÅÃ */
+        config.nOrderNo = (config.nOrderNo==999) ? Math.floor(Math.random() * config.nCount):config.nOrderNo-1;
+
+        /* ¾×¼Ç Å¸ÀÔ¿¡ µû¸¥ ÃÊ±â ¼¼ÆÃ */
+        if (config.isActType == "left") {
+            $(config.objScr+" div").each(function(i){
+                nPosFix = (config.nOrderNo==i)?0:config.nWidth;
+                $(this).css({'position':'absolute','top':'0','left':(-1*nPosFix)+'px'});
+                if (!(config.nOrderNo==i && config.isStartFade=="N")) {
+                    $(this).fadeIn(config.nStartUp);
+                }
+                $(this).attr("divno",i);
+            });
+        } else if (config.isActType == "right") {
+            $(config.objScr+" div").each(function(i){
+                nPosFix = (config.nOrderNo==i)?0:config.nWidth;
+                $(this).css({'position':'absolute','top':'0','left':nPosFix+'px'});
+                if (!(config.nOrderNo==i && config.isStartFade=="N")) {
+                    $(this).fadeIn(config.nStartUp);
+                }
+                $(this).attr("divno",i);
+            });
+        } else if (config.isActType == "up") {
+            $(config.objScr+" div").each(function(i){
+                nPosFix = (config.nOrderNo==i)?0:config.nHeight;
+                $(this).css({'position':'absolute','top':(-1*nPosFix)+'px','left':'0'});
+                if (!(config.nOrderNo==i && config.isStartFade=="N")) {
+                    $(this).fadeIn(config.nStartUp);
+                }
+                $(this).attr("divno",i);
+            });
+        } else if (config.isActType == "down") {
+            $(config.objScr+" div").each(function(i){
+                nPosFix = (config.nOrderNo==i)?0:config.nHeight;
+                $(this).css({'position':'absolute','top':nPosFix+'px','left':'0'});
+                if (!(config.nOrderNo==i && config.isStartFade=="N")) {
+                    $(this).fadeIn(config.nStartUp);
+                }
+                $(this).attr("divno",i);
+            });
+        } else if (config.isActType == "fade") {
+            $(config.objScr+" div").each(function(i){
+                if (config.nOrderNo==i) {
+                    nPosFix = 0;
+                    if (!(config.nOrderNo==i && config.isStartFade=="N")) {
+                        $(this).fadeIn(config.nStartUp);
+                    }
+                } else {
+                    nPosFix = config.nWidth;
+                }
+                $(this).css({'position':'absolute','top':'0','left':nPosFix+'px'});
+                $(this).attr("divno",i);
+            });
+        } else if (config.isActType == "page") {
+            $(config.objScr+" div").each(function(i){
+                nPosFix = (config.nOrderNo==i)?0:config.nHeight;
+                $(this).css({'position':'absolute','top':nPosFix+'px','left':'0'});
+                if (!(config.nOrderNo==i && config.isStartFade=="N")) {
+                    $(this).fadeIn(config.nStartUp);
+                }
+                $(this).attr("divno",i);
+            });
+        } else if (config.isActType == "none") {
+            $(config.objScr+" div").each(function(i){
+                if (config.nOrderNo==i) {
+                    nPosFix = 0;
+                    if (!(config.nOrderNo==i && config.isStartFade=="N")) {
+                        $(this).fadeIn(config.nStartUp);
+                    }
+                } else {
+                    nPosFix = config.nWidth;
+                }
+                $(this).css({'position':'absolute','top':'0','left':nPosFix+'px'});
+                $(this).attr("divno",i);
+            });
+        }
+
+        /* ¹öÆ° ¼ø¹ø ¼³Á¤ */
+        $(config.objBtn+" "+config.isBtnType).each(function(i){ $(this).attr("btnno",i); $(this).css("cursor","hand") });
+
+        /* ¹öÆ° ¹ÙÀÎµå */
+        jsBanBtnBind(config);
+
+        /* ½ºÅ©¸° pause ¹ÙÀÎµå */
+        jsScrPauseBind(config);
+
+        /* º£³Ê Å¸ÀÌ¸Ó µî·Ï ¹× ¾×¼Ç ½ÃÀÛ!!!! */
+        if (config.isActType != "none" && config.isActType != "page") {
+            config.objTimer = setTimeout( function(){jsBanTimer(config)}, config.nDelay);
+        }
+    };
+
+    /* ¹è³Ê Å¸ÀÌ¸Ó */
+    function jsBanTimer(config) {
+        /* ¹öÆ° ¾×¼Ç ¼ø¹øÀÇ ÃÊ±âÈ­ */
+        config.nOrderNoBtn = -1;
+
+        jsBanAction(config);
+        config.objTimer = setTimeout( function(){jsBanTimer(config)}, config.nDelay);
+    };
+
+    /* ¹è³Ê ¾×¼Ç Ã³¸® */
+    function jsBanAction(config) {
+        var nPageSel;
+        var nSpeed = config.nSpeed;
+        var nDivNoSel = config.nOrderNo;
+        var nOrderNext = (config.nOrderNo+1)%(config.nCount);
+
+        /* 'page' ¾×¼ÇÀÏ °æ¿ì ¼±ÅÃÆäÀÌÁö ÃßÃâ */
+        if (config.isActType == "page") {
+            var nOrderMinus = config.nOrderNoBtn-config.nOrderNo;
+            nPageSel = (nOrderMinus==1 || (nOrderMinus==(config.nCount-1)*-1)) ? 1 : 0;
+        }
+
+        if (config.nOrderNoBtn >= 0) {
+            config.nOrderNo = config.nOrderNoBtn;
+            nOrderNext = config.nOrderNoBtn;
+            nSpeed = (config.isActType=="fade" || config.isActType=="page" || config.isActType=="none") ? config.nSpeedFade : 0;
+        } else {
+            config.nOrderNo = ((config.nCount-1)==config.nOrderNo) ? nOrderNext : config.nOrderNo+1;
+        }
+
+        var nDivNoNext = nOrderNext;
+
+        var objSelObj = $(config.objScr+" div[divno='"+nDivNoSel+"']");
+        var objNextObj = $(config.objScr+" div[divno='"+nDivNoNext+"']");
+
+        /* ¾×¼Ç¿¡ ÀÇÇÑ ¹öÆ° ¼±ÅÃ */
+        if (config.isActType != "page") {
+            jsBanBtnRO(config,nOrderNext);
+        }
+
+        /* ½ÇÁ¦ ½ºÅ©¸° ·¹ÀÌ¾îµéÀÇ µ¿ÀÛ Ã³¸® */
+        if (config.isActType == "left") {
+            objNextObj.css('left',(config.nWidth)+'px');
+            objSelObj.animate({'left':(-1*config.nWidth)+'px'},nSpeed);
+            objNextObj.animate({'left':'0'},nSpeed);
+        } else if (config.isActType == "right") {
+            objNextObj.css('left',(-1*config.nWidth)+'px');
+            objSelObj.animate({'left':config.nWidth+'px'},nSpeed);
+            objNextObj.animate({'left':'0'},nSpeed);
+        } else if (config.isActType == "up") {
+            objNextObj.css('top',config.nHeight+'px');
+            objSelObj.animate({'top':(-1*config.nHeight)+'px'},nSpeed);
+            objNextObj.animate({'top':'0'},nSpeed);
+        } else if (config.isActType == "down") {
+            objNextObj.css('top',(-1*config.nHeight)+'px');
+            objSelObj.animate({'top':config.nHeight+'px'},nSpeed);
+            objNextObj.animate({'top':'0'},nSpeed);
+        } else if (config.isActType == "fade") {
+            objSelObj.css({'left':config.nWidth+'px','display':'none'});
+            objNextObj.css('left','0');
+            objNextObj.fadeIn(nSpeed);
+        } else if (config.isActType == "page") {
+            if (nPageSel == 0) {
+                objNextObj.css({'top':'0','left':config.nWidth+'px'});
+                objSelObj.animate({'left':(-1*config.nWidth)+'px'},nSpeed);
+                objNextObj.animate({'left':'0'},nSpeed);
+            } else if (nPageSel == 1) {
+                objNextObj.css({'top':'0','left':(-1*config.nWidth)+'px'});
+                objSelObj.animate({'left':config.nWidth+'px'},nSpeed);
+                objNextObj.animate({'left':'0'},nSpeed);
+            }
+        } else if (config.isActType == "none") {
+            objSelObj.css({'left':config.nWidth+'px','display':'none'});
+            objNextObj.css('left','0');
+            objNextObj.fadeIn(nSpeed);
+        }
+    }
+
+    /* ½ºÅ©¸° pause ¹ÙÀÎµå */
+    function jsScrPauseBind(config) {
+        /* ½ºÅ©¸°¿¡ ´ëÇÑ Ã³¸® */
+        $(config.objScr+" div").mouseover(function(){
+            clearTimeout(config.objTimer);
+        });
+        $(config.objScr+" div").mouseout(function(){
+            if (config.isActType != "none" && config.isActType != "page") {
+                config.objTimer = setTimeout( function(){jsBanTimer(config)}, config.nDelay);
+            }
+        });
+    }
+
+    /* ¹öÆ° ¹ÙÀÎµå */
+    function jsBanBtnBind(config) {
+        /* ÃÊ±â ¹öÆ° ¼³Á¤ */
+        if (config.isActType != "page") {
+            jsBanBtnRO(config,config.nOrderNo);
+        }
+
+        /* ¹öÆ°¿¡ ´ëÇØ ¸¶¿ì½º ¿À¹öÀÏ °æ¿ì Ã³¸® */
+        if (config.isBtnAct=="mouseover") {
+            /* ¹öÆ°¿¡ ´ëÇÑ Ã³¸® */
+            $(config.objBtn+" "+config.isBtnType).mouseover(function(){
+                var nImgNo = $(this).attr("btnno");
+
+                if (config.isActType != "none" && config.isActType != "page") {
+                    clearTimeout(config.objTimer);
+                }
+
+                if (config.isActType == "page") {
+                    if (nImgNo == 0) {
+                        config.nOrderNoBtn = ((config.nOrderNo-1)<0) ? config.nCount-1 : config.nOrderNo-1;
+                    } if (nImgNo == 1) {
+                        config.nOrderNoBtn = ((config.nOrderNo+1)==config.nCount) ? (config.nOrderNo+1)%config.nCount : config.nOrderNo+1;
+                    }
+                    jsBanBtnRO(config,nImgNo);
+                } else {
+                    config.nOrderNoBtn = parseInt(nImgNo);
+                }
+
+                jsBanAction(config);
+            });
+            $(config.objBtn+" "+config.isBtnType).mouseout(function(){
+                if (config.isActType != "none" && config.isActType != "page") {
+                    config.objTimer = setTimeout( function(){jsBanTimer(config)}, config.nDelay);
+                }
+            });
+
+        /* ¹öÆ°¿¡ ´ëÇØ Å¬¸¯ÀÏ °æ¿ì Ã³¸® */
+        } else if (config.isBtnAct=="click") {
+            $(config.objBtn+" "+config.isBtnType).click(function(){
+                var nImgNo = $(this).attr("btnno");
+
+                if (config.isActType != "none" && config.isActType != "page") {
+                    clearTimeout(config.objTimer);
+                }
+
+                if (config.isActType == "page") {
+                    if (nImgNo == 0) {
+                        config.nOrderNoBtn = ((config.nOrderNo-1)<0) ? config.nCount-1 : config.nOrderNo-1;
+                    } if (nImgNo == 1) {
+                        config.nOrderNoBtn = ((config.nOrderNo+1)==config.nCount) ? (config.nOrderNo+1)%config.nCount : config.nOrderNo+1;
+                    }
+                    jsBanBtnRO(config,nImgNo);
+                } else {
+                    config.nOrderNoBtn = parseInt(nImgNo);
+                }
+
+                jsBanAction(config);
+
+                if (config.isActType != "none" && config.isActType != "page") {
+                    config.objTimer = setTimeout( function(){jsBanTimer(config)}, config.nDelay);
+                }
+            });
+        }
+    };
+
+    /* ¹öÆ° ·Ñ¿À¹ö Ã³¸® */
+    function jsBanBtnRO (config,nSel) {
+        if (config.isBtnType=="img") {
+            $(config.objBtn+" img").each(function(i){
+                if (nSel==i) {
+                    $(this).attr("src",$(this).attr("oversrc"));
+                } else {
+                    $(this).attr("src",$(this).attr("outsrc"));
+                }
+            });
+
+        } else if (config.isBtnType=="li") {
+            $(config.objBtn+" li").each(function(i){
+                if (nSel==i) {
+                    $(this).attr("class",$(this).attr("overclass"));
+                } else {
+                    $(this).attr("class",$(this).attr("outclass"));
+                }
+            });
+
+        }
+    }
+
+    /* IE Ã¼Å© */
+    function jsBrowserCheck() {
+        appname = navigator.appName;
+        useragent = navigator.userAgent;
+
+        if(appname == "Microsoft Internet Explorer") appname = "IE";
+        IE55 = (useragent.indexOf('MSIE 5.5')>-1);  //5.5 ¹öÀü
+        IE6 = (useragent.indexOf('MSIE 6')>-1);     //6.0 ¹öÀü
+        IE7 = (useragent.indexOf('MSIE 7')>-1);     //7.0 ¹öÀü
+        IE8 = (useragent.indexOf('MSIE 8')>-1);     //8.0 ¹öÀü
+		IE9 = (useragent.indexOf('MSIE 9')>-1);
+		IE10 = (useragent.indexOf('MSIE 10')>-1);
+
+
+        if(appname=="IE" && IE55 || IE6 || IE7 || IE8 || IE9 || IE10){
+            return true
+        }else{
+            return false;
+        }
+    }
+});
+
+//¹è³Ê Ãß°¡½Ã Å¸ÀÌ¸Ó ¼ÂÆÃÀ» À§ÇØ nCount¿¡¼­ °¹¼ö Á¶Á¤_ ¼öÁ¤
+$(function() {
+    $('#divHanger').jQBanner({nWidth:960,nHeight:347,nCount:2,isActType:'left',nOrderNo:1,isStartAct:'N',isStartDelay:'Y',nDelay:5000,isBtnType:'li'});
+});
+
+
+//]]>
+</script>
+
+
+<style type='text/css'>
+<!--
+
+.clsBanner {margin:0;margin-left:0px;padding:0;position:relative;float:left}
+.clsBannerButton {z-index:999}
+.clsBannerScreen {z-index:1}
+.clsBannerScreen div {display:none}
+
+.clsHangerOut1 {font-family:dotum, '³ª´®°íµñ, ¸¼Àº °íµñ';font-size: 10px;list-style:none;float:left; width:480px; height:20px; padding-top:0px; color:#FFFFFF; background-color:#444e5a; text-align:center; text-decoration: none;}
+.clsHangerOut2 {font-family:dotum, '³ª´®°íµñ, ¸¼Àº °íµñ';font-size: 10px;list-style:none;float:left; width:480px; height:20px; padding-top:0px; color:#FFFFFF; background-color:#444e5a; text-align:center; text-decoration: none;}
+.clsHangerOver {font-family:dotum, '³ª´®°íµñ, ¸¼Àº °íµñ';font-size: 10px;list-style:none;float:left; width:480px; height:20px; padding-top:0px; color:#FFFFFF; background-color:#ff9900; text-align:center; text-decoration: none;}
+/* ¹è³Ê Ãß°¡·Î ÀÎÇØ ¹öÆ° width¸¦ 480px -> 320px·Î Á¶Á¤ÇÏ¿´°í ÇÑ ¶óÀÎ¿¡ ¼¼ ¹öÆ°À¸·Î ¸¸µé¾î ³õÀ½ */
+-->
+</style><!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PD9V8F"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PD9V8F');</script>
+<!-- End Google Tag Manager -->
+
+
+<!--- ¾îº£½ºÆ® ¸ÞÀÎ ¸Þ´º¸¦ À§ÇÑ °÷ --->
+<link rel="stylesheet" type="text/css"  href="/common/css/menu_styles.css" />
+<link rel="stylesheet" type="text/css"  href="/common/css/header_styles.css" />
+<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+<script src="/common/js/menu_common.js" type="text/javascript"></script>
+<script src="/common/js/script.js"></script>
+
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/ko_KR/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<!--·Ñ¿À¹ö ¿©±â¼­ ½ÃÀÛ -->
+<script type="text/javascript">
+<!--
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+</script>
+
+
+<div id='wrap'>
+	<div id='header'>
+		<div class='header_inner'>
+			<div class='top'>
+				<p class='left'><a href="/"><img src='/image/logo.jpg'></a></p>
+				<div class='right top_m'>
+					<span><a href="http://shop.avastkorea.com/login/?_ga=1.207413395.1888870844.1450053701">·Î±×ÀÎ</a></span><img src='/image/top_m_line.gif'>
+					<span><a href="http://shop.avastkorea.com/login/my_regist.asp">È¸¿ø°¡ÀÔ</a></span><img src='/image/top_m_line.gif'>
+					
+					<span>VPS :16020100</span> 
+
+						<select class='site_select' onChange='if(this.selectedIndex) { this.blur(); window.open(options[selectedIndex].value); }' style='margin-left:30px;'>
+							<option value="" selected>ÇÑ±¹¾î</option>
+							<option value="http://www.avastshop.com">English</option>
+							<option value="http://www.softmail.jp">Japan</option>
+						</select>
+				</div>
+			</div>
+			<div class='cl menu'>
+				
+
+<link rel="stylesheet" type="text/css" href="/common/sdsm/wonik.css" />
+<script type="text/javascript" src="/common/sdsm/jquery-1.9.0.min.js"></script>
+<script type="text/javascript" src="/common/sdsm/jquery-ui.min.js"></script>
+	
+	<div id="wrapper">
+	<script type="text/javascript">
+
+	$(document).ready(function(){
+		//$('.gnb2depth > ul  li > div').css("display","none");
+		
+		$(".gnb2depth > ul > li").on({
+			'mouseenter':naviOpen,
+			'focusin':naviOpen
+		});
+		$('.gnb2depth > ul > li').on({
+			'mouseleave':naviClose
+			//'focusout':naviClose
+		});
+		
+		$("#queryText1").focus(function(){
+			
+			$("#chk").val($(this).index());
+			
+				
+				$(".dep01_04bg").css("display","none");
+				$(".dep01_04").css("display","none");
+				
+	  });
+
+		function naviOpen(){
+		
+			if($(this).index() > 6) return;
+			if($(this).index() > 0){		
+				var onClass1 = ".dep01_0"+($(this).index());
+				var onClassBg1 = ".dep01_0"+($(this).index())+"bg";
+				$(onClass1).css("display","none");
+				$(onClassBg1).css("display","none");
+			}
+			
+			var onClassBg2 = "";
+			
+
+			var bgHeight = "255";
+			var onClass = ".dep01_0"+($(this).index()+1);
+			var onClassBg = ".dep01_0"+($(this).index()+1)+"bg";
+			if($(this).index() == 1){
+				bgHeight = "355";
+			}else if($(this).index() == 2){
+				bgHeight = "255";
+			}
+			$(onClass).css("display","block");
+			$(onClassBg).css("height",bgHeight);
+			$(onClassBg).css("display","block");
+		}
+		function naviClose(){
+
+			if($(this).index() > 6) return;
+			var onClass = ".dep01_0"+($(this).index()+1);
+			var onClassBg = ".dep01_0"+($(this).index()+1)+"bg";
+			$(onClass).css("display","none");
+			$(onClassBg).css("display","none");
+			
+			var onClassBg2 = "";
+				
+			
+
+		}
+
+		$(".w1000  li a").on({
+
+			'mouseover':naviSubOpen,
+			'focusin':naviSubOpen,
+			'mouseout':naviSubClose,
+			'focusout':naviSubClose
+		});
+		var isDepthOn="Y";
+		function naviSubOpen(){
+		
+			var objImg = $(this).find("img");
+			
+			if(objImg.attr("src").indexOf("off.gif") > -1){
+				objImg.attr("src",objImg.attr("src").replace("off.gif","on.gif"));
+				isDepthOn = "N";
+			}else{
+				isDepthOn = "Y";
+			}
+			
+		}
+		function naviSubClose(){
+			
+			var objImg = $(this).find("img");
+			if(isDepthOn=="N" && objImg.attr("src").indexOf("on.gif") > -1){
+				objImg.attr("src",objImg.attr("src").replace("on.gif","off.gif"));
+			}		
+			
+		}
+	});
+	</script>
+
+	<div id="menu_header">		
+		<!--gnb :: start-->
+		<div class="gnb">
+				<!--gnbBox ::start-->
+				<div class="gnbBox">
+					<!--gnb2depth ::start-->
+					<div class="gnb2depth">
+						<ul><!--dep01_01 ::start-->
+							<li class="tempTopLi00">
+								<a href="http://www.avastkorea.com/home-user/cloud.asp" style="font-size:17px;color:#000;">¿ùÁ¤¾×</a>
+									<div class="dep01_01" style="display:none;">
+										<div class="w1000" style="height:180px; overflow:hidden;">
+											<div style="height:180px; padding-left:0px;">
+												<table class='m_table gsm_sub_list'>
+													<tr>
+														<td><br></td>
+													</tr>
+													<tr>
+														<td class="123">°³ÀÎ¿ë</td>
+													</tr>
+													<tr>
+														<td><a href="http://www.avastkorea.com/home-user/cloud.asp">¿ùÁ¤¾× ÇÁ¸®¹Ì¾ö ¼­ºñ½º</a></td>
+													</tr>
+												</table>
+
+												<table class='m_table gsm_sub_list2'>
+													<tr>
+														<td><br></td>
+													</tr>
+													<tr>
+														<td class="123">¾÷¹«¿ë</td>
+													</tr>
+													<tr>
+														<td><a href="http://www.avastkorea.com/business/cloud.asp">¿ùÁ¤¾× ¼­ºñ½º (PC¿ë)</a></td>
+													</tr>
+													<tr>
+														<td><a href="http://www.avastkorea.com/business/managed.asp">¿ùÁ¤¾× ¼­ºñ½º (¼­¹ö¿ë)</a></td>
+													</tr>
+													<tr>
+														<td><a href="http://www.avastkorea.com/business/solution.asp">Æ÷·»½Ä APTÂ÷´Ü ¼­ºñ½º (ÁØºñ Áß)</a></td>
+													</tr>
+												</table-->
+
+												<table class='m_table gsm_sub_list3'>
+													<tr>
+														<td><br></td>
+													</tr>
+													<tr>
+														<td><a href="http://www.avastkorea.com/home-user/cloud_how.asp">¿ùÁ¤¾× ¼­ºñ½º GUIDE</a></td>
+													</tr>
+												</table>
+
+												<table class='m_table gsm_sub_list4'>
+													<tr>
+														<th><a href=""></a></th>
+													</tr>
+													<tr>
+														<td class="123">°í°´Áö¿ø : 1661-9331</td>
+													</tr>
+													<tr>
+														<td height="100px"></td>
+													</tr>
+												</table>
+											</div>
+										</div>
+									</div>
+							</li>
+							<!--dep01_01 ::end-->
+
+							<!--dep01_02 ::start-->
+							<li class="tempTopLi01">
+								<a href="http://www.avastkorea.com/home-user/default.asp" style="font-size:17px;color:#000;">°³ÀÎ¿ë</a>
+									<div class="dep01_02" style="display:none;">
+										<div class="w1000" style="height:180px; overflow:hidden;">
+											<div style="height:180px; padding-left:0px;">
+												<table class='m_table gsm_sub_list1'>
+													<tr>
+														<td><br></td>
+													</tr>
+													<tr>
+														<td><a href="http://www.avastkorea.com/home-user/default.asp">°³ÀÎ¿ë ¶óÀÌ¼±½º</a></td>
+													</tr>
+													<tr>
+														<td><a href="http://www.avastkorea.com/home-user/cloud.asp">¿ùÁ¤¾× ÇÁ¸®¹Ì¾ö ¼­ºñ½º</a></td>
+													</tr>
+												</table>
+
+												<table class='m_table gsm_sub_list2'>
+													<tr>
+														<td><br></td>
+													</tr>
+													<tr>
+														<td><a href="http://www.avastkorea.com/home-user/secureline.asp">¾îº£½ºÆ® ½ÃÅ¥¾î¶óÀÎ VPN</a></td>
+													</tr>
+													<tr>
+														<td><a href="http://www.avastkorea.com/home-user/cleanup.asp">¾îº£½ºÆ® Å¬¸°¾÷</a></td>
+													</tr>
+													<tr>
+														<td><a href="http://www.avastkorea.com/home-user/password.asp">¾îº£½ºÆ® ÆÐ½º¿öµå</a></td>
+													</tr>
+													<tr>
+														<td><a href="http://www.avastkorea.com/home-user/wisecare.asp">¿ÍÀÌÁîÄÉ¾î (PCÆ©´× À¯Æ¿¸®Æ¼)</a></td>
+													</tr>
+												</table>
+
+												<table class='m_table gsm_sub_list3'>
+													<tr>
+														<td><br></td>
+													</tr>
+													<tr>
+														<td><a href="http://cafe.naver.com/avastkorea">°³ÀÎ¿ë Á¦Ç° ±â¼úÁö¿ø Q&A</a></td>
+													</tr>
+													<tr>
+														<td><a href="http://939.co.kr/ezHelpClient.exe" style='color:#f69021; font-weight: bold;'>¿ø°ÝÁö¿ø ¹Ù·Î°¡±â</a></td>
+													</tr>
+												</table>
+												<table class='m_table gsm_sub_list4'>
+													<tr>
+														<th><a href=""></a></th>
+													</tr>
+													<tr>
+														<td class="123">°í°´Áö¿ø : 1661-9331</td>
+													</tr>
+													<tr>
+														<td>
+															°³ÀÎ¿ë Á¦Ç° ¹«ÅëÀå°èÁÂ<br>
+															<div class='bank_box' style="width:265px;">
+																<img style='vertical-align:middle;' src='/image/kb_logo.gif'><strong style='color:#f69021;font-size:16px;'>±¹¹ÎÀºÇà</strong> 453801-01-072861<br>
+																¿¹±ÝÁÖ : (ÁÖ)¼ÒÇÁÆ®¸ÞÀÏ
+															</div>
+														</td>
+													</tr>
+												</table>
+											</div>
+										</div>
+									</div>
+							</li>
+							<!--dep01_02 ::end-->
+							<!--dep01_03 ::start-->
+							<li class="tempTopLi02"><a href="http://www.avastkorea.com/business/endpoint.asp" style="font-size:17px;color:#000;">¾÷¹«¿ë</a>
+								<div class="dep01_03" style="display:none">
+									<div class="w1000" style="height:180px; overflow:hidden;">
+										<div style="height:180px; padding-left:0px;">
+											<table class="m_table2 gsm_sub_list_1">
+												<tr>
+													<td><br></td>
+												</tr>
+												<tr>
+													<td><a href="http://www.avastkorea.com/business/endpoint.asp">¾îº£½ºÆ® ¿£µåÆ÷ÀÎÆ®</a></td>
+												</tr>
+												<tr>
+													<td><a href="http://www.avastkorea.com/business/server-security.asp">¾îº£½ºÆ® ¼­¹ö¿ë ¹é½Å</a></td>
+												</tr>
+											</table>
+
+											<table class="m_table2 gsm_sub_list2_1">
+											<tr>
+													<td><br></td>
+												</tr>
+												<tr>
+													<td><a href="http://www.avastkorea.com/business/cloud.asp">¿ùÁ¤¾× ¼­ºñ½º (PC¿ë)</a></td>
+												</tr>
+												<tr>
+													<td><a href="http://www.avastkorea.com/business/managed.asp">¿ùÁ¤¾× ¼­ºñ½º (¼­¹ö¿ë)</a></td>
+												</tr>
+												<tr>
+													<td><a href="http://www.avastkorea.com/business/solution.asp">Æ÷·»½Ä APTÂ÷´Ü ¼­ºñ½º</a></td>
+												</tr>
+											</table>
+
+											<table class="m_table2 gsm_sub_list3_1">
+												<tr>
+													<td><br></td>
+												</tr>
+												<tr>
+													<td><a href="http://www.avastkorea.com/business/quote.asp" style='color:#f69021; font-weight: bold;'>°ßÀû ¿äÃ»</a></td>
+												</tr>
+												<tr>
+													<td><a href="http://www.avastkorea.com/partners/">ÆÄÆ®³Ê ¹× ¸®¼¿·¯</a></td>
+												</tr>
+												<tr>
+													<td><a href="http://www.avastkorea.com/business/reference.asp" >´ëÇ¥ ·¡ÆÛ·±½º</a></td>
+												</tr>
+												<tr>
+													<td><a href="mailto:support@avastkorea.com">¾÷¹« Á¦Ç° ±â¼úÁö¿ø E-mail</a></td>
+												</tr>
+											</table>
+
+
+
+											<table class='m_table gsm_sub_list4_1'>
+												<tr>
+													<td><br></td>
+												</tr>
+												<tr>
+													<td class="123">°í°´Áö¿ø : 1661-9331</td>
+												</tr>
+												<tr>
+													<td class="123">¾÷¹«¿ë Á¦Ç° ¹«ÅëÀå°èÁÂ
+													<div class='bank_box'>
+														<img style='vertical-align:middle;' src='/image/woori_logo.gif'><strong style='color:#0183ce;font-size:16px;'>¿ì¸®ÀºÇà</strong> 1005-801-570661<br>
+														¿¹±ÝÁÖ : (ÁÖ)¼ÒÇÁÆ®¸ÞÀÏ
+													</div>
+													</td>
+												</tr>
+											</table>
+										</div>
+									</div>
+								</div>
+							</li>
+							<!--dep01_03 ::end-->
+							<!--dep01_04 ::start-->
+							<li class="tempTopLi03"><a href="http://www.avastkorea.com/support/virus.asp" style='font-size:17px;color:#000;'>°í°´Áö¿ø</a>
+								<div class="dep01_04" style="display:none">
+									<div class="w1000" style=" height:180px; overflow:hidden; background:url(/hpmenu/img/imglayer.png) no-repeat top left;">
+										<div style="height:180px; padding-left:300px;">
+	
+										<table class="m_table2 gsm_sub_list_2">
+											<tr>
+												<td><br></td>
+											</tr>
+											<tr>
+												<td class="123">°í°´Áö¿ø</td>
+											</tr>
+											<tr>
+												<td><a href="http://www.avastkorea.com/support/virus.asp">¹ÙÀÌ·¯½º ¹× ¿ÀÁø ½Å°í</a></td>
+											</tr>
+											<tr>
+												<td><a href="http://www.avastkorea.com/support/remote_support.asp">¿ø°Ý °í°´Áö¿ø</a></td>
+											</tr>
+											<tr>
+												<td><a href="http://www.avastkorea.com/support/awards.asp">¼ö»ó ½ÇÀû</a></td>
+											</tr>
+											<tr>
+												<td><a href="http://www.avastkorea.com/support/ad.asp">±¤°í »ç·Ê</a></td>
+											</tr>
+											
+										</table>
+
+										<table class="m_table2 gsm_sub_list2_2">
+											<tr>
+												<td><br></td>
+											</tr>
+											<tr>
+												<td><a href="http://www.avastkorea.com/login/my_news_unsubscribe.asp">´º½º¼ö½ÅÇØÁö</a></td>
+											</tr>
+											<tr>
+												<td><a href="http://www.avastkorea.com/support/FAQs.asp">FAQs</a></td>
+											</tr>
+											<tr>
+												<td><a href="http://www.avastkorea.com/support/return_refund.asp">È¯ºÒ ¹× ¹ÝÇ°Á¤Ã¥</a></td>
+											</tr>
+											<tr>
+												<td><a href="http://www.avastkorea.com/support/facebook.asp">ÆäÀÌ½ººÏ À¯Àú</a></td>
+											</tr>
+											
+										</table>
+
+										<table class='m_table gsm_sub_list4_2'>
+											<tr>
+												<td></td>
+											</tr>
+											<tr>
+												<td class="123">´Ù¿î·Îµå</td>
+											</tr>
+											<tr>
+												<td><a href="http://www.avastkorea.com/download">°³ÀÎ¿ë ¼³Ä¡ÆÄÀÏ</a></td>
+											</tr>
+											<tr>
+												<td><a href="http://www.avastkorea.com/support/documents.asp">avast! ¹®¼­</a></td>
+											</tr>
+											<tr>
+												<td><a href="http://www.avastkorea.com/support/tools.asp">avast µµ±¸ ÇÁ·Î±×·¥</a></td>
+											</tr>
+											<tr>
+												<td><a href="http://www.avastkorea.com/support/wallpapers.asp">¹è°æÈ­¸é</a></td>
+											</tr>
+										</table>
+
+
+										</div>
+									</div>
+								</div>
+							</li>
+							<!--dep01_04 ::end-->
+							<!--dep01_05 ::start-->
+							<li class="tempTopLi04"><a href="http://shop.avastkorea.com" style='font-size:17px;color:#000;'>Á¦Ç°±¸¸Å</a>
+								<div class="dep01_05" style="display:none">
+									<div class="w1000" style=" height:180px; overflow:hidden; background:url(/hpmenu/img/imglayer.png) no-repeat top left;">
+										<div style="height:180px; padding-left:300px;">
+	
+										<table class="m_table2 gsm_sub_list_1" style="margin-top:70px; margin-left:135px;">
+											<tr>
+												<td ><a href="http://shop.avastkorea.com"><img src="http://www.avastkorea.com/image/avast_shop_b.jpg"><br></a></td>
+											</tr>
+											<!--tr>
+												<td><a href="http://shop.avastkorea.com">¾îº£½ºÆ®¼¥</a></td>
+											</tr-->
+										</table>
+
+										<!--table class="m_table2 gsm_sub_list2_3">
+											<tr>
+												<td><a href=""><br></a></td>
+											</tr>
+										</table>
+
+
+										<table class="m_table2 gsm_sub_list3_3">
+											<tr>
+												<td><a href=""><br></a></td>
+											</tr>
+										</table>
+									
+
+										<table class='m_table gsm_sub_list4_3'>
+											<tr>
+												<td><a href=""><br></a></td>
+											</tr>
+										</table-->
+										
+										</div>
+										</div>
+								</div>
+							</li>
+							<!--dep01_05 ::end-->
+							
+						</ul>
+					</div>
+					<!--gnb2depth ::end-->
+					
+				</div>
+		</div>
+		<!--gnb ::end-->
+		<!--about us BG01 :: start -->
+		<div class="dep01_01bg" style="display: none; height: 255px; background: rgb(255,255,255);">
+			<div class="arrowBox">
+				<div class="step01_arrow"></div>
+			</div>
+		</div>
+        <!--about us BG01 :: end -->
+		<!--smart answer BG02:: start -->
+		<div class="dep01_02bg" style="display: none; height: 255px; background: rgb(255,255,255);">
+			<div class="arrowBox">
+				<div class="step02_arrow"></div>
+			</div>
+		</div>
+        <!--smart answer BG02 :: end -->
+		<!--smart answer BG03:: start -->
+		<div class="dep01_03bg" style=style="background: #fff; display: none;">
+			<div class="arrowBox">
+				<div class="step03_arrow"></div>
+			</div>
+		</div>
+        <!--smart answer BG03 :: end -->
+		<!--smart answer BG04:: start -->
+		<div class="dep01_04bg" style="background: #fff; display: none;">
+			<div class="arrowBox">
+				<div class="step04_arrow"></div>
+			</div>
+		</div>
+        <!--smart answer BG04 :: end -->
+		<!--smart answer BG05:: start -->
+		<div class="dep01_05bg" style="background: #fff; display: none;">
+			<div class="arrowBox">
+				<div class="step05_arrow"></div>
+			</div>
+		</div>
+        <!--smart answer BG05 :: end -->
+	
+		</div>
+		<!--header :: end-->
+		</div>
+		</div>
+		</div>
+		<!--header_inner -->
+		</div>
+		<!-- header -->
+
+
+
+<style>
+	@font-face {
+	font-family : 'Noto Sans', sans-serif;
+	src: url(font/NotoSansCJKkr-Regular.eot);
+	}
+	@font-face {
+	font-family : 'Noto Sans', sans-serif;
+	src: url(font/NotoSansCJKkr-Regular.woff);
+	}
+	.img { background-image: url('image/main/avast_main_bg.png') ; width: 100%; background-position: absolute; background-repeat: no-repeat; margin:0 auto; background-position: center; }
+	.img2 { background-image: url('image/main/avast_main_bg5.png') ; width: 100%; background-position: absolute; background-repeat: no-repeat; margin:0 auto; background-position: center; }
+
+
+	.buy_b_txt { font-family: 'Noto Sans', sans-serif; font-weight: 500; font-size: 27x; letter-spacing: 0.02em; color: #252525; }
+	.cloud { position: relative; float: left; width: 29%; height: 380px; background-color: rgba(0, 0, 0, 0.8); margin-right: 2%; z-index: 1; margin-top: 200px; margin-left:5%; }
+	.cloud .buy-btn { position: absolute; bottom: 0px; left: 0px; width:100%; height: 75px; background-color: #fff; border: 0; -webkit-margin: 0 auto; -ms-margin: 0 auto; -moz-margin: 0 auto; margin: 0 auto; }
+	.cloud .buy-btn .txt { font-family: 'Nanum Gothic', serif; font-weight: 700; font-size: 20px; color: #898989; text-align: center; }
+	.is_1 { position: relative; width: 28%; height: 380px; background-color: rgba(0, 0, 0, 0.8); float: left; margin-right: 2%;
+		z-index: 1;
+		margin-top: 200px;
+		}
+	.is_1 .buy-btn {
+		position: absolute;
+		bottom: 0px;
+		left: 0px;
+		width:100%;
+		height: 75px;
+		background-color: #fff;
+		border:0;
+		-ms-margin: 0 auto;
+		-webkit-margin: 0 auto;
+		-moz-margin: 0 auto;
+		margin-top: 285px;
+		}
+	.is_1 .buy-btn .txt {
+		font-family: 'Nanum Gothic', serif;
+		font-weight: 700;
+		font-size: 20px;
+		color: #898989;
+		text-align: center;
+		}
+	.is_2 {
+		position: relative;
+		width: 29%;
+		height: 380px;
+		background-color: rgba(0, 0, 0, 1);
+		float: left;
+		z-index: 1;
+		margin-top: 200px;
+		margin-right:5%;
+		}
+	.is_2 .buy-btn {
+		position: absolute;
+		bottom: 0px;
+		left: 0px;
+		width:100%;
+		height: 75px;
+		background-color: #fff;
+		border:0;
+		text-align: center;
+		margin-top: 285px;
+		}
+	.is_2 .buy-btn .txt {
+		font-family: 'Nanum Gothic', serif;
+		font-weight: 700;
+		font-size: 20px;
+		color: #898989;
+		text-align: center;
+		}
+
+	.prod_name {
+		font-family: 'Nanum Gothic', serif;
+		font-size: 29px;
+		font-weight: 700;
+		color: #fff;
+		margin-top:20px;
+		letter-spacing: -0.03em;
+		line-height: 30px;
+		}
+		
+	.prod-price {
+		font-family: 'Nanum Gothic', serif;
+		font-weight: 700;
+		font-size: 30px;
+		color: #fff;
+		}
+	.prod_info {
+		font-family: 'Nanum Gothic', serif;
+		font-size: 15px;
+		color: #acacac;
+		margin-top:20px;
+		line-height: 30px;
+		}
+	.check_info {
+		font-family: 'Nanum Gothic', serif;
+		font-size: 14px;
+		letter-spacing: -0.06em;
+		line-height: 10px;
+		color: #ebebeb;
+		}
+	.blog {
+	width: 100%;
+		text-align: center;
+		background-color: #f4f5f6;
+		}
+		.blog2 {
+	width: 100%;
+		text-align: center;
+		background-color: #f4f5f6;
+		}
+	.num-box {
+		width: 50px;
+		}
+	a.tooltips {
+  position: relative;
+  display: inline;
+}
+a.tooltips span {
+  position: absolute;
+  width:140px;
+  color: #FFFFFF;
+  background: #F7941D;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  visibility: hidden;
+  border-radius: 6px;
+}
+a.tooltips span:after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -8px;
+  width: 0; height: 0;
+  border-top: 8px solid #F7941D;
+  border-right: 8px solid transparent;
+  border-left: 8px solid transparent;
+}
+a:hover.tooltips span {
+  visibility: visible;
+  opacity: 0.8;
+  bottom: 30px;
+  left: 50%;
+  margin-left: -76px;
+  z-index: 999;
+}
+a[title]:hover:after {
+  content: attr(title);
+  padding: 4px 8px;
+  color: #333;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  z-index: 20;
+  white-space: nowrap;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -moz-box-shadow: 0px 0px 4px #222;
+  -webkit-box-shadow: 0px 0px 4px #222;
+  box-shadow: 0px 0px 4px #222;
+  background-image: -moz-linear-gradient(top, #eeeeee, #cccccc);
+  background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #eeeeee),color-stop(1, #cccccc));
+  background-image: -webkit-linear-gradient(top, #eeeeee, #cccccc);
+  background-image: -moz-linear-gradient(top, #eeeeee, #cccccc);
+  background-image: -ms-linear-gradient(top, #eeeeee, #cccccc);
+  background-image: -o-linear-gradient(top, #eeeeee, #cccccc);
+}
+
+
+ul {
+list-style-type: none;
+margin-left: -35px;
+/* IE6 Hack */ zoom: 1;
+}
+li {
+float: left;
+
+}
+.clsBannerScreen {overflow: hidden;position: relative;height: 140px;width: 420px; border:1px solid #e1e1e1; cursor:pointer; clear:both;}
+.clsBannerScreen .images {position:absolute; display:none; }
+ul, li {list-style:none; margin:0; padding:0; font-size:10pt; }
+.clsBannerButton {width:420px;cursor:pointer;border-bottom:1px solid #e1e1e1;}
+.clsBannerButton li {width:420px;float:left;border-right:1px solid #e1e1e1;padding:2px;}
+.clsBannerButton li.fir {border-left:1px solid #e1e1e1;}
+
+.clsBannerButton li.labelOverClass {font-weight:bold;}
+
+</style>
+
+</head>
+
+<body>
+
+
+<div class="img2" style="margin:0 auto; widgh:100%; height:910px; background-color:#f7941d;">
+<table style="width: 1024px; text-align: center; margin: 0 auto; float:center;" >
+<tr>
+<td>
+
+<div class="cloud" >
+	<div class="prod_info"  style="margin-top: 45px; ">
+		»ç¿ë±â°£¿¡ ºÎ´ã¾øÀÌ<br>
+		<span class="prod_name">¿ùÁ¤¾× ÇÁ¸®¹Ì¾ö</span><br>
+		<span style="color:#ccc; font-size:17px; margin-top:19px;">1PC / ¿ù</span><br>
+		<div class="prod_info" style="color:#fff; margin-top:0px; line-height:25px;"><span class="prod-price" style="color:#fff;">3,000</span>¿ø</div>
+	
+		<div valign="bottom"><br>
+				
+				<form action="/home-user/cloud_selection.asp" method="post" name="frm" align="center" id="frm" style="text-align:center;">
+				<input name="a_PRODUCT" value="CLOUD" type="hidden" checked>
+				<input name="a_TYPE" value="CARD" type="hidden" checked>  <!--<font color=#FFFFFF>	½Å¿ëÄ«µå</font>&nbsp;-->
+				<!---<input name="a_TYPE" value="MOBILE" type="radio"> <font color=#FFFFFF>	ÈÞ´ëÆù</font><br><br>--->
+				<br>
+
+				<select name="a_USER" size="1" style="width:60px; height:30px; margin-top: -20px;">
+				
+						<option value="1">1°³</option>
+				
+						<option value="2">2°³</option>
+				
+						<option value="3">3°³</option>
+				
+						<option value="4">4°³</option>
+				
+						<option value="5">5°³</option>
+				
+				</select><br>
+				<button type="submit" class="buy-btn" ><font class="txt">BUY</font></button>
+				</form>
+				
+		</div>
+	</div>
+</div>
+
+
+<div class="is_1">
+	<div class="prod_info" style="margin-top: 45px;">
+		ÃÖ°í ¼º´ÉÀÇ ¾îº£½ºÆ® º£½ºÆ®¼¿·¯<br>
+		<span class="prod_name">ÀÎÅÍ³Ý ½ÃÅ¥¸®Æ¼</span><br>
+		<span style="color:#ccc; font-size:17px; margin-top:19px;">1PC / 1³â</span><br>
+		<div class="prod_info" style="color:#fff; margin-top:0px; line-height:25px;"><strike>50,000¿ø</strike><br><span class="prod-price" style="color:#fff;">18,000</span>¿ø</div>
+	
+				
+				<form action="https://shop.avastkorea.com/order_lg/activation_payreq.asp" method="post" name="frm" id="frm" style="text-align:left; margin-left:50px; margin-top:23px;">
+				<input name="a_acti" value="IS1PC1YR_TIME" type="hidden" checked>		
+				<input type="hidden" name="a_MAINT"	value="1">
+				<input type=checkbox name="a_ADDON_CLEANUP"	value="CLEAN1PC1YR_TIME" checked style="width:16px;height:16px; border: 0px; vertical-align:middle"><span class="check_info" style="margin-top:5px"> ¾îº£½ºÆ® Å¬¸°¾÷ : 30,000¿ø</span><br>
+				<!---<input type=checkbox name="a_ADDON_PASSWORD" value="PASSWORD1PC1YR_TIME" checked style="width:16px;height:16px; border: 0px; vertical-align:middle"><span class="check_info" style="margin-top:5px">¾îº£½ºÆ® ºñ¹Ð¹øÈ£ : 7,800¿ø</span><br>-->
+				<input type=checkbox name="a_ADDON"	value="WISECARE1PC1YR_TIME" checked style="width:16px;height:16px; border: 0px; vertical-align:middle""><span class="check_info" style="margin-top:5px"> ¿ÍÀÌÁîÄÉ¾î : 9,000¿ø</span><br>
+				
+				<select name="a_COUNT" size="1" style="width:60px; height:30px; margin-left:60px; margin-top: 10px;">
+				
+						<option value="1">1°³</option>
+				
+						<option value="2">2°³</option>
+				
+						<option value="3">3°³</option>
+				
+						<option value="4">4°³</option>
+				
+						<option value="5">5°³</option>
+				
+						<option value="6">6°³</option>
+				
+						<option value="7">7°³</option>
+				
+						<option value="8">8°³</option>
+				
+						<option value="9">9°³</option>
+				
+						<option value="10">10°³</option>
+				
+				</select><br>
+				<button type="submit" class="buy-btn" ><font class="txt">BUY</font></button>
+				</form>
+		</div>
+	
+</div>
+
+
+
+
+<div class="is_2">
+	<div class="prod_info" style="margin-top: 45px;">
+		¿À·£½Ã°£ Ä£±¸Ã³·³ ÇÔ²² ÇÒ<br>
+		<span class="prod_name" style="color:#f7941d">ÀÎÅÍ³Ý ½ÃÅ¥¸®Æ¼</span><br>
+		<span style=" color:#f7941d; font-size:17px; margin-top:5px;">3PC / 3³â</span><br>
+		<div class="prod_info" style="color:#f7941d; margin-top:0px; line-height:25px;"><strike>140,000¿ø</strike><br><span class="prod-price" style="color:#f7941d;">90,000</span>¿ø<br><span style="font-size:17px;">È¸¿ø: 80,000¿ø</span></div>
+
+				<form action="https://shop.avastkorea.com/order_lg/payreq.asp" method="post" name="frm" id="frm" style="text-align:left; margin-left: 80px; margin-top:15px;">
+				<input type="hidden" name="a_IS"  value = "3">
+				<input type="hidden" name="a_MAINT" value="3">
+				<input type=checkbox name="a_ADDON_CLEANUP" value="CLEANUP_ADDON"><span class="check_info" style="margin-top:5px"> ¾îº£½ºÆ® Å¬¸°¾÷<br>
+				<!--input type=checkbox name="a_ADDON_PASSWORD" value="PASSWORD_ADDON" checked style="width:16px;height:16px; border: 0px; vertical-align:middle"><span class="check_info" style="margin-top:5px">¾îº£½ºÆ®  ºñ¹Ð¹øÈ£<br> 
+				<!--input type=checkbox name="a_ADDON1" value="SECURELINE1PC1YR_ADDON" style="width:16px;height:16px; border: 0px; vertical-align:middle"><span class="check_info" style="margin-top:5px">½ÃÅ¥¾î¶óÀÎ VPN<br>
+				<input type=checkbox name="a_ADDON" value="WISECARE1PC1YR_ADDON" checked style="width:16px;height:16px; border: 0px; vertical-align:middle"><span class="check_info" style="margin-top:5px">¿ÍÀÌÁîÄÉ¾î<br--> 
+				<button type="submit" class="buy-btn" ><font class="txt">BUY</font></button>
+				</form>
+		</div>
+	</div>
+</div>
+
+
+</td>
+</tr>
+</table>
+
+</div>
+
+
+
+<div class="blog" style="background-color:#f4f5f6; padding-top:120px; width:100%; float:center;">
+<table width="1024px"  border=0 cellpadding=0 cellspacing=0 align="center">
+<tr>
+<td width="200px"  style="background-color:#ccc; text-align:center;" title="¾îº£½ºÆ® °øÁö»çÇ×" alt="¾îº£½ºÆ® °øÁö»çÇ×"><font style="font-size:40px; color:#fff;">News</font></td>
+	<td width="824px">
+		<table width="670"  border="0" cellpadding="0" cellspacing="0" style="margin-left:40px; text-align:left;">
+		<tr>
+			<td valign="top" align="left"> 
+		
+		
+<div id="blog_news">
+<img src='/images/ic_dot01.gif' style='vertical-align:middle;'>&nbsp;&nbsp;&nbsp;<a class='font-family: 'Nanum Gothic, sans-serif; font-size:20px; line-height:28px; letter-spacing:-0.03em;' href="http://blog.avastkorea.com/1084">°ø°ø ¿ÍÀÌÆÄÀÌ¿¡¼­ ¾ÆÀÌÆù À¯ÀúµéÀ» º¸È£ÇØ ÁÖ´Â ¹«·á¾Û Avast SecureMe</font><br><img src='/images/ic_dot01.gif' style='vertical-align:middle;'>&nbsp;&nbsp;&nbsp;<a class='font-family: 'Nanum Gothic, sans-serif; font-size:20px; line-height:28px; letter-spacing:-0.03em;' href="http://blog.avastkorea.com/1083">WINDOWS 10 È£È¯ ¿£µåÆ÷ÀÎÆ® Á¦Ç°±º Á¤½Ä ¹öÀü Ãâ½Ã</font><br><img src='/images/ic_dot01.gif' style='vertical-align:middle;'>&nbsp;&nbsp;&nbsp;<a class='font-family: 'Nanum Gothic, sans-serif; font-size:20px; line-height:28px; letter-spacing:-0.03em;' href="http://blog.avastkorea.com/1082">¾îº£½ºÆ®´Â ¸Ó½Å ÇÐ½À¿¡ ±â¹ÝÀ» µÐ À§Çù Å½Áö ±â¼ú Àû¿ë</font><br><img src='/images/ic_dot01.gif' style='vertical-align:middle;'>&nbsp;&nbsp;&nbsp;<a class='font-family: 'Nanum Gothic, sans-serif; font-size:20px; line-height:28px; letter-spacing:-0.03em;' href="http://blog.avastkorea.com/1081">¸®´ª½º À¥¼­¹ö¸¦ °¨¿°½ÃÅ°´Â »õ·Î¿î ·£¼¶¿þ¾î º¯Á¾ ÃâÇö, ¾ÕÀ¸·Î ±â¾÷ÀÇ À¥»çÀÌÆ®¸¦ ÀÎÁú·Î »ïÀ» µí...</font><br><img src='/images/ic_dot01.gif' style='vertical-align:middle;'>&nbsp;&nbsp;&nbsp;<a class='font-family: 'Nanum Gothic, sans-serif; font-size:20px; line-height:28px; letter-spacing:-0.03em;' href="http://blog.avastkorea.com/1080">·£¼¶¿þ¾î¿¡ ´ëÀÀÇÏ±â À§ÇÑ ¾îº£½ºÆ® ¼³Á¤ ¹æ¹ý</font><br>
+</div>
+
+			</td>
+		</tr>
+		</table>
+		
+	</td>
+</tr>
+</table>
+<br><br><br><br>
+</div>
+
+
+
+<div class="blog2" style="width:100%;" >
+<table width="1024px"  border=0 cellpadding=0 cellspacing=0 align="center">
+<tr>
+	<td width="50%" align="left">
+	<table>
+		<tr>
+		<td><ul>
+				<li style="text-align:center; font-weight: 700; line-height: 15px;"><a href="http://www.avastkorea.com/company/contacts.asp"><img src="/image/main/icon1.png"><br><br><span style="margin-left:8px";>°í°´Áö¿ø</a></span></li>
+				<li style="text-align:center; font-weight: 700; line-height: 15px;"><a href="http://www.avastkorea.com/support/virus.asp"><img src="/image/main/icon2.png" style="margin-left:20px;"><br><br><span style="margin-left:20px";>½Å°íÇÏ±â</span></li>
+				<li style="text-align:center; font-weight: 700; line-height: 15px;"><a href="http://www.avastkorea.com/business/quote.asp"><img src="/image/main/icon3.png" style="margin-left:20px;"><br><br><span style="margin-left:20px";>°ßÀû¿äÃ»</span></a></li>
+				<li style="text-align:center; font-weight: 700; line-height: 15px;"><a href="http://cafe.naver.com/avastkorea" target="sns"><img src="/image/main/icon4.png" style="margin-left:20px;"><br><br><span style="margin-left:20px";>ÁúÀÇÀÀ´ä</span></a></li>
+		</ul></td></tr></table>
+		</td>
+		<td width="50%" align="right">
+			<table>
+				<tr>
+				<td>
+
+				<div id="image_list_1">
+<div class="clsBannerScreen">
+	<div class="images" style="display:block"><a href="http://shop.avastkorea.com/order_lg/payreq.asp?a_IS=3&a_MAINT=3&_ga=1.207389715.1888870844.1450053701"><img src="/image/s_ba01.jpg" /></a></div>
+	<div class="images"><a href="http://www.avastkorea.com/home-user/wisecare.asp"><img src="/image/s_ba02.jpg" /></a></div>
+	<div class="images"><a href="http://www.avastkorea.com/home-user/secureline.asp"><img src="/image/s_ba03.jpg"  /></a></div>
+	
+</div>
+
+			
+	
+</div>
+
+
+
+<script type="text/javascript">
+		$('.DB_banner4').DB_slideStepBanner({
+			key:'b28551',        //¶óÀÌ¼¾½ºÅ°	
+			moveSpeed:300,                  //ÀÌµ¿¼Óµµ
+			dir:'next',                     //ÁøÇà¹æÇâ('next','prev')
+			autoRollingTime:5000            //ÀÚµ¿·Ñ¸µ½Ã°£(¹Ð¸®ÃÊ)
+		})
+</script>
+
+					
+				</td>
+				</tr>
+				</table>
+	</td>
+</tr>
+<tr>
+	<td height="50px"></td>
+</tr>
+</table>
+
+<div/>
+
+
+
+
+<center>
+
+		
+<!--- ±¤°í
+<a href="http://shop.avastkorea.com/order_lg/payreq.asp?a_IS=3&a_MAINT=3"><img src="http://shop.avastkorea.com/images/banner/buy_is33.png" border=0></a><br><br>
+ ±¤°í --->
+
+		<!---<center><a href="http://shop.avastkorea.com/order_lg/payreq.asp?a_IS=3&a_MAINT=3"><img src="http://shop.avastkorea.com/images/banner/email_banner_is33.jpg" width=689  border=0></a></center>-->
+		<br><br>
+
+	
+
+</center>
+
+
+		<!---
+		LGÀ¯ÇÃ·¯½º PG(Çö´ëÄ«µå 5¸¸¿ø ÀÌ»ó ±¸¸Å½Ã 2-3°³¿ù ¹«ÀÌÀÚÇÒºÎ), <b>È¯ºÒ±ÔÁ¤</b> : 30ÀÏ ¸Ó´Ï¹é °³·±Æ¼(´Ü, °øµ¿±¸¸Å´Â ¶óÀÌ¼±½º¹ß±ÞÀÌÀü)<br> 
+		¾îº£½ºÆ® °³ÀÎÁ¤º¸´Â ´ç»çÀÇ HALON SX¹æÈ­º®, Æ®¸´¼¾Æ®¸® À¥¹æÈ­º®, ¾îº£½ºÆ® ¼­¹ö¿ë ¹é½Å, SPG½ºÆÔ¸ÞÀÏ Â÷´Ü½Ã½ºÅÛÀ¸·Î º¸È£µÇ°í ÀÖ½À´Ï´Ù.<br>
+		--->
+
+
+</div>
+</s_t3>	
+
+
+<!-- tail -->
+<div id='tail' style="text-align:left; background:#2e3740; ">
+	<div class='tail_inner' style="background:#2e3740; ">
+
+<!-- ÇªÅÍ »çÀÌÆ® ¸Ê ½ÃÀÛ -->
+		<div class='t_m'>
+			<h3>¿ùÁ¤¾×</h3>
+				<div class='tail_menu'>
+					<a href="http://www.avastkorea.com/home-user/cloud.asp">°³ÀÎ¿ë ÇÁ¸®¹Ì¾ö ¿ùÁ¤¾× ¼­ºñ½º</a><br>
+					<a href="http://www.avastkorea.com/business/cloud.asp">¾÷¹«¿ë ¿ùÁ¤¾× ¼­ºñ½º (PC¿ë)</a><br>
+					<a href="http://www.avastkorea.com/business/managed.asp">¾÷¹«¿ë ¿ùÁ¤¾× ¼­ºñ½º (¼­¹ö¿ë)</a><br>
+					<a href="http://www.avastkorea.com/business/solution.asp">¾÷¹«¿ë Æ÷·»½Ä APTÂ÷´Ü ¼­ºñ½º (ÁØºñ Áß)</a>
+					<a href="http://www.avastkorea.com/home-user/cloud_how.asp">¿ùÁ¤¾× ¼­ºñ½º GUIDE</a>
+				</div><br>
+			<h3>°³ÀÎ¿ë</h3>
+				<div class='tail_menu'>
+					<a href="http://www.avastkorea.com/home-user/default.asp">avast! °³ÀÎ¿ë ¶óÀÌ¼±½º</a><br>
+					<a href="http://www.avastkorea.com/home-user/cloud.asp">avast! ¿ùÁ¤¾× ¼­ºñ½º</a><br>
+					<a href="http://www.avastkorea.com/home-user/secureline.asp">avast! ½ÃÅ¥¾î¶óÀÎ VPN</a><br>
+					<a href="http://www.avastkorea.com/home-user/wisecare.asp">¿ÍÀÌÁîÄÉ¾î ( PC Æ©´× À¯Æ¿¸®Æ¼ )</a>
+				</div>
+		</div>
+
+		<div class='t_m'>
+			<h3>¾÷¹«¿ë</h3>
+				<div class='tail_menu'>
+					<a href="http://www.avastkorea.com/business/endpoint.asp">avast! ¿£µåÆ÷ÀÎÆ®</a><br>
+					<a href="http://www.avastkorea.com/business/server-security.asp">avast! ¼­¹ö¿ë ¹é½Å</a><br>
+					<a href="http://www.avastkorea.com/business/cloud.asp">avast! ¿ùÁ¤¾× ¼­ºñ½º</a><br>
+					<a href="http://www.avastkorea.com/business/solution.asp">·£¼¶¿þ¾î¤ýAPTÂ÷´Ü, Æ÷·»½Ä ¼­ºñ½º</a><br>
+					<a href="http://www.avastkorea.com/business/quote.asp">avast! °ßÀû ¿äÃ»</a><br>
+					<a href="http://www.avastkorea.com/business/reference.asp">´ëÇ¥ ·¡ÆÛ·±½º</a><br>
+					<a href="http://www.avastkorea.com/partners/">ÆÄÆ®³Ê ¹× ¸®¼¿·¯</a><br>
+				</div>
+		</div>
+
+		<div class='t_m'>
+			<h3>°í°´Áö¿ø</h3>
+				<div class='tail_menu'>
+					<a href="http://www.avastkorea.com/support/virus.asp">¹ÙÀÌ·¯½º ¹× ¿ÀÁø ½Å°í</a><br>
+					<a href="http://www.avastkorea.com/support/remote_support.asp">¿ø°Ý °í°´Áö¿ø</a><br>
+					<a href="http://www.avastkorea.com/support/awards.asp">¼ö»ó ½ÇÀû</a><br>
+					<a href="http://www.avastkorea.com/support/ad.asp">±¤°í »ç·Ê</a><br>
+					<a href="http://www.avastkorea.com/login/my_news_unsubscribe.asp">´º½º¼ö½ÅÇØÁö</a><br>
+					<a href="http://www.avastkorea.com/support/FAQs.asp">FAQs</a><br>
+					<a href="http://www.avastkorea.com/support/return_refund.asp">È¯ºÒ ¹× ¹ÝÇ° Á¤Ã¥</a><br>
+					<a href="http://www.avastkorea.com/support/facebook.asp">ÆäÀÌ½ººÏ À¯Àú</a>
+				</div><br>
+		</div>
+
+		<div class='t_m'>
+			<h3>´Ù¿î·Îµå</h3>
+				<div class='tail_menu'>
+					<a href="http://www.avastkorea.com/download">°³ÀÎ¿ë ¼³Ä¡ ÆÄÀÏ</a><br>
+					<a href="http://www.avastkorea.com/support/documents.asp">avast! ¹®¼­</a><br>
+					<a href="http://www.avastkorea.com/support/tools.asp">avast! µµ±¸ ÇÁ·Î±×·¥</a><br>
+					<a href="http://www.avastkorea.com/support/wallpapers.asp">avast! ¹è°æÈ­¸é</a><br><br>
+				</div>
+		<div><br>
+			<h3>Á¦Ç°±¸¸Å</h3>
+				<div class='tail_menu'>
+					<a href="http://shop.avastkorea.com">¾îº£½ºÆ®¼¥</a><br>
+				</div>
+		</div>
+	</div>
+<!-- ÇªÅÍ »çÀÌÆ® ¸Ê ³¡ -->
+
+
+<!-- »ç¿ë¾à°ü ¿Ü ¼Ò¼È ¾ÆÀÌÄÜ ½ÃÀÛ -->
+	<div class='cl'></div>
+		<div style="background:#2e3740;">
+			<div class='left tail_menu2' style="background:#2e3740; margin-top:5px;">
+				<a href="http://www.softmail.co.kr/page1.asp">È¸»ç¼Ò°³</a><img src='/image/tail_menu2_line.gif'>
+				<a href="http://www.avastkorea.com/company/agreement.asp">»ç¿ë¾à°ü</a><img src='/image/tail_menu2_line.gif'>
+				<a href="http://www.avastkorea.com/company/privacy.asp">°³ÀÎÁ¤º¸Ãë±Þ¹æÄ§</a><img src='/image/tail_menu2_line.gif'>
+				<a href="http://www.avastkorea.com/login/my_news_unsubscribe.asp">´º½º¼ö½ÅÇØÁö</a>
+			</div>		
+			<div class='left' style='padding:45px 0 0 220px;background:#2e3740; margin-top:5px;'>
+				<a href="http://blog.avastkorea.com" title="ºí·Î±×" target="sns"><img src='/image/link1.jpg'></a>
+				<a href="http://cafe.naver.com/avastkorea" title="Ä«Æä"  target="sns"><img src='/image/link2.jpg'></a>
+				<a href="https://www.facebook.com/avast0" title="ÆäÀÌ½ººÏ"  target="sns"><img src='/image/link3.jpg'></a>
+				<a href="http://twitter.com/avastkorea" title="Æ®À§ÅÍ"  target="sns"><img src='/image/link4.jpg'></a>
+				<a href="https://www.youtube.com/user/AVASTKOREA" title="avast! À¯Æ©ºê"  target="sns"><img src='/image/link5.jpg'></a>			
+			</div>	
+			<div class='right' style='padding-top:50px;background:#2e3740;'>
+				<select class='site_select2' onChange='if(this.selectedIndex) { this.blur(); window.open(options[selectedIndex].value); }' style="font-family: Nanum Gothic, serif; font-size: 13px;width:230px; height:30px; margin-left:3px;">
+					<option>FAMILY SITE</option>
+					<option style='font-size:13px;' value="http://www.softmail.co.kr"><a href="">(ÁÖ)¼ÒÇÁÆ®¸ÞÀÏ</a></option>
+					<option style='font-size:13px;' value="http://www.icewarp.co.kr"><a href="">¸ÞÀÏ¼Ö·ç¼Ç | IceWarp ¸ÞÀÏ¼­¹ö</a></option>
+					<option style='font-size:13px;' value="http://www.spamblock.co.kr"><a href="">¸ÞÀÏ¼Ö·ç¼Ç | ½ºÆÔºí·Ï ½ºÆÔ¸ÞÀÏÂ÷´Ü</a></option>
+					<option style='font-size:13px;' value="http://www.malwarebytes.co.kr"><a href="">º¸¾È¼Ö·ç¼Ç | ¸Ö¿þ¾î¹ÙÀÌÆ® ¾Ç¼ºÄÚµå Áø´Ü</a></option>
+					<option style='font-size:13px;' value="http://www.avastkorea.com"><a href="">º¸¾È¼Ö·ç¼Ç | ¾îº£½ºÆ® ¾ÈÆ¼¹ÙÀÌ·¯½º</a></option>
+					<option style='font-size:13px;' value="http://www.secureline.co.kr"><a href="">º¸¾È¼Ö·ç¼Ç | ¾îº£½ºÆ® ½ÃÅ¥¾î¶óÀÎ VPN</a></option>
+				</select>
+			</div>	
+	</div>
+<!-- »ç¿ë¾à°ü ¿Ü ¼Ò¼È ¾ÆÀÌÄÜ ³¡ -->
+	
+<!-- tail_inner-->
+</div>
+<!-- tail -->
+
+<!-- address -->
+	<div class='cl address'>
+		<div class='address_inner'>
+			<p style='padding-bottom:0px; margin-top:30px;'><a href="http://www.softmail.co.kr" target="_blank"><img src='/image/t_logo.jpg' ></a></p>
+				<address>
+					(ÁÖ)¼ÒÇÁÆ®¸ÞÀÏ&nbsp : »ç¾÷ÀÚµî·Ï¹øÈ£ : 214-87-14889&nbsp Åë½ÅÆÇ¸Å¾÷½Å°í¹øÈ£ : ±¸·ÎÁ¦0716È£<br>
+					´ëÇ¥ÀÌ»ç : ¿ÀºÀ±Ù ¦¢ ( 08389 ) ¼­¿ï½Ã ±¸·Î±¸ µðÁöÅÐ·Î 272 ÇÑ½ÅITÅ¸¿ö 1305È£ ¦¢ ´ëÇ¥ÀüÈ­ : 1661-9331 ¦¢ ÆÑ½º : 02-3486-9331<br>  
+					avast! is registered trademark of AVAST Software a.s. and is used in www.softmail.co.kr under non-exclusive license from AVAST Software a.s.
+				</address>
+			<img style="margin-left:2px; margin-top:10px;" width=120 src="/images/banner_left_side/kt_m.jpg"><img style="margin-top:12px;" width=120 src="/images/banner_left_side/s1_m.jpg">
+			<div style="margin-left:2px; margin-top:10px;">
+			<script  type="text/javascript" src="http://widgets.amung.us/small.js"></script><script type="text/javascript">WAU_small('l5gu097i4o5e')</script></din>
+		</div><!-- address_inner -->
+	</div><!-- address -->
+
+</body>
+</html>

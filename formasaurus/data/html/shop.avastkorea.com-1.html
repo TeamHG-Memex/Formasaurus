@@ -1,0 +1,453 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<META name="verify-v1" content="brMfp/wqbGdghngh4r1CbtlrgxV6kLiicuG8/TMVZLo=" /> 
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr" />
+<link rel="stylesheet" media="screen" type="text/css" href="../common/css/style2.css" />
+<link rel="stylesheet" type="text/css" href="lib/css/style.css" />
+<link rel="shortcut icon" href="../images/favicon.ico" />
+
+<title>¾îº£½ºÆ® | ·Î±×ÀÎ</title>
+
+<!-- jQuery -->
+	<script type='text/javascript' src="lib/js/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript">
+
+		$(document).ready(function(){
+			$('#Mail').focus();
+			$('#sendNum').click(function(e){
+				var adr = $('#Mail').val();
+				var num = 802719		//jQuery¿¡¼­ ¼­¹ö¿¡¼­ ÀúÀåÇÏ°í ÀÖ´Â key°ª ºÒ·¯¿À±â
+				var filter1 = /^(\w+)@(\w+)[.](\w+)$/;
+				var filter2 = /^(\w+)@(\w+)[.](\w+)[.](\w+)$/;
+				var filter3 = /^[a-z\d][\w\d_\.-]+@[a-z\d][\w\d-]+\.[a-z\.]{2,6}$/;
+			
+				if(adr.length<=0){
+					alert("ÀÌ¸ÞÀÏÀ» ÀÔ·ÂÇØÁÖ¼¼¿ä");
+					return false;
+				}
+				if(filter1.test(adr)!=true && filter2.test(adr)!=true &&  filter3.test(adr)!=true)	{
+					alert('ÀÌ¸ÞÀÏ Çü½Ä¿¡ ¸ÂÁö ¾Ê½À´Ï´Ù');
+					return false;
+				}
+				
+				//jQueryÀÇ ajax¸¦ ÀÌ¿ëÇÏ¿© ÀÎÁõ ¹øÈ£ °ªÀ» ¼­¹ö¿¡ Àü¼Û.
+					$.ajax({
+						type: 'get',
+						url:'sendmail.asp',
+						data:{address:adr, key:num},
+						success: function(data){
+							alert("ÀÌ¸ÞÀÏ·Î ÀÎÁõ¹øÈ£¸¦ º¸³Â½À´Ï´Ù.");
+					}
+				});
+			});	
+		});
+
+function infocheck() {
+	var email = document.user.Mail.value; 
+	var num = document.user.i_num.value;
+	var key = 802719
+
+	if ( email.search(/(\S+)@(\S+)\.(\S+)/) == -1 ) {
+        	alert("E-mail Çü½ÄÀº 'account@[µµ¸ÞÀÎ.com]'°ú °°ÀÌ ÀÔ·ÂÇÏ¼¼¿ä."); 
+        	document.user.Mail.focus(); 
+        	return false;
+	}
+	//ÀÎÁõ¹øÈ£ 6ÀÚ¸® ÀÌÇÏÀÏ¶§ °æ°íÃ¢ÀÌ ¶ã ¼ö ÀÖµµ·Ï ±¸Çö.
+	if(num.length<6) {
+		alert("ÀÎÁõ ¹øÈ£ 6ÀÚ¸®¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä");
+		document.user.i_num.focus();
+		return false;
+	}
+	
+	if (document.user.Name.value.length < 2) {
+	 	alert("¼ºÇÔÀ» Á¤È®È÷ ÀÔ·ÂÇØ ÁÖ¼¼¿ä.");
+	 	document.user.Name.focus();
+	  	return false;
+	}
+
+	if (document.user.Name.value.length > 30) {
+	  	alert("¼ºÇÔÀ» ÇÑ±Û 7ÀÚ ÀÌ³»·Î Àû¾î ÁÖ¼¼¿ä.");
+	  	document.user.Name.focus();
+	  	return false;
+	}
+
+	var eng_check =  /[`~!@#$%^&*|\\\'\";:\/?]/gi;
+	if (document.user.Name.value.search(eng_check)>=0)
+	{
+	alert("Æ¯¼ö¹®ÀÚ ¹× ¼ýÀÚ°¡ Æ÷ÇÔµÇ¾î ÀÖ½À´Ï´Ù.");
+		return false;
+	}
+}
+
+/*ÀÌ ÇÔ¼ö´Â textbox¿¡¼­ °ªÀ» ¹ÞÀ» ¶§ ¼ýÀÚ¸¸ ¹Þ±â À§ÇÑ ÇÔ¼ö·Î windowÀÇ keyCode°ªÀ¸·Î ±¸ÇöÇÏ¿´´Ù.*/
+
+	function checkNum() {
+			var num = document.user.i_num.value;
+			var evCode = (window.netscape) ? Ev.which : event.keyCode;			// 8Àº ¡ç(¹é½ºÆäÀÌ½º), 9´Â TAB, 13Àº ENTER, 17Àº CTRL, 86Àº v, 33~40±îÁö´Â ¿· º¸Á¶ ¼ýÀÚÅ° 
+			if((evCode < 48 || evCode > 57) && (evCode < 96 || evCode > 105) && evCode !=8 && evCode!=9 && evCode!=13 && evCode!=17 && evCode!=86 && (evCode < 37 || evCode > 40)) {
+				if(window.netscape) {
+					Ev.preventDefault();
+				}else {
+					alert("¼ýÀÚ¸¸ ÀÔ·ÂÇÏ¼¼¿ä");
+					num="";
+					document.user.i_num.focus();
+					event.returnValue = false;
+				}
+			}
+	}
+</script>
+
+</head>
+<body>
+
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PD9V8F"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PD9V8F');</script>
+<!-- End Google Tag Manager -->
+
+
+
+<!--- ¾îº£½ºÆ® ¸ÞÀÎ ¸Þ´º¸¦ À§ÇÑ °÷ --->
+<link	rel="stylesheet" type="text/css"  href="/common/css/menu_styles.css" />
+<script src="/common/js/menu_common.js" type="text/javascript"></script>
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/ko_KR/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+<!--·Ñ¿À¹ö ¿©±â¼­ ½ÃÀÛ -->
+<script type="text/javascript">
+<!--
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+</script>
+
+
+
+<!--- ¾îº£½ºÆ® ¸ÞÀÎ ¸Þ´º¸¦ À§ÇÑ °÷ --->
+<script type="text/javascript" src="/common/js/jquery.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		var currentPosition = parseInt($("#slidemenu").css("top"));
+		$(window).scroll(function() {
+			var position = $(window).scrollTop(); // ÇöÀç ½ºÅ©·Ñ¹ÙÀÇ À§Ä¡°ªÀ» ¹ÝÈ¯ÇÕ´Ï´Ù.
+			$("#slidemenu").stop().animate({"top":position+currentPosition+"px"},1000);
+		});
+	});
+</script>
+<style type="text/css">
+#slidemenu{background=#ffffff;position:absolute;width:190px;top:120px;right:1px;}
+</style>
+
+
+
+
+<!-- ·Ñ¿À¹ö ¿©±â±îÁö -->
+
+<center>
+<table width=100% border=0 cellpadding=0 cellspacing=0><tr><td height=3 bgcolor=#ffffff></td></tr></table>
+<table width=100% height=70 border=0 cellpadding=0 cellspacing=0 bgcolor=#FFFFFF>
+<TR>
+	<td align=center>
+		<table width=960 cellpadding=0 cellspacing=0 border=0>
+		<tr>
+			<TD width=200 align=left><a href="http://www.avastkorea.com"><img src="/images/logo.png" alt="avast! ¾ÈÆ¼¹ÙÀÌ·¯½º"></a><br>
+			<!--shop.avastkorea.com-->
+			</TD>
+			<TD width=10></TD>
+			<TD align="left">
+
+				<table width=100% border=0 cellpadding=0 cellspacing=0 style="FONT-SIZE: 13px; FONT-FAMILY: Nanum Gothic, serif; COLOR:#898989; margin-right:5px;">
+				<tr>
+					<td align=right>
+
+				
+					&nbsp;<a href="http://shop.avastkorea.com/login/"><span style="color:#f26522">·Î±×ÀÎ</span></a>&nbsp; | 
+				
+				<!--
+					<a style="FONT-SIZE: 8pt; FONT-FAMILY: ¸¼Àº °íµñ, µ¸À½, Vernada, Arial; COLOR:#000000" href="#" onclick="add_HomePage(this); return false;">½ÃÀÛÆäÀÌÁö</a> | 
+					<a style="FONT-SIZE: 8pt; FONT-FAMILY: ¸¼Àº °íµñ, µ¸À½, Vernada, Arial; COLOR:#000000" href="#" onclick="add_Favorites(this); return false;">Áñ°ÜÃ£±â</a>
+				-->
+				
+
+					&nbsp;VPS :16020100&nbsp; | 
+					&nbsp;<a href="http://www.softmail.jp">Japan</a> |
+					&nbsp;<a href="http://www.avastshop.com">English</a>
+				</td>
+				</tr>
+				</table>
+
+				<table border=0 cellpadding=2 cellspacing=1 style="FONT-SIZE: 17px; FONT-FAMILY: Nanum Gothic, serif; font-weight:700; COLOR:#898989;">
+				<tr>
+					<td width=70 align=center valign=middle>
+						<a href="http://www.avastkorea.com/home-user/">°³ÀÎ¿ë</a>
+					</td>
+					<td width=70 align=center valign=middle>
+						<a href="http://www.avastkorea.com/business/">¾÷¹«¿ë</a>
+					</td>
+					<td width=80 align=center valign=middle>
+						<a href="http://www.avastkorea.com/support/">°í°´Áö¿ø</a>
+					</td>
+					<td width=80 align=center valign=middle>
+						<a href="http://shop.avastkorea.com/">Á¦Ç°±¸¸Å</a>
+					</td>
+				</tr>
+				</table>	
+
+
+			</TD>
+		</tr>
+		</table>
+	</TD>
+</TR>
+</TABLE>
+<table width=100% border=0 cellpadding=0 cellspacing=0><tr><td height=3 bgcolor=#ffffff></td></tr></table>
+<table width=100% border=0 cellpadding=0 cellspacing=0><tr><td height=1 bgcolor=#e0e0e0></td></tr></table>
+
+<s_t3>
+<div id="container">
+<!---------------- º» ¹® ½ÃÀÛ ----------------------->
+
+
+	<center>
+		<table bgcolor="#efefef" border="0" cellpadding="0" cellspacing="0" width="100%" style="font-size: 11pt; color:#000000; font-family: ¸¼Àº °íµñ, Verdana">
+			<tr bgcolor="#ffffff" height="110">
+				<td width="230" align="left" valign="top">
+					<script language="javascript">
+function moveRemote() {
+	window.open("http://939.co.kr/softmail/","Privacy","satus=yes,scrollbars=yes,resizeable=yes, width=840px, height=590px");
+}
+</script>
+
+
+<table height=500 width=220 border=0 cellpadding=0 cellspacing=0>
+<tr height=30>
+	<td bgcolor=#FFFFFF align=left valign=top>
+
+		
+			¼Õ´ÔÀ¸·Î Á¢¼ÓÇÏ¼Ì½À´Ï´Ù.
+		
+		<br>
+
+		
+			<a href="/login/">È¸¿ø ·Î±×ÀÎ</a><br>
+			<a href="/login/my_regist.asp">È¸¿ø °¡ÀÔ</a><br>
+		
+
+
+
+
+	</td>
+	<td width=5 background="/images/col_shad.gif"></td>
+</tr>
+</table>
+
+
+				</td>
+				<td align="left" valign="top" >
+
+					 <table id="login_container" class="login-table">
+					<thead>     <!-- ·Î±×ÀÎ ·Î°í ÀÌ¹ÌÁö -->
+						<tr>
+							<th><img src="lib/images/login_top.jpg"/></th>
+						</tr>
+					</thead>
+				<tbody>
+					<tr>
+						<td>
+							<FORM NAME="user" ACTION="login_ok.asp" METHOD="POST" onsubmit="return infocheck();">
+								<input id="i_product" name = "i_product" value="" type="hidden">
+								<table id="login_form" class="login-form-table">
+									<tr height=20px><td colspan=2></td></tr>
+									<tr>
+										<td class="td1"><img src="lib/images/login_email.jpg"/></td>
+										<td class="td2">
+											<input id="Mail" name="Mail" class="email-input"/>&nbsp;
+											<!-- ÀÎÁõ¹øÈ£ Àü¼Û ¹öÆ°-->
+												<input type="button" id="sendNum" value=" ÀÎÁõ¹øÈ£Àü¼Û " class="sdn-btn"/>
+										</td>
+									   
+									</tr>
+									<tr>
+										<td class="td1"><img src="lib/images/login_number.jpg"/><input type="hidden" id="i_key" name="i_key" value="802719" /></td>
+										
+										<td class="td2">
+											
+											<input type="text" id="i_num" name="i_num" maxlength="6" onkeydown="checkNum();" onkeypress="checkNum();" class="input-text"></input>
+										</td>
+									  
+									</tr>
+									<tr>
+										<td class="td1"><img src="lib/images/login_name.jpg"/></td>
+										<td class="td2">
+											<input type="text" id="Name" name="Name" class="input-text" />&nbsp;
+											 <input type="submit" id="login_next" name="Next"  class="next-btn" value="·Î±×ÀÎ"/>
+										</td>
+									</tr>
+									<tr height=20px><td colspan=2></td></tr>
+								</table>
+							</form>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+
+
+			</TD>
+		</TR>
+		</table>
+<br>
+
+
+
+<!---------------- º» ¹® ½ÃÀÛ ----------------------->
+
+</div>
+</s_t3>	
+
+
+
+
+<Center>
+<table width=960 border=0 cellpadding=0 cellspacing=0 bgcolor=#FFFFFF>
+<tr height=40>
+	<td width=110 align=right>
+		<a href="http://blog.avastkorea.com" title="ºí·Î±×" target="sns"><IMG width=30 SRC="/images/shop_images/shop_blog-icon.jpg" border=0 alt="avast! ºí·Î±×"></a>  
+		<a href="http://cafe.naver.com/avastkorea"	title="Ä«Æä"  target="sns"><IMG width=30 SRC="/images/shop_images/shop_cafe-icon.jpg" border=0 alt="avast! Ä«Æä"></a>  
+		<a href="http://www.facebook.com/avast0"	title="ÆäÀÌ½ººÏ"  target="sns"><IMG width=30 SRC="/images/shop_images/shop_facebook-icon.jpg" border=0 alt="avast! ÆäÀÌ½ººÏ"></a>
+		<a href="http://twitter.com/avastkorea"		title="Æ®À§ÅÍ"  target="sns"><IMG width=30 SRC="/images/shop_images/shop_twitter-icon.jpg" border=0 alt="avast! Æ®À§ÅÍ"></a> 
+		<a href="http://www.youtube.com/avastkorea"		title="avast! À¯Åõºê"  target="sns"><img src="/images/shop_images/shop_youtube-icon.jpg" border=0 height=30></a>
+		<!-- <a href="https://plus.google.com/118349175655520578146/posts?hl=ko"	title="avast! ±¸±Û+"  target="sns"><IMG width=30 SRC="/images/sns/google.gif" border=0 alt="avast! ±¸±Û+"></a> -->
+	</td>
+</tr>
+</table>
+</center>
+
+<!---
+<TABLE bgcolor=#c0c0c0 border=0 cellpadding=0 cellspacing=0 width="100%" style="FONT-SIZE: 9pt; COLOR:#000000; FONT-FAMILY: Verdana">
+<TR>
+	<TD align=center>
+		<table width=960 border=0 cellpadding=0 cellspacing=0>
+		<tr>
+			<td>
+				<br>
+		<center>
+		<a href="http://shop.avastkorea.com/order_lg/payreq.asp?a_IS=3&a_MAINT=3"><img src="http://shop.avastkorea.com/images/banner/buy_is33.png" border=0></a>
+		</center><br>
+			</td>
+		</tr>
+		</table>
+	</TD>
+</TR>
+</TABLE>
+--->
+
+
+<TABLE bgcolor=#555555 border=0 cellpadding=0 cellspacing=0 width="100%" style="FONT-SIZE: 9pt; COLOR:#000000; FONT-FAMILY: Verdana">
+<TR>
+	<TD align=center>
+
+		<table width=960 border=0 cellpadding=0 cellspacing=0 bgcolor=#555555>
+		<tr height=40>
+			<TD width=200></TD>
+			<TD align=center>
+				<div style="font-family: ¸¼Àº °íµñ; font-size:11px; color:#FFFFFF;">
+				 <a style="FONT-SIZE: 9pt; COLOR:#FFFFFF; FONT-FAMILY: ¸¼Àº °íµñ, Verdana" href="/login/my_news_unsubscribe.asp">´º½º¼ö½ÅÇØÁö</a> |
+				 <a style="FONT-SIZE: 9pt; COLOR:#FFFFFF; FONT-FAMILY: ¸¼Àº °íµñ, Verdana" href="http://www.avastkorea.com/company/agreement.asp">»ç¿ë¾à°ü</a> |
+				 <a style="FONT-SIZE: 9pt; COLOR:#FFFFFF; FONT-FAMILY: ¸¼Àº °íµñ, Verdana" href="http://www.avastkorea.com/company/privacy.asp">°³ÀÎÁ¤º¸Ãë±Þ¹æÄ§</a> |
+				 <a style="FONT-SIZE: 9pt; COLOR:#FFFFFF; FONT-FAMILY: ¸¼Àº °íµñ, Verdana" href="http://www.avastkorea.com/company/contacts.asp">¿¬¶ôÃ³</a> |
+				 <a style="FONT-SIZE: 9pt; COLOR:#FFFFFF; FONT-FAMILY: ¸¼Àº °íµñ, Verdana" href="http://www.avastkorea.com/partners/">ÆÄÆ®³Ê</a> |
+				 <a style="FONT-SIZE: 9pt; COLOR:#FFFFFF; FONT-FAMILY: ¸¼Àº °íµñ, Verdana" href="http://shop.avastkorea.com/">¼îÇÎ¸ô</a>
+				</div>
+			</td>
+			<TD width=200 align=right>
+			
+				<div id="Layer_family" style="font-family: ¸¼Àº °íµñ;">
+				<!--position:absolute; left: 10px; z-index:1; top:5px;"-->
+				<select name="select" onChange='if(this.selectedIndex) { this.blur(); window.open(options[selectedIndex].value); }' style="font-family: ¸¼Àº °íµñ;width:230px;">
+				<option value="" selected>ÆÐ¹Ð¸® »çÀÌÆ® ¹Ù·Î°¡±â</option>
+				<option value="http://www.icewarp.co.kr">¸ÞÀÏ¼Ö·ç¼Ç | IceWarp ¸ÞÀÏ¼­¹ö</option>
+				<option value="http://www.spamblock.co.kr">¸ÞÀÏ¼Ö·ç¼Ç | ½ºÆÔºí·Ï ½ºÆÔ¸ÞÀÏÂ÷´Ü</option>
+				<option value="http://www.malwarebytes.co.kr">º¸¾È¼Ö·ç¼Ç | ¸Ö¿þ¾î¹ÙÀÌÆ® ¾Ç¼ºÄÚµå Áø´Ü</option>
+				<option value="http://www.avastkorea.com">º¸¾È¼Ö·ç¼Ç | ¾îº£½ºÆ® ¾ÈÆ¼¹ÙÀÌ·¯½º</option>
+				<option value="http://www.secureline.co.kr">º¸¾È¼Ö·ç¼Ç | ¾îº£½ºÆ® ½ÃÅ¥¾î¶óÀÎ VPN</option>
+				</select>
+				</div>			
+				
+			</TD>
+		</TR>
+		</TABLE>
+	</td>
+</tr>
+</table>
+
+
+
+<TABLE bgcolor=#959595 border=0 cellpadding=0 cellspacing=0 width="100%" style="FONT-SIZE: 9pt; COLOR:#000000; FONT-FAMILY: Verdana">
+<TR>
+	<TD align=center>
+		<table width=960 border=0 cellpadding=0 cellspacing=0>
+		<tr>
+			<TD width=150 align=left><a href="http://www.avastkorea.com"><img src="/images/shop_images/shop_copy_logo.jpg"></a><br><br></TD>
+			<TD align=left>
+				<br>
+				<div style="font-family: ¸¼Àº °íµñ, µ¸À½, Arial; font-size:11px; color:#FFFFFF;">
+				(ÁÖ)¼ÒÇÁÆ®¸ÞÀÏ, »ç¾÷ÀÚ¹øÈ£ 214-87-14889 | Åë½ÅÆÇ¸Å¾÷½Å°í¹øÈ£ ±¸·ÎÁ¦0716È£<br>
+				´ëÇ¥ÀÌ»ç ¿ÀºÀ±Ù |  ( 08389 ) ¼­¿ï½Ã ±¸·Î±¸ µðÁöÅÐ·Î 272 ÇÑ½ÅITÅ¸¿ö 1305È£<br>
+				´ëÇ¥ÀüÈ­ 1661-9331 ÆÑ½º 02-3486-9331<br>
+				avast! is a registered trademark of AVAST Software a.s. and is used in www.softmail.co.kr (avastkorea.com) under non-exclusive license from AVAST Software a.s. 
+				</div>
+				<br>
+				
+				<center><script type="text/javascript" src="http://widgets.amung.us/small.js"></script><script type="text/javascript">WAU_small('l5gu097i4o5e')</script></center>
+			
+			</TD>
+		</TR>
+		</TABLE>
+		<br><br><br>
+	</TD>
+</TR>
+</TABLE>
+
+
+
+</body>
+</html>

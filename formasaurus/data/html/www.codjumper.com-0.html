@@ -1,0 +1,743 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-gb" xml:lang="en-gb">
+<head>
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta http-equiv="content-language" content="en-gb" />
+<meta http-equiv="content-style-type" content="text/css" />
+<meta http-equiv="imagetoolbar" content="no" />
+<meta name="resource-type" content="document" />
+<meta name="distribution" content="global" />
+<meta name="copyright" content="2002-2006 phpBB Group" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+
+<title>CoDJumper.com &bull; View topic - [ADDED] short and easy #3</title>
+
+<link rel="stylesheet" href="./styles/melankolia/theme/stylesheet.css" type="text/css" />
+
+<style type="text/css">
+	.expandCode {
+    color: #AAAAAA;
+    cursor: pointer;
+    position: absolute;
+    right: 4px;
+    top:0;
+	}
+	.noExpand {
+	    max-height: inherit !important;
+	    overflow: visible !important;
+	}
+
+	div.codecontent {
+	    max-height: 348px;
+	    overflow-y: scroll;
+	}
+	div.codetitle {
+			position:relative;
+	}
+</style>
+
+<script type="text/javascript">
+// <![CDATA[
+
+
+function popup(url, width, height, name)
+{
+	if (!name)
+	{
+		name = '_popup';
+	}
+
+	window.open(url.replace(/&amp;/g, '&'), name, 'height=' + height + ',resizable=yes,scrollbars=yes,width=' + width);
+	return false;
+}
+
+function jumpto()
+{
+	var page = prompt('Enter the page number you wish to go to:', '1');
+	var perpage = '';
+	var base_url = '';
+
+	if (page !== null && !isNaN(page) && page > 0)
+	{
+		document.location.href = base_url.replace(/&amp;/g, '&') + '&start=' + ((page - 1) * perpage);
+	}
+}
+
+/**
+* Find a member
+*/
+function find_username(url)
+{
+	popup(url, 760, 570, '_usersearch');
+	return false;
+}
+
+/**
+* Mark/unmark checklist
+* id = ID of parent container, name = name prefix, state = state [true/false]
+*/
+function marklist(id, name, state)
+{
+	var parent = document.getElementById(id);
+	if (!parent)
+	{
+		eval('parent = document.' + id);
+	}
+
+	if (!parent)
+	{
+		return;
+	}
+
+	var rb = parent.getElementsByTagName('input');
+
+	for (var r = 0; r < rb.length; r++)
+	{
+		if (rb[r].name.substr(0, name.length) == name)
+		{
+			rb[r].checked = state;
+		}
+	}
+}
+
+
+
+function loadExpand(){
+    var arr = document.getElementsByTagName('span');
+    var i = 0;
+    var ard = new Array();
+
+    for (var j = 0; j < arr.length; j++)
+    {
+
+        if(typeof arr[j] === 'undefined')
+            continue;
+
+        if(arr[j].className == "expandCode")
+            if(arr[j].parentNode.nextSibling.clientHeight < 358)
+            {
+                ard[i] = arr[j];
+                i++;
+            }
+            else
+            {
+                arr[j].innerHTML = "[ Expand ]";
+                arr[j].parentNode.nextSibling.className = "codecontent";
+            }
+    }
+
+    for(i = ard.length-1;i>=0;i--)
+        var d = ard[i].parentNode.removeChild(ard[i]);
+}
+
+function expandCode(e)
+{
+    var e = window.event || e;
+    var t = e.target || e.srcElement;
+    var content = t.parentNode.nextSibling;
+    if(t.innerHTML == "[ Expand ]"){
+        content.className = "codecontent noExpand";
+        t.innerHTML = "[ Contract ]";
+    }else{
+        content.className = "codecontent";
+        t.innerHTML = "[ Expand ]";
+    }
+}
+
+if (window.addEventListener) {
+    // DOM2 standard
+    window.addEventListener("load", handler, false);
+}
+else if (window.attachEvent) {
+    // Microsoft's precursor to it, IE8 and earlier
+    window.attachEvent("onload", handler);
+}
+else {
+    // Some pre-1999 browser
+    window.onload = handler;
+}
+
+function handler() {
+	loadExpand();
+}
+// ]]>
+</script>
+<link href="./styles/melankolia/theme/web/style.css" rel="stylesheet" type="text/css" media="screen, projection" />
+</head>
+<body class="ltr">
+<div class="outside">
+<div class="top-left"></div><div class="top-center"></div><div class="top-right"></div>
+<div class="inside">
+<div class="notopgap">
+<a name="top"></a>
+
+<div id="wrapheader">
+<div id="logodesc">
+			<a class="logo" align="center" href="./index.php?sid=886368491313f10e4e9882fe089832c7"><img src="./styles/melankolia/imageset/site_logo.jpg"></img></a>
+</div>
+
+<div align="center">
+<table><tr>
+<td width="126"><a href="http://youtube.com/CoDJumper" title="Subscribe to our YouTube channel!" target="_blank"><img src="../images/youtube1.jpg" alt="CoDJumper.com YouTube Channel logo" vspace="2" border="0"></a> </td>
+
+<td width="126"> <a href="http://facebook.com/CoDJumper" title="Join our group on Facebook!" target="_blank" >  <img src="http://codjumper.com/images/facebook1.jpg" alt="CoDJumper.com Facebook group logo" vspace="2"   border="0"></a>  </td>
+
+<td width="126"><a href="http://social.xfire.com/communities/codjumper" title="Join our Xfire community!" target="_blank" > <img src="../images/xfire1.jpg" alt="CoDJumper.com Xfire group"  vspace="2"  border="0"></a> </td>
+
+<td width="126"><a href="http://twitter.com/codjumper" title="Follow us on Twitter!" target="_blank" ><img src="../images/twitter1.jpg" alt="CoDJumper.com Twitter logo" vspace="2"  border="0"></a> </td>
+
+<td width="126"><a href="http://steamcommunity.com/groups/codjumper" title="Join our group on Steam!" target="_blank" ><img src="http://codjumper.com/images/steam1.jpg" alt="CoDJumper.com Steam group logo" vspace="2"  border="0"></a>   </td>
+</tr>
+</table>
+
+
+<table width="100%" height="135" border="0" cellpadding="0" cellspacing="0">
+<tr> <td class="row1" background="http://www.codjumper.com/forums/styles/melankolia/theme/web/images/bg.gif" width="50"  valign="middle"> <img src="http://codjumper.com/images/latestvid.gif" border="0" height="120" width="50"></td>
+<td class="row1" background="http://www.codjumper.com/forums/styles/melankolia/theme/web/images/bg.gif" width="100%" valign="top">
+
+<br>
+
+ <link rel="stylesheet" type="text/css" href="../gallerystyleforum.css" />
+ <!-- Do not edit IE conditional style below -->
+<!--[if gte IE 5.5]>
+<style type="text/css">
+#motioncontainer {
+width:expression(Math.min(this.offsetWidth, maxwidth)+'px');
+}
+</style>
+<![endif]-->
+<!-- End Conditional Style -->
+
+<script type="text/javascript" src="../motiongallery.js">
+
+/***********************************************
+* CMotion Image Gallery- � Dynamic Drive DHTML code library (www.dynamicdrive.com)
+* Visit http://www.dynamicDrive.com for hundreds of DHTML scripts
+* This notice must stay intact for legal use
+* Modified by Jscheuer1 for autowidth and optional starting positions
+***********************************************/
+
+</script>
+
+<center>
+ <div id="motioncontainer" style="position: relative; overflow: hidden; max-width: 1000px;top:-5px;">
+
+<div id="motiongallery" style="position:absolute;left:0;top:0;white-space: nowrap;">
+<nobr id="trueContainer">
+<table cellpadding="0" cellspacing="0" align="center" valign="top" height="100%" width="100%"><tr>
+  <td align="center" valign="top" width="180" height="180" style="white-space:normal;width:250px"><div style="width:180px;height:180"><a href="http://www.youtube.com/watch?v=wNu8TbRLIIk" title="Backlot Fun Rush by Deizer (CoD4) (PC)"><img width="115" valign="top" height="86" style="margin-bottom:2px;border-color:#999;" src="http://i1.ytimg.com/vi/wNu8TbRLIIk/0.jpg" border="1" alt="Backlot Fun Rush by Deizer (CoD4) (PC)"><br><b>Backlot Fun Rush by Deizer (CoD4) (PC)</b></a><br><font color="#444444"><b>Added:</b> February 1, 2016</font></div></td><td width="17"><img src="images/spacer.gif" style="width:17px;height:1px;"></td><td align="center" valign="top" width="180" height="180" style="white-space:normal;width:250px"><div style="width:180px;height:180"><a href="http://www.youtube.com/watch?v=_86tIy7SofE" title="Xpayne vs Crossfire (CoD4) (PC)"><img width="115" valign="top" height="86" style="margin-bottom:2px;border-color:#999;" src="http://i1.ytimg.com/vi/_86tIy7SofE/0.jpg" border="1" alt="Xpayne vs Crossfire (CoD4) (PC)"><br><b>Xpayne vs Crossfire (CoD4) (PC)</b></a><br><font color="#444444"><b>Added:</b> January 27, 2016</font></div></td><td width="17"><img src="images/spacer.gif" style="width:17px;height:1px;"></td><td align="center" valign="top" width="180" height="180" style="white-space:normal;width:250px"><div style="width:180px;height:180"><a href="http://www.youtube.com/watch?v=fVTbRMgTYFA" title="Crossfire by Jakcod4 (CoD4) (PC)"><img width="115" valign="top" height="86" style="margin-bottom:2px;border-color:#999;" src="http://i1.ytimg.com/vi/fVTbRMgTYFA/0.jpg" border="1" alt="Crossfire by Jakcod4 (CoD4) (PC)"><br><b>Crossfire by Jakcod4 (CoD4) (PC)</b></a><br><font color="#444444"><b>Added:</b> January 25, 2016</font></div></td><td width="17"><img src="images/spacer.gif" style="width:17px;height:1px;"></td><td align="center" valign="top" width="180" height="180" style="white-space:normal;width:250px"><div style="width:180px;height:180"><a href="http://www.youtube.com/watch?v=y_a_GgYdKIY" title="CoD4 - mp_descent_v3 Walkthrough (Easy)"><img width="115" valign="top" height="86" style="margin-bottom:2px;border-color:#999;" src="http://i1.ytimg.com/vi/y_a_GgYdKIY/0.jpg" border="1" alt="CoD4 - mp_descent_v3 Walkthrough (Easy)"><br><b>CoD4 - mp_descent_v3 Walkthrough (Easy)</b></a><br><font color="#444444"><b>Added:</b> January 22, 2016</font></div></td><td width="17"><img src="images/spacer.gif" style="width:17px;height:1px;"></td><td align="center" valign="top" width="180" height="180" style="white-space:normal;width:250px"><div style="width:180px;height:180"><a href="http://www.youtube.com/watch?v=UCQCAcAzEjg" title="Short and Easy #3 (CoD4) (PC)"><img width="115" valign="top" height="86" style="margin-bottom:2px;border-color:#999;" src="http://i1.ytimg.com/vi/UCQCAcAzEjg/0.jpg" border="1" alt="Short and Easy #3 (CoD4) (PC)"><br><b>Short and Easy #3 (CoD4) (PC)</b></a><br><font color="#444444"><b>Added:</b> January 20, 2016</font></div></td><td width="17"><img src="images/spacer.gif" style="width:17px;height:1px;"></td><td align="center" valign="top" width="180" height="180" style="white-space:normal;width:250px"><div style="width:180px;height:180"><a href="http://www.youtube.com/watch?v=zjy7437wNdQ" title="Amazing Hard Strafes Montage on Console (MW2) (Xbox360)"><img width="115" valign="top" height="86" style="margin-bottom:2px;border-color:#999;" src="http://i1.ytimg.com/vi/zjy7437wNdQ/0.jpg" border="1" alt="Amazing Hard Strafes Montage on Console (MW2) (Xbox360)"><br><b>Amazing Hard Strafes Montage on Console (MW2) (Xbox360)</b></a><br><font color="#444444"><b>Added:</b> January 18, 2016</font></div></td><td width="17"><img src="images/spacer.gif" style="width:17px;height:1px;"></td><td align="center" valign="top" width="180" height="180" style="white-space:normal;width:250px"><div style="width:180px;height:180"><a href="http://www.youtube.com/watch?v=v1oUZppdjIU" title="CoD4 - mp_bridge_v2 Walkthrough (Hard) (PC)"><img width="115" valign="top" height="86" style="margin-bottom:2px;border-color:#999;" src="http://i1.ytimg.com/vi/v1oUZppdjIU/0.jpg" border="1" alt="CoD4 - mp_bridge_v2 Walkthrough (Hard) (PC)"><br><b>CoD4 - mp_bridge_v2 Walkthrough (Hard) (PC)</b></a><br><font color="#444444"><b>Added:</b> January 15, 2016</font></div></td><td width="17"><img src="images/spacer.gif" style="width:17px;height:1px;"></td><td align="center" valign="top" width="180" height="180" style="white-space:normal;width:250px"><div style="width:180px;height:180"><a href="http://www.youtube.com/watch?v=s6X2226s5V8" title="New Glitches?Strafes by Penny Stealer (MW2) (Xbox360) (Bonus"><img width="115" valign="top" height="86" style="margin-bottom:2px;border-color:#999;" src="http://i1.ytimg.com/vi/s6X2226s5V8/0.jpg" border="1" alt="New Glitches?Strafes by Penny Stealer (MW2) (Xbox360) (Bonus"><br><b>New Glitches?Strafes by Penny Stealer (MW2) (Xbox360) (Bonus</b></a><br><font color="#444444"><b>Added:</b> January 12, 2016</font></div></td>
+
+</tr></table>
+</nobr>
+</div>
+</div>
+</center>
+
+</td></tr>
+<tr height="5"><td height="5"> </td></tr>
+</table>
+
+<!---- 
+
+<div style="background-color:#34bfe7;v-align:center;text-align:middle;">
+<marquee direction="left" onmouseover=this.stop() onmouseout=this.start() scrollDelay="1" scrollamount="4" height="20" width="90%">
+<h3><b><font color="black">**NEWSFLASH** Server redirects for downloads are temporarily disabled. Please use "cl_wwwDownload 0" to get files direct from server. Thank you.</font></b></h3>
+</marquee>
+</div>
+
+ ---->
+
+
+
+
+</div>
+	<table class="tablebg" cellspacing="1" width="100%">
+<tr>
+<td class="row1" height="40px" width="73%">
+			<p class="breadcrumbs"><a href="./index.php?sid=886368491313f10e4e9882fe089832c7"><strong><img src="./styles/melankolia/imageset/folder.gif"></img>Board index</strong></a>
+
+			
+			
+			
+			
+			
+ &#187; <strong><strong></strong>&nbsp;<a href="./viewforum.php?f=31&amp;sid=886368491313f10e4e9882fe089832c7">Important Forums</a> &#187; <strong><strong></strong>&nbsp;<a href="./viewforum.php?f=62&amp;sid=886368491313f10e4e9882fe089832c7">YouTube Upload Requests</a>
+<br /><img src="./styles/melankolia/imageset/folder2.gif"></img><a class="topictitle" href="./viewtopic.php?f=62&amp;t=16822&amp;sid=886368491313f10e4e9882fe089832c7">[ADDED] short and easy #3</a></p>
+<div align="center"> <p></p></div>
+			</td>
+<td class="row2" height="40px" width="27%">
+<table width="100%" cellspacing="0">
+<tr>
+&nbsp;
+</tr>
+</table>
+
+<table width="100%" cellspacing="0">
+<tr>
+<td class="genmed">
+</td></tr></table>
+</td></tr>
+</table>
+	<div id="menubar" colspan="2">
+		<table width="100%" cellspacing="0">
+		<tr>
+			<td align="center">
+				
+     <a target="_blank" class="menubar" href="http://www.codjumper.com/index.php">Website</a>
+     <a target="_blank" class="menubar"  href="http://www.codjumper.com/maps">Maps</a>
+	 <a target="_blank" class="menubar" href="http://www.codjumper.com/faqs.php">FAQ</a>
+		       <a href="./ucp.php?mode=register&amp;sid=886368491313f10e4e9882fe089832c7" class="menubar"><strong>Register</strong></a><a href="./search.php?sid=886368491313f10e4e9882fe089832c7" class="menubar"><strong>Search</strong></a><span lang="en-gb">
+                </span><td class="row5" align="right"><a align="" href="./ucp.php?mode=login&amp;sid=886368491313f10e4e9882fe089832c7" class="menubar"><strong>Login</strong></td>
+
+            </td>
+		</tr>
+		</table>
+	</div>
+</div>
+<div id="wrapcentre">
+		<br style="clear: both;" />
+
+<div id="pageheader">
+	<h2><a class="titles" href="./viewtopic.php?f=62&amp;t=16822&amp;sid=886368491313f10e4e9882fe089832c7">[ADDED] short and easy #3</a></h2>
+
+
+	<p class="moderators">Moderator: <span style="color:#BF4000;">Core Staff</span></p>
+
+</div>
+
+<br clear="all" /><br />
+
+<div id="pagecontent">
+
+	<table width="100%" cellspacing="1">
+	<tr>
+		<td align="left" valign="middle" nowrap="nowrap">
+		<a href="./posting.php?mode=post&amp;f=62&amp;sid=886368491313f10e4e9882fe089832c7"><img src="./styles/melankolia/imageset/en/button_topic_new.gif" alt="Post new topic" title="Post new topic" /></a>&nbsp;<a href="./posting.php?mode=reply&amp;f=62&amp;t=16822&amp;sid=886368491313f10e4e9882fe089832c7"><img src="./styles/melankolia/imageset/en/button_topic_reply.gif" alt="Reply to topic" title="Reply to topic" /></a>
+		</td>
+		
+			<td class="nav" valign="middle" nowrap="nowrap">&nbsp;Page <strong>1</strong> of <strong>1</strong><br /></td>
+			<td class="gensmall" nowrap="nowrap">&nbsp;[ 2 posts ]&nbsp;</td>
+			<td class="gensmall" width="100%" align="right" nowrap="nowrap"></td>
+		
+	</tr>
+	</table>
+
+	<table class="tablebg" width="100%" cellspacing="1">
+	<tr>
+		<td class="cat">
+			<table width="100%" cellspacing="0">
+			<tr>
+				<td class="nav" nowrap="nowrap">&nbsp;
+				
+				</td>
+				<td class="nav" align="right" nowrap="nowrap"><a class="kat" href="./viewtopic.php?f=62&amp;t=16822&amp;view=previous&amp;sid=886368491313f10e4e9882fe089832c7">Previous topic</a> | <a class="kat" href="./viewtopic.php?f=62&amp;t=16822&amp;view=next&amp;sid=886368491313f10e4e9882fe089832c7">Next topic</a>&nbsp;</td>
+			</tr>
+			</table>
+		</td>
+	</tr>
+
+	</table>
+
+
+	<table class="tablebg" width="100%" cellspacing="1">
+	
+		<tr>
+			<th>Author</th>
+			<th>Message</th>
+		</tr>
+	<tr class="row1">
+
+			<td align="center" valign="middle" class="row2">
+				<a name="p181325"></a>
+				<b class="postauthor">nhatlam1804</b>
+			</td>
+			<td width="100%" height="25" class="row1">
+				<table width="100%" cellspacing="0">
+				<tr>
+				
+					<td class="gensmall" width="100%"><div style="float: left;">&nbsp;<b>Post subject:</b> [ADDED] short and easy #3</div><div style="float: right;"><a href="./viewtopic.php?p=181325&amp;sid=886368491313f10e4e9882fe089832c7#p181325"><img src="./styles/melankolia/imageset/icon_post_target.gif" width="12" height="9" alt="Post" title="Post" /></a><b>Posted:</b> January 9th, 2016, 2:30 am&nbsp;</div></td>
+				</tr>
+				</table>
+			</td>
+		</tr>
+		
+		<tr class="row1">
+
+			<td valign="top" class="row2">
+				<table cellspacing="4" align="center" width="180" >
+			
+				<tr>
+					<td><img src="./images/ranks/newbie.jpg" alt="CJ Newbie" title="CJ Newbie" /></td>
+				</tr>
+			
+				</table>
+
+				<span>
+					<div class="postdetails"><b>Joined:</b> July 26th, 2012, 7:33 pm</div><div class="postdetails"><b>Posts:</b> 75</div>
+						<div class="postdetails"><b>X-Fire:</b> execution4ever</div>
+					
+				</span>
+
+			</td>
+			<td valign="top">
+				<table width="100%" cellspacing="5">
+				<tr>
+					<td>
+					
+
+						<div class="postbody">YouTube channel link: <!-- m --><a class="postlink" href="http://www.youtube.com/user/nhaclaam">http://www.youtube.com/user/nhaclaam</a><!-- m --><br />YouTube video link: <!-- m --><a class="postlink" href="http://www.youtube.com/watch?v=PDT3sEzDXrw">http://www.youtube.com/watch?v=PDT3sEzDXrw</a><!-- m --><br />Download link*: <!-- m --><a class="postlink" href="https://mega.nz/#!eMVRzbKC!7ekMttydqV9mraZCjij73MwjqtSnWLDzDcB6cfSaCvw">https://mega.nz/#!eMVRzbKC!7ekMttydqV9m ... cB6cfSaCvw</a><!-- m --><br />Music: Foyone - #RapSinCorte XXIV</div>
+
+					<br clear="all" /><br />
+
+						<table width="100%" cellspacing="0">
+						<tr valign="middle">
+							<td class="gensmall" align="right">
+							
+							</td>
+						</tr>
+						</table>
+					</td>
+				</tr>
+				</table>
+			</td>
+		</tr>
+
+		<tr class="row1">
+
+			<td class="row2"><a href="./memberlist.php?mode=viewprofile&amp;u=12439&amp;sid=886368491313f10e4e9882fe089832c7"><img src="./styles/melankolia/imageset/en/icon_user_profile.gif" alt="Profile" title="Profile" /></a> &nbsp;<img src="./styles/melankolia/imageset/en/icon_user_offline.gif" alt="Offline" title="Offline" /></td>
+			<td><div class="gensmall" style="float: right;"><a href="./posting.php?mode=quote&amp;f=62&amp;p=181325&amp;sid=886368491313f10e4e9882fe089832c7"><img src="./styles/melankolia/imageset/en/icon_post_quote.gif" alt="Reply with quote" title="Reply with quote" /></a> &nbsp;</div></td>
+		</tr>
+
+	
+	
+	<tr>
+		<td class="spacer" colspan="2" height="1"><img src="images/spacer.gif" alt="" width="1" height="1" /></td>
+	</tr>
+	</table>
+
+	<table class="tablebg" width="100%" cellspacing="1">
+	<tr class="row1">
+
+			<td align="center" valign="middle" class="row2">
+				<a name="p181352"></a>
+				<b class="postauthor" style="color: #FFBF00">Xpayne</b>
+			</td>
+			<td width="100%" height="25" class="row1">
+				<table width="100%" cellspacing="0">
+				<tr>
+				
+					<td class="gensmall" width="100%"><div style="float: left;">&nbsp;<b>Post subject:</b> Re: [ADDED] short and easy #3</div><div style="float: right;"><a href="./viewtopic.php?p=181352&amp;sid=886368491313f10e4e9882fe089832c7#p181352"><img src="./styles/melankolia/imageset/icon_post_target.gif" width="12" height="9" alt="Post" title="Post" /></a><b>Posted:</b> January 20th, 2016, 6:40 pm&nbsp;</div></td>
+				</tr>
+				</table>
+			</td>
+		</tr>
+		
+		<tr class="row1">
+
+			<td valign="top" class="row2">
+				<table cellspacing="4" align="center" width="180" >
+			
+				<tr>
+					<td><img src="./images/ranks/pc_team.jpg" alt="PC Team" title="PC Team" /></td>
+				</tr>
+			
+				<tr>
+					<td><img src="./download/file.php?avatar=5529_1323787951.png" width="130" height="130" alt="User avatar" /></td>
+				</tr>
+			
+				</table>
+
+				<span>
+					<div class="postdetails"><b>Joined:</b> May 13th, 2008, 8:17 am</div><div class="postdetails"><b>Posts:</b> 1226</div><div class="postdetails"><b>Location:</b> Estonia</div>
+						<div class="postdetails"><b>X-Fire:</b> xpayne5</div>
+					
+				</span>
+
+			</td>
+			<td valign="top">
+				<table width="100%" cellspacing="5">
+				<tr>
+					<td>
+					
+
+						<div class="postbody">Thank you. Added.</div>
+
+					
+						<span class="postbody"><br />_________________<br />I'll take care of checking whether the music is royalty-free or not <br /><br />Let's save this post.<br /><br /><a href="http://www.codjumper.com/forums/images/ranks/pc_team.jpg" class="postlink"><img src="http://www.codjumper.com/forums/images/ranks/pc_team.jpg" alt="Image" /></a><br /><br />Uploaded with <a href="http://imageshack.us" class="postlink">ImageShack.us</a></span>
+					<br clear="all" /><br />
+
+						<table width="100%" cellspacing="0">
+						<tr valign="middle">
+							<td class="gensmall" align="right">
+							
+							</td>
+						</tr>
+						</table>
+					</td>
+				</tr>
+				</table>
+			</td>
+		</tr>
+
+		<tr class="row1">
+
+			<td class="row2"><a href="./memberlist.php?mode=viewprofile&amp;u=5529&amp;sid=886368491313f10e4e9882fe089832c7"><img src="./styles/melankolia/imageset/en/icon_user_profile.gif" alt="Profile" title="Profile" /></a> &nbsp;<img src="./styles/melankolia/imageset/en/icon_user_offline.gif" alt="Offline" title="Offline" /></td>
+			<td><div class="gensmall" style="float: right;"><a href="./posting.php?mode=quote&amp;f=62&amp;p=181352&amp;sid=886368491313f10e4e9882fe089832c7"><img src="./styles/melankolia/imageset/en/icon_post_quote.gif" alt="Reply with quote" title="Reply with quote" /></a> &nbsp;</div></td>
+		</tr>
+
+	
+	
+	<tr>
+		<td class="spacer" colspan="2" height="1"><img src="images/spacer.gif" alt="" width="1" height="1" /></td>
+	</tr>
+	</table>
+
+
+	<table width="100%" cellspacing="1" class="tablebg">
+	<tr align="center">
+		<td class="cat"><form name="viewtopic" method="post" action="./viewtopic.php?f=62&amp;t=16822&amp;sid=886368491313f10e4e9882fe089832c7"><p gensmall="" style="color: #40BFE7;"><span class="gensmall">Display posts from previous:</span> <select name="st" id="st"><option value="0" selected="selected">All posts</option><option value="1">1 day</option><option value="7">7 days</option><option value="14">2 weeks</option><option value="30">1 month</option><option value="90">3 months</option><option value="180">6 months</option><option value="365">1 year</option></select>&nbsp;<span class="gensmall">Sort by</span> <select name="sk" id="sk"><option value="a">Author</option><option value="t" selected="selected">Post time</option><option value="s">Subject</option></select> <select name="sd" id="sd"><option value="a" selected="selected">Ascending</option><option value="d">Descending</option></select>&nbsp;<input class="btnlite" type="submit" value="Go" name="sort" /></p></form></td>
+	</tr>
+	</table>
+
+	<table width="100%" cellspacing="1">
+	<tr>
+		<td align="left" valign="middle" nowrap="nowrap">
+		<a href="./posting.php?mode=post&amp;f=62&amp;sid=886368491313f10e4e9882fe089832c7"><img src="./styles/melankolia/imageset/en/button_topic_new.gif" alt="Post new topic" title="Post new topic" /></a>&nbsp;<a href="./posting.php?mode=reply&amp;f=62&amp;t=16822&amp;sid=886368491313f10e4e9882fe089832c7"><img src="./styles/melankolia/imageset/en/button_topic_reply.gif" alt="Reply to topic" title="Reply to topic" /></a>
+		</td>
+		
+			<td class="nav" valign="middle" nowrap="nowrap">&nbsp;Page <strong>1</strong> of <strong>1</strong><br /></td>
+			<td class="gensmall" nowrap="nowrap">&nbsp;[ 2 posts ]&nbsp;</td>
+			<td class="gensmall" width="100%" align="right" nowrap="nowrap">&nbsp;
+	
+</td>
+		
+	</tr>
+	</table>
+
+</div>
+
+<div id="pagefooter"></div>
+
+                        <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber1">
+                          <tr>
+                            <td width="100%"><p align="left"><a href="http://www.codjumper.com/forums/index.php"><b>Index</b></a>
+			 
+			&#187; <strong><a href="./viewforum.php?f=31&amp;sid=886368491313f10e4e9882fe089832c7">Important Forums</a> 
+			&#187; <strong><a href="./viewforum.php?f=62&amp;sid=886368491313f10e4e9882fe089832c7">YouTube Upload Requests</a>
+			</strong><strong>
+            </strong>
+                              </p>
+                              <p></td>
+                          </tr>
+                        </table>
+                        <strong>
+	                    <p>&nbsp;</p>
+
+	<table class="tablebg" width="100%" cellspacing="1">
+	<p>&nbsp;</p>
+	<tr>
+	<td colspan="2" class="cat"><h4 style="color: rgb(29, 169, 216);"> Who is online</h4></td>
+	</tr>
+		<td colspan="2" class="row1"><p class="gensmall">Users browsing this forum: No registered users and 1 guest</p></td>
+		</tr>
+
+	<tr>
+	
+	<td colspan="2" class="cat"><h4 style="color: rgb(29, 169, 216);"> Panel</h4></td>
+	</tr>
+<tr class="row1">
+	<td class="row1" width="40%" valign="top" nowrap="nowrap" align="left"><span class="gensmall"><a href="#wrapcentre"><strong>Top</strong></a></span></td>
+	<td class="row1" align="right" valign="top" nowrap="nowrap"><span class="gensmall">You <strong>cannot</strong> post new topics in this forum<br />You <strong>cannot</strong> reply to topics in this forum<br />You <strong>cannot</strong> edit your posts in this forum<br />You <strong>cannot</strong> delete your posts in this forum<br />You <strong>cannot</strong> post attachments in this forum<br /></span></td>
+</tr>
+<tr class="row1">
+	<td class="row1"><form method="post" name="search" action="./search.php?sid=886368491313f10e4e9882fe089832c7"><span class="gensmall">Search for:</span> <input class="post" type="text" name="keywords" size="20" /> <input class="btnlite" type="submit" value="Go" /></form></td>
+	<td class="row1" align="right">
+	<form method="post" name="jumpbox" action="./viewforum.php?sid=886368491313f10e4e9882fe089832c7" onsubmit="if(document.jumpbox.f.value == -1){return false;}">
+
+	<table cellspacing="0" cellpadding="0" border="0">
+	<tr>
+		<td nowrap="nowrap"><span class="gensmall">Jump to:</span>&nbsp;<select name="f" onchange="if(this.options[this.selectedIndex].value != -1){ document.forms['jumpbox'].submit() }">
+
+		
+			<option value="-1">Select a forum</option>
+		<option value="-1">------------------</option>
+			<option value="31">Important Forums</option>
+		
+			<option value="1">&nbsp; &nbsp;News &amp; Announcements</option>
+		
+			<option value="62" selected="selected">&nbsp; &nbsp;YouTube Upload Requests</option>
+		
+			<option value="32">General</option>
+		
+			<option value="4">&nbsp; &nbsp;CoDJumper Chat</option>
+		
+			<option value="2">&nbsp; &nbsp;General Chat</option>
+		
+			<option value="12">&nbsp; &nbsp;Servers</option>
+		
+			<option value="3">&nbsp; &nbsp;Help and Support</option>
+		
+			<option value="58">&nbsp; &nbsp;Clan Chat</option>
+		
+			<option value="13">&nbsp; &nbsp;Graphics</option>
+		
+			<option value="38">&nbsp; &nbsp;Other Games</option>
+		
+			<option value="37">&nbsp; &nbsp;Introduce Yourself</option>
+		
+			<option value="54">Platform Specific</option>
+		
+			<option value="55">&nbsp; &nbsp;PC Jumping Chat</option>
+		
+			<option value="56">&nbsp; &nbsp;PS3 Jumping Chat</option>
+		
+			<option value="57">&nbsp; &nbsp;Xbox 360 Jumping Chat</option>
+		
+			<option value="33">Jumps, Nade Jumps &amp; Nade Throws</option>
+		
+			<option value="63">&nbsp; &nbsp;CoD:BO2 Jumps</option>
+		
+			<option value="61">&nbsp; &nbsp;MW3 Jumps</option>
+		
+			<option value="59">&nbsp; &nbsp;CoD:BO Jumps</option>
+		
+			<option value="48">&nbsp; &nbsp;MW2 Jumps</option>
+		
+			<option value="39">&nbsp; &nbsp;CoD:WaW Jumps</option>
+		
+			<option value="25">&nbsp; &nbsp;CoD4 Jumps</option>
+		
+			<option value="27">&nbsp; &nbsp;CoD2 Jumps</option>
+		
+			<option value="8">&nbsp; &nbsp;CoD Jumps</option>
+		
+			<option value="26">&nbsp; &nbsp;CoD Nade Throws</option>
+		
+			<option value="14">&nbsp; &nbsp;Custom Map Jumps</option>
+		
+			<option value="34">Mapping &amp; Jump Maps</option>
+		
+			<option value="16">&nbsp; &nbsp;Jump Maps</option>
+		
+			<option value="23">&nbsp; &nbsp;Records</option>
+		
+			<option value="42">&nbsp; &nbsp;CoD:WaW Mapping Help</option>
+		
+			<option value="43">&nbsp; &nbsp;CoD:WaW Mapping Tutorials</option>
+		
+			<option value="29">&nbsp; &nbsp;CoD4 Mapping Help</option>
+		
+			<option value="30">&nbsp; &nbsp;CoD4 Mapping Tutorials</option>
+		
+			<option value="17">&nbsp; &nbsp;CoD2 Mapping Help</option>
+		
+			<option value="19">&nbsp; &nbsp;CoD2 Mapping Tutorials</option>
+		
+			<option value="11">&nbsp; &nbsp;CoD Mapping Help</option>
+		
+			<option value="18">&nbsp; &nbsp;CoD Mapping Tutorials</option>
+		
+			<option value="24">&nbsp; &nbsp;Modding, Modelling and Skinning</option>
+		
+			<option value="35">Feedback</option>
+		
+			<option value="10">&nbsp; &nbsp;Feedback, Bugs and Errors</option>
+		
+
+		</select>&nbsp;<input class="btnlite" type="submit" value="Go" /></td>
+	</tr>
+	</table>
+
+	</form>
+</td>
+</tr>
+</td>
+</table>
+
+
+
+</div>
+
+
+
+<!--
+
+	We request you retain the full copyright notice below including the link to www.phpbb.com.
+
+	This not only gives respect to the large amount of time given freely by the developers
+
+	but also helps build interest, traffic and use of phpBB3. If you (honestly) cannot retain
+
+	the full copyright we ask you at least leave in place the "Powered by phpBB" line, with
+
+	"phpBB" linked to www.phpbb.com. If you refuse to include even this then support on our
+
+	forums may be affected.
+
+
+
+	The phpBB Group : 2006
+
+//-->
+
+
+
+<!--
+
+	Stil imzam� silmezseniz sevinirim. Silersenizde can�n�z sa�olsun. :)
+
+//-->
+
+
+
+                                         <div align="center">
+
+
+
+<div id="framediv">
+
+                  <br><br>
+
+</div>  
+
+
+
+<div id="wrapfooter">
+
+	
+
+    <br/>
+
+	<p>    
+
+	<span class="copyright">Powered by <a href="http://www.phpbb.com/">phpBB</a> &copy; 2000, 2002, 2005, 2007 phpBB Group
+
+	
+
+	<br /><span class="gensmall">Theme by 
+
+	<a href="http://www.codjumper.com/forums/memberlist.php?mode=viewprofile&u=2" target="_blank"><b>Pedsdude</b></a> and 
+
+	<a href="http://www.codjumper.com/forums/memberlist.php?mode=viewprofile&u=340" target="_blank"><b>KillerSam</b></a>, based on<br>
+
+	<a href="http://www.phpbb3styles.net/db/style/Melankolia" target="_blank"><b>Melankonia</b></a> by 
+
+	<a href="http://www.ta-frm.com/" target="_blank"><strong>Ercan K.</strong></a></span>
+
+	</span>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="bottom-left"></div><div class="bottom-center"></div><div class="bottom-right"></div>
+
+</body>
+
+</html>

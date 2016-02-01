@@ -1,0 +1,666 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="ctl00_Head1"><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="shortcut icon" href="pokemon-favicon.ico?2" /><link href="https://plus.google.com/113372404593294986514" rel="publisher" /><link href="/CSS/Styles?v=mO0W98eOMyYulvbqZmz1xBm5VBe4Err3_IuH5kaptyQ1" rel="stylesheet"/>
+<script src="/Scripts/MasterScripts?v=T-gT419MDQCVtRiVFwhs8VsmaR1giH6qDitoHqTXAkg1"></script>
+<meta name="author" content="The Pokemon Pets Company International" /><meta name="copy write" content="The Pokemon Pets Company International" /><meta property="fb:app_id" content="1600361943563474" /><meta property="og:site_name" content="Pokemon Pets" />
+<script type="text/javascript">
+function disableMusic(PostData) {
+jQuery.ajax({
+type: "POST",
+url: "AutoCompleteName.asmx/SetMusicOpenOff",
+data: '{"srValue":"' + PostData + '"}',
+async: true,
+contentType: "application/json; charset=utf-8",
+dataType: "json",
+success: function (data) {
+location.reload();
+}
+});
+}
+</script>
+<link rel="canonical" href="http://www.pokemonpets.com/Login" />
+<title>Login Page - You need to sign in/login to play the game or see some of the pages! - PokemonPets, Free Online Pokémon MMO RPG Browser Game</title>
+<meta name="description" content="For playing free browser based Pokémon rpg game Pokemon Pets you need to sign in first. After logged in you can capture Pokémon and train them. Some pages of Pokemon Pets may require you to login in order to see them!" />
+<link href="//static.pokemonpets.com/cssfiles/Login.css?2" rel="stylesheet"
+type="text/css" />
+<script type="text/javascript">
+function getUserCount() {
+jQuery.ajax({
+type: "POST",
+url: "AutoCompleteName.asmx/GetRegisteredMembersCount",
+contentType: "application/json; charset=utf-8",
+dataType: "json",
+success: function (response) {
+$("#RegMemText").fadeOut(function () {
+$(this).html(response.d).fadeIn();
+});
+},
+failure: function (msg) {
+}
+});
+}
+setInterval(function () {
+getUserCount();
+}, 10000);
+$(document).keypress(function (e) {
+if (e.which == 13) {
+$("#btnLogin").click();
+}
+});
+function ExecuteScripts() {
+$(document).ready(function () {
+getUserCount();
+var value = $("#hdfResultPasswordRecovery").val();
+if (value == "1") {
+$(".error2").show('600');
+}
+else {
+$(".error2").hide('600');
+}
+value = $("#hdfResultLogin").val();
+if (value == "1") {
+$(".error1").show('600');
+}
+else {
+$(".error1").hide('600');
+}
+});
+}
+</script>
+<style type="text/css">
+.LoginButton {
+width: 108px;
+height: 51px;
+display: block;
+background: url(//static.pokemonpets.com/images/Login/Login_en.png?2) no-repeat top left;
+border-style: none;
+border-width: 0px;
+cursor: pointer;
+}
+.LoginButton:hover {
+background: url(//static.pokemonpets.com/images/Login/Login_en.png?2) no-repeat bottom right;
+}
+.RecoverPasswordbutton {
+width: 96px;
+height: 26px;
+display: block;
+background: url(//static.pokemonpets.com/images/Login/Recover_en.png?3) no-repeat top left;
+border-style: none;
+border-width: 0px;
+cursor: pointer;
+}
+.RecoverPasswordbutton:hover {
+background: url(//static.pokemonpets.com/images/Login/Recover_en.png?3) no-repeat bottom right;
+}
+</style>
+<link href="https://plus.google.com/+Pokemonpets" rel="publisher" />
+<script type="text/javascript">
+window.___gcfg = { lang: 'en' };
+(function () {
+var po = document.createElement("script");
+po.type = "text/javascript"; po.async = true; po.src = "https://apis.google.com/js/plusone.js";
+var s = document.getElementsByTagName("script")[0];
+s.parentNode.insertBefore(po, s);
+})();</script>
+<script src="Scripts/googleAnalytics.js"></script>
+</head>
+<body>
+<form method="post" action="Login" id="aspnetForm">
+<div class="aspNetHidden">
+<input type="hidden" name="ctl00_ContentPlaceHolder_SC1_HiddenField" id="ctl00_ContentPlaceHolder_SC1_HiddenField" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="llBow/JFU5fzRgvZFyDzhZrBK3nnoV1rwq2VokF1t+ZAYpzNgeWZr5lPDXHHZYmZLA/xBaKCezS7kvBBopYBWOIhcmyS8wdQ8ObXZN7MnjI=" />
+</div>
+<script src="/ScriptResource.axd?d=x6wALODbMJK5e0eRC_p1LREFJABMZMg6GSG9N6wGFAoUBziFlQluHw3dy-4mmKgEfnXFP-ej20D7RXlPKVwdIys4kZDY5gfZuEvDN5c7GlPgUoUSPHAxQoV4ZkJWt47k0&amp;t=fffffffff2b1ef38" type="text/javascript"></script>
+<div class="TopBarMasterPage" style="background: #D1D1D1 url(//static.pokemonpets.com/images/backgrounds/pokemon-pets-main-header-pokemon-mmo-game-rpg.png) no-repeat;"
+title="Return To Home Page">
+<a href="//www.pokemonpets.com"></a>
+<div title="Close Music Player" style="z-index: -11; position: relative; cursor: pointer; display: inline-block; margin-left: 1110px; width: 22px; height: 22px; background-image: url('//static.pokemonpets.com/images/masterPage/CloseMusic.png')"
+onclick="disableMusic('1');">
+</div>
+<div id="MainRight" style="z-index: -11; position: relative; display: block; margin-left: 1005px; width: 130px; margin-top: -26px;">
+</div>
+<div class="GooglePlusMain">
+<div class="g-plusone"></div>
+</div>
+<div id="IconSet" style="position: absolute; top: 2px; left: 720px; width: 280px; height: 36px;">
+<a id="DeviantArtIcon" href="http://monstermmorpg.deviantart.com" rel="nofollow" target="_blank" title="Monster MMORPG On Deviant Art - Please Watch Our Channel"></a>
+<a id="FbIcon" href="http://www.facebook.com/PokemonPetsRPG" rel="nofollow" target="_blank" title="Official Facebook Page Of Pokemon Pets - Please Like To Get News And Events"></a>
+<a id="GplusIcon" href="https://plus.google.com/+Pokemonpets" rel="nofollow" target="_blank" title="Pokemon Pets On Google Plust - Add Circles To Follow News"></a>
+<a id="LinkedInIcon" href="http://www.linkedin.com/company/monster-mmorpg" rel="nofollow" target="_blank" title="Monster MMORPG On LinkedIn Company List - Follow Us"></a>
+<a id="twitterIcon" href="https://twitter.com/PokemonPets" rel="nofollow" target="_blank" title="Official Twitter Channel Of Pokemon Pets - Subscribe To Hear News"></a>
+<a id="youtubeIcon" href="http://www.youtube.com/PokemonPets" rel="nofollow" target="_blank" title="Subscribe And Watch Official Gameplay And Tutorial Videos On Monster MMORPG Youtube Channel"></a>
+<a id="MonsterMMORPGIcon" href="http://www.monstermmorpg.com" rel="nofollow" target="_blank" title="Best Pokemon style official game Monster MMORPG"></a>
+</div>
+</div>
+<script type="text/javascript">
+(function () {
+var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+po.src = 'https://apis.google.com/js/plusone.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+})();
+</script>
+<div id="NAV" class="MenuBarMasterPage">
+<ul id="mainMenuYes" class="mainMenuYes sf-menu">
+<li class="current">
+<a class="M_homepageN" title="Return To Home Page" href="//www.pokemonpets.com">
+<span></span>
+</a>
+</li>
+<li>
+<a class="M_forumN" title="For Learning How To Play Game And Many Useful Tips About Game Please Visit Forum And For Knowing News Please Keep Following Forum"
+href="Forum">
+<span></span>
+</a>
+</li>
+<li>
+<a class="M_mapsN" href="Maps" title="PokemonPets Maps - Maps Detailed Info - Which Pokémon Appear At Which Maps And Appear Ratio">
+<span></span>
+</a>
+<div class="sf-mega">
+<div class="sf-mega-section">
+<ul>
+<li class="menuitem">
+<a href="Maps" title="PokemonPets Maps - Maps Detailed Info - Which Pokémon Appears At Which Map And Appear Ratio">
+<img src="//static.pokemonpets.com/images/HomePage/game_maps_icon.png" />
+Game Maps List                                                                                                                                                
+</a>
+</li>
+</ul>
+</div>
+<div class="sf-mega-section">
+<ul>
+<li class="menuitem">
+<a href="Game-Maps" title="Search for any map that you are looking for with using advanced searching filters">
+<img src="//static.pokemonpets.com/images/HomePage/search_map_icon.png" />
+Search Map - Find Which Pokémon Where                                                                                                                                                
+</a>
+</li>
+<li class="menuitem">
+<a href="http://forum.pokemonpets.com/Forum-FAQ" title="Frequently Asked Questions please read all threads">
+<img src="//static.pokemonpets.com/images/HomePage/faq_threads.png" />
+Frequently Asked Questions (FAQ)                                                                                                            
+</a>
+</li>
+</ul>
+</div>
+<div class="sf-mega-section">
+<ul>
+<li class="menuitem">
+<a href="How-To-Play" title="How To Play The Game">
+<img src="//static.pokemonpets.com/images/HomePage/how_to_play_icon.png" />
+How To Play The Game                                                                                                            
+</a>
+</li>
+</ul>
+</div>
+</div>
+</li>
+<li>
+<a class="M_gamevideosN" href="Media" title="Pokemon Pets Media - Gameplay Videos - Game Screenshots - Game Banners - How To Play The Game">
+<span></span>
+</a>
+<div class="sf-mega">
+<div class="sf-mega-section">
+<ul>
+<li class="menuitem">
+<a href="How-To-Play" title="How To Play The Game">
+<img src="//static.pokemonpets.com/images/HomePage/how_to_play_icon.png" />
+How To Play The Game                                                                                                            
+</a>
+</li>
+<li class="menuitem">
+<a href="Videos" title="Gameplay Videos - Learn How To Play The Game">
+<img src="//static.pokemonpets.com/images/HomePage/game_videos_icon.png" />
+Gameplay Videos                                                                                                            
+</a>
+</li>
+<li class="menuitem">
+<a href="http://forum.pokemonpets.com/Forum-FAQ" title="Frequently Asked Questions please read all threads">
+<img src="//static.pokemonpets.com/images/HomePage/faq_threads.png" />
+Frequently Asked Questions (FAQ)                                                                                                            
+</a>
+</li>
+</ul>
+</div>
+<div class="sf-mega-section">
+<ul>
+<li class="menuitem">
+<a href="Screenshots" title="Actual Gameplay Screenshots">
+<img src="//static.pokemonpets.com/images/HomePage/game_screen_shots.png" />
+Actual Gameplay Screenshots                                                                                                            
+</a>
+</li>
+<li class="menuitem">
+<a href="Wallpapers" title="Full HD Game Wallpapers">
+<img src="//static.pokemonpets.com/images/HomePage/game_wall_papers.png" />
+Game HD Wallpapers                                                                                                            
+</a>
+</li>
+</ul>
+</div>
+<div class="sf-mega-section">
+<ul>
+<li class="menuitem">
+<a href="Banners" title="Game's Official Banners - Free To Use">
+<img src="//static.pokemonpets.com/images/HomePage/game_banners.png" />
+Game's Official Banners                                                                                                            
+</a>
+</li>
+<li class="menuitem">
+<a href="Avatars" title="Very High Quality Game's Profile Avatars">
+<img src="//static.pokemonpets.com/images/HomePage/game_avatars.png" />
+Game's Profile Avatars                                                                                                            
+</a>
+</li>
+</ul>
+</div>
+</div>
+</li>
+<li>
+<a class="M_monsterdexN" href="Pokedex" title="All Pokémon List - Where To Catch Pokémon - How To Transform Pokémon - Pokémon' Details">
+<span></span>
+</a>
+<div class="sf-mega">
+<div class="sf-mega-section">
+<ul>
+<li class="menuitem">
+<a href="Stat-Calculator" title="Calculate Any Pokémon's stats with any custom abilities and natures. Very detailed Pokémon stats calculator">
+<img src="//static.pokemonpets.com/images/HomePage/stat_calculator_icon.png" />
+Stats Calculator                                                                                                            
+</a>
+</li>
+<li class="menuitem">
+<a href="PokemonList" title="All Pokémon Pets Pokémon list with bigger thumbnails and filterings">
+<img src="//static.pokemonpets.com/images/HomePage/all_monsters_icon.png" />
+All Pokémon List                                                                                                            
+</a>
+</li>
+<li class="menuitem">
+<a href="How-To-Play" title="How To Play The Game">
+<img src="//static.pokemonpets.com/images/HomePage/how_to_play_icon.png" />
+How To Play The Game                                                                                                            
+</a>
+</li>
+</ul>
+</div>
+<div class="sf-mega-section">
+<ul>
+<li class="menuitem">
+<a href="Natures" title="All Pokémon Natures List">
+<img src="//static.pokemonpets.com/images/HomePage/nature_list.png" />
+Natures List                                                                                                         
+</a>
+</li>
+<li class="menuitem">
+<a href="Abilities" title="All Pokémon Abilities List">
+<img src="//static.pokemonpets.com/images/HomePage/ability_list.png" />
+Abilities List                                                                                                            
+</a>
+</li>
+<li class="menuitem">
+<a href="AttackDex" title="Attack List, AttackDex of all Pokemon">
+<img src="//static.pokemonpets.com/images/HomePage/attack_list.png" />
+Pokemon Attack List
+</a>
+</li>
+</ul>
+</div>
+<div class="sf-mega-section">
+<ul>
+<li class="menuitem">
+<a href="Type-Chart" title="Damage Type Chart According To The Types - Type Chart">
+<img src="//static.pokemonpets.com/images/HomePage/type_chart.png" />
+Damage Ratios According To The Types
+<br />
+Types Chart 
+<img src="//static.pokemonpets.com/images/HomePage/type_chart.png" />
+</a>
+</li>
+<li class="menuitem">
+<a href="http://forum.pokemonpets.com/Forum-FAQ" title="Frequently Asked Questions please read all threads">
+<img src="//static.pokemonpets.com/images/HomePage/faq_threads.png" />
+Frequently Asked Questions (FAQ)                                                                                                            
+</a>
+</li>
+</ul>
+</div>
+</div>
+</li>
+<li>
+<a class="M_loginN" title="You Have To Login For Accessing All Features - Registration Is Free"
+href="Login">
+<span></span>
+</a>
+</li>
+<li>
+<a class="M_registerN" title="Join This Fantastic Adventure Now - Free To Register - Free To Play - Instant Activation"
+href="Register">
+<span></span>
+</a>
+</li>
+<li>
+<a class="M_turkceN" title="Dili Türkçe Yap" href="ChangeLanguage.aspx">
+<span></span>
+</a>
+</li>
+</ul>
+</div>
+<div class="ShortCutsMasterPage">
+<div style="position: absolute; left: 881px; top: 4px; height: 16px; font-size: 13px; line-height: 16px; width: 100px; text-align: center;"
+class="NiceText">
+<span id="ctl00_lblDonate"><a target="_blank" title="Version 2.2.4 ChangeLogs" rel="nofollow"  href="http://forum.pokemonpets.com/Thread-Version-2-2-4">Version 2.2.4</a></span>
+</div>
+<div style="position: absolute; color: #FF795E; left: 864px; top: 32px; height: 16px; font-size: 12px; line-height: 16px; width: 136px; text-align: center; font-weight: bold;">
+<span id="clockSpan">
+12:27</span><span id="ctl00_lblTime"> PM (Day)</span>
+</div>
+<div style="position: absolute; left: 864px; top: 48px; height: 16px; font-size: 13px; line-height: 16px; width: 136px; text-align: center;"
+class="NiceGreenText">
+<span id="ctl00_lblLoggedUserName"></span>
+</div>
+<div style="position: absolute; left: 864px; top: 65px; height: 32px; font-size: 13px; line-height: 16px; width: 136px; text-align: center;">
+<span id="ctl00_lblNewMessages"></span>
+</div>
+<div style="position: absolute; left: 0; top: 2px; height: 16px; font-size: 13px; line-height: 16px; width: 136px; text-align: center;">
+<span id="ctl00_lblFAQLink"><a rel="nofollow" title="How to play Pokemon Pets" href="http://forum.pokemonpets.com/Forum-FAQ" class="linkMsg" target="_blank">FAQ-Threads</a></span>
+</div>
+<div style="position: absolute; left: 0; top: 18px; height: 16px; font-size: 13px; line-height: 16px; width: 136px; text-align: center;">
+<span id="ctl00_lblNewMaps"><a target="_blank" title="Pokémon Natures" class="linkMsg" href="Natures">Natures List</a></span>
+</div>
+<div style="position: absolute; left: 0; top: 34px; height: 16px; font-size: 13px; line-height: 16px; width: 136px; text-align: center;">
+<span id="ctl00_lblNewMonsters"><a href="How-To-Play" title="How To Play Pokémon MMORPG Game Pokemon Pets" class="linkMsg" target="_blank">How To Play</a></span>
+</div>
+<div style="position: absolute; left: 0; top: 50px; height: 16px; font-size: 13px; line-height: 16px; width: 136px; text-align: center;">
+<span id="ctl00_lblAvailabileMapsLink"><a href="Maps" title="Pokémon Games Maps" class="linkMsg" target="_blank">Game Maps</a></span>
+</div>
+<div style="position: absolute; left: 0; top: 66px; height: 16px; font-size: 13px; line-height: 16px; width: 136px; text-align: center;">
+<span id="ctl00_lblTopPlayersLink"><a rel="nofollow" title="Pokémon Complete Ability List" href="Abilities" class="linkMsg" target="_blank">Abilities List</a></span>
+</div>
+<div style="position: absolute; left: 0; top: 82px; height: 16px; font-size: 13px; line-height: 16px; width: 136px; text-align: center;">
+<a href="Pokedex" title="Pokémon Pokédex" class="linkMsg" target="_blank">Pokédex</a>
+</div>
+<div id="AdsTop" style="position: absolute; top: 5px; left: 136px; height: 90px; width: 728px; overflow: hidden;">
+<a href="Register" class="NoChange" title="Click To Register">
+<img style="border-width: 0px;" alt="Pokemon Pets Pokémon MMORPG" src="//static.pokemonpets.com/images/backgrounds/Pokemon-MMORPG.png" /></a>
+</div>
+</div>
+<div id="ContentMasterPage" class="ContentMasterPage" style=" height:340px; ">
+<script type="text/javascript">
+var prm = Sys.WebForms.PageRequestManager.getInstance();
+prm.add_initializeRequest(InitializeRequest);
+prm.add_endRequest(EndRequest);
+function InitializeRequest(sender, e) {
+$("input[type=submit]").attr("disabled", "disabled");
+$("input[type=image]").attr("disabled", "disabled");
+}
+function EndRequest(sender, e) {
+$("input[type=submit]").removeAttr("disabled");
+$("input[type=image]").removeAttr("disabled");
+}
+</script>
+<div id="ctl00_ContentPlaceHolder_UpdatePanel1">
+<script type="text/javascript">
+Sys.Application.add_load(ExecuteScripts);
+</script>
+<input type="hidden" name="ctl00$ContentPlaceHolder$hdfResultPasswordRecovery" id="hdfResultPasswordRecovery" value="0" />
+<input type="hidden" name="ctl00$ContentPlaceHolder$hdfResultLogin" id="hdfResultLogin" value="0" />
+<div class="LoginMain">
+<div class="LoginText">
+<h1 style="font-size: 14px;">
+Enter your username and password to login:</h1>
+</div>
+<div class="UserName">
+<table>
+<tr>
+<td>
+<table>
+<tr>
+<td>
+Username:
+</td>
+<td>
+<input name="ctl00$ContentPlaceHolder$txtUserName" type="text" maxlength="16" id="ctl00_ContentPlaceHolder_txtUserName" style="width:150px;text-align: center" />
+</td>
+</tr>
+<tr>
+<td>
+Password:
+</td>
+<td>
+<input name="ctl00$ContentPlaceHolder$txtPassword" type="password" maxlength="16" id="ctl00_ContentPlaceHolder_txtPassword" style="width:150px;text-align: center" />
+</td>
+</tr>
+</table>
+</td>
+<td rowspan="2">
+<input type="submit" name="ctl00$ContentPlaceHolder$btnLogin" value="" id="btnLogin" class="LoginButton button_transition_0_25_sec" />
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" style="text-align: right;" class="ChangeLogs">
+<a class="ChangeLink" href="http://forum.pokemonpets.com/Thread-Version-2-2-4" target="_blank"
+rel="nofollow">
+Version 2.2.4 Change Logs</a>
+</td>
+</tr>
+</table>
+<table>
+<tr>
+<td class="error1" colspan="3">
+</td>
+</tr>
+<tr>
+<td colspan="3" style="text-align: center;">
+<div id="ctl00_ContentPlaceHolder_UpdateProgress1" style="display:none;">
+<img id="ctl00_ContentPlaceHolder_imgAjaxLoader" src="//static.pokemonpets.com/images/backgrounds/Loading.gif" />
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="PasswordRecovery">
+<table style="width: 100%;">
+<tr>
+<td colspan="2">
+Password - Username Recovery
+</td>
+</tr>
+<tr>
+<td>
+Email or Username :
+</td>
+<td>
+<input name="ctl00$ContentPlaceHolder$txtRecoverPasswordEmail" type="text" id="ctl00_ContentPlaceHolder_txtRecoverPasswordEmail" style="width:200px;" />
+</td>
+</tr>
+<tr>
+<td>
+<input type="submit" name="ctl00$ContentPlaceHolder$imgBtnRecoverPassword" value="" id="ctl00_ContentPlaceHolder_imgBtnRecoverPassword" class="RecoverPasswordbutton button_transition_0_25_sec" />
+</td>
+</tr>
+</table>
+<table>
+<tr>
+<td class="error2" colspan="2">
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="BestWorks">
+<h2 style="font-size: 14px;">Pokemon Pets game works the best with the Mozilla Firefox and Google Chrome browsers.</h2>
+<br />
+<br />
+<h3 style="font-size: 14px;">Do not forget to update them to their latest versions.</h3>
+<br />
+<br />
+<h3 style="font-size: 14px;">If you don't use one of those browsers you may encounter problems while playing
+Pokemon Pets!</h3>
+<br />
+<br />
+<a href="http://www.mozilla.com/" target="_blank" rel="nofollow">
+<img src="//static.pokemonpets.com/images/login/Firefox.png" style="border-width: 0px;"
+title="Download Mozilla Firefox" alt="Install Mozilla Firefox" /></a> <a href="http://www.google.com/chrome?hl=en"
+target="_blank" rel="nofollow">
+<img src="//static.pokemonpets.com/images/login/Chrome.png" style="border-width: 0px;"
+title="Download Google Chrome" alt="Install Google Chrome" /></a>
+</div>
+<div class="FacebookLike">
+<div>
+Google +1 and Facebook Like
+</div>
+<div style="padding: 10px;">
+<table>
+<tr>
+<td>
+<g:plusone size="tall" href="http://www.pokemonpets.com/"></g:plusone>
+<script type="text/javascript">
+(function () {
+var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+po.src = 'https://apis.google.com/js/plusone.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+})();
+</script>
+</td>
+<td>
+<script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
+<fb:like href="http://www.facebook.com/PokemonPetsRPG" send="true" layout="box_count"
+show_faces="false"></fb:like>
+</td>
+<td>
+<div class="g-plus" data-href="https://plus.google.com/+Pokemonpets" data-width="100"
+data-height="131" data-theme="dark">
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="GoogleLike">
+<table>
+<tr>
+<td>
+<table>
+<tr>
+<td>
+<a rel="nofollow" href="https://twitter.com/PokemonPets" class="twitter-follow-button"
+data-show-count="false" data-size="large">Follow @PokemonPets</a>
+</td>
+</tr>
+<tr>
+<td>
+<a rel="nofollow" href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.pokemonpets.com"
+data-text="Fan made 100% free to play browser based online MMO RPG Pokémon game Pokemon Pets try it now www.pokemonpets.com PokemonPets"
+data-via="PokemonPets" data-size="large" data-related="PokemonPets">Tweet</a>
+<script>                                    !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = "//platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); } }(document, "script", "twitter-wjs");</script>
+</td>
+</tr>
+<tr>
+<td>
+<a rel="nofollow" href="https://twitter.com/intent/retweet?tweet_id=488134101724307456"
+onclick="window.open('https://twitter.com/intent/retweet?tweet_id=488134101724307456','twitter','toolbar=no,width=550,height=550'); return false;">
+<img style="border-style: none; border-width: 0px;" src="//static.pokemonpets.com/images/login/retweet.png"
+class="DefaultTitle" title="Retweet Our Tweet" /></a>
+</td>
+</tr>
+</table>
+</td>
+<td>
+<!-- Place this tag where you want the badge to render. -->
+<div class="g-plus" data-width="100" data-href="https://plus.google.com/104131077669671074625" data-rel="author"></div>
+<!-- Place this tag after the last badge tag. -->
+<script type="text/javascript">
+(function () {
+var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+po.src = 'https://apis.google.com/js/plusone.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+})();
+</script>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div id="BottomBarMasterPage" class="BottomBarMasterPage" style=" top:524px; ">
+<div style="color: #FFFFFF; position: absolute; left: 136px; top: 2px; height: 64px; overflow: hidden; font-size: 11px; line-height: 16px; width: 728px; text-align: center;">
+© Copyright Since 2014 9th July - Pokemon Pets | All rights reserved | <a class="LinkContact"
+href="Contact">Contact - About</a><br />
+<a target="_blank" rel="nofollow" class="LinkContact" href="http://www.pokemon.com">Pokémon</a> and respective character names/images are trademarks and copyrights of their respective owners.
+<br />
+We are not affiliated with  <a target="_blank" rel="nofollow" class="LinkContact" href="http://www.nintendo.com">Nintendo</a>, <a target="_blank" rel="nofollow" class="LinkContact" href="http://www.creatures.co.jp">The Pokémon Company Creatures Inc.</a> or <a target="_blank" rel="nofollow" class="LinkContact" href="http://www.gamefreak.co.jp">Game Freak</a>. 
+<br />
+<span style="color: #E67300">Version 2.2.4</span> - Last Update 28 January 2016 | <a href="PrivacyPolicy.aspx" class="linkMsg3">
+<span id="ctl00_lblPrivacyPolicy">Privacy Policy and TOS</span></a> | <a rel="nofollow"
+href="http://www.alexa.com/siteinfo/http://www.pokemonpets.com" class="linkMsg3"
+target="_blank">Alexa Rank</a>
+</div>
+<div style="position: absolute; left: 136px; top: 72px; width: 728px; height: 90px; overflow: hidden;">
+<SCRIPT language="Javascript">
+var cpmstar_rnd=Math.round(Math.random()*999999);
+var cpmstar_pid=24463;
+document.writeln("<SCR"+"IPT language='Javascript' src='//server.cpmstar.com/view.aspx?poolid="+cpmstar_pid+"&script=1&rnd="+cpmstar_rnd+"'></SCR"+"IPT>");
+</SCRIPT>
+</div>
+<div style="position: absolute; left: 2px; top: 2px; font-size: 11px; line-height: 14px; width: 132px; text-align: center; color: #D3FFCC;">
+<a class="linkMsg2" title="One of the few browser mmorpg game that is suitable for all age children" href="ForParents.aspx">For Parents</a><br />
+<a class="linkMsg2" title="Complete Pokémon List" href="PokemonList">Complete Pokémon List</a><br />
+<a class="linkMsg2" title="All Pokémon Games Maps" href="Maps">Game Maps</a>
+<br />
+<a class="linkMsg2" title="Pokémon Pokédex" href="Pokedex">Pokédex</a><br />
+<a class="linkMsg2" title="Pokémon Avatars" href="Avatars">Avatars</a><br />
+<a class="linkMsg2" title="Pokémon Type Chart" href="Type-Chart">Type Chart</a><br />
+<a class="LinkContact" title="Pokémon Type Chart" href="How-To-Play">How To Play Game</a>
+<a class="linkMsg2" href="https://plus.google.com/113372404593294986514" rel="publisher">Google+</a>
+</div>
+<div style="position: absolute; left: 866px; top: 2px; font-size: 11px; line-height: 14px; width: 132px; text-align: center; color: #D3FFCC;">
+<a class="linkMsg2" title="Pokémon Forum" href="Forum">Forum Community</a><br />
+<a class="linkMsg2" title="Play Pokémon Online" href="Register">Register Free</a><br />
+<a class="linkMsg2" title="Pokémon Videos" href="Videos">Game Videos</a>
+<br />
+<a class="linkMsg2" title="Pokémon Oyun Forumu" href="http://forumturkce.pokemonpets.com">Resmi Türkçe Forum</a>
+<br />
+<a class="linkMsg2" href="http://forum.pokemonpets.com">Official PokemonPets Forum</a>
+<br />
+<a class="LinkContact" title="Awesome Artists & Contributors List Of Pokemon Pets" href="Credits">Credits</a>
+</div>
+</div>
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="C2EE9ABB" />
+</div>
+<script type="text/javascript">
+//<![CDATA[
+(function() {var fn = function() {$get("ctl00_ContentPlaceHolder_SC1_HiddenField").value = '';Sys.Application.remove_init(fn);};Sys.Application.add_init(fn);})();//]]>
+</script>
+</form>
+<script type="text/javascript">
+callMenusToolTip();
+callContentToolTip();
+</script>
+<script type="text/javascript">
+_qevents.push({ qacct: "p-50jqbHp0pDD7o" });
+</script>
+<noscript>
+<div style="display: none;">
+<img src="//pixel.quantserve.com/pixel/p-50jqbHp0pDD7o.gif" height="1" width="1" alt="Quantcast" />
+</div>
+</noscript>
+<script type="text/javascript">
+clockTick(44845);
+isIframe();
+</script>
+<script type="text/javascript">
+$(window).load(function () {
+$('#MainRight').ttwMusicPlayer(myPlaylist, {
+autoPlay: false,
+jPlayer: {
+swfPath: '//static.pokemonpets.com/musicplayer/plugin/jquery-jplayer' //You need to override the default swf path any time the directory structure changes
+}
+});
+});
+</script>
+</body>
+</html>

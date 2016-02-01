@@ -1,0 +1,996 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-gb" xml:lang="en-gb">
+<head>
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta http-equiv="content-language" content="en-gb" />
+<meta http-equiv="content-style-type" content="text/css" />
+<meta http-equiv="imagetoolbar" content="no" />
+<meta name="resource-type" content="document" />
+<meta name="distribution" content="global" />
+<meta name="copyright" content="2000, 2002, 2005, 2007 phpBB Group" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7; IE=EmulateIE9" />
+
+<title>XeNTaX &bull; View topic - Help Needed (Hex2Obj) Battlefield 4</title>
+
+
+
+<link rel="stylesheet" href="./style.php?id=2&amp;lang=en&amp;sid=005caa01d7b47b4a6126eeecf578c523" type="text/css" />
+
+
+
+<script type="text/JavaScript">
+function getElement(iElementId)
+{
+   if (document.all) 
+   {
+      return document.all[iElementId];
+   }
+   if (document.getElementById)
+   {
+      return document.getElementById(iElementId);
+   }
+}
+
+function toggleElement(oElement)
+{
+   if (oElement.style.display == "none")
+   {
+      oElement.style.display = "";
+   }
+   else
+   {
+      oElement.style.display = "none";
+   }
+}
+</script>
+<script type="text/javascript">
+// <![CDATA[
+
+
+function popup(url, width, height, name)
+{
+	if (!name)
+	{
+		name = '_popup';
+	}
+
+	window.open(url.replace(/&amp;/g, '&'), name, 'height=' + height + ',resizable=yes,scrollbars=yes,width=' + width);
+	return false;
+}
+
+function jumpto()
+{
+	var page = prompt('Enter the page number you wish to go to:', '1');
+	var per_page = '';
+	var base_url = '';
+
+	if (page !== null && !isNaN(page) && page == Math.floor(page) && page > 0)
+	{
+		if (base_url.indexOf('?') == -1)
+		{
+			document.location.href = base_url + '?start=' + ((page - 1) * per_page);
+		}
+		else
+		{
+			document.location.href = base_url.replace(/&amp;/g, '&') + '&start=' + ((page - 1) * per_page);
+		}
+	}
+}
+
+/**
+* Find a member
+*/
+function find_username(url)
+{
+	popup(url, 760, 570, '_usersearch');
+	return false;
+}
+
+/**
+* Mark/unmark checklist
+* id = ID of parent container, name = name prefix, state = state [true/false]
+*/
+function marklist(id, name, state)
+{
+	var parent = document.getElementById(id);
+	if (!parent)
+	{
+		eval('parent = document.' + id);
+	}
+
+	if (!parent)
+	{
+		return;
+	}
+
+	var rb = parent.getElementsByTagName('input');
+	
+	for (var r = 0; r < rb.length; r++)
+	{
+		if (rb[r].name.substr(0, name.length) == name)
+		{
+			rb[r].checked = state;
+		}
+	}
+}
+
+
+
+// ]]>
+</script>
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-21995806-1']);
+  _gaq.push(['_setDomainName', '.xentax.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</head>
+<body class="ltr">
+
+<a name="top"></a>
+
+<div id="wrapheader">
+
+<div id="logodesc">
+		<table width="100%" cellspacing="0">
+		<tr>
+			<td><a href="index.php"><img src="./styles/subsilver2/imageset/gameresforum_logo.png" border="0" alt="XeNTaX Forum Index" vspace="1" /></a></td>
+		</tr>
+			<tr>
+							<td width="100%" align="left" valign="top" nowrap="nowrap"><span class="toplinks">
+								<a href="http://forum.xentax.com" ><img src="./styles/subsilver2/imageset/lnk_forum_but.gif" width="82" height="25" border="0" alt="Forum" hspace="3" /></a>
+								<a href="http://multiex.xentax.com" ><img src="./styles/subsilver2/imageset/lnk_mexcom_but.gif" width="82" height="25" border="0" alt="MultiEx Commander" hspace="3" /></a>
+
+								<a href="http://forum.xentax.com/blog" ><img src="./styles/subsilver2/imageset/lnk_tools_but.gif" width="82" height="25" border="0" alt="Tools" hspace="3" /></a>
+<a href="http://wiki.xentax.com" ><img src="./styles/subsilver2/imageset/lnk_gffc_but.gif" width="82" height="25" border="0" alt="Tools" hspace="3" /></a>
+
+								<a href="http://www.xentax.com" ><img src="./styles/subsilver2/imageset/lnk_home_but.gif" width="82" height="25" border="0" alt="Home" hspace="3" /></a>                                    
+<iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.facebook.com%2Fpages%2FXeNTaX%2F143458469022795&amp;send=false&amp;layout=button_count&amp;width=450&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:450px; height:21px;" allowTransparency="true"></iframe>
+								</span></td>
+
+					</td>
+				</tr>
+		</table>
+	</div>
+
+	<div id="menubar">
+		<table width="100%" cellspacing="0">
+		<tr>
+			<td class="genmed">
+				<a href="./ucp.php?mode=login&amp;sid=005caa01d7b47b4a6126eeecf578c523"><img src="./styles/subsilver2/theme/images/icon_mini_login.gif" width="12" height="13" alt="*" /> Login</a>&nbsp; &nbsp;<a href="./ucp.php?mode=donate&amp;sid=005caa01d7b47b4a6126eeecf578c523"><img src="./styles/subsilver2/theme/images/icon_mini_register.gif" width="12" height="13" alt="*" /> Register</a>
+					
+			</td>
+			<td class="genmed" align="right">
+				<a href="./faq.php?sid=005caa01d7b47b4a6126eeecf578c523"><img src="./styles/subsilver2/theme/images/icon_mini_faq.gif" width="12" height="13" alt="*" /> FAQ</a>
+				&nbsp; &nbsp;<a href="./search.php?sid=005caa01d7b47b4a6126eeecf578c523"><img src="./styles/subsilver2/theme/images/icon_mini_search.gif" width="12" height="13" alt="*" /> Search</a>
+			</td>
+		</tr>
+		</table>
+	</div>
+
+	<div id="datebar">
+		<table width="100%" cellspacing="0">
+		<tr>
+			<td class="gensmall"></td>
+			<td class="gensmall" align="right">It is currently Mon Feb 01, 2016 1:30 pm<br /></td>
+		</tr>
+		</table>
+	</div>
+
+
+
+
+
+
+
+
+
+
+								
+</div>
+
+<div id="wrapcentre">
+
+	
+	<p class="searchbar">
+		<span style="float: left;"><a href="./search.php?search_id=unanswered&amp;sid=005caa01d7b47b4a6126eeecf578c523">View unanswered posts</a> | <a href="./search.php?search_id=active_topics&amp;sid=005caa01d7b47b4a6126eeecf578c523">View active topics</a></span>
+		
+	</p>
+	
+
+	<br style="clear: both;" />
+
+	<table class="tablebg" width="100%" cellspacing="1" cellpadding="0" style="margin-top: 5px;">
+	<tr>
+		<td class="row1">
+			<p class="breadcrumbs"><a href="./index.php?sid=005caa01d7b47b4a6126eeecf578c523">Board index</a> &#187; <a href="./viewforum.php?f=24&amp;sid=005caa01d7b47b4a6126eeecf578c523">Game Modding</a> &#187; <a href="./viewforum.php?f=16&amp;sid=005caa01d7b47b4a6126eeecf578c523">3D/2D models</a></p>
+			<p class="datetime">All times are UTC + 1 hour </p>
+		</td>
+	</tr>
+	</table>
+
+	<br />
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+	<div class="forumrules">
+		
+			<h3>Forum rules</h3><br />
+			<a href="http://forum.xentax.com/viewtopic.php?f=28&amp;t=1270"><b>Please click here to view the forum rules</b></a>
+		
+	</div>
+
+	<br clear="all" />
+
+						
+<div id="wrapcenter"><center>
+<table width="100%" cellspacing="0">
+
+	
+								
+<br/>
+</p>
+
+</table>
+</center>
+</div>
+								
+<div id="pageheader">
+	
+	<h2><a class="titles" href="./viewtopic.php?f=16&amp;t=11585&amp;sid=005caa01d7b47b4a6126eeecf578c523">Help Needed (Hex2Obj) Battlefield 4</a><div class="fb-like" data-href="http://forum.xentax.com/viewtopic.php?f=16&amp;t=11585" data-send="true" data-width="450" data-layout="button_count" data-show-faces="false"></div>
+    </h2>
+
+
+</div>
+
+<br clear="all" /><br />
+
+<div id="pagecontent">
+
+	<table width="100%" cellspacing="1">
+	<tr>
+		<td align="left" valign="middle" nowrap="nowrap">
+		<a href="./posting.php?mode=post&amp;f=16&amp;sid=005caa01d7b47b4a6126eeecf578c523"><img src="./styles/subsilver2/imageset/en/button_topic_new.gif" alt="Post new topic" title="Post new topic" /></a>&nbsp;<a href="./posting.php?mode=reply&amp;f=16&amp;t=11585&amp;sid=005caa01d7b47b4a6126eeecf578c523"><img src="./styles/subsilver2/imageset/en/button_topic_reply.gif" alt="Reply to topic" title="Reply to topic" /></a>
+		</td>
+		
+			<td class="nav" valign="middle" nowrap="nowrap">&nbsp;Page <strong>1</strong> of <strong>1</strong><br /></td>
+			<td class="gensmall" nowrap="nowrap">&nbsp;[ 6 posts ]&nbsp;</td>
+			<td class="gensmall" width="100%" align="right" nowrap="nowrap"></td>
+		
+	</tr>
+	</table>
+
+	<table class="tablebg" width="100%" cellspacing="1">
+	<tr>
+		<td class="cat">
+			<table width="100%" cellspacing="0">
+			<tr>
+				<td class="nav" nowrap="nowrap">&nbsp;
+				<a href="./viewtopic.php?f=16&amp;t=11585&amp;sid=005caa01d7b47b4a6126eeecf578c523&amp;view=print" title="Print view">Print view</a>
+				</td>
+				<td class="nav" align="right" nowrap="nowrap"><a href="./viewtopic.php?f=16&amp;t=11585&amp;view=previous&amp;sid=005caa01d7b47b4a6126eeecf578c523">Previous topic</a> | <a href="./viewtopic.php?f=16&amp;t=11585&amp;view=next&amp;sid=005caa01d7b47b4a6126eeecf578c523">Next topic</a>&nbsp;</td>
+			</tr>
+			</table>
+		</td>
+	</tr>
+
+	</table>
+
+
+	<table class="tablebg" width="100%" cellspacing="1">
+	
+		<tr>
+
+			<th>Author</th>
+			<th>Message</th>
+		</tr>
+
+	<tr class="row1">
+
+			<td align="center" valign="middle">
+				<a name="p95352"></a>
+				<b class="postauthor">iTzCorky</b>
+			</td>
+			<td width="100%" height="25">
+				<table width="100%" cellspacing="0">
+				<tr>
+				
+					<td class="gensmall" width="100%"><div style="float: left;">&nbsp;<b>Post subject:</b> Help Needed (Hex2Obj) Battlefield 4</div><div style="float: right;"><a href="./viewtopic.php?p=95352&amp;sid=005caa01d7b47b4a6126eeecf578c523#p95352"><img src="./styles/subsilver2/imageset/icon_post_target.gif" width="12" height="9" alt="Post" title="Post" /></a><b>Posted:</b> Wed Jun 11, 2014 11:28 am&nbsp;</div></td>
+				</tr>
+				</table>
+			</td>
+		</tr>
+
+		<tr class="row1">
+
+			<td valign="top" class="profile">
+				<table cellspacing="4" align="center" width="150">
+			
+				<tr>
+					<td><img src="./styles/subsilver2/imageset/en/icon_user_offline.gif" alt="Offline" title="Offline" /></td>
+				</tr>
+			
+				<tr>
+					<td class="postdetails">ultra-n00b</td>
+				</tr>
+			
+				</table>
+
+				<span class="postdetails">
+					<br /><b>Joined:</b> Wed Jun 11, 2014 12:56 am<br /><b>Posts:</b> 4<br /><b>Has&nbsp;thanked:</b> 0 time<br /><b>Have&nbsp;thanks:</b> 0 time
+				</span>
+
+			</td>
+			<td valign="top">
+				<table width="100%" cellspacing="5">
+				<tr>
+					<td>
+					
+
+						<div class="postbody">
+
+						Hello everyone im new around here so don't be to harsh on me. I am trying to learn a new skill and it seems to be impossible lol. I was reading the tutorial on Hex2Obj and was trying to use it for Battlefield 4 but more specifically on a character. I have the .mesh and .chunk files for it and it would make my day if someone could help me understand how this works exactly specifically in the Hex Editor, in this tutorial for Hex2Obj it talked about how to search for patterns and that was where I got lost. I am not sure if I can post the .mesh and .chunk file for this so I won't until I know I am allowed. Any tips would be great <img src="./images/smilies/[colon]).gif" alt=":)" title="Smile" />
+						</div>
+					<br clear="all" /><br />
+
+						<table width="100%" cellspacing="0">
+						<tr valign="middle">
+							<td class="gensmall" align="right">
+							
+							</td>
+						</tr>
+						</table>
+					</td>
+				</tr>
+				</table>
+			</td>
+		</tr>
+
+		<tr class="row1">
+
+			<td class="profile"><strong><a href="#wrapheader">Top</a></strong></td>
+			<td><div class="gensmall" style="float: left;">&nbsp;<a href="./memberlist.php?mode=viewprofile&amp;u=45240&amp;sid=005caa01d7b47b4a6126eeecf578c523"><img src="./styles/subsilver2/imageset/en/icon_user_profile.gif" alt="Profile" title="Profile" /></a> &nbsp;</div> <div class="gensmall" style="float: right;">&nbsp;</div></td>
+	
+		</tr>
+
+	<tr>
+		<td class="spacer" colspan="2" height="1"><img src="images/spacer.gif" alt="" width="1" height="1" /></td>
+	</tr>
+	</table>
+
+	<table class="tablebg" width="100%" cellspacing="1">
+	<tr class="row2">
+
+			<td align="center" valign="middle">
+				<a name="p95354"></a>
+				<b class="postauthor">shakotay2</b>
+			</td>
+			<td width="100%" height="25">
+				<table width="100%" cellspacing="0">
+				<tr>
+				
+					<td class="gensmall" width="100%"><div style="float: left;">&nbsp;<b>Post subject:</b> Re: Help Needed (Hex2Obj) Battlefield 4</div><div style="float: right;"><a href="./viewtopic.php?p=95354&amp;sid=005caa01d7b47b4a6126eeecf578c523#p95354"><img src="./styles/subsilver2/imageset/icon_post_target.gif" width="12" height="9" alt="Post" title="Post" /></a><b>Posted:</b> Wed Jun 11, 2014 12:07 pm&nbsp;</div></td>
+				</tr>
+				</table>
+			</td>
+		</tr>
+
+		<tr class="row2">
+
+			<td valign="top" class="profile">
+				<table cellspacing="4" align="center" width="150">
+			
+				<tr>
+					<td><img src="./styles/subsilver2/imageset/en/icon_user_offline.gif" alt="Offline" title="Offline" /></td>
+				</tr>
+			
+				<tr>
+					<td class="postdetails">M-M-M-Monster veteran</td>
+				</tr>
+			
+				<tr>
+					<td><img src="./images/ranks/vip-1.png" alt="M-M-M-Monster veteran" title="M-M-M-Monster veteran" /></td>
+				</tr>
+			
+				<tr>
+					<td><img src="./download/file.php?avatar=41194_1430129462.jpg" width="120" height="120" alt="User avatar" /></td>
+				</tr>
+			
+				</table>
+
+				<span class="postdetails">
+					<br /><b>Joined:</b> Fri Apr 20, 2012 9:24 am<br /><b>Posts:</b> 1355<br /><b>Has&nbsp;thanked:</b> <a href="./thankslist.php?mode=givens&amp;author_id=41194&amp;give=true&amp;sid=005caa01d7b47b4a6126eeecf578c523">125</a> times<br /><b>Have&nbsp;thanks:</b> <a href="./thankslist.php?mode=givens&amp;author_id=41194&amp;give=false&amp;sid=005caa01d7b47b4a6126eeecf578c523">470</a> times
+				</span>
+
+			</td>
+			<td valign="top">
+				<table width="100%" cellspacing="5">
+				<tr>
+					<td>
+					
+
+						<div class="postbody">
+
+						the hex2obj tutorial is for simple formats only.<br />iirc the BF4 models are stored in *.chunk files and use half floats<br />which are a little bit harder to identify than floats in a hexeditor.<br /><br />Are you capable to identify floats? If &quot;no&quot;,  you should start with the simple example in the hex2obj tutorial (<span style="font-style: italic">tut</span> button).<br /><br />use forum search, read here for example:<br /><!-- l --><a class="postlink-local" href="http://forum.xentax.com/viewtopic.php?f=16&amp;t=10966&amp;hilit=battlefield">viewtopic.php?f=16&amp;t=10966&amp;hilit=battlefield</a><!-- l --><br />(when I wrote &quot;easy&quot; it was addressed to luxor who has much experience with data formats,<br />for beginners this chunk format is hard to solve)<br /><br />dainazinas made a maxscript to import chunk files, should be somewhere here:<br /><!-- l --><a class="postlink-local" href="http://forum.xentax.com/viewtopic.php?f=16&amp;t=11300">viewtopic.php?f=16&amp;t=11300</a><!-- l -->
+						</div>
+					
+						<div class="postbody"><br />_________________<br />Extracting simple models: <a href="http://forum.xentax.com/viewtopic.php?f=29&amp;t=10894" class="postlink">http://forum.xentax.com/viewtopic.php?f=29&amp;t=10894</a><br />Hail to the mighty god of hex reversing!<br /><br />&quot;We are Microsoft.  You will be assimilated.  Resistance is Futile.&quot;</div>
+					<br clear="all" /><br />
+
+						<table width="100%" cellspacing="0">
+						<tr valign="middle">
+							<td class="gensmall" align="right">
+							
+							</td>
+						</tr>
+						</table>
+					</td>
+				</tr>
+				</table>
+			</td>
+		</tr>
+
+		<tr class="row2">
+
+			<td class="profile"><strong><a href="#wrapheader">Top</a></strong></td>
+			<td><div class="gensmall" style="float: left;">&nbsp;<a href="./memberlist.php?mode=viewprofile&amp;u=41194&amp;sid=005caa01d7b47b4a6126eeecf578c523"><img src="./styles/subsilver2/imageset/en/icon_user_profile.gif" alt="Profile" title="Profile" /></a> &nbsp;</div> <div class="gensmall" style="float: right;">&nbsp;</div></td>
+	
+		</tr>
+
+	<tr>
+		<td class="spacer" colspan="2" height="1"><img src="images/spacer.gif" alt="" width="1" height="1" /></td>
+	</tr>
+	</table>
+
+	<table class="tablebg" width="100%" cellspacing="1">
+	<tr class="row1">
+
+			<td align="center" valign="middle">
+				<a name="p95355"></a>
+				<b class="postauthor">iTzCorky</b>
+			</td>
+			<td width="100%" height="25">
+				<table width="100%" cellspacing="0">
+				<tr>
+				
+					<td class="gensmall" width="100%"><div style="float: left;">&nbsp;<b>Post subject:</b> Re: Help Needed (Hex2Obj) Battlefield 4</div><div style="float: right;"><a href="./viewtopic.php?p=95355&amp;sid=005caa01d7b47b4a6126eeecf578c523#p95355"><img src="./styles/subsilver2/imageset/icon_post_target.gif" width="12" height="9" alt="Post" title="Post" /></a><b>Posted:</b> Wed Jun 11, 2014 12:31 pm&nbsp;</div></td>
+				</tr>
+				</table>
+			</td>
+		</tr>
+
+		<tr class="row1">
+
+			<td valign="top" class="profile">
+				<table cellspacing="4" align="center" width="150">
+			
+				<tr>
+					<td><img src="./styles/subsilver2/imageset/en/icon_user_offline.gif" alt="Offline" title="Offline" /></td>
+				</tr>
+			
+				<tr>
+					<td class="postdetails">ultra-n00b</td>
+				</tr>
+			
+				</table>
+
+				<span class="postdetails">
+					<br /><b>Joined:</b> Wed Jun 11, 2014 12:56 am<br /><b>Posts:</b> 4<br /><b>Has&nbsp;thanked:</b> 0 time<br /><b>Have&nbsp;thanks:</b> 0 time
+				</span>
+
+			</td>
+			<td valign="top">
+				<table width="100%" cellspacing="5">
+				<tr>
+					<td>
+					
+
+						<div class="postbody">
+
+						<div class="quotetitle">shakotay2 wrote:</div><div class="quotecontent">the hex2obj tutorial is for simple formats only.<br />iirc the BF4 models are stored in *.chunk files and use half floats<br />which are a little bit harder to identify than floats in a hexeditor.<br /><br />Are you capable to identify floats? If &quot;no&quot;,  you should start with the simple example in the hex2obj tutorial (<span style="font-style: italic">tut</span> button).<br /><br />use forum search, read here for example:<br /><!-- l --><a class="postlink-local" href="http://forum.xentax.com/viewtopic.php?f=16&amp;t=10966&amp;hilit=battlefield">viewtopic.php?f=16&amp;t=10966&amp;hilit=battlefield</a><!-- l --><br />(when I wrote &quot;easy&quot; it was addressed to luxor who has much experience with data formats,<br />for beginners this chunk format is hard to solve)<br /><br />dainazinas made a maxscript to import chunk files, should be somewhere here:<br /><!-- l --><a class="postlink-local" href="http://forum.xentax.com/viewtopic.php?f=16&amp;t=11300">viewtopic.php?f=16&amp;t=11300</a><!-- l --></div><br /><br />Hey thanks for the reply and for identifying them I would say no XD but I would love to learn. I have a few questions though if you don't mind. When looking through the hex of the .chunk what exactly am I looking for? In the tutorial you say the pattern but I am so lost lol. Also would it be possible for me to post up the .chunk file for you to look at? I don't want a straight forward answer but a point in the right direction.<br /><br /><span style="font-weight: bold">EDIT:</span><br />Give me a little time to read up on Half Floats before doing anything XD I will post back when I have read through this to get a better understanding of floats and half floats.
+						</div>
+					<br clear="all" /><br />
+
+						<table width="100%" cellspacing="0">
+						<tr valign="middle">
+							<td class="gensmall" align="right">
+							
+							</td>
+						</tr>
+						</table>
+					</td>
+				</tr>
+				</table>
+			</td>
+		</tr>
+
+		<tr class="row1">
+
+			<td class="profile"><strong><a href="#wrapheader">Top</a></strong></td>
+			<td><div class="gensmall" style="float: left;">&nbsp;<a href="./memberlist.php?mode=viewprofile&amp;u=45240&amp;sid=005caa01d7b47b4a6126eeecf578c523"><img src="./styles/subsilver2/imageset/en/icon_user_profile.gif" alt="Profile" title="Profile" /></a> &nbsp;</div> <div class="gensmall" style="float: right;">&nbsp;</div></td>
+	
+		</tr>
+
+	<tr>
+		<td class="spacer" colspan="2" height="1"><img src="images/spacer.gif" alt="" width="1" height="1" /></td>
+	</tr>
+	</table>
+
+	<table class="tablebg" width="100%" cellspacing="1">
+	<tr class="row2">
+
+			<td align="center" valign="middle">
+				<a name="p95360"></a>
+				<b class="postauthor">cra0</b>
+			</td>
+			<td width="100%" height="25">
+				<table width="100%" cellspacing="0">
+				<tr>
+				
+					<td class="gensmall" width="100%"><div style="float: left;">&nbsp;<b>Post subject:</b> Re: Help Needed (Hex2Obj) Battlefield 4</div><div style="float: right;"><a href="./viewtopic.php?p=95360&amp;sid=005caa01d7b47b4a6126eeecf578c523#p95360"><img src="./styles/subsilver2/imageset/icon_post_target.gif" width="12" height="9" alt="Post" title="Post" /></a><b>Posted:</b> Wed Jun 11, 2014 3:18 pm&nbsp;</div></td>
+				</tr>
+				</table>
+			</td>
+		</tr>
+
+		<tr class="row2">
+
+			<td valign="top" class="profile">
+				<table cellspacing="4" align="center" width="150">
+			
+				<tr>
+					<td><img src="./styles/subsilver2/imageset/en/icon_user_offline.gif" alt="Offline" title="Offline" /></td>
+				</tr>
+			
+				<tr>
+					<td class="postdetails">ultra-veteran</td>
+				</tr>
+			
+				<tr>
+					<td><img src="./images/ranks/vip-1.png" alt="ultra-veteran" title="ultra-veteran" /></td>
+				</tr>
+			
+				<tr>
+					<td><img src="./download/file.php?avatar=41388_1421243282.gif" width="120" height="120" alt="User avatar" /></td>
+				</tr>
+			
+				</table>
+
+				<span class="postdetails">
+					<br /><b>Joined:</b> Fri Apr 27, 2012 9:37 am<br /><b>Posts:</b> 417<br /><b>Has&nbsp;thanked:</b> <a href="./thankslist.php?mode=givens&amp;author_id=41388&amp;give=true&amp;sid=005caa01d7b47b4a6126eeecf578c523">28</a> times<br /><b>Have&nbsp;thanks:</b> <a href="./thankslist.php?mode=givens&amp;author_id=41388&amp;give=false&amp;sid=005caa01d7b47b4a6126eeecf578c523">173</a> times
+				</span>
+
+			</td>
+			<td valign="top">
+				<table width="100%" cellspacing="5">
+				<tr>
+					<td>
+					
+
+						<div class="postbody">
+
+						why hasn't anyone made tools for bf4 yet? like it's not even hard.<br /><br />If I get into the hardline beta I'll take a look
+						</div>
+					
+						<div class="postbody"><br />_________________<br /><a href="http://dev.cra0kalo.com" class="postlink"><span style="color: #FF4080"><span style="font-weight: bold"><span style="text-decoration: underline">Devblog</span></span></span></a></div>
+					<br clear="all" /><br />
+
+						<table width="100%" cellspacing="0">
+						<tr valign="middle">
+							<td class="gensmall" align="right">
+							
+							</td>
+						</tr>
+						</table>
+					</td>
+				</tr>
+				</table>
+			</td>
+		</tr>
+
+		<tr class="row2">
+
+			<td class="profile"><strong><a href="#wrapheader">Top</a></strong></td>
+			<td><div class="gensmall" style="float: left;">&nbsp;<a href="./memberlist.php?mode=viewprofile&amp;u=41388&amp;sid=005caa01d7b47b4a6126eeecf578c523"><img src="./styles/subsilver2/imageset/en/icon_user_profile.gif" alt="Profile" title="Profile" /></a> &nbsp;</div> <div class="gensmall" style="float: right;">&nbsp;</div></td>
+	
+		</tr>
+
+	<tr>
+		<td class="spacer" colspan="2" height="1"><img src="images/spacer.gif" alt="" width="1" height="1" /></td>
+	</tr>
+	</table>
+
+	<table class="tablebg" width="100%" cellspacing="1">
+	<tr class="row1">
+
+			<td align="center" valign="middle">
+				<a name="p95364"></a>
+				<b class="postauthor">iTzCorky</b>
+			</td>
+			<td width="100%" height="25">
+				<table width="100%" cellspacing="0">
+				<tr>
+				
+					<td class="gensmall" width="100%"><div style="float: left;">&nbsp;<b>Post subject:</b> Re: Help Needed (Hex2Obj) Battlefield 4</div><div style="float: right;"><a href="./viewtopic.php?p=95364&amp;sid=005caa01d7b47b4a6126eeecf578c523#p95364"><img src="./styles/subsilver2/imageset/icon_post_target.gif" width="12" height="9" alt="Post" title="Post" /></a><b>Posted:</b> Wed Jun 11, 2014 5:59 pm&nbsp;</div></td>
+				</tr>
+				</table>
+			</td>
+		</tr>
+
+		<tr class="row1">
+
+			<td valign="top" class="profile">
+				<table cellspacing="4" align="center" width="150">
+			
+				<tr>
+					<td><img src="./styles/subsilver2/imageset/en/icon_user_offline.gif" alt="Offline" title="Offline" /></td>
+				</tr>
+			
+				<tr>
+					<td class="postdetails">ultra-n00b</td>
+				</tr>
+			
+				</table>
+
+				<span class="postdetails">
+					<br /><b>Joined:</b> Wed Jun 11, 2014 12:56 am<br /><b>Posts:</b> 4<br /><b>Has&nbsp;thanked:</b> 0 time<br /><b>Have&nbsp;thanks:</b> 0 time
+				</span>
+
+			</td>
+			<td valign="top">
+				<table width="100%" cellspacing="5">
+				<tr>
+					<td>
+					
+
+						<div class="postbody">
+
+						<div class="quotetitle">cra0 wrote:</div><div class="quotecontent">why hasn't anyone made tools for bf4 yet? like it's not even hard.<br /><br />If I get into the hardline beta I'll take a look</div><br /><br />There are a few one that comes to mind is it can find the chunk files from the mesh files and it does it for all of them and puts them in folders its a pretty neat tool.
+						</div>
+					<br clear="all" /><br />
+
+						<table width="100%" cellspacing="0">
+						<tr valign="middle">
+							<td class="gensmall" align="right">
+							
+							</td>
+						</tr>
+						</table>
+					</td>
+				</tr>
+				</table>
+			</td>
+		</tr>
+
+		<tr class="row1">
+
+			<td class="profile"><strong><a href="#wrapheader">Top</a></strong></td>
+			<td><div class="gensmall" style="float: left;">&nbsp;<a href="./memberlist.php?mode=viewprofile&amp;u=45240&amp;sid=005caa01d7b47b4a6126eeecf578c523"><img src="./styles/subsilver2/imageset/en/icon_user_profile.gif" alt="Profile" title="Profile" /></a> &nbsp;</div> <div class="gensmall" style="float: right;">&nbsp;</div></td>
+	
+		</tr>
+
+	<tr>
+		<td class="spacer" colspan="2" height="1"><img src="images/spacer.gif" alt="" width="1" height="1" /></td>
+	</tr>
+	</table>
+
+	<table class="tablebg" width="100%" cellspacing="1">
+	<tr class="row2">
+
+			<td align="center" valign="middle">
+				<a name="p95454"></a>
+				<b class="postauthor">iTzCorky</b>
+			</td>
+			<td width="100%" height="25">
+				<table width="100%" cellspacing="0">
+				<tr>
+				
+					<td class="gensmall" width="100%"><div style="float: left;">&nbsp;<b>Post subject:</b> Re: Help Needed (Hex2Obj) Battlefield 4</div><div style="float: right;"><a href="./viewtopic.php?p=95454&amp;sid=005caa01d7b47b4a6126eeecf578c523#p95454"><img src="./styles/subsilver2/imageset/icon_post_target.gif" width="12" height="9" alt="Post" title="Post" /></a><b>Posted:</b> Sat Jun 14, 2014 4:59 am&nbsp;</div></td>
+				</tr>
+				</table>
+			</td>
+		</tr>
+
+		<tr class="row2">
+
+			<td valign="top" class="profile">
+				<table cellspacing="4" align="center" width="150">
+			
+				<tr>
+					<td><img src="./styles/subsilver2/imageset/en/icon_user_offline.gif" alt="Offline" title="Offline" /></td>
+				</tr>
+			
+				<tr>
+					<td class="postdetails">ultra-n00b</td>
+				</tr>
+			
+				</table>
+
+				<span class="postdetails">
+					<br /><b>Joined:</b> Wed Jun 11, 2014 12:56 am<br /><b>Posts:</b> 4<br /><b>Has&nbsp;thanked:</b> 0 time<br /><b>Have&nbsp;thanks:</b> 0 time
+				</span>
+
+			</td>
+			<td valign="top">
+				<table width="100%" cellspacing="5">
+				<tr>
+					<td>
+					
+
+						<div class="postbody">
+
+						YAY I can officially say I found the GUID myself in the mesh file even though it took me a long time and a lot of reading I finally figured it out by looking at the data on the left side in Hex Workshop and found it right at the top <img src="./images/smilies/[colon]).gif" alt=":)" title="Smile" /> so next I shall attempt to extract a model myself and I will not ask for help unless I get stuck for the next 5 hours and yes I will be trying this for the next 5 hours or so. But One quick question the rest of the LOD's what are those supposed to be? I have found several LOD in the mesh file.<br /><br /><span style="font-weight: bold">EDIT:</span> Well ummmmmm No idea what I did here but figured it would be funny to throw out there. This was supposed to be a character XD <br /><img src="http://puu.sh/9sJG2/4ad42b5645.png" alt="Image" /><br /><br /><br /><span style="font-weight: bold">EDIT 2:</span> Okay so I have tried everything to get this going with no luck still. It is the mp recon from Battlefield 4 the headgear and the locations of meshes I found were here, 0x22050, 0x24DC8, 0x25974, 0x28D70, 0x290D0, 0x2FFA0. Any help would be great <img src="./images/smilies/[colon]).gif" alt=":)" title="Smile" />
+						</div>
+					<br clear="all" /><br />
+
+						<table width="100%" cellspacing="0">
+						<tr valign="middle">
+							<td class="gensmall" align="right">
+							
+							</td>
+						</tr>
+						</table>
+					</td>
+				</tr>
+				</table>
+			</td>
+		</tr>
+
+		<tr class="row2">
+
+			<td class="profile"><strong><a href="#wrapheader">Top</a></strong></td>
+			<td><div class="gensmall" style="float: left;">&nbsp;<a href="./memberlist.php?mode=viewprofile&amp;u=45240&amp;sid=005caa01d7b47b4a6126eeecf578c523"><img src="./styles/subsilver2/imageset/en/icon_user_profile.gif" alt="Profile" title="Profile" /></a> &nbsp;</div> <div class="gensmall" style="float: right;">&nbsp;</div></td>
+	
+		</tr>
+
+	<tr>
+		<td class="spacer" colspan="2" height="1"><img src="images/spacer.gif" alt="" width="1" height="1" /></td>
+	</tr>
+	</table>
+
+	<table width="100%" cellspacing="1" class="tablebg">
+	<tr align="center">
+		<td class="cat"><form name="viewtopic" method="post" action="./viewtopic.php?f=16&amp;t=11585&amp;sid=005caa01d7b47b4a6126eeecf578c523"><span class="gensmall">Display posts from previous:</span> <select name="st" id="st"><option value="0" selected="selected">All posts</option><option value="1">1 day</option><option value="7">7 days</option><option value="14">2 weeks</option><option value="30">1 month</option><option value="90">3 months</option><option value="180">6 months</option><option value="365">1 year</option></select>&nbsp;<span class="gensmall">Sort by</span> <select name="sk" id="sk"><option value="a">Author</option><option value="t" selected="selected">Post time</option><option value="s">Subject</option></select> <select name="sd" id="sd"><option value="a" selected="selected">Ascending</option><option value="d">Descending</option></select>&nbsp;<input class="btnlite" type="submit" value="Go" name="sort" /></form></td>
+	</tr>
+	</table>
+	
+
+	<table width="100%" cellspacing="1">
+	<tr>
+		<td align="left" valign="middle" nowrap="nowrap">
+		<a href="./posting.php?mode=post&amp;f=16&amp;sid=005caa01d7b47b4a6126eeecf578c523"><img src="./styles/subsilver2/imageset/en/button_topic_new.gif" alt="Post new topic" title="Post new topic" /></a>&nbsp;<a href="./posting.php?mode=reply&amp;f=16&amp;t=11585&amp;sid=005caa01d7b47b4a6126eeecf578c523"><img src="./styles/subsilver2/imageset/en/button_topic_reply.gif" alt="Reply to topic" title="Reply to topic" /></a>
+		</td>
+		
+			<td class="nav" valign="middle" nowrap="nowrap">&nbsp;Page <strong>1</strong> of <strong>1</strong><br /></td>
+			<td class="gensmall" nowrap="nowrap">&nbsp;[ 6 posts ]&nbsp;</td>
+			<td class="gensmall" width="100%" align="right" nowrap="nowrap"></td>
+		
+	</tr>
+	</table>
+
+</div>
+						
+<div id="wrapcenter"><center>
+<table width="100%" cellspacing="0">
+
+	
+								
+<br/><script type="text/javascript">
+ad_idzone = "1029122";
+ad_width = "468";
+ad_height = "60";
+</script>
+<script type="text/javascript" src="https://ads.exoclick.com/ads.js"></script>
+<noscript><a href="http://main.exoclick.com/img-click.php?idzone=1029122" target="_blank"><img src="https://syndication.exoclick.com/ads-iframe-display.php?idzone=1029122&output=img&type=468x60" width="468" height="60"></a></noscript><br/>
+<p style="font-size:10px;font-weight:strong">You can make the ads go away by <a href="ucp.php?mode=register">registering</a></p>
+
+</table>
+</center>
+</div>
+								
+<div id="pagefooter"></div>
+
+<br clear="all" />
+<table class="tablebg" width="100%" cellspacing="1" cellpadding="0" style="margin-top: 5px;">
+	<tr>
+		<td class="row1">
+			<p class="breadcrumbs"><a href="./index.php?sid=005caa01d7b47b4a6126eeecf578c523">Board index</a> &#187; <a href="./viewforum.php?f=24&amp;sid=005caa01d7b47b4a6126eeecf578c523">Game Modding</a> &#187; <a href="./viewforum.php?f=16&amp;sid=005caa01d7b47b4a6126eeecf578c523">3D/2D models</a></p>
+			<p class="datetime">All times are UTC + 1 hour </p>
+		</td>
+	</tr>
+	</table>
+	<br clear="all" />
+
+	<table class="tablebg" width="100%" cellspacing="1">
+	<tr>
+		<td class="cat"><h4>Who is online</h4></td>
+	</tr>
+	<tr>
+		<td class="row1"><p class="gensmall">Users browsing this forum: <span style="color: #9E8DA7;" class="username-coloured">Google [Bot]</span>, <a href="./memberlist.php?mode=viewprofile&amp;u=41411&amp;sid=005caa01d7b47b4a6126eeecf578c523">yiwang</a> and 4 guests</p></td>
+	</tr>
+	</table>
+
+
+<br clear="all" />
+
+<table width="100%" cellspacing="1">
+<tr>
+	<td width="40%" valign="top" nowrap="nowrap" align="left"></td>
+	<td align="right" valign="top" nowrap="nowrap"><span class="gensmall">You <strong>cannot</strong> post new topics in this forum<br />You <strong>cannot</strong> reply to topics in this forum<br />You <strong>cannot</strong> edit your posts in this forum<br />You <strong>cannot</strong> delete your posts in this forum<br />You <strong>cannot</strong> post attachments in this forum<br /></span></td>
+</tr>
+</table>
+
+<br clear="all" />
+
+<table width="100%" cellspacing="0">
+<tr>
+	<td><form method="post" name="search" action="./search.php?t=11585&amp;sid=005caa01d7b47b4a6126eeecf578c523"><span class="gensmall">Search for:</span> <input class="post" type="text" name="keywords" size="20" /> <input class="btnlite" type="submit" value="Go" /></form></td>
+	<td align="right">
+	<form method="post" name="jumpbox" action="./viewforum.php?sid=005caa01d7b47b4a6126eeecf578c523" onsubmit="if(document.jumpbox.f.value == -1){return false;}">
+
+	<table cellspacing="0" cellpadding="0" border="0">
+	<tr>
+		<td nowrap="nowrap"><span class="gensmall">Jump to:</span>&nbsp;<select name="f" onchange="if(this.options[this.selectedIndex].value != -1){ document.forms['jumpbox'].submit() }">
+
+		
+			<option value="-1">Select a forum</option>
+		<option value="-1">------------------</option>
+			<option value="26">General Discussion</option>
+		
+			<option value="22">&nbsp; &nbsp;Holy Cow!</option>
+		
+			<option value="40">&nbsp; &nbsp;Game news</option>
+		
+			<option value="38">&nbsp; &nbsp;Game Tech Tips</option>
+		
+			<option value="41">&nbsp; &nbsp;Cool mods</option>
+		
+			<option value="28">&nbsp; &nbsp;Website</option>
+		
+			<option value="24">Game Modding</option>
+		
+			<option value="29">&nbsp; &nbsp;Tutorials</option>
+		
+			<option value="16" selected="selected">&nbsp; &nbsp;3D/2D models</option>
+		
+			<option value="17">&nbsp; &nbsp;Audio file formats</option>
+		
+			<option value="18">&nbsp; &nbsp;Graphic file formats</option>
+		
+			<option value="36">&nbsp; &nbsp;Video file formats</option>
+		
+			<option value="10">&nbsp; &nbsp;Game Archive</option>
+		
+			<option value="21">&nbsp; &nbsp;Compressed files and methods</option>
+		
+			<option value="13">&nbsp; &nbsp;Code Talk</option>
+		
+			<option value="35">&nbsp; &nbsp;Game Localization</option>
+		
+			<option value="30">&nbsp; &nbsp;Savegames</option>
+		
+			<option value="15">&nbsp; &nbsp;Old posts</option>
+		
+			<option value="37">&nbsp; &nbsp;Retro games</option>
+		
+			<option value="25">MultiEx Commander</option>
+		
+			<option value="31">Tools &amp; Programs</option>
+		
+			<option value="32">&nbsp; &nbsp;Game specific tools</option>
+		
+			<option value="33">&nbsp; &nbsp;General game tools</option>
+		
+
+		</select>&nbsp;<input class="btnlite" type="submit" value="Go" /></td>
+	</tr>
+	</table>
+
+	</form>
+</td>
+</tr>
+</table>
+
+
+</div>
+
+<!--
+	We request you retain the full copyright notice below including the link to www.phpbb.com.
+	This not only gives respect to the large amount of time given freely by the developers
+	but also helps build interest, traffic and use of phpBB3. If you (honestly) cannot retain
+	the full copyright we ask you at least leave in place the "Powered by phpBB" line, with
+	"phpBB" linked to www.phpbb.com. If you refuse to include even this then support on our
+	forums may be affected.
+
+	The phpBB Group : 2006
+//-->
+
+<div id="wrapfooter">
+	
+	<span class="copyright">Powered by <a href="http://www.phpbb.com/">phpBB</a> &copy; 2000, 2002, 2005, 2007 phpBB Group
+	</span>
+</div>
+<center>
+	<!--ONESTAT SCRIPTCODE START-->
+<!--
+// Het wijzigen van deze code is niet toegestaan en zal uw account definitief blokkeren!
+// Account ID : 295084
+// Website URL: http://www.xentax.com
+// Copyright (C) 2002-2006 OneStat.com All Rights Reserved
+
+-->
+
+<div id="OneStatTag"><table border='0' cellpadding='0' cellspacing='0'><tr><td align='center'>
+<script type="text/javascript">
+<!--
+function OneStat_Pageview()
+{
+    var d=document;
+    var sid="295084";
+    var CONTENTSECTION="";
+    var osp_URL="http://forum.xentax.com";
+    var osp_Title="XeNTaX - Game resource archive TechWizard Forum";
+    var t=new Date();
+    var p="http"+(d.URL.indexOf('https:')==0?'s':'')+"://stat.onestat.com/stat.aspx?tagver=2&sid="+sid;
+    p+="&url="+escape(osp_URL);
+    p+="&ti="+escape(osp_Title);
+    p+="&section="+escape(CONTENTSECTION);
+    p+="&rf="+escape(parent==self?document.referrer:top.document.referrer);
+    p+="&tz="+escape(t.getTimezoneOffset());
+    p+="&ch="+escape(t.getHours());
+    p+="&js=1";
+    p+="&ul="+escape(navigator.appName=="Netscape"?navigator.language:navigator.userLanguage);
+    if(typeof(screen)=="object"){
+       p+="&sr="+screen.width+"x"+screen.height;p+="&cd="+screen.colorDepth;
+       p+="&jo="+(navigator.javaEnabled()?"Yes":"No");
+    }
+    d.write('<a href="http://www.onestat.com/aspx/login.aspx?sid='+sid+'" target=_blank><img id="ONESTAT_TAG" border="0" src="'+p+'" alt="This site tracked by OneStat.com. Get your own free site counter."></'+'a>');
+}
+
+OneStat_Pageview();
+//-->
+</script>
+<noscript>
+<a href="http://www.onestat.com"><img border="0" src="http://stat.onestat.com/stat.aspx?tagver=2&amp;sid=295084&amp;js=No&amp;" ALT="website analysis software"></a>
+</noscript>
+</td></tr><tr><td align='center'><div style="COLOR:black;display:none;FONT-FAMILY:'Verdana';"><a href="http://www.onestat.com" style="text-decoration:none;">website analysis software</a></div></td></tr></table></div>
+<!--ONESTAT SCRIPTCODE END-->
+</center>
+<!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+var sc_project=8247531; 
+var sc_invisible=1; 
+var sc_security="2fc3290b"; 
+</script>
+<script type="text/javascript"
+src="http://www.statcounter.com/counter/counter.js"></script>
+<noscript><div class="statcounter"><a title="vBulletin
+analytics" href="http://statcounter.com/vbulletin/"
+target="_blank"><img class="statcounter"
+src="http://c.statcounter.com/8247531/0/2fc3290b/1/"
+alt="vBulletin analytics"></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
+</body>
+</html>

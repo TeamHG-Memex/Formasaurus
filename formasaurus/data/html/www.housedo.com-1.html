@@ -1,0 +1,488 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="">
+    <meta name="keywords" content="賃貸・売買,ハウスドゥ！,マイページサービス登録">
+    <meta name="description" content="マイページサービス登録">
+    <link hreflang="ja" title="【ハウスドゥ.com】不動産や住宅購入など不動産売買に関する情報満載！" rel="alternate" href="http://www.housedo.com" />
+    <link rel="shortcut icon" href="/memberregistration/img/favicon.ico?20160201">
+    <link rel="stylesheet" href="https://www.housedo.com/housedo_css/form/adjust.css">
+    <link rel="stylesheet" href="https://www.housedo.com/housedo_css/form/default.css">
+    <link rel="stylesheet" href="https://www.housedo.com/housedo_css/form/module.css">
+    <script type="text/javascript" src="https://www.housedo.com/housedo_js/form/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="https://www.housedo.com/housedo_js/form/common.js"></script>
+    <script type="text/javascript" src="https://www.housedo.com/memberregistration/js/top.js"></script>
+    <title>マイページサービス新規登録</title>
+    <!-- 会員登録TOPタグ ここから -->
+    <script type="text/javascript" charset="utf-8">
+        var webcube_dispwidth = screen.width; var webcube_dispheight = screen.height;
+        var webcube_isAlive = false; var webcube_prt = (("https:" == document.location.protocol) ? "https://" : "http://");
+        document.write("<script type='text\/javascript' src='" + webcube_prt + "www.lpomax.net/?Command=WebCubeCV&type=1&c=159&p=1&n=member_regist&w=" + webcube_dispwidth + "&h=" + webcube_dispheight + "&ref=" + escape(document.referrer) + "'><\/script>");
+    </script>
+    <!-- 会員登録TOPタグ ここまで -->
+    <!-- 会員登録TOPタグ ここから -->
+    <script type="text/javascript" charset="utf-8">
+        document.write("<script type='text\/javascript' src='" + (("https:" == document.location.protocol) ? "https://" : "http://") + "www.lpomax.net/?Command=LibDL&dummy=" + new Date().getTime() + "'><\/script>");
+    </script>
+    <script type="text/javascript" charset="utf-8">
+        webcube.data.j1 = webcube.cookie("bpsl_175_1_j1");
+        webcube.data.j2 = webcube.cookie("bpsl_175_1_j2");
+        webcube.data.j3 = webcube.cookie("bpsl_175_1_j3");
+        var webcube_isAlive = false;
+        document.write("<script type='text\/javascript' src='" + (("https:" == document.location.protocol) ? "https://" : "http://") + "www.lpomax.net/?Command=WebCubeCV2&type=1&c=175&p=1&n=member&j1=" + webcube.data.j1 + "&j2=" + webcube.data.j2+"&j3=" + webcube.data.j3 + "&w=" + screen.width + "&h=" + screen.height + "&ref=" + escape(document.referrer) + "'><\/script>");
+    </script>
+    <!-- 会員登録TOPタグ ここまで -->
+    <script type="text/javascript" src="https://www.housedo.com/memberregistration/js/kanaTextExtension_member.js"></script>
+    <script type="text/javascript" src="https://www.housedo.com/memberregistration/js/zip2address.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            faxToggle()
+            $('#inlineCheckbox3').on('click', function(){
+                faxToggle();
+            });
+            function faxToggle(){
+                if($("#inlineCheckbox3:checked").val()) {
+                    $("#fax_detail").show(300);
+                } else {
+                    $("#fax_detail").hide(300);
+                }
+            }
+        });
+    </script>
+</head>
+<body>
+<header>
+    <div class="container">
+        <h1><a href="/"><img src="/housedo_img/form/header-logo.png" alt="ハウスドゥ！" class="header-logo"></a>
+            <span class="tenpo-name">
+                            </span>
+        </h1>
+    </div><!-- /container-->
+</header>
+<div class="container">
+<h2 class="cont_tit"><span>マイページサービス新規登録</span></h2>
+<p>ご利用頂きまして、ありがとうございます。<br>
+    マイページを登録することで、希望の検索条件やお気に入り物件の保存など、より便利なサービスがご利用になれます。</p>
+<ol class="status">
+    <li class="status-sel01">1.お問合せ内容の入力</li>
+    <li>2.内容確認</li>
+    <li>3.完了</li>
+</ol>
+<form name="memberRegistrationForm" action="https://www.housedo.com/memberregistration/detail.php" method="post">
+<h3 class="title01">ご希望の物件情報をお聞かせください。</h3>
+<div class="form-block">
+<table class="tbl01">
+    <col class="colWidth25">
+    <col>
+    <tr>
+        <th><span class="req">必須</span>物件種別とご希望価格<br>（複数選択可）</th>
+        <td  >
+            <div class="checkbox">
+                <label class="txt-type">
+                    <input type="checkbox" name="newEstateFlag" id="newEstateFlag"   />
+                    新築戸建
+                </label>
+                <select  name="newEstatePriceMin" class="txt must">
+                    <option value="0">下限なし</option><option value="500">500万円</option><option value="1000">1000万円</option><option value="1500">1500万円</option><option value="2000">2000万円</option><option value="2500">2500万円</option><option value="3000">3000万円</option><option value="3500">3500万円</option><option value="4000">4000万円</option><option value="4500">4500万円</option><option value="5000">5000万円</option><option value="5500">5500万円</option><option value="6000">6000万円</option><option value="6500">6500万円</option><option value="7000">7000万円</option><option value="7500">7500万円</option>                </select>
+                ～
+                <select name="newEstatePriceMax" class="txt must">
+                    <option value="999999">上限なし</option><option value="500">500万円</option><option value="1000">1000万円</option><option value="1500">1500万円</option><option value="2000">2000万円</option><option value="2500">2500万円</option><option value="3000">3000万円</option><option value="3500">3500万円</option><option value="4000">4000万円</option><option value="4500">4500万円</option><option value="5000">5000万円</option><option value="5500">5500万円</option><option value="6000">6000万円</option><option value="6500">6500万円</option><option value="7000">7000万円</option><option value="7500">7500万円</option><option value="8000">8000万円</option>                </select>
+            </div>
+            <div class="checkbox">
+                <label class="txt-type">
+                    <input type="checkbox" name="oldEstateFlag" id="oldEstateFlag"   />
+                    中古戸建
+                </label>
+                <select class="txt must"  name="oldEstatePriceMin">
+                    <option value="0">下限なし</option><option value="500">500万円</option><option value="1000">1000万円</option><option value="1500">1500万円</option><option value="2000">2000万円</option><option value="2500">2500万円</option><option value="3000">3000万円</option><option value="3500">3500万円</option><option value="4000">4000万円</option><option value="4500">4500万円</option><option value="5000">5000万円</option><option value="5500">5500万円</option><option value="6000">6000万円</option><option value="6500">6500万円</option><option value="7000">7000万円</option><option value="7500">7500万円</option>                </select>
+                ～
+                <select class="txt must"  name="oldEstatePriceMax">
+                    <option value="999999">上限なし</option><option value="500">500万円</option><option value="1000">1000万円</option><option value="1500">1500万円</option><option value="2000">2000万円</option><option value="2500">2500万円</option><option value="3000">3000万円</option><option value="3500">3500万円</option><option value="4000">4000万円</option><option value="4500">4500万円</option><option value="5000">5000万円</option><option value="5500">5500万円</option><option value="6000">6000万円</option><option value="6500">6500万円</option><option value="7000">7000万円</option><option value="7500">7500万円</option><option value="8000">8000万円</option>                </select>
+            </div>
+            <div class="checkbox">
+                <label class="txt-type">
+                    <input type="checkbox" name="newMansionFlag" id="newMansionFlag"   />
+                    新築マンション
+                </label>
+                <select class="txt must" name="newMansionPriceMin">
+                    <option value="0">下限なし</option><option value="500">500万円</option><option value="1000">1000万円</option><option value="1500">1500万円</option><option value="2000">2000万円</option><option value="2500">2500万円</option><option value="3000">3000万円</option><option value="3500">3500万円</option><option value="4000">4000万円</option><option value="4500">4500万円</option><option value="5000">5000万円</option><option value="5500">5500万円</option><option value="6000">6000万円</option><option value="6500">6500万円</option><option value="7000">7000万円</option><option value="7500">7500万円</option>                </select>
+                ～
+                <select class="txt must"  name="newMansionPriceMax">
+                    <option value="999999">上限なし</option><option value="500">500万円</option><option value="1000">1000万円</option><option value="1500">1500万円</option><option value="2000">2000万円</option><option value="2500">2500万円</option><option value="3000">3000万円</option><option value="3500">3500万円</option><option value="4000">4000万円</option><option value="4500">4500万円</option><option value="5000">5000万円</option><option value="5500">5500万円</option><option value="6000">6000万円</option><option value="6500">6500万円</option><option value="7000">7000万円</option><option value="7500">7500万円</option><option value="8000">8000万円</option>                </select>
+            </div>
+            <div class="checkbox">
+                <label class="txt-type">
+                    <input type="checkbox" name="oldMansionFlag" id="oldMansionFlag"   />
+                    中古マンション
+                </label>
+                <select class="txt must" name="oldMansionPriceMin">
+                    <option value="0">下限なし</option><option value="500">500万円</option><option value="1000">1000万円</option><option value="1500">1500万円</option><option value="2000">2000万円</option><option value="2500">2500万円</option><option value="3000">3000万円</option><option value="3500">3500万円</option><option value="4000">4000万円</option><option value="4500">4500万円</option><option value="5000">5000万円</option><option value="5500">5500万円</option><option value="6000">6000万円</option><option value="6500">6500万円</option><option value="7000">7000万円</option><option value="7500">7500万円</option>                </select>
+                ～
+                <select class="txt must" name="oldMansionPriceMax">
+                    <option value="999999">上限なし</option><option value="500">500万円</option><option value="1000">1000万円</option><option value="1500">1500万円</option><option value="2000">2000万円</option><option value="2500">2500万円</option><option value="3000">3000万円</option><option value="3500">3500万円</option><option value="4000">4000万円</option><option value="4500">4500万円</option><option value="5000">5000万円</option><option value="5500">5500万円</option><option value="6000">6000万円</option><option value="6500">6500万円</option><option value="7000">7000万円</option><option value="7500">7500万円</option><option value="8000">8000万円</option>                </select>
+            </div>
+            <div class="checkbox">
+                <label class="txt-type">
+                    <input type="checkbox" name="landFlag" id="landFlag"  />
+                    土地
+                </label>
+                <select class="txt must" name="landPriceMin">
+                    <option value="0">下限なし</option><option value="500">500万円</option><option value="1000">1000万円</option><option value="1500">1500万円</option><option value="2000">2000万円</option><option value="2500">2500万円</option><option value="3000">3000万円</option><option value="3500">3500万円</option><option value="4000">4000万円</option><option value="4500">4500万円</option><option value="5000">5000万円</option><option value="5500">5500万円</option><option value="6000">6000万円</option><option value="6500">6500万円</option><option value="7000">7000万円</option><option value="7500">7500万円</option>                </select>
+                ～
+                <select class="txt must" name="landPriceMax">
+                    <option value="999999">上限なし</option><option value="500">500万円</option><option value="1000">1000万円</option><option value="1500">1500万円</option><option value="2000">2000万円</option><option value="2500">2500万円</option><option value="3000">3000万円</option><option value="3500">3500万円</option><option value="4000">4000万円</option><option value="4500">4500万円</option><option value="5000">5000万円</option><option value="5500">5500万円</option><option value="6000">6000万円</option><option value="6500">6500万円</option><option value="7000">7000万円</option><option value="7500">7500万円</option><option value="8000">8000万円</option>                </select>
+            </div>
+            <div class="checkbox">
+                <label class="txt-type">
+                    <input type="checkbox" name="businessFlag" id="businessFlag"   />
+                    収益物件・事業用
+                </label>
+                <select class="txt must" name="businessPriceMin">
+                    <option value="0">下限なし</option><option value="500">500万円</option><option value="1000">1000万円</option><option value="1500">1500万円</option><option value="2000">2000万円</option><option value="2500">2500万円</option><option value="3000">3000万円</option><option value="3500">3500万円</option><option value="4000">4000万円</option><option value="4500">4500万円</option><option value="5000">5000万円</option><option value="5500">5500万円</option><option value="6000">6000万円</option><option value="6500">6500万円</option><option value="7000">7000万円</option><option value="7500">7500万円</option>                </select>
+                ～
+                <select class="txt must"  name="businessPriceMax">
+                    <option value="999999">上限なし</option><option value="500">500万円</option><option value="1000">1000万円</option><option value="1500">1500万円</option><option value="2000">2000万円</option><option value="2500">2500万円</option><option value="3000">3000万円</option><option value="3500">3500万円</option><option value="4000">4000万円</option><option value="4500">4500万円</option><option value="5000">5000万円</option><option value="5500">5500万円</option><option value="6000">6000万円</option><option value="6500">6500万円</option><option value="7000">7000万円</option><option value="7500">7500万円</option><option value="8000">8000万円</option>                </select>
+            </div>
+                    </td>
+    </tr>
+    <tr>
+        <th class="no-req-cell"><span class="no-req">任意</span>ご希望の条件・ご要望</th>
+        <td>
+            <textarea class="txt large" rows="3" maxlength="300" placeholder="全角300文字まで"  name="freetext" style="ime-mode: active;"></textarea>
+        </td>
+    </tr>
+</table>
+    <p class="sub-title">都道府県・市区町村を選択してください。取扱い物件のある店舗が全て表示されます。</p>
+    <table class="tbl01">
+        <col class="colWidth25">
+        <col>
+        <tr>
+            <th><span class="req">必須</span>ご希望都道府県</th>
+            <td >
+                <select class="txt must"  name="guestPrefId" onchange="getCityList1( this.value );" id="js_prefId">
+                    <option value="" selected>- 都道府県を選択してください -</option>
+                    <option value="01">北海道</option><option value="02">青森県</option><option value="03">岩手県</option><option value="04">宮城県</option><option value="05">秋田県</option><option value="06">山形県</option><option value="07">福島県</option><option value="08">茨城県</option><option value="09">栃木県</option><option value="10">群馬県</option><option value="11">埼玉県</option><option value="12">千葉県</option><option value="13">東京都</option><option value="14">神奈川県</option><option value="15">新潟県</option><option value="16">富山県</option><option value="17">石川県</option><option value="18">福井県</option><option value="19">山梨県</option><option value="20">長野県</option><option value="21">岐阜県</option><option value="22">静岡県</option><option value="23">愛知県</option><option value="24">三重県</option><option value="25">滋賀県</option><option value="26">京都府</option><option value="27">大阪府</option><option value="28">兵庫県</option><option value="29">奈良県</option><option value="30">和歌山県</option><option value="31">鳥取県</option><option value="32">島根県</option><option value="33">岡山県</option><option value="34">広島県</option><option value="35">山口県</option><option value="36">徳島県</option><option value="37">香川県</option><option value="38">愛媛県</option><option value="39">高知県</option><option value="40">福岡県</option><option value="41">佐賀県</option><option value="42">長崎県</option><option value="43">熊本県</option><option value="44">大分県</option><option value="45">宮崎県</option><option value="46">鹿児島県</option><option value="47">沖縄県</option>                </select>
+                            </td>
+        </tr>
+                <tr>
+            <th><span class="req">必須</span>ご希望市区町村</th>
+            <td >
+                <select class="txt must" name="guestCityId" id="cityIdList"  onchange="getTenpoHtmlList();">
+                    <option value="" selected>- 選択してください -</option>
+                                    </select>
+                <select class="txt must" name="guestCityId1" id="cityIdList1"  onchange="getTenpoHtmlList();">
+                    <option value="" selected>- 選択してください -</option>
+                                    </select>
+                <select class="txt must" name="guestCityId2" id="cityIdList2" onchange="getTenpoHtmlList();">
+                    <option value="" selected>- 選択してください -</option>
+                                    </select>
+                            </td>
+        </tr>
+    </table>
+            <div id="tempoList" >
+            <table class="tbl01">
+<col class="colWidth25">
+<col>
+<col>
+<tr><th><span class="req">必須</span>店舗を選択して下さい<br>（複数選択可）</th>
+<td><br/>対象のエリアを得意とする店舗は存在しません。<br /><br/></td></tr>
+</table>
+        </div>
+    </div>
+<h3 class="title01">お客様について</h3>
+<div class="form-block">
+<table class="tbl01">
+<col class="colWidth25">
+<col>
+<tr>
+    <th><span class="req">必須</span>メールアドレス</th>
+    <td >
+        <input type="text" class="txt medium03 must"  name="guestMailAddress" value="" maxlength="50" placeholder="例：housedo@housedo.com" style="ime-mode: inactive;">
+        <p class="help-note">※ログインユーザー名となります。</p>
+            </td>
+</tr>
+<tr>
+    <th><span class="req">必須</span>メールアドレス確認</th>
+    <td >
+        <input type="text" class="txt medium03 must" maxlength="50" placeholder=""  name="guestMailAddressConfirm" value="" style="ime-mode: inactive;">
+            </td>
+</tr>
+
+<tr>
+    <th><span class="req">必須</span>お名前</th>
+    <td >
+        <span class="input-group-addon">姓</span>
+        <input type="text" class="txt medium01 must" name="guestLastName" value=""  maxlength="30" style="ime-mode: active;" placeholder="例：はうす堂">
+        &nbsp;<span class="input-group-addon">名</span>
+        <input type="text" class="txt medium01 must" name="guestFirstName" value="" maxlength="30" style="ime-mode: active;" placeholder="例：太郎">
+            </td>
+</tr>
+<tr>
+    <th><span class="req">必須</span>フリガナ</th>
+    <td  >
+        <span class="input-group-addon">セイ</span>
+        <input type="text" class="txt medium01 must" name="guestLastNameKana" value="" maxlength="30" style="ime-mode: active;" placeholder="例：ハウスドウ">
+        &nbsp;<span class="input-group-addon">メイ</span>
+        <input type="text" class="txt medium01 must" name="guestFirstNameKana" value="" maxlength="30" style="ime-mode: active;" placeholder="例：タロウ">
+            </td>
+</tr>
+<tr>
+    <th><span class="req">必須</span>電話番号</th>
+    <td >
+        <input type="text" class="txt small01 must" name="guestTelLeft" value="" maxlength="5" placeholder="012" style="ime-mode: inactive;">
+        -
+        <input type="text" class="txt small01 must" name="guestTelCenter" value="" maxlength="5" placeholder="345" style="ime-mode: inactive;">
+        -
+        <input type="text" class="txt small01 must" name="guestTelRight" value="" maxlength="5" placeholder="6789" style="ime-mode: inactive;">
+            </td>
+</tr>
+
+<tr>
+    <th><span class="req">必須</span>ご住所</th>
+    <td >
+        <span class="input-group-addon">〒</span>
+        <input type="text" class="txt postcode01 must" name="zipCodeLeft" id="zipCodeLeft" value=""  maxlength="3" placeholder="123" style="ime-mode: inactive;">
+        -
+        <input type="text" class="txt postcode02 must" name="zipCodeRight" id="zipCodeRight"  value=""  maxlength="4" placeholder="4567" style="ime-mode: inactive;">
+        <input type="button" id="btn" class="btn btn-postcode" value="検索">
+        <span class="help-note">※ 郵便番号から住所を自動入力できます。 </span>
+
+        <div class="form-group">
+            <select class="txt must" name="guestPref" id="guestPref" onchange="getCityList(this.value)">
+                <option value="" selected>- - -</option>
+                <option value="01" >北海道</option><option value="02" >青森県</option><option value="03" >岩手県</option><option value="04" >宮城県</option><option value="05" >秋田県</option><option value="06" >山形県</option><option value="07" >福島県</option><option value="08" >茨城県</option><option value="09" >栃木県</option><option value="10" >群馬県</option><option value="11" >埼玉県</option><option value="12" >千葉県</option><option value="13" >東京都</option><option value="14" >神奈川県</option><option value="15" >新潟県</option><option value="16" >富山県</option><option value="17" >石川県</option><option value="18" >福井県</option><option value="19" >山梨県</option><option value="20" >長野県</option><option value="21" >岐阜県</option><option value="22" >静岡県</option><option value="23" >愛知県</option><option value="24" >三重県</option><option value="25" >滋賀県</option><option value="26" >京都府</option><option value="27" >大阪府</option><option value="28" >兵庫県</option><option value="29" >奈良県</option><option value="30" >和歌山県</option><option value="31" >鳥取県</option><option value="32" >島根県</option><option value="33" >岡山県</option><option value="34" >広島県</option><option value="35" >山口県</option><option value="36" >徳島県</option><option value="37" >香川県</option><option value="38" >愛媛県</option><option value="39" >高知県</option><option value="40" >福岡県</option><option value="41" >佐賀県</option><option value="42" >長崎県</option><option value="43" >熊本県</option><option value="44" >大分県</option><option value="45" >宮崎県</option><option value="46" >鹿児島県</option><option value="47" >沖縄県</option>            </select>
+            <select class="txt must" name="guestCity" id="guestCity">
+                <option value="" selected>- - -</option>
+                            </select>
+        </div>
+        <div class="form-group">
+            <input type="text"  name="guestAddress" id="guestAddress" value=""  class="txt large" maxlength="50" placeholder="番地、マンション・アパート名、号室等など" style="ime-mode: active;">
+            <p class="help-note"><span>例</span>○○１−１−１○○アパート １階（マンション・アパート名、号室等もご記入ください。）</p>
+        </div>
+            </td>
+</tr>
+<script>
+    var input1 = jQuery('#zipCodeLeft'),
+        input2 = jQuery('#zipCodeRight'),
+        outputPref = jQuery('#guestPref'),
+        outputCity = jQuery('#guestCity');
+    guestCityName = jQuery('#guestCityName');
+    outputAddress = jQuery('#guestAddress');
+    var input = input1.val() + input2.val();
+
+    jQuery('#btn').click(function() {
+        zip2address((input1.val() + input2.val() ), function(address) {
+            if (address) {
+                var addPref = ('00' + address.prefId).slice(-2);
+                outputPref.val(addPref);
+                clearList("guestCity");
+                var url = ajaxUrl('ajaxCitylist.php');
+                var data = "prefId="+address.prefId;
+                $.ajax({
+                    cache:false,
+                    type: 'post',
+                    url:  url ,
+                    data: data,
+                    success: function(data, dataType) {
+                        setCityIdList(data);
+                        for (var key in data) {
+                            if (address.city.indexOf(data[key]['city_name']) === 0) {
+                                outputCity.val(data[key]['city_id']);
+                                guestCityName.val(data[key]['city_name']);
+                                address.prefId = key;
+                                address.city = address.city.replace(data[key]['city_name'], '');
+                                outputAddress.val(address.city);
+                            }
+                        }
+                    },
+                    error: function() {
+
+                    }
+                });
+            }
+        });
+    });
+</script>
+<tr>
+    <th><span class="req">必須</span>ご希望のご連絡方法</th>
+    <td >
+        <label class="checkbox-inline">
+            <input type="checkbox" id="inlineCheckbox4" name="contactLetter"  value="option4" > 郵便
+        </label>
+        <label class="checkbox-inline">
+            <input type="checkbox" id="inlineCheckbox2" name="contactTel" value="option2" > 電話
+        </label>
+        <label class="checkbox-inline">
+            <input type="checkbox" id="inlineCheckbox3" name="contactFax" value="option3" > FAX
+        </label>
+        <label class="checkbox-inline">
+            <input type="checkbox" id="inlineCheckbox1" name="contactEmail" value="option1" > Eメール
+        </label>
+            </td>
+</tr>
+<tr id="fax_detail" style="display: none">
+    <th><span class="req">必須</span>FAX<span class="help-note">※「ご希望の連絡方法」で<br>「FAX」選択時は必須</span></th>
+    <td >
+        <input type="text" class="txt small01 must" name="guestFaxLeft" value="" maxlength="5" placeholder="012" style="ime-mode: inactive;">
+        -
+        <input type="text" class="txt small01 must" name="guestFaxCenter" value="" maxlength="5" placeholder="345" style="ime-mode: inactive;">
+        -
+        <input type="text" class="txt small01 must"  name="guestFaxRight" value=""  maxlength="5" placeholder="6789" style="ime-mode: inactive;">
+            </td>
+</tr>
+</table>
+</div>
+<h3 class="title01">アンケートにご協力をお願いいたします</h3>
+<div class="form-block">
+    <table class="tbl01">
+        <col class="colWidth35">
+        <col>
+        <tr>
+            <th class="no-req-cell"><span class="no-req">任意</span>ハウスドゥ！を知ったきっかけを<br>お聞かせください。</th>
+            <td>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" name="inquiryMedia1" value="インターネット検索"  />
+                        インターネット検索
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" name="inquiryMedia2" value="チラシ"  />
+                        チラシ
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" name="inquiryMedia3" value="TVCM"  />
+                        TVCM
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" name="inquiryMedia4" value="ラジオCM"  />
+                        ラジオCM
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" name="inquiryMedia5" value="看板"  />
+                        看板
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" name="inquiryMedia6" value="不動産検索ポータル（HOME'S/at home/SUUMO/Yahoo!不動産 等）"  />
+                        不動産検索ポータル（HOME'S/at home/SUUMO/Yahoo!不動産 等）
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" name="inquiryMedia7" value="紹介"  />
+                        紹介
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" name="inquiryMedia8" value="その他"  />
+                        その他
+                    </label>
+                    <input name="inquiryMediaOther" type="text" value="" class="txt medium02" maxlength="50" placeholder="" style="ime-mode:active" />
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>
+<input type="hidden" name="sf" value="" />
+<input type="hidden" name="fcs" value="" />
+<input type="hidden" name="tc" value="UA-1848304-3" />
+<input type="hidden" name="fc_shop_name" value=""/>
+<input type="hidden" name="fc_shop_mail_address" value=""/>
+<input type="hidden" name="fc_name" value=""/>
+<input type="hidden" name="fc_mail_address" value=""/>
+<input type="hidden" name="aspFlag" value="false"/>
+<input type="hidden" name="dosearchFlag" value="false"/>
+<input type="hidden" name="housedoComFlag" value=""/>
+<h3 class="title01">プライバシーポリシーをご確認ください</h3>
+<div class="privacy">
+    <iframe src="/forms/html/privacy.html" scrolling="yes" frameborder="0" allowfullscreen=""></iframe>
+</div>
+<p class="help-note"> 当サイトは一般ユーザーの方を対象としており、同業他社様のご登録は固くお断りいたします。<br>
+    マイページサービスに登録されましても内容を削除させて頂くことがございます。あらかじめご了承下さい。</p>
+<div class="submit-group">
+    <input type="submit" class="btn btn-conf" value="プライバシーポリシーに同意の上、内容確認画面に進む">
+</div>
+</form>
+</div><!-- /container-->
+<footer>
+    <p class="footer-tenpo-name">ハウスドゥ！</p>
+    <p class="copyright">ハウスドゥ！加盟の店舗はすべて独立企業により経営されています。Copyright(c) HOUSEDO Co.ltd All Rights Reserved.</p>
+</footer>
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-1848304-3']);
+    _gaq.push(['_trackPageview']);
+    _gaq.push(['_setDomainName', 'none']);
+    _gaq.push(['_setAllowLinker', true]);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+</div>
+
+<!-- EBiS tag version2.10 start -->
+<script type="text/javascript">
+    <!--
+    if ( location.protocol == 'http:' ){
+        strServerName = 'http://ac.ebis.ne.jp';
+    } else {
+        strServerName = 'https://ac.ebis.ne.jp';
+    }
+    cid = 'MFBeL3Ea'; pid = 'member'; m1id=''; a1id=''; o1id=''; o2id=''; o3id=''; o4id=''; o5id='';
+    document.write("<scr" + "ipt type=\"text\/javascript\" src=\"" + strServerName + "\/ebis_tag.php?cid=" + cid + "&pid=" + pid + "&m1id=" + m1id +
+        "&a1id=" + a1id + "&o1id=" + o1id + "&o2id=" + o2id + "&o3id=" + o3id + "&o4id=" + o4id + "&o5id=" + o5id + "\"><\/scr" + "ipt>");
+    // -->
+</script>
+<noscript>
+    <img src="https://ac.ebis.ne.jp/log.php?argument=MFBeL3Ea&ebisPageID=member&ebisMember=&ebisAmount=&ebisOther1=&ebisOther2=&ebisOther3=&ebisOther4=&ebisOther5=" width="0" height="0">
+</noscript>
+<!-- EBiS tag end -->
+<!-- EBiS tag version2.10 半田start -->
+<script type="text/javascript">
+    <!--
+    if ( location.protocol == 'http:' ){
+        strServerName = 'http://ac.ebis.ne.jp';
+    } else {
+        strServerName = 'https://ac.ebis.ne.jp';
+    }
+    cid = 'JTufuXxE'; pid = 'member'; m1id=''; a1id=''; o1id=''; o2id=''; o3id=''; o4id=''; o5id='';
+    document.write("<scr" + "ipt type=\"text\/javascript\" src=\"" + strServerName + "\/ebis_tag.php?cid=" + cid + "&pid=" + pid + "&m1id=" + m1id +
+        "&a1id=" + a1id + "&o1id=" + o1id + "&o2id=" + o2id + "&o3id=" + o3id + "&o4id=" + o4id + "&o5id=" + o5id + "\"><\/scr" + "ipt>");
+    // -->
+</script>
+<noscript>
+    <img src="https://ac.ebis.ne.jp/log.php?argument=JTufuXxE&ebisPageID=member&ebisMember=&ebisAmount=&ebisOther1=&ebisOther2=&ebisOther3=&ebisOther4=&ebisOther5=" width="0" height="0">
+</noscript>
+<!-- EBiS tag end -->
+
+<!-- EBiS common tag version2.00 start -->
+<script type="text/javascript">
+    <!--
+    (function() {
+        var host = (location.protocol == 'http:')
+            ? 'http://ac.ebis.ne.jp'
+            : 'https://ac.ebis.ne.jp';
+        var argument = 'MFBeL3Ea';
+        var url      = host + '/ct_tag.php?argument=' + argument;
+        document.write('<scr' + 'ipt type="text/javascript" src="' + url + '"></scr' + 'ipt>');
+    })();
+    //-->
+</script>
+<!-- EBiS common tag end -->
+</body>
+</html>

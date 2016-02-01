@@ -813,6 +813,52 @@
             }
         ]
     },
+    "html/clienttrack.com-0.html": {
+        "url": "http://clienttrack.com/solutions/youth-and-family-services/",
+        "forms": [
+            "X",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "s": "XX"
+            },
+            {
+                "Country": "XX",
+                "FSTATE": "XX",
+                "Submit": "XX",
+                "ao_form_neg_cap": "XX",
+                "email_address": "XX",
+                "first_name": "XX",
+                "last_name": "XX",
+                "organization": "XX",
+                "phone_number": "XX"
+            }
+        ]
+    },
+    "html/clienttrack.com-1.html": {
+        "url": "http://clienttrack.com/",
+        "forms": [
+            "X",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "s": "XX"
+            },
+            {
+                "Country": "XX",
+                "FSTATE": "XX",
+                "Submit": "XX",
+                "ao_form_neg_cap": "XX",
+                "email_address": "XX",
+                "first_name": "XX",
+                "last_name": "XX",
+                "organization": "XX",
+                "phone_number": "XX"
+            }
+        ]
+    },
     "html/climatecolab.org-0.html": {
         "url": "http://climatecolab.org/",
         "forms": [
@@ -960,6 +1006,47 @@
             },
             {
                 "screenName": "XX"
+            }
+        ]
+    },
+    "html/compareit4me.com-0.html": {
+        "url": "http://compareit4me.com/",
+        "forms": [
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "EMAIL": "XX",
+                "_mc4wp_required_but_not_really": "XX"
+            }
+        ]
+    },
+    "html/compareit4me.com-1.html": {
+        "url": "http://compareit4me.com/mortgages/",
+        "forms": [
+            "X",
+            "X"
+        ],
+        "visible_html_fields": [
+            {},
+            {
+                "EMAIL": "XX",
+                "_mc4wp_required_but_not_really": "XX"
+            }
+        ]
+    },
+    "html/compareit4me.com-2.html": {
+        "url": "http://compareit4me.com/contact-us/",
+        "forms": [
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "cptch_number": "XX",
+                "g2-email": "XX",
+                "g2-howcanwehelp": "XX",
+                "g2-name": "XX",
+                "g2-number": "XX"
             }
         ]
     },
@@ -1394,6 +1481,45 @@
             }
         ]
     },
+    "html/e900110.hailedu.gov.sa-0.html": {
+        "url": "http://e900110.hailedu.gov.sa/",
+        "forms": [
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "PollVote": "XX",
+                "ctl01$ctl00$BtnLogin": "XX",
+                "ctl01$ctl00$MainConten$BtnSearch": "XX",
+                "ctl01$ctl00$MainConten$TxtSearch": "XX",
+                "ctl01$ctl00$TxtImageSecurity": "XX",
+                "ctl01$ctl00$TxtPassword": "XX",
+                "ctl01$ctl00$TxtUsername": "XX"
+            }
+        ]
+    },
+    "html/e900110.hailedu.gov.sa-1.html": {
+        "url": "http://e900110.hailedu.gov.sa/1437/01/22/%D8%A7%D9%84%D8%AA%D9%88%D8%B9%D9%8A%D8%A9_%D8%A7%D9%84%D8%A5%D8%B3%D9%84%D8%A7%D9%85%D9%8A%D8%A9%D8%A8%D9%86%D8%A7%D8%AA_%D8%A8%D8%AA%D8%B9%D9%84%D9%8A%D9%85_%D8%AD%D8%A7%D8%A6%D9%84_%D8%AA%D9%82%D9%8A%D9%85_%D8%AF%D9%88%D8%B1%D8%A7%D8%AA_%D8%AA%D9%86%D8%B4%D9%8A%D8%B7%D9%8A%D8%A9_%D9%84%D9%85%D8%B3%D8%A6%D9%88%D9%84%D8%A7%D8%AA_%D8%A7%D9%84%D9%85%D8%B5%D9%84%D9%89/",
+        "forms": [
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "PollVote": "XX",
+                "ctl00$ctl00$ctl00$ctl00$BtnLogin": "XX",
+                "ctl00$ctl00$ctl00$ctl00$MainConten$BtnSearch": "XX",
+                "ctl00$ctl00$ctl00$ctl00$MainConten$MainConten$MainConten$MainConten$Txtsubject": "XX",
+                "ctl00$ctl00$ctl00$ctl00$MainConten$TxtSearch": "XX",
+                "ctl00$ctl00$ctl00$ctl00$TxtImageSecurity": "XX",
+                "ctl00$ctl00$ctl00$ctl00$TxtPassword": "XX",
+                "ctl00$ctl00$ctl00$ctl00$TxtUsername": "XX",
+                "email": "XX",
+                "friendemail": "XX",
+                "friendname": "XX",
+                "name": "XX"
+            }
+        ]
+    },
     "html/en.wikipedia.org-0.html": {
         "url": "http://en.wikipedia.org/wiki/Main_Page",
         "forms": [
@@ -1603,6 +1729,59 @@
         "visible_html_fields": [
             {
                 "limit": "sp"
+            }
+        ]
+    },
+    "html/fightcopyrighttrolls.com-0.html": {
+        "url": "http://fightcopyrighttrolls.com/discussions/general-issues/questions-from-an-anonymous-poster/",
+        "forms": [
+            "X",
+            "X",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "author": "XX",
+                "comment": "XX",
+                "email": "XX",
+                "submit": "XX",
+                "subscribe": "XX",
+                "subscribe_blog": "XX",
+                "url": "XX"
+            },
+            {
+                "email": "XX"
+            },
+            {
+                "source_email": "XX",
+                "source_f_name": "XX",
+                "source_name": "XX",
+                "target_email": "XX"
+            }
+        ]
+    },
+    "html/fightcopyrighttrolls.com-1.html": {
+        "url": "http://fightcopyrighttrolls.com/",
+        "forms": [
+            "X",
+            "X",
+            "X",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "s": "XX"
+            },
+            {
+                "email": "XX"
+            },
+            {
+                "email": "XX"
+            },
+            {
+                "carousel-reblog-content": "XX",
+                "carousel-reblog-submit": "XX",
+                "carousel-reblog-to-blog-id": "XX"
             }
         ]
     },
@@ -2048,6 +2227,39 @@
             }
         ]
     },
+    "html/forum.pokemonpets.com-0.html": {
+        "url": "http://forum.pokemonpets.com/",
+        "forms": [
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "language": "XX"
+            }
+        ]
+    },
+    "html/forum.xentax.com-0.html": {
+        "url": "http://forum.xentax.com/viewtopic.php?f=16&t=11585",
+        "forms": [
+            "X",
+            "X",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "sd": "XX",
+                "sk": "XX",
+                "sort": "XX",
+                "st": "XX"
+            },
+            {
+                "keywords": "XX"
+            },
+            {
+                "f": "XX"
+            }
+        ]
+    },
     "html/forums.debian.net-0.html": {
         "url": "http://forums.debian.net/",
         "forms": [
@@ -2167,6 +2379,136 @@
                 "f": "nv"
             },
             {}
+        ]
+    },
+    "html/forums.mazdaworld.org-0.html": {
+        "url": "http://forums.mazdaworld.org/108-tribute/310106-2005-tribute.html",
+        "forms": [
+            "X",
+            "X",
+            "X",
+            "X",
+            "X",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "q": "XX",
+                "sa": "XX"
+            },
+            {
+                "cookieuser": "XX",
+                "vb_login_password": "XX",
+                "vb_login_username": "XX"
+            },
+            {
+                "adcopy_challenge": "XX",
+                "cookieuser": "XX",
+                "email": "XX",
+                "message": "XX",
+                "password": "XX",
+                "passwordconfirm": "XX",
+                "preview": "XX",
+                "quickreply": "XX",
+                "sbutton": "XX",
+                "username": "XX",
+                "vb_login_password": "XX",
+                "vb_login_username": "XX"
+            },
+            {},
+            {
+                "q": "XX",
+                "sa": "XX"
+            },
+            {
+                "styleid": "XX"
+            }
+        ]
+    },
+    "html/forums.mazdaworld.org-1.html": {
+        "url": "http://forums.mazdaworld.org/103-929/",
+        "forms": [
+            "X",
+            "X",
+            "X",
+            "X",
+            "X",
+            "X",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "q": "XX",
+                "sa": "XX"
+            },
+            {
+                "cookieuser": "XX",
+                "vb_login_password": "XX",
+                "vb_login_username": "XX"
+            },
+            {},
+            {
+                "daysprune": "XX",
+                "order": "XX",
+                "sort": "XX"
+            },
+            {
+                "query": "XX"
+            },
+            {
+                "q": "XX",
+                "sa": "XX"
+            },
+            {
+                "styleid": "XX"
+            }
+        ]
+    },
+    "html/forums.mazdaworld.org-2.html": {
+        "url": "http://forums.mazdaworld.org/newthread.php?do=newthread&f=103",
+        "forms": [
+            "X",
+            "X",
+            "X",
+            "X",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "q": "XX",
+                "sa": "XX"
+            },
+            {
+                "cookieuser": "XX",
+                "vb_login_password": "XX",
+                "vb_login_username": "XX"
+            },
+            {
+                "adcopy_challenge": "XX",
+                "cookieuser": "XX",
+                "email": "XX",
+                "iconid": "XX",
+                "message": "XX",
+                "parseame": "XX",
+                "parseurl": "XX",
+                "password": "XX",
+                "passwordconfirm": "XX",
+                "preview": "XX",
+                "sbutton": "XX",
+                "sendtrackbacks": "XX",
+                "subject": "XX",
+                "username": "XX",
+                "vb_login_password": "XX",
+                "vb_login_username": "XX",
+                "vbseo_retrtitle": "XX"
+            },
+            {
+                "q": "XX",
+                "sa": "XX"
+            },
+            {
+                "styleid": "XX"
+            }
         ]
     },
     "html/forums.mtbr.com-0.html": {
@@ -2733,6 +3075,148 @@
             }
         ]
     },
+    "html/gsm-komplekt.com-6.html": {
+        "url": "http://gsm-komplekt.com/category/shlejf-obektiva-zerkalnogo-fotoapparata/",
+        "forms": [
+            "X",
+            "X",
+            "X",
+            "X",
+            "X",
+            "X",
+            "X",
+            "X",
+            "X",
+            "X",
+            "X",
+            "X",
+            "X",
+            "X",
+            "X",
+            "X",
+            "X",
+            "X",
+            "X",
+            "X",
+            "X",
+            "X",
+            "X",
+            "X",
+            "X",
+            "X",
+            "X",
+            "X",
+            "X",
+            "X",
+            "X",
+            "X",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "searchstring": "XX"
+            },
+            {
+                "search_name": "XX"
+            },
+            {},
+            {},
+            {},
+            {},
+            {},
+            {},
+            {},
+            {},
+            {},
+            {},
+            {},
+            {},
+            {},
+            {},
+            {},
+            {},
+            {},
+            {},
+            {},
+            {},
+            {},
+            {},
+            {},
+            {},
+            {},
+            {},
+            {},
+            {},
+            {},
+            {},
+            {
+                "email": "XX"
+            }
+        ]
+    },
+    "html/gsm-komplekt.com-7.html": {
+        "url": "http://gsm-komplekt.com/",
+        "forms": [
+            "X",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "searchstring": "XX"
+            },
+            {
+                "email": "XX"
+            }
+        ]
+    },
+    "html/gsm-komplekt.com-8.html": {
+        "url": "http://gsm-komplekt.com/auth/",
+        "forms": [
+            "X",
+            "X",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "searchstring": "XX"
+            },
+            {
+                "user_login": "XX",
+                "user_pw": "XX"
+            },
+            {
+                "email": "XX"
+            }
+        ]
+    },
+    "html/gsm-komplekt.com-9.html": {
+        "url": "http://gsm-komplekt.com/register/",
+        "forms": [
+            "X",
+            "X",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "searchstring": "XX"
+            },
+            {
+                "additional_field_1": "XX",
+                "additional_field_2": "XX",
+                "address[address]": "XX",
+                "address[city]": "XX",
+                "address[zip]": "XX",
+                "email": "XX",
+                "fConfirmationCode": "XX",
+                "first_name": "XX",
+                "save": "XX",
+                "subscribed4news": "XX"
+            },
+            {
+                "email": "XX"
+            }
+        ]
+    },
     "html/guerrillagardening.org-0.html": {
         "url": "http://guerrillagardening.org/community/index.php",
         "forms": [
@@ -2773,6 +3257,237 @@
                 "cookielength": "rC",
                 "passwrd": "p1",
                 "user": "us"
+            }
+        ]
+    },
+    "html/hubbub.net-0.html": {
+        "url": "https://hubbub.net/login/",
+        "forms": [
+            "X",
+            "X",
+            "X",
+            "X",
+            "X",
+            "X",
+            "X",
+            "X",
+            "X",
+            "X",
+            "X",
+            "X"
+        ],
+        "visible_html_fields": [
+            {},
+            {},
+            {
+                "password": "XX",
+                "username": "XX"
+            },
+            {
+                "email": "XX"
+            },
+            {},
+            {},
+            {
+                "email": "XX",
+                "password": "XX",
+                "username": "XX"
+            },
+            {
+                "email": "XX"
+            },
+            {},
+            {},
+            {
+                "password": "XX",
+                "username": "XX"
+            },
+            {
+                "email": "XX"
+            }
+        ]
+    },
+    "html/hubbub.net-1.html": {
+        "url": "https://hubbub.net/signup/email/",
+        "forms": [
+            "X",
+            "X",
+            "X",
+            "X",
+            "X",
+            "X",
+            "X",
+            "X",
+            "X",
+            "X",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "email": "XX",
+                "password": "XX",
+                "username": "XX"
+            },
+            {
+                "email": "XX"
+            },
+            {
+                "email": "XX"
+            },
+            {},
+            {},
+            {
+                "email": "XX",
+                "password": "XX",
+                "username": "XX"
+            },
+            {
+                "email": "XX"
+            },
+            {},
+            {},
+            {
+                "password": "XX",
+                "username": "XX"
+            },
+            {
+                "email": "XX"
+            }
+        ]
+    },
+    "html/hubbub.net-2.html": {
+        "url": "https://hubbub.net/signup/",
+        "forms": [
+            "X",
+            "X",
+            "X",
+            "X",
+            "X",
+            "X",
+            "X",
+            "X",
+            "X",
+            "X",
+            "X",
+            "X",
+            "X"
+        ],
+        "visible_html_fields": [
+            {},
+            {},
+            {
+                "email": "XX",
+                "password": "XX",
+                "username": "XX"
+            },
+            {
+                "email": "XX"
+            },
+            {
+                "email": "XX"
+            },
+            {},
+            {},
+            {
+                "email": "XX",
+                "password": "XX",
+                "username": "XX"
+            },
+            {
+                "email": "XX"
+            },
+            {},
+            {},
+            {
+                "password": "XX",
+                "username": "XX"
+            },
+            {
+                "email": "XX"
+            }
+        ]
+    },
+    "html/hubbub.net-3.html": {
+        "url": "https://hubbub.net/",
+        "forms": [
+            "X",
+            "X",
+            "X",
+            "X",
+            "X",
+            "X",
+            "X",
+            "X",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "email": "XX"
+            },
+            {},
+            {},
+            {
+                "email": "XX",
+                "password": "XX",
+                "username": "XX"
+            },
+            {
+                "email": "XX"
+            },
+            {},
+            {},
+            {
+                "password": "XX",
+                "username": "XX"
+            },
+            {
+                "email": "XX"
+            }
+        ]
+    },
+    "html/hubbub.net-4.html": {
+        "url": "https://hubbub.net/contact-us/",
+        "forms": [
+            "X",
+            "X",
+            "X",
+            "X",
+            "X",
+            "X",
+            "X",
+            "X",
+            "X",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "captcha_0": "XX",
+                "email": "XX",
+                "message": "XX",
+                "name": "XX",
+                "phone_number": "XX"
+            },
+            {
+                "email": "XX"
+            },
+            {},
+            {},
+            {
+                "email": "XX",
+                "password": "XX",
+                "username": "XX"
+            },
+            {
+                "email": "XX"
+            },
+            {},
+            {},
+            {
+                "password": "XX",
+                "username": "XX"
+            },
+            {
+                "email": "XX"
             }
         ]
     },
@@ -2829,6 +3544,39 @@
                 "last_name": "n3",
                 "phone": "ph",
                 "ubafs-u4ISyfqZliGxqzAYYCmbyocmU5BWrUgE": "hp"
+            }
+        ]
+    },
+    "html/ingliando.net-0.html": {
+        "url": "http://ingliando.net/home-2/contact-2/",
+        "forms": [
+            "X",
+            "X",
+            "X",
+            "X",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "g1696-comment": "XX",
+                "g1696-email": "XX",
+                "g1696-name": "XX",
+                "g1696-website": "XX"
+            },
+            {
+                "email": "XX"
+            },
+            {
+                "s": "XX"
+            },
+            {
+                "email": "XX"
+            },
+            {
+                "source_email": "XX",
+                "source_f_name": "XX",
+                "source_name": "XX",
+                "target_email": "XX"
             }
         ]
     },
@@ -5183,6 +5931,38 @@
             }
         ]
     },
+    "html/shop.avastkorea.com-0.html": {
+        "url": "http://shop.avastkorea.com/login/my_regist.asp?_ga=1.23545151.426489914.1454329702",
+        "forms": [
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "agree": "XX",
+                "iCity": "XX",
+                "iMail": "XX",
+                "iName": "XX",
+                "iPhone": "XX",
+                "iState": "XX",
+                "ibirth": "XX",
+                "textarea": "XX"
+            }
+        ]
+    },
+    "html/shop.avastkorea.com-1.html": {
+        "url": "http://shop.avastkorea.com/login/",
+        "forms": [
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "Mail": "XX",
+                "Name": "XX",
+                "Next": "XX",
+                "i_num": "XX"
+            }
+        ]
+    },
     "html/shop.dunkindonuts.com-0.html": {
         "url": "http://shop.dunkindonuts.com/coffee_1997_p01_01/?CCAID=DDSTDDCF",
         "forms": [
@@ -5575,6 +6355,32 @@
             },
             {
                 "username": "e1"
+            }
+        ]
+    },
+    "html/ssl.drgnetwork.com-0.html": {
+        "url": "https://ssl.drgnetwork.com/ecom/nsl/cgi/subscribe/order?org=NSL&publ=CF",
+        "forms": [
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "Address1": "XX",
+                "Address2": "XX",
+                "AreaCode": "XX",
+                "City": "XX",
+                "Country": "XX",
+                "Email": "XX",
+                "FirstName": "XX",
+                "LastName": "XX",
+                "OptIn": "XX",
+                "OrderKey": "XX",
+                "PhoneNumber": "XX",
+                "PostalCode": "XX",
+                "SuffixCode": "XX",
+                "TitleCode": "XX",
+                "preview": "XX",
+                "state": "XX"
             }
         ]
     },
@@ -6128,6 +6934,48 @@
             }
         ]
     },
+    "html/toulouse-game-show.fr-0.html": {
+        "url": "http://toulouse-game-show.fr/content/gillian-anderson",
+        "forms": [
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "email": "XX"
+            }
+        ]
+    },
+    "html/toulouse-game-show.fr-1.html": {
+        "url": "http://toulouse-game-show.fr/",
+        "forms": [
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "email": "XX"
+            }
+        ]
+    },
+    "html/toulouse-game-show.fr-2.html": {
+        "url": "http://toulouse-game-show.fr/contact",
+        "forms": [
+            "X",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "email": "XX"
+            },
+            {
+                "cid": "XX",
+                "mail": "XX",
+                "message": "XX",
+                "name": "XX",
+                "op": "XX",
+                "subject": "XX"
+            }
+        ]
+    },
     "html/trendo.bg-0.html": {
         "url": "http://trendo.bg/",
         "forms": [
@@ -6336,6 +7184,178 @@
                 "remember": "rC",
                 "submit": "Bs",
                 "username": "us"
+            }
+        ]
+    },
+    "html/vorespuls.dk-0.html": {
+        "url": "http://vorespuls.dk/sektion/svoemning",
+        "forms": [
+            "X",
+            "X",
+            "X",
+            "X",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "name": "XX",
+                "op": "XX",
+                "pass": "XX"
+            },
+            {
+                "op": "XX",
+                "search_theme_form": "XX"
+            },
+            {
+                "email": "XX",
+                "name": "XX",
+                "op": "XX",
+                "second-name": "XX"
+            },
+            {
+                "date[value][date]": "XX",
+                "term_node_tid_depth[]": "XX"
+            },
+            {
+                "op": "XX",
+                "second-name": "XX"
+            }
+        ]
+    },
+    "html/vorespuls.dk-1.html": {
+        "url": "http://vorespuls.dk/",
+        "forms": [
+            "X",
+            "X",
+            "X",
+            "X",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "name": "XX",
+                "op": "XX",
+                "pass": "XX"
+            },
+            {
+                "op": "XX",
+                "search_theme_form": "XX"
+            },
+            {
+                "email": "XX",
+                "lists[news-biking]": "XX",
+                "lists[news-generelt]": "XX",
+                "lists[news-kayak]": "XX",
+                "lists[news-running]": "XX",
+                "lists[news-swimming]": "XX",
+                "name": "XX",
+                "op": "XX",
+                "second-name": "XX"
+            },
+            {
+                "date[value][date]": "XX",
+                "term_node_tid_depth[]": "XX"
+            },
+            {
+                "op": "XX",
+                "second-name": "XX"
+            }
+        ]
+    },
+    "html/vorespuls.dk-2.html": {
+        "url": "http://vorespuls.dk/user/register",
+        "forms": [
+            "X",
+            "X",
+            "X",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "name": "XX",
+                "op": "XX",
+                "pass": "XX"
+            },
+            {
+                "op": "XX",
+                "search_theme_form": "XX"
+            },
+            {
+                "captcha_response": "XX",
+                "field_address_point[0][value][address][country]": "XX",
+                "field_address_point[0][value][search][query]": "XX",
+                "mail": "XX",
+                "name": "XX",
+                "op": "XX",
+                "pass[pass1]": "XX",
+                "pass[pass2]": "XX",
+                "second-name": "XX",
+                "title": "XX"
+            },
+            {
+                "op": "XX",
+                "second-name": "XX"
+            }
+        ]
+    },
+    "html/vorespuls.dk-3.html": {
+        "url": "http://vorespuls.dk/user/password",
+        "forms": [
+            "X",
+            "X",
+            "X",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "name": "XX",
+                "op": "XX",
+                "pass": "XX"
+            },
+            {
+                "op": "XX",
+                "search_theme_form": "XX"
+            },
+            {
+                "name": "XX",
+                "op": "XX",
+                "second-name": "XX"
+            },
+            {
+                "op": "XX",
+                "second-name": "XX"
+            }
+        ]
+    },
+    "html/vorespuls.dk-4.html": {
+        "url": "http://vorespuls.dk/contact",
+        "forms": [
+            "X",
+            "X",
+            "X",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "name": "XX",
+                "op": "XX",
+                "pass": "XX"
+            },
+            {
+                "op": "XX",
+                "search_theme_form": "XX"
+            },
+            {
+                "mail": "XX",
+                "message": "XX",
+                "name": "XX",
+                "op": "XX",
+                "second-name": "XX",
+                "subject": "XX"
+            },
+            {
+                "op": "XX",
+                "second-name": "XX"
             }
         ]
     },
@@ -7411,6 +8431,27 @@
             {
                 "commit": "Bs",
                 "email": "e1"
+            }
+        ]
+    },
+    "html/www.avastkorea.com-0.html": {
+        "url": "http://www.avastkorea.com/",
+        "forms": [
+            "X",
+            "X",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "a_USER": "XX"
+            },
+            {
+                "a_ADDON": "XX",
+                "a_ADDON_CLEANUP": "XX",
+                "a_COUNT": "XX"
+            },
+            {
+                "a_ADDON_CLEANUP": "XX"
             }
         ]
     },
@@ -9802,6 +10843,28 @@
             }
         ]
     },
+    "html/www.codjumper.com-0.html": {
+        "url": "http://www.codjumper.com/forums/viewtopic.php?f=62&p=181352&t=16822",
+        "forms": [
+            "X",
+            "X",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "sd": "XX",
+                "sk": "XX",
+                "sort": "XX",
+                "st": "XX"
+            },
+            {
+                "keywords": "XX"
+            },
+            {
+                "f": "XX"
+            }
+        ]
+    },
     "html/www.cognitiveclouds.com-0.html": {
         "url": "http://www.cognitiveclouds.com/contact/",
         "forms": [
@@ -9963,6 +11026,112 @@
                 "_ctl0:CrateMainContent:addressForm:txtZip": "Zi"
             },
             {}
+        ]
+    },
+    "html/www.crochetmagazine.com-0.html": {
+        "url": "http://www.crochetmagazine.com/yarn_calculator.php",
+        "forms": [
+            "X",
+            "X",
+            "X",
+            "X",
+            "X",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "email": "XX",
+                "login": "XX"
+            },
+            {
+                "newsletter_email": "XX",
+                "submit": "XX"
+            },
+            {
+                "query": "XX",
+                "search": "XX"
+            },
+            {
+                "address_1": "XX",
+                "city": "XX",
+                "email": "XX",
+                "first_name": "XX",
+                "last_name": "XX",
+                "postal_code": "XX",
+                "state": "XX"
+            },
+            {
+                "Convert": "XX",
+                "changeweight": "XX",
+                "skein": "XX",
+                "skeinno": "XX",
+                "tweight": "XX",
+                "unit1": "XX",
+                "unit2": "XX",
+                "unit3": "XX",
+                "unit4": "XX",
+                "weight": "XX",
+                "weight2": "XX",
+                "wpers": "XX",
+                "wps": "XX"
+            },
+            {
+                "address_1": "XX",
+                "address_2": "XX",
+                "city": "XX",
+                "email": "XX",
+                "first_name": "XX",
+                "last_name": "XX",
+                "optin": "XX",
+                "postal_code": "XX",
+                "state": "XX",
+                "submit": "XX"
+            }
+        ]
+    },
+    "html/www.crochetmagazine.com-1.html": {
+        "url": "http://www.crochetmagazine.com/",
+        "forms": [
+            "X",
+            "X",
+            "X",
+            "X",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "email": "XX",
+                "login": "XX"
+            },
+            {
+                "newsletter_email": "XX",
+                "submit": "XX"
+            },
+            {
+                "query": "XX",
+                "search": "XX"
+            },
+            {
+                "address_1": "XX",
+                "city": "XX",
+                "email": "XX",
+                "first_name": "XX",
+                "last_name": "XX",
+                "postal_code": "XX",
+                "state": "XX"
+            },
+            {
+                "address_1": "XX",
+                "address_2": "XX",
+                "city": "XX",
+                "email": "XX",
+                "first_name": "XX",
+                "last_name": "XX",
+                "optin": "XX",
+                "postal_code": "XX",
+                "state": "XX",
+                "submit": "XX"
+            }
         ]
     },
     "html/www.crtvg.es-0.html": {
@@ -10564,6 +11733,36 @@
             },
             {
                 "quantity[]": "qt"
+            }
+        ]
+    },
+    "html/www.disfracesjarana.com-3.html": {
+        "url": "https://www.disfracesjarana.com/disfraces-outlet/adultos?categorylayout=0",
+        "forms": [
+            "X",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "keyword": "XX"
+            },
+            {
+                "keyword": "XX"
+            }
+        ]
+    },
+    "html/www.disfracesjarana.com-4.html": {
+        "url": "https://www.disfracesjarana.com/disfraces-adultos/disfraces-para-hombre/disfraz-de-emoticono-risa.html",
+        "forms": [
+            "X",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "keyword": "XX"
+            },
+            {
+                "keyword": "XX"
             }
         ]
     },
@@ -11327,6 +12526,88 @@
             }
         ]
     },
+    "html/www.famili.fr-2.html": {
+        "url": "http://www.famili.fr/,les-livres-pour-halloween,497,78273.asp",
+        "forms": [
+            "X",
+            "X",
+            "X",
+            "X",
+            "X",
+            "X",
+            "X",
+            "X",
+            "X",
+            "X",
+            "X",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "query": "XX"
+            },
+            {
+                "memberLogin": "XX",
+                "memberPassword": "XX",
+                "setCookie": "XX"
+            },
+            {},
+            {
+                "emailToFriendcontrol[]": "XX",
+                "mailTo": "XX"
+            },
+            {
+                "email": "XX",
+                "message": "XX",
+                "name": "XX"
+            },
+            {
+                "cccc_control[]": "XX",
+                "comment": "XX"
+            },
+            {
+                "emailAddress": "XX",
+                "news_email": "XX",
+                "newsletters[33]": "XX",
+                "newsletters[34]": "XX",
+                "newsletters[426]": "XX",
+                "newsletters[43]": "XX",
+                "newsletters[567]": "XX"
+            },
+            {
+                "pollChoice": "XX"
+            },
+            {
+                "emailAddress": "XX",
+                "inscription": "XX",
+                "newsletters[33]": "XX",
+                "newsletters[34]": "XX",
+                "newsletters[426]": "XX",
+                "newsletters[43]": "XX",
+                "newsletters[567]": "XX"
+            },
+            {
+                "emailAddress": "XX",
+                "inscription": "XX",
+                "newsletters[33]": "XX",
+                "newsletters[34]": "XX",
+                "newsletters[426]": "XX",
+                "newsletters[43]": "XX",
+                "newsletters[567]": "XX"
+            },
+            {
+                "emailToFriendFootercontrol[]": "XX",
+                "mailFromFooter": "XX",
+                "mailFromPrenomFooter": "XX",
+                "mailMessageFooter": "XX",
+                "mailToFooter": "XX"
+            },
+            {
+                "newsFromPopup": "XX",
+                "newsFromPopup426": "XX"
+            }
+        ]
+    },
     "html/www.familjeliv.se-0.html": {
         "url": "http://www.familjeliv.se/",
         "forms": [
@@ -11804,6 +13085,100 @@
             }
         ]
     },
+    "html/www.gamexchange.co.uk-0.html": {
+        "url": "https://www.gamexchange.co.uk/street-fighter-v-2",
+        "forms": [
+            "X",
+            "X",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "keywords": "XX"
+            },
+            {
+                "input0count": "XX"
+            },
+            {
+                "billing_fullname": "XX",
+                "billing_name": "XX",
+                "captcha": "XX",
+                "comment": "XX",
+                "data": "XX",
+                "rating[1]": "XX"
+            }
+        ]
+    },
+    "html/www.gamexchange.co.uk-1.html": {
+        "url": "https://www.gamexchange.co.uk/register?return_url=%2Fstreet-fighter-v-2",
+        "forms": [
+            "X",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "keywords": "XX"
+            },
+            {
+                "captcha": "XX",
+                "data": "XX",
+                "email": "XX",
+                "password": "XX",
+                "password2": "XX",
+                "submit": "XX"
+            }
+        ]
+    },
+    "html/www.gamexchange.co.uk-2.html": {
+        "url": "https://www.gamexchange.co.uk/sign-in?return_url=%2Fstreet-fighter-v-2",
+        "forms": [
+            "X",
+            "X",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "keywords": "XX"
+            },
+            {
+                "email": "XX",
+                "password": "XX"
+            },
+            {
+                "captcha": "XX",
+                "data": "XX",
+                "email": "XX"
+            }
+        ]
+    },
+    "html/www.gamexchange.co.uk-3.html": {
+        "url": "https://www.gamexchange.co.uk/ap",
+        "forms": [
+            "X",
+            "X",
+            "X",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "keywords": "XX"
+            },
+            {
+                "availability[]": "XX",
+                "condition[]": "XX",
+                "priceFrom": "XX",
+                "priceTo": "XX",
+                "rating[]": "XX",
+                "release-date[]": "XX"
+            },
+            {
+                "sizing": "XX"
+            },
+            {
+                "sorting": "XX"
+            }
+        ]
+    },
     "html/www.gardenstew.com-0.html": {
         "url": "http://www.gardenstew.com/",
         "forms": [
@@ -11891,6 +13266,46 @@
                 "searchObject[4]": "qc",
                 "searchOnMain": "Bs",
                 "searchOperation": "qc"
+            }
+        ]
+    },
+    "html/www.globalgreyebooks.com-0.html": {
+        "url": "http://www.globalgreyebooks.com/Pages/mysticism.html",
+        "forms": [
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "submit": "XX"
+            }
+        ]
+    },
+    "html/www.globalgreyebooks.com-1.html": {
+        "url": "http://www.globalgreyebooks.com/Pages/mysticism.html",
+        "forms": [
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "submit": "XX"
+            }
+        ]
+    },
+    "html/www.globalgreyebooks.com-2.html": {
+        "url": "http://www.globalgreyebooks.com/Pages/contact.html",
+        "forms": [
+            "X",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "comment": "XX",
+                "email": "XX",
+                "name": "XX",
+                "submit": "XX"
+            },
+            {
+                "submit": "XX"
             }
         ]
     },
@@ -12396,6 +13811,110 @@
             }
         ]
     },
+    "html/www.housedo.com-0.html": {
+        "url": "http://www.housedo.com/",
+        "forms": [
+            "X",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "areaNameShop": "XX",
+                "prefNameShop": "XX"
+            },
+            {
+                "estateType": "XX",
+                "prefAlpha": "XX"
+            }
+        ]
+    },
+    "html/www.housedo.com-1.html": {
+        "url": "https://www.housedo.com/memberregistration/input.php?tc=UA-1848304-3",
+        "forms": [
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "businessFlag": "XX",
+                "businessPriceMax": "XX",
+                "businessPriceMin": "XX",
+                "contactEmail": "XX",
+                "contactFax": "XX",
+                "contactLetter": "XX",
+                "contactTel": "XX",
+                "freetext": "XX",
+                "guestAddress": "XX",
+                "guestCity": "XX",
+                "guestCityId": "XX",
+                "guestCityId1": "XX",
+                "guestCityId2": "XX",
+                "guestFaxCenter": "XX",
+                "guestFaxLeft": "XX",
+                "guestFaxRight": "XX",
+                "guestFirstName": "XX",
+                "guestFirstNameKana": "XX",
+                "guestLastName": "XX",
+                "guestLastNameKana": "XX",
+                "guestMailAddress": "XX",
+                "guestMailAddressConfirm": "XX",
+                "guestPref": "XX",
+                "guestPrefId": "XX",
+                "guestTelCenter": "XX",
+                "guestTelLeft": "XX",
+                "guestTelRight": "XX",
+                "inquiryMedia1": "XX",
+                "inquiryMedia2": "XX",
+                "inquiryMedia3": "XX",
+                "inquiryMedia4": "XX",
+                "inquiryMedia5": "XX",
+                "inquiryMedia6": "XX",
+                "inquiryMedia7": "XX",
+                "inquiryMedia8": "XX",
+                "inquiryMediaOther": "XX",
+                "landFlag": "XX",
+                "landPriceMax": "XX",
+                "landPriceMin": "XX",
+                "newEstateFlag": "XX",
+                "newEstatePriceMax": "XX",
+                "newEstatePriceMin": "XX",
+                "newMansionFlag": "XX",
+                "newMansionPriceMax": "XX",
+                "newMansionPriceMin": "XX",
+                "oldEstateFlag": "XX",
+                "oldEstatePriceMax": "XX",
+                "oldEstatePriceMin": "XX",
+                "oldMansionFlag": "XX",
+                "oldMansionPriceMax": "XX",
+                "oldMansionPriceMin": "XX",
+                "zipCodeLeft": "XX",
+                "zipCodeRight": "XX"
+            }
+        ]
+    },
+    "html/www.housedo.com-2.html": {
+        "url": "https://www.housedo.com/mypage/login.php",
+        "forms": [
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "login": "XX",
+                "password": "XX",
+                "user_name": "XX"
+            }
+        ]
+    },
+    "html/www.housedo.com-3.html": {
+        "url": "https://www.housedo.com/password/reset.php",
+        "forms": [
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "userMailAddress": "XX"
+            }
+        ]
+    },
     "html/www.hq-mirror.de-0.html": {
         "url": "http://www.hq-mirror.de/auth/register",
         "forms": [
@@ -12487,6 +14006,81 @@
                 "YourName": "nf",
                 "btnCancel": "Bc",
                 "btnSubmit": "Bs"
+            }
+        ]
+    },
+    "html/www.icelandair.dk-0.html": {
+        "url": "http://www.icelandair.dk/",
+        "forms": [
+            "X",
+            "X",
+            "X",
+            "X",
+            "X",
+            "X",
+            "X"
+        ],
+        "visible_html_fields": [
+            {},
+            {
+                "q": "XX",
+                "save": "XX"
+            },
+            {
+                "ADT": "XX",
+                "CHD": "XX",
+                "COMMERCIAL_FARE_FAMILY_1": "XX",
+                "INF": "XX",
+                "arrivalDate": "XX",
+                "departDate": "XX",
+                "searchByFlex": "XX",
+                "triptype": "XX"
+            },
+            {
+                "DIRECT_RETRIEVE_LASTNAME": "XX",
+                "REC_LOC": "XX"
+            },
+            {
+                "IIdentificationBookingRef": "XX",
+                "ISurname": "XX"
+            },
+            {
+                "link_1892": "XX"
+            },
+            {
+                "email": "XX",
+                "submitButton": "XX"
+            }
+        ]
+    },
+    "html/www.icelandair.dk-1.html": {
+        "url": "https://www.icelandair.dk/frequent-flyer/",
+        "forms": [
+            "X",
+            "X",
+            "X",
+            "X",
+            "X",
+            "X"
+        ],
+        "visible_html_fields": [
+            {},
+            {
+                "q": "XX",
+                "save": "XX"
+            },
+            {
+                "pass": "XX",
+                "userName": "XX"
+            },
+            {},
+            {
+                "sagaClubLoginName": "XX",
+                "sagaClubPassword": "XX"
+            },
+            {
+                "email": "XX",
+                "submitButton": "XX"
             }
         ]
     },
@@ -14608,6 +16202,42 @@
             }
         ]
     },
+    "html/www.mitbbssg.com-2.html": {
+        "url": "http://www.mitbbssg.com/article_t/Beijing/31955425.html",
+        "forms": [
+            "X",
+            "X",
+            "X",
+            "X",
+            "X",
+            "X",
+            "X",
+            "X",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "userid": "XX"
+            },
+            {
+                "q": "XX",
+                "sa": "XX"
+            },
+            {
+                "board": "XX"
+            },
+            {},
+            {},
+            {},
+            {
+                "submit": "XX",
+                "text": "XX",
+                "title": "XX"
+            },
+            {},
+            {}
+        ]
+    },
     "html/www.mlive.com-0.html": {
         "url": "http://www.mlive.com/redwings/index.ssf/2014/12/live_updates_detroit_red_wings_22.html",
         "forms": [
@@ -16175,6 +17805,212 @@
             }
         ]
     },
+    "html/www.origami-shop.com-0.html": {
+        "url": "http://www.origami-shop.com/en/origami-xsl-206_517_279.html",
+        "forms": [
+            "X",
+            "X",
+            "X",
+            "X",
+            "X",
+            "X",
+            "X",
+            "X",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "currency": "XX"
+            },
+            {
+                "ac_keywords": "XX"
+            },
+            {
+                "email_address": "XX",
+                "password": "XX"
+            },
+            {
+                "sortorder_id": "XX"
+            },
+            {
+                "filter_id": "XX"
+            },
+            {
+                "manufacturers_id": "XX"
+            },
+            {
+                "criteria[2]": "XX",
+                "criteria[3]": "XX",
+                "criteria[4]": "XX",
+                "criteria[6]": "XX",
+                "criteria[7]": "XX",
+                "criteria[8]": "XX"
+            },
+            {
+                "lastname": "XX",
+                "sendto": "XX"
+            },
+            {
+                "voteid": "XX"
+            }
+        ]
+    },
+    "html/www.origami-shop.com-1.html": {
+        "url": "http://www.origami-shop.com/",
+        "forms": [
+            "X",
+            "X",
+            "X",
+            "X",
+            "X",
+            "X",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "currency": "XX"
+            },
+            {
+                "ac_keywords": "XX"
+            },
+            {
+                "email_address": "XX",
+                "password": "XX"
+            },
+            {
+                "manufacturers_id": "XX"
+            },
+            {
+                "criteria[2]": "XX",
+                "criteria[3]": "XX",
+                "criteria[4]": "XX",
+                "criteria[6]": "XX",
+                "criteria[7]": "XX",
+                "criteria[8]": "XX"
+            },
+            {
+                "lastname": "XX",
+                "sendto": "XX"
+            },
+            {
+                "voteid": "XX"
+            }
+        ]
+    },
+    "html/www.origami-shop.com-2.html": {
+        "url": "http://www.origami-shop.com/connexion.php",
+        "forms": [
+            "X",
+            "X",
+            "X",
+            "X",
+            "X",
+            "X",
+            "X",
+            "X",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "currency": "XX"
+            },
+            {
+                "ac_keywords": "XX"
+            },
+            {
+                "email_address": "XX",
+                "password": "XX"
+            },
+            {
+                "email_address": "XX",
+                "password": "XX"
+            },
+            {
+                "1494759956af5463c41ff": "XX",
+                "city": "XX",
+                "company": "XX",
+                "confirmation": "XX",
+                "country": "XX",
+                "email_address": "XX",
+                "firstname": "XX",
+                "gender": "XX",
+                "lastname": "XX",
+                "newsletter": "XX",
+                "password": "XX",
+                "postcode": "XX",
+                "pseudo": "XX",
+                "source": "XX",
+                "street_address": "XX",
+                "suburb": "XX",
+                "telephone": "XX",
+                "tva_intracom": "XX"
+            },
+            {
+                "manufacturers_id": "XX"
+            },
+            {
+                "criteria[2]": "XX",
+                "criteria[3]": "XX",
+                "criteria[4]": "XX",
+                "criteria[6]": "XX",
+                "criteria[7]": "XX",
+                "criteria[8]": "XX"
+            },
+            {
+                "lastname": "XX",
+                "sendto": "XX"
+            },
+            {
+                "voteid": "XX"
+            }
+        ]
+    },
+    "html/www.origami-shop.com-3.html": {
+        "url": "http://www.origami-shop.com/envoi_motdepasse.php",
+        "forms": [
+            "X",
+            "X",
+            "X",
+            "X",
+            "X",
+            "X",
+            "X",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "currency": "XX"
+            },
+            {
+                "ac_keywords": "XX"
+            },
+            {
+                "email_address": "XX",
+                "password": "XX"
+            },
+            {
+                "email_address": "XX"
+            },
+            {
+                "manufacturers_id": "XX"
+            },
+            {
+                "criteria[2]": "XX",
+                "criteria[3]": "XX",
+                "criteria[4]": "XX",
+                "criteria[6]": "XX",
+                "criteria[7]": "XX",
+                "criteria[8]": "XX"
+            },
+            {
+                "lastname": "XX",
+                "sendto": "XX"
+            },
+            {
+                "voteid": "XX"
+            }
+        ]
+    },
     "html/www.osibatteries.com-0.html": {
         "url": "https://www.osibatteries.com/",
         "forms": [
@@ -16659,6 +18495,76 @@
             },
             {
                 "search": "qq"
+            }
+        ]
+    },
+    "html/www.pokemonpets.com-0.html": {
+        "url": "http://www.pokemonpets.com/Pokedex",
+        "forms": [
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "ctl00$ContentPlaceHolder$btnFilter1": "XX",
+                "ctl00$ContentPlaceHolder$btnFilter2": "XX",
+                "ctl00$ContentPlaceHolder$btnType": "XX",
+                "ctl00$ContentPlaceHolder$btn_Sort_Monster_AVG_Level": "XX",
+                "ctl00$ContentPlaceHolder$btn_Sort_Monster_Attack": "XX",
+                "ctl00$ContentPlaceHolder$btn_Sort_Monster_Count": "XX",
+                "ctl00$ContentPlaceHolder$btn_Sort_Monster_Defense": "XX",
+                "ctl00$ContentPlaceHolder$btn_Sort_Monster_HP": "XX",
+                "ctl00$ContentPlaceHolder$btn_Sort_Monster_Id": "XX",
+                "ctl00$ContentPlaceHolder$btn_Sort_Monster_Name": "XX",
+                "ctl00$ContentPlaceHolder$btn_Sort_Monster_Special_Attack": "XX",
+                "ctl00$ContentPlaceHolder$btn_Sort_Monster_Special_Defense": "XX",
+                "ctl00$ContentPlaceHolder$btn_Sort_Monster_Speed": "XX",
+                "ctl00$ContentPlaceHolder$btn_Sort_Monster_Total_Stats": "XX",
+                "ctl00$ContentPlaceHolder$droDownCatchable": "XX",
+                "ctl00$ContentPlaceHolder$dropDownAbility1": "XX",
+                "ctl00$ContentPlaceHolder$dropDownAbility2": "XX",
+                "ctl00$ContentPlaceHolder$dropDownAbility3": "XX",
+                "ctl00$ContentPlaceHolder$dropDownFilterByClasses": "XX",
+                "ctl00$ContentPlaceHolder$dropDownFilterByTypes1": "XX",
+                "ctl00$ContentPlaceHolder$dropDownFilterByTypes2": "XX",
+                "ctl00$ContentPlaceHolder$dropDownListDrawingArtists": "XX",
+                "ctl00$ContentPlaceHolder$dropDownListShowMonstersIHave": "XX",
+                "ctl00$ContentPlaceHolder$txtMoveName": "XX",
+                "ctl00$ContentPlaceHolder$txtPokemonNameSearch": "XX"
+            }
+        ]
+    },
+    "html/www.pokemonpets.com-1.html": {
+        "url": "http://www.pokemonpets.com/Login",
+        "forms": [
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "ctl00$ContentPlaceHolder$btnLogin": "XX",
+                "ctl00$ContentPlaceHolder$imgBtnRecoverPassword": "XX",
+                "ctl00$ContentPlaceHolder$txtPassword": "XX",
+                "ctl00$ContentPlaceHolder$txtRecoverPasswordEmail": "XX",
+                "ctl00$ContentPlaceHolder$txtUserName": "XX"
+            }
+        ]
+    },
+    "html/www.pokemonpets.com-2.html": {
+        "url": "http://www.pokemonpets.com/Register",
+        "forms": [
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "ctl00$ContentPlaceHolder$RdButtonStarterMonster1": "XX",
+                "ctl00$ContentPlaceHolder$RdButtonUserImage1": "XX",
+                "ctl00$ContentPlaceHolder$btnCheckUserName": "XX",
+                "ctl00$ContentPlaceHolder$btnRegister": "XX",
+                "ctl00$ContentPlaceHolder$chkBoxTerms": "XX",
+                "ctl00$ContentPlaceHolder$txtEmail": "XX",
+                "ctl00$ContentPlaceHolder$txtEmailConfirm": "XX",
+                "ctl00$ContentPlaceHolder$txtPassword": "XX",
+                "ctl00$ContentPlaceHolder$txtPasswordRetype": "XX",
+                "ctl00$ContentPlaceHolder$txtUserName": "XX"
             }
         ]
     },
@@ -17372,6 +19278,155 @@
             }
         ]
     },
+    "html/www.sidneyphillips.co.uk-0.html": {
+        "url": "http://www.sidneyphillips.co.uk/fulldetails.php?prn=36993",
+        "forms": [
+            "X",
+            "X",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "GO": "XX",
+                "keyword": "XX"
+            },
+            {
+                "GO": "XX",
+                "refnum": "XX"
+            },
+            {
+                "freehold": "XX",
+                "leasehold": "XX",
+                "maxprice": "XX",
+                "minprice": "XX",
+                "region": "XX",
+                "search": "XX"
+            }
+        ]
+    },
+    "html/www.sidneyphillips.co.uk-1.html": {
+        "url": "http://www.sidneyphillips.co.uk/%5Cindex.php",
+        "forms": [
+            "X",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "GO": "XX",
+                "keyword": "XX"
+            },
+            {
+                "GO": "XX",
+                "refnum": "XX"
+            }
+        ]
+    },
+    "html/www.sidneyphillips.co.uk-2.html": {
+        "url": "http://www.sidneyphillips.co.uk/register.php",
+        "forms": [
+            "X",
+            "X",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "GO": "XX",
+                "keyword": "XX"
+            },
+            {
+                "GO": "XX",
+                "refnum": "XX"
+            },
+            {
+                "addinfo": "XX",
+                "atc": "XX",
+                "building": "XX",
+                "bypost": "XX",
+                "company": "XX",
+                "country": "XX",
+                "county": "XX",
+                "email": "XX",
+                "emailme": "XX",
+                "findmyaddress": "XX",
+                "foundus": "XX",
+                "freehold": "XX",
+                "honours": "XX",
+                "initials": "XX",
+                "leasehold": "XX",
+                "maxprice": "XX",
+                "minprice": "XX",
+                "postcode": "XX",
+                "region[]": "XX",
+                "requirements": "XX",
+                "st1": "XX",
+                "st2": "XX",
+                "stno": "XX",
+                "submit": "XX",
+                "suburb": "XX",
+                "surname": "XX",
+                "telday": "XX",
+                "telmob": "XX",
+                "telnight": "XX",
+                "title": "XX",
+                "town": "XX",
+                "unit": "XX"
+            }
+        ]
+    },
+    "html/www.sidneyphillips.co.uk-3.html": {
+        "url": "http://www.sidneyphillips.co.uk/login.php",
+        "forms": [
+            "X",
+            "X",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "GO": "XX",
+                "keyword": "XX"
+            },
+            {
+                "GO": "XX",
+                "refnum": "XX"
+            },
+            {
+                "password": "XX",
+                "submit": "XX",
+                "username": "XX"
+            }
+        ]
+    },
+    "html/www.sidneyphillips.co.uk-4.html": {
+        "url": "http://www.sidneyphillips.co.uk/new.php",
+        "forms": [
+            "X",
+            "X",
+            "X",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "GO": "XX",
+                "keyword": "XX"
+            },
+            {
+                "GO": "XX",
+                "refnum": "XX"
+            },
+            {
+                "freehold": "XX",
+                "leasehold": "XX",
+                "maxprice": "XX",
+                "minprice": "XX",
+                "region": "XX",
+                "search": "XX"
+            },
+            {
+                "GO": "XX",
+                "listweeks": "XX"
+            }
+        ]
+    },
     "html/www.slivki.by-0.html": {
         "url": "http://www.slivki.by/",
         "forms": [
@@ -17952,6 +20007,124 @@
                 "input_2": "e1",
                 "input_3": "ph",
                 "input_5": "CC"
+            }
+        ]
+    },
+    "html/www.sumka-style.ru-0.html": {
+        "url": "http://www.sumka-style.ru/catalog/zhenskie-sumki/khozyaystvennye-sumki/",
+        "forms": [
+            "X",
+            "X",
+            "X",
+            "X",
+            "X",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "Login": "XX",
+                "USER_LOGIN": "XX",
+                "USER_PASSWORD": "XX"
+            },
+            {
+                "q": "XX"
+            },
+            {
+                "ORDER_BY[PRICE]": "XX",
+                "arrCatalogFilter_43_2944839123": "XX",
+                "arrCatalogFilter_51_2712511838": "XX",
+                "arrCatalogFilter_52_3314631429": "XX",
+                "arrCatalogFilter_52_960890342": "XX",
+                "arrCatalogFilter_53_841265288": "XX",
+                "season[all]": "XX",
+                "season[\u0432\u0441\u0435 \u0441\u0435\u0437\u043e\u043d\u044b]": "XX",
+                "size[M]": "XX",
+                "size[all]": "XX"
+            },
+            {
+                "actionADD2BASKET": "XX",
+                "quantity": "XX"
+            },
+            {
+                "actionADD2BASKET": "XX",
+                "quantity": "XX"
+            },
+            {
+                "actionADD2BASKET": "XX",
+                "quantity": "XX"
+            }
+        ]
+    },
+    "html/www.sumka-style.ru-1.html": {
+        "url": "http://www.sumka-style.ru/",
+        "forms": [
+            "X",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "Login": "XX",
+                "USER_LOGIN": "XX",
+                "USER_PASSWORD": "XX"
+            },
+            {
+                "q": "XX"
+            }
+        ]
+    },
+    "html/www.sumka-style.ru-2.html": {
+        "url": "http://www.sumka-style.ru/registration/",
+        "forms": [
+            "X",
+            "X",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "Login": "XX",
+                "USER_LOGIN": "XX",
+                "USER_PASSWORD": "XX"
+            },
+            {
+                "q": "XX"
+            },
+            {
+                "REGISTER[CONFIRM_PASSWORD]": "XX",
+                "REGISTER[EMAIL]": "XX",
+                "REGISTER[LAST_NAME]": "XX",
+                "REGISTER[NAME]": "XX",
+                "REGISTER[PASSWORD]": "XX",
+                "REGISTER[PERSONAL_PHONE]": "XX",
+                "REGISTER[SECOND_NAME]": "XX",
+                "REGISTER[UF_FACE_TYPE]": "XX",
+                "REGISTER[UF_INN]": "XX",
+                "REGISTER[UF_RIGHT_FORM]": "XX",
+                "REGISTER[WORK_COMPANY]": "XX",
+                "captcha_word": "XX",
+                "register_submit_button": "XX"
+            }
+        ]
+    },
+    "html/www.sumka-style.ru-3.html": {
+        "url": "http://www.sumka-style.ru/personal/profile/",
+        "forms": [
+            "X",
+            "X",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "Login": "XX",
+                "USER_LOGIN": "XX",
+                "USER_PASSWORD": "XX"
+            },
+            {
+                "q": "XX"
+            },
+            {
+                "Login": "XX",
+                "USER_LOGIN": "XX",
+                "USER_PASSWORD": "XX"
             }
         ]
     },
@@ -18788,6 +20961,36 @@
             }
         ]
     },
+    "html/www.unfuckyourhabitat.com-0.html": {
+        "url": "http://www.unfuckyourhabitat.com/category/tips/",
+        "forms": [
+            "X",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "s": "XX"
+            },
+            {
+                "submit": "XX"
+            }
+        ]
+    },
+    "html/www.unfuckyourhabitat.com-1.html": {
+        "url": "http://www.unfuckyourhabitat.com/",
+        "forms": [
+            "X",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "s": "XX"
+            },
+            {
+                "submit": "XX"
+            }
+        ]
+    },
     "html/www.unipd.it-0.html": {
         "url": "http://www.unipd.it/",
         "forms": [
@@ -19373,6 +21576,66 @@
             }
         ]
     },
+    "html/www.zeiri4.com-0.html": {
+        "url": "https://www.zeiri4.com/p_mie/",
+        "forms": [
+            "X",
+            "X",
+            "X",
+            "X",
+            "X",
+            "X",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "FirmSearchForm[Autonomy_id][]": "XX"
+            },
+            {},
+            {
+                "FirmSearchForm[Industry_id][]": "XX"
+            },
+            {
+                "FirmSearchForm[AccountingSoftware_id][]": "XX"
+            },
+            {
+                "FirmSearchForm[Feature_id][]": "XX"
+            },
+            {
+                "FirmSearchForm[members][]": "XX"
+            },
+            {
+                "TrainLineSearchForm[Prefecture_id]": "XX",
+                "TrainLineSearchForm[TrainCompany_id]": "XX",
+                "TrainLineSearchForm[TrainLine_id]": "XX"
+            }
+        ]
+    },
+    "html/www.zeiri4.com-1.html": {
+        "url": "https://www.zeiri4.com/login/",
+        "forms": [
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "LoginForm[password]": "XX",
+                "LoginForm[username]": "XX",
+                "yt0": "XX"
+            }
+        ]
+    },
+    "html/www.zeiri4.com-2.html": {
+        "url": "https://www.zeiri4.com/register/",
+        "forms": [
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "CustomerRegisterForm[login_id]": "XX",
+                "yt0": "XX"
+            }
+        ]
+    },
     "html/www.zone-concours.com-0.html": {
         "url": "http://www.zone-concours.com/",
         "forms": [
@@ -19413,6 +21676,73 @@
             {
                 "Submit": "XX",
                 "email": "XX"
+            }
+        ]
+    },
+    "html/www.zone-concours.com-2.html": {
+        "url": "http://www.zone-concours.com/forum/temoignages-f26.html",
+        "forms": [
+            "X",
+            "X",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "keywords": "XX"
+            },
+            {
+                "sd": "XX",
+                "sk": "XX",
+                "sort": "XX",
+                "st": "XX"
+            },
+            {
+                "f": "XX"
+            }
+        ]
+    },
+    "html/www.zone-concours.com-3.html": {
+        "url": "http://www.zone-concours.com/inscription.php?f=1",
+        "forms": [
+            "X",
+            "X",
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "email": "XX"
+            },
+            {
+                "age": "XX",
+                "code": "XX",
+                "cp": "XX",
+                "email": "XX",
+                "email2": "XX",
+                "mdp": "XX",
+                "mdp2": "XX",
+                "newsletter": "XX",
+                "pseudo": "XX",
+                "sexe": "XX",
+                "valider": "XX"
+            },
+            {
+                "Submit": "XX",
+                "email": "XX"
+            }
+        ]
+    },
+    "html/www.zone-concours.com-4.html": {
+        "url": "http://www.zone-concours.com/forum/posting.php?mode=reply&f=26&t=408",
+        "forms": [
+            "X"
+        ],
+        "visible_html_fields": [
+            {
+                "autologin": "XX",
+                "login": "XX",
+                "password": "XX",
+                "username": "XX",
+                "viewonline": "XX"
             }
         ]
     },
