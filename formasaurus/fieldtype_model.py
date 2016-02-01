@@ -63,7 +63,10 @@ def train(annotations,
         if verbose:
             print(msg)
 
-    annotations = [a for a in annotations if a.fields_annotated]
+    annotations = [
+        a for a in annotations
+        if a.fields_annotated and (a.form_annotated or not use_precise_form_types)
+    ]
     log("Training on {} forms".format(len(annotations)))
 
     if use_precise_form_types:

@@ -43,6 +43,10 @@ class FormAnnotation(_FormAnnotation):
         )
 
     @property
+    def form_annotated(self):
+        return self.type != self.form_schema.na_value
+
+    @property
     def fields_partially_annotated(self):
         """
         True when some fields are annotated and some are not annotated.
