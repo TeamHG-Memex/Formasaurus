@@ -27,6 +27,7 @@ setup(
         "docopt",
         "six",
         "requests",
+        "w3lib >= 1.13.0",
     ],
     package_data={
         'formasaurus': [

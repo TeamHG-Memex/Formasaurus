@@ -4,6 +4,8 @@ import os
 import sys
 
 import requests
+from requests.compat import chardet
+from w3lib.encoding import html_to_unicode
 import tldextract
 
 
@@ -87,4 +89,22 @@ def download(url):
     Download a web page from url, return its content as unicode.
     """
     url = add_scheme_if_missing(url)
-    return requests.get(url).text
+    resp = requests.get(url)
+    return response2unicode(resp)
+
+
+def response2unicode(resp):
+    """
+    Convert requests.Response body to unicode.
+    Unlike ``response.text`` it handles <meta> tags in response content.
+    """
+    enc, html = html_to_unicode(
+        content_type_header=resp.headers.get('Content-Type'),
+        html_body_str=p.content,
+        auto_detect_fun=_autodetect_encoding
+    )
+    return html
+
+
+def _autodetect_encoding(binary_data):
+    return chardet.detect(binary_data)['encoding']
