@@ -29,6 +29,12 @@ def test_extract_forms_no_fields_direct(tree):
     assert forms[0][1] == 'login'
 
 
+def test_classes():
+    ex = classifiers.get_instance()
+    assert 'registration' in ex.form_classes
+    assert 'password' in ex.field_classes
+
+
 @pytest.mark.parametrize(['fields'], [[True], [False]])
 def test_extract_forms_proba(tree, fields):
     forms = formasaurus.extract_forms(tree, proba=True, threshold=0, fields=fields)

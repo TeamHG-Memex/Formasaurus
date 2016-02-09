@@ -227,6 +227,16 @@ class FormFieldClassifier(object):
         path = "formasaurus-%s.joblib" % dependencies_string()
         return at_root(path)
 
+    @property
+    def form_classes(self):
+        """ Possible form classes """
+        return self.form_classifier.classes
+
+    @property
+    def field_classes(self):
+        """ Possible field classes """
+        return self._field_model.classes_
+
 
 class FormClassifier(object):
     """
