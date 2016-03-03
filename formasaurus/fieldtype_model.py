@@ -55,6 +55,8 @@ scorer = make_scorer(flat_f1_score, average='micro')
 def train(annotations,
           use_precise_form_types=True,
           optimize_hyperparameters_iters=0,
+          optimize_hyperparameters_folds=5,
+          optimize_hyperparameters_jobs=-1,
           full_form_type_names=False,
           full_field_type_names=True,
           verbose=True):
@@ -106,9 +108,9 @@ def train(annotations,
         }
 
         rs = RandomizedSearchCV(crf, params_space,
-            cv=get_annotation_folds(annotations, 5),
+            cv=get_annotation_folds(annotations, optimize_hyperparameters_folds),
             verbose=verbose,
-            n_jobs=-1,
+            n_jobs=optimize_hyperparameters_jobs,
             n_iter=optimize_hyperparameters_iters,
             iid=False,
             scoring=scorer

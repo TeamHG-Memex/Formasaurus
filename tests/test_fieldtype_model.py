@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 from __future__ import absolute_import, division
+import itertools
 
 import numpy as np
 from sklearn_crfsuite.metrics import flat_accuracy_score
@@ -13,16 +14,18 @@ from formasaurus.fieldtype_model import (
 
 
 def test_training(storage, capsys):
-
-    annotations = list(a for a in storage.iter_annotations(
+    annotations = (a for a in storage.iter_annotations(
         simplify_form_types=True,
         simplify_field_types=True,
-    ) if a.fields_annotated)[:300]
+    ) if a.fields_annotated)
+    annotations = list(itertools.islice(annotations, 0, 300))
 
     crf = train(
         annotations=annotations,
         use_precise_form_types=False,
-        optimize_hyperparameters_iters=10,
+        optimize_hyperparameters_iters=2,
+        optimize_hyperparameters_folds=2,
+        optimize_hyperparameters_jobs=-1,
         full_form_type_names=False,
         full_field_type_names=False
     )

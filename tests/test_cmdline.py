@@ -23,7 +23,7 @@ def test_check_data():
 
 
 def test_evaluate():
-    out = subprocess.check_output('formasaurus evaluate all --cv 3', shell=True)
+    out = subprocess.check_output('formasaurus evaluate all --cv 2', shell=True)
     m = re.search(b"(\d+.\d+)% forms are classified correctly", out)
     assert m
     assert float(m.group(1)) > 80
