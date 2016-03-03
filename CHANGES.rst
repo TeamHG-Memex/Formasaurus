@@ -1,6 +1,11 @@
 Changes
 =======
 
+0.7.1 (2016-03-03)
+------------------
+
+* fixed API documentation at readthedocs.org
+
 0.7 (2016-03-03)
 ----------------
 
