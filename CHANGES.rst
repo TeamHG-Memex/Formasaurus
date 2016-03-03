@@ -1,6 +1,14 @@
 Changes
 =======
 
+0.7 (2016-03-03)
+----------------
+
+* more annotated data;
+* new ``form_classes`` and ``field_classes`` attributes of FormFieldClassifer;
+* more robust web page encoding detection in ``formasaurus.utils.download``;
+* bug fixes in annotation widgets;
+
 0.6 (2016-01-27)
 ----------------
 
