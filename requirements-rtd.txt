@@ -4,3 +4,4 @@ tabulate >= 0.7.5
 docopt
 tldextract
 requests
+w3lib
