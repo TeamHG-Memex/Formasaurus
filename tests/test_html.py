@@ -128,7 +128,7 @@ def test_get_text_around_elems():
     assert after[user] == 'required  Email:'
     assert after[email] == '* Thanks!'
 
-    assert get_text_around_elems(tree, []) == {}, {}
+    assert get_text_around_elems(tree, []) == ({}, {})
 
 
 def test_get_cleaned_form_html():
