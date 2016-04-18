@@ -1,6 +1,12 @@
 Changes
 =======
 
+0.7.2 (2016-04-18)
+------------------
+
+* pip bug with ``pip install formasaurus[with-deps]`` is worked around;
+  it should work now as ``pip install formasaurus[with_deps]``.
+
 0.7.1 (2016-03-03)
 ------------------
 
