@@ -10,6 +10,13 @@ def get_version():
         return re.findall("__version__ = '([\d\.\w]+)'", f.read())[0]
 
 
+with_deps_extras = [
+    'scikit-learn >= 0.17',
+    'scipy',
+    'lxml',
+    'sklearn-crfsuite >= 0.3.1',
+]
+
 setup(
     name='formasaurus',
     version=get_version(),
@@ -36,12 +43,9 @@ setup(
         ],
     },
     extras_require={
-        'with-deps': [
-            'scikit-learn >= 0.17',
-            'scipy',
-            'lxml',
-            'sklearn-crfsuite >= 0.3.1',
-        ],
+        # Work around https://github.com/pypa/pip/issues/3032
+        'with-deps': with_deps_extras,
+        'with_deps': with_deps_extras,
         'annotation': [
             'ipython[notebook] >= 4.0',
             'ipywidgets',
