@@ -4,6 +4,7 @@
 Formasaurus command-line utility.
 
 Usage:
+    formasaurus init
     formasaurus train <modelfile> [--data-folder <path>]
     formasaurus run <url> [modelfile] [--threshold <probability>]
     formasaurus check-data [--data-folder <path>]
@@ -14,16 +15,23 @@ Usage:
 Options:
     --data-folder <path>       path to the data folder
     --cv <n_folds>             use <n_folds> for cross-validation [default: 20]
-    --threshold <probability>  don't display predictions with probability below this threshold [default: 0.05]
+    --threshold <probability>  don't display predictions with probability below
+                               this threshold [default: 0.05]
 
-To train an extractor for HTML form classification use "train" command.
+Formasaurus trains a model on a first call, and then caches it.
+You can request training&caching explicitly using `formasaurus init` command.
 
-To classify forms from an URL using a saved extractor use "run" command.
+To train a custom extractor for HTML form classification use
+"formsasaurus train" command.
 
-To check the storage for consistency and print some stats use "check-data" command.
+To classify forms from an URL using a saved extractor use
+"formasaurus run" command.
+
+To check the storage for consistency and print some stats use
+"formasaurus check-data" command.
 
 To check the estimated quality of the default form and form fields model
-use "evaluate" command.
+use "formasaurus evaluate" command.
 """
 from __future__ import absolute_import, print_function
 import sys
@@ -59,6 +67,9 @@ def main():
     elif args['train']:
         ex = formasaurus.FormFieldClassifier.trained_on(data_folder)
         ex.save(args["<modelfile>"])
+
+    elif args['init']:
+        formasaurus.FormFieldClassifier.load()
 
     elif args['run']:
         threshold = float(args['--threshold'])

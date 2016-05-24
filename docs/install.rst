@@ -27,3 +27,7 @@ fail. In this case install dependencies manually, on by one (follow their
 install instructions), then run::
 
     pip install formasaurus
+
+After installation it is convenient to execute ``formasaurus init`` command:
+it ensures all necessary initialization is done. Without it Formasaurus
+may have to do CPU and memory-heavy model training on a first import.

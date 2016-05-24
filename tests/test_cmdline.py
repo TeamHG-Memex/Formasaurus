@@ -6,6 +6,15 @@ import subprocess
 import formasaurus
 
 
+def test_init():
+    # it shouldn't raise errors
+    subprocess.check_output('formasaurus init', shell=True)
+
+    # on a second call it shouldn't print anything
+    out = subprocess.check_output('formasaurus init', shell=True)
+    assert out == b''
+
+
 def test_usage():
     out = subprocess.check_output('formasaurus -h', shell=True)
     assert b'Usage' in out
