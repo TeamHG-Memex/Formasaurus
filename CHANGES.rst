@@ -1,6 +1,12 @@
 Changes
 =======
 
+0.8 (2016-05-24)
+----------------
+
+* more annotated data for captchas;
+* ``formasaurus init`` command which trains & caches the model.
+
 0.7.2 (2016-04-18)
 ------------------
 
