@@ -11,6 +11,7 @@
             {"short": "P", "full": "poll"},
             {"short": "V", "full": "display options"},
             {"short": "N", "full": "navigation"},
+            {"short": "C", "full": "captcha"},
             {"short": "o", "full": "other"},
             {"short": "-", "full": "SKIP THIS FORM"},
             {"short": "X", "full": "NOT ANNOTATED"}
@@ -18,7 +19,8 @@
         "simplify_map": {
             "P": "o",
             "V": "o",
-            "N": "o"
+            "N": "o",
+            "C": "o"
         },
         "NA_value": "X",
         "skip_value": "-"

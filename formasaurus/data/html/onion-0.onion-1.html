@@ -1,0 +1,121 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Market - Login Page</title>
+
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+  
+  <link href="assets/css/main.css" rel="stylesheet">
+    <link href="assets/css/bluejeans.css" rel="alternate stylesheet" title="bluejeans">
+    <link href="assets/css/aqua.css" rel="alternate stylesheet" title="aqua">
+    <link href="assets/css/mint.css" rel="alternate stylesheet" title="mint">
+    <link href="assets/css/grass.css" rel="alternate stylesheet" title="grass">
+    <link href="assets/css/sunflower.css" rel="alternate stylesheet" title="sunflower">
+    <link href="assets/css/bittersweet.css" rel="alternate stylesheet" title="bittersweet">
+    <link href="assets/css/grapefruit.css" rel="alternate stylesheet" title="grapefruit">
+    <link href="assets/css/lavender.css" rel="alternate stylesheet" title="lavender">
+    <link href="assets/css/pinkrose.css" rel="alternate stylesheet" title="pinkrose">
+
+
+
+    </head>
+  <body>
+
+    <nav class="top-nav">
+      
+    </nav>
+
+    <header>
+      <div class="container">
+        <div class="row">
+
+          <!-- Logo -->
+          <div id="logo" class="col-sm-3"><a href="index.php"><img src="assets/img/logo.png" title="Logo" alt="Logo"></a></div>
+          <!--/ Logo -->
+
+          
+          <div class="col-sm-6">
+            <nav id="menu" class="navbar">
+              <div class="navbar-header"><span id="category" class="visible-xs">Categories</span>
+                <button type="button" class="btn btn-navbar navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse"><i class="fa fa-bars"></i></button>
+              </div>
+                <div class="collapse navbar-collapse navbar-ex1-collapse">
+                  <ul class="nav navbar-nav">
+                    <li>
+                    <a href="learn.php" target="_blank" role="button">How to vend on Market</a>
+                     </li>
+			<li>
+                    <a href="buying.php" target="_blank" role="button">How to buy on Market</a>
+                     </li>
+              
+                  </ul>
+                </div>
+            </nav>
+          </div>
+
+          
+
+        </div>
+      </div>
+    </header>
+
+    <div class="container">
+
+
+      <div class="row">
+
+  <div class="col-sm-3 hidden-xs">
+          
+        </div>
+
+        <div class="content col-sm-9">
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="well">
+                <h2>New Customer</h2>
+                <p><strong>Register Account</strong></p>
+                <p>By creating an account you will be able to browse product listings, shop on the store, and keep track of the orders you have made.</p>
+                <a href="register.php" class="btn btn-primary">Continue</a>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="well">
+                <h2>Returning Customer</h2>
+                <p><strong>I am a returning customer</strong></p>                
+                <form action="login.php" method="post" enctype="multipart/form-data">
+                  <div class="form-group">
+                    <label class="control-label" for="input-email">Username</label>
+                    <input type="text" name="user" placeholder="Username" id="input-email" class="form-control" required>
+                  </div>
+                  <div class="form-group">
+                    <label class="control-label" for="input-password">Password</label>
+                    <input type="password" name="password" placeholder="Password" id="input-password" class="form-control" required>               
+		    </div>
+		    <div class="form-group">
+                     <img src=' /challenge.php?challenge=6942deb4ed039303f2b260442d66c7e7 '>                  
+                  </div>
+       
+                <div class="form-group">
+ 
+                    <input type="text" name="challenge" placeholder="Challenge Captcha" id="input-email" class="form-control" required>
+                  </div>
+                  <input type="submit" value="Login" class="btn btn-primary">
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </body>
+</html>
