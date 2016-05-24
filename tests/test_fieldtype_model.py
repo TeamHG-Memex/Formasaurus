@@ -36,7 +36,7 @@ def test_training(storage, capsys):
     assert 'realistic form types' in out
     assert 'Best hyperparameters' in out
 
-    assert 0.0 < crf.c1 < 1.5
+    assert 0.0 < crf.c1 < 2.5
     assert 0.0 < crf.c2 < 0.9
     assert crf.c1, crf.c2 != _REALISTIC_C1_C2
     assert crf.c1, crf.c2 != _PRECISE_C1_C2
