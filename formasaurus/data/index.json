@@ -4817,6 +4817,105 @@
             }
         ]
     },
+    "html/onion-0.onion-0.html": {
+        "url": "http://onion-0.onion/ddos.php",
+        "forms": [
+            "C"
+        ],
+        "visible_html_fields": [
+            {
+                "challenge": "ca"
+            }
+        ]
+    },
+    "html/onion-0.onion-1.html": {
+        "url": "http://onion-0.onion/login.php",
+        "forms": [
+            "l"
+        ],
+        "visible_html_fields": [
+            {
+                "challenge": "ca",
+                "password": "p1",
+                "user": "us"
+            }
+        ]
+    },
+    "html/onion-1.onion-0.html": {
+        "url": "http://onion-1.onion/challenge.php",
+        "forms": [
+            "C"
+        ],
+        "visible_html_fields": [
+            {
+                "answer": "ca"
+            }
+        ]
+    },
+    "html/onion-1.onion-1.html": {
+        "url": "http://onion-1.onion/login.php",
+        "forms": [
+            "l"
+        ],
+        "visible_html_fields": [
+            {
+                "captcha_code": "ca",
+                "pass": "p1",
+                "user": "us"
+            }
+        ]
+    },
+    "html/onion-2.onion-0.html": {
+        "url": "http://onion-2.onion/",
+        "forms": [
+            "C"
+        ],
+        "visible_html_fields": [
+            {
+                "captcha": "ca"
+            }
+        ]
+    },
+    "html/onion-3.onion-0.html": {
+        "url": "http://onion-3.onion/login.php",
+        "forms": [
+            "l"
+        ],
+        "visible_html_fields": [
+            {
+                "captcha": "ca",
+                "password": "p1",
+                "username": "us"
+            }
+        ]
+    },
+    "html/onion-4.onion-0.html": {
+        "url": "http://onion-4.onion/login.php",
+        "forms": [
+            "l"
+        ],
+        "visible_html_fields": [
+            {
+                "captcha": "ca",
+                "login": "us",
+                "marketLogin": "Bs",
+                "password": "p1"
+            }
+        ]
+    },
+    "html/onion-5.onion-0.html": {
+        "url": "http://onion-5.onion/login",
+        "forms": [
+            "l"
+        ],
+        "visible_html_fields": [
+            {
+                "captcha": "ca",
+                "password": "p1",
+                "username": "us"
+            }
+        ]
+    },
     "html/orb-academic.org-0.html": {
         "url": "http://orb-academic.org/index.php/journal-of-computer-science/user/register",
         "forms": [
