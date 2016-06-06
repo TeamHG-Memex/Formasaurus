@@ -75,7 +75,7 @@ def main():
         threshold = float(args['--threshold'])
         print("Loading the extractor..")
         ex = formasaurus.FormFieldClassifier.load(args["<modelfile>"])
-        print("Downloading data...")
+        print("Downloading {}...".format(args["<url>"]))
         data = download(args["<url>"])
         tree = load_html(data, args['<url>'])
 
