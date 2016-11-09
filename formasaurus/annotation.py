@@ -2,7 +2,7 @@
 from __future__ import absolute_import, print_function
 import collections
 
-from sklearn.cross_validation import LabelKFold
+from sklearn.model_selection import GroupKFold
 
 from formasaurus.html import get_fields_to_annotate
 from formasaurus.utils import get_domain
@@ -93,25 +93,3 @@ class FormAnnotation(_FormAnnotation):
         return "FormAnnotation(form={!r}, type={!r}, index={!r}, url={!r}, key={!r}, fields={!r})".format(
             self.form, self.type, self.index, self.url, self.key, self.fields
         )
-
-
-def get_annotation_folds(annotations, n_folds):
-    """
-    Return (train_indices, test_indices) folds iterator.
-    It is guaranteed forms from the same website can't be both in
-    train and test parts.
-
-    We must be careful when splitting the dataset into training and
-    evaluation parts: forms from the same domain should be in the same
-    "bin". There could be several pages from the same domain, and these
-    pages may have duplicate or similar forms (e.g. a search form on each
-    page). If we put one such form in training dataset and another in
-    evaluation dataset then the metrics will be too optimistic, and they
-    can make us to choose wrong features/models. For example,
-    train_test_split from scikit-learn shouldn't be used here. To fix it
-    LabelKFold from scikit-learn is used.
-    """
-    return LabelKFold(
-        labels=[get_domain(ann.url) for ann in annotations],
-        n_folds=n_folds
-    )

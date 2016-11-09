@@ -29,9 +29,12 @@ import warnings
 
 import scipy.stats
 import numpy as np
-from sklearn.grid_search import RandomizedSearchCV
 from sklearn.metrics import make_scorer
-from sklearn.cross_validation import cross_val_predict
+from sklearn.model_selection import (
+    cross_val_predict,
+    GroupKFold,
+    RandomizedSearchCV
+)
 from sklearn_crfsuite import CRF
 from sklearn_crfsuite.metrics import (
     flat_f1_score,
@@ -45,7 +48,7 @@ from formasaurus import formtype_model
 from formasaurus.html import get_fields_to_annotate, get_text_around_elems
 from formasaurus.text import (normalize, tokenize, ngrams, number_pattern,
     token_ngrams)
-from formasaurus.annotation import get_annotation_folds
+from formasaurus.utils import get_domain
 
 
 scorer = make_scorer(flat_f1_score, average='micro')
@@ -81,7 +84,7 @@ def train(annotations,
         log("Computing realistic form types")
         form_types = formtype_model.get_realistic_form_labels(
             annotations=annotations,
-            n_folds=10,
+            n_splits=10,
             full_type_names=full_form_type_names
         )
 
@@ -106,16 +109,15 @@ def train(annotations,
             'c1': scipy.stats.expon(scale=0.5),
             'c2': scipy.stats.expon(scale=0.05),
         }
-
         rs = RandomizedSearchCV(crf, params_space,
-            cv=get_annotation_folds(annotations, optimize_hyperparameters_folds),
+            cv=GroupKFold(n_splits=optimize_hyperparameters_folds),
             verbose=verbose,
             n_jobs=optimize_hyperparameters_jobs,
             n_iter=optimize_hyperparameters_iters,
             iid=False,
             scoring=scorer
         )
-        rs.fit(X, y)
+        rs.fit(X, y, groups=[get_domain(ann.url) for ann in annotations])
         crf = rs.best_estimator_
         log("Best hyperparameters: c1={:0.5f}, c2={:0.5f}".format(crf.c1, crf.c2))
     else:
@@ -228,7 +230,7 @@ def get_model(use_precise_form_types=True):
     )
 
 
-def print_classification_report(annotations, n_folds=10, model=None):
+def print_classification_report(annotations, n_splits=10, model=None):
     """ Evaluate model, print classification report """
     if model is None:
         # FIXME: we're overfitting on hyperparameters - they should be chosen
@@ -238,7 +240,7 @@ def print_classification_report(annotations, n_folds=10, model=None):
     annotations = [a for a in annotations if a.fields_annotated]
     form_types = formtype_model.get_realistic_form_labels(
         annotations=annotations,
-        n_folds=n_folds,
+        n_splits=n_splits,
         full_type_names=False
     )
 
@@ -247,8 +249,10 @@ def print_classification_report(annotations, n_folds=10, model=None):
         form_types=form_types,
         full_type_names=True,
     )
-    cv = get_annotation_folds(annotations, n_folds=n_folds)
-    y_pred = cross_val_predict(model, X, y, cv=cv, n_jobs=-1)
+    group_kfold = GroupKFold(n_splits=n_splits)
+    groups = [get_domain(ann.url) for ann in annotations]
+    y_pred = cross_val_predict(model, X, y, cv=group_kfold, groups=groups,
+                               n_jobs=-1)
 
     all_labels = list(annotations[0].field_schema.types.keys())
     labels = sorted(set(flatten(y_pred)), key=lambda k: all_labels.index(k))

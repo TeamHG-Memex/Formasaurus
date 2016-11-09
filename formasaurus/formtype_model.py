@@ -6,9 +6,7 @@ form type detection model uses.
 from __future__ import absolute_import, division
 
 import numpy as np
-from formasaurus.annotation import get_annotation_folds
-from sklearn.cross_validation import cross_val_predict
-
+from sklearn.model_selection import cross_val_predict, GroupKFold
 from sklearn.feature_extraction import DictVectorizer
 from sklearn.feature_extraction.text import CountVectorizer, TfidfVectorizer
 from sklearn.metrics import classification_report, accuracy_score
@@ -16,6 +14,7 @@ from sklearn.pipeline import make_pipeline, make_union
 from sklearn.linear_model import SGDClassifier, LogisticRegression
 from sklearn.svm import LinearSVC
 
+from formasaurus.utils import get_domain
 from formasaurus import formtype_features as features
 
 
@@ -140,7 +139,7 @@ def get_Xy(annotations, full_type_names):
     return X, y
 
 
-def get_realistic_form_labels(annotations, n_folds=10, model=None,
+def get_realistic_form_labels(annotations, n_splits=10, model=None,
                               full_type_names=True):
     """
     Return form type labels which form type detection model
@@ -150,11 +149,12 @@ def get_realistic_form_labels(annotations, n_folds=10, model=None,
         model = get_model()
 
     X, y = get_Xy(annotations, full_type_names)
-    folds = get_annotation_folds(annotations, n_folds)
-    return cross_val_predict(model, X, y, cv=folds)
+    group_kfold = GroupKFold(n_splits=n_splits)
+    groups = [get_domain(ann.url) for ann in annotations]
+    return cross_val_predict(model, X, y, cv=group_kfold, groups=groups)
 
 
-def print_classification_report(annotations, n_folds=10, model=None):
+def print_classification_report(annotations, n_splits=10, model=None):
     """ Evaluate model, print classification report """
     if model is None:
         # FIXME: we're overfitting on hyperparameters - they should be chosen
@@ -162,8 +162,9 @@ def print_classification_report(annotations, n_folds=10, model=None):
         model = get_model()
 
     X, y = get_Xy(annotations, full_type_names=True)
-    folds = get_annotation_folds(annotations, n_folds)
-    y_pred = cross_val_predict(model, X, y, cv=folds)
+    group_kfold = GroupKFold(n_splits=n_splits)
+    groups = [get_domain(ann.url) for ann in annotations]
+    y_pred = cross_val_predict(model, X, y, cv=group_kfold, groups=groups)
 
     # hack to format report nicely
     all_labels = list(annotations[0].form_schema.types.keys())
