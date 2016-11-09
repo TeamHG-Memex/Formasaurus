@@ -5,7 +5,7 @@ Formasaurus requires Python 2.7+ or 3.3+ and the following Python packages:
 
 * scipy_
 * numpy_
-* scikit-learn_ 0.17+
+* scikit-learn_ 0.18+
 * sklearn-crfsuite_
 * lxml_
 
