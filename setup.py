@@ -11,7 +11,7 @@ def get_version():
 
 
 with_deps_extras = [
-    'scikit-learn >= 0.17',
+    'scikit-learn >= 0.18',
     'scipy',
     'lxml',
     'sklearn-crfsuite >= 0.3.1',

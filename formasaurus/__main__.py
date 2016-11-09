@@ -8,13 +8,13 @@ Usage:
     formasaurus train <modelfile> [--data-folder <path>]
     formasaurus run <url> [modelfile] [--threshold <probability>]
     formasaurus check-data [--data-folder <path>]
-    formasaurus evaluate (forms|fields|all) [--cv <n_folds>] [--data-folder <path>]
+    formasaurus evaluate (forms|fields|all) [--cv <n_splits>] [--data-folder <path>]
     formasaurus -h | --help
     formasaurus --version
 
 Options:
     --data-folder <path>       path to the data folder
-    --cv <n_folds>             use <n_folds> for cross-validation [default: 20]
+    --cv <n_splits>            use <n_splits> for cross-validation [default: 20]
     --threshold <probability>  don't display predictions with probability below
                                this threshold [default: 0.05]
 
@@ -103,7 +103,7 @@ def main():
             print("")
 
     elif args['evaluate']:
-        n_folds = int(args["--cv"])
+        n_splits = int(args["--cv"])
         annotations = list(
             storage.iter_annotations(verbose=True, leave=True,
                                      simplify_form_types=True,
@@ -113,13 +113,13 @@ def main():
         if args['forms'] or args['all']:
             print("Evaluating form classifier...\n")
             formtype_model.print_classification_report(annotations,
-                                                       n_folds=n_folds)
+                                                       n_splits=n_splits)
             print("")
 
         if args['fields'] or args['all']:
             print("Evaluating form field classifier...\n")
             fieldtype_model.print_classification_report(annotations,
-                                                        n_folds=n_folds)
+                                                        n_splits=n_splits)
 
 
 if __name__ == '__main__':
