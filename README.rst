@@ -29,3 +29,9 @@ is a password field and which is a search query, etc.
 License is MIT.
 
 Check `docs <http://formasaurus.readthedocs.org/>`_ for more.
+
+----
+
+.. image:: https://hyperiongray.s3.amazonaws.com/define-hg.svg
+	:target: https://hyperiongray.com/?pk_campaign=github&pk_kwd=formasaurus
+	:alt: define hyperiongray
