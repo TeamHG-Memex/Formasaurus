@@ -255,7 +255,7 @@ class Storage(object):
         errors = 0
         if verbose:
             items = tqdm(items, "Checking", leave=True, mininterval=0,
-                         ascii=True, ncols=80, unit=' files'):
+                         ascii=True, ncols=80, unit=' files')
         for fn, info in items:
             fn_full = os.path.join(self.folder, fn)
             if not os.path.exists(fn_full):

@@ -49,6 +49,7 @@ setup(
         'annotation': [
             'ipython[notebook] >= 4.0',
             'ipywidgets',
+            # See https://github.com/JuliaDocs/Documenter.jl/issues/659
             'Tornado>=4.0.0,<5.0.0',
         ],
     },
