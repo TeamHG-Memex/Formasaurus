@@ -3,7 +3,7 @@ from __future__ import absolute_import
 
 
 def test_data_ok(storage, capsys):
-    errors = storage.check()
+    errors = storage.check(verbose=False)
     assert errors == 0
     out, err = capsys.readouterr()
     assert 'OK' in out
