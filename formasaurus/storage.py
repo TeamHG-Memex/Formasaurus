@@ -316,14 +316,17 @@ class Storage(object):
                                             simplify_form_types=simplify)
         return collections.Counter(ann.type for ann in annotations)
 
-    def print_form_type_counts(self, simplify=False):
+    def print_form_type_counts(self, simplify=False, verbose=True):
         """ Print the number annotations of each form types in this storage """
         if simplify:
             print("Annotated HTML forms (simplified classes):\n")
         else:
             print("Annotated HTML forms (detailed classes):\n")
         schema = self.get_form_schema()
-        type_counts = self.get_form_type_counts(simplify=simplify)
+        type_counts = self.get_form_type_counts(
+            simplify=simplify,
+            verbose=verbose
+        )
         for shortcut, count in type_counts.most_common():
             type_name = schema.types_inv[shortcut]
             print("%-5d %-25s (%s)" % (count, type_name, shortcut))
