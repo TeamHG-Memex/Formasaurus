@@ -1,5 +1,5 @@
 language: python
-python: 3.6
+python: 3.5
 sudo: false
 branches:
     only:
@@ -8,6 +8,7 @@ branches:
 
 env:
     - TOXENV=py27
+    - TOXENV=py34
     - TOXENV=py35
     - TOXENV=py36
 

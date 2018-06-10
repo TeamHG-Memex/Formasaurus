@@ -47,7 +47,7 @@ setup(
         'with-deps': with_deps_extras,
         'with_deps': with_deps_extras,
         'annotation': [
-            'ipython[notebook] >= 4.0',
+            'ipython[notebook] >= 4.0,<5.0.0',
             'ipywidgets',
         ],
     },
