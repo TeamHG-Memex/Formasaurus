@@ -7,12 +7,13 @@ branches:
         - /^\d\.\d+$/
 
 env:
-    - TOXENV=py27
     - TOXENV=py34
     - TOXENV=py36
 # Learned this from https://github.com/medecau/fn.py/commit/65c774c274181d3a986f2d50836250cb1a0f7224
 matrix:
     include:
+        - python: 2.7.13
+          env: TOXENV=py27
         - python: 3.5
           env: TOXENV=py35
 
