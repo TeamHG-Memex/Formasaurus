@@ -245,7 +245,7 @@ class Storage(object):
         with open(os.path.join(self.folder, path), "rb") as f:
             return load_html(f.read(), info["url"])
 
-    def check(self):
+    def check(self, verbose=True):
         """
         Check that items in storage are correct; print the problems found.
         Return the number of errors found.
@@ -253,8 +253,10 @@ class Storage(object):
         index = self.get_index()
         items = list(index.items())
         errors = 0
-        for fn, info in tqdm(items, "Checking", leave=True, mininterval=0,
-                             ascii=True, ncols=80, unit=' files'):
+        if verbose:
+            items = tqdm(items, "Checking", leave=True, mininterval=0,
+                         ascii=True, ncols=80, unit=' files')
+        for fn, info in items:
             fn_full = os.path.join(self.folder, fn)
             if not os.path.exists(fn_full):
                 print("\nFile not found: %r" % fn_full)
@@ -314,14 +316,17 @@ class Storage(object):
                                             simplify_form_types=simplify)
         return collections.Counter(ann.type for ann in annotations)
 
-    def print_form_type_counts(self, simplify=False):
+    def print_form_type_counts(self, simplify=False, verbose=True):
         """ Print the number annotations of each form types in this storage """
         if simplify:
             print("Annotated HTML forms (simplified classes):\n")
         else:
             print("Annotated HTML forms (detailed classes):\n")
         schema = self.get_form_schema()
-        type_counts = self.get_form_type_counts(simplify=simplify)
+        type_counts = self.get_form_type_counts(
+            simplify=simplify,
+            verbose=verbose
+        )
         for shortcut, count in type_counts.most_common():
             type_name = schema.types_inv[shortcut]
             print("%-5d %-25s (%s)" % (count, type_name, shortcut))

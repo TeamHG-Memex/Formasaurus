@@ -3,7 +3,7 @@ from __future__ import absolute_import
 
 
 def test_data_ok(storage, capsys):
-    errors = storage.check()
+    errors = storage.check(verbose=False)
     assert errors == 0
     out, err = capsys.readouterr()
     assert 'OK' in out
@@ -11,7 +11,7 @@ def test_data_ok(storage, capsys):
 
 
 def test_type_counts(storage, capsys):
-    storage.print_form_type_counts()
+    storage.print_form_type_counts(verbose=False)
     out, err = capsys.readouterr()
     assert not err
     assert 'search' in out
