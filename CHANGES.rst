@@ -1,6 +1,13 @@
 Changes
 =======
 
+0.8.1 (2018-07-02)
+------------------
+
+* Support for scikit-learn < 0.18 is dropped;
+* Formasaurus is no longer tested with Python 3.3;
+* tests are fixed to account for upstream changes; Python 3.6 build is enabled.
+
 0.8 (2016-05-24)
 ----------------
 
