@@ -21,12 +21,19 @@ import os
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 sys.path.insert(0, os.path.abspath('..'))
 
-from unittest.mock import MagicMock
+try:
+    from unittest.mock import MagicMock
+except ImportError:  # python 2
+    from mock import MagicMock
+
 
 class Mock(MagicMock):
     @classmethod
     def __getattr__(cls, name):
+        if name == '_mock_methods':
+            raise AttributeError()
         return Mock()
+
 
 MOCK_MODULES = [
     'sklearn', 'sklearn.metrics', 'sklearn.externals',
