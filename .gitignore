@@ -11,4 +11,5 @@ htmlcov
 .coverage
 .joblib
 .cache
+.pytest_cache
 docs/_build
