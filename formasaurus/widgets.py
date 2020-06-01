@@ -48,7 +48,6 @@ def MultiFormAnnotator(annotations,
     A widget with a paginator for annotating multiple forms.
     """
     back, forward, slider = get_pager_elements(0, len(annotations) - 1)
-    rendered = {}
 
     def render(i):
         widget = FormAnnotator(
@@ -63,20 +62,14 @@ def MultiFormAnnotator(annotations,
 
     def on_change(change):
         value = change['new']
-
-        for i in rendered:
-            rendered[i].close()
-
-        if value not in rendered:
-            rendered[value] = render(value)
-        else:
-            rendered[value].open()
+        rendered_widget = render(value)
 
         if save_func:
             save_func()
 
         with out:
-            display(rendered[value])
+            out.clear_output()
+            display(rendered_widget)
 
     slider.observe(on_change, names='value')
     on_change({'new': slider.value})
