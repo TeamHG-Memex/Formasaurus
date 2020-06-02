@@ -3,7 +3,7 @@ from __future__ import absolute_import
 import os
 
 import six
-from sklearn.externals import joblib
+import joblib
 
 from formasaurus import formtype_model, fieldtype_model
 from formasaurus.html import get_forms, get_fields_to_annotate, load_html

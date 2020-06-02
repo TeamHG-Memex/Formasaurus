@@ -15,6 +15,7 @@ with_deps_extras = [
     'scipy',
     'lxml',
     'sklearn-crfsuite >= 0.3.1',
+    'joblib',
 ]
 
 setup(
