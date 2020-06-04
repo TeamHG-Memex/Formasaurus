@@ -10,7 +10,7 @@ from sklearn.model_selection import cross_val_predict, GroupKFold
 from sklearn.feature_extraction import DictVectorizer
 from sklearn.feature_extraction.text import CountVectorizer, TfidfVectorizer
 from sklearn.metrics import classification_report, accuracy_score
-from sklearn.pipeline import make_pipeline, make_union
+from sklearn.pipeline import make_pipeline, FeatureUnion, Pipeline
 from sklearn.linear_model import SGDClassifier, LogisticRegression
 from sklearn.svm import LinearSVC
 
@@ -84,13 +84,21 @@ FEATURES = [
 ]
 
 
+if hasattr(Pipeline, 'get_feature_names'):
+    _PipelineWithFeatureNames = Pipeline
+else:
+    class _PipelineWithFeatureNames(Pipeline):
+        def get_feature_names(self):
+            return self.steps[-1][1].get_feature_names()
+
+
 def _create_feature_union(features):
     """
     Create a FeatureUnion.
     Each "feature" is a 3-tuple: (name, feature_extractor, vectorizer).
     """
-    return make_union(*[
-        make_pipeline(fe, vec)
+    return FeatureUnion([
+        (name, _PipelineWithFeatureNames([('fe', fe), ('vec', vec)]))
         for name, fe, vec in features
     ])
 
