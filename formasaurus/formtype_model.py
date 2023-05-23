@@ -42,7 +42,7 @@ FEATURES = [
         "<a> TEXT </a>",
         features.FormLinksText(),
         TfidfVectorizer(ngram_range=(1,2), min_df=4, binary=True,
-                        stop_words={'and', 'or', 'of'})
+                        stop_words=['and', 'or', 'of'])
     ),
     (
         "<label> TEXT </label>",
