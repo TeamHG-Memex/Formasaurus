@@ -1,23 +1,20 @@
-# -*- coding: utf-8 -*-
-from __future__ import absolute_import, division
 import itertools
 
 import numpy as np
 from sklearn_crfsuite.metrics import flat_accuracy_score
 
-from formasaurus.fieldtype_model import (
-    train,
-    _PRECISE_C1_C2,
-    _REALISTIC_C1_C2,
-    get_Xy,
-)
+from formasaurus.fieldtype_model import _PRECISE_C1_C2, _REALISTIC_C1_C2, get_Xy, train
 
 
 def test_training(storage, capsys):
-    annotations = (a for a in storage.iter_annotations(
-        simplify_form_types=True,
-        simplify_field_types=True,
-    ) if a.fields_annotated)
+    annotations = (
+        a
+        for a in storage.iter_annotations(
+            simplify_form_types=True,
+            simplify_field_types=True,
+        )
+        if a.fields_annotated
+    )
     annotations = list(itertools.islice(annotations, 0, 300))
 
     crf = train(
@@ -27,14 +24,14 @@ def test_training(storage, capsys):
         optimize_hyperparameters_folds=2,
         optimize_hyperparameters_jobs=-1,
         full_form_type_names=False,
-        full_field_type_names=False
+        full_field_type_names=False,
     )
 
     out, err = capsys.readouterr()
 
-    assert 'Training on 300 forms' in out
-    assert 'realistic form types' in out
-    assert 'Best hyperparameters' in out
+    assert "Training on 300 forms" in out
+    assert "realistic form types" in out
+    assert "Best hyperparameters" in out
 
     assert 0.0 < crf.c1 < 2.5
     assert 0.0 < crf.c2 < 0.9

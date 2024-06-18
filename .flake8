@@ -1,0 +1,54 @@
+[flake8]
+ignore =
+    # No explicit stacklevel argument found. The warn method from the warnings
+    # module uses a stacklevel of 1 by default. This will only show a stack
+    # trace for the line on which the warn method is called. It is therefore
+    # recommended to use a stacklevel of 2 or greater to provide more
+    # information to the user.
+    B028
+    # Unnecessary dict call - rewrite as a literal.
+    C408
+    # Missing docstring in public module
+    D100
+    # Missing docstring in public class
+    D101
+    # Missing docstring in public method
+    D102
+    # Missing docstring in public function
+    D103
+    # Missing docstring in public package
+    D104
+    # Missing docstring in magic method
+    D105
+    # Missing docstring in __init__
+    D107
+    # One-line docstring should fit on one line with quotes
+    D200
+    # No blank lines allowed after function docstring
+    D202
+    # 1 blank line required between summary line and description
+    D205
+    # First line should end with a period
+    D400
+    # First line should be in imperative mood; try rephrasing
+    D401
+    # First line should not be the function's "signature"
+    D402
+    # whitespace before ':'
+    E203
+    # block comment should start with '# '
+    E265
+    # module level import not at top of file
+    E402
+    # line too long (82 > 79 characters)
+    E501
+    # format string does contain unindexed parameters
+    P101
+    # line break before binary operator
+    W503
+
+per-file-ignores =
+    # F401: Ignore "imported but unused" errors in __init__ files, as those
+    # imports are there to expose submodule functions so they can be imported
+    # directly from that module.
+    formasaurus/__init__.py:F401

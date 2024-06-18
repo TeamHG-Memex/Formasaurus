@@ -1,17 +1,11 @@
-# -*- coding: utf-8 -*-
 """
 HTML processing utilities
 """
-# from doctest import Example
-try:
-    from html import escape as html_escape  # Python 3
-except ImportError:
-    from cgi import escape as html_escape  # Python 2
 
-import six
+from html import escape as html_escape
+
 import lxml.html
 from lxml.html.clean import Cleaner
-# from lxml.doctestcompare import LXMLOutputChecker, PARSE_HTML
 
 from formasaurus.text import normalize_whitespaces
 
@@ -24,8 +18,8 @@ def remove_by_xpath(tree, xpath):
         bad.getparent().remove(bad)
 
 
+parser = lxml.html.HTMLParser(encoding="utf8")
 
-parser = lxml.html.HTMLParser(encoding='utf8')
 
 def load_html(tree_or_html, base_url=None):
     """
@@ -35,17 +29,17 @@ def load_html(tree_or_html, base_url=None):
 
     If ``tree_or_html`` is not a string then it is returned as-is.
     """
-    if not isinstance(tree_or_html, (six.string_types, bytes)):
+    if not isinstance(tree_or_html, ((str,), bytes)):
         return tree_or_html
 
     html = tree_or_html
-    if isinstance(html, six.text_type):
-        html = html.encode('utf8')
+    if isinstance(html, str):
+        html = html.encode("utf8")
     return lxml.html.fromstring(html, base_url=base_url, parser=parser)
 
 
 def html_tostring(tree):
-    return lxml.html.tostring(tree, pretty_print=True, encoding='unicode')
+    return lxml.html.tostring(tree, pretty_print=True, encoding="unicode")
 
 
 def get_forms(tree):
@@ -69,8 +63,16 @@ def get_cleaned_form_html(form, human_readable=True):
     if human_readable:
         params.update(
             style=True,
-            allow_tags={'form', 'input', 'textarea', 'label', 'option',
-                        'select', 'submit', 'a'},
+            allow_tags={
+                "form",
+                "input",
+                "textarea",
+                "label",
+                "option",
+                "select",
+                "submit",
+                "a",
+            },
         )
     else:
         params.update(style=False)
@@ -85,11 +87,11 @@ def get_cleaned_form_html(form, human_readable=True):
 
 
 def get_field_names(elems):
-    """ Return unique name attributes """
+    """Return unique name attributes"""
     res = []
     seen = set()
     for el in elems:
-        if (not getattr(el, 'name', None)) or (el.name in seen):
+        if (not getattr(el, "name", None)) or (el.name in seen):
             continue
         seen.add(el.name)
         res.append(el.name)
@@ -102,9 +104,9 @@ def get_visible_fields(form):
     """
     # FIXME: don't suggest readonly fields
     return form.xpath(
-        'descendant::textarea'
-        '|descendant::select'
-        '|descendant::button'
+        "descendant::textarea"
+        "|descendant::select"
+        "|descendant::button"
         '|(descendant::input[(@type!="hidden" and @type!="HIDDEN" and @type!="Hidden") or not(@type)])'
     )
 
@@ -117,7 +119,7 @@ def get_fields_to_annotate(form):
     2. they should have non-empty name (i.e. affect form submission result).
 
     """
-    return [f for f in get_visible_fields(form) if getattr(f, 'name', None)]
+    return [f for f in get_visible_fields(form) if getattr(f, "name", None)]
 
 
 def escaped_with_field_highlighted(form_html, field_name):
@@ -126,11 +128,15 @@ def escaped_with_field_highlighted(form_html, field_name):
     fields with name==field_name are highlighted.
     """
     form = load_html(form_html)
-    for elem in form.xpath('.//*[@name="{}"]'.format(field_name)):
-        add_text_before(elem, '__START__')
-        add_text_after(elem, '__END__')
+    for elem in form.xpath(f'.//*[@name="{field_name}"]'):
+        add_text_before(elem, "__START__")
+        add_text_after(elem, "__END__")
     text = html_tostring(form)
-    text = html_escape(text).replace('__START__', '<span style="font-size:large;color:#000">').replace('__END__', '</span>')
+    text = (
+        html_escape(text)
+        .replace("__START__", '<span style="font-size:large;color:#000">')
+        .replace("__END__", "</span>")
+    )
     return text
 
 
@@ -140,28 +146,28 @@ def highlight_fields(html, field_name):
     highlighted by adding ``formasaurus-field-highlighted`` CSS class.
     """
     tree = load_html(html)
-    xpath = './/*[@name="{}"]'.format(field_name)
+    xpath = f'.//*[@name="{field_name}"]'
     for elem in tree.xpath(xpath):
-        elem.set('class', elem.get('class', '') + ' formasaurus-field-highlighted')
+        elem.set("class", elem.get("class", "") + " formasaurus-field-highlighted")
     return html_tostring(tree)
 
 
 def add_text_after(elem, text):
-    """ Add text after elem """
-    tail = elem.tail or ''
+    """Add text after elem"""
+    tail = elem.tail or ""
     elem.tail = text + tail
 
 
 def add_text_before(elem, text):
-    """ Add text before elem """
+    """Add text before elem"""
     prev = elem.getprevious()
     if prev is not None:
         # not a first child
-        prev.tail = (prev.tail or '') + text
+        prev.tail = (prev.tail or "") + text
     else:
         # first child
         parent = elem.getparent()
-        parent.text = (parent.text or '') + text
+        parent.text = (parent.text or "") + text
 
 
 # def assert_html_equal(want, got):
@@ -180,15 +186,13 @@ def get_text_around_elems(tree, elems):
     if not elems:
         return {}, {}
     buf = []
-    before = {elem: '' for elem in elems}
-    after = {elem: '' for elem in elems}
+    before = {elem: "" for elem in elems}
+    after = {elem: "" for elem in elems}
 
     def flush_buf():
-        res = '  '.join([
-            normalize_whitespaces(b.strip())
-            for b in buf
-            if b and b.strip()
-        ])
+        res = "  ".join(
+            [normalize_whitespaces(b.strip()) for b in buf if b and b.strip()]
+        )
         buf[:] = []
         return res
 

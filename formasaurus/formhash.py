@@ -1,7 +1,5 @@
-# -*- coding: utf-8 -*-
 from copy import deepcopy
 
-import six
 import lxml.html
 
 from formasaurus.html import remove_by_xpath
@@ -14,7 +12,7 @@ def get_form_hash(form, only_visible=True):
 
     If only_visible is True, hidden fields are not taken in account.
     """
-    if isinstance(form, six.string_types):
+    if isinstance(form, str):
         form = lxml.html.fromstring(form)
     else:
         form = deepcopy(form)
@@ -27,4 +25,3 @@ def get_form_hash(form, only_visible=True):
 
     # return the whole string as a hash, for easier debugging
     return "\n".join(lines)
-

@@ -1,28 +1,27 @@
-# -*- coding: utf-8 -*-
 """
 A module for working with annotation data storage.
 """
-from __future__ import absolute_import
-import os
-import json
-import copy
+
 import collections
-from six.moves.urllib import parse as urlparse
+import copy
+import json
+import os
+from urllib import parse as urlparse
 
 from tqdm import tqdm
 
 from formasaurus.annotation import AnnotationSchema, FormAnnotation
 from formasaurus.formhash import get_form_hash
-from formasaurus.utils import get_domain, inverse_mapping
 from formasaurus.html import (
-    load_html,
-    get_forms,
-    get_fields_to_annotate,
     get_field_names,
+    get_fields_to_annotate,
+    get_forms,
+    load_html,
 )
+from formasaurus.utils import get_domain, inverse_mapping
 
 
-class Storage(object):
+class Storage:
     """
     A wrapper class for HTML forms annotation data storage.
     The goal is to store the type of each <form> element from a web page.
@@ -66,38 +65,38 @@ class Storage(object):
         self.folder = folder
 
     def initialize(self, config, index=None):
-        """ Create folders and files for a new storage """
-        with open(os.path.join(self.folder, 'config.json'), 'wb') as f:
-            f.write(json.dumps(config).encode('utf8'))
+        """Create folders and files for a new storage"""
+        with open(os.path.join(self.folder, "config.json"), "wb") as f:
+            f.write(json.dumps(config).encode("utf8"))
         self.write_index(index or {})
-        os.mkdir(os.path.join(self.folder, 'html'))
+        os.mkdir(os.path.join(self.folder, "html"))
 
     def get_index(self):
-        """ Read an index """
+        """Read an index"""
         with open(os.path.join(self.folder, "index.json"), "rb") as f:
-            data = f.read().decode('utf8')
+            data = f.read().decode("utf8")
             return json.loads(data)
 
     def write_index(self, index):
-        """ Save an index """
+        """Save an index"""
         index = collections.OrderedDict(sorted(index.items()))
         for k, info in index.items():
             index[k] = collections.OrderedDict()
-            index[k]['url'] = info['url']
-            index[k]['forms'] = info['forms']
-            if 'visible_html_fields' in info:
-                index[k]['visible_html_fields'] = [
+            index[k]["url"] = info["url"]
+            index[k]["forms"] = info["forms"]
+            if "visible_html_fields" in info:
+                index[k]["visible_html_fields"] = [
                     collections.OrderedDict(sorted(row.items()))
-                    for row in info['visible_html_fields']
+                    for row in info["visible_html_fields"]
                 ]
 
         with open(os.path.join(self.folder, "index.json"), "wb") as f:
             data = json.dumps(index, ensure_ascii=True, indent=4)
-            f.write(data.encode('utf8'))
+            f.write(data.encode("utf8"))
 
     def get_config(self):
-        """ Read meta information, including form and field types """
-        with open(os.path.join(self.folder, "config.json"), "r") as f:
+        """Read meta information, including form and field types"""
+        with open(os.path.join(self.folder, "config.json")) as f:
             return json.load(f)
 
     def get_field_schema(self):
@@ -107,7 +106,7 @@ class Storage(object):
         `r.types_inv` is a {short_name: full_name} dict;
         `r.na_value` is a short name of type name used for unannotated fields.
         """
-        return self._get_schema('field_types')
+        return self._get_schema("field_types")
 
     def get_form_schema(self):
         """
@@ -117,22 +116,28 @@ class Storage(object):
         `r.na_value` is a short name of type name used for unannotated forms;
         `r.skip_value` is a short name of a type name which should be skipped.
         """
-        return self._get_schema('form_types')
+        return self._get_schema("form_types")
 
     def _get_schema(self, key):
         config = self.get_config()
-        na_value = config[key]['NA_value']
-        skip_value = config[key]['skip_value']
-        simplify_map = config[key]['simplify_map']
-        types = collections.OrderedDict([
-            (f['full'], f['short']) for f in config[key]['types']
-        ])
+        na_value = config[key]["NA_value"]
+        skip_value = config[key]["skip_value"]
+        simplify_map = config[key]["simplify_map"]
+        types = collections.OrderedDict(
+            [(f["full"], f["short"]) for f in config[key]["types"]]
+        )
         types_inv = inverse_mapping(types)
         return AnnotationSchema(types, types_inv, na_value, skip_value, simplify_map)
 
-    def add_result(self, html, url, form_answers=None,
-                   visible_html_fields=None, index=None,
-                   add_empty=True):
+    def add_result(
+        self,
+        html,
+        url,
+        form_answers=None,
+        visible_html_fields=None,
+        index=None,
+        add_empty=True,
+    ):
         """
         Save HTML source and its <form> and form field types.
         """
@@ -152,10 +157,13 @@ class Storage(object):
 
         if visible_html_fields is None:
             field_schema = self.get_field_schema()
-            visible_html_fields = [{
-                name: field_schema.na_value
-                for name in get_field_names(get_fields_to_annotate(form))
-            } for form in forms]
+            visible_html_fields = [
+                {
+                    name: field_schema.na_value
+                    for name in get_field_names(get_fields_to_annotate(form))
+                }
+                for form in forms
+            ]
 
         filename = self.generate_filename(url)
         path = os.path.relpath(filename, self.folder)
@@ -166,17 +174,24 @@ class Storage(object):
             "forms": form_answers,
             "visible_html_fields": visible_html_fields,
         }
-        with open(filename, 'wb') as f:
+        with open(filename, "wb") as f:
             if not isinstance(html, bytes):
-                html = html.encode('utf8')
+                html = html.encode("utf8")
             f.write(html)
         self.write_index(index)
         return path
 
-    def iter_annotations(self, index=None,
-                         drop_duplicates=True, drop_na=True, drop_skipped=True,
-                         simplify_form_types=False, simplify_field_types=False,
-                         verbose=False, leave=False):
+    def iter_annotations(
+        self,
+        index=None,
+        drop_duplicates=True,
+        drop_na=True,
+        drop_skipped=True,
+        simplify_form_types=False,
+        simplify_field_types=False,
+        verbose=False,
+        leave=False,
+    ):
         """
         Return an iterator over :class:`FormAnnotation` objects.
         """
@@ -185,8 +200,15 @@ class Storage(object):
         trees = self.iter_trees(index=index)
 
         if verbose:
-            trees = tqdm(trees, "Loading", mininterval=0,
-                         leave=leave, ascii=True, ncols=80, unit=' files')
+            trees = tqdm(
+                trees,
+                "Loading",
+                mininterval=0,
+                leave=leave,
+                ascii=True,
+                ncols=80,
+                unit=" files",
+            )
 
         seen = set()
         for path, tree, info in trees:
@@ -208,12 +230,13 @@ class Storage(object):
 
                 if simplify_field_types:
                     info = copy.deepcopy(info)
-                    for fields in info['visible_html_fields']:
+                    for fields in info["visible_html_fields"]:
                         for k, v in fields.items():
                             fields[k] = field_schema.simplify_map.get(v, v)
 
-                yield FormAnnotation(form, tp, idx, info, path,
-                                     form_schema, field_schema)
+                yield FormAnnotation(
+                    form, tp, idx, info, path, form_schema, field_schema
+                )
 
         if verbose and leave:
             print("")
@@ -227,8 +250,7 @@ class Storage(object):
         if index is None:
             index = self.get_index()
         sorted_items = sorted(
-            index.items(),
-            key=lambda it: (get_domain(it[1]["url"]), it[0])
+            index.items(), key=lambda it: (get_domain(it[1]["url"]), it[0])
         )
         for path, info in sorted_items:
             tree = self.get_tree(path, info)
@@ -254,8 +276,15 @@ class Storage(object):
         items = list(index.items())
         errors = 0
         if verbose:
-            items = tqdm(items, "Checking", leave=True, mininterval=0,
-                         ascii=True, ncols=80, unit=' files')
+            items = tqdm(
+                items,
+                "Checking",
+                leave=True,
+                mininterval=0,
+                ascii=True,
+                ncols=80,
+                unit=" files",
+            )
         for fn, info in items:
             fn_full = os.path.join(self.folder, fn)
             if not os.path.exists(fn_full):
@@ -263,35 +292,45 @@ class Storage(object):
                 errors += 1
                 continue
 
-            with open(fn_full, 'rb') as f:
+            with open(fn_full, "rb") as f:
                 data = f.read()
 
-            doc = load_html(data, info['url'])
+            doc = load_html(data, info["url"])
             if len(doc.xpath("//form")) != len(info["forms"]):
                 errors += 1
                 msg = "\nInvalid form count for entry %r: expected %d, got %d" % (
-                         fn, len(doc.xpath("//form")), len(info["forms"])
-                      )
+                    fn,
+                    len(doc.xpath("//form")),
+                    len(info["forms"]),
+                )
                 print(msg)
 
-            if 'visible_html_fields' not in info:
+            if "visible_html_fields" not in info:
                 errors += 1
-                print("No fields data for entry {!r}".format(fn))
+                print(f"No fields data for entry {fn!r}")
             else:
-                fields = info['visible_html_fields']
-                if len(fields) != len(doc.xpath('//form')):
+                fields = info["visible_html_fields"]
+                if len(fields) != len(doc.xpath("//form")):
                     errors += 1
-                    print("Invalid number of form field annotations for entry {!r}".format(fn))
+                    print(
+                        "Invalid number of form field annotations for entry {!r}".format(
+                            fn
+                        )
+                    )
                 else:
-                    for idx, (form, fields_info) in enumerate(zip(doc.xpath('//form'), fields)):
+                    for idx, (form, fields_info) in enumerate(
+                        zip(doc.xpath("//form"), fields)
+                    ):
                         elems = get_fields_to_annotate(form)
                         names = {elem.name for elem in elems}
                         if names != set(fields_info.keys()):
                             errors += 1
-                            print("Invalid field names for form #{}, "
-                                  "entry {!r}. Expected: {}, found: {}".format(
-                                idx, fn, names, set(fields_info.keys())
-                            ))
+                            print(
+                                "Invalid field names for form #{}, "
+                                "entry {!r}. Expected: {}, found: {}".format(
+                                    idx, fn, names, set(fields_info.keys())
+                                )
+                            )
 
         if not errors:
             print("Status: OK")
@@ -306,34 +345,33 @@ class Storage(object):
         """
         return get_form_hash(form, only_visible=True)
 
-    def get_form_type_counts(self, drop_duplicates=True, drop_na=True,
-                             simplify=False,
-                             verbose=True):
-        """ Return a {formtype: count} collections.Counter """
-        annotations = self.iter_annotations(verbose=verbose,
-                                            drop_duplicates=drop_duplicates,
-                                            drop_na=drop_na,
-                                            simplify_form_types=simplify)
+    def get_form_type_counts(
+        self, drop_duplicates=True, drop_na=True, simplify=False, verbose=True
+    ):
+        """Return a {formtype: count} collections.Counter"""
+        annotations = self.iter_annotations(
+            verbose=verbose,
+            drop_duplicates=drop_duplicates,
+            drop_na=drop_na,
+            simplify_form_types=simplify,
+        )
         return collections.Counter(ann.type for ann in annotations)
 
     def print_form_type_counts(self, simplify=False, verbose=True):
-        """ Print the number annotations of each form types in this storage """
+        """Print the number annotations of each form types in this storage"""
         if simplify:
             print("Annotated HTML forms (simplified classes):\n")
         else:
             print("Annotated HTML forms (detailed classes):\n")
         schema = self.get_form_schema()
-        type_counts = self.get_form_type_counts(
-            simplify=simplify,
-            verbose=verbose
-        )
+        type_counts = self.get_form_type_counts(simplify=simplify, verbose=verbose)
         for shortcut, count in type_counts.most_common():
             type_name = schema.types_inv[shortcut]
             print("%-5d %-25s (%s)" % (count, type_name, shortcut))
         print("\nTotal form count: %d" % (sum(type_counts.values())))
 
     def generate_filename(self, url):
-        """ Return a name for a new file """
+        """Return a name for a new file"""
         p = urlparse.urlparse(url)
         idx = 0
         while True:

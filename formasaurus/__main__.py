@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-# -*- coding: utf-8 -*-
 """
 Formasaurus command-line utility.
 
@@ -33,30 +32,30 @@ To check the storage for consistency and print some stats use
 To check the estimated quality of the default form and form fields model
 use "formasaurus evaluate" command.
 """
-from __future__ import absolute_import, print_function
+
 import sys
 from collections import Counter
 
 import docopt
 
 import formasaurus
-from formasaurus.utils import download
-from formasaurus.storage import Storage
-from formasaurus.html import load_html, get_cleaned_form_html
-from formasaurus import formtype_model, fieldtype_model
+from formasaurus import fieldtype_model, formtype_model
 from formasaurus.classifiers import DEFAULT_DATA_PATH
+from formasaurus.html import get_cleaned_form_html, load_html
+from formasaurus.storage import Storage
+from formasaurus.utils import download
 
 
 def main():
     args = docopt.docopt(__doc__, version=formasaurus.__version__)
 
-    data_folder = args['--data-folder']
+    data_folder = args["--data-folder"]
     if data_folder is None:
         data_folder = DEFAULT_DATA_PATH
 
     storage = Storage(data_folder)
 
-    if args['check-data']:
+    if args["check-data"]:
         errors = storage.check()
         storage.print_form_type_counts(simplify=False)
         storage.print_form_type_counts(simplify=True)
@@ -64,20 +63,20 @@ def main():
         if errors:
             sys.exit(1)
 
-    elif args['train']:
+    elif args["train"]:
         ex = formasaurus.FormFieldClassifier.trained_on(data_folder)
         ex.save(args["<modelfile>"])
 
-    elif args['init']:
+    elif args["init"]:
         formasaurus.FormFieldClassifier.load()
 
-    elif args['run']:
-        threshold = float(args['--threshold'])
+    elif args["run"]:
+        threshold = float(args["--threshold"])
         print("Loading the extractor..")
         ex = formasaurus.FormFieldClassifier.load(args["<modelfile>"])
         print("Downloading {}...".format(args["<url>"]))
         data = download(args["<url>"])
-        tree = load_html(data, args['<url>'])
+        tree = load_html(data, args["<url>"])
 
         result = ex.extract_forms(tree, proba=True, threshold=threshold)
         if not result:
@@ -86,41 +85,42 @@ def main():
 
         for form, info in result:
             print("\n")
-            print("="*60)
+            print("=" * 60)
             print(get_cleaned_form_html(form))
-            print("-"*60)
+            print("-" * 60)
             print("Form type:    ", end="")
-            for form_tp, prob in Counter(info['form']).most_common():
-                print("%s %0.1f%%" % (form_tp, prob * 100), end='    ')
+            for form_tp, prob in Counter(info["form"]).most_common():
+                print(f"{form_tp} {prob * 100:0.1f}%", end="    ")
 
             print("\n\nField types:")
-            for field_name, probs in info['fields'].items():
-                print(field_name, end=':  ')
+            for field_name, probs in info["fields"].items():
+                print(field_name, end=":  ")
                 for field_tp, prob in Counter(probs).most_common():
-                    print("%s %0.1f%%" % (field_tp, prob * 100), end='  ')
+                    print(f"{field_tp} {prob * 100:0.1f}%", end="  ")
                 print("")
 
             print("")
 
-    elif args['evaluate']:
+    elif args["evaluate"]:
         n_splits = int(args["--cv"])
         annotations = list(
-            storage.iter_annotations(verbose=True, leave=True,
-                                     simplify_form_types=True,
-                                     simplify_field_types=True)
+            storage.iter_annotations(
+                verbose=True,
+                leave=True,
+                simplify_form_types=True,
+                simplify_field_types=True,
+            )
         )
 
-        if args['forms'] or args['all']:
+        if args["forms"] or args["all"]:
             print("Evaluating form classifier...\n")
-            formtype_model.print_classification_report(annotations,
-                                                       n_splits=n_splits)
+            formtype_model.print_classification_report(annotations, n_splits=n_splits)
             print("")
 
-        if args['fields'] or args['all']:
+        if args["fields"] or args["all"]:
             print("Evaluating form field classifier...\n")
-            fieldtype_model.print_classification_report(annotations,
-                                                        n_splits=n_splits)
+            fieldtype_model.print_classification_report(annotations, n_splits=n_splits)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

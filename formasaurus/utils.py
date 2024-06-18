@@ -1,12 +1,10 @@
-# -*- coding: utf-8 -*-
-from __future__ import absolute_import
 import os
 import sys
 
 import requests
+import tldextract
 from requests.compat import chardet
 from w3lib.encoding import html_to_unicode
-import tldextract
 
 
 def dependencies_string():
@@ -20,13 +18,17 @@ def dependencies_string():
     import numpy
     import scipy
     import sklearn
+
     import formasaurus
 
     py_version = "%s.%s" % sys.version_info[:2]
 
-    return "%s-py%s-numpy%s-scipy%s-sklearn%s" % (
-        formasaurus.__version__, py_version,
-        numpy.__version__, scipy.__version__, sklearn.__version__
+    return "{}-py{}-numpy{}-scipy{}-sklearn{}".format(
+        formasaurus.__version__,
+        py_version,
+        numpy.__version__,
+        scipy.__version__,
+        sklearn.__version__,
     )
 
 
@@ -59,11 +61,11 @@ def inverse_mapping(dct):
     >>> inverse_mapping({'x': 5})
     {5: 'x'}
     """
-    return {v:k for k,v in dct.items()}
+    return {v: k for k, v in dct.items()}
 
 
 def at_root(*args):
-    """ Return path relative to formasaurus source code """
+    """Return path relative to formasaurus source code"""
     return os.path.join(os.path.dirname(__file__), *args)
 
 
@@ -99,12 +101,12 @@ def response2unicode(resp):
     Unlike ``response.text`` it handles <meta> tags in response content.
     """
     enc, html = html_to_unicode(
-        content_type_header=resp.headers.get('Content-Type'),
+        content_type_header=resp.headers.get("Content-Type"),
         html_body_str=resp.content,
-        auto_detect_fun=_autodetect_encoding
+        auto_detect_fun=_autodetect_encoding,
     )
     return html
 
 
 def _autodetect_encoding(binary_data):
-    return chardet.detect(binary_data)['encoding']
+    return chardet.detect(binary_data)["encoding"]

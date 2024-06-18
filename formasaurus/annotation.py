@@ -1,46 +1,37 @@
-# -*- coding: utf-8 -*-
-from __future__ import absolute_import, print_function
 import collections
 
-from sklearn.model_selection import GroupKFold
-
 from formasaurus.html import get_fields_to_annotate
-from formasaurus.utils import get_domain
-
 
 AnnotationSchema = collections.namedtuple(
-    'AnnotationSchema',
-    'types types_inv na_value skip_value simplify_map'
+    "AnnotationSchema", "types types_inv na_value skip_value simplify_map"
 )
 
 
 _FormAnnotation = collections.namedtuple(
-    'FormAnnotation',
-    'form type index info key form_schema field_schema'
+    "FormAnnotation", "form type index info key form_schema field_schema"
 )
 
+
 class FormAnnotation(_FormAnnotation):
-    """ Annotated HTML form """
+    """Annotated HTML form"""
+
     @property
     def url(self):
-        return self.info['url']
+        return self.info["url"]
 
     @property
     def fields(self):
         """
         {"field name": "field type"} dict.
         """
-        return self.info['visible_html_fields'][self.index]
+        return self.info["visible_html_fields"][self.index]
 
     @property
     def fields_annotated(self):
-        """ True if form has fields and all fields are annotated. """
+        """True if form has fields and all fields are annotated."""
         if not self.fields:
             return False
-        return all(
-            v != self.field_schema.na_value
-            for v in self.fields.values()
-        )
+        return all(v != self.field_schema.na_value for v in self.fields.values())
 
     @property
     def form_annotated(self):
@@ -86,7 +77,7 @@ class FormAnnotation(_FormAnnotation):
 
     @property
     def type_full(self):
-        """ Full form type name """
+        """Full form type name"""
         return self.form_schema.types_inv[self.type]
 
     def __repr__(self):

@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-from __future__ import absolute_import, division
 import itertools
 
 from sklearn.metrics import accuracy_score
@@ -13,4 +11,3 @@ def test_get_realistic_formtypes(storage):
     y_pred = get_realistic_form_labels(annotations, n_splits=3)
     score = accuracy_score(y_true, y_pred)
     assert 0.7 < score < 0.98
-
