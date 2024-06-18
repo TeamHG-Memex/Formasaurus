@@ -114,7 +114,6 @@ def train(annotations,
             verbose=verbose,
             n_jobs=optimize_hyperparameters_jobs,
             n_iter=optimize_hyperparameters_iters,
-            iid=False,
             scoring=scorer
         )
         rs.fit(X, y, groups=[get_domain(ann.url) for ann in annotations])
