@@ -11,10 +11,11 @@ def get_version():
 
 
 with_deps_extras = [
-    'scikit-learn >= 0.18',
+    'scikit-learn >= 0.24.0',
     'scipy',
-    'lxml',
-    'sklearn-crfsuite >= 0.3.1',
+    "lxml",
+    "lxml-html-clean",
+    'sklearn-crfsuite >= 0.4.0',
     'joblib',
 ]
 

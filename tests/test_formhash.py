@@ -24,22 +24,26 @@ FORM_HIDDEN2 = """
         "<form>Hello!</form>",
         "<FORM>Hello!</FORM>"
     ],
-    pytest.mark.xfail([
+    pytest.param(
         "<form>Hello world</form>",
-        "<FORM>Hello  world</FORM>"
-    ]),
-    pytest.mark.xfail([
+        "<FORM>Hello  world</FORM>",
+        marks=pytest.mark.xfail,
+    ),
+    pytest.param(
         "<form action='/' method='GET'>Hello!</form>",
-        "<FORM method='GET' action='/'>Hello!</FORM>"
-    ]),
-    pytest.mark.xfail([
+        "<FORM method='GET' action='/'>Hello!</FORM>",
+        marks=pytest.mark.xfail,
+    ),
+    pytest.param(
         "<form method='get' action='/'>Hello!</form>",
-        "<FORM method='GET' action='/'>Hello!</FORM>"
-    ]),
-    pytest.mark.xfail([
+        "<FORM method='GET' action='/'>Hello!</FORM>",
+        marks=pytest.mark.xfail,
+    ),
+    pytest.param(
         "<form action='/'>Hello!</form>",
-        "<FORM method='GET' action='/'>Hello!</FORM>"
-    ]),
+        "<FORM method='GET' action='/'>Hello!</FORM>",
+        marks=pytest.mark.xfail,
+    ),
     [
         """
         <form>
