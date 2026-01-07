@@ -1,0 +1,10 @@
+./test_fieldtype_model.py
+./test_storage.py
+./test_loading.py
+./test_html.py
+./conftest.py
+./test_formhash.py
+./test_cmdline.py
+./test_text.py
+./test_formtype_model.py
+./test_classifiers.py
