@@ -15,6 +15,8 @@ from formasaurus.html import (
 )
 from formasaurus.utils import inverse_mapping, download
 
+out = widgets.Output()
+
 
 def AddPageWidget(storage):
     """
@@ -46,7 +48,6 @@ def MultiFormAnnotator(annotations,
     A widget with a paginator for annotating multiple forms.
     """
     back, forward, slider = get_pager_elements(0, len(annotations) - 1)
-    rendered = {}
 
     def render(i):
         widget = FormAnnotator(
@@ -59,22 +60,20 @@ def MultiFormAnnotator(annotations,
             widget
         ])
 
-    def on_change(name, value):
-        for i in rendered:
-            rendered[i].close()
-
-        if value not in rendered:
-            rendered[value] = render(value)
-        else:
-            rendered[value].open()
+    def on_change(change):
+        value = change['new']
+        rendered_widget = render(value)
 
         if save_func:
             save_func()
 
-        display(rendered[value])
+        with out:
+            out.clear_output()
+            display(rendered_widget)
 
-    slider.on_trait_change(on_change, 'value')
-    on_change('value', slider.value)
+    slider.observe(on_change, names='value')
+    on_change({'new': slider.value})
+    display(out)
 
 
 def FormAnnotator(ann, annotate_fields=True, annotate_types=True, max_fields=80):
@@ -140,10 +139,10 @@ def FormTypeSelect(ann):
         description='form type:',
     )
 
-    def on_change(name, value):
-        ann.info['forms'][ann.index] = form_types[value]
+    def on_change(change):
+        ann.info['forms'][ann.index] = form_types[change['new']]
 
-    type_select.on_trait_change(on_change, 'value')
+    type_select.observe(on_change, names='value')
     return type_select
 
 
@@ -157,10 +156,10 @@ def FieldTypeSelect(ann, field_name):
         value=field_types_inv[tp],
     )
 
-    def on_change(name, value):
-        ann.fields[field_name] = field_types[value]
+    def on_change(change):
+        ann.fields[field_name] = field_types[change['new']]
 
-    type_select.on_trait_change(on_change, 'value')
+    type_select.observe(on_change, names='value')
     return type_select
 
 
@@ -188,8 +187,8 @@ def HtmlCode(form_html, field_name=None, max_height=None, **kwargs):
         kw['color'] = "#777"
     kw.update(kwargs)
     style = '; '.join([
-        'white-space:pre-wrap',
-        'max-width:800px',
+        'white-space:normal',
+        'max-width:inherit',
         'word-wrap:break-word',
         'font-family:monospace',
         'overflow:scroll',
